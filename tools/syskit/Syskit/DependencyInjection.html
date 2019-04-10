@@ -1,0 +1,3830 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: Syskit::DependencyInjection
+  
+    &mdash; Documentation by YARD 0.9.19
+  
+</title>
+
+  <link rel="stylesheet" href="../css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "Syskit::DependencyInjection";
+  relpath = '../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../_index.html">Index (D)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../Syskit.html" title="Syskit (module)">Syskit</a></span></span>
+     &raquo; 
+    <span class="title">DependencyInjection</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: Syskit::DependencyInjection
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName"><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></span>
+      
+        <ul class="fullTree">
+          <li><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></li>
+          
+            <li class="next">Syskit::DependencyInjection</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  <dl>
+      <dt>Extended by:</dt>
+      <dd>Logger::Forward, Logger::Hierarchy</dd>
+  </dl>
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/syskit/dependency_injection.rb</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>Representation and manipulation of dependency injection selection</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><h2>Defined Under Namespace</h2>
+<p class="children">
+  
+    
+  
+    
+      <strong class="classes">Classes:</strong> <span class='object_link'><a href="DependencyInjection/SpecialDIValue.html" title="Syskit::DependencyInjection::SpecialDIValue (class)">SpecialDIValue</a></span>
+    
+  
+</p>
+
+  
+    <h2>
+      Constant Summary
+      <small><a href="#" class="constants_summary_toggle">collapse</a></small>
+    </h2>
+
+    <dl class="constants">
+      
+        <dt id="IGNORED_MODELS-constant" class="">IGNORED_MODELS =
+          
+        </dt>
+        <dd><pre class="code"><span class='lbracket'>[</span><span class='const'><span class='object_link'><a href="DataService.html" title="Syskit::DataService (module)">DataService</a></span></span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="TaskContext.html" title="Syskit::TaskContext (class)">TaskContext</a></span></span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="Component.html" title="Syskit::Component (class)">Component</a></span></span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="Composition.html" title="Syskit::Composition (class)">Composition</a></span></span><span class='comma'>,</span>
+<span class='const'>Roby</span><span class='op'>::</span><span class='const'>Task</span><span class='comma'>,</span> <span class='const'>Roby</span><span class='op'>::</span><span class='const'>TaskService</span><span class='rbracket'>]</span></pre></dd>
+      
+    </dl>
+  
+
+
+
+
+  <h2>Instance Attribute Summary <small><a href="#" class="summary_toggle">collapse</a></small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#defaults-instance_method" title="#defaults (instance method)">#<strong>defaults</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute defaults.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#explicit-instance_method" title="#explicit (instance method)">#<strong>explicit</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute explicit.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#resolved-instance_method" title="#resolved (instance method)">#<strong>resolved</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute resolved.</p>
+</div></span>
+  
+</li>
+
+    
+  </ul>
+
+
+
+
+  
+    <h2>
+      Class Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#do_not_inherit-class_method" title="do_not_inherit (class method)">.<strong>do_not_inherit</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#find_name_resolution-class_method" title="find_name_resolution (class method)">.<strong>find_name_resolution</strong>(name, mappings)  &#x21d2; #instanciate<sup>?</sup> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Resolves a name into a component object.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#normalize_selected_object-class_method" title="normalize_selected_object (class method)">.<strong>normalize_selected_object</strong>(value, key = nil)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#normalize_selection-class_method" title="normalize_selection (class method)">.<strong>normalize_selection</strong>(selection)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Normalizes an explicit selection.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#nothing-class_method" title="nothing (class method)">.<strong>nothing</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#partition_use_arguments-class_method" title="partition_use_arguments (class method)">.<strong>partition_use_arguments</strong>(*mappings)  &#x21d2; (Hash,Set) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Helper method that separates the default selections from the explicit
+selections in the call to #use.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#resolve_default_selections-class_method" title="resolve_default_selections (class method)">.<strong>resolve_default_selections</strong>(using_spec, default_selections)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Helper methods that adds to a dependency inject mapping a list of default
+selections.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#resolve_recursive_selection_mapping-class_method" title="resolve_recursive_selection_mapping (class method)">.<strong>resolve_recursive_selection_mapping</strong>(spec)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Helper method that resolves recursive selections in a dependency injection
+mapping.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#resolve_selection_recursively-class_method" title="resolve_selection_recursively (class method)">.<strong>resolve_selection_recursively</strong>(value, spec)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Helper method that resolves one single object recursively.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#==-instance_method" title="#== (instance method)">#<strong>==</strong>(obj)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#add-instance_method" title="#add (instance method)">#<strong>add</strong>(*mappings)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Add default and explicit selections in one call.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#add_defaults-instance_method" title="#add_defaults (instance method)">#<strong>add_defaults</strong>(list)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Add a list of objects to the default list.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#add_explicit-instance_method" title="#add_explicit (instance method)">#<strong>add_explicit</strong>(mappings)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Add a new dependency injection pattern to the current set.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#add_mask-instance_method" title="#add_mask (instance method)">#<strong>add_mask</strong>(mask)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#clear-instance_method" title="#clear (instance method)">#<strong>clear</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#direct_selection_for-instance_method" title="#direct_selection_for (instance method)">#<strong>direct_selection_for</strong>(obj)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#each-instance_method" title="#each (instance method)">#<strong>each</strong>(&amp;block)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Enumerates the selected objects (not the keys).</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#each_selection_key-instance_method" title="#each_selection_key (instance method)">#<strong>each_selection_key</strong>(&amp;block)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#empty%3F-instance_method" title="#empty? (instance method)">#<strong>empty?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>True if this object contains no selection at all.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#eql%3F-instance_method" title="#eql? (instance method)">#<strong>eql?</strong>(obj)  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#has_selection_for%3F-instance_method" title="#has_selection_for? (instance method)">#<strong>has_selection_for?</strong>(name)  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>True if there is an explicit selection for the given name.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#hash-instance_method" title="#hash (instance method)">#<strong>hash</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(*base)  &#x21d2; DependencyInjection </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>creates a new DependencyInjection instance.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize_copy-instance_method" title="#initialize_copy (instance method)">#<strong>initialize_copy</strong>(from)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#instance_selection_for-instance_method" title="#instance_selection_for (instance method)">#<strong>instance_selection_for</strong>(name, requirements)  &#x21d2; InstanceSelection </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the non-ambiguous selection for the given name and requirements.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#map-instance_method" title="#map (instance method)">#<strong>map</strong>(&amp;block)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Create a new DependencyInjection object, with a modified selection.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#map!-instance_method" title="#map! (instance method)">#<strong>map!</strong>(&amp;block)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Changes the selections.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#merge-instance_method" title="#merge (instance method)">#<strong>merge</strong>(other)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Merge the selections in <code>other</code> into <code>self</code>.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#pretty_print-instance_method" title="#pretty_print (instance method)">#<strong>pretty_print</strong>(pp)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#remove_unresolved-instance_method" title="#remove_unresolved (instance method)">#<strong>remove_unresolved</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Removes the unresolved instances from the list of selections.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#resolve-instance_method" title="#resolve (instance method)">#<strong>resolve</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Resolves the selections by generating a direct mapping (as a hash)
+representing the required selection.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#resolve!-instance_method" title="#resolve! (instance method)">#<strong>resolve!</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#resolve_default_selections-instance_method" title="#resolve_default_selections (instance method)">#<strong>resolve_default_selections</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#resolve_names-instance_method" title="#resolve_names (instance method)">#<strong>resolve_names</strong>(mapping = Hash.new)  &#x21d2; Set&lt;String&gt; </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Recursively resolve the selections that are specified as strings using the
+provided block.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#selection_for-instance_method" title="#selection_for (instance method)">#<strong>selection_for</strong>(name, requirements)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the selected instance based on the given name and requirements.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#to_s-instance_method" title="#to_s (instance method)">#<strong>to_s</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>:nodoc:.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  <div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    #<strong>initialize</strong>(*base)  &#x21d2; <tt><span class='object_link'><a href="" title="Syskit::DependencyInjection (class)">DependencyInjection</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>creates a new DependencyInjection instance</p>
+
+<p>If arguments are provided, they must match the format expected by #add</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+22
+23
+24
+25
+26
+27
+28</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/dependency_injection.rb', line 22</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_base'>base</span><span class='rparen'>)</span>
+    <span class='ivar'>@explicit</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+    <span class='ivar'>@defaults</span> <span class='op'>=</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+    <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_base'>base</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
+        <span class='id identifier rubyid_add'>add</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_base'>base</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id=""></span>
+      <div class="method_details first">
+  <h3 class="signature first" id="defaults-instance_method">
+  
+    #<strong>defaults</strong>  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute defaults</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+8
+9
+10</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/dependency_injection.rb', line 8</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_defaults'>defaults</span>
+  <span class='ivar'>@defaults</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="explicit-instance_method">
+  
+    #<strong>explicit</strong>  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute explicit</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+7
+8
+9</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/dependency_injection.rb', line 7</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_explicit'>explicit</span>
+  <span class='ivar'>@explicit</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="resolved-instance_method">
+  
+    #<strong>resolved</strong>  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute resolved</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+30
+31
+32</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/dependency_injection.rb', line 30</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_resolved'>resolved</span>
+  <span class='ivar'>@resolved</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="do_not_inherit-class_method">
+  
+    .<strong>do_not_inherit</strong>  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+489
+490
+491</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/dependency_injection.rb', line 489</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_do_not_inherit'>do_not_inherit</span>
+    <span class='ivar'>@do_not_inherit</span> <span class='op'>||=</span> <span class='const'><span class='object_link'><a href="DependencyInjection/SpecialDIValue.html" title="Syskit::DependencyInjection::SpecialDIValue (class)">SpecialDIValue</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="DependencyInjection/SpecialDIValue.html#initialize-instance_method" title="Syskit::DependencyInjection::SpecialDIValue#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>do_not_inherit</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="find_name_resolution-class_method">
+  
+    .<strong>find_name_resolution</strong>(name, mappings)  &#x21d2; <tt>#instanciate</tt><sup>?</sup> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Resolves a name into a component object</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the name to be resolved. It can be a plain name, i.e. the name of a
+component in &#39;mappings&#39;, or a name.service, i.e. the name of a
+service for a component in &#39;mappings&#39;</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>mappings</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>(see <span class='object_link'><a href="#explicit-instance_method" title="Syskit::DependencyInjection#explicit (method)">#explicit</a></span>)</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>#instanciate</tt>, <tt>nil</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the component model or nil if the name cannot be resolved</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="NameResolutionError.html" title="Syskit::NameResolutionError (class)">NameResolutionError</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>if the name cannot be resolved, either because the base name does not exist
+or the specified service cannot be found in it</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+374
+375
+376
+377
+378
+379
+380
+381
+382
+383
+384
+385
+386
+387
+388
+389
+390
+391
+392
+393
+394
+395</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/dependency_injection.rb', line 374</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_find_name_resolution'>find_name_resolution</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_mappings'>mappings</span><span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_name'>name</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^(\w+)\.(.*)$</span><span class='regexp_end'>/</span></span>
+        <span class='id identifier rubyid_object_name'>object_name</span><span class='comma'>,</span> <span class='id identifier rubyid_service_name'>service_name</span> <span class='op'>=</span> <span class='backref'>$1</span><span class='comma'>,</span> <span class='backref'>$2</span>
+    <span class='kw'>else</span>
+        <span class='id identifier rubyid_object_name'>object_name</span> <span class='op'>=</span> <span class='id identifier rubyid_name'>name</span>
+    <span class='kw'>end</span>
+
+    <span class='id identifier rubyid_main_object'>main_object</span> <span class='op'>=</span> <span class='id identifier rubyid_mappings'>mappings</span><span class='lbracket'>[</span><span class='id identifier rubyid_object_name'>object_name</span><span class='rbracket'>]</span>
+    <span class='kw'>return</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_main_object'>main_object</span> <span class='op'>||</span> <span class='id identifier rubyid_main_object'>main_object</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='symbol'>:to_str</span><span class='rparen'>)</span>
+
+    <span class='kw'>if</span> <span class='id identifier rubyid_service_name'>service_name</span>
+        <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_main_object'>main_object</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='symbol'>:find_data_service</span><span class='rparen'>)</span>
+            <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="NameResolutionError.html" title="Syskit::NameResolutionError (class)">NameResolutionError</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="NameResolutionError.html#initialize-instance_method" title="Syskit::NameResolutionError#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_object_name'>object_name</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>cannot select a service on </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_main_object'>main_object</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+        <span class='kw'>end</span>
+        <span class='kw'>if</span> <span class='id identifier rubyid_srv'>srv</span> <span class='op'>=</span> <span class='id identifier rubyid_main_object'>main_object</span><span class='period'>.</span><span class='id identifier rubyid_find_data_service'>find_data_service</span><span class='lparen'>(</span><span class='id identifier rubyid_service_name'>service_name</span><span class='rparen'>)</span>
+            <span class='kw'>return</span> <span class='id identifier rubyid_srv'>srv</span>
+        <span class='kw'>else</span>
+            <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="NameResolutionError.html" title="Syskit::NameResolutionError (class)">NameResolutionError</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="NameResolutionError.html#initialize-instance_method" title="Syskit::NameResolutionError#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_object_name'>object_name</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_main_object'>main_object</span><span class='embexpr_end'>}</span><span class='tstring_content'> has no service called </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_service_name'>service_name</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+        <span class='kw'>end</span>
+    <span class='kw'>else</span> <span class='kw'>return</span> <span class='id identifier rubyid_main_object'>main_object</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="normalize_selected_object-class_method">
+  
+    .<strong>normalize_selected_object</strong>(value, key = nil)  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+531
+532
+533
+534
+535
+536
+537
+538
+539
+540
+541
+542
+543
+544
+545
+546
+547
+548
+549
+550
+551
+552
+553
+554
+555
+556
+557
+558
+559
+560</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/dependency_injection.rb', line 531</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_normalize_selected_object'>normalize_selected_object</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='comma'>,</span> <span class='id identifier rubyid_key'>key</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_value'>value</span>
+        <span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>found nil as selection for </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_key'>key</span><span class='embexpr_end'>}</span><span class='tstring_content'>, but it is not accepted anymore</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>end</span>
+
+    <span class='kw'>if</span> <span class='id identifier rubyid_value'>value</span><span class='period'>.</span><span class='id identifier rubyid_kind_of?'>kind_of?</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="InstanceSelection.html" title="Syskit::InstanceSelection (class)">InstanceSelection</a></span></span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_value'>value</span> <span class='op'>=</span> <span class='id identifier rubyid_value'>value</span><span class='period'>.</span><span class='id identifier rubyid_component'>component</span> <span class='op'>||</span> <span class='id identifier rubyid_value'>value</span><span class='period'>.</span><span class='id identifier rubyid_selected'>selected</span>
+    <span class='kw'>end</span>
+
+    <span class='comment'># &#39;value&#39; must be one of String,Model&lt;Component&gt;,Component,DataService,Model&lt;BoundDataService&gt;,BoundDataService
+</span>    <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_value'>value</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='symbol'>:to_str</span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span>
+        <span class='op'>!</span><span class='id identifier rubyid_value'>value</span><span class='period'>.</span><span class='id identifier rubyid_kind_of?'>kind_of?</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="DependencyInjection/SpecialDIValue.html" title="Syskit::DependencyInjection::SpecialDIValue (class)">SpecialDIValue</a></span></span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span>
+        <span class='op'>!</span><span class='id identifier rubyid_value'>value</span><span class='period'>.</span><span class='id identifier rubyid_kind_of?'>kind_of?</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="Component.html" title="Syskit::Component (class)">Component</a></span></span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span>
+        <span class='op'>!</span><span class='id identifier rubyid_value'>value</span><span class='period'>.</span><span class='id identifier rubyid_kind_of?'>kind_of?</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="BoundDataService.html" title="Syskit::BoundDataService (class)">BoundDataService</a></span></span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span>
+        <span class='op'>!</span><span class='id identifier rubyid_value'>value</span><span class='period'>.</span><span class='id identifier rubyid_kind_of?'>kind_of?</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="Models.html" title="Syskit::Models (module)">Models</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Models/BoundDataService.html" title="Syskit::Models::BoundDataService (class)">BoundDataService</a></span></span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span>
+        <span class='op'>!</span><span class='id identifier rubyid_value'>value</span><span class='period'>.</span><span class='id identifier rubyid_kind_of?'>kind_of?</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="Models.html" title="Syskit::Models (module)">Models</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Models/DataServiceModel.html" title="Syskit::Models::DataServiceModel (class)">DataServiceModel</a></span></span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span>
+        <span class='op'>!</span><span class='id identifier rubyid_value'>value</span><span class='period'>.</span><span class='id identifier rubyid_kind_of?'>kind_of?</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="InstanceRequirements.html" title="Syskit::InstanceRequirements (class)">InstanceRequirements</a></span></span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span>
+        <span class='lparen'>(</span><span class='op'>!</span><span class='id identifier rubyid_value'>value</span><span class='period'>.</span><span class='id identifier rubyid_kind_of?'>kind_of?</span><span class='lparen'>(</span><span class='const'>Class</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='op'>!</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span> <span class='op'>&lt;=</span> <span class='const'><span class='object_link'><a href="Component.html" title="Syskit::Component (class)">Component</a></span></span><span class='rparen'>)</span><span class='rparen'>)</span>
+        <span class='kw'>if</span> <span class='id identifier rubyid_value'>value</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='symbol'>:to_instance_requirements</span><span class='rparen'>)</span>
+            <span class='id identifier rubyid_value'>value</span> <span class='op'>=</span> <span class='id identifier rubyid_value'>value</span><span class='period'>.</span><span class='id identifier rubyid_to_instance_requirements'>to_instance_requirements</span>
+        <span class='kw'>else</span>
+            <span class='kw'>if</span> <span class='id identifier rubyid_key'>key</span>
+                <span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>found </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_value'>value</span><span class='embexpr_end'>}</span><span class='tstring_content'>(of class </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_value'>value</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='embexpr_end'>}</span><span class='tstring_content'>) as a selection for </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_key'>key</span><span class='embexpr_end'>}</span><span class='tstring_content'>, but only name,component models,components,data service models and bound data services are allowed</span><span class='tstring_end'>&quot;</span></span>
+            <span class='kw'>else</span>
+                <span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>found </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_value'>value</span><span class='embexpr_end'>}</span><span class='tstring_content'>(of class </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_value'>value</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='embexpr_end'>}</span><span class='tstring_content'>) as a selection, but only name,component models,components,data service models and bound data services are allowed</span><span class='tstring_end'>&quot;</span></span>
+            <span class='kw'>end</span>
+        <span class='kw'>end</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_value'>value</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="normalize_selection-class_method">
+  
+    .<strong>normalize_selection</strong>(selection)  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Normalizes an explicit selection</p>
+
+<p>The input can map any of string, Component and DataService to string,
+Component, DataService and BoundDataService</p>
+
+<p>A normalized selection has this form:</p>
+<ul><li>
+<p>string to
+String,<span class='object_link'><a href="Component.html" title="Syskit::Component (class)">Component</a></span>,<span class='object_link'><a href="DataService.html" title="Syskit::DataService (module)">Syskit::DataService</a></span>,<span class='object_link'><a href="BoundDataService.html" title="Syskit::BoundDataService (class)">BoundDataService</a></span>,<span class='object_link'><a href="#do_not_inherit-class_method" title="Syskit::DependencyInjection.do_not_inherit (method)">do_not_inherit</a></span>,<span class='object_link'><a href="#nothing-class_method" title="Syskit::DependencyInjection.nothing (method)">nothing</a></span></p>
+</li><li>
+<p>Component to String,<span class='object_link'><a href="Component.html" title="Syskit::Component (class)">Component</a></span>,<span class='object_link'><a href="#do_not_inherit-class_method" title="Syskit::DependencyInjection.do_not_inherit (method)">do_not_inherit</a></span>,<span class='object_link'><a href="#nothing-class_method" title="Syskit::DependencyInjection.nothing (method)">nothing</a></span></p>
+</li><li>
+<p>DataService to
+String,<span class='object_link'><a href="DataService.html" title="Syskit::DataService (module)">Syskit::DataService</a></span>,<span class='object_link'><a href="BoundDataService.html" title="Syskit::BoundDataService (class)">BoundDataService</a></span>,<span class='object_link'><a href="#do_not_inherit-class_method" title="Syskit::DependencyInjection.do_not_inherit (method)">do_not_inherit</a></span>,<span class='object_link'><a href="#nothing-class_method" title="Syskit::DependencyInjection.nothing (method)">nothing</a></span></p>
+</li></ul>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        
+        <div class='inline'>
+<p>ArgumentError if the key and value are not valid selection (see above)</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        
+        <div class='inline'>
+<p>ArgumentError if the selected component or service does not fullfill the
+key</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        
+        <div class='inline'>
+<p>AmbiguousServiceSelection if a component is selected for a data service,
+but there are multiple services of that type in the component</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/dependency_injection.rb', line 169</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_normalize_selection'>normalize_selection</span><span class='lparen'>(</span><span class='id identifier rubyid_selection'>selection</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_normalized'>normalized</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+    <span class='id identifier rubyid_selection'>selection</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_key'>key</span><span class='comma'>,</span> <span class='id identifier rubyid_value'>value</span><span class='op'>|</span>
+        <span class='comment'># &#39;key&#39; must be one of String, Component or DataService
+</span>        <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_key'>key</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='symbol'>:to_str</span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span>
+            <span class='op'>!</span><span class='id identifier rubyid_key'>key</span><span class='period'>.</span><span class='id identifier rubyid_kind_of?'>kind_of?</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="Models.html" title="Syskit::Models (module)">Models</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Models/DataServiceModel.html" title="Syskit::Models::DataServiceModel (class)">DataServiceModel</a></span></span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span>
+            <span class='lparen'>(</span><span class='op'>!</span><span class='id identifier rubyid_key'>key</span><span class='period'>.</span><span class='id identifier rubyid_kind_of?'>kind_of?</span><span class='lparen'>(</span><span class='const'>Class</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='op'>!</span><span class='lparen'>(</span><span class='id identifier rubyid_key'>key</span> <span class='op'>&lt;=</span> <span class='const'><span class='object_link'><a href="Component.html" title="Syskit::Component (class)">Component</a></span></span><span class='rparen'>)</span><span class='rparen'>)</span>
+
+            <span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>found </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_value'>value</span><span class='embexpr_end'>}</span><span class='tstring_content'> as a selection key, but only names, component models and data service models are allowed</span><span class='tstring_end'>&quot;</span></span>
+        <span class='kw'>end</span>
+
+        <span class='comment'># &#39;value&#39; must be one of String,Model&lt;Component&gt;,Component,DataService,Model&lt;BoundDataService&gt;,BoundDataService or nil
+</span>        <span class='id identifier rubyid_value'>value</span> <span class='op'>=</span> <span class='id identifier rubyid_normalize_selected_object'>normalize_selected_object</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='comma'>,</span> <span class='id identifier rubyid_key'>key</span><span class='rparen'>)</span>
+
+        <span class='kw'>if</span> <span class='id identifier rubyid_key'>key</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='symbol'>:to_str</span><span class='rparen'>)</span>
+            <span class='id identifier rubyid_normalized'>normalized</span><span class='lbracket'>[</span><span class='id identifier rubyid_key'>key</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_value'>value</span>
+            <span class='kw'>next</span>
+        <span class='kw'>end</span>
+
+        <span class='kw'>if</span> <span class='id identifier rubyid_value'>value</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='symbol'>:fullfills?</span><span class='rparen'>)</span>
+            <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_value'>value</span><span class='period'>.</span><span class='id identifier rubyid_fullfills?'>fullfills?</span><span class='lparen'>(</span><span class='id identifier rubyid_key'>key</span><span class='rparen'>)</span>
+                <span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>found </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_value'>value</span><span class='period'>.</span><span class='id identifier rubyid_short_name'>short_name</span><span class='embexpr_end'>}</span><span class='tstring_content'>(of class </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_value'>value</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='embexpr_end'>}</span><span class='tstring_content'>) as a selection for </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_key'>key</span><span class='period'>.</span><span class='id identifier rubyid_short_name'>short_name</span><span class='embexpr_end'>}</span><span class='tstring_content'>, but </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_value'>value</span><span class='period'>.</span><span class='id identifier rubyid_short_name'>short_name</span><span class='embexpr_end'>}</span><span class='tstring_content'> does not fullfill </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_key'>key</span><span class='period'>.</span><span class='id identifier rubyid_short_name'>short_name</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+            <span class='kw'>end</span>
+        <span class='kw'>end</span>
+
+        <span class='kw'>if</span> <span class='id identifier rubyid_key'>key</span> <span class='op'>&lt;=</span> <span class='const'><span class='object_link'><a href="Component.html" title="Syskit::Component (class)">Component</a></span></span>
+            <span class='kw'>if</span> <span class='id identifier rubyid_value'>value</span><span class='period'>.</span><span class='id identifier rubyid_kind_of?'>kind_of?</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="Models.html" title="Syskit::Models (module)">Models</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Models/BoundDataService.html" title="Syskit::Models::BoundDataService (class)">BoundDataService</a></span></span><span class='rparen'>)</span>
+                <span class='id identifier rubyid_value'>value</span> <span class='op'>=</span> <span class='id identifier rubyid_value'>value</span><span class='period'>.</span><span class='id identifier rubyid_component_model'>component_model</span>
+			<span class='kw'>elsif</span> <span class='id identifier rubyid_value'>value</span><span class='period'>.</span><span class='id identifier rubyid_kind_of?'>kind_of?</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="../Syskit.html" title="Syskit (module)">Syskit</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="BoundDataService.html" title="Syskit::BoundDataService (class)">BoundDataService</a></span></span><span class='rparen'>)</span>
+                <span class='id identifier rubyid_value'>value</span> <span class='op'>=</span> <span class='id identifier rubyid_value'>value</span><span class='period'>.</span><span class='id identifier rubyid_component'>component</span>
+            <span class='kw'>end</span>
+            <span class='id identifier rubyid_normalized'>normalized</span><span class='lbracket'>[</span><span class='id identifier rubyid_key'>key</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_value'>value</span>
+        <span class='kw'>elsif</span> <span class='id identifier rubyid_key'>key</span> <span class='op'>&lt;=</span> <span class='const'><span class='object_link'><a href="DataService.html" title="Syskit::DataService (module)">DataService</a></span></span>
+            <span class='kw'>if</span> <span class='id identifier rubyid_value'>value</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='symbol'>:find_data_service_from_type</span><span class='rparen'>)</span>
+                <span class='id identifier rubyid_value'>value</span> <span class='op'>=</span> <span class='id identifier rubyid_value'>value</span><span class='period'>.</span><span class='id identifier rubyid_find_data_service_from_type'>find_data_service_from_type</span><span class='lparen'>(</span><span class='id identifier rubyid_key'>key</span><span class='rparen'>)</span>
+            <span class='kw'>end</span>
+            <span class='id identifier rubyid_normalized'>normalized</span><span class='lbracket'>[</span><span class='id identifier rubyid_key'>key</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_value'>value</span>
+        <span class='kw'>else</span>
+            <span class='id identifier rubyid_raise'>raise</span> <span class='const'>NotImplementedError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>should not have get there, but did</span><span class='tstring_end'>&quot;</span></span>
+        <span class='kw'>end</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_normalized'>normalized</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="nothing-class_method">
+  
+    .<strong>nothing</strong>  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+493
+494
+495</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/dependency_injection.rb', line 493</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_nothing'>nothing</span>
+    <span class='ivar'>@nothing</span> <span class='op'>||=</span> <span class='const'><span class='object_link'><a href="DependencyInjection/SpecialDIValue.html" title="Syskit::DependencyInjection::SpecialDIValue (class)">SpecialDIValue</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="DependencyInjection/SpecialDIValue.html#initialize-instance_method" title="Syskit::DependencyInjection::SpecialDIValue#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>nothing</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="partition_use_arguments-class_method">
+  
+    .<strong>partition_use_arguments</strong>(*mappings)  &#x21d2; <tt>(Hash,Set)</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Helper method that separates the default selections from the explicit
+selections in the call to #use</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>(Hash,Set)</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the explicit selections and a list of default selections</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+656
+657
+658
+659
+660
+661
+662
+663
+664
+665
+666
+667</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/dependency_injection.rb', line 656</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_partition_use_arguments'>partition_use_arguments</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_mappings'>mappings</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_explicit'>explicit</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+    <span class='id identifier rubyid_defaults'>defaults</span> <span class='op'>=</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+    <span class='id identifier rubyid_mappings'>mappings</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_element'>element</span><span class='op'>|</span>
+        <span class='kw'>if</span> <span class='id identifier rubyid_element'>element</span><span class='period'>.</span><span class='id identifier rubyid_kind_of?'>kind_of?</span><span class='lparen'>(</span><span class='const'>Hash</span><span class='rparen'>)</span>
+            <span class='id identifier rubyid_explicit'>explicit</span><span class='period'>.</span><span class='id identifier rubyid_merge!'>merge!</span><span class='lparen'>(</span><span class='id identifier rubyid_element'>element</span><span class='rparen'>)</span>
+        <span class='kw'>else</span>
+            <span class='id identifier rubyid_defaults'>defaults</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_element'>element</span>
+        <span class='kw'>end</span>
+    <span class='kw'>end</span>
+    <span class='kw'>return</span> <span class='id identifier rubyid_explicit'>explicit</span><span class='comma'>,</span> <span class='id identifier rubyid_defaults'>defaults</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="resolve_default_selections-class_method">
+  
+    .<strong>resolve_default_selections</strong>(using_spec, default_selections)  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Helper methods that adds to a dependency inject mapping a list of default
+selections</p>
+
+<p>Default selections are a list of objects for which no specification is
+used. They are resolved as “select X for all models of X for which there is
+no explicit selection already”</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+568
+569
+570
+571
+572
+573
+574
+575
+576
+577
+578
+579
+580
+581
+582
+583
+584
+585
+586
+587
+588
+589
+590
+591
+592
+593
+594
+595
+596
+597
+598
+599
+600
+601
+602
+603
+604
+605
+606
+607
+608
+609
+610
+611
+612
+613
+614
+615
+616
+617
+618
+619
+620
+621
+622
+623
+624
+625
+626
+627
+628
+629
+630
+631
+632
+633
+634
+635
+636
+637
+638
+639
+640
+641
+642
+643
+644
+645
+646
+647
+648
+649</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/dependency_injection.rb', line 568</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_resolve_default_selections'>resolve_default_selections</span><span class='lparen'>(</span><span class='id identifier rubyid_using_spec'>using_spec</span><span class='comma'>,</span> <span class='id identifier rubyid_default_selections'>default_selections</span><span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_default_selections'>default_selections</span> <span class='op'>||</span> <span class='id identifier rubyid_default_selections'>default_selections</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
+        <span class='kw'>return</span> <span class='id identifier rubyid_using_spec'>using_spec</span>
+    <span class='kw'>end</span>
+
+    <span class='id identifier rubyid_debug'>debug</span> <span class='kw'>do</span>
+        <span class='id identifier rubyid_debug'>debug</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Resolving default selections</span><span class='tstring_end'>&quot;</span></span>
+        <span class='id identifier rubyid_default_selections'>default_selections</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:to_s</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_sort'>sort</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_sel'>sel</span><span class='op'>|</span>
+            <span class='id identifier rubyid_debug'>debug</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>    </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_sel'>sel</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+        <span class='kw'>end</span>
+        <span class='id identifier rubyid_debug'>debug</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>  into</span><span class='tstring_end'>&quot;</span></span>
+        <span class='id identifier rubyid_using_spec'>using_spec</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_k'>k</span><span class='comma'>,</span> <span class='id identifier rubyid_v'>v</span><span class='op'>|</span> <span class='lbracket'>[</span><span class='id identifier rubyid_k'>k</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='comma'>,</span> <span class='id identifier rubyid_v'>v</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='rbracket'>]</span> <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_sort'>sort</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_k'>k</span><span class='comma'>,</span> <span class='id identifier rubyid_v'>v</span><span class='op'>|</span>
+            <span class='id identifier rubyid_debug'>debug</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>    </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_k'>k</span><span class='embexpr_end'>}</span><span class='tstring_content'> =&gt; </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_v'>v</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+        <span class='kw'>end</span>
+        <span class='kw'>break</span>
+    <span class='kw'>end</span>
+
+    <span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='id identifier rubyid_using_spec'>using_spec</span><span class='period'>.</span><span class='id identifier rubyid_dup'>dup</span>
+
+    <span class='id identifier rubyid_ambiguous_default_selections'>ambiguous_default_selections</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+    <span class='id identifier rubyid_resolved_default_selections'>resolved_default_selections</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+
+    <span class='id identifier rubyid_default_selections'>default_selections</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_selection'>selection</span><span class='op'>|</span>
+        <span class='id identifier rubyid_selection'>selection</span> <span class='op'>=</span> <span class='id identifier rubyid_resolve_selection_recursively'>resolve_selection_recursively</span><span class='lparen'>(</span><span class='id identifier rubyid_selection'>selection</span><span class='comma'>,</span> <span class='id identifier rubyid_using_spec'>using_spec</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_selection'>selection</span><span class='period'>.</span><span class='id identifier rubyid_each_fullfilled_model'>each_fullfilled_model</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_m'>m</span><span class='op'>|</span>
+            <span class='kw'>next</span> <span class='kw'>if</span> <span class='const'><span class='object_link'><a href="#IGNORED_MODELS-constant" title="Syskit::DependencyInjection::IGNORED_MODELS (constant)">IGNORED_MODELS</a></span></span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='id identifier rubyid_m'>m</span><span class='rparen'>)</span>
+            <span class='kw'>if</span> <span class='id identifier rubyid_selection'>selection</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='symbol'>:find_all_data_services_from_type</span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span>
+                <span class='id identifier rubyid_m'>m</span><span class='period'>.</span><span class='id identifier rubyid_kind_of?'>kind_of?</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="Models.html" title="Syskit::Models (module)">Models</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Models/DataServiceModel.html" title="Syskit::Models::DataServiceModel (class)">DataServiceModel</a></span></span><span class='rparen'>)</span>
+                <span class='comment'># Ignore if it is provided multiple times by the
+</span>                <span class='comment'># selection
+</span>
+                <span class='kw'>next</span> <span class='kw'>if</span> <span class='id identifier rubyid_selection'>selection</span><span class='period'>.</span><span class='id identifier rubyid_find_all_data_services_from_type'>find_all_data_services_from_type</span><span class='lparen'>(</span><span class='id identifier rubyid_m'>m</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span> <span class='op'>!=</span> <span class='int'>1</span>
+            <span class='kw'>end</span>
+
+            <span class='kw'>if</span> <span class='id identifier rubyid_using_spec'>using_spec</span><span class='lbracket'>[</span><span class='id identifier rubyid_m'>m</span><span class='rbracket'>]</span>
+                <span class='id identifier rubyid_debug'>debug</span> <span class='kw'>do</span>
+                    <span class='id identifier rubyid_debug'>debug</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>  rejected </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_selection'>selection</span><span class='period'>.</span><span class='id identifier rubyid_short_name'>short_name</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+                    <span class='id identifier rubyid_debug'>debug</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>    for </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_m'>m</span><span class='period'>.</span><span class='id identifier rubyid_short_name'>short_name</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+                    <span class='id identifier rubyid_debug'>debug</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>    reason: already explicitely selected</span><span class='tstring_end'>&quot;</span></span>
+                    <span class='kw'>break</span>
+                <span class='kw'>end</span>
+            <span class='kw'>elsif</span> <span class='id identifier rubyid_ambiguous_default_selections'>ambiguous_default_selections</span><span class='period'>.</span><span class='id identifier rubyid_has_key?'>has_key?</span><span class='lparen'>(</span><span class='id identifier rubyid_m'>m</span><span class='rparen'>)</span>
+                <span class='id identifier rubyid_ambiguity'>ambiguity</span> <span class='op'>=</span> <span class='id identifier rubyid_ambiguous_default_selections'>ambiguous_default_selections</span><span class='lbracket'>[</span><span class='id identifier rubyid_m'>m</span><span class='rbracket'>]</span>
+                <span class='id identifier rubyid_debug'>debug</span> <span class='kw'>do</span>
+                    <span class='id identifier rubyid_debug'>debug</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>  rejected </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_selection'>selection</span><span class='period'>.</span><span class='id identifier rubyid_short_name'>short_name</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+                    <span class='id identifier rubyid_debug'>debug</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>    for </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_m'>m</span><span class='period'>.</span><span class='id identifier rubyid_short_name'>short_name</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+                    <span class='id identifier rubyid_debug'>debug</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>    reason: ambiguity with</span><span class='tstring_end'>&quot;</span></span>
+                    <span class='id identifier rubyid_ambiguity'>ambiguity</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_model'>model</span><span class='op'>|</span>
+                        <span class='id identifier rubyid_debug'>debug</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>      </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_model'>model</span><span class='period'>.</span><span class='id identifier rubyid_short_name'>short_name</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+                    <span class='kw'>end</span>
+                    <span class='kw'>break</span>
+                <span class='kw'>end</span>
+                <span class='id identifier rubyid_ambiguity'>ambiguity</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_selection'>selection</span>
+            <span class='kw'>elsif</span> <span class='id identifier rubyid_resolved_default_selections'>resolved_default_selections</span><span class='lbracket'>[</span><span class='id identifier rubyid_m'>m</span><span class='rbracket'>]</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_resolved_default_selections'>resolved_default_selections</span><span class='lbracket'>[</span><span class='id identifier rubyid_m'>m</span><span class='rbracket'>]</span> <span class='op'>!=</span> <span class='id identifier rubyid_selection'>selection</span>
+                <span class='id identifier rubyid_removed'>removed</span> <span class='op'>=</span> <span class='id identifier rubyid_resolved_default_selections'>resolved_default_selections</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='id identifier rubyid_m'>m</span><span class='rparen'>)</span>
+                <span class='id identifier rubyid_ambiguous_default_selections'>ambiguous_default_selections</span><span class='lbracket'>[</span><span class='id identifier rubyid_m'>m</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='id identifier rubyid_selection'>selection</span><span class='comma'>,</span> <span class='id identifier rubyid_removed'>removed</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_set'>to_set</span>
+                <span class='id identifier rubyid_debug'>debug</span> <span class='kw'>do</span>
+                    <span class='id identifier rubyid_debug'>debug</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>  removing </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_removed'>removed</span><span class='period'>.</span><span class='id identifier rubyid_short_name'>short_name</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+                    <span class='id identifier rubyid_debug'>debug</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>    for </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_m'>m</span><span class='period'>.</span><span class='id identifier rubyid_short_name'>short_name</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+                    <span class='id identifier rubyid_debug'>debug</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>    reason: ambiguity with</span><span class='tstring_end'>&quot;</span></span>
+                    <span class='id identifier rubyid_debug'>debug</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>      </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_selection'>selection</span><span class='period'>.</span><span class='id identifier rubyid_short_name'>short_name</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+                    <span class='kw'>break</span>
+                <span class='kw'>end</span>
+            <span class='kw'>else</span>
+                <span class='id identifier rubyid_debug'>debug</span> <span class='kw'>do</span>
+                    <span class='id identifier rubyid_debug'>debug</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>  adding </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_selection'>selection</span><span class='period'>.</span><span class='id identifier rubyid_short_name'>short_name</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+                    <span class='id identifier rubyid_debug'>debug</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>    for </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_m'>m</span><span class='period'>.</span><span class='id identifier rubyid_short_name'>short_name</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+                    <span class='kw'>break</span>
+                <span class='kw'>end</span>
+                <span class='id identifier rubyid_resolved_default_selections'>resolved_default_selections</span><span class='lbracket'>[</span><span class='id identifier rubyid_m'>m</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_selection'>selection</span>
+            <span class='kw'>end</span>
+        <span class='kw'>end</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_debug'>debug</span> <span class='kw'>do</span>
+        <span class='id identifier rubyid_debug'>debug</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>  selected defaults:</span><span class='tstring_end'>&quot;</span></span>
+        <span class='id identifier rubyid_resolved_default_selections'>resolved_default_selections</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_key'>key</span><span class='comma'>,</span> <span class='id identifier rubyid_sel'>sel</span><span class='op'>|</span>
+            <span class='id identifier rubyid_debug'>debug</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>    </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_key'>key</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='symbol'>:short_name</span><span class='rparen'>)</span> <span class='op'>?</span> <span class='id identifier rubyid_key'>key</span><span class='period'>.</span><span class='id identifier rubyid_short_name'>short_name</span> <span class='op'>:</span> <span class='id identifier rubyid_key'>key</span><span class='embexpr_end'>}</span><span class='tstring_content'>: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_sel'>sel</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+        <span class='kw'>end</span>
+        <span class='kw'>break</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_result'>result</span><span class='period'>.</span><span class='id identifier rubyid_merge!'>merge!</span><span class='lparen'>(</span><span class='id identifier rubyid_resolved_default_selections'>resolved_default_selections</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="resolve_recursive_selection_mapping-class_method">
+  
+    .<strong>resolve_recursive_selection_mapping</strong>(spec)  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Helper method that resolves recursive selections in a dependency injection
+mapping</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+499
+500
+501
+502
+503</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/dependency_injection.rb', line 499</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_resolve_recursive_selection_mapping'>resolve_recursive_selection_mapping</span><span class='lparen'>(</span><span class='id identifier rubyid_spec'>spec</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_spec'>spec</span><span class='period'>.</span><span class='id identifier rubyid_map_value'>map_value</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_key'>key</span><span class='comma'>,</span> <span class='id identifier rubyid_value'>value</span><span class='op'>|</span>
+        <span class='id identifier rubyid_resolve_selection_recursively'>resolve_selection_recursively</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='comma'>,</span> <span class='id identifier rubyid_spec'>spec</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="resolve_selection_recursively-class_method">
+  
+    .<strong>resolve_selection_recursively</strong>(value, spec)  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Helper method that resolves one single object recursively</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+506
+507
+508
+509
+510
+511
+512
+513
+514
+515
+516
+517
+518
+519
+520
+521
+522
+523
+524
+525
+526</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/dependency_injection.rb', line 506</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_resolve_selection_recursively'>resolve_selection_recursively</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='comma'>,</span> <span class='id identifier rubyid_spec'>spec</span><span class='rparen'>)</span>
+    <span class='kw'>while</span> <span class='id identifier rubyid_value'>value</span> <span class='op'>&amp;&amp;</span> <span class='op'>!</span><span class='id identifier rubyid_value'>value</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='symbol'>:to_str</span><span class='rparen'>)</span>
+        <span class='kw'>case</span> <span class='id identifier rubyid_value'>value</span>
+        <span class='kw'>when</span> <span class='const'><span class='object_link'><a href="Models.html" title="Syskit::Models (module)">Models</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Models/BoundDataService.html" title="Syskit::Models::BoundDataService (class)">BoundDataService</a></span></span>
+            <span class='kw'>return</span> <span class='id identifier rubyid_value'>value</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_value'>value</span><span class='period'>.</span><span class='id identifier rubyid_component_model'>component_model</span><span class='period'>.</span><span class='id identifier rubyid_kind_of?'>kind_of?</span><span class='lparen'>(</span><span class='const'>Class</span><span class='rparen'>)</span>
+            <span class='id identifier rubyid_component_model'>component_model</span> <span class='op'>=</span> <span class='id identifier rubyid_value'>value</span><span class='period'>.</span><span class='id identifier rubyid_component_model'>component_model</span>
+            <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_selected'>selected</span> <span class='op'>=</span> <span class='id identifier rubyid_spec'>spec</span><span class='lbracket'>[</span><span class='id identifier rubyid_component_model'>component_model</span><span class='rbracket'>]</span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span> <span class='op'>!</span><span class='id identifier rubyid_selected'>selected</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='symbol'>:to_str</span><span class='rparen'>)</span>
+                <span class='kw'>if</span> <span class='id identifier rubyid_selected'>selected</span> <span class='op'>!=</span> <span class='id identifier rubyid_component_model'>component_model</span>
+                    <span class='id identifier rubyid_new_value'>new_value</span> <span class='op'>=</span> <span class='id identifier rubyid_selected'>selected</span><span class='period'>.</span><span class='id identifier rubyid_selected_for'>selected_for</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_selected_model'>selected_model</span>
+                <span class='kw'>end</span>
+            <span class='kw'>end</span>
+        <span class='kw'>when</span> <span class='const'><span class='object_link'><a href="../Module.html" title="Module (class)">Module</a></span></span>
+            <span class='id identifier rubyid_new_value'>new_value</span> <span class='op'>=</span> <span class='id identifier rubyid_spec'>spec</span><span class='lbracket'>[</span><span class='id identifier rubyid_value'>value</span><span class='rbracket'>]</span>
+        <span class='kw'>else</span> <span class='kw'>return</span> <span class='id identifier rubyid_value'>value</span>
+        <span class='kw'>end</span>
+        <span class='kw'>return</span> <span class='id identifier rubyid_value'>value</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_new_value'>new_value</span>
+        <span class='kw'>return</span> <span class='id identifier rubyid_value'>value</span> <span class='kw'>if</span> <span class='id identifier rubyid_value'>value</span> <span class='op'>==</span> <span class='id identifier rubyid_new_value'>new_value</span>
+        <span class='id identifier rubyid_value'>value</span> <span class='op'>=</span> <span class='id identifier rubyid_new_value'>new_value</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_value'>value</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="==-instance_method">
+  
+    #<strong>==</strong>(obj)  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+16</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/dependency_injection.rb', line 16</span>
+
+<span class='kw'>def</span> <span class='op'>==</span><span class='lparen'>(</span><span class='id identifier rubyid_obj'>obj</span><span class='rparen'>)</span><span class='semicolon'>;</span> <span class='id identifier rubyid_eql?'>eql?</span><span class='lparen'>(</span><span class='id identifier rubyid_obj'>obj</span><span class='rparen'>)</span> <span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="add-instance_method">
+  
+    
+      <span class="overload">#<strong>add</strong>(default0, default1, key0 = &gt;value0)  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> </span>
+    
+      <span class="overload">#<strong>add</strong>([default0, default1], key0 = &gt;value0)  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> </span>
+    
+      <span class="overload">#<strong>add</strong>(dependency_injection)  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> </span>
+    
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Add default and explicit selections in one call</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/dependency_injection.rb', line 91</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_add'>add</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_mappings'>mappings</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_explicit'>explicit</span><span class='comma'>,</span> <span class='id identifier rubyid_defaults'>defaults</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="" title="Syskit::DependencyInjection (class)">DependencyInjection</a></span></span><span class='period'>.</span><span class='id identifier rubyid_partition_use_arguments'><span class='object_link'><a href="#partition_use_arguments-class_method" title="Syskit::DependencyInjection.partition_use_arguments (method)">partition_use_arguments</a></span></span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_mappings'>mappings</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_explicit'>explicit</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="" title="Syskit::DependencyInjection (class)">DependencyInjection</a></span></span><span class='period'>.</span><span class='id identifier rubyid_normalize_selection'><span class='object_link'><a href="#normalize_selection-class_method" title="Syskit::DependencyInjection.normalize_selection (method)">normalize_selection</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_explicit'>explicit</span><span class='rparen'>)</span>
+
+    <span class='id identifier rubyid_filtered_defaults'>filtered_defaults</span> <span class='op'>=</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+    <span class='id identifier rubyid_defaults'>defaults</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_obj'>obj</span><span class='op'>|</span>
+        <span class='kw'>if</span> <span class='id identifier rubyid_obj'>obj</span><span class='period'>.</span><span class='id identifier rubyid_kind_of?'>kind_of?</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="" title="Syskit::DependencyInjection (class)">DependencyInjection</a></span></span><span class='rparen'>)</span>
+            <span class='comment'># Do not use merge here. One wants to override the
+</span>            <span class='comment'># existing selections with the new ones
+</span>            <span class='id identifier rubyid_explicit'>explicit</span> <span class='op'>=</span> <span class='id identifier rubyid_obj'>obj</span><span class='period'>.</span><span class='id identifier rubyid_explicit'>explicit</span><span class='period'>.</span><span class='id identifier rubyid_merge!'>merge!</span><span class='lparen'>(</span><span class='id identifier rubyid_explicit'>explicit</span><span class='rparen'>)</span>
+            <span class='id identifier rubyid_filtered_defaults'>filtered_defaults</span> <span class='op'>|=</span> <span class='id identifier rubyid_obj'>obj</span><span class='period'>.</span><span class='id identifier rubyid_defaults'>defaults</span>
+        <span class='kw'>else</span>
+            <span class='id identifier rubyid_filtered_defaults'>filtered_defaults</span> <span class='op'>&lt;&lt;</span> <span class='const'><span class='object_link'><a href="" title="Syskit::DependencyInjection (class)">DependencyInjection</a></span></span><span class='period'>.</span><span class='id identifier rubyid_normalize_selected_object'><span class='object_link'><a href="#normalize_selected_object-class_method" title="Syskit::DependencyInjection.normalize_selected_object (method)">normalize_selected_object</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_obj'>obj</span><span class='rparen'>)</span>
+        <span class='kw'>end</span>
+    <span class='kw'>end</span>
+
+    <span class='id identifier rubyid_add_explicit'>add_explicit</span><span class='lparen'>(</span><span class='id identifier rubyid_explicit'>explicit</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_add_defaults'>add_defaults</span><span class='lparen'>(</span><span class='id identifier rubyid_filtered_defaults'>filtered_defaults</span><span class='rparen'>)</span>
+    <span class='kw'>self</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="add_defaults-instance_method">
+  
+    #<strong>add_defaults</strong>(list)  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Add a list of objects to the default list.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+214
+215
+216
+217
+218
+219</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/dependency_injection.rb', line 214</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_add_defaults'>add_defaults</span><span class='lparen'>(</span><span class='id identifier rubyid_list'>list</span><span class='rparen'>)</span>
+    <span class='comment'># Invalidate the @resolved cached
+</span>    <span class='ivar'>@resolved</span> <span class='op'>=</span> <span class='kw'>nil</span>
+    <span class='id identifier rubyid_list'>list</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_v'>v</span><span class='op'>|</span> <span class='id identifier rubyid_v'>v</span><span class='period'>.</span><span class='id identifier rubyid_freeze'>freeze</span> <span class='kw'>if</span> <span class='id identifier rubyid_v'>v</span><span class='period'>.</span><span class='id identifier rubyid_kind_of?'>kind_of?</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="InstanceRequirements.html" title="Syskit::InstanceRequirements (class)">InstanceRequirements</a></span></span><span class='rparen'>)</span> <span class='rbrace'>}</span>
+    <span class='ivar'>@defaults</span> <span class='op'>|=</span> <span class='id identifier rubyid_list'>list</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="add_explicit-instance_method">
+  
+    #<strong>add_explicit</strong>(mappings)  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Add a new dependency injection pattern to the current set</p>
+
+<p>The new mapping overrides existing mappings</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/dependency_injection.rb', line 115</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_add_explicit'>add_explicit</span><span class='lparen'>(</span><span class='id identifier rubyid_mappings'>mappings</span><span class='rparen'>)</span>
+    <span class='comment'># Invalidate the @resolved cached
+</span>    <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_defaults'>defaults</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
+        <span class='ivar'>@resolved</span> <span class='op'>=</span> <span class='kw'>nil</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_mappings'>mappings</span><span class='period'>.</span><span class='id identifier rubyid_each_value'>each_value</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_v'>v</span><span class='op'>|</span>
+        <span class='id identifier rubyid_v'>v</span><span class='period'>.</span><span class='id identifier rubyid_freeze'>freeze</span> <span class='kw'>if</span> <span class='id identifier rubyid_v'>v</span><span class='period'>.</span><span class='id identifier rubyid_kind_of?'>kind_of?</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="InstanceRequirements.html" title="Syskit::InstanceRequirements (class)">InstanceRequirements</a></span></span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+
+    <span class='id identifier rubyid_explicit'>explicit</span><span class='period'>.</span><span class='id identifier rubyid_merge!'>merge!</span><span class='lparen'>(</span><span class='id identifier rubyid_mappings'>mappings</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_k'>k</span><span class='comma'>,</span> <span class='id identifier rubyid_v1'>v1</span><span class='comma'>,</span> <span class='id identifier rubyid_v2'>v2</span><span class='op'>|</span>
+        <span class='comment'># There is a pathological case here. If v2 == k, then we
+</span>        <span class='comment'># should keep the k =&gt; v1 mapping (because of recursive
+</span>        <span class='comment'># resolution). However, this is the one case where it does
+</span>        <span class='comment'># not work, as the merge! overrides the existing selection.
+</span>        <span class='comment'>#
+</span>        <span class='comment'># However, when this happens, we can simply ignore the
+</span>        <span class='comment'># identity selection
+</span>        <span class='kw'>if</span> <span class='id identifier rubyid_v2'>v2</span> <span class='op'>==</span> <span class='id identifier rubyid_k'>k</span> <span class='kw'>then</span> <span class='id identifier rubyid_v1'>v1</span>
+        <span class='kw'>else</span> <span class='id identifier rubyid_v2'>v2</span>
+        <span class='kw'>end</span>
+    <span class='kw'>end</span>
+
+    <span class='ivar'>@explicit</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="" title="Syskit::DependencyInjection (class)">DependencyInjection</a></span></span><span class='period'>.</span><span class='id identifier rubyid_resolve_recursive_selection_mapping'><span class='object_link'><a href="#resolve_recursive_selection_mapping-class_method" title="Syskit::DependencyInjection.resolve_recursive_selection_mapping (method)">resolve_recursive_selection_mapping</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_explicit'>explicit</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="add_mask-instance_method">
+  
+    #<strong>add_mask</strong>(mask)  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+140
+141
+142
+143
+144</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/dependency_injection.rb', line 140</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_add_mask'>add_mask</span><span class='lparen'>(</span><span class='id identifier rubyid_mask'>mask</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_mask'>mask</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_key'>key</span><span class='op'>|</span>
+        <span class='id identifier rubyid_explicit'>explicit</span><span class='lbracket'>[</span><span class='id identifier rubyid_key'>key</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="" title="Syskit::DependencyInjection (class)">DependencyInjection</a></span></span><span class='period'>.</span><span class='id identifier rubyid_do_not_inherit'><span class='object_link'><a href="#do_not_inherit-class_method" title="Syskit::DependencyInjection.do_not_inherit (method)">do_not_inherit</a></span></span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="clear-instance_method">
+  
+    #<strong>clear</strong>  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+43
+44
+45
+46</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/dependency_injection.rb', line 43</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_clear'>clear</span>
+    <span class='id identifier rubyid_explicit'>explicit</span><span class='period'>.</span><span class='id identifier rubyid_clear'>clear</span>
+    <span class='id identifier rubyid_defaults'>defaults</span><span class='period'>.</span><span class='id identifier rubyid_clear'>clear</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="direct_selection_for-instance_method">
+  
+    #<strong>direct_selection_for</strong>(obj)  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/dependency_injection.rb', line 241</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_direct_selection_for'>direct_selection_for</span><span class='lparen'>(</span><span class='id identifier rubyid_obj'>obj</span><span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_defaults'>defaults</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
+        <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_sel'>sel</span> <span class='op'>=</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_explicit'>explicit</span><span class='lbracket'>[</span><span class='id identifier rubyid_obj'>obj</span><span class='rbracket'>]</span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_sel'>sel</span> <span class='op'>!=</span> <span class='const'><span class='object_link'><a href="" title="Syskit::DependencyInjection (class)">DependencyInjection</a></span></span><span class='period'>.</span><span class='id identifier rubyid_do_not_inherit'><span class='object_link'><a href="#do_not_inherit-class_method" title="Syskit::DependencyInjection.do_not_inherit (method)">do_not_inherit</a></span></span>
+            <span class='id identifier rubyid_sel'>sel</span>
+        <span class='kw'>end</span>
+    <span class='kw'>else</span>
+        <span class='ivar'>@resolved</span> <span class='op'>||=</span> <span class='id identifier rubyid_resolve'>resolve</span>
+        <span class='kw'>return</span> <span class='ivar'>@resolved</span><span class='period'>.</span><span class='id identifier rubyid_direct_selection_for'>direct_selection_for</span><span class='lparen'>(</span><span class='id identifier rubyid_obj'>obj</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="each-instance_method">
+  
+    #<strong>each</strong>(&amp;block)  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Enumerates the selected objects (not the keys)</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+472
+473
+474
+475
+476
+477</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/dependency_injection.rb', line 472</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_each'>each</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_block_given?'>block_given?</span> <span class='kw'>or</span> <span class='kw'>return</span> <span class='id identifier rubyid_enum_for'>enum_for</span><span class='lparen'>(</span><span class='id identifier rubyid___method__'>__method__</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_explicit'>explicit</span><span class='period'>.</span><span class='id identifier rubyid_each_value'>each_value</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_defaults'>defaults</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+    <span class='kw'>self</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="each_selection_key-instance_method">
+  
+    #<strong>each_selection_key</strong>(&amp;block)  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+479
+480
+481</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/dependency_injection.rb', line 479</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_each_selection_key'>each_selection_key</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_explicit'>explicit</span><span class='period'>.</span><span class='id identifier rubyid_each_key'>each_key</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="empty?-instance_method">
+  
+    #<strong>empty?</strong>  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>True if this object contains no selection at all</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+39
+40
+41</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/dependency_injection.rb', line 39</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_empty?'>empty?</span>
+    <span class='ivar'>@explicit</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span> <span class='op'>&amp;&amp;</span> <span class='ivar'>@defaults</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="eql?-instance_method">
+  
+    #<strong>eql?</strong>(obj)  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+11
+12
+13
+14
+15</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/dependency_injection.rb', line 11</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_eql?'>eql?</span><span class='lparen'>(</span><span class='id identifier rubyid_obj'>obj</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_obj'>obj</span><span class='period'>.</span><span class='id identifier rubyid_kind_of?'>kind_of?</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="" title="Syskit::DependencyInjection (class)">DependencyInjection</a></span></span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span>
+        <span class='id identifier rubyid_explicit'>explicit</span> <span class='op'>==</span> <span class='id identifier rubyid_obj'>obj</span><span class='period'>.</span><span class='id identifier rubyid_explicit'>explicit</span> <span class='op'>&amp;&amp;</span>
+        <span class='id identifier rubyid_defaults'>defaults</span> <span class='op'>==</span> <span class='id identifier rubyid_obj'>obj</span><span class='period'>.</span><span class='id identifier rubyid_defaults'>defaults</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="has_selection_for?-instance_method">
+  
+    #<strong>has_selection_for?</strong>(name)  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>True if there is an explicit selection for the given name</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+147
+148
+149</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/dependency_injection.rb', line 147</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_has_selection_for?'>has_selection_for?</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
+    <span class='op'>!</span><span class='op'>!</span><span class='id identifier rubyid_direct_selection_for'>direct_selection_for</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="hash-instance_method">
+  
+    #<strong>hash</strong>  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+10</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/dependency_injection.rb', line 10</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_hash'>hash</span><span class='semicolon'>;</span> <span class='lbracket'>[</span><span class='id identifier rubyid_explicit'>explicit</span><span class='comma'>,</span> <span class='id identifier rubyid_defaults'>defaults</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_hash'>hash</span> <span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="initialize_copy-instance_method">
+  
+    #<strong>initialize_copy</strong>(from)  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+32
+33
+34
+35
+36</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/dependency_injection.rb', line 32</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize_copy'>initialize_copy</span><span class='lparen'>(</span><span class='id identifier rubyid_from'>from</span><span class='rparen'>)</span>
+    <span class='kw'>super</span>
+    <span class='ivar'>@explicit</span> <span class='op'>=</span> <span class='id identifier rubyid_from'>from</span><span class='period'>.</span><span class='id identifier rubyid_explicit'>explicit</span><span class='period'>.</span><span class='id identifier rubyid_dup'>dup</span>
+    <span class='ivar'>@defaults</span> <span class='op'>=</span> <span class='id identifier rubyid_from'>from</span><span class='period'>.</span><span class='id identifier rubyid_defaults'>defaults</span><span class='period'>.</span><span class='id identifier rubyid_dup'>dup</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="instance_selection_for-instance_method">
+  
+    #<strong>instance_selection_for</strong>(name, requirements)  &#x21d2; <tt><span class='object_link'><a href="InstanceSelection.html" title="Syskit::InstanceSelection (class)">InstanceSelection</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the non-ambiguous selection for the given name and requirements</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt>String</tt>, <tt>nil</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the name that should be used for resolution, or nil if there is no name</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>the</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="InstanceRequirements.html" title="Syskit::InstanceRequirements (class)">InstanceRequirements</a></span></tt>, <tt>nil</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>required models, or nil if none are specified</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="InstanceSelection.html" title="Syskit::InstanceSelection (class)">InstanceSelection</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="IncompatibleComponentModels.html" title="Syskit::IncompatibleComponentModels (class)">IncompatibleComponentModels</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>if the various selections lead to component models that are incompatible
+(i.e. to two component models that are different and not subclassing one
+another)</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/dependency_injection.rb', line 230</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_instance_selection_for'>instance_selection_for</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_requirements'>requirements</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_instance'>instance</span><span class='comma'>,</span> <span class='id identifier rubyid_component_model'>component_model</span><span class='comma'>,</span> <span class='id identifier rubyid_selected_services'>selected_services</span><span class='comma'>,</span> <span class='id identifier rubyid_used_keys'>used_keys</span> <span class='op'>=</span>
+        <span class='id identifier rubyid_selection_for'>selection_for</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_requirements'>requirements</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_selection'>selection</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="InstanceSelection.html" title="Syskit::InstanceSelection (class)">InstanceSelection</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="InstanceSelection.html#initialize-instance_method" title="Syskit::InstanceSelection#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+        <span class='id identifier rubyid_instance'>instance</span><span class='comma'>,</span>
+        <span class='const'><span class='object_link'><a href="InstanceRequirements.html" title="Syskit::InstanceRequirements (class)">InstanceRequirements</a></span></span><span class='period'>.</span><span class='id identifier rubyid_from_object'><span class='object_link'><a href="InstanceRequirements.html#from_object-class_method" title="Syskit::InstanceRequirements.from_object (method)">from_object</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_component_model'>component_model</span><span class='comma'>,</span> <span class='id identifier rubyid_requirements'>requirements</span><span class='rparen'>)</span><span class='comma'>,</span>
+        <span class='id identifier rubyid_requirements'>requirements</span><span class='comma'>,</span>
+        <span class='id identifier rubyid_selected_services'>selected_services</span><span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='id identifier rubyid_selection'>selection</span><span class='comma'>,</span> <span class='id identifier rubyid_used_keys'>used_keys</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="map-instance_method">
+  
+    #<strong>map</strong>(&amp;block)  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Create a new DependencyInjection object, with a modified selection</p>
+
+<p>Like #map!, this method yields the [selection_key, selected_instance] pairs
+to a block that must return a new value for the for
+<code>selected_instance</code>.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+442
+443
+444
+445</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/dependency_injection.rb', line 442</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_copy'>copy</span> <span class='op'>=</span> <span class='id identifier rubyid_dup'>dup</span>
+    <span class='id identifier rubyid_copy'>copy</span><span class='period'>.</span><span class='id identifier rubyid_map!'>map!</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="map!-instance_method">
+  
+    #<strong>map!</strong>(&amp;block)  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Changes the selections</p>
+
+<p>This method yields the [selection_key, selected_instance] pairs to a block
+that must return a new value for the for <code>selected_instance</code>. It
+modifies <code>self</code></p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+452
+453
+454
+455
+456
+457
+458
+459
+460
+461
+462
+463
+464
+465
+466
+467
+468
+469</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/dependency_injection.rb', line 452</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_map!'>map!</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+    <span class='comment'># Invalidate the @resolved cached
+</span>    <span class='ivar'>@resolved</span> <span class='op'>=</span> <span class='kw'>nil</span>
+    <span class='id identifier rubyid_changed'>changed</span> <span class='op'>=</span> <span class='kw'>false</span>
+    <span class='id identifier rubyid_explicit'>explicit</span> <span class='op'>=</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_explicit'>explicit</span><span class='period'>.</span><span class='id identifier rubyid_map_value'>map_value</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_k'>k</span><span class='comma'>,</span> <span class='id identifier rubyid_v'>v</span><span class='op'>|</span>
+        <span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='kw'>yield</span><span class='lparen'>(</span><span class='id identifier rubyid_v'>v</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_changed'>changed</span> <span class='op'>||=</span> <span class='lparen'>(</span><span class='id identifier rubyid_result'>result</span> <span class='op'>!=</span> <span class='id identifier rubyid_v'>v</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_result'>result</span>
+    <span class='kw'>end</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_changed'>changed</span>
+        <span class='ivar'>@explicit</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="" title="Syskit::DependencyInjection (class)">DependencyInjection</a></span></span><span class='period'>.</span><span class='id identifier rubyid_resolve_recursive_selection_mapping'><span class='object_link'><a href="#resolve_recursive_selection_mapping-class_method" title="Syskit::DependencyInjection.resolve_recursive_selection_mapping (method)">resolve_recursive_selection_mapping</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_explicit'>explicit</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+
+    <span class='ivar'>@defaults</span><span class='period'>.</span><span class='id identifier rubyid_map!'>map!</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_v'>v</span><span class='op'>|</span>
+        <span class='kw'>yield</span><span class='lparen'>(</span><span class='id identifier rubyid_v'>v</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+    <span class='kw'>self</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="merge-instance_method">
+  
+    #<strong>merge</strong>(other)  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Merge the selections in <code>other</code> into <code>self</code>.</p>
+
+<p>If both objects provide selections for the same keys, raises ArgumentError
+if the two selections are incompatible</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+673
+674
+675
+676
+677
+678
+679
+680
+681
+682
+683
+684
+685
+686
+687
+688</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/dependency_injection.rb', line 673</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='id identifier rubyid_other'>other</span><span class='rparen'>)</span>
+    <span class='comment'># Invalidate the @resolved cached
+</span>    <span class='ivar'>@resolved</span> <span class='op'>=</span> <span class='kw'>nil</span>
+    <span class='ivar'>@explicit</span><span class='period'>.</span><span class='id identifier rubyid_merge!'>merge!</span><span class='lparen'>(</span><span class='id identifier rubyid_other'>other</span><span class='period'>.</span><span class='id identifier rubyid_explicit'>explicit</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_match'>match</span><span class='comma'>,</span> <span class='id identifier rubyid_model1'>model1</span><span class='comma'>,</span> <span class='id identifier rubyid_model2'>model2</span><span class='op'>|</span>
+        <span class='kw'>if</span> <span class='id identifier rubyid_model1'>model1</span> <span class='op'>==</span> <span class='id identifier rubyid_model2'>model2</span>
+            <span class='id identifier rubyid_model1'>model1</span>
+        <span class='kw'>elsif</span> <span class='id identifier rubyid_model1'>model1</span><span class='period'>.</span><span class='id identifier rubyid_fullfills?'>fullfills?</span><span class='lparen'>(</span><span class='id identifier rubyid_model2'>model2</span><span class='rparen'>)</span>
+            <span class='id identifier rubyid_model1'>model1</span>
+        <span class='kw'>elsif</span> <span class='id identifier rubyid_model2'>model2</span><span class='period'>.</span><span class='id identifier rubyid_fullfills?'>fullfills?</span><span class='lparen'>(</span><span class='id identifier rubyid_model1'>model1</span><span class='rparen'>)</span>
+            <span class='id identifier rubyid_model2'>model2</span>
+        <span class='kw'>else</span>
+            <span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>cannot use both </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_model1'>model1</span><span class='embexpr_end'>}</span><span class='tstring_content'> and </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_model2'>model2</span><span class='embexpr_end'>}</span><span class='tstring_content'> for </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_match'>match</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+        <span class='kw'>end</span>
+    <span class='kw'>end</span>
+    <span class='ivar'>@defaults</span> <span class='op'>|=</span> <span class='id identifier rubyid_other'>other</span><span class='period'>.</span><span class='id identifier rubyid_defaults'>defaults</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="pretty_print-instance_method">
+  
+    #<strong>pretty_print</strong>(pp)  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/dependency_injection.rb', line 54</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_pretty_print'>pretty_print</span><span class='lparen'>(</span><span class='id identifier rubyid_pp'>pp</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_pp'>pp</span><span class='period'>.</span><span class='id identifier rubyid_text'>text</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>DependencyInjection</span><span class='tstring_end'>&quot;</span></span>
+
+    <span class='id identifier rubyid_pp'>pp</span><span class='period'>.</span><span class='id identifier rubyid_breakable'>breakable</span>
+    <span class='id identifier rubyid_pp'>pp</span><span class='period'>.</span><span class='id identifier rubyid_text'>text</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Explicit:</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_explicit'>explicit</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
+        <span class='id identifier rubyid_pp'>pp</span><span class='period'>.</span><span class='id identifier rubyid_nest'>nest</span><span class='lparen'>(</span><span class='int'>2</span><span class='rparen'>)</span> <span class='kw'>do</span>
+            <span class='id identifier rubyid_pp'>pp</span><span class='period'>.</span><span class='id identifier rubyid_breakable'>breakable</span>
+            <span class='id identifier rubyid_explicit'>explicit</span> <span class='op'>=</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_explicit'>explicit</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_k'>k</span><span class='comma'>,</span> <span class='id identifier rubyid_v'>v</span><span class='op'>|</span>
+                <span class='id identifier rubyid_k'>k</span> <span class='op'>=</span> <span class='id identifier rubyid_k'>k</span><span class='period'>.</span><span class='id identifier rubyid_short_name'>short_name</span>
+                <span class='id identifier rubyid_v'>v</span> <span class='op'>=</span> <span class='id identifier rubyid_v'>v</span><span class='period'>.</span><span class='id identifier rubyid_short_name'>short_name</span>
+                <span class='lbracket'>[</span><span class='id identifier rubyid_k'>k</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_k'>k</span><span class='embexpr_end'>}</span><span class='tstring_content'> =&gt; </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_v'>v</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
+            <span class='kw'>end</span><span class='period'>.</span><span class='id identifier rubyid_sort_by'>sort_by</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:first</span><span class='rparen'>)</span>
+            <span class='id identifier rubyid_pp'>pp</span><span class='period'>.</span><span class='id identifier rubyid_seplist'>seplist</span><span class='lparen'>(</span><span class='id identifier rubyid_explicit'>explicit</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_kv'>kv</span><span class='op'>|</span>
+                <span class='id identifier rubyid_pp'>pp</span><span class='period'>.</span><span class='id identifier rubyid_text'>text</span> <span class='id identifier rubyid_kv'>kv</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span>
+            <span class='kw'>end</span>
+        <span class='kw'>end</span>
+    <span class='kw'>end</span>
+
+    <span class='id identifier rubyid_pp'>pp</span><span class='period'>.</span><span class='id identifier rubyid_breakable'>breakable</span>
+    <span class='id identifier rubyid_pp'>pp</span><span class='period'>.</span><span class='id identifier rubyid_text'>text</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Defaults:</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_defaults'>defaults</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
+        <span class='id identifier rubyid_pp'>pp</span><span class='period'>.</span><span class='id identifier rubyid_nest'>nest</span><span class='lparen'>(</span><span class='int'>2</span><span class='rparen'>)</span> <span class='kw'>do</span>
+            <span class='id identifier rubyid_pp'>pp</span><span class='period'>.</span><span class='id identifier rubyid_breakable'>breakable</span>
+            <span class='id identifier rubyid_defaults'>defaults</span> <span class='op'>=</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_defaults'>defaults</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:to_s</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_sort'>sort</span>
+            <span class='id identifier rubyid_pp'>pp</span><span class='period'>.</span><span class='id identifier rubyid_seplist'>seplist</span><span class='lparen'>(</span><span class='id identifier rubyid_defaults'>defaults</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_v'>v</span><span class='op'>|</span>
+                <span class='id identifier rubyid_pp'>pp</span><span class='period'>.</span><span class='id identifier rubyid_text'>text</span> <span class='id identifier rubyid_v'>v</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span>
+            <span class='kw'>end</span>
+        <span class='kw'>end</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="remove_unresolved-instance_method">
+  
+    #<strong>remove_unresolved</strong>  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Removes the unresolved instances from the list of selections</p>
+
+<p>So far, unresolved selections are the ones that are represented as strings.
+The entries are not removed per se, but they are replaced by nil, to mark
+“do not use” selections.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+427
+428
+429
+430
+431
+432
+433
+434
+435</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/dependency_injection.rb', line 427</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_remove_unresolved'>remove_unresolved</span>
+    <span class='id identifier rubyid_defaults'>defaults</span><span class='period'>.</span><span class='id identifier rubyid_delete_if'>delete_if</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_v'>v</span><span class='op'>|</span> <span class='id identifier rubyid_v'>v</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='symbol'>:to_str</span><span class='rparen'>)</span> <span class='rbrace'>}</span>
+    <span class='id identifier rubyid_map!'>map!</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_value'>value</span><span class='op'>|</span>
+        <span class='kw'>if</span> <span class='id identifier rubyid_value'>value</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='symbol'>:to_str</span><span class='rparen'>)</span>
+            <span class='kw'>nil</span>
+        <span class='kw'>else</span> <span class='id identifier rubyid_value'>value</span>
+        <span class='kw'>end</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="resolve-instance_method">
+  
+    #<strong>resolve</strong>  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Resolves the selections by generating a direct mapping (as a hash)
+representing the required selection</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+356
+357
+358
+359
+360</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/dependency_injection.rb', line 356</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_resolve'>resolve</span>
+    <span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='id identifier rubyid_dup'>dup</span>
+    <span class='id identifier rubyid_result'>result</span><span class='period'>.</span><span class='id identifier rubyid_resolve!'>resolve!</span>
+    <span class='id identifier rubyid_result'>result</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="resolve!-instance_method">
+  
+    #<strong>resolve!</strong>  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+349
+350
+351
+352</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/dependency_injection.rb', line 349</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_resolve!'>resolve!</span>
+    <span class='id identifier rubyid_resolve_default_selections'>resolve_default_selections</span>
+    <span class='ivar'>@explicit</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="" title="Syskit::DependencyInjection (class)">DependencyInjection</a></span></span><span class='period'>.</span><span class='id identifier rubyid_resolve_recursive_selection_mapping'><span class='object_link'><a href="#resolve_recursive_selection_mapping-class_method" title="Syskit::DependencyInjection.resolve_recursive_selection_mapping (method)">resolve_recursive_selection_mapping</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_explicit'>explicit</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="resolve_default_selections-instance_method">
+  
+    #<strong>resolve_default_selections</strong>  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+344
+345
+346
+347</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/dependency_injection.rb', line 344</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_resolve_default_selections'>resolve_default_selections</span>
+    <span class='ivar'>@explicit</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="" title="Syskit::DependencyInjection (class)">DependencyInjection</a></span></span><span class='period'>.</span><span class='id identifier rubyid_resolve_default_selections'><span class='object_link'><a href="#resolve_default_selections-class_method" title="Syskit::DependencyInjection.resolve_default_selections (method)">resolve_default_selections</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_explicit'>explicit</span><span class='comma'>,</span> <span class='id identifier rubyid_defaults'>defaults</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_defaults'>defaults</span><span class='period'>.</span><span class='id identifier rubyid_clear'>clear</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="resolve_names-instance_method">
+  
+    #<strong>resolve_names</strong>(mapping = Hash.new)  &#x21d2; <tt>Set&lt;String&gt;</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Recursively resolve the selections that are specified as strings using the
+provided block</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Set&lt;String&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the set of names that could not be resolved</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+401
+402
+403
+404
+405
+406
+407
+408
+409
+410
+411
+412
+413
+414
+415
+416
+417
+418
+419
+420</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/dependency_injection.rb', line 401</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_resolve_names'>resolve_names</span><span class='lparen'>(</span><span class='id identifier rubyid_mapping'>mapping</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_unresolved'>unresolved</span> <span class='op'>=</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+    <span class='id identifier rubyid_map!'>map!</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_v'>v</span><span class='op'>|</span>
+        <span class='kw'>if</span> <span class='id identifier rubyid_v'>v</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='symbol'>:to_str</span><span class='rparen'>)</span>
+            <span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="" title="Syskit::DependencyInjection (class)">DependencyInjection</a></span></span><span class='period'>.</span><span class='id identifier rubyid_find_name_resolution'><span class='object_link'><a href="#find_name_resolution-class_method" title="Syskit::DependencyInjection.find_name_resolution (method)">find_name_resolution</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_v'>v</span><span class='comma'>,</span> <span class='id identifier rubyid_mapping'>mapping</span><span class='rparen'>)</span>
+            <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_result'>result</span>
+                <span class='id identifier rubyid_unresolved'>unresolved</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_v'>v</span>
+                <span class='id identifier rubyid_v'>v</span>
+            <span class='kw'>else</span> <span class='id identifier rubyid_result'>result</span>
+            <span class='kw'>end</span>
+
+        <span class='kw'>elsif</span> <span class='id identifier rubyid_v'>v</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='symbol'>:resolve_names</span><span class='rparen'>)</span>
+            <span class='comment'># The value is e.g. an InstanceRequirements
+</span>            <span class='id identifier rubyid_unresolved'>unresolved</span> <span class='op'>|=</span> <span class='id identifier rubyid_v'>v</span><span class='period'>.</span><span class='id identifier rubyid_resolve_names'>resolve_names</span><span class='lparen'>(</span><span class='id identifier rubyid_mapping'>mapping</span><span class='rparen'>)</span>
+            <span class='id identifier rubyid_v'>v</span>
+        <span class='kw'>else</span> <span class='id identifier rubyid_v'>v</span>
+        <span class='kw'>end</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_unresolved'>unresolved</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="selection_for-instance_method">
+  
+    #<strong>selection_for</strong>(name, requirements)  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the selected instance based on the given name and requirements</p>
+<dl class="rdoc-list label-list"><dt>(Task,Model&lt;Component&gt;,Hash&lt;Model&lt;DataService&gt;,Models::BoundDataService&gt;,Set&lt;Object&gt;)
+<dd>
+<p>the selected instance.</p>
+</dd></dl>
+
+<pre class="code ruby"><code class="ruby">If no matching selection is found, a matching model task proxy
+is created. The first hash is a service mapping, from requested
+service models to bound services in the task model. Finally, the
+last set is the set of keys that have been used for the resolution.
+</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt>String</tt>, <tt>nil</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the selection name if there is one, or nil</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>requirements</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="InstanceRequirements.html" title="Syskit::InstanceRequirements (class)">InstanceRequirements</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the requirements for the selected instance</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="IncompatibleComponentModels.html" title="Syskit::IncompatibleComponentModels (class)">IncompatibleComponentModels</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>if the various selections lead to component models that are incompatible
+(i.e. to two component models that are different and not subclassing one
+another)</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291
+292
+293
+294
+295
+296
+297
+298
+299
+300
+301
+302
+303
+304
+305
+306
+307
+308
+309
+310
+311
+312
+313
+314
+315
+316
+317
+318
+319
+320
+321
+322
+323
+324
+325
+326
+327
+328
+329
+330
+331
+332
+333
+334
+335
+336
+337
+338
+339
+340
+341
+342</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/dependency_injection.rb', line 268</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_selection_for'>selection_for</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_requirements'>requirements</span><span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_defaults'>defaults</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
+        <span class='id identifier rubyid_selection'>selection</span> <span class='op'>=</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_explicit'>explicit</span>
+    <span class='kw'>else</span>
+        <span class='ivar'>@resolved</span> <span class='op'>||=</span> <span class='id identifier rubyid_resolve'>resolve</span>
+        <span class='kw'>return</span> <span class='ivar'>@resolved</span><span class='period'>.</span><span class='id identifier rubyid_selection_for'>selection_for</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_requirements'>requirements</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+
+    <span class='id identifier rubyid_used_keys'>used_keys</span> <span class='op'>=</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+    <span class='id identifier rubyid_selected_services'>selected_services</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+    <span class='id identifier rubyid_selections'>selections</span> <span class='op'>=</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_name'>name</span> <span class='op'>&amp;&amp;</span> <span class='lparen'>(</span><span class='id identifier rubyid_sel'>sel</span> <span class='op'>=</span> <span class='id identifier rubyid_selection'>selection</span><span class='lbracket'>[</span><span class='id identifier rubyid_name'>name</span><span class='rbracket'>]</span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span> <span class='lparen'>(</span><span class='id identifier rubyid_sel'>sel</span> <span class='op'>!=</span> <span class='const'><span class='object_link'><a href="" title="Syskit::DependencyInjection (class)">DependencyInjection</a></span></span><span class='period'>.</span><span class='id identifier rubyid_do_not_inherit'><span class='object_link'><a href="#do_not_inherit-class_method" title="Syskit::DependencyInjection.do_not_inherit (method)">do_not_inherit</a></span></span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_used_keys'>used_keys</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_name'>name</span>
+        <span class='kw'>if</span> <span class='id identifier rubyid_sel'>sel</span> <span class='op'>==</span> <span class='const'><span class='object_link'><a href="" title="Syskit::DependencyInjection (class)">DependencyInjection</a></span></span><span class='period'>.</span><span class='id identifier rubyid_nothing'><span class='object_link'><a href="#nothing-class_method" title="Syskit::DependencyInjection.nothing (method)">nothing</a></span></span>
+            <span class='id identifier rubyid_sel'>sel</span> <span class='op'>=</span> <span class='id identifier rubyid_requirements'>requirements</span>
+        <span class='kw'>end</span>
+        <span class='id identifier rubyid_selections'>selections</span> <span class='op'>&lt;&lt;</span> <span class='lbracket'>[</span><span class='id identifier rubyid_sel'>sel</span><span class='rbracket'>]</span>
+        <span class='id identifier rubyid_selection'>selection</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_key'>key</span><span class='comma'>,</span> <span class='id identifier rubyid_value'>value</span><span class='op'>|</span>
+            <span class='kw'>next</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_value'>value</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='symbol'>:component_model</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='id identifier rubyid_value'>value</span><span class='period'>.</span><span class='id identifier rubyid_component_model'>component_model</span> <span class='op'>!=</span> <span class='id identifier rubyid_sel'>sel</span>
+
+            <span class='id identifier rubyid_requirements'>requirements</span><span class='period'>.</span><span class='id identifier rubyid_each_required_model'>each_required_model</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_req_m'>req_m</span><span class='op'>|</span>
+                <span class='kw'>if</span> <span class='id identifier rubyid_key'>key</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='symbol'>:fullfills?</span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_key'>key</span><span class='period'>.</span><span class='id identifier rubyid_fullfills?'>fullfills?</span><span class='lparen'>(</span><span class='id identifier rubyid_req_m'>req_m</span><span class='rparen'>)</span>
+                    <span class='id identifier rubyid_selected_services'>selected_services</span><span class='lbracket'>[</span><span class='id identifier rubyid_req_m'>req_m</span><span class='rbracket'>]</span> <span class='op'>||=</span> <span class='id identifier rubyid_value'>value</span>
+                <span class='kw'>end</span>
+            <span class='kw'>end</span>
+        <span class='kw'>end</span>
+    <span class='kw'>else</span>
+        <span class='id identifier rubyid_requirements'>requirements</span><span class='period'>.</span><span class='id identifier rubyid_each_required_model'>each_required_model</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_required_m'>required_m</span><span class='op'>|</span>
+            <span class='kw'>if</span> <span class='id identifier rubyid_sel'>sel</span> <span class='op'>=</span> <span class='id identifier rubyid_direct_selection_for'>direct_selection_for</span><span class='lparen'>(</span><span class='id identifier rubyid_required_m'>required_m</span><span class='rparen'>)</span>
+                <span class='id identifier rubyid_selections'>selections</span> <span class='op'>&lt;&lt;</span> <span class='lbracket'>[</span><span class='id identifier rubyid_sel'>sel</span><span class='comma'>,</span> <span class='id identifier rubyid_required_m'>required_m</span><span class='rbracket'>]</span>
+                <span class='id identifier rubyid_used_keys'>used_keys</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_required_m'>required_m</span>
+            <span class='kw'>else</span>
+                <span class='id identifier rubyid_selections'>selections</span> <span class='op'>&lt;&lt;</span> <span class='lbracket'>[</span><span class='id identifier rubyid_required_m'>required_m</span><span class='comma'>,</span> <span class='id identifier rubyid_required_m'>required_m</span><span class='rbracket'>]</span>
+            <span class='kw'>end</span>
+        <span class='kw'>end</span>
+    <span class='kw'>end</span>
+
+    <span class='id identifier rubyid_selected_instance'>selected_instance</span><span class='comma'>,</span> <span class='id identifier rubyid_selected_requirements'>selected_requirements</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="InstanceRequirements.html" title="Syskit::InstanceRequirements (class)">InstanceRequirements</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="InstanceRequirements.html#initialize-instance_method" title="Syskit::InstanceRequirements#initialize (method)">new</a></span></span>
+    <span class='id identifier rubyid_requirements_name'>requirements_name</span> <span class='op'>=</span> <span class='kw'>nil</span>
+    <span class='id identifier rubyid_selections'>selections</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_sel_m'>sel_m</span><span class='comma'>,</span> <span class='id identifier rubyid_required_m'>required_m</span><span class='op'>|</span>
+        <span class='kw'>if</span> <span class='id identifier rubyid_sel_m'>sel_m</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='symbol'>:to_task</span><span class='rparen'>)</span>
+            <span class='id identifier rubyid_sel_task'>sel_task</span> <span class='op'>=</span> <span class='id identifier rubyid_sel_m'>sel_m</span><span class='period'>.</span><span class='id identifier rubyid_to_task'>to_task</span>
+            <span class='id identifier rubyid_selected_instance'>selected_instance</span> <span class='op'>||=</span> <span class='id identifier rubyid_sel_task'>sel_task</span>
+            <span class='kw'>if</span> <span class='id identifier rubyid_selected_instance'>selected_instance</span> <span class='op'>!=</span> <span class='id identifier rubyid_sel_task'>sel_task</span>
+                <span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>task instances </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_selected_instance'>selected_instance</span><span class='embexpr_end'>}</span><span class='tstring_content'> and </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_sel_m'>sel_m</span><span class='embexpr_end'>}</span><span class='tstring_content'> are both selected for </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_required_m'>required_m</span> <span class='op'>||</span> <span class='id identifier rubyid_requirements'>requirements</span><span class='embexpr_end'>}</span><span class='tstring_content'>, but they are not compatible</span><span class='tstring_end'>&quot;</span></span>
+            <span class='kw'>end</span>
+        <span class='kw'>end</span>
+
+        <span class='id identifier rubyid_sel_m'>sel_m</span> <span class='op'>=</span> <span class='id identifier rubyid_sel_m'>sel_m</span><span class='period'>.</span><span class='id identifier rubyid_to_instance_requirements'>to_instance_requirements</span>
+        <span class='kw'>if</span> <span class='id identifier rubyid_sel_m'>sel_m</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='symbol'>:name</span><span class='rparen'>)</span>
+            <span class='id identifier rubyid_requirements_name'>requirements_name</span> <span class='op'>||=</span> <span class='id identifier rubyid_sel_m'>sel_m</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span>
+        <span class='kw'>end</span>
+        <span class='kw'>if</span> <span class='id identifier rubyid_sel_m'>sel_m</span><span class='period'>.</span><span class='id identifier rubyid_service'>service</span>
+            <span class='kw'>if</span> <span class='id identifier rubyid_required_m'>required_m</span>
+                <span class='id identifier rubyid_selected_services'>selected_services</span><span class='lbracket'>[</span><span class='id identifier rubyid_required_m'>required_m</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_sel_m'>sel_m</span><span class='period'>.</span><span class='id identifier rubyid_service'>service</span>
+            <span class='kw'>else</span>
+                <span class='id identifier rubyid_requirements'>requirements</span><span class='period'>.</span><span class='id identifier rubyid_each_required_model'>each_required_model</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_req_m'>req_m</span><span class='op'>|</span>
+                    <span class='kw'>if</span> <span class='id identifier rubyid_sel_m'>sel_m</span><span class='period'>.</span><span class='id identifier rubyid_fullfills?'>fullfills?</span><span class='lparen'>(</span><span class='id identifier rubyid_req_m'>req_m</span><span class='rparen'>)</span>
+                        <span class='id identifier rubyid_selected_services'>selected_services</span><span class='lbracket'>[</span><span class='id identifier rubyid_req_m'>req_m</span><span class='rbracket'>]</span> <span class='op'>||=</span> <span class='id identifier rubyid_sel_m'>sel_m</span><span class='period'>.</span><span class='id identifier rubyid_service'>service</span>
+                    <span class='kw'>end</span>
+                <span class='kw'>end</span>
+            <span class='kw'>end</span>
+        <span class='kw'>end</span>
+        <span class='id identifier rubyid_selected_requirements'>selected_requirements</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='id identifier rubyid_sel_m'>sel_m</span><span class='period'>.</span><span class='id identifier rubyid_to_component_model'>to_component_model</span><span class='comma'>,</span> <span class='label'>keep_abstract:</span> <span class='kw'>true</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_selections'>selections</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span> <span class='op'>==</span> <span class='int'>1</span>
+        <span class='id identifier rubyid_selected_requirements'>selected_requirements</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span> <span class='op'>=</span> <span class='id identifier rubyid_requirements_name'>requirements_name</span>
+    <span class='kw'>end</span>
+
+    <span class='kw'>if</span> <span class='id identifier rubyid_selected_instance'>selected_instance</span> <span class='op'>&amp;&amp;</span> <span class='op'>!</span><span class='id identifier rubyid_selected_instance'>selected_instance</span><span class='period'>.</span><span class='id identifier rubyid_fullfills?'>fullfills?</span><span class='lparen'>(</span><span class='id identifier rubyid_requirements'>requirements</span><span class='comma'>,</span> <span class='id identifier rubyid_requirements'>requirements</span><span class='period'>.</span><span class='id identifier rubyid_arguments'>arguments</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>explicitly selected </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_selected_instance'>selected_instance</span><span class='embexpr_end'>}</span><span class='tstring_content'>, but it does not fullfill the required </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_requirements'>requirements</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>end</span>
+
+    <span class='kw'>return</span> <span class='id identifier rubyid_selected_instance'>selected_instance</span><span class='comma'>,</span> <span class='id identifier rubyid_selected_requirements'>selected_requirements</span><span class='comma'>,</span> <span class='id identifier rubyid_selected_services'>selected_services</span><span class='comma'>,</span> <span class='id identifier rubyid_used_keys'>used_keys</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="to_s-instance_method">
+  
+    #<strong>to_s</strong>  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>:nodoc:</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+48
+49
+50
+51
+52</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/dependency_injection.rb', line 48</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_to_s'>to_s</span> <span class='comment'># :nodoc:
+</span>    <span class='id identifier rubyid_explicit'>explicit</span> <span class='op'>=</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_explicit'>explicit</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_k'>k</span><span class='comma'>,</span> <span class='id identifier rubyid_v'>v</span><span class='op'>|</span> <span class='lbracket'>[</span><span class='id identifier rubyid_k'>k</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='comma'>,</span> <span class='id identifier rubyid_v'>v</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='rbracket'>]</span> <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_sort_by'>sort_by</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:first</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_k'>k</span><span class='comma'>,</span> <span class='id identifier rubyid_v'>v</span><span class='op'>|</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_k'>k</span><span class='embexpr_end'>}</span><span class='tstring_content'> =&gt; </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_v'>v</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span> <span class='rbrace'>}</span>
+    <span class='id identifier rubyid_defaults'>defaults</span> <span class='op'>=</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_defaults'>defaults</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:to_s</span><span class='rparen'>)</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_defaults'>defaults</span><span class='period'>.</span><span class='id identifier rubyid_concat'>concat</span><span class='lparen'>(</span><span class='id identifier rubyid_explicit'>explicit</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>, </span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Wed Apr 10 21:55:50 2019 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.19 (ruby-2.5.1).
+</div>
+
+    </div>
+  </body>
+</html>

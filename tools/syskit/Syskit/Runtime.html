@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Module: Syskit::Runtime
+  
+    &mdash; Documentation by YARD 0.9.19
+  
+</title>
+
+  <link rel="stylesheet" href="../css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "Syskit::Runtime";
+  relpath = '../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../_index.html">Index (R)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../Syskit.html" title="Syskit (module)">Syskit</a></span></span>
+     &raquo; 
+    <span class="title">Runtime</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Module: Syskit::Runtime
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+
+  
+  
+  <dl>
+      <dt>Extended by:</dt>
+      <dd>Logger::Hierarchy</dd>
+  </dl>
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/syskit/runtime.rb<span class="defines">,<br />
+  lib/syskit/runtime/update_task_states.rb,<br /> lib/syskit/runtime/connection_management.rb,<br /> lib/syskit/runtime/update_deployment_states.rb,<br /> lib/syskit/runtime/apply_requirement_modifications.rb</span>
+</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>Namespace containing all the system management at runtime (propagation of
+states, triggering of connection updates, …)</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><h2>Defined Under Namespace</h2>
+<p class="children">
+  
+    
+      <strong class="modules">Modules:</strong> <span class='object_link'><a href="Runtime/PlanExtension.html" title="Syskit::Runtime::PlanExtension (module)">PlanExtension</a></span>
+    
+  
+    
+      <strong class="classes">Classes:</strong> <span class='object_link'><a href="Runtime/ConnectionManagement.html" title="Syskit::Runtime::ConnectionManagement (class)">ConnectionManagement</a></span>
+    
+  
+</p>
+
+
+
+
+
+
+
+  
+    <h2>
+      Class Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#abort_process_server-class_method" title="abort_process_server (class method)">.<strong>abort_process_server</strong>(plan, process_server)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#apply_requirement_modifications-class_method" title="apply_requirement_modifications (class method)">.<strong>apply_requirement_modifications</strong>(plan, force: false)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#update_deployment_states-class_method" title="update_deployment_states (class method)">.<strong>update_deployment_states</strong>(plan)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>This method is called once at the beginning of each execution cycle to
+update the state of Deployment tasks w.r.t.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#update_task_states-class_method" title="update_task_states (class method)">.<strong>update_task_states</strong>(plan)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>This method is called at the beginning of each execution cycle, and updates
+the running TaskContext tasks.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="abort_process_server-class_method">
+  
+    .<strong>abort_process_server</strong>(plan, process_server)  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+34
+35
+36
+37
+38
+39
+40
+41
+42</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/runtime/update_deployment_states.rb', line 34</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_abort_process_server'>abort_process_server</span><span class='lparen'>(</span><span class='id identifier rubyid_plan'>plan</span><span class='comma'>,</span> <span class='id identifier rubyid_process_server'>process_server</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_client'>client</span> <span class='op'>=</span> <span class='id identifier rubyid_process_server'>process_server</span><span class='period'>.</span><span class='id identifier rubyid_client'>client</span>
+    <span class='comment'># Before we can terminate Syskit, we need to abort all
+</span>    <span class='comment'># deployments that were managed by this client
+</span>    <span class='id identifier rubyid_deployments'>deployments</span> <span class='op'>=</span> <span class='id identifier rubyid_plan'>plan</span><span class='period'>.</span><span class='id identifier rubyid_find_tasks'>find_tasks</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="../Syskit.html" title="Syskit (module)">Syskit</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Deployment.html" title="Syskit::Deployment (class)">Deployment</a></span></span><span class='rparen'>)</span><span class='period'>.</span>
+        <span class='id identifier rubyid_find_all'>find_all</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_t'>t</span><span class='op'>|</span> <span class='id identifier rubyid_t'>t</span><span class='period'>.</span><span class='id identifier rubyid_arguments'>arguments</span><span class='lbracket'>[</span><span class='symbol'>:on</span><span class='rbracket'>]</span> <span class='op'>==</span> <span class='id identifier rubyid_process_server'>process_server</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span> <span class='rbrace'>}</span>
+    <span class='id identifier rubyid_deployments'>deployments</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_t'>t</span><span class='op'>|</span> <span class='id identifier rubyid_t'>t</span><span class='period'>.</span><span class='id identifier rubyid_aborted_event'>aborted_event</span><span class='period'>.</span><span class='id identifier rubyid_emit'>emit</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_t'>t</span><span class='period'>.</span><span class='id identifier rubyid_pending?'>pending?</span> <span class='op'>&amp;&amp;</span> <span class='op'>!</span><span class='id identifier rubyid_t'>t</span><span class='period'>.</span><span class='id identifier rubyid_finished?'>finished?</span> <span class='rbrace'>}</span>
+    <span class='const'><span class='object_link'><a href="../Syskit.html" title="Syskit (module)">Syskit</a></span></span><span class='period'>.</span><span class='id identifier rubyid_conf'><span class='object_link'><a href="../Syskit.html#conf-class_method" title="Syskit.conf (method)">conf</a></span></span><span class='period'>.</span><span class='id identifier rubyid_remove_process_server'>remove_process_server</span><span class='lparen'>(</span><span class='id identifier rubyid_process_server'>process_server</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="apply_requirement_modifications-class_method">
+  
+    .<strong>apply_requirement_modifications</strong>(plan, force: false)  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/runtime/apply_requirement_modifications.rb', line 90</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_apply_requirement_modifications'>apply_requirement_modifications</span><span class='lparen'>(</span><span class='id identifier rubyid_plan'>plan</span><span class='comma'>,</span> <span class='label'>force:</span> <span class='kw'>false</span><span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_plan'>plan</span><span class='period'>.</span><span class='id identifier rubyid_syskit_has_async_resolution?'>syskit_has_async_resolution?</span>
+        <span class='comment'># We&#39;re already running a resolution, make sure it is not
+</span>        <span class='comment'># obsolete
+</span>        <span class='kw'>if</span> <span class='id identifier rubyid_force'>force</span> <span class='op'>||</span> <span class='op'>!</span><span class='id identifier rubyid_plan'>plan</span><span class='period'>.</span><span class='id identifier rubyid_syskit_valid_async_resolution?'>syskit_valid_async_resolution?</span>
+            <span class='id identifier rubyid_plan'>plan</span><span class='period'>.</span><span class='id identifier rubyid_syskit_cancel_async_resolution'>syskit_cancel_async_resolution</span>
+        <span class='kw'>elsif</span> <span class='id identifier rubyid_plan'>plan</span><span class='period'>.</span><span class='id identifier rubyid_syskit_finished_async_resolution?'>syskit_finished_async_resolution?</span>
+            <span class='id identifier rubyid_running_requirement_tasks'>running_requirement_tasks</span> <span class='op'>=</span> <span class='id identifier rubyid_plan'>plan</span><span class='period'>.</span><span class='id identifier rubyid_find_tasks'>find_tasks</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="../Syskit.html" title="Syskit (module)">Syskit</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="InstanceRequirementsTask.html" title="Syskit::InstanceRequirementsTask (class)">InstanceRequirementsTask</a></span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_running'>running</span>
+            <span class='kw'>begin</span>
+                <span class='id identifier rubyid_plan'>plan</span><span class='period'>.</span><span class='id identifier rubyid_syskit_apply_async_resolution_results'>syskit_apply_async_resolution_results</span>
+            <span class='kw'>rescue</span> <span class='op'>::</span><span class='const'>Exception</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_e'>e</span>
+                <span class='id identifier rubyid_running_requirement_tasks'>running_requirement_tasks</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_t'>t</span><span class='op'>|</span>
+                    <span class='id identifier rubyid_t'>t</span><span class='period'>.</span><span class='id identifier rubyid_failed_event'>failed_event</span><span class='period'>.</span><span class='id identifier rubyid_emit'>emit</span><span class='lparen'>(</span><span class='id identifier rubyid_e'>e</span><span class='rparen'>)</span>
+                <span class='kw'>end</span>
+                <span class='kw'>return</span>
+            <span class='kw'>end</span>
+            <span class='id identifier rubyid_running_requirement_tasks'>running_requirement_tasks</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_t'>t</span><span class='op'>|</span>
+                <span class='id identifier rubyid_t'>t</span><span class='period'>.</span><span class='id identifier rubyid_success_event'>success_event</span><span class='period'>.</span><span class='id identifier rubyid_emit'>emit</span>
+            <span class='kw'>end</span>
+            <span class='kw'>return</span>
+        <span class='kw'>end</span>
+    <span class='kw'>end</span>
+
+    <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_plan'>plan</span><span class='period'>.</span><span class='id identifier rubyid_syskit_has_async_resolution?'>syskit_has_async_resolution?</span>
+        <span class='kw'>if</span> <span class='id identifier rubyid_force'>force</span> <span class='op'>||</span> <span class='id identifier rubyid_plan'>plan</span><span class='period'>.</span><span class='id identifier rubyid_find_tasks'>find_tasks</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="../Syskit.html" title="Syskit (module)">Syskit</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="InstanceRequirementsTask.html" title="Syskit::InstanceRequirementsTask (class)">InstanceRequirementsTask</a></span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_running'>running</span><span class='period'>.</span><span class='id identifier rubyid_any?'>any?</span> <span class='lbrace'>{</span> <span class='kw'>true</span> <span class='rbrace'>}</span>
+            <span class='id identifier rubyid_requirement_tasks'>requirement_tasks</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="NetworkGeneration.html" title="Syskit::NetworkGeneration (module)">NetworkGeneration</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="NetworkGeneration/Engine.html" title="Syskit::NetworkGeneration::Engine (class)">Engine</a></span></span><span class='period'>.</span><span class='id identifier rubyid_discover_requirement_tasks_from_plan'><span class='object_link'><a href="NetworkGeneration/Engine.html#discover_requirement_tasks_from_plan-class_method" title="Syskit::NetworkGeneration::Engine.discover_requirement_tasks_from_plan (method)">discover_requirement_tasks_from_plan</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_plan'>plan</span><span class='rparen'>)</span>
+            <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_requirement_tasks'>requirement_tasks</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
+                <span class='comment'># We&#39;re not resolving anything, but new IR tasks have been
+</span>                <span class='comment'># started. Deploy them
+</span>                <span class='id identifier rubyid_plan'>plan</span><span class='period'>.</span><span class='id identifier rubyid_syskit_start_async_resolution'>syskit_start_async_resolution</span><span class='lparen'>(</span><span class='id identifier rubyid_requirement_tasks'>requirement_tasks</span><span class='rparen'>)</span>
+            <span class='kw'>end</span>
+        <span class='kw'>end</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="update_deployment_states-class_method">
+  
+    .<strong>update_deployment_states</strong>(plan)  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>This method is called once at the beginning of each execution cycle to
+update the state of Deployment tasks w.r.t. the state of the underlying
+process</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/runtime/update_deployment_states.rb', line 6</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_update_deployment_states'>update_deployment_states</span><span class='lparen'>(</span><span class='id identifier rubyid_plan'>plan</span><span class='rparen'>)</span>
+    <span class='comment'># We first announce all the dead processes and only then call
+</span>    <span class='comment'># #cleanup_dead_connections, thus avoiding to disconnect connections
+</span>    <span class='comment'># between already-dead processes
+</span>
+    <span class='id identifier rubyid_all_dead_deployments'>all_dead_deployments</span> <span class='op'>=</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+    <span class='id identifier rubyid_server_config'>server_config</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Syskit.html" title="Syskit (module)">Syskit</a></span></span><span class='period'>.</span><span class='id identifier rubyid_conf'><span class='object_link'><a href="../Syskit.html#conf-class_method" title="Syskit.conf (method)">conf</a></span></span><span class='period'>.</span><span class='id identifier rubyid_each_process_server_config'>each_process_server_config</span><span class='period'>.</span><span class='id identifier rubyid_to_a'>to_a</span>
+    <span class='id identifier rubyid_server_config'>server_config</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_config'>config</span><span class='op'>|</span>
+        <span class='kw'>begin</span>
+            <span class='id identifier rubyid_dead_deployments'>dead_deployments</span> <span class='op'>=</span> <span class='id identifier rubyid_config'>config</span><span class='period'>.</span><span class='id identifier rubyid_client'>client</span><span class='period'>.</span><span class='id identifier rubyid_wait_termination'>wait_termination</span><span class='lparen'>(</span><span class='int'>0</span><span class='rparen'>)</span>
+        <span class='kw'>rescue</span> <span class='op'>::</span><span class='const'>Exception</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_e'>e</span>
+            <span class='id identifier rubyid_deployments'>deployments</span> <span class='op'>=</span> <span class='id identifier rubyid_abort_process_server'>abort_process_server</span><span class='lparen'>(</span><span class='id identifier rubyid_plan'>plan</span><span class='comma'>,</span> <span class='id identifier rubyid_config'>config</span><span class='rparen'>)</span>
+            <span class='id identifier rubyid_all_dead_deployments'>all_dead_deployments</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='id identifier rubyid_deployments'>deployments</span><span class='rparen'>)</span>
+            <span class='id identifier rubyid_plan'>plan</span><span class='period'>.</span><span class='id identifier rubyid_execution_engine'>execution_engine</span><span class='period'>.</span><span class='id identifier rubyid_add_framework_error'>add_framework_error</span><span class='lparen'>(</span><span class='id identifier rubyid_e'>e</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>update_deployment_states</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+            <span class='kw'>next</span>
+        <span class='kw'>end</span>
+
+        <span class='id identifier rubyid_dead_deployments'>dead_deployments</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_p'>p</span><span class='comma'>,</span> <span class='id identifier rubyid_exit_status'>exit_status</span><span class='op'>|</span>
+            <span class='id identifier rubyid_d'>d</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Deployment.html" title="Syskit::Deployment (class)">Deployment</a></span></span><span class='period'>.</span><span class='id identifier rubyid_deployment_by_process'><span class='object_link'><a href="Deployment.html#deployment_by_process-class_method" title="Syskit::Deployment.deployment_by_process (method)">deployment_by_process</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_p'>p</span><span class='rparen'>)</span>
+            <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_d'>d</span><span class='period'>.</span><span class='id identifier rubyid_finishing?'>finishing?</span>
+                <span class='id identifier rubyid_d'>d</span><span class='period'>.</span><span class='id identifier rubyid_warn'>warn</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_p'>p</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'> unexpectedly died on process server </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_config'>config</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+            <span class='kw'>end</span>
+            <span class='id identifier rubyid_all_dead_deployments'>all_dead_deployments</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_d'>d</span>
+            <span class='id identifier rubyid_d'>d</span><span class='period'>.</span><span class='id identifier rubyid_dead!'>dead!</span><span class='lparen'>(</span><span class='id identifier rubyid_exit_status'>exit_status</span><span class='rparen'>)</span>
+        <span class='kw'>end</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="update_task_states-class_method">
+  
+    .<strong>update_task_states</strong>(plan)  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>This method is called at the beginning of each execution cycle, and updates
+the running TaskContext tasks.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/runtime/update_task_states.rb', line 5</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_update_task_states'>update_task_states</span><span class='lparen'>(</span><span class='id identifier rubyid_plan'>plan</span><span class='rparen'>)</span> <span class='comment'># :nodoc:
+</span>    <span class='id identifier rubyid_query'>query</span> <span class='op'>=</span> <span class='id identifier rubyid_plan'>plan</span><span class='period'>.</span><span class='id identifier rubyid_find_tasks'>find_tasks</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="../Syskit.html" title="Syskit (module)">Syskit</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="TaskContext.html" title="Syskit::TaskContext (class)">TaskContext</a></span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_not_finished'>not_finished</span>
+    <span class='id identifier rubyid_schedule'>schedule</span> <span class='op'>=</span> <span class='id identifier rubyid_plan'>plan</span><span class='period'>.</span><span class='id identifier rubyid_execution_engine'>execution_engine</span><span class='period'>.</span><span class='id identifier rubyid_scheduler'>scheduler</span><span class='period'>.</span><span class='id identifier rubyid_enabled?'>enabled?</span>
+    <span class='kw'>for</span> <span class='id identifier rubyid_t'>t</span> <span class='kw'>in</span> <span class='id identifier rubyid_query'>query</span>
+        <span class='id identifier rubyid_execution_agent'>execution_agent</span> <span class='op'>=</span> <span class='id identifier rubyid_t'>t</span><span class='period'>.</span><span class='id identifier rubyid_execution_agent'>execution_agent</span>
+        <span class='comment'># The task&#39;s deployment is not started yet
+</span>        <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_t'>t</span><span class='period'>.</span><span class='id identifier rubyid_orocos_task'>orocos_task</span>
+            <span class='id identifier rubyid_plan'>plan</span><span class='period'>.</span><span class='id identifier rubyid_execution_engine'>execution_engine</span><span class='period'>.</span><span class='id identifier rubyid_scheduler'>scheduler</span><span class='period'>.</span><span class='id identifier rubyid_report_holdoff'>report_holdoff</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>did not configure, execution agent not started yet</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_t'>t</span>
+            <span class='kw'>next</span>
+        <span class='kw'>elsif</span> <span class='id identifier rubyid_execution_agent'>execution_agent</span><span class='period'>.</span><span class='id identifier rubyid_aborted_event'>aborted_event</span><span class='period'>.</span><span class='id identifier rubyid_pending?'>pending?</span>
+            <span class='kw'>next</span>
+        <span class='kw'>elsif</span> <span class='op'>!</span><span class='id identifier rubyid_execution_agent'>execution_agent</span>
+            <span class='id identifier rubyid_raise'>raise</span> <span class='const'>NotImplementedError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_t'>t</span><span class='embexpr_end'>}</span><span class='tstring_content'> is not yet finished but has no execution agent. </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_t'>t</span><span class='embexpr_end'>}</span><span class='tstring_content'>&#39;s history is\n  </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_t'>t</span><span class='period'>.</span><span class='id identifier rubyid_history'>history</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:to_s</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\n  </span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+        <span class='kw'>elsif</span> <span class='op'>!</span><span class='id identifier rubyid_execution_agent'>execution_agent</span><span class='period'>.</span><span class='id identifier rubyid_ready?'>ready?</span>
+            <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="InternalError.html" title="Syskit::InternalError (class)">InternalError</a></span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>orocos_task != nil on </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_t'>t</span><span class='embexpr_end'>}</span><span class='tstring_content'>, but </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_execution_agent'>execution_agent</span><span class='embexpr_end'>}</span><span class='tstring_content'> is not ready yet</span><span class='tstring_end'>&quot;</span></span>
+        <span class='kw'>end</span>
+
+        <span class='comment'># Some CORBA implementations (namely, omniORB) may behave weird
+</span>        <span class='comment'># if the remote process terminates in the middle of a remote
+</span>        <span class='comment'># call.
+</span>        <span class='comment'>#
+</span>        <span class='comment'># Ignore tasks whose process is terminating to reduce the
+</span>        <span class='comment'># likelihood of that happening
+</span>        <span class='kw'>if</span> <span class='id identifier rubyid_execution_agent'>execution_agent</span><span class='period'>.</span><span class='id identifier rubyid_finishing?'>finishing?</span> <span class='op'>||</span> <span class='id identifier rubyid_execution_agent'>execution_agent</span><span class='period'>.</span><span class='id identifier rubyid_ready_to_die?'>ready_to_die?</span>
+            <span class='kw'>next</span>
+        <span class='kw'>end</span>
+
+        <span class='kw'>if</span> <span class='id identifier rubyid_t'>t</span><span class='period'>.</span><span class='id identifier rubyid_setting_up?'>setting_up?</span>
+            <span class='id identifier rubyid_plan'>plan</span><span class='period'>.</span><span class='id identifier rubyid_execution_engine'>execution_engine</span><span class='period'>.</span><span class='id identifier rubyid_scheduler'>scheduler</span><span class='period'>.</span><span class='id identifier rubyid_report_holdoff'>report_holdoff</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>is being configured</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_t'>t</span>
+        <span class='kw'>end</span>
+
+        <span class='kw'>if</span> <span class='id identifier rubyid_schedule'>schedule</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_t'>t</span><span class='period'>.</span><span class='id identifier rubyid_pending?'>pending?</span> <span class='op'>&amp;&amp;</span> <span class='op'>!</span><span class='id identifier rubyid_t'>t</span><span class='period'>.</span><span class='id identifier rubyid_setup?'>setup?</span> <span class='op'>&amp;&amp;</span> <span class='op'>!</span><span class='id identifier rubyid_t'>t</span><span class='period'>.</span><span class='id identifier rubyid_setting_up?'>setting_up?</span>
+            <span class='kw'>next</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_t'>t</span><span class='period'>.</span><span class='id identifier rubyid_meets_configurationg_precedence_constraints?'>meets_configurationg_precedence_constraints?</span>
+
+            <span class='id identifier rubyid_t'>t</span><span class='period'>.</span><span class='id identifier rubyid_freeze_delayed_arguments'>freeze_delayed_arguments</span>
+            <span class='kw'>if</span> <span class='id identifier rubyid_t'>t</span><span class='period'>.</span><span class='id identifier rubyid_will_never_setup?'>will_never_setup?</span>
+                <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_t'>t</span><span class='period'>.</span><span class='id identifier rubyid_kill_execution_agent_if_alone'>kill_execution_agent_if_alone</span>
+                    <span class='id identifier rubyid_t'>t</span><span class='period'>.</span><span class='id identifier rubyid_failed_to_start!'>failed_to_start!</span><span class='lparen'>(</span>
+                        <span class='const'>Roby</span><span class='op'>::</span><span class='const'>CommandFailed</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span>
+                            <span class='const'><span class='object_link'><a href="InternalError.html" title="Syskit::InternalError (class)">InternalError</a></span></span><span class='period'>.</span><span class='id identifier rubyid_exception'>exception</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_t'>t</span><span class='embexpr_end'>}</span><span class='tstring_content'> reports that it cannot be configured (FATAL_ERROR ?)</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span>
+                            <span class='id identifier rubyid_t'>t</span><span class='period'>.</span><span class='id identifier rubyid_start_event'>start_event</span><span class='rparen'>)</span><span class='rparen'>)</span>
+                    <span class='kw'>next</span>
+                <span class='kw'>end</span>
+            <span class='kw'>elsif</span> <span class='id identifier rubyid_t'>t</span><span class='period'>.</span><span class='id identifier rubyid_ready_for_setup?'>ready_for_setup?</span>
+                <span class='id identifier rubyid_t'>t</span><span class='period'>.</span><span class='id identifier rubyid_setup'>setup</span><span class='period'>.</span><span class='id identifier rubyid_execute'>execute</span>
+                <span class='kw'>next</span>
+            <span class='kw'>else</span>
+                <span class='id identifier rubyid_plan'>plan</span><span class='period'>.</span><span class='id identifier rubyid_execution_engine'>execution_engine</span><span class='period'>.</span><span class='id identifier rubyid_scheduler'>scheduler</span><span class='period'>.</span><span class='id identifier rubyid_report_holdoff'>report_holdoff</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>did not configure, not ready for setup</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_t'>t</span>
+            <span class='kw'>end</span>
+        <span class='kw'>end</span>
+
+        <span class='kw'>next</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_t'>t</span><span class='period'>.</span><span class='id identifier rubyid_running?'>running?</span> <span class='op'>&amp;&amp;</span> <span class='op'>!</span><span class='id identifier rubyid_t'>t</span><span class='period'>.</span><span class='id identifier rubyid_starting?'>starting?</span> <span class='op'>||</span> <span class='id identifier rubyid_t'>t</span><span class='period'>.</span><span class='id identifier rubyid_aborted_event'>aborted_event</span><span class='period'>.</span><span class='id identifier rubyid_pending?'>pending?</span>
+
+        <span class='id identifier rubyid_handled_this_cycle'>handled_this_cycle</span> <span class='op'>=</span> <span class='const'>Array</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+        <span class='kw'>begin</span>
+            <span class='id identifier rubyid_state'>state</span> <span class='op'>=</span> <span class='kw'>nil</span>
+            <span class='id identifier rubyid_state_count'>state_count</span> <span class='op'>=</span> <span class='int'>0</span>
+            <span class='kw'>while</span> <span class='lparen'>(</span><span class='op'>!</span><span class='id identifier rubyid_state'>state</span> <span class='op'>||</span> <span class='id identifier rubyid_t'>t</span><span class='period'>.</span><span class='id identifier rubyid_orocos_task'>orocos_task</span><span class='period'>.</span><span class='id identifier rubyid_runtime_state?'>runtime_state?</span><span class='lparen'>(</span><span class='id identifier rubyid_state'>state</span><span class='rparen'>)</span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span> <span class='lparen'>(</span><span class='id identifier rubyid_new_state'>new_state</span> <span class='op'>=</span> <span class='id identifier rubyid_t'>t</span><span class='period'>.</span><span class='id identifier rubyid_update_orogen_state'>update_orogen_state</span><span class='rparen'>)</span>
+                <span class='id identifier rubyid_state_count'>state_count</span> <span class='op'>+=</span> <span class='int'>1</span>
+
+                <span class='comment'># Returns nil if we have a communication problem. In this
+</span>                <span class='comment'># case, #update_orogen_state will have emitted the right
+</span>                <span class='comment'># events for us anyway
+</span>                <span class='kw'>if</span> <span class='id identifier rubyid_new_state'>new_state</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_handled_this_cycle'>handled_this_cycle</span><span class='period'>.</span><span class='id identifier rubyid_last'>last</span> <span class='op'>!=</span> <span class='id identifier rubyid_new_state'>new_state</span>
+                    <span class='id identifier rubyid_t'>t</span><span class='period'>.</span><span class='id identifier rubyid_handle_state_changes'>handle_state_changes</span>
+                    <span class='id identifier rubyid_handled_this_cycle'>handled_this_cycle</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_new_state'>new_state</span>
+                <span class='kw'>end</span>
+            <span class='kw'>end</span>
+
+
+            <span class='kw'>if</span> <span class='id identifier rubyid_state_count'>state_count</span> <span class='op'>&gt;=</span> <span class='const'><span class='object_link'><a href="Deployment.html" title="Syskit::Deployment (class)">Deployment</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Deployment.html#STATE_READER_BUFFER_SIZE-constant" title="Syskit::Deployment::STATE_READER_BUFFER_SIZE (constant)">STATE_READER_BUFFER_SIZE</a></span></span>
+                <span class='const'><span class='object_link'><a href="" title="Syskit::Runtime (module)">Runtime</a></span></span><span class='period'>.</span><span class='id identifier rubyid_warn'>warn</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>got </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_state_count'>state_count</span><span class='embexpr_end'>}</span><span class='tstring_content'> state updates for </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_t'>t</span><span class='embexpr_end'>}</span><span class='tstring_content'>, we might have lost some state updates in the process</span><span class='tstring_end'>&quot;</span></span>
+            <span class='kw'>end</span>
+
+        <span class='kw'>rescue</span> <span class='const'>Orocos</span><span class='op'>::</span><span class='const'>CORBA</span><span class='op'>::</span><span class='const'>ComError</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_e'>e</span>
+            <span class='id identifier rubyid_t'>t</span><span class='period'>.</span><span class='id identifier rubyid_aborted_event'>aborted_event</span><span class='period'>.</span><span class='id identifier rubyid_emit'>emit</span> <span class='id identifier rubyid_e'>e</span>
+        <span class='kw'>end</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Wed Apr 10 21:49:56 2019 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.19 (ruby-2.5.1).
+</div>
+
+    </div>
+  </body>
+</html>

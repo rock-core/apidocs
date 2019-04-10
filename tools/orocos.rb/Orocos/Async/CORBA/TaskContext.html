@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: Orocos::Async::CORBA::TaskContext
+  
+    &mdash; Documentation by YARD 0.9.19
+  
+</title>
+
+  <link rel="stylesheet" href="../../../css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../../../css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "Orocos::Async::CORBA::TaskContext";
+  relpath = '../../../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../../../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../../../_index.html">Index (T)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../../Orocos.html" title="Orocos (module)">Orocos</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../../Async.html" title="Orocos::Async (module)">Async</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../CORBA.html" title="Orocos::Async::CORBA (module)">CORBA</a></span></span>
+     &raquo; 
+    <span class="title">TaskContext</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: Orocos::Async::CORBA::TaskContext
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName"><span class='object_link'><a href="../TaskContextBase.html" title="Orocos::Async::TaskContextBase (class)">TaskContextBase</a></span></span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next"><span class='object_link'><a href="../ObjectBase.html" title="Orocos::Async::ObjectBase (class)">ObjectBase</a></span></li>
+          
+            <li class="next"><span class='object_link'><a href="../TaskContextBase.html" title="Orocos::Async::TaskContextBase (class)">TaskContextBase</a></span></li>
+          
+            <li class="next">Orocos::Async::CORBA::TaskContext</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/orocos/async/task_context.rb</dd>
+  </dl>
+  
+</div>
+
+
+
+
+
+
+
+  <h2>Instance Attribute Summary</h2>
+  
+  <h3 class="inherited">Attributes inherited from <span class='object_link'><a href="../TaskContextBase.html" title="Orocos::Async::TaskContextBase (class)">TaskContextBase</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../TaskContextBase.html#raise_on_access_error%3F-instance_method" title="Orocos::Async::TaskContextBase#raise_on_access_error? (method)">#raise_on_access_error?</a></span></p>
+
+  
+  
+  <h3 class="inherited">Attributes included from <span class='object_link'><a href="../ObjectBase/Periodic/ClassMethods.html" title="Orocos::Async::ObjectBase::Periodic::ClassMethods (module)">ObjectBase::Periodic::ClassMethods</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../ObjectBase/Periodic/ClassMethods.html#default_period-instance_method" title="Orocos::Async::ObjectBase::Periodic::ClassMethods#default_period (method)">#default_period</a></span></p>
+
+  
+  
+  <h3 class="inherited">Attributes inherited from <span class='object_link'><a href="../ObjectBase.html" title="Orocos::Async::ObjectBase (class)">ObjectBase</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../ObjectBase.html#emitting-instance_method" title="Orocos::Async::ObjectBase#emitting (method)">#emitting</a></span>, <span class='object_link'><a href="../ObjectBase.html#event_loop-instance_method" title="Orocos::Async::ObjectBase#event_loop (method)">#event_loop</a></span>, <span class='object_link'><a href="../ObjectBase.html#name-instance_method" title="Orocos::Async::ObjectBase#name (method)">#name</a></span>, <span class='object_link'><a href="../ObjectBase.html#options-instance_method" title="Orocos::Async::ObjectBase#options (method)">#options</a></span>, <span class='object_link'><a href="../ObjectBase.html#pending_adds-instance_method" title="Orocos::Async::ObjectBase#pending_adds (method)">#pending_adds</a></span></p>
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#configure_delegation-instance_method" title="#configure_delegation (instance method)">#<strong>configure_delegation</strong>(options = Hash.new)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(ior, options = Hash.new)  &#x21d2; TaskContext </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>A TaskContext.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#ior-instance_method" title="#ior (instance method)">#<strong>ior</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#method_missing-instance_method" title="#method_missing (instance method)">#<strong>method_missing</strong>(m, *args)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#really_add_listener-instance_method" title="#really_add_listener (instance method)">#<strong>really_add_listener</strong>(listener)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#respond_to_missing%3F-instance_method" title="#respond_to_missing? (instance method)">#<strong>respond_to_missing?</strong>(method_name, include_private = false)  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="../TaskContextBase.html" title="Orocos::Async::TaskContextBase (class)">TaskContextBase</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../TaskContextBase.html#attribute-instance_method" title="Orocos::Async::TaskContextBase#attribute (method)">#attribute</a></span>, <span class='object_link'><a href="../TaskContextBase.html#call_with_async-instance_method" title="Orocos::Async::TaskContextBase#call_with_async (method)">#call_with_async</a></span>, <span class='object_link'><a href="../TaskContextBase.html#clear_interface-instance_method" title="Orocos::Async::TaskContextBase#clear_interface (method)">#clear_interface</a></span>, <span class='object_link'><a href="../TaskContextBase.html#each_attribute-instance_method" title="Orocos::Async::TaskContextBase#each_attribute (method)">#each_attribute</a></span>, <span class='object_link'><a href="../TaskContextBase.html#each_port-instance_method" title="Orocos::Async::TaskContextBase#each_port (method)">#each_port</a></span>, <span class='object_link'><a href="../TaskContextBase.html#each_property-instance_method" title="Orocos::Async::TaskContextBase#each_property (method)">#each_property</a></span>, <span class='object_link'><a href="../TaskContextBase.html#name-instance_method" title="Orocos::Async::TaskContextBase#name (method)">#name</a></span>, <span class='object_link'><a href="../TaskContextBase.html#port-instance_method" title="Orocos::Async::TaskContextBase#port (method)">#port</a></span>, <span class='object_link'><a href="../TaskContextBase.html#property-instance_method" title="Orocos::Async::TaskContextBase#property (method)">#property</a></span>, <span class='object_link'><a href="../TaskContextBase.html#reachable!-instance_method" title="Orocos::Async::TaskContextBase#reachable! (method)">#reachable!</a></span>, <span class='object_link'><a href="../TaskContextBase.html#reachable%3F-instance_method" title="Orocos::Async::TaskContextBase#reachable? (method)">#reachable?</a></span>, <span class='object_link'><a href="../TaskContextBase.html#ruby_task_context%3F-instance_method" title="Orocos::Async::TaskContextBase#ruby_task_context? (method)">#ruby_task_context?</a></span>, <span class='object_link'><a href="../TaskContextBase.html#to_async-instance_method" title="Orocos::Async::TaskContextBase#to_async (method)">#to_async</a></span>, <span class='object_link'><a href="../TaskContextBase.html#to_proxy-instance_method" title="Orocos::Async::TaskContextBase#to_proxy (method)">#to_proxy</a></span>, <span class='object_link'><a href="../TaskContextBase.html#to_ruby-class_method" title="Orocos::Async::TaskContextBase.to_ruby (method)">to_ruby</a></span>, <span class='object_link'><a href="../TaskContextBase.html#to_ruby-instance_method" title="Orocos::Async::TaskContextBase#to_ruby (method)">#to_ruby</a></span>, <span class='object_link'><a href="../TaskContextBase.html#unreachable!-instance_method" title="Orocos::Async::TaskContextBase#unreachable! (method)">#unreachable!</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="../ObjectBase/Periodic.html" title="Orocos::Async::ObjectBase::Periodic (module)">ObjectBase::Periodic</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../ObjectBase/Periodic.html#default_period-instance_method" title="Orocos::Async::ObjectBase::Periodic#default_period (method)">#default_period</a></span>, <span class='object_link'><a href="../ObjectBase/Periodic.html#period-instance_method" title="Orocos::Async::ObjectBase::Periodic#period (method)">#period</a></span>, <span class='object_link'><a href="../ObjectBase/Periodic.html#period=-instance_method" title="Orocos::Async::ObjectBase::Periodic#period= (method)">#period=</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="../ObjectBase.html" title="Orocos::Async::ObjectBase (class)">ObjectBase</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../ObjectBase.html#add_listener-instance_method" title="Orocos::Async::ObjectBase#add_listener (method)">#add_listener</a></span>, <span class='object_link'><a href="../ObjectBase.html#define_event-class_method" title="Orocos::Async::ObjectBase.define_event (method)">define_event</a></span>, <span class='object_link'><a href="../ObjectBase.html#define_events-class_method" title="Orocos::Async::ObjectBase.define_events (method)">define_events</a></span>, <span class='object_link'><a href="../ObjectBase.html#disable_emitting-instance_method" title="Orocos::Async::ObjectBase#disable_emitting (method)">#disable_emitting</a></span>, <span class='object_link'><a href="../ObjectBase.html#event-instance_method" title="Orocos::Async::ObjectBase#event (method)">#event</a></span>, <span class='object_link'><a href="../ObjectBase.html#event_names-class_method" title="Orocos::Async::ObjectBase.event_names (method)">event_names</a></span>, <span class='object_link'><a href="../ObjectBase.html#event_names-instance_method" title="Orocos::Async::ObjectBase#event_names (method)">#event_names</a></span>, <span class='object_link'><a href="../ObjectBase.html#invalidate_delegator!-instance_method" title="Orocos::Async::ObjectBase#invalidate_delegator! (method)">#invalidate_delegator!</a></span>, <span class='object_link'><a href="../ObjectBase.html#listener%3F-instance_method" title="Orocos::Async::ObjectBase#listener? (method)">#listener?</a></span>, <span class='object_link'><a href="../ObjectBase.html#listeners-instance_method" title="Orocos::Async::ObjectBase#listeners (method)">#listeners</a></span>, <span class='object_link'><a href="../ObjectBase.html#number_of_listeners-instance_method" title="Orocos::Async::ObjectBase#number_of_listeners (method)">#number_of_listeners</a></span>, <span class='object_link'><a href="../ObjectBase.html#on_event-instance_method" title="Orocos::Async::ObjectBase#on_event (method)">#on_event</a></span>, <span class='object_link'><a href="../ObjectBase.html#proxy_event-instance_method" title="Orocos::Async::ObjectBase#proxy_event (method)">#proxy_event</a></span>, <span class='object_link'><a href="../ObjectBase.html#reachable!-instance_method" title="Orocos::Async::ObjectBase#reachable! (method)">#reachable!</a></span>, <span class='object_link'><a href="../ObjectBase.html#reachable%3F-instance_method" title="Orocos::Async::ObjectBase#reachable? (method)">#reachable?</a></span>, <span class='object_link'><a href="../ObjectBase.html#remove_all_listeners-instance_method" title="Orocos::Async::ObjectBase#remove_all_listeners (method)">#remove_all_listeners</a></span>, <span class='object_link'><a href="../ObjectBase.html#remove_listener-instance_method" title="Orocos::Async::ObjectBase#remove_listener (method)">#remove_listener</a></span>, <span class='object_link'><a href="../ObjectBase.html#remove_proxy_event-instance_method" title="Orocos::Async::ObjectBase#remove_proxy_event (method)">#remove_proxy_event</a></span>, <span class='object_link'><a href="../ObjectBase.html#unreachable!-instance_method" title="Orocos::Async::ObjectBase#unreachable! (method)">#unreachable!</a></span>, <span class='object_link'><a href="../ObjectBase.html#valid_delegator%3F-instance_method" title="Orocos::Async::ObjectBase#valid_delegator? (method)">#valid_delegator?</a></span>, <span class='object_link'><a href="../ObjectBase.html#valid_event%3F-class_method" title="Orocos::Async::ObjectBase.valid_event? (method)">valid_event?</a></span>, <span class='object_link'><a href="../ObjectBase.html#valid_event%3F-instance_method" title="Orocos::Async::ObjectBase#valid_event? (method)">#valid_event?</a></span>, <span class='object_link'><a href="../ObjectBase.html#validate_event-class_method" title="Orocos::Async::ObjectBase.validate_event (method)">validate_event</a></span>, <span class='object_link'><a href="../ObjectBase.html#validate_event-instance_method" title="Orocos::Async::ObjectBase#validate_event (method)">#validate_event</a></span>, <span class='object_link'><a href="../ObjectBase.html#wait-instance_method" title="Orocos::Async::ObjectBase#wait (method)">#wait</a></span></p>
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    
+      <span class="overload">#<strong>initialize</strong>(options)  &#x21d2; <tt><span class='object_link'><a href="" title="Orocos::Async::CORBA::TaskContext (class)">TaskContext</a></span></tt> </span>
+    
+      <span class="overload">#<strong>initialize</strong>(task, options)  &#x21d2; <tt><span class='object_link'><a href="" title="Orocos::Async::CORBA::TaskContext (class)">TaskContext</a></span></tt> </span>
+    
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>A TaskContext</p>
+
+<p>If not specified the default option settings are:</p>
+
+<pre class="code ruby"><code class="ruby">:event_loop =&gt; Async.event_loop
+:raise =&gt; false
+:watchdog =&gt; true
+:period =&gt; 1.0
+</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <p class="tag_title">Overloads:</p>
+  <ul class="overload">
+    
+      
+      
+      <li class="overload_item">
+        <span class="signature">#<strong>initialize</strong>(task, options)  &#x21d2; <tt><span class='object_link'><a href="" title="Orocos::Async::CORBA::TaskContext (class)">TaskContext</a></span></tt> </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+  
+    
+    
+    
+    
+    <p class="tag_title">Options Hash (<tt>options</tt>):</p>
+    <ul class="option">
+      
+        <li>
+          <span class="name">:task</span>
+          <span class="type">(<tt>#<span class='object_link'><a href="#ior-instance_method" title="Orocos::Async::CORBA::TaskContext#ior (method)">ior</a></span></tt>, <tt>#<span class='object_link'><a href="../TaskContextBase.html#name-instance_method" title="Orocos::Async::TaskContextBase#name (method)">name</a></span></tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>a task context.</p>
+</div>
+          
+        </li>
+      
+    </ul>
+  
+
+
+</div>
+      </li>
+    
+  </ul>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>ior</span>
+      
+      
+        <span class='type'>(<tt>String</tt>, <tt>#<span class='object_link'><a href="#ior-instance_method" title="Orocos::Async::CORBA::TaskContext#ior (method)">ior</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The ior of the task or a task context.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>options</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>Hash.new</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The options.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    
+    
+    <p class="tag_title">Options Hash (<tt>options</tt>):</p>
+    <ul class="option">
+      
+        <li>
+          <span class="name">:name</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>The name of the task.</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:event_loop</span>
+          <span class="type">(<tt>Utilrb::EventLoop</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>The event loop.</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:ior</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>The IOR</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:raise</span>
+          <span class="type">(<tt>Boolean</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>Raises an Orocos::NotFound error if the remote task is unreachable or went
+offline. Otherwise tries to reconnect and silently ignores method calls on
+the remote task object as long as the task is unreachable.</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:watchdog</span>
+          <span class="type">(<tt>Boolean</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>Checks the state of the tasks and if it is reachable.</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:period</span>
+          <span class="type">(<tt>Float</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>The period of the watchdog in seconds.</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:use</span>
+          <span class="type">(<tt><span class='object_link'><a href="../../TaskContext.html" title="Orocos::TaskContext (class)">Orocos::TaskContext</a></span></tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>Use the given task as designated object. After this any other other code
+path is not allowed to use the given task otherwise there might be multi
+threading problems. Furthermore it is assumed that the given task is
+reachable.</p>
+</div>
+          
+        </li>
+      
+    </ul>
+  
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/orocos/async/task_context.rb', line 28</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_ior'>ior</span><span class='comma'>,</span><span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_ior'>ior</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='symbol'>:ior</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_ior'>ior</span> <span class='op'>=</span> <span class='id identifier rubyid_ior'>ior</span><span class='period'>.</span><span class='id identifier rubyid_ior'>ior</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_ior'>ior</span><span class='comma'>,</span><span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='kw'>if</span> <span class='id identifier rubyid_ior'>ior</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span> <span class='const'>Hash</span>
+                      <span class='lbracket'>[</span><span class='kw'>nil</span><span class='comma'>,</span><span class='id identifier rubyid_ior'>ior</span><span class='rbracket'>]</span>
+                  <span class='kw'>else</span>
+                      <span class='lbracket'>[</span><span class='id identifier rubyid_ior'>ior</span><span class='comma'>,</span><span class='id identifier rubyid_options'>options</span><span class='rbracket'>]</span>
+                  <span class='kw'>end</span>
+    <span class='id identifier rubyid_ior'>ior</span> <span class='op'>||=</span> <span class='kw'>if</span> <span class='id identifier rubyid_options'>options</span><span class='period'>.</span><span class='id identifier rubyid_has_key?'>has_key?</span> <span class='symbol'>:ior</span>
+                <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:ior</span><span class='rbracket'>]</span>
+            <span class='kw'>elsif</span> <span class='id identifier rubyid_options'>options</span><span class='period'>.</span><span class='id identifier rubyid_has_key?'>has_key?</span> <span class='symbol'>:use</span>
+                <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:use</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_ior'>ior</span>
+            <span class='kw'>end</span>
+    <span class='id identifier rubyid_name'>name</span> <span class='op'>=</span> <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:name</span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='id identifier rubyid_ior'>ior</span>
+    <span class='kw'>super</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span><span class='id identifier rubyid_options'>options</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='symbol'>:ior</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_ior'>ior</span><span class='rparen'>)</span><span class='rparen'>)</span>
+    <span class='ivar'>@ior</span> <span class='op'>=</span> <span class='id identifier rubyid_ior'>ior</span><span class='period'>.</span><span class='id identifier rubyid_to_str'>to_str</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+<div id="method_missing_details" class="method_details_list">
+  <h2>Dynamic Method Handling</h2>
+  <p class="notice this">
+    This class handles dynamic methods through the <tt>method_missing</tt> method
+    
+  </p>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="method_missing-instance_method">
+  
+    #<strong>method_missing</strong>(m, *args)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+94
+95
+96
+97
+98
+99
+100
+101
+102</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/orocos/async/task_context.rb', line 94</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_method_missing'>method_missing</span><span class='lparen'>(</span><span class='id identifier rubyid_m'>m</span><span class='comma'>,</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_respond_to_missing?'>respond_to_missing?</span><span class='lparen'>(</span><span class='id identifier rubyid_m'>m</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_event_loop'>event_loop</span><span class='period'>.</span><span class='id identifier rubyid_sync'>sync</span><span class='lparen'>(</span><span class='ivar'>@delegator_obj</span><span class='comma'>,</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_args'>args</span><span class='op'>|</span>
+            <span class='ivar'>@delegator_obj</span><span class='period'>.</span><span class='id identifier rubyid_method'>method</span><span class='lparen'>(</span><span class='id identifier rubyid_m'>m</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span>
+        <span class='kw'>end</span>
+    <span class='kw'>else</span>
+        <span class='kw'>super</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="configure_delegation-instance_method">
+  
+    #<strong>configure_delegation</strong>(options = Hash.new)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>options</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>Hash.new</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>a customizable set of options</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    <p class="tag_title">Options Hash (<tt>options</tt>):</p>
+    <ul class="option">
+      
+        <li>
+          <span class="name">name</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>the task name</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">ior</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>the task IOR</p>
+</div>
+          
+        </li>
+      
+    </ul>
+  
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/orocos/async/task_context.rb', line 71</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_configure_delegation'>configure_delegation</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='const'>Kernel</span><span class='period'>.</span><span class='id identifier rubyid_validate_options'>validate_options</span> <span class='id identifier rubyid_options'>options</span><span class='comma'>,</span>
+        <span class='symbol'>:name</span><span class='op'>=&gt;</span> <span class='kw'>nil</span><span class='comma'>,</span>
+        <span class='symbol'>:ior</span> <span class='op'>=&gt;</span> <span class='kw'>nil</span>
+
+    <span class='id identifier rubyid_ior'>ior</span> <span class='op'>=</span> <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:ior</span><span class='rbracket'>]</span>
+    <span class='ivar'>@ior</span><span class='comma'>,</span><span class='ivar'>@name</span> <span class='op'>=</span> <span class='kw'>if</span> <span class='id identifier rubyid_valid_delegator?'>valid_delegator?</span>
+                     <span class='lbracket'>[</span><span class='ivar'>@delegator_obj</span><span class='period'>.</span><span class='id identifier rubyid_ior'>ior</span><span class='comma'>,</span><span class='ivar'>@delegator_obj</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='rbracket'>]</span>
+                 <span class='kw'>elsif</span> <span class='id identifier rubyid_ior'>ior</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='symbol'>:ior</span><span class='rparen'>)</span>
+                     <span class='lbracket'>[</span><span class='id identifier rubyid_ior'>ior</span><span class='period'>.</span><span class='id identifier rubyid_ior'>ior</span><span class='comma'>,</span> <span class='id identifier rubyid_ior'>ior</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='rbracket'>]</span>
+                 <span class='kw'>else</span>
+                     <span class='lbracket'>[</span><span class='id identifier rubyid_ior'>ior</span><span class='comma'>,</span> <span class='ivar'>@name</span><span class='rbracket'>]</span>
+                 <span class='kw'>end</span>
+
+    <span class='kw'>if</span> <span class='op'>!</span><span class='ivar'>@ior</span>
+        <span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>no IOR or task has been given</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="ior-instance_method">
+  
+    #<strong>ior</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+61
+62
+63
+64
+65</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/orocos/async/task_context.rb', line 61</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_ior'>ior</span>
+    <span class='ivar'>@mutex</span><span class='period'>.</span><span class='id identifier rubyid_synchronize'>synchronize</span> <span class='kw'>do</span>
+        <span class='ivar'>@ior</span><span class='period'>.</span><span class='id identifier rubyid_dup'>dup</span> <span class='kw'>if</span> <span class='ivar'>@ior</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="really_add_listener-instance_method">
+  
+    #<strong>really_add_listener</strong>(listener)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/orocos/async/task_context.rb', line 47</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_really_add_listener'>really_add_listener</span><span class='lparen'>(</span><span class='id identifier rubyid_listener'>listener</span><span class='rparen'>)</span>
+    <span class='kw'>super</span>
+
+    <span class='comment'># call new listeners with the current value
+</span>    <span class='comment'># to prevent different behaviors depending on
+</span>    <span class='comment'># the calling order
+</span>    <span class='kw'>if</span> <span class='id identifier rubyid_listener'>listener</span><span class='period'>.</span><span class='id identifier rubyid_use_last_value?'>use_last_value?</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_listener'>listener</span><span class='period'>.</span><span class='id identifier rubyid_event'>event</span> <span class='op'>==</span> <span class='symbol'>:state_change</span>
+        <span class='id identifier rubyid_state'>state</span> <span class='op'>=</span> <span class='ivar'>@mutex</span><span class='period'>.</span><span class='id identifier rubyid_synchronize'>synchronize</span> <span class='kw'>do</span>
+            <span class='ivar'>@delegator_obj</span><span class='period'>.</span><span class='id identifier rubyid_current_state'>current_state</span> <span class='kw'>if</span> <span class='id identifier rubyid_valid_delegator?'>valid_delegator?</span>
+        <span class='kw'>end</span>
+        <span class='id identifier rubyid_event_loop'>event_loop</span><span class='period'>.</span><span class='id identifier rubyid_once'>once</span><span class='lbrace'>{</span><span class='id identifier rubyid_listener'>listener</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span> <span class='id identifier rubyid_state'>state</span><span class='rbrace'>}</span> <span class='kw'>if</span> <span class='id identifier rubyid_state'>state</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="respond_to_missing?-instance_method">
+  
+    #<strong>respond_to_missing?</strong>(method_name, include_private = false)  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+90
+91
+92</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/orocos/async/task_context.rb', line 90</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_respond_to_missing?'>respond_to_missing?</span><span class='lparen'>(</span><span class='id identifier rubyid_method_name'>method_name</span><span class='comma'>,</span> <span class='id identifier rubyid_include_private'>include_private</span> <span class='op'>=</span> <span class='kw'>false</span><span class='rparen'>)</span>
+    <span class='lparen'>(</span><span class='id identifier rubyid_reachable?'>reachable?</span> <span class='op'>&amp;&amp;</span> <span class='ivar'>@delegator_obj</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='id identifier rubyid_method_name'>method_name</span><span class='rparen'>)</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='kw'>super</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Wed Apr 10 22:10:31 2019 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.19 (ruby-2.5.1).
+</div>
+
+    </div>
+  </body>
+</html>

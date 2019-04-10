@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: Syskit::Robot::ComBus
+  
+    &mdash; Documentation by YARD 0.9.19
+  
+</title>
+
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "Syskit::Robot::ComBus";
+  relpath = '../../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../../_index.html">Index (C)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../Syskit.html" title="Syskit (module)">Syskit</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Robot.html" title="Syskit::Robot (module)">Robot</a></span></span>
+     &raquo; 
+    <span class="title">ComBus</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: Syskit::Robot::ComBus
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName"><span class='object_link'><a href="MasterDeviceInstance.html" title="Syskit::Robot::MasterDeviceInstance (class)">MasterDeviceInstance</a></span></span>
+      
+        <ul class="fullTree">
+          <li><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></li>
+          
+            <li class="next"><span class='object_link'><a href="DeviceInstance.html" title="Syskit::Robot::DeviceInstance (class)">DeviceInstance</a></span></li>
+          
+            <li class="next"><span class='object_link'><a href="MasterDeviceInstance.html" title="Syskit::Robot::MasterDeviceInstance (class)">MasterDeviceInstance</a></span></li>
+          
+            <li class="next">Syskit::Robot::ComBus</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/syskit/robot/communication_bus.rb</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>This class represents a communication bus on the robot, i.e. a device that
+multiplexes and demultiplexes I/O for device modules</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+
+  <h2>Constant Summary</h2>
+  
+  <h3 class="inherited">Constants inherited
+     from <span class='object_link'><a href="MasterDeviceInstance.html" title="Syskit::Robot::MasterDeviceInstance (class)">MasterDeviceInstance</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="MasterDeviceInstance.html#KNOWN_PARAMETERS-constant" title="Syskit::Robot::MasterDeviceInstance::KNOWN_PARAMETERS (constant)">MasterDeviceInstance::KNOWN_PARAMETERS</a></span></p>
+
+
+  <h2>Instance Attribute Summary <small><a href="#" class="summary_toggle">collapse</a></small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#attached_devices-instance_method" title="#attached_devices (instance method)">#<strong>attached_devices</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute attached_devices.</p>
+</div></span>
+  
+</li>
+
+    
+  </ul>
+
+
+
+  
+  
+  <h3 class="inherited">Attributes inherited from <span class='object_link'><a href="MasterDeviceInstance.html" title="Syskit::Robot::MasterDeviceInstance (class)">MasterDeviceInstance</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="MasterDeviceInstance.html#com_busses-instance_method" title="Syskit::Robot::MasterDeviceInstance#com_busses (method)">#com_busses</a></span>, <span class='object_link'><a href="MasterDeviceInstance.html#combus_client_in_srv-instance_method" title="Syskit::Robot::MasterDeviceInstance#combus_client_in_srv (method)">#combus_client_in_srv</a></span>, <span class='object_link'><a href="MasterDeviceInstance.html#combus_client_out_srv-instance_method" title="Syskit::Robot::MasterDeviceInstance#combus_client_out_srv (method)">#combus_client_out_srv</a></span>, <span class='object_link'><a href="MasterDeviceInstance.html#configuration-instance_method" title="Syskit::Robot::MasterDeviceInstance#configuration (method)">#configuration</a></span>, <span class='object_link'><a href="MasterDeviceInstance.html#configuration_block-instance_method" title="Syskit::Robot::MasterDeviceInstance#configuration_block (method)">#configuration_block</a></span>, <span class='object_link'><a href="MasterDeviceInstance.html#device_model-instance_method" title="Syskit::Robot::MasterDeviceInstance#device_model (method)">#device_model</a></span>, <span class='object_link'><a href="MasterDeviceInstance.html#driver_model-instance_method" title="Syskit::Robot::MasterDeviceInstance#driver_model (method)">#driver_model</a></span>, <span class='object_link'><a href="MasterDeviceInstance.html#name-instance_method" title="Syskit::Robot::MasterDeviceInstance#name (method)">#name</a></span>, <span class='object_link'><a href="MasterDeviceInstance.html#requirements-instance_method" title="Syskit::Robot::MasterDeviceInstance#requirements (method)">#requirements</a></span>, <span class='object_link'><a href="MasterDeviceInstance.html#robot-instance_method" title="Syskit::Robot::MasterDeviceInstance#robot (method)">#robot</a></span>, <span class='object_link'><a href="MasterDeviceInstance.html#slaves-instance_method" title="Syskit::Robot::MasterDeviceInstance#slaves (method)">#slaves</a></span></p>
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#device-instance_method" title="#device (instance method)">#<strong>device</strong>(type_name, options = Hash.new)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Used by the #through call to override com_bus specification.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#each_attached_device-instance_method" title="#each_attached_device (instance method)">#<strong>each_attached_device</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(robot, name, device_model, options, driver_model, task_arguments)  &#x21d2; ComBus </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>A new instance of ComBus.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#instanciate-instance_method" title="#instanciate (instance method)">#<strong>instanciate</strong>(plan, context = DependencyInjectionContext.new, **options)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#require_dynamic_service_for_device-instance_method" title="#require_dynamic_service_for_device (instance method)">#<strong>require_dynamic_service_for_device</strong>(combus_task, device)  &#x21d2; BoundDataService </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Create the dynamic service on the combus driver task that is necessary to
+connect to the given device.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#through-instance_method" title="#through (instance method)">#<strong>through</strong>(&amp;block)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="MasterDeviceInstance.html" title="Syskit::Robot::MasterDeviceInstance (class)">MasterDeviceInstance</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="MasterDeviceInstance.html#==-instance_method" title="Syskit::Robot::MasterDeviceInstance#== (method)">#==</a></span>, <span class='object_link'><a href="MasterDeviceInstance.html#advanced-instance_method" title="Syskit::Robot::MasterDeviceInstance#advanced (method)">#advanced</a></span>, <span class='object_link'><a href="MasterDeviceInstance.html#advanced=-instance_method" title="Syskit::Robot::MasterDeviceInstance#advanced= (method)">#advanced=</a></span>, <span class='object_link'><a href="MasterDeviceInstance.html#advanced%3F-instance_method" title="Syskit::Robot::MasterDeviceInstance#advanced? (method)">#advanced?</a></span>, <span class='object_link'><a href="MasterDeviceInstance.html#arguments-instance_method" title="Syskit::Robot::MasterDeviceInstance#arguments (method)">#arguments</a></span>, <span class='object_link'><a href="MasterDeviceInstance.html#as_plan-instance_method" title="Syskit::Robot::MasterDeviceInstance#as_plan (method)">#as_plan</a></span>, <span class='object_link'><a href="MasterDeviceInstance.html#attach_to-instance_method" title="Syskit::Robot::MasterDeviceInstance#attach_to (method)">#attach_to</a></span>, <span class='object_link'><a href="MasterDeviceInstance.html#attached_to%3F-instance_method" title="Syskit::Robot::MasterDeviceInstance#attached_to? (method)">#attached_to?</a></span>, <span class='object_link'><a href="MasterDeviceInstance.html#bus_to_client%3F-instance_method" title="Syskit::Robot::MasterDeviceInstance#bus_to_client? (method)">#bus_to_client?</a></span>, <span class='object_link'><a href="MasterDeviceInstance.html#client_to_bus%3F-instance_method" title="Syskit::Robot::MasterDeviceInstance#client_to_bus? (method)">#client_to_bus?</a></span>, <span class='object_link'><a href="MasterDeviceInstance.html#device_id-instance_method" title="Syskit::Robot::MasterDeviceInstance#device_id (method)">#device_id</a></span>, <span class='object_link'><a href="MasterDeviceInstance.html#droby_dump-instance_method" title="Syskit::Robot::MasterDeviceInstance#droby_dump (method)">#droby_dump</a></span>, <span class='object_link'><a href="MasterDeviceInstance.html#each_fullfilled_model-instance_method" title="Syskit::Robot::MasterDeviceInstance#each_fullfilled_model (method)">#each_fullfilled_model</a></span>, <span class='object_link'><a href="MasterDeviceInstance.html#each_slave-instance_method" title="Syskit::Robot::MasterDeviceInstance#each_slave (method)">#each_slave</a></span>, <span class='object_link'><a href="MasterDeviceInstance.html#find_combus_client_srv-instance_method" title="Syskit::Robot::MasterDeviceInstance#find_combus_client_srv (method)">#find_combus_client_srv</a></span>, <span class='object_link'><a href="MasterDeviceInstance.html#find_through_method_missing-instance_method" title="Syskit::Robot::MasterDeviceInstance#find_through_method_missing (method)">#find_through_method_missing</a></span>, <span class='object_link'><a href="MasterDeviceInstance.html#full_name-instance_method" title="Syskit::Robot::MasterDeviceInstance#full_name (method)">#full_name</a></span>, <span class='object_link'><a href="MasterDeviceInstance.html#has_slave%3F-instance_method" title="Syskit::Robot::MasterDeviceInstance#has_slave? (method)">#has_slave?</a></span>, <span class='object_link'><a href="MasterDeviceInstance.html#has_through_method_missing%3F-instance_method" title="Syskit::Robot::MasterDeviceInstance#has_through_method_missing? (method)">#has_through_method_missing?</a></span>, <span class='object_link'><a href="MasterDeviceInstance.html#model-instance_method" title="Syskit::Robot::MasterDeviceInstance#model (method)">#model</a></span>, <span class='object_link'><a href="MasterDeviceInstance.html#prefer_deployed_tasks-instance_method" title="Syskit::Robot::MasterDeviceInstance#prefer_deployed_tasks (method)">#prefer_deployed_tasks</a></span>, <span class='object_link'><a href="MasterDeviceInstance.html#pretty_print-instance_method" title="Syskit::Robot::MasterDeviceInstance#pretty_print (method)">#pretty_print</a></span>, <span class='object_link'><a href="MasterDeviceInstance.html#short_name-instance_method" title="Syskit::Robot::MasterDeviceInstance#short_name (method)">#short_name</a></span>, <span class='object_link'><a href="MasterDeviceInstance.html#slave-instance_method" title="Syskit::Robot::MasterDeviceInstance#slave (method)">#slave</a></span>, <span class='object_link'><a href="MasterDeviceInstance.html#to_action_model-instance_method" title="Syskit::Robot::MasterDeviceInstance#to_action_model (method)">#to_action_model</a></span>, <span class='object_link'><a href="MasterDeviceInstance.html#to_instance_requirements-instance_method" title="Syskit::Robot::MasterDeviceInstance#to_instance_requirements (method)">#to_instance_requirements</a></span>, <span class='object_link'><a href="MasterDeviceInstance.html#to_s-instance_method" title="Syskit::Robot::MasterDeviceInstance#to_s (method)">#to_s</a></span>, <span class='object_link'><a href="MasterDeviceInstance.html#use-instance_method" title="Syskit::Robot::MasterDeviceInstance#use (method)">#use</a></span>, <span class='object_link'><a href="MasterDeviceInstance.html#use_conf-instance_method" title="Syskit::Robot::MasterDeviceInstance#use_conf (method)">#use_conf</a></span>, <span class='object_link'><a href="MasterDeviceInstance.html#use_deployments-instance_method" title="Syskit::Robot::MasterDeviceInstance#use_deployments (method)">#use_deployments</a></span>, <span class='object_link'><a href="MasterDeviceInstance.html#with_arguments-instance_method" title="Syskit::Robot::MasterDeviceInstance#with_arguments (method)">#with_arguments</a></span>, <span class='object_link'><a href="MasterDeviceInstance.html#with_conf-instance_method" title="Syskit::Robot::MasterDeviceInstance#with_conf (method)">#with_conf</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="DeviceInstance.html" title="Syskit::Robot::DeviceInstance (class)">DeviceInstance</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="DeviceInstance.html#doc-instance_method" title="Syskit::Robot::DeviceInstance#doc (method)">#doc</a></span>, <span class='object_link'><a href="DeviceInstance.html#period-instance_method" title="Syskit::Robot::DeviceInstance#period (method)">#period</a></span>, <span class='object_link'><a href="DeviceInstance.html#to_action-instance_method" title="Syskit::Robot::DeviceInstance#to_action (method)">#to_action</a></span></p>
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    #<strong>initialize</strong>(robot, name, device_model, options, driver_model, task_arguments)  &#x21d2; <tt><span class='object_link'><a href="" title="Syskit::Robot::ComBus (class)">ComBus</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns a new instance of ComBus</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+8
+9
+10
+11
+12</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/robot/communication_bus.rb', line 8</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_robot'>robot</span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_device_model'>device_model</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='comma'>,</span>
+               <span class='id identifier rubyid_driver_model'>driver_model</span><span class='comma'>,</span> <span class='id identifier rubyid_task_arguments'>task_arguments</span><span class='rparen'>)</span>
+    <span class='kw'>super</span>
+    <span class='ivar'>@attached_devices</span> <span class='op'>=</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id=""></span>
+      <div class="method_details first">
+  <h3 class="signature first" id="attached_devices-instance_method">
+  
+    #<strong>attached_devices</strong>  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute attached_devices</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+6
+7
+8</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/robot/communication_bus.rb', line 6</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_attached_devices'>attached_devices</span>
+  <span class='ivar'>@attached_devices</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="device-instance_method">
+  
+    #<strong>device</strong>(type_name, options = Hash.new)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Used by the #through call to override com_bus specification.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+48
+49
+50
+51
+52</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/robot/communication_bus.rb', line 48</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_device'>device</span><span class='lparen'>(</span><span class='id identifier rubyid_type_name'>type_name</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_device'>device</span> <span class='op'>=</span> <span class='id identifier rubyid_robot'>robot</span><span class='period'>.</span><span class='id identifier rubyid_device'>device</span><span class='lparen'>(</span><span class='id identifier rubyid_type_name'>type_name</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_device'>device</span><span class='period'>.</span><span class='id identifier rubyid_attach_to'>attach_to</span><span class='lparen'>(</span><span class='kw'>self</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_device'>device</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="each_attached_device-instance_method">
+  
+    #<strong>each_attached_device</strong>  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+43
+44
+45</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/robot/communication_bus.rb', line 43</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_each_attached_device'>each_attached_device</span>
+    <span class='id identifier rubyid_attached_devices'>attached_devices</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_dev'>dev</span><span class='op'>|</span> <span class='kw'>yield</span><span class='lparen'>(</span><span class='id identifier rubyid_dev'>dev</span><span class='rparen'>)</span> <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="instanciate-instance_method">
+  
+    #<strong>instanciate</strong>(plan, context = DependencyInjectionContext.new, **options)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/robot/communication_bus.rb', line 14</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_instanciate'>instanciate</span><span class='lparen'>(</span><span class='id identifier rubyid_plan'>plan</span><span class='comma'>,</span> <span class='id identifier rubyid_context'>context</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../DependencyInjectionContext.html" title="Syskit::DependencyInjectionContext (class)">DependencyInjectionContext</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../DependencyInjectionContext.html#initialize-instance_method" title="Syskit::DependencyInjectionContext#initialize (method)">new</a></span></span><span class='comma'>,</span> <span class='op'>**</span><span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_service'>service</span> <span class='op'>=</span> <span class='kw'>super</span>
+    <span class='id identifier rubyid_task'>task</span> <span class='op'>=</span> <span class='id identifier rubyid_service'>service</span><span class='period'>.</span><span class='id identifier rubyid_to_task'>to_task</span>
+    <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_device_model'>device_model</span><span class='period'>.</span><span class='id identifier rubyid_lazy_dispatch?'>lazy_dispatch?</span>
+        <span class='id identifier rubyid_each_attached_device'>each_attached_device</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_dev'>dev</span><span class='op'>|</span>
+            <span class='id identifier rubyid_require_dynamic_service_for_device'>require_dynamic_service_for_device</span><span class='lparen'>(</span><span class='id identifier rubyid_task'>task</span><span class='comma'>,</span> <span class='id identifier rubyid_dev'>dev</span><span class='rparen'>)</span>
+        <span class='kw'>end</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_service'>service</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="require_dynamic_service_for_device-instance_method">
+  
+    #<strong>require_dynamic_service_for_device</strong>(combus_task, device)  &#x21d2; <tt><span class='object_link'><a href="../BoundDataService.html" title="Syskit::BoundDataService (class)">BoundDataService</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Create the dynamic service on the combus driver task that is necessary to
+connect to the given device</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>combus_task</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../Component.html" title="Syskit::Component (class)">Component</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the driver task for self</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>device</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../Device.html" title="Syskit::Device (module)">Device</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the device that should be interfaced through the service</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../BoundDataService.html" title="Syskit::BoundDataService (class)">BoundDataService</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the created service</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+33
+34
+35
+36
+37</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/robot/communication_bus.rb', line 33</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_require_dynamic_service_for_device'>require_dynamic_service_for_device</span><span class='lparen'>(</span><span class='id identifier rubyid_combus_task'>combus_task</span><span class='comma'>,</span> <span class='id identifier rubyid_device'>device</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_combus_task'>combus_task</span><span class='period'>.</span><span class='id identifier rubyid_require_dynamic_service'>require_dynamic_service</span><span class='lparen'>(</span>
+        <span class='id identifier rubyid_device_model'>device_model</span><span class='period'>.</span><span class='id identifier rubyid_dynamic_service_name'>dynamic_service_name</span><span class='comma'>,</span>
+        <span class='label'>as:</span> <span class='id identifier rubyid_device'>device</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='label'>bus_to_client:</span> <span class='id identifier rubyid_device'>device</span><span class='period'>.</span><span class='id identifier rubyid_bus_to_client?'>bus_to_client?</span><span class='comma'>,</span> <span class='label'>client_to_bus:</span> <span class='id identifier rubyid_device'>device</span><span class='period'>.</span><span class='id identifier rubyid_client_to_bus?'>client_to_bus?</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="through-instance_method">
+  
+    #<strong>through</strong>(&amp;block)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+39
+40
+41</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/robot/communication_bus.rb', line 39</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_through'>through</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_instance_eval'>instance_eval</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Wed Apr 10 21:56:54 2019 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.19 (ruby-2.5.1).
+</div>
+
+    </div>
+  </body>
+</html>

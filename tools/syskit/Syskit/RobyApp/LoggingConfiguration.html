@@ -1,0 +1,1869 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: Syskit::RobyApp::LoggingConfiguration
+  
+    &mdash; Documentation by YARD 0.9.19
+  
+</title>
+
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "Syskit::RobyApp::LoggingConfiguration";
+  relpath = '../../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../../_index.html">Index (L)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../Syskit.html" title="Syskit (module)">Syskit</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../RobyApp.html" title="Syskit::RobyApp (module)">RobyApp</a></span></span>
+     &raquo; 
+    <span class="title">LoggingConfiguration</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: Syskit::RobyApp::LoggingConfiguration
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName"><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></span>
+      
+        <ul class="fullTree">
+          <li><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></li>
+          
+            <li class="next">Syskit::RobyApp::LoggingConfiguration</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/syskit/roby_app/logging_configuration.rb</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>Management of the configuration related to logging of data streams and
+component configuration. The configuration for the running app can be
+accessed from</p>
+
+<pre class="code ruby"><code class="ruby"><span class='const'><span class='object_link'><a href="../../Syskit.html" title="Syskit (module)">Syskit</a></span></span><span class='period'>.</span><span class='id identifier rubyid_conf'><span class='object_link'><a href="../../Syskit.html#conf-class_method" title="Syskit.conf (method)">conf</a></span></span><span class='period'>.</span><span class='id identifier rubyid_logs'>logs</span>
+</code></pre>
+
+<p>Configuration logging is enabled or disabled with <span class='object_link'><a href="#enable_conf_logging-instance_method" title="Syskit::RobyApp::LoggingConfiguration#enable_conf_logging (method)">#enable_conf_logging</a></span>
+and <span class='object_link'><a href="#disable_conf_logging-instance_method" title="Syskit::RobyApp::LoggingConfiguration#disable_conf_logging (method)">#disable_conf_logging</a></span>. Configuration logging being low-bandwidth,
+there&#39;s no way to fine-tune what should or should not be logged.</p>
+
+<p>Port logging can be globally disabled with <span class='object_link'><a href="#disable_port_logging-instance_method" title="Syskit::RobyApp::LoggingConfiguration#disable_port_logging (method)">#disable_port_logging</a></span>. When
+logging is enabled (the default, or after calling <span class='object_link'><a href="#enable_port_logging-instance_method" title="Syskit::RobyApp::LoggingConfiguration#enable_port_logging (method)">#enable_port_logging</a></span>),
+which ports will actually be logged is controlled by log groups. Log groups
+match certain ports by deployment, task, port name or port type. A port
+will be excluded from the logs if there is at least one group matching it,
+and that all groups are disabled.</p>
+
+<p>In other words:</p>
+
+<pre class="code ruby"><code class="ruby">- ports are logged if no groups match them
+- ports will be logged if there is at least one enabled group matching them
+- the only case where a port is excluded from logs is when all groups
+  matching it are disabled
+</code></pre>
+
+<p>Groups are defined with <span class='object_link'><a href="#create_group-instance_method" title="Syskit::RobyApp::LoggingConfiguration#create_group (method)">#create_group</a></span> and enabled/disabled with
+#enable_group/#disable_group. A new group is enabled by default.</p>
+
+<p>Logs groups are usually defined in a robot file, in a Robot.conf block:</p>
+
+<pre class="code ruby"><code class="ruby"><span class='const'><span class='object_link'><a href="../Robot.html" title="Syskit::Robot (module)">Robot</a></span></span><span class='period'>.</span><span class='id identifier rubyid_conf'><span class='object_link'><a href="../../Syskit.html#conf-class_method" title="Syskit.conf (method)">conf</a></span></span> <span class='kw'>do</span>
+  <span class='const'><span class='object_link'><a href="../../Syskit.html" title="Syskit (module)">Syskit</a></span></span><span class='period'>.</span><span class='id identifier rubyid_conf'><span class='object_link'><a href="../../Syskit.html#conf-class_method" title="Syskit.conf (method)">conf</a></span></span><span class='period'>.</span><span class='id identifier rubyid_logs'>logs</span><span class='period'>.</span><span class='id identifier rubyid_create_group'>create_group</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Images</span><span class='tstring_end'>&#39;</span></span> <span class='kw'>do</span>
+    <span class='id identifier rubyid_add'>add</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>base.samples.frame.Frame</span><span class='regexp_end'>/</span></span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span>
+</code></pre>
+
+<p>From then, the Images group can be disabled programatically from within the
+Roby app with</p>
+
+<pre class="code ruby"><code class="ruby"><span class='const'><span class='object_link'><a href="../../Syskit.html" title="Syskit (module)">Syskit</a></span></span><span class='period'>.</span><span class='id identifier rubyid_conf'><span class='object_link'><a href="../../Syskit.html#conf-class_method" title="Syskit.conf (method)">conf</a></span></span><span class='period'>.</span><span class='id identifier rubyid_logs'>logs</span><span class='period'>.</span><span class='id identifier rubyid_disable_log_group'>disable_log_group</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Images</span><span class='tstring_end'>&#39;</span></span>
+</code></pre>
+
+<p>Or from the Roby shell with (note that it triggers a redeploy)</p>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_syskit'><span class='object_link'><a href="../../top-level-namespace.html#syskit-instance_method" title="#syskit (method)">syskit</a></span></span><span class='period'>.</span><span class='id identifier rubyid_disable_log_group'>disable_log_group</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Images</span><span class='tstring_end'>&#39;</span></span>
+</code></pre>
+
+<p>And then reenabled with</p>
+
+<pre class="code ruby"><code class="ruby"><span class='const'><span class='object_link'><a href="../../Syskit.html" title="Syskit (module)">Syskit</a></span></span><span class='period'>.</span><span class='id identifier rubyid_conf'><span class='object_link'><a href="../../Syskit.html#conf-class_method" title="Syskit.conf (method)">conf</a></span></span><span class='period'>.</span><span class='id identifier rubyid_logs'>logs</span><span class='period'>.</span><span class='id identifier rubyid_enable_log_group'>enable_log_group</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Images</span><span class='tstring_end'>&#39;</span></span>
+<span class='id identifier rubyid_syskit'><span class='object_link'><a href="../../top-level-namespace.html#syskit-instance_method" title="#syskit (method)">syskit</a></span></span><span class='period'>.</span><span class='id identifier rubyid_enable_log_group'>enable_log_group</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Images</span><span class='tstring_end'>&#39;</span></span>
+</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+
+
+  <h2>Instance Attribute Summary <small><a href="#" class="summary_toggle">collapse</a></small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#configuration_log-instance_method" title="#configuration_log (instance method)">#<strong>configuration_log</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>The configuration log file.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#default_logging_buffer_size-instance_method" title="#default_logging_buffer_size (instance method)">#<strong>default_logging_buffer_size</strong>  &#x21d2; Integer </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>The default buffer size that should be used when setting up a logger
+connection.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#groups-instance_method" title="#groups (instance method)">#<strong>groups</strong>  &#x21d2; Hash&lt;String,LoggingGroup&gt; </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>The set of defined groups.</p>
+</div></span>
+  
+</li>
+
+    
+  </ul>
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#conf_logs_enabled%3F-instance_method" title="#conf_logs_enabled? (instance method)">#<strong>conf_logs_enabled?</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>If true, changes to the values in configuration values are being logged by
+the framework.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#create_configuration_log-instance_method" title="#create_configuration_log (instance method)">#<strong>create_configuration_log</strong>(path)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Create the configuration log file.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#create_group-instance_method" title="#create_group (instance method)">#<strong>create_group</strong>(name, enabled: true) {|group| ... } &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Create a new log group with the given name.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#disable_conf_logging-instance_method" title="#disable_conf_logging (instance method)">#<strong>disable_conf_logging</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>See #conf_log_enabled?.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#disable_log_group-instance_method" title="#disable_log_group (instance method)">#<strong>disable_log_group</strong>(name)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Turns logging off for the named group.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#disable_port_logging-instance_method" title="#disable_port_logging (instance method)">#<strong>disable_port_logging</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>See #log_enabled?.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#enable_conf_logging-instance_method" title="#enable_conf_logging (instance method)">#<strong>enable_conf_logging</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>See #conf_log_enabled?.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#enable_log_group-instance_method" title="#enable_log_group (instance method)">#<strong>enable_log_group</strong>(name)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Turns logging on for the named group.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#enable_port_logging-instance_method" title="#enable_port_logging (instance method)">#<strong>enable_port_logging</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>See #log_enabled?.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#group_by_name-instance_method" title="#group_by_name (instance method)">#<strong>group_by_name</strong>(name)  &#x21d2; LoggingGroup </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Fetch a group by its name.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>  &#x21d2; LoggingConfiguration </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>A new instance of LoggingConfiguration.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#log_stream_for-instance_method" title="#log_stream_for (instance method)">#<strong>log_stream_for</strong>(property)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the log stream that should be used for modifications to the given
+property.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#object_excluded_from_log%3F-instance_method" title="#object_excluded_from_log? (instance method)">#<strong>object_excluded_from_log?</strong> {|log_group| ... } &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Helper method to test whether an object is excluded from log.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#port_excluded_from_log%3F-instance_method" title="#port_excluded_from_log? (instance method)">#<strong>port_excluded_from_log?</strong>(port)  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns true if the given port is excluded from logging.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#port_logs_enabled%3F-instance_method" title="#port_logs_enabled? (instance method)">#<strong>port_logs_enabled?</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Signifies whether ports (i.e. data streams between components) is enabled
+at all or not.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#remove_group-instance_method" title="#remove_group (instance method)">#<strong>remove_group</strong>(name)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Remove a group.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#update_group-instance_method" title="#update_group (instance method)">#<strong>update_group</strong>(name) {|group_by_name(name)| ... } &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Update an existing logging group.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    #<strong>initialize</strong>  &#x21d2; <tt><span class='object_link'><a href="" title="Syskit::RobyApp::LoggingConfiguration (class)">LoggingConfiguration</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns a new instance of LoggingConfiguration</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+54
+55
+56
+57
+58
+59</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/roby_app/logging_configuration.rb', line 54</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span>
+    <span class='ivar'>@groups</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+    <span class='ivar'>@port_logs_enabled</span> <span class='op'>=</span> <span class='kw'>true</span>
+    <span class='ivar'>@conf_logs_enabled</span> <span class='op'>=</span> <span class='kw'>true</span>
+    <span class='ivar'>@default_logging_buffer_size</span> <span class='op'>=</span> <span class='int'>25</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id="configuration_log=-instance_method"></span>
+      <div class="method_details first">
+  <h3 class="signature first" id="configuration_log-instance_method">
+  
+    #<strong>configuration_log</strong>  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>The configuration log file</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+87
+88
+89</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/roby_app/logging_configuration.rb', line 87</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_configuration_log'>configuration_log</span>
+  <span class='ivar'>@configuration_log</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="default_logging_buffer_size=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="default_logging_buffer_size-instance_method">
+  
+    #<strong>default_logging_buffer_size</strong>  &#x21d2; <tt>Integer</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>The default buffer size that should be used when setting up a logger
+connection</p>
+
+<p>Defaults to 25</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+72
+73
+74</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/roby_app/logging_configuration.rb', line 72</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_default_logging_buffer_size'>default_logging_buffer_size</span>
+  <span class='ivar'>@default_logging_buffer_size</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="groups-instance_method">
+  
+    #<strong>groups</strong>  &#x21d2; <tt>Hash&lt;String,<span class='object_link'><a href="LoggingGroup.html" title="Syskit::RobyApp::LoggingGroup (class)">LoggingGroup</a></span>&gt;</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>The set of defined groups</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Hash&lt;String,<span class='object_link'><a href="LoggingGroup.html" title="Syskit::RobyApp::LoggingGroup (class)">LoggingGroup</a></span>&gt;</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+64
+65
+66</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/roby_app/logging_configuration.rb', line 64</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_groups'>groups</span>
+  <span class='ivar'>@groups</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="conf_logs_enabled?-instance_method">
+  
+    #<strong>conf_logs_enabled?</strong>  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>If true, changes to the values in configuration values are being logged by
+the framework. If false, they are not.</p>
+
+<p>Currently, properties are logged in a properties.0.log file</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+80</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/roby_app/logging_configuration.rb', line 80</span>
+
+<span class='id identifier rubyid_attr_predicate'>attr_predicate</span> <span class='symbol'>:conf_logs_enabled?</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="create_configuration_log-instance_method">
+  
+    #<strong>create_configuration_log</strong>(path)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Create the configuration log file</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+90
+91
+92</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/roby_app/logging_configuration.rb', line 90</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_create_configuration_log'>create_configuration_log</span><span class='lparen'>(</span><span class='id identifier rubyid_path'>path</span><span class='rparen'>)</span>
+    <span class='ivar'>@configuration_log</span> <span class='op'>=</span> <span class='const'>Pocolog</span><span class='op'>::</span><span class='const'>Logfiles</span><span class='period'>.</span><span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span><span class='id identifier rubyid_path'>path</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="create_group-instance_method">
+  
+    #<strong>create_group</strong>(name, enabled: true) {|group| ... } &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Create a new log group with the given name</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the new group name</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Yield Parameters:</p>
+<ul class="yieldparam">
+  
+    <li>
+      
+        <span class='name'>group</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="LoggingGroup.html" title="Syskit::RobyApp::LoggingGroup (class)">LoggingGroup</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the group that is being created or updated</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>ArgumentError</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>if the group name already exists</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+136
+137
+138
+139
+140
+141
+142
+143</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/roby_app/logging_configuration.rb', line 136</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_create_group'>create_group</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='label'>enabled:</span> <span class='kw'>true</span><span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_groups'>groups</span><span class='lbracket'>[</span><span class='id identifier rubyid_name'>name</span><span class='period'>.</span><span class='id identifier rubyid_to_str'>to_str</span><span class='rbracket'>]</span>
+        <span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>there is already a group registered under the name </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'>, use #update_group if you mean to update it</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_group'>group</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="LoggingGroup.html" title="Syskit::RobyApp::LoggingGroup (class)">LoggingGroup</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="LoggingGroup.html#initialize-instance_method" title="Syskit::RobyApp::LoggingGroup#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_enabled'>enabled</span><span class='rparen'>)</span>
+    <span class='kw'>yield</span><span class='lparen'>(</span><span class='id identifier rubyid_group'>group</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_block_given?'>block_given?</span>
+    <span class='id identifier rubyid_groups'>groups</span><span class='lbracket'>[</span><span class='id identifier rubyid_name'>name</span><span class='period'>.</span><span class='id identifier rubyid_to_str'>to_str</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_group'>group</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="disable_conf_logging-instance_method">
+  
+    #<strong>disable_conf_logging</strong>  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>See #conf_log_enabled?</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+84</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/roby_app/logging_configuration.rb', line 84</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_disable_conf_logging'>disable_conf_logging</span><span class='semicolon'>;</span> <span class='ivar'>@conf_logs_enabled</span> <span class='op'>=</span> <span class='kw'>false</span> <span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="disable_log_group-instance_method">
+  
+    #<strong>disable_log_group</strong>(name)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Turns logging off for the named group. The modification will only be
+applied at the next network generation.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>ArgumentError</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>if there are no groups with this name</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+197
+198
+199</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/roby_app/logging_configuration.rb', line 197</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_disable_log_group'>disable_log_group</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_group_by_name'>group_by_name</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_enabled'>enabled</span> <span class='op'>=</span> <span class='kw'>false</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="disable_port_logging-instance_method">
+  
+    #<strong>disable_port_logging</strong>  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>See #log_enabled?</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+117</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/roby_app/logging_configuration.rb', line 117</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_disable_port_logging'>disable_port_logging</span><span class='semicolon'>;</span> <span class='ivar'>@port_logs_enabled</span> <span class='op'>=</span> <span class='kw'>false</span> <span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="enable_conf_logging-instance_method">
+  
+    #<strong>enable_conf_logging</strong>  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>See #conf_log_enabled?</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+82</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/roby_app/logging_configuration.rb', line 82</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_enable_conf_logging'>enable_conf_logging</span><span class='semicolon'>;</span> <span class='ivar'>@conf_logs_enabled</span> <span class='op'>=</span> <span class='kw'>true</span> <span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="enable_log_group-instance_method">
+  
+    #<strong>enable_log_group</strong>(name)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Turns logging on for the named group. The modification will only be applied
+at the next network generation.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>ArgumentError</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>if there are no groups with this name</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+189
+190
+191</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/roby_app/logging_configuration.rb', line 189</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_enable_log_group'>enable_log_group</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_group_by_name'>group_by_name</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_enabled'>enabled</span> <span class='op'>=</span> <span class='kw'>true</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="enable_port_logging-instance_method">
+  
+    #<strong>enable_port_logging</strong>  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>See #log_enabled?</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+115</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/roby_app/logging_configuration.rb', line 115</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_enable_port_logging'>enable_port_logging</span><span class='semicolon'>;</span> <span class='ivar'>@port_logs_enabled</span> <span class='op'>=</span> <span class='kw'>true</span> <span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="group_by_name-instance_method">
+  
+    #<strong>group_by_name</strong>(name)  &#x21d2; <tt><span class='object_link'><a href="LoggingGroup.html" title="Syskit::RobyApp::LoggingGroup (class)">LoggingGroup</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Fetch a group by its name</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="LoggingGroup.html" title="Syskit::RobyApp::LoggingGroup (class)">LoggingGroup</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>ArgumentError</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>if there are no groups with this name</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+123
+124
+125
+126
+127
+128</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/roby_app/logging_configuration.rb', line 123</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_group_by_name'>group_by_name</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_group'>group</span> <span class='op'>=</span> <span class='id identifier rubyid_groups'>groups</span><span class='lbracket'>[</span><span class='id identifier rubyid_name'>name</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='rbracket'>]</span>
+        <span class='id identifier rubyid_group'>group</span>
+    <span class='kw'>else</span> <span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>no group named </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="log_stream_for-instance_method">
+  
+    #<strong>log_stream_for</strong>(property)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the log stream that should be used for modifications to the given
+property</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+96
+97
+98
+99
+100
+101
+102
+103
+104</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/roby_app/logging_configuration.rb', line 96</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_log_stream_for'>log_stream_for</span><span class='lparen'>(</span><span class='id identifier rubyid_property'>property</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_stream_name'>stream_name</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_property'>property</span><span class='period'>.</span><span class='id identifier rubyid_task_context'>task_context</span><span class='period'>.</span><span class='id identifier rubyid_orocos_name'>orocos_name</span><span class='embexpr_end'>}</span><span class='tstring_content'>.</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_property'>property</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_configuration_log'>configuration_log</span><span class='period'>.</span><span class='id identifier rubyid_has_stream?'>has_stream?</span><span class='lparen'>(</span><span class='id identifier rubyid_stream_name'>stream_name</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_configuration_log'>configuration_log</span><span class='period'>.</span><span class='id identifier rubyid_create_stream'>create_stream</span><span class='lparen'>(</span>
+            <span class='id identifier rubyid_stream_name'>stream_name</span><span class='comma'>,</span> <span class='id identifier rubyid_property'>property</span><span class='period'>.</span><span class='id identifier rubyid_type'>type</span><span class='comma'>,</span> <span class='id identifier rubyid_property'>property</span><span class='period'>.</span><span class='id identifier rubyid_log_metadata'>log_metadata</span><span class='rparen'>)</span>
+    <span class='kw'>else</span>
+        <span class='id identifier rubyid_configuration_log'>configuration_log</span><span class='period'>.</span><span class='id identifier rubyid_stream'>stream</span><span class='lparen'>(</span><span class='id identifier rubyid_stream_name'>stream_name</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="object_excluded_from_log?-instance_method">
+  
+    #<strong>object_excluded_from_log?</strong> {|log_group| ... } &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+
+<p>Helper method to test whether an object is excluded from log</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Yield Parameters:</p>
+<ul class="yieldparam">
+  
+    <li>
+      
+        <span class='name'>log_group</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="LoggingGroup.html" title="Syskit::RobyApp::LoggingGroup (class)">LoggingGroup</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>a log group</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Yield Returns:</p>
+<ul class="yieldreturn">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>whether the group matches the object whose exclusion is being considered.</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/roby_app/logging_configuration.rb', line 165</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_object_excluded_from_log?'>object_excluded_from_log?</span>
+    <span class='kw'>return</span> <span class='kw'>true</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_port_logs_enabled?'>port_logs_enabled?</span>
+    <span class='id identifier rubyid_has_one_match'>has_one_match</span> <span class='op'>=</span> <span class='kw'>false</span>
+
+    <span class='id identifier rubyid_groups'>groups</span><span class='period'>.</span><span class='id identifier rubyid_each_value'>each_value</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_group'>group</span><span class='op'>|</span>
+        <span class='kw'>if</span> <span class='kw'>yield</span><span class='lparen'>(</span><span class='id identifier rubyid_group'>group</span><span class='rparen'>)</span>
+            <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>if</span> <span class='id identifier rubyid_group'>group</span><span class='period'>.</span><span class='id identifier rubyid_enabled?'>enabled?</span>
+            <span class='id identifier rubyid_has_one_match'>has_one_match</span> <span class='op'>=</span> <span class='kw'>true</span>
+        <span class='kw'>end</span>
+    <span class='kw'>end</span>
+    <span class='kw'>return</span> <span class='id identifier rubyid_has_one_match'>has_one_match</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="port_excluded_from_log?-instance_method">
+  
+    #<strong>port_excluded_from_log?</strong>(port)  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns true if the given port is excluded from logging</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>port</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../Port.html" title="Syskit::Port (class)">Port</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the port</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+181
+182
+183</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/roby_app/logging_configuration.rb', line 181</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_port_excluded_from_log?'>port_excluded_from_log?</span><span class='lparen'>(</span><span class='id identifier rubyid_port'>port</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_object_excluded_from_log?'>object_excluded_from_log?</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_g'>g</span><span class='op'>|</span> <span class='id identifier rubyid_g'>g</span><span class='period'>.</span><span class='id identifier rubyid_matches_port?'>matches_port?</span><span class='lparen'>(</span><span class='id identifier rubyid_port'>port</span><span class='rparen'>)</span> <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="port_logs_enabled?-instance_method">
+  
+    #<strong>port_logs_enabled?</strong>  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Signifies whether ports (i.e. data streams between components) is enabled
+at all or not. If false, no logging will take place. If true, logging is
+enabled to the extent of the log configuration done with enable/disable log
+groups (#enable_log_group) and single ports (#exclude_from_log)</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+113</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/roby_app/logging_configuration.rb', line 113</span>
+
+<span class='id identifier rubyid_attr_predicate'>attr_predicate</span> <span class='symbol'>:port_logs_enabled?</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="remove_group-instance_method">
+  
+    #<strong>remove_group</strong>(name)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Remove a group</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+154
+155
+156</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/roby_app/logging_configuration.rb', line 154</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_remove_group'>remove_group</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_groups'>groups</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='period'>.</span><span class='id identifier rubyid_to_str'>to_str</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="update_group-instance_method">
+  
+    #<strong>update_group</strong>(name) {|group_by_name(name)| ... } &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Update an existing logging group</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the log group name</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Yields:</p>
+<ul class="yield">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="#group_by_name-instance_method" title="Syskit::RobyApp::LoggingConfiguration#group_by_name (method)">group_by_name</a></span>(name)</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>ArgumentError</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>if there are no groups with this name</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+149
+150
+151</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/roby_app/logging_configuration.rb', line 149</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_update_group'>update_group</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
+    <span class='kw'>yield</span><span class='lparen'>(</span><span class='id identifier rubyid_group_by_name'>group_by_name</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Wed Apr 10 21:58:26 2019 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.19 (ruby-2.5.1).
+</div>
+
+    </div>
+  </body>
+</html>

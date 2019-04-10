@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: Syskit::NetworkGeneration::PortDynamics
+  
+    &mdash; Documentation by YARD 0.9.19
+  
+</title>
+
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "Syskit::NetworkGeneration::PortDynamics";
+  relpath = '../../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../../_index.html">Index (P)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../Syskit.html" title="Syskit (module)">Syskit</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../NetworkGeneration.html" title="Syskit::NetworkGeneration (module)">NetworkGeneration</a></span></span>
+     &raquo; 
+    <span class="title">PortDynamics</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: Syskit::NetworkGeneration::PortDynamics
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName"><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></span>
+      
+        <ul class="fullTree">
+          <li><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></li>
+          
+            <li class="next">Syskit::NetworkGeneration::PortDynamics</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/syskit/network_generation/dataflow_dynamics.rb</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>A representation of the actual dynamics of a port</p>
+
+<p>At the last stages, the Engine object will try to create and update
+PortDynamics for each known ports.</p>
+
+<p>The PortDynamics objects maintain a list of so-called &#39;triggers&#39;.
+One trigger represents a single periodic event on a port (i.e. reception on
+an input port and emission on an output port). It states that the port will
+receive/send Trigger#sample_count samples at a period of Trigger#period. If
+period is zero, it means that it will happend “every once in a while”.</p>
+
+<p>A sample is virtual: it is not an actual data sample on the connection. The
+translation between both is given by PortDynamics#sample_size.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><h2>Defined Under Namespace</h2>
+<p class="children">
+  
+    
+  
+    
+      <strong class="classes">Classes:</strong> <span class='object_link'><a href="PortDynamics/Trigger.html" title="Syskit::NetworkGeneration::PortDynamics::Trigger (class)">Trigger</a></span>
+    
+  
+</p>
+
+
+
+
+  <h2>Instance Attribute Summary <small><a href="#" class="summary_toggle">collapse</a></small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#name-instance_method" title="#name (instance method)">#<strong>name</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>The name of the port we are computing dynamics for.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#sample_size-instance_method" title="#sample_size (instance method)">#<strong>sample_size</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>The number of data samples per trigger, if the port&#39;s model value needs
+to be overriden.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#triggers-instance_method" title="#triggers (instance method)">#<strong>triggers</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>The set of registered triggers for this port, as a list of Trigger objects,
+where <code>period</code> is in seconds and sample_count is the count of
+samples sent at <code>period</code> intervals.</p>
+</div></span>
+  
+</li>
+
+    
+  </ul>
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#add_trigger-instance_method" title="#add_trigger (instance method)">#<strong>add_trigger</strong>(name, period, sample_count)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#empty%3F-instance_method" title="#empty? (instance method)">#<strong>empty?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(name, sample_size = 1)  &#x21d2; PortDynamics </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>A new instance of PortDynamics.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#merge-instance_method" title="#merge (instance method)">#<strong>merge</strong>(other_dynamics)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#minimal_period-instance_method" title="#minimal_period (instance method)">#<strong>minimal_period</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#pretty_print-instance_method" title="#pretty_print (instance method)">#<strong>pretty_print</strong>(pp)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#queue_size-instance_method" title="#queue_size (instance method)">#<strong>queue_size</strong>(duration)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#sample_count-instance_method" title="#sample_count (instance method)">#<strong>sample_count</strong>(duration)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#sampled_at-instance_method" title="#sampled_at (instance method)">#<strong>sampled_at</strong>(duration)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    #<strong>initialize</strong>(name, sample_size = 1)  &#x21d2; <tt><span class='object_link'><a href="" title="Syskit::NetworkGeneration::PortDynamics (class)">PortDynamics</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns a new instance of PortDynamics</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+78
+79
+80
+81
+82</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/network_generation/dataflow_dynamics.rb', line 78</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_sample_size'>sample_size</span> <span class='op'>=</span> <span class='int'>1</span><span class='rparen'>)</span>
+    <span class='ivar'>@name</span> <span class='op'>=</span> <span class='id identifier rubyid_name'>name</span>
+    <span class='ivar'>@sample_size</span> <span class='op'>=</span> <span class='id identifier rubyid_sample_size'>sample_size</span><span class='period'>.</span><span class='id identifier rubyid_to_int'>to_int</span>
+    <span class='ivar'>@triggers</span> <span class='op'>=</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id=""></span>
+      <div class="method_details first">
+  <h3 class="signature first" id="name-instance_method">
+  
+    #<strong>name</strong>  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>The name of the port we are computing dynamics for. This is used for
+debugging purposes only</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+46
+47
+48</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/network_generation/dataflow_dynamics.rb', line 46</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_name'>name</span>
+  <span class='ivar'>@name</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="sample_size-instance_method">
+  
+    #<strong>sample_size</strong>  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>The number of data samples per trigger, if the port&#39;s model value needs
+to be overriden</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+49
+50
+51</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/network_generation/dataflow_dynamics.rb', line 49</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_sample_size'>sample_size</span>
+  <span class='ivar'>@sample_size</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="triggers-instance_method">
+  
+    #<strong>triggers</strong>  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>The set of registered triggers for this port, as a list of Trigger objects,
+where <code>period</code> is in seconds and sample_count is the count of
+samples sent at <code>period</code> intervals</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+53
+54
+55</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/network_generation/dataflow_dynamics.rb', line 53</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_triggers'>triggers</span>
+  <span class='ivar'>@triggers</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="add_trigger-instance_method">
+  
+    #<strong>add_trigger</strong>(name, period, sample_count)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+86
+87
+88
+89
+90
+91</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/network_generation/dataflow_dynamics.rb', line 86</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_add_trigger'>add_trigger</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_period'>period</span><span class='comma'>,</span> <span class='id identifier rubyid_sample_count'>sample_count</span><span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_sample_count'>sample_count</span> <span class='op'>!=</span> <span class='int'>0</span>
+        <span class='const'><span class='object_link'><a href="DataFlowDynamics.html" title="Syskit::NetworkGeneration::DataFlowDynamics (class)">DataFlowDynamics</a></span></span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span> <span class='lbrace'>{</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>  [</span><span class='embexpr_beg'>#{</span><span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'>]: adding trigger from </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'> - </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_period'>period</span><span class='embexpr_end'>}</span><span class='tstring_content'> </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_sample_count'>sample_count</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span> <span class='rbrace'>}</span>
+        <span class='id identifier rubyid_triggers'>triggers</span> <span class='op'>&lt;&lt;</span> <span class='const'><span class='object_link'><a href="PortDynamics/Trigger.html" title="Syskit::NetworkGeneration::PortDynamics::Trigger (class)">Trigger</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="PortDynamics/Trigger.html#initialize-instance_method" title="Syskit::NetworkGeneration::PortDynamics::Trigger#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_period'>period</span><span class='comma'>,</span> <span class='id identifier rubyid_sample_count'>sample_count</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="empty?-instance_method">
+  
+    #<strong>empty?</strong>  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+84</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/network_generation/dataflow_dynamics.rb', line 84</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_empty?'>empty?</span><span class='semicolon'>;</span> <span class='id identifier rubyid_triggers'>triggers</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span> <span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="merge-instance_method">
+  
+    #<strong>merge</strong>(other_dynamics)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/network_generation/dataflow_dynamics.rb', line 93</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='id identifier rubyid_other_dynamics'>other_dynamics</span><span class='rparen'>)</span>
+    <span class='const'><span class='object_link'><a href="DataFlowDynamics.html" title="Syskit::NetworkGeneration::DataFlowDynamics (class)">DataFlowDynamics</a></span></span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span> <span class='kw'>do</span>
+        <span class='const'><span class='object_link'><a href="DataFlowDynamics.html" title="Syskit::NetworkGeneration::DataFlowDynamics (class)">DataFlowDynamics</a></span></span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>adding triggers from </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_other_dynamics'>other_dynamics</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'> to </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+        <span class='const'><span class='object_link'><a href="DataFlowDynamics.html" title="Syskit::NetworkGeneration::DataFlowDynamics (class)">DataFlowDynamics</a></span></span><span class='period'>.</span><span class='id identifier rubyid_log_nest'>log_nest</span><span class='lparen'>(</span><span class='int'>4</span><span class='rparen'>)</span> <span class='kw'>do</span>
+            <span class='const'><span class='object_link'><a href="DataFlowDynamics.html" title="Syskit::NetworkGeneration::DataFlowDynamics (class)">DataFlowDynamics</a></span></span><span class='period'>.</span><span class='id identifier rubyid_log_pp'>log_pp</span><span class='lparen'>(</span><span class='symbol'>:debug</span><span class='comma'>,</span> <span class='id identifier rubyid_other_dynamics'>other_dynamics</span><span class='rparen'>)</span>
+        <span class='kw'>end</span>
+        <span class='kw'>break</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_triggers'>triggers</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='id identifier rubyid_other_dynamics'>other_dynamics</span><span class='period'>.</span><span class='id identifier rubyid_triggers'>triggers</span><span class='rparen'>)</span>
+    <span class='kw'>true</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="minimal_period-instance_method">
+  
+    #<strong>minimal_period</strong>  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+105
+106
+107</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/network_generation/dataflow_dynamics.rb', line 105</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_minimal_period'>minimal_period</span>
+    <span class='id identifier rubyid_triggers'>triggers</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:period</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_min'>min</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="pretty_print-instance_method">
+  
+    #<strong>pretty_print</strong>(pp)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+130
+131
+132
+133
+134</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/network_generation/dataflow_dynamics.rb', line 130</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_pretty_print'>pretty_print</span><span class='lparen'>(</span><span class='id identifier rubyid_pp'>pp</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_pp'>pp</span><span class='period'>.</span><span class='id identifier rubyid_seplist'>seplist</span><span class='lparen'>(</span><span class='id identifier rubyid_triggers'>triggers</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_tr'>tr</span><span class='op'>|</span>
+        <span class='id identifier rubyid_pp'>pp</span><span class='period'>.</span><span class='id identifier rubyid_text'>text</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>(</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_tr'>tr</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'>): </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_tr'>tr</span><span class='period'>.</span><span class='id identifier rubyid_period'>period</span><span class='embexpr_end'>}</span><span class='tstring_content'> </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_tr'>tr</span><span class='period'>.</span><span class='id identifier rubyid_sample_count'>sample_count</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="queue_size-instance_method">
+  
+    #<strong>queue_size</strong>(duration)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+126
+127
+128</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/network_generation/dataflow_dynamics.rb', line 126</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_queue_size'>queue_size</span><span class='lparen'>(</span><span class='id identifier rubyid_duration'>duration</span><span class='rparen'>)</span>
+    <span class='lparen'>(</span><span class='int'>1</span> <span class='op'>+</span> <span class='id identifier rubyid_sample_count'>sample_count</span><span class='lparen'>(</span><span class='id identifier rubyid_duration'>duration</span><span class='rparen'>)</span><span class='rparen'>)</span> <span class='op'>*</span> <span class='id identifier rubyid_sample_size'>sample_size</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="sample_count-instance_method">
+  
+    #<strong>sample_count</strong>(duration)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+116
+117
+118
+119
+120
+121
+122
+123
+124</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/network_generation/dataflow_dynamics.rb', line 116</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_sample_count'>sample_count</span><span class='lparen'>(</span><span class='id identifier rubyid_duration'>duration</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_triggers'>triggers</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_trigger'>trigger</span><span class='op'>|</span>
+        <span class='kw'>if</span> <span class='id identifier rubyid_trigger'>trigger</span><span class='period'>.</span><span class='id identifier rubyid_period'>period</span> <span class='op'>==</span> <span class='int'>0</span>
+            <span class='id identifier rubyid_trigger'>trigger</span><span class='period'>.</span><span class='id identifier rubyid_sample_count'>sample_count</span>
+        <span class='kw'>else</span>
+            <span class='lparen'>(</span><span class='id identifier rubyid_duration'>duration</span><span class='op'>/</span><span class='id identifier rubyid_trigger'>trigger</span><span class='period'>.</span><span class='id identifier rubyid_period'>period</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_floor'>floor</span> <span class='op'>*</span> <span class='id identifier rubyid_trigger'>trigger</span><span class='period'>.</span><span class='id identifier rubyid_sample_count'>sample_count</span>
+        <span class='kw'>end</span>
+    <span class='kw'>end</span><span class='period'>.</span><span class='id identifier rubyid_inject'>inject</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:+</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="sampled_at-instance_method">
+  
+    #<strong>sampled_at</strong>(duration)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+109
+110
+111
+112
+113
+114</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/network_generation/dataflow_dynamics.rb', line 109</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_sampled_at'>sampled_at</span><span class='lparen'>(</span><span class='id identifier rubyid_duration'>duration</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="" title="Syskit::NetworkGeneration::PortDynamics (class)">PortDynamics</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="#initialize-instance_method" title="Syskit::NetworkGeneration::PortDynamics#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_sample_size'>sample_size</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_names'>names</span> <span class='op'>=</span> <span class='id identifier rubyid_triggers'>triggers</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:name</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_result'>result</span><span class='period'>.</span><span class='id identifier rubyid_add_trigger'>add_trigger</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'>.resample(</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_names'>names</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>,</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>,</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_duration'>duration</span><span class='embexpr_end'>}</span><span class='tstring_content'>)</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_duration'>duration</span><span class='comma'>,</span> <span class='id identifier rubyid_queue_size'>queue_size</span><span class='lparen'>(</span><span class='id identifier rubyid_duration'>duration</span><span class='rparen'>)</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_result'>result</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Wed Apr 10 21:58:54 2019 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.19 (ruby-2.5.1).
+</div>
+
+    </div>
+  </body>
+</html>

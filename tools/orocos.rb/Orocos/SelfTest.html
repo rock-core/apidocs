@@ -1,0 +1,1325 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Module: Orocos::SelfTest
+  
+    &mdash; Documentation by YARD 0.9.19
+  
+</title>
+
+  <link rel="stylesheet" href="../css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "Orocos::SelfTest";
+  relpath = '../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../_index.html">Index (S)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../Orocos.html" title="Orocos (module)">Orocos</a></span></span>
+     &raquo; 
+    <span class="title">SelfTest</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Module: Orocos::SelfTest
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+
+  
+  
+  
+  
+  <dl>
+      <dt>Includes:</dt>
+      <dd>FlexMock::ArgumentTypes, FlexMock::MockContainer, <span class='object_link'><a href="Test/Mocks.html" title="Orocos::Test::Mocks (module)">Test::Mocks</a></span>, <span class='object_link'><a href="Test/RubyTasks.html" title="Orocos::Test::RubyTasks (module)">Test::RubyTasks</a></span></dd>
+  </dl>
+  
+  
+
+  
+  <dl>
+    <dt>Included in:</dt>
+    <dd><span class='object_link'><a href="../Minitest/Test.html" title="Minitest::Test (class)">Minitest::Test</a></span></dd>
+  </dl>
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/orocos/test.rb</dd>
+  </dl>
+  
+</div>
+
+
+  
+    <h2>
+      Constant Summary
+      <small><a href="#" class="constants_summary_toggle">collapse</a></small>
+    </h2>
+
+    <dl class="constants">
+      
+        <dt id="TEST_MODES-constant" class="">TEST_MODES =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>A set of “modes” that can be used to control how the tests will be
+performed</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='lparen'>(</span><span class='const'>ENV</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>OROCOS_TEST_MODES</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_split'>split</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>,</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span></pre></dd>
+      
+        <dt id="TEST_MODEL_LESS-constant" class="">TEST_MODEL_LESS =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>Test without models</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='const'><span class='object_link'><a href="#TEST_MODES-constant" title="Orocos::SelfTest::TEST_MODES (constant)">TEST_MODES</a></span></span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>no_model</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span></pre></dd>
+      
+        <dt id="TEST_MISSING_MODELS-constant" class="">TEST_MISSING_MODELS =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>Test with models that cannot be loaded</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='const'><span class='object_link'><a href="#TEST_MODES-constant" title="Orocos::SelfTest::TEST_MODES (constant)">TEST_MODES</a></span></span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>missing_model</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span></pre></dd>
+      
+        <dt id="USE_MQUEUE-constant" class="">USE_MQUEUE =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>Whether we should enable MQ support during tests</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='const'><span class='object_link'><a href="../Orocos.html" title="Orocos (module)">Orocos</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Rake.html" title="Orocos::Rake (module)">Rake</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Rake.html#USE_MQUEUE-constant" title="Orocos::Rake::USE_MQUEUE (constant)">USE_MQUEUE</a></span></span></pre></dd>
+      
+    </dl>
+  
+
+
+
+
+  <h2>Instance Attribute Summary <small><a href="#" class="summary_toggle">collapse</a></small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#processes-instance_method" title="#processes (instance method)">#<strong>processes</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute processes.</p>
+</div></span>
+  
+</li>
+
+    
+  </ul>
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#assert_async_polls_until-instance_method" title="#assert_async_polls_until (instance method)">#<strong>assert_async_polls_until</strong>(period: 0.01, timeout: 5)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Polls the async event loop until a condition is met.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#assert_state_equals-instance_method" title="#assert_state_equals (instance method)">#<strong>assert_state_equals</strong>(state, task, timeout = 1)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#data_dir-instance_method" title="#data_dir (instance method)">#<strong>data_dir</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get-instance_method" title="#get (instance method)">#<strong>get</strong>(name)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#ior-instance_method" title="#ior (instance method)">#<strong>ior</strong>(name)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>helper for generating an ior from a name.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#make_tmpdir-instance_method" title="#make_tmpdir (instance method)">#<strong>make_tmpdir</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#name_service-instance_method" title="#name_service (instance method)">#<strong>name_service</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#read_one_sample-instance_method" title="#read_one_sample (instance method)">#<strong>read_one_sample</strong>(reader, timeout = 1)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#setup-instance_method" title="#setup (instance method)">#<strong>setup</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#spawn_and_get-instance_method" title="#spawn_and_get (instance method)">#<strong>spawn_and_get</strong>(component, task = component)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#start-instance_method" title="#start (instance method)">#<strong>start</strong>(*spec)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#teardown-instance_method" title="#teardown (instance method)">#<strong>teardown</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#wait_for-instance_method" title="#wait_for (instance method)">#<strong>wait_for</strong>(timeout = 5, &amp;block)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#work_dir-instance_method" title="#work_dir (instance method)">#<strong>work_dir</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="Test/RubyTasks.html" title="Orocos::Test::RubyTasks (module)">Test::RubyTasks</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="Test/RubyTasks.html#helpers_dir-instance_method" title="Orocos::Test::RubyTasks#helpers_dir (method)">#helpers_dir</a></span>, <span class='object_link'><a href="Test/RubyTasks.html#new_external_ruby_task_context-instance_method" title="Orocos::Test::RubyTasks#new_external_ruby_task_context (method)">#new_external_ruby_task_context</a></span>, <span class='object_link'><a href="Test/RubyTasks.html#new_ruby_task_context-instance_method" title="Orocos::Test::RubyTasks#new_ruby_task_context (method)">#new_ruby_task_context</a></span>, <span class='object_link'><a href="Test/RubyTasks.html#register_allocated_ruby_tasks-instance_method" title="Orocos::Test::RubyTasks#register_allocated_ruby_tasks (method)">#register_allocated_ruby_tasks</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="Test/Mocks.html" title="Orocos::Test::Mocks (module)">Test::Mocks</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="Test/Mocks.html#mock_input_port-instance_method" title="Orocos::Test::Mocks#mock_input_port (method)">#mock_input_port</a></span>, <span class='object_link'><a href="Test/Mocks.html#mock_output_port-instance_method" title="Orocos::Test::Mocks#mock_output_port (method)">#mock_output_port</a></span>, <span class='object_link'><a href="Test/Mocks.html#mock_task_context-instance_method" title="Orocos::Test::Mocks#mock_task_context (method)">#mock_task_context</a></span>, <span class='object_link'><a href="Test/Mocks.html#mock_task_context_model-instance_method" title="Orocos::Test::Mocks#mock_task_context_model (method)">#mock_task_context_model</a></span></p>
+
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id=""></span>
+      <div class="method_details first">
+  <h3 class="signature first" id="processes-instance_method">
+  
+    #<strong>processes</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute processes</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+135
+136
+137</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/orocos/test.rb', line 135</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_processes'>processes</span>
+  <span class='ivar'>@processes</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="assert_async_polls_until-instance_method">
+  
+    #<strong>assert_async_polls_until</strong>(period: 0.01, timeout: 5)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Polls the async event loop until a condition is met</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>period</span>
+      
+      
+        <span class='type'>(<tt>Float</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the period in seconds</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>timeout</span>
+      
+      
+        <span class='type'>(<tt>Float</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the timeout in seconds. The test will flunk if the condition is not met
+within that many seconds</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Yield Returns:</p>
+<ul class="yieldreturn">
+  
+    <li>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        
+        <div class='inline'>
+<p>a falsy value if the condition is not met yet (i.e. false or nil), and a
+truthy value if the condition has been met. This value is returned by
+#async_poll_until</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/orocos/test.rb', line 216</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_assert_async_polls_until'>assert_async_polls_until</span><span class='lparen'>(</span><span class='label'>period:</span> <span class='float'>0.01</span><span class='comma'>,</span> <span class='label'>timeout:</span> <span class='int'>5</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_start'>start</span> <span class='op'>=</span> <span class='const'>Time</span><span class='period'>.</span><span class='id identifier rubyid_now'>now</span>
+    <span class='kw'>while</span> <span class='kw'>true</span>
+        <span class='const'><span class='object_link'><a href="../Orocos.html" title="Orocos (module)">Orocos</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Async.html" title="Orocos::Async (module)">Async</a></span></span><span class='period'>.</span><span class='id identifier rubyid_step'><span class='object_link'><a href="Async.html#step-class_method" title="Orocos::Async.step (method)">step</a></span></span>
+        <span class='kw'>if</span> <span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='kw'>yield</span>
+            <span class='kw'>return</span> <span class='id identifier rubyid_result'>result</span>
+        <span class='kw'>end</span>
+        <span class='kw'>if</span> <span class='const'>Time</span><span class='period'>.</span><span class='id identifier rubyid_now'>now</span> <span class='op'>-</span> <span class='id identifier rubyid_start'>start</span> <span class='op'>&gt;</span> <span class='id identifier rubyid_timeout'>timeout</span>
+            <span class='id identifier rubyid_flunk'>flunk</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>timed out while waiting for condition</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+        <span class='kw'>end</span>
+        <span class='id identifier rubyid_sleep'>sleep</span> <span class='id identifier rubyid_period'>period</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="assert_state_equals-instance_method">
+  
+    #<strong>assert_state_equals</strong>(state, task, timeout = 1)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/orocos/test.rb', line 176</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_assert_state_equals'>assert_state_equals</span><span class='lparen'>(</span><span class='id identifier rubyid_state'>state</span><span class='comma'>,</span> <span class='id identifier rubyid_task'>task</span><span class='comma'>,</span> <span class='id identifier rubyid_timeout'>timeout</span> <span class='op'>=</span> <span class='int'>1</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_expected_toplevel'>expected_toplevel</span> <span class='op'>=</span> <span class='id identifier rubyid_task'>task</span><span class='period'>.</span><span class='id identifier rubyid_toplevel_state'>toplevel_state</span><span class='lparen'>(</span><span class='id identifier rubyid_state'>state</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_toplevel'>toplevel</span> <span class='op'>=</span> <span class='id identifier rubyid_task'>task</span><span class='period'>.</span><span class='id identifier rubyid_rtt_state'>rtt_state</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_expected_toplevel'>expected_toplevel</span> <span class='op'>!=</span> <span class='id identifier rubyid_toplevel'>toplevel</span>
+        <span class='id identifier rubyid_flunk'>flunk</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_task'>task</span><span class='embexpr_end'>}</span><span class='tstring_content'> was expected to be in toplevel state </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_expected_toplevel'>expected_toplevel</span><span class='embexpr_end'>}</span><span class='tstring_content'> because of </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_state'>state</span><span class='embexpr_end'>}</span><span class='tstring_content'> but is in </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_toplevel'>toplevel</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+
+    <span class='const'>Integer</span><span class='lparen'>(</span><span class='id identifier rubyid_timeout'>timeout</span> <span class='op'>/</span> <span class='float'>0.01</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_times'>times</span> <span class='kw'>do</span>
+        <span class='kw'>if</span> <span class='id identifier rubyid_task'>task</span><span class='period'>.</span><span class='id identifier rubyid_state'>state</span> <span class='op'>==</span> <span class='id identifier rubyid_state'>state</span>
+            <span class='kw'>return</span>
+        <span class='kw'>end</span>
+        <span class='id identifier rubyid_sleep'>sleep</span> <span class='float'>0.01</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_flunk'>flunk</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_task'>task</span><span class='embexpr_end'>}</span><span class='tstring_content'> was expected to be in state </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_state'>state</span><span class='embexpr_end'>}</span><span class='tstring_content'> but is in </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_task'>task</span><span class='period'>.</span><span class='id identifier rubyid_state'>state</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="data_dir-instance_method">
+  
+    #<strong>data_dir</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+64</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/orocos/test.rb', line 64</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_data_dir'>data_dir</span><span class='semicolon'>;</span> <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='ivar'>@test_dir</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>data</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get-instance_method">
+  
+    #<strong>get</strong>(name)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+147
+148
+149</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/orocos/test.rb', line 147</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
+    <span class='const'><span class='object_link'><a href="../Orocos.html" title="Orocos (module)">Orocos</a></span></span><span class='period'>.</span><span class='id identifier rubyid_get'><span class='object_link'><a href="../Orocos.html#get-class_method" title="Orocos.get (method)">get</a></span></span> <span class='id identifier rubyid_name'>name</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="ior-instance_method">
+  
+    #<strong>ior</strong>(name)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>helper for generating an ior from a name</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+201
+202
+203
+204
+205</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/orocos/test.rb', line 201</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_ior'>ior</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_name_service'>name_service</span><span class='period'>.</span><span class='id identifier rubyid_ior'>ior</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
+<span class='kw'>rescue</span> <span class='const'><span class='object_link'><a href="../Orocos.html" title="Orocos (module)">Orocos</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="NotFound.html" title="Orocos::NotFound (class)">NotFound</a></span></span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>IOR:010000001f00000049444c3a5254542f636f7262612f435461736b436f6e746578743a312e300000010000000000000064000000010102000d00000031302e3235302e332e31363000002bc80e000000fe8a95a65000004d25000000000000000200000000000000080000000100000000545441010000001c00000001000000010001000100000001000105090101000100000009010100</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="make_tmpdir-instance_method">
+  
+    #<strong>make_tmpdir</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+137
+138
+139
+140
+141</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/orocos/test.rb', line 137</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_make_tmpdir'>make_tmpdir</span>
+    <span class='id identifier rubyid_dir'>dir</span> <span class='op'>=</span> <span class='const'>Dir</span><span class='period'>.</span><span class='id identifier rubyid_mktmpdir'>mktmpdir</span>
+    <span class='ivar'>@__tmpdirs</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_dir'>dir</span>
+    <span class='id identifier rubyid_dir'>dir</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="name_service-instance_method">
+  
+    #<strong>name_service</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+196
+197
+198</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/orocos/test.rb', line 196</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_name_service'>name_service</span>
+    <span class='const'><span class='object_link'><a href="../Orocos.html" title="Orocos (module)">Orocos</a></span></span><span class='period'>.</span><span class='id identifier rubyid_name_service'><span class='object_link'><a href="../Orocos.html#name_service-class_method" title="Orocos.name_service (method)">name_service</a></span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="read_one_sample-instance_method">
+  
+    #<strong>read_one_sample</strong>(reader, timeout = 1)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/orocos/test.rb', line 165</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_read_one_sample'>read_one_sample</span><span class='lparen'>(</span><span class='id identifier rubyid_reader'>reader</span><span class='comma'>,</span> <span class='id identifier rubyid_timeout'>timeout</span> <span class='op'>=</span> <span class='int'>1</span><span class='rparen'>)</span>
+    <span class='const'>Integer</span><span class='lparen'>(</span><span class='id identifier rubyid_timeout'>timeout</span> <span class='op'>/</span> <span class='float'>0.01</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_times'>times</span> <span class='kw'>do</span>
+        <span class='kw'>if</span> <span class='id identifier rubyid_value'>value</span> <span class='op'>=</span> <span class='id identifier rubyid_reader'>reader</span><span class='period'>.</span><span class='id identifier rubyid_read_new'>read_new</span>
+            <span class='kw'>return</span> <span class='id identifier rubyid_value'>value</span>
+        <span class='kw'>end</span>
+        <span class='id identifier rubyid_sleep'>sleep</span> <span class='float'>0.01</span>
+
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_flunk'>flunk</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>expected to receive one new sample on </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_reader'>reader</span><span class='embexpr_end'>}</span><span class='tstring_content'>, but got none (state: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_reader'>reader</span><span class='period'>.</span><span class='id identifier rubyid_port'>port</span><span class='period'>.</span><span class='id identifier rubyid_task'>task</span><span class='period'>.</span><span class='id identifier rubyid_rtt_state'>rtt_state</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="setup-instance_method">
+  
+    #<strong>setup</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/orocos/test.rb', line 66</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_setup'>setup</span>
+    <span class='ivar'>@old_pkg_config_path</span> <span class='op'>=</span> <span class='const'>ENV</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>PKG_CONFIG_PATH</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_dup'>dup</span>
+    <span class='ivar'>@__warn_for_missing_default_loggers</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Orocos.html" title="Orocos (module)">Orocos</a></span></span><span class='period'>.</span><span class='id identifier rubyid_warn_for_missing_default_loggers?'>warn_for_missing_default_loggers?</span>
+    <span class='const'><span class='object_link'><a href="../Orocos.html" title="Orocos (module)">Orocos</a></span></span><span class='period'>.</span><span class='id identifier rubyid_warn_for_missing_default_loggers'>warn_for_missing_default_loggers</span> <span class='op'>=</span> <span class='kw'>false</span>
+    <span class='const'><span class='object_link'><a href="../Orocos.html" title="Orocos (module)">Orocos</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="MQueue.html" title="Orocos::MQueue (module)">MQueue</a></span></span><span class='period'>.</span><span class='id identifier rubyid_auto'>auto</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="#USE_MQUEUE-constant" title="Orocos::SelfTest::USE_MQUEUE (constant)">USE_MQUEUE</a></span></span>
+
+    <span class='ivar'>@test_dir</span> <span class='op'>=</span> <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_expand_path'>expand_path</span><span class='lparen'>(</span><span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>..</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>..</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>test</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='comma'>,</span> <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_dirname'>dirname</span><span class='lparen'>(</span><span class='kw'>__FILE__</span><span class='rparen'>)</span><span class='rparen'>)</span>
+    <span class='ivar'>@__tmpdirs</span> <span class='op'>=</span> <span class='const'>Array</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+
+    <span class='comment'># Since we are loading typekits over and over again, we need to
+</span>    <span class='comment'># disable type export
+</span>    <span class='const'><span class='object_link'><a href="../Orocos.html" title="Orocos (module)">Orocos</a></span></span><span class='period'>.</span><span class='id identifier rubyid_export_types'>export_types</span> <span class='op'>=</span> <span class='kw'>false</span>
+    <span class='kw'>if</span> <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_directory?'>directory?</span><span class='lparen'>(</span><span class='id identifier rubyid_work_dir'>work_dir</span><span class='rparen'>)</span>
+        <span class='const'><span class='object_link'><a href="../Orocos.html" title="Orocos (module)">Orocos</a></span></span><span class='period'>.</span><span class='id identifier rubyid_default_working_directory'><span class='object_link'><a href="../Orocos.html#default_working_directory-class_method" title="Orocos.default_working_directory (method)">default_working_directory</a></span></span> <span class='op'>=</span> <span class='id identifier rubyid_work_dir'>work_dir</span>
+        <span class='const'>ENV</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>PKG_CONFIG_PATH</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span> <span class='op'>+=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>:</span><span class='embexpr_beg'>#{</span><span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='id identifier rubyid_work_dir'>work_dir</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>prefix</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>lib</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>pkgconfig</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+        <span class='const'><span class='object_link'><a href="../Orocos.html" title="Orocos (module)">Orocos</a></span></span><span class='period'>.</span><span class='id identifier rubyid_default_pkgconfig_loader'><span class='object_link'><a href="../Orocos.html#default_pkgconfig_loader-class_method" title="Orocos.default_pkgconfig_loader (method)">default_pkgconfig_loader</a></span></span><span class='period'>.</span><span class='id identifier rubyid_clear'>clear</span>
+    <span class='kw'>end</span>
+
+    <span class='kw'>if</span> <span class='kw'>defined?</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="../Orocos.html" title="Orocos (module)">Orocos</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Async.html" title="Orocos::Async (module)">Async</a></span></span><span class='rparen'>)</span>
+        <span class='const'><span class='object_link'><a href="../Orocos.html" title="Orocos (module)">Orocos</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Async.html" title="Orocos::Async (module)">Async</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Async/NameServiceBase.html" title="Orocos::Async::NameServiceBase (class)">NameServiceBase</a></span></span><span class='period'>.</span><span class='id identifier rubyid_default_period'><span class='object_link'><a href="Async/ObjectBase/Periodic/ClassMethods.html#default_period-instance_method" title="Orocos::Async::ObjectBase::Periodic::ClassMethods#default_period (method)">default_period</a></span></span> <span class='op'>=</span> <span class='int'>0</span>
+        <span class='const'><span class='object_link'><a href="../Orocos.html" title="Orocos (module)">Orocos</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Async.html" title="Orocos::Async (module)">Async</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Async/TaskContextBase.html" title="Orocos::Async::TaskContextBase (class)">TaskContextBase</a></span></span><span class='period'>.</span><span class='id identifier rubyid_default_period'><span class='object_link'><a href="Async/ObjectBase/Periodic/ClassMethods.html#default_period-instance_method" title="Orocos::Async::ObjectBase::Periodic::ClassMethods#default_period (method)">default_period</a></span></span> <span class='op'>=</span> <span class='int'>0</span>
+        <span class='const'><span class='object_link'><a href="../Orocos.html" title="Orocos (module)">Orocos</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Async.html" title="Orocos::Async (module)">Async</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Async/CORBA.html" title="Orocos::Async::CORBA (module)">CORBA</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Async/CORBA/Attribute.html" title="Orocos::Async::CORBA::Attribute (class)">Attribute</a></span></span><span class='period'>.</span><span class='id identifier rubyid_default_period'><span class='object_link'><a href="Async/ObjectBase/Periodic/ClassMethods.html#default_period-instance_method" title="Orocos::Async::ObjectBase::Periodic::ClassMethods#default_period (method)">default_period</a></span></span> <span class='op'>=</span> <span class='int'>0</span>
+        <span class='const'><span class='object_link'><a href="../Orocos.html" title="Orocos (module)">Orocos</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Async.html" title="Orocos::Async (module)">Async</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Async/CORBA.html" title="Orocos::Async::CORBA (module)">CORBA</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Async/CORBA/Property.html" title="Orocos::Async::CORBA::Property (class)">Property</a></span></span><span class='period'>.</span><span class='id identifier rubyid_default_period'><span class='object_link'><a href="Async/ObjectBase/Periodic/ClassMethods.html#default_period-instance_method" title="Orocos::Async::ObjectBase::Periodic::ClassMethods#default_period (method)">default_period</a></span></span> <span class='op'>=</span> <span class='int'>0</span>
+        <span class='const'><span class='object_link'><a href="../Orocos.html" title="Orocos (module)">Orocos</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Async.html" title="Orocos::Async (module)">Async</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Async/CORBA.html" title="Orocos::Async::CORBA (module)">CORBA</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Async/CORBA/OutputReader.html" title="Orocos::Async::CORBA::OutputReader (class)">OutputReader</a></span></span><span class='period'>.</span><span class='id identifier rubyid_default_period'><span class='object_link'><a href="Async/ObjectBase/Periodic/ClassMethods.html#default_period-instance_method" title="Orocos::Async::ObjectBase::Periodic::ClassMethods#default_period (method)">default_period</a></span></span> <span class='op'>=</span> <span class='int'>0</span>
+    <span class='kw'>end</span>
+
+    <span class='ivar'>@processes</span> <span class='op'>=</span> <span class='const'>Array</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+
+    <span class='const'><span class='object_link'><a href="../Orocos.html" title="Orocos (module)">Orocos</a></span></span><span class='period'>.</span><span class='id identifier rubyid_initialize'><span class='object_link'><a href="../Orocos.html#initialize-class_method" title="Orocos.initialize (method)">initialize</a></span></span>
+    <span class='ivar'>@__orocos_corba_timeouts</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='const'><span class='object_link'><a href="../Orocos.html" title="Orocos (module)">Orocos</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="CORBA.html" title="Orocos::CORBA (module)">CORBA</a></span></span><span class='period'>.</span><span class='id identifier rubyid_call_timeout'><span class='object_link'><a href="CORBA.html#call_timeout-class_method" title="Orocos::CORBA.call_timeout (method)">call_timeout</a></span></span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="../Orocos.html" title="Orocos (module)">Orocos</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="CORBA.html" title="Orocos::CORBA (module)">CORBA</a></span></span><span class='period'>.</span><span class='id identifier rubyid_connect_timeout'><span class='object_link'><a href="CORBA.html#connect_timeout-class_method" title="Orocos::CORBA.connect_timeout (method)">connect_timeout</a></span></span><span class='rbracket'>]</span>
+    <span class='const'><span class='object_link'><a href="../Orocos.html" title="Orocos (module)">Orocos</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="CORBA.html" title="Orocos::CORBA (module)">CORBA</a></span></span><span class='period'>.</span><span class='id identifier rubyid_call_timeout'><span class='object_link'><a href="CORBA.html#call_timeout-class_method" title="Orocos::CORBA.call_timeout (method)">call_timeout</a></span></span> <span class='op'>=</span> <span class='int'>10000</span>
+    <span class='const'><span class='object_link'><a href="../Orocos.html" title="Orocos (module)">Orocos</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="CORBA.html" title="Orocos::CORBA (module)">CORBA</a></span></span><span class='period'>.</span><span class='id identifier rubyid_connect_timeout'><span class='object_link'><a href="CORBA.html#connect_timeout-class_method" title="Orocos::CORBA.connect_timeout (method)">connect_timeout</a></span></span> <span class='op'>=</span> <span class='int'>10000</span>
+
+	    <span class='kw'>if</span> <span class='const'><span class='object_link'><a href="#TEST_MODEL_LESS-constant" title="Orocos::SelfTest::TEST_MODEL_LESS (constant)">TEST_MODEL_LESS</a></span></span>
+		<span class='id identifier rubyid_flexmock'>flexmock</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="../Orocos.html" title="Orocos (module)">Orocos</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="TaskContext.html" title="Orocos::TaskContext (class)">TaskContext</a></span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_new_instances'>new_instances</span><span class='lparen'>(</span><span class='symbol'>:get_from_ior</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_should_receive'>should_receive</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>model</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_and_return'>and_return</span><span class='lparen'>(</span><span class='kw'>nil</span><span class='rparen'>)</span>
+		<span class='id identifier rubyid_flexmock'>flexmock</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="../Orocos.html" title="Orocos (module)">Orocos</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="TaskContext.html" title="Orocos::TaskContext (class)">TaskContext</a></span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_new_instances'>new_instances</span><span class='lparen'>(</span><span class='symbol'>:do_get</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_should_receive'>should_receive</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>model</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_and_return'>and_return</span><span class='lparen'>(</span><span class='kw'>nil</span><span class='rparen'>)</span>
+	    <span class='kw'>elsif</span> <span class='const'><span class='object_link'><a href="#TEST_MISSING_MODELS-constant" title="Orocos::SelfTest::TEST_MISSING_MODELS (constant)">TEST_MISSING_MODELS</a></span></span>
+		<span class='id identifier rubyid_flexmock'>flexmock</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="../Orocos.html" title="Orocos (module)">Orocos</a></span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_should_receive'>should_receive</span><span class='lparen'>(</span><span class='symbol'>:task_model_from_name</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_and_raise'>and_raise</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="../Orocos.html" title="Orocos (module)">Orocos</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="NotFound.html" title="Orocos::NotFound (class)">NotFound</a></span></span><span class='rparen'>)</span>
+	    <span class='kw'>end</span>
+    <span class='kw'>super</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="spawn_and_get-instance_method">
+  
+    #<strong>spawn_and_get</strong>(component, task = component)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/orocos/test.rb', line 151</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_spawn_and_get'>spawn_and_get</span><span class='lparen'>(</span><span class='id identifier rubyid_component'>component</span><span class='comma'>,</span> <span class='id identifier rubyid_task'>task</span> <span class='op'>=</span> <span class='id identifier rubyid_component'>component</span><span class='rparen'>)</span>
+    <span class='kw'>begin</span>
+        <span class='id identifier rubyid_process'>process</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Orocos.html" title="Orocos (module)">Orocos</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Process.html" title="Orocos::Process (class)">Process</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Process.html#initialize-instance_method" title="Orocos::Process#initialize (method)">new</a></span></span> <span class='id identifier rubyid_component'>component</span>
+        <span class='id identifier rubyid_process'>process</span><span class='period'>.</span><span class='id identifier rubyid_spawn'>spawn</span>
+        <span class='id identifier rubyid_process'>process</span><span class='period'>.</span><span class='id identifier rubyid_wait_running'>wait_running</span><span class='lparen'>(</span><span class='float'>0.5</span><span class='rparen'>)</span>
+    <span class='kw'>rescue</span> <span class='const'>Exception</span>
+        <span class='id identifier rubyid_process'>process</span><span class='period'>.</span><span class='id identifier rubyid_kill'>kill</span> <span class='kw'>if</span> <span class='id identifier rubyid_process'>process</span>
+        <span class='id identifier rubyid_raise'>raise</span>
+    <span class='kw'>end</span>
+
+    <span class='id identifier rubyid_processes'>processes</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_process'>process</span>
+    <span class='const'><span class='object_link'><a href="../Orocos.html" title="Orocos (module)">Orocos</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="TaskContext.html" title="Orocos::TaskContext (class)">TaskContext</a></span></span><span class='period'>.</span><span class='id identifier rubyid_get'><span class='object_link'><a href="TaskContextBase.html#get-class_method" title="Orocos::TaskContextBase.get (method)">get</a></span></span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_component'>component</span><span class='embexpr_end'>}</span><span class='tstring_content'>.</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_task'>task</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="start-instance_method">
+  
+    #<strong>start</strong>(*spec)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+143
+144
+145</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/orocos/test.rb', line 143</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_start'>start</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_spec'>spec</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_processes'>processes</span><span class='period'>.</span><span class='id identifier rubyid_concat'>concat</span> <span class='const'><span class='object_link'><a href="../Orocos.html" title="Orocos (module)">Orocos</a></span></span><span class='period'>.</span><span class='id identifier rubyid_run'><span class='object_link'><a href="../Orocos.html#run-class_method" title="Orocos.run (method)">run</a></span></span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_spec'>spec</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="teardown-instance_method">
+  
+    #<strong>teardown</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/orocos/test.rb', line 108</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_teardown'>teardown</span>
+    <span class='kw'>if</span> <span class='kw'>defined?</span> <span class='const'>FlexMock</span>
+        <span class='id identifier rubyid_flexmock_teardown'>flexmock_teardown</span>
+    <span class='kw'>end</span>
+    <span class='ivar'>@__tmpdirs</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_dir'>dir</span><span class='op'>|</span>
+        <span class='const'>FileUtils</span><span class='period'>.</span><span class='id identifier rubyid_rm_rf'>rm_rf</span> <span class='id identifier rubyid_dir'>dir</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_processes'>processes</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_p'>p</span><span class='op'>|</span>
+        <span class='kw'>begin</span> <span class='id identifier rubyid_p'>p</span><span class='period'>.</span><span class='id identifier rubyid_kill'>kill</span>
+        <span class='kw'>rescue</span> <span class='const'>Exception</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_e'>e</span>
+            <span class='const'><span class='object_link'><a href="../Orocos.html" title="Orocos (module)">Orocos</a></span></span><span class='period'>.</span><span class='id identifier rubyid_warn'>warn</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>failed, in teardown, to stop process </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_p'>p</span><span class='embexpr_end'>}</span><span class='tstring_content'>: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_e'>e</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+        <span class='kw'>end</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_processes'>processes</span><span class='period'>.</span><span class='id identifier rubyid_clear'>clear</span>
+    <span class='kw'>super</span>
+    <span class='kw'>if</span> <span class='ivar'>@__orocos_corba_timeouts</span> <span class='comment'># can be nil if setup failed
+</span>        <span class='const'><span class='object_link'><a href="../Orocos.html" title="Orocos (module)">Orocos</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="CORBA.html" title="Orocos::CORBA (module)">CORBA</a></span></span><span class='period'>.</span><span class='id identifier rubyid_call_timeout'><span class='object_link'><a href="CORBA.html#call_timeout-class_method" title="Orocos::CORBA.call_timeout (method)">call_timeout</a></span></span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="../Orocos.html" title="Orocos (module)">Orocos</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="CORBA.html" title="Orocos::CORBA (module)">CORBA</a></span></span><span class='period'>.</span><span class='id identifier rubyid_connect_timeout'><span class='object_link'><a href="CORBA.html#connect_timeout-class_method" title="Orocos::CORBA.connect_timeout (method)">connect_timeout</a></span></span> <span class='op'>=</span> <span class='op'>*</span><span class='ivar'>@__orocos_corba_timeouts</span>
+    <span class='kw'>end</span>
+    <span class='kw'>if</span> <span class='ivar'>@old_pkg_config_path</span> <span class='comment'># can be nil if setup failed
+</span>        <span class='const'>ENV</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>PKG_CONFIG_PATH</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='ivar'>@old_pkg_config_path</span>
+    <span class='kw'>end</span>
+    <span class='const'><span class='object_link'><a href="../Orocos.html" title="Orocos (module)">Orocos</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="CORBA.html" title="Orocos::CORBA (module)">CORBA</a></span></span><span class='period'>.</span><span class='id identifier rubyid_instance_variable_set'>instance_variable_set</span> <span class='symbol'>:@loaded_typekits</span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+    <span class='const'><span class='object_link'><a href="../Orocos.html" title="Orocos (module)">Orocos</a></span></span><span class='period'>.</span><span class='id identifier rubyid_warn_for_missing_default_loggers'>warn_for_missing_default_loggers</span> <span class='op'>=</span> <span class='ivar'>@__warn_for_missing_default_loggers</span>
+<span class='kw'>ensure</span>
+    <span class='const'><span class='object_link'><a href="../Orocos.html" title="Orocos (module)">Orocos</a></span></span><span class='period'>.</span><span class='id identifier rubyid_clear'><span class='object_link'><a href="../Orocos.html#clear-class_method" title="Orocos.clear (method)">clear</a></span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="wait_for-instance_method">
+  
+    #<strong>wait_for</strong>(timeout = 5, &amp;block)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+192
+193
+194</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/orocos/test.rb', line 192</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_wait_for'>wait_for</span><span class='lparen'>(</span><span class='id identifier rubyid_timeout'>timeout</span> <span class='op'>=</span> <span class='int'>5</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+    <span class='const'><span class='object_link'><a href="../Orocos.html" title="Orocos (module)">Orocos</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Async.html" title="Orocos::Async (module)">Async</a></span></span><span class='period'>.</span><span class='id identifier rubyid_wait_for'><span class='object_link'><a href="Async.html#wait_for-class_method" title="Orocos::Async.wait_for (method)">wait_for</a></span></span><span class='lparen'>(</span><span class='float'>0.005</span><span class='comma'>,</span> <span class='id identifier rubyid_timeout'>timeout</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="work_dir-instance_method">
+  
+    #<strong>work_dir</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+63</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/orocos/test.rb', line 63</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_work_dir'>work_dir</span><span class='semicolon'>;</span> <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='ivar'>@test_dir</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>working_copy</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Wed Apr 10 22:10:21 2019 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.19 (ruby-2.5.1).
+</div>
+
+    </div>
+  </body>
+</html>

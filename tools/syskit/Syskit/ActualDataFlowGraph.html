@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: Syskit::ActualDataFlowGraph
+  
+    &mdash; Documentation by YARD 0.9.19
+  
+</title>
+
+  <link rel="stylesheet" href="../css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "Syskit::ActualDataFlowGraph";
+  relpath = '../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../_index.html">Index (A)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../Syskit.html" title="Syskit (module)">Syskit</a></span></span>
+     &raquo; 
+    <span class="title">ActualDataFlowGraph</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: Syskit::ActualDataFlowGraph
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName"><span class='object_link'><a href="ConnectionGraph.html" title="Syskit::ConnectionGraph (class)">ConnectionGraph</a></span></span>
+      
+        <ul class="fullTree">
+          <li><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></li>
+          
+            <li class="next">Roby::Relations::Graph</li>
+          
+            <li class="next"><span class='object_link'><a href="ConnectionGraph.html" title="Syskit::ConnectionGraph (class)">ConnectionGraph</a></span></li>
+          
+            <li class="next">Syskit::ActualDataFlowGraph</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/syskit/actual_data_flow_graph.rb</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>The graph that represents the connections on the actual ports</p>
+
+<p>I.e. this is the set of connections that really exist between our
+components</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+
+
+  <h2>Instance Attribute Summary <small><a href="#" class="summary_toggle">collapse</a></small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#static_info-instance_method" title="#static_info (instance method)">#<strong>static_info</strong>  &#x21d2; Hash&lt;(Orocos::TaskContext,String),Boolean&gt; </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Information about which ports are static and which are not.</p>
+</div></span>
+  
+</li>
+
+    
+  </ul>
+
+
+
+  
+  
+  <h3 class="inherited">Attributes inherited from <span class='object_link'><a href="ConnectionGraph.html" title="Syskit::ConnectionGraph (class)">ConnectionGraph</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="ConnectionGraph.html#name-instance_method" title="Syskit::ConnectionGraph#name (method)">#name</a></span></p>
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#add_connections-instance_method" title="#add_connections (instance method)">#<strong>add_connections</strong>(source_task, sink_task, mappings)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Registers a connection between two tasks.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>  &#x21d2; ActualDataFlowGraph </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>A new instance of ActualDataFlowGraph.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#static%3F-instance_method" title="#static? (instance method)">#<strong>static?</strong>(task, port)  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Whether the given port is static (per <span class='object_link'><a href="Port.html#static%3F-instance_method" title="Syskit::Port#static? (method)">Port#static?</a></span>.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="ConnectionGraph.html" title="Syskit::ConnectionGraph (class)">ConnectionGraph</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="ConnectionGraph.html#add_edge-instance_method" title="Syskit::ConnectionGraph#add_edge (method)">#add_edge</a></span>, <span class='object_link'><a href="ConnectionGraph.html#connected%3F-instance_method" title="Syskit::ConnectionGraph#connected? (method)">#connected?</a></span>, <span class='object_link'><a href="ConnectionGraph.html#each_in_connection-instance_method" title="Syskit::ConnectionGraph#each_in_connection (method)">#each_in_connection</a></span>, <span class='object_link'><a href="ConnectionGraph.html#each_out_connection-instance_method" title="Syskit::ConnectionGraph#each_out_connection (method)">#each_out_connection</a></span>, <span class='object_link'><a href="ConnectionGraph.html#freeze_edge_info-instance_method" title="Syskit::ConnectionGraph#freeze_edge_info (method)">#freeze_edge_info</a></span>, <span class='object_link'><a href="ConnectionGraph.html#has_in_connections%3F-instance_method" title="Syskit::ConnectionGraph#has_in_connections? (method)">#has_in_connections?</a></span>, <span class='object_link'><a href="ConnectionGraph.html#has_out_connections%3F-instance_method" title="Syskit::ConnectionGraph#has_out_connections? (method)">#has_out_connections?</a></span>, <span class='object_link'><a href="ConnectionGraph.html#merge_info-instance_method" title="Syskit::ConnectionGraph#merge_info (method)">#merge_info</a></span>, <span class='object_link'><a href="ConnectionGraph.html#remove_connections-instance_method" title="Syskit::ConnectionGraph#remove_connections (method)">#remove_connections</a></span></p>
+
+  <div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    #<strong>initialize</strong>  &#x21d2; <tt><span class='object_link'><a href="" title="Syskit::ActualDataFlowGraph (class)">ActualDataFlowGraph</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns a new instance of ActualDataFlowGraph</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+14
+15
+16
+17</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/actual_data_flow_graph.rb', line 14</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='op'>*</span><span class='rparen'>)</span>
+    <span class='kw'>super</span>
+    <span class='ivar'>@static_info</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id=""></span>
+      <div class="method_details first">
+  <h3 class="signature first" id="static_info-instance_method">
+  
+    #<strong>static_info</strong>  &#x21d2; <tt>Hash&lt;(Orocos::TaskContext,String),Boolean&gt;</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Information about which ports are static and which are not. This
+information is critical during disconnection to force reconfiguration of
+the associated tasks</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Hash&lt;(Orocos::TaskContext,String),Boolean&gt;</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+12
+13
+14</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/actual_data_flow_graph.rb', line 12</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_static_info'>static_info</span>
+  <span class='ivar'>@static_info</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="add_connections-instance_method">
+  
+    #<strong>add_connections</strong>(source_task, sink_task, mappings)  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Registers a connection between two tasks</p>
+
+<p>Each element in the connection mappings represent one connection. It is of
+the form</p>
+
+<pre class="code ruby"><code class="ruby">[source_port_name, sink_port_name] =&gt; [policy, source_static, sink_static]
+</code></pre>
+
+<p>where policy is a connection policy hash, and source_static/sink_static are
+booleans indicating whether the source (resp. sink) ports are static per
+<span class='object_link'><a href="Port.html#static%3F-instance_method" title="Syskit::Port#static? (method)">Port#static?</a></span>.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>source_task</span>
+      
+      
+        <span class='type'>(<tt>Orocos::TaskContext</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the task of the source port</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>sink_task</span>
+      
+      
+        <span class='type'>(<tt>Orocos::TaskContext</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the task of the sink port</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>mappings</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the connections themselves</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    
+    
+    
+    
+    <p class="tag_title">Options Hash (<tt>mappings</tt>):</p>
+    <ul class="option">
+      
+        <li>
+          <span class="name">force_update</span>
+          <span class="type">(<tt>Boolean</tt>)</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>false</tt>
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>whether the method should raise if the connection tries to be updated with
+a new incompatible policy, or whether it should be updated</p>
+</div>
+          
+        </li>
+      
+    </ul>
+  
+
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Roby::ModelViolation</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>if the connection already exists with an incompatible policy</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/actual_data_flow_graph.rb', line 41</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_add_connections'>add_connections</span><span class='lparen'>(</span><span class='id identifier rubyid_source_task'>source_task</span><span class='comma'>,</span> <span class='id identifier rubyid_sink_task'>sink_task</span><span class='comma'>,</span> <span class='id identifier rubyid_mappings'>mappings</span><span class='rparen'>)</span> <span class='comment'># :nodoc:
+</span>    <span class='id identifier rubyid_force_update'>force_update</span> <span class='op'>=</span> <span class='id identifier rubyid_mappings'>mappings</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='symbol'>:force_update</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_mappings'>mappings</span> <span class='op'>=</span> <span class='id identifier rubyid_mappings'>mappings</span><span class='period'>.</span><span class='id identifier rubyid_map_value'>map_value</span> <span class='kw'>do</span> <span class='op'>|</span><span class='lparen'>(</span><span class='id identifier rubyid_source_port'>source_port</span><span class='comma'>,</span> <span class='id identifier rubyid_sink_port'>sink_port</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='id identifier rubyid_info'>info</span><span class='op'>|</span>
+        <span class='kw'>if</span> <span class='id identifier rubyid_info'>info</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span> <span class='op'>!=</span> <span class='int'>3</span>
+            <span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ActualDataFlowGraph#add_connections expects the mappings to be of the form (source_port,sink_port) =&gt; [policy, source_static, sink_static]</span><span class='tstring_end'>&quot;</span></span>
+        <span class='kw'>end</span>
+        <span class='id identifier rubyid_policy'>policy</span><span class='comma'>,</span> <span class='id identifier rubyid_source_static'>source_static</span><span class='comma'>,</span> <span class='id identifier rubyid_sink_static'>sink_static</span> <span class='op'>=</span> <span class='op'>*</span><span class='id identifier rubyid_info'>info</span>
+        <span class='id identifier rubyid_static_info'>static_info</span><span class='lbracket'>[</span><span class='lbracket'>[</span><span class='id identifier rubyid_source_task'>source_task</span><span class='comma'>,</span> <span class='id identifier rubyid_source_port'>source_port</span><span class='rbracket'>]</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_source_static'>source_static</span>
+        <span class='id identifier rubyid_static_info'>static_info</span><span class='lbracket'>[</span><span class='lbracket'>[</span><span class='id identifier rubyid_sink_task'>sink_task</span><span class='comma'>,</span> <span class='id identifier rubyid_sink_port'>sink_port</span><span class='rbracket'>]</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_sink_static'>sink_static</span>
+        <span class='id identifier rubyid_policy'>policy</span>
+    <span class='kw'>end</span>
+    <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_force_update'>force_update</span> <span class='op'>||</span> <span class='op'>!</span><span class='id identifier rubyid_has_edge?'>has_edge?</span><span class='lparen'>(</span><span class='id identifier rubyid_source_task'>source_task</span><span class='comma'>,</span> <span class='id identifier rubyid_sink_task'>sink_task</span><span class='rparen'>)</span>
+        <span class='kw'>super</span><span class='lparen'>(</span><span class='id identifier rubyid_source_task'>source_task</span><span class='comma'>,</span> <span class='id identifier rubyid_sink_task'>sink_task</span><span class='comma'>,</span> <span class='id identifier rubyid_mappings'>mappings</span><span class='rparen'>)</span>
+    <span class='kw'>else</span>
+        <span class='id identifier rubyid_set_edge_info'>set_edge_info</span><span class='lparen'>(</span><span class='id identifier rubyid_source_task'>source_task</span><span class='comma'>,</span> <span class='id identifier rubyid_sink_task'>sink_task</span><span class='comma'>,</span>
+                      <span class='id identifier rubyid_edge_info'>edge_info</span><span class='lparen'>(</span><span class='id identifier rubyid_source_task'>source_task</span><span class='comma'>,</span> <span class='id identifier rubyid_sink_task'>sink_task</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='id identifier rubyid_mappings'>mappings</span><span class='rparen'>)</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="static?-instance_method">
+  
+    #<strong>static?</strong>(task, port)  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Whether the given port is static (per <span class='object_link'><a href="Port.html#static%3F-instance_method" title="Syskit::Port#static? (method)">Port#static?</a></span></p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>task</span>
+      
+      
+        <span class='type'>(<tt>Orocos::TaskContext</tt>)</span>
+      
+      
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>port</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>ArgumentError</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>if the (task, port) pair is not registered</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+65
+66
+67
+68
+69</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/actual_data_flow_graph.rb', line 65</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_static?'>static?</span><span class='lparen'>(</span><span class='id identifier rubyid_task'>task</span><span class='comma'>,</span> <span class='id identifier rubyid_port'>port</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_static_info'>static_info</span><span class='period'>.</span><span class='id identifier rubyid_fetch'>fetch</span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='id identifier rubyid_task'>task</span><span class='comma'>,</span> <span class='id identifier rubyid_port'>port</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+<span class='kw'>rescue</span> <span class='const'>KeyError</span>
+    <span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>no port </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_port'>port</span><span class='embexpr_end'>}</span><span class='tstring_content'> on a task called </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_task'>task</span><span class='embexpr_end'>}</span><span class='tstring_content'> is registered on </span><span class='embexpr_beg'>#{</span><span class='kw'>self</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Wed Apr 10 21:56:22 2019 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.19 (ruby-2.5.1).
+</div>
+
+    </div>
+  </body>
+</html>

@@ -1,0 +1,5707 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: Syskit::RobyApp::Configuration
+  
+    &mdash; Documentation by YARD 0.9.19
+  
+</title>
+
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "Syskit::RobyApp::Configuration";
+  relpath = '../../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../../_index.html">Index (C)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../Syskit.html" title="Syskit (module)">Syskit</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../RobyApp.html" title="Syskit::RobyApp (module)">RobyApp</a></span></span>
+     &raquo; 
+    <span class="title">Configuration</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: Syskit::RobyApp::Configuration
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName"><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></span>
+      
+        <ul class="fullTree">
+          <li><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></li>
+          
+            <li class="next">Syskit::RobyApp::Configuration</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/syskit/roby_app/configuration.rb</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>Syskit engine configuration interface</p>
+
+<p>The main configuration instance is accessible as Syskit.conf or (if running
+in a Roby application) as Conf.syskit</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><h2>Defined Under Namespace</h2>
+<p class="children">
+  
+    
+  
+    
+      <strong class="classes">Classes:</strong> <span class='object_link'><a href="Configuration/AlreadyConnected.html" title="Syskit::RobyApp::Configuration::AlreadyConnected (class)">AlreadyConnected</a></span>, <span class='object_link'><a href="Configuration/LocalOnlyConfiguration.html" title="Syskit::RobyApp::Configuration::LocalOnlyConfiguration (class)">LocalOnlyConfiguration</a></span>, <span class='object_link'><a href="Configuration/ModelOnlyServer.html" title="Syskit::RobyApp::Configuration::ModelOnlyServer (class)">ModelOnlyServer</a></span>, <span class='object_link'><a href="Configuration/ProcessServerConfig.html" title="Syskit::RobyApp::Configuration::ProcessServerConfig (class)">ProcessServerConfig</a></span>, <span class='object_link'><a href="Configuration/UnknownProcessServer.html" title="Syskit::RobyApp::Configuration::UnknownProcessServer (class)">UnknownProcessServer</a></span>
+    
+  
+</p>
+
+
+
+
+  <h2>Instance Attribute Summary <small><a href="#" class="summary_toggle">collapse</a></small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#app-instance_method" title="#app (instance method)">#<strong>app</strong>  &#x21d2; Roby::Application </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>The application that we are configuring.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#buffer_size_margin-instance_method" title="#buffer_size_margin (instance method)">#<strong>buffer_size_margin</strong>  &#x21d2; Float </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Margin added to computed buffer sizes.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#deployment_group-instance_method" title="#deployment_group (instance method)">#<strong>deployment_group</strong>  &#x21d2; Models::DeploymentGroup </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>A global deployment group.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#logs-instance_method" title="#logs (instance method)">#<strong>logs</strong>  &#x21d2; LoggingConfiguration </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Data logging configuration.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#orocos-instance_method" title="#orocos (instance method)">#<strong>orocos</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Component configuration.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#prefix-instance_method" title="#prefix (instance method)">#<strong>prefix</strong>  &#x21d2; String<sup>?</sup> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>If set to a non-nil value, the deployment processes will be started with
+the given prefix.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#prefix_blacklist-instance_method" title="#prefix_blacklist (instance method)">#<strong>prefix_blacklist</strong>  &#x21d2; Array&lt;String,Regexp&gt; </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>A set of regular expressions that should match the names of the deployments
+that should not be prefixed even if <span class='object_link'><a href="#prefix-instance_method" title="Syskit::RobyApp::Configuration#prefix (method)">#prefix</a></span> is set.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#process_servers-instance_method" title="#process_servers (instance method)">#<strong>process_servers</strong>  &#x21d2; Hash&lt;String,ProcessServerConfig&gt; </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>The set of process servers registered so far.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#publish_white_list-instance_method" title="#publish_white_list (instance method)">#<strong>publish_white_list</strong>  &#x21d2; Array&lt;#===&gt; </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>If set, it is the list of deployments that should be published on DNS-SD.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#sd_domain-instance_method" title="#sd_domain (instance method)">#<strong>sd_domain</strong>  &#x21d2; String </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>If set, it is the service discovery domain in which the orocos processes
+should be published.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#sd_publish_list-instance_method" title="#sd_publish_list (instance method)">#<strong>sd_publish_list</strong>  &#x21d2; Array&lt;String,Regexp&gt; </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>A set of regular expressions that should match the names of the deployments
+that should be published on DNS-SD if <span class='object_link'><a href="#sd_domain-instance_method" title="Syskit::RobyApp::Configuration#sd_domain (method)">#sd_domain</a></span> is set.</p>
+</div></span>
+  
+</li>
+
+    
+  </ul>
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#clear-instance_method" title="#clear (instance method)">#<strong>clear</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Resets this Syskit configuration object.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#clear_deployments-instance_method" title="#clear_deployments (instance method)">#<strong>clear_deployments</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#connect_to_orocos_process_server-instance_method" title="#connect_to_orocos_process_server (instance method)">#<strong>connect_to_orocos_process_server</strong>(name, host, port: Orocos::RemoteProcesses::DEFAULT_PORT, log_dir: nil, result_dir: nil, host_id: nil)  &#x21d2; Orocos::ProcessClient, Orocos::Generation::Project </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Call to declare a new process server and add to the set of servers that can
+be used by this plan manager.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#create_subfield-instance_method" title="#create_subfield (instance method)">#<strong>create_subfield</strong>(name)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public deprecated">
+  <span class="summary_signature">
+    
+      <a href="#default_logging_buffer_size-instance_method" title="#default_logging_buffer_size (instance method)">#<strong>default_logging_buffer_size</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  <span class="deprecated note title">deprecated</span>
+  
+
+  
+    <span class="summary_desc"><strong>Deprecated.</strong> <div class='inline'>
+<p>access <span class='object_link'><a href="#logs-instance_method" title="Syskit::RobyApp::Configuration#logs (method)">#logs</a></span> for logging configuration</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public deprecated">
+  <span class="summary_signature">
+    
+      <a href="#default_logging_buffer_size=-instance_method" title="#default_logging_buffer_size= (instance method)">#<strong>default_logging_buffer_size=</strong>(size)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  <span class="deprecated note title">deprecated</span>
+  
+
+  
+    <span class="summary_desc"><strong>Deprecated.</strong> <div class='inline'>
+<p>access <span class='object_link'><a href="#logs-instance_method" title="Syskit::RobyApp::Configuration#logs (method)">#logs</a></span> for logging configuration</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#default_prefix-instance_method" title="#default_prefix (instance method)">#<strong>default_prefix</strong>(deployment_model)  &#x21d2; String<sup>?</sup> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the deployment prefix that should be used to start the given syskit
+deployment process.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#default_run_options-instance_method" title="#default_run_options (instance method)">#<strong>default_run_options</strong>(deployment_model)  &#x21d2; String=&gt;String </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the set of options that should be given to Process.spawn to start
+the given deployment model.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#default_sd_domain-instance_method" title="#default_sd_domain (instance method)">#<strong>default_sd_domain</strong>(deployment_model)  &#x21d2; String<sup>?</sup> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Sets up mDNS support for the syskit deployment processes.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#define_default_process_managers=-instance_method" title="#define_default_process_managers= (instance method)">#<strong>define_default_process_managers=</strong>(value)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Controls whether Syskit sets up its default process managers (localhost,
+ruby_tasks, unmanaged_tasks and ros), or leaves it to the app to set them
+up.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#define_default_process_managers%3F-instance_method" title="#define_default_process_managers? (instance method)">#<strong>define_default_process_managers?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Controls whether Syskit sets up its default process managers (localhost,
+ruby_tasks, unmanaged_tasks and ros), or leaves it to the app to set them
+up.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public deprecated">
+  <span class="summary_signature">
+    
+      <a href="#disable_conf_logging-instance_method" title="#disable_conf_logging (instance method)">#<strong>disable_conf_logging</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  <span class="deprecated note title">deprecated</span>
+  
+
+  
+    <span class="summary_desc"><strong>Deprecated.</strong> <div class='inline'>
+<p>access <span class='object_link'><a href="#logs-instance_method" title="Syskit::RobyApp::Configuration#logs (method)">#logs</a></span> for logging configuration</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public deprecated">
+  <span class="summary_signature">
+    
+      <a href="#disable_log_group-instance_method" title="#disable_log_group (instance method)">#<strong>disable_log_group</strong>(name)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  <span class="deprecated note title">deprecated</span>
+  
+
+  
+    <span class="summary_desc"><strong>Deprecated.</strong> <div class='inline'>
+<p>access <span class='object_link'><a href="#logs-instance_method" title="Syskit::RobyApp::Configuration#logs (method)">#logs</a></span> for logging configuration</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public deprecated">
+  <span class="summary_signature">
+    
+      <a href="#disable_logging-instance_method" title="#disable_logging (instance method)">#<strong>disable_logging</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  <span class="deprecated note title">deprecated</span>
+  
+
+  
+    <span class="summary_desc"><strong>Deprecated.</strong> <div class='inline'>
+<p>access <span class='object_link'><a href="#logs-instance_method" title="Syskit::RobyApp::Configuration#logs (method)">#logs</a></span> for logging configuration</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#disables_local_process_server=-instance_method" title="#disables_local_process_server= (instance method)">#<strong>disables_local_process_server=</strong>(flag)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Controls whether Syskit auto-starts a process server locally.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#disables_local_process_server%3F-instance_method" title="#disables_local_process_server? (instance method)">#<strong>disables_local_process_server?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Controls whether Syskit auto-starts a process server locally.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#each_process_server-instance_method" title="#each_process_server (instance method)">#<strong>each_process_server</strong> {|process_server| ... } &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Enumerates all available process servers.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#each_process_server_config-instance_method" title="#each_process_server_config (instance method)">#<strong>each_process_server_config</strong> {|process_server| ... } &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Enumerates the registration information for all known process servers.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public deprecated">
+  <span class="summary_signature">
+    
+      <a href="#enable_conf_logging-instance_method" title="#enable_conf_logging (instance method)">#<strong>enable_conf_logging</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  <span class="deprecated note title">deprecated</span>
+  
+
+  
+    <span class="summary_desc"><strong>Deprecated.</strong> <div class='inline'>
+<p>access <span class='object_link'><a href="#logs-instance_method" title="Syskit::RobyApp::Configuration#logs (method)">#logs</a></span> for logging configuration</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public deprecated">
+  <span class="summary_signature">
+    
+      <a href="#enable_log_group-instance_method" title="#enable_log_group (instance method)">#<strong>enable_log_group</strong>(name)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  <span class="deprecated note title">deprecated</span>
+  
+
+  
+    <span class="summary_desc"><strong>Deprecated.</strong> <div class='inline'>
+<p>access <span class='object_link'><a href="#logs-instance_method" title="Syskit::RobyApp::Configuration#logs (method)">#logs</a></span> for logging configuration</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public deprecated">
+  <span class="summary_signature">
+    
+      <a href="#enable_logging-instance_method" title="#enable_logging (instance method)">#<strong>enable_logging</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  <span class="deprecated note title">deprecated</span>
+  
+
+  
+    <span class="summary_desc"><strong>Deprecated.</strong> <div class='inline'>
+<p>access <span class='object_link'><a href="#logs-instance_method" title="Syskit::RobyApp::Configuration#logs (method)">#logs</a></span> for logging configuration</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#exclude_from_log-instance_method" title="#exclude_from_log (instance method)">#<strong>exclude_from_log</strong>(object, subname = nil)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Permanently exclude object from the logging system.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#export_types=-instance_method" title="#export_types= (instance method)">#<strong>export_types=</strong>(flag)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Controls whether the orogen types should be exported as Ruby constants.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#export_types%3F-instance_method" title="#export_types? (instance method)">#<strong>export_types?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Controls whether the orogen types should be exported as Ruby constants.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#has_process_server%3F-instance_method" title="#has_process_server? (instance method)">#<strong>has_process_server?</strong>(name)  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Tests whether there is a registered process server with that name.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#ignore_load_errors=-instance_method" title="#ignore_load_errors= (instance method)">#<strong>ignore_load_errors=</strong>(value)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>If true, files that raise an error will be ignored.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#ignore_load_errors%3F-instance_method" title="#ignore_load_errors? (instance method)">#<strong>ignore_load_errors?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>If true, files that raise an error will be ignored.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#ignore_missing_orogen_projects_during_load=-instance_method" title="#ignore_missing_orogen_projects_during_load= (instance method)">#<strong>ignore_missing_orogen_projects_during_load=</strong>(value)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>If true, files that raise an error during task library or type import will
+be ignored.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#ignore_missing_orogen_projects_during_load%3F-instance_method" title="#ignore_missing_orogen_projects_during_load? (instance method)">#<strong>ignore_missing_orogen_projects_during_load?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>If true, files that raise an error during task library or type import will
+be ignored.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(app)  &#x21d2; Configuration </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>A new instance of Configuration.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#load_component_extensions=-instance_method" title="#load_component_extensions= (instance method)">#<strong>load_component_extensions=</strong>(value)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>If true, we will load the component-specific code in tasks/orocos/.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#load_component_extensions%3F-instance_method" title="#load_component_extensions? (instance method)">#<strong>load_component_extensions?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>If true, we will load the component-specific code in tasks/orocos/.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#local_only=-instance_method" title="#local_only= (instance method)">#<strong>local_only=</strong>(value)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>True if this application should not try to contact other machines/servers.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#local_only%3F-instance_method" title="#local_only? (instance method)">#<strong>local_only?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>True if this application should not try to contact other machines/servers.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public deprecated">
+  <span class="summary_signature">
+    
+      <a href="#log_group-instance_method" title="#log_group (instance method)">#<strong>log_group</strong>(name, &amp;block)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  <span class="deprecated note title">deprecated</span>
+  
+
+  
+    <span class="summary_desc"><strong>Deprecated.</strong> <div class='inline'>
+<p>access <span class='object_link'><a href="#logs-instance_method" title="Syskit::RobyApp::Configuration#logs (method)">#logs</a></span> for logging configuration</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#only_load_models=-instance_method" title="#only_load_models= (instance method)">#<strong>only_load_models=</strong>(flag)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>In normal operations, the plugin initializes the CORBA layer, which takes
+some time.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#only_load_models%3F-instance_method" title="#only_load_models? (instance method)">#<strong>only_load_models?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#permanent_deployments=-instance_method" title="#permanent_deployments= (instance method)">#<strong>permanent_deployments=</strong>(value)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>If true (the default), deployments are markes as permanent, i.e.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#permanent_deployments%3F-instance_method" title="#permanent_deployments? (instance method)">#<strong>permanent_deployments?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>If true (the default), deployments are markes as permanent, i.e.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#prefixing%3F-instance_method" title="#prefixing? (instance method)">#<strong>prefixing?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>True if deployments are going to be started with a prefix.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public deprecated">
+  <span class="summary_signature">
+    
+      <a href="#process_server-instance_method" title="#process_server (instance method)">#<strong>process_server</strong>(*args)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  <span class="deprecated note title">deprecated</span>
+  
+
+  
+    <span class="summary_desc"><strong>Deprecated.</strong> <div class='inline'>
+<p>use <span class='object_link'><a href="#connect_to_orocos_process_server-instance_method" title="Syskit::RobyApp::Configuration#connect_to_orocos_process_server (method)">#connect_to_orocos_process_server</a></span> instead</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#process_server_config_for-instance_method" title="#process_server_config_for (instance method)">#<strong>process_server_config_for</strong>(name)  &#x21d2; ProcessServerConfig </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the process server object named <code>name</code>.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#process_server_for-instance_method" title="#process_server_for (instance method)">#<strong>process_server_for</strong>(name)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the process server object named <code>name</code>.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#redirect_local_process_server=-instance_method" title="#redirect_local_process_server= (instance method)">#<strong>redirect_local_process_server=</strong>(value)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>If true, the output of the local process server will be saved in
+log_dir/local_process_server.txt.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#redirect_local_process_server%3F-instance_method" title="#redirect_local_process_server? (instance method)">#<strong>redirect_local_process_server?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>If true, the output of the local process server will be saved in
+log_dir/local_process_server.txt.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#register_configured_deployment-instance_method" title="#register_configured_deployment (instance method)">#<strong>register_configured_deployment</strong>(configured_deployment)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#register_process_server-instance_method" title="#register_process_server (instance method)">#<strong>register_process_server</strong>(name, client, log_dir = nil, host_id: name)  &#x21d2; ProcessServerConfig </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Make a process server available to syskit.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#reject_ambiguous_deployments=-instance_method" title="#reject_ambiguous_deployments= (instance method)">#<strong>reject_ambiguous_deployments=</strong>(value)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>If multiple deployments are available for a task, and this task is not a
+device driver, the resolution engine will randomly pick one if this flag is
+set to false.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#reject_ambiguous_deployments%3F-instance_method" title="#reject_ambiguous_deployments? (instance method)">#<strong>reject_ambiguous_deployments?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>If multiple deployments are available for a task, and this task is not a
+device driver, the resolution engine will randomly pick one if this flag is
+set to false.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#remove_process_server-instance_method" title="#remove_process_server (instance method)">#<strong>remove_process_server</strong>(name)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Deregisters a process server.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public deprecated">
+  <span class="summary_signature">
+    
+      <a href="#sim_process_server-instance_method" title="#sim_process_server (instance method)">#<strong>sim_process_server</strong>(name)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  <span class="deprecated note title">deprecated</span>
+  
+
+  
+    <span class="summary_desc"><strong>Deprecated.</strong> <div class='inline'>
+<p>use <span class='object_link'><a href="#sim_process_server_config_for-instance_method" title="Syskit::RobyApp::Configuration#sim_process_server_config_for (method)">#sim_process_server_config_for</a></span> instead for consistency with
+<span class='object_link'><a href="#process_server_config_for-instance_method" title="Syskit::RobyApp::Configuration#process_server_config_for (method)">#process_server_config_for</a></span></p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#sim_process_server_config_for-instance_method" title="#sim_process_server_config_for (instance method)">#<strong>sim_process_server_config_for</strong>(name)  &#x21d2; ProcessServerConfig </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Ensures that a ruby process server is present with the given name.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#use_deployment-instance_method" title="#use_deployment (instance method)">#<strong>use_deployment</strong>(*names, on: &#39;localhost&#39;, **run_options)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#use_deployments_from-instance_method" title="#use_deployments_from (instance method)">#<strong>use_deployments_from</strong>(*names, on: &#39;localhost&#39;, **run_options)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#use_only_model_pack=-instance_method" title="#use_only_model_pack= (instance method)">#<strong>use_only_model_pack=</strong>(value)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Controls whether models from the installed components should be used or
+not.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#use_only_model_pack%3F-instance_method" title="#use_only_model_pack? (instance method)">#<strong>use_only_model_pack?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Controls whether models from the installed components should be used or
+not.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#use_ruby_tasks-instance_method" title="#use_ruby_tasks (instance method)">#<strong>use_ruby_tasks</strong>(mappings, on: &#39;ruby_tasks&#39;, remote_task: false)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#use_unmanaged_task-instance_method" title="#use_unmanaged_task (instance method)">#<strong>use_unmanaged_task</strong>(mappings, on: &#39;unmanaged_tasks&#39;)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    #<strong>initialize</strong>(app)  &#x21d2; <tt><span class='object_link'><a href="" title="Syskit::RobyApp::Configuration (class)">Configuration</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns a new instance of Configuration</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/roby_app/configuration.rb', line 68</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_app'>app</span><span class='rparen'>)</span>
+    <span class='kw'>super</span><span class='lparen'>(</span><span class='rparen'>)</span>
+
+    <span class='ivar'>@app</span> <span class='op'>=</span> <span class='id identifier rubyid_app'>app</span>
+    <span class='ivar'>@process_servers</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+    <span class='ivar'>@load_component_extensions</span> <span class='op'>=</span> <span class='kw'>true</span>
+    <span class='ivar'>@redirect_local_process_server</span> <span class='op'>=</span> <span class='kw'>true</span>
+    <span class='ivar'>@reject_ambiguous_deployments</span> <span class='op'>=</span> <span class='kw'>true</span>
+    <span class='ivar'>@only_load_models</span> <span class='op'>=</span> <span class='kw'>nil</span>
+    <span class='ivar'>@disables_local_process_server</span> <span class='op'>=</span> <span class='kw'>false</span>
+    <span class='ivar'>@define_default_process_managers</span> <span class='op'>=</span> <span class='kw'>true</span>
+    <span class='ivar'>@local_only</span> <span class='op'>=</span> <span class='kw'>false</span>
+    <span class='ivar'>@permanent_deployments</span> <span class='op'>=</span> <span class='kw'>true</span>
+    <span class='ivar'>@prefix_blacklist</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+    <span class='ivar'>@sd_publish_list</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+    <span class='ivar'>@ignore_missing_orogen_projects_during_load</span> <span class='op'>=</span> <span class='kw'>false</span>
+    <span class='ivar'>@ignore_load_errors</span> <span class='op'>=</span> <span class='kw'>false</span>
+    <span class='ivar'>@buffer_size_margin</span> <span class='op'>=</span> <span class='float'>0.1</span>
+    <span class='ivar'>@use_only_model_pack</span> <span class='op'>=</span> <span class='kw'>false</span>
+    <span class='id identifier rubyid_clear'>clear</span>
+
+    <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_export_types'>export_types</span> <span class='op'>=</span> <span class='kw'>true</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id=""></span>
+      <div class="method_details first">
+  <h3 class="signature first" id="app-instance_method">
+  
+    #<strong>app</strong>  &#x21d2; <tt>Roby::Application</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>The application that we are configuring</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Roby::Application</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+12
+13
+14</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/roby_app/configuration.rb', line 12</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_app'>app</span>
+  <span class='ivar'>@app</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="buffer_size_margin-instance_method">
+  
+    #<strong>buffer_size_margin</strong>  &#x21d2; <tt>Float</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Margin added to computed buffer sizes</p>
+
+<p>The final buffer size is computed_size * margin rounded upwards. The
+default is 10% (0.1)</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Float</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+296
+297
+298</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/roby_app/configuration.rb', line 296</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_buffer_size_margin'>buffer_size_margin</span>
+  <span class='ivar'>@buffer_size_margin</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="deployment_group-instance_method">
+  
+    #<strong>deployment_group</strong>  &#x21d2; <tt><span class='object_link'><a href="../Models/DeploymentGroup.html" title="Syskit::Models::DeploymentGroup (class)">Models::DeploymentGroup</a></span></tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>A global deployment group</p>
+
+<p>This exists for backward-compatibility reasons, to ease the transition to
+the deployment API, as opposed to the older name-based deployment
+management</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../Models/DeploymentGroup.html" title="Syskit::Models::DeploymentGroup (class)">Models::DeploymentGroup</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+57
+58
+59</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/roby_app/configuration.rb', line 57</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_deployment_group'>deployment_group</span>
+  <span class='ivar'>@deployment_group</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="logs-instance_method">
+  
+    #<strong>logs</strong>  &#x21d2; <tt><span class='object_link'><a href="LoggingConfiguration.html" title="Syskit::RobyApp::LoggingConfiguration (class)">LoggingConfiguration</a></span></tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Data logging configuration</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="LoggingConfiguration.html" title="Syskit::RobyApp::LoggingConfiguration (class)">LoggingConfiguration</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+40
+41
+42</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/roby_app/configuration.rb', line 40</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_logs'>logs</span>
+  <span class='ivar'>@logs</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="orocos-instance_method">
+  
+    #<strong>orocos</strong>  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Component configuration</p>
+
+<p>This returns an OpenStruct object in which component-specific configuration
+can be stored. Each component will in <span class='object_link'><a href="../TaskContext.html#configure-instance_method" title="Syskit::TaskContext#configure (method)">TaskContext#configure</a></span> look for a
+value named as its deployed task name and apply configuration stored there
+(if there is any)</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+48
+49
+50</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/roby_app/configuration.rb', line 48</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_orocos'>orocos</span>
+  <span class='ivar'>@orocos</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="prefix=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="prefix-instance_method">
+  
+    #<strong>prefix</strong>  &#x21d2; <tt>String</tt><sup>?</sup> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>If set to a non-nil value, the deployment processes will be started with
+the given prefix</p>
+
+<p>It is set from the syskit.prefix configuration variable in app.yml</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>, <tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+254
+255
+256</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/roby_app/configuration.rb', line 254</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_prefix'>prefix</span>
+  <span class='ivar'>@prefix</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="prefix_blacklist-instance_method">
+  
+    #<strong>prefix_blacklist</strong>  &#x21d2; <tt>Array&lt;String,Regexp&gt;</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>A set of regular expressions that should match the names of the deployments
+that should not be prefixed even if <span class='object_link'><a href="#prefix-instance_method" title="Syskit::RobyApp::Configuration#prefix (method)">#prefix</a></span> is set</p>
+
+<p>It is set from the syskit.prefix_blacklist configuration variable in
+app.yml</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array&lt;String,Regexp&gt;</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+265
+266
+267</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/roby_app/configuration.rb', line 265</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_prefix_blacklist'>prefix_blacklist</span>
+  <span class='ivar'>@prefix_blacklist</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="process_servers-instance_method">
+  
+    #<strong>process_servers</strong>  &#x21d2; <tt>Hash&lt;String,<span class='object_link'><a href="Configuration/ProcessServerConfig.html" title="Syskit::RobyApp::Configuration::ProcessServerConfig (class)">ProcessServerConfig</a></span>&gt;</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>The set of process servers registered so far</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Hash&lt;String,<span class='object_link'><a href="Configuration/ProcessServerConfig.html" title="Syskit::RobyApp::Configuration::ProcessServerConfig (class)">ProcessServerConfig</a></span>&gt;</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+29
+30
+31</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/roby_app/configuration.rb', line 29</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_process_servers'>process_servers</span>
+  <span class='ivar'>@process_servers</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="publish_white_list=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="publish_white_list-instance_method">
+  
+    #<strong>publish_white_list</strong>  &#x21d2; <tt>Array&lt;#===&gt;</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>If set, it is the list of deployments that should be published on DNS-SD.
+It has no effect if <span class='object_link'><a href="#sd_domain-instance_method" title="Syskit::RobyApp::Configuration#sd_domain (method)">#sd_domain</a></span> is not set.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array&lt;#===&gt;</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+279
+280
+281</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/roby_app/configuration.rb', line 279</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_publish_white_list'>publish_white_list</span>
+  <span class='ivar'>@publish_white_list</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="sd_domain=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="sd_domain-instance_method">
+  
+    #<strong>sd_domain</strong>  &#x21d2; <tt>String</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>If set, it is the service discovery domain in which the orocos processes
+should be published</p>
+
+<p>It is set from the syskit.sd_domain configuration variable in app.yml</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+273
+274
+275</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/roby_app/configuration.rb', line 273</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_sd_domain'>sd_domain</span>
+  <span class='ivar'>@sd_domain</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="sd_publish_list-instance_method">
+  
+    #<strong>sd_publish_list</strong>  &#x21d2; <tt>Array&lt;String,Regexp&gt;</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>A set of regular expressions that should match the names of the deployments
+that should be published on DNS-SD if <span class='object_link'><a href="#sd_domain-instance_method" title="Syskit::RobyApp::Configuration#sd_domain (method)">#sd_domain</a></span> is set</p>
+
+<p>It is set from the syskit.sd_publish_list configuration variable in app.yml</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array&lt;String,Regexp&gt;</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+288
+289
+290</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/roby_app/configuration.rb', line 288</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_sd_publish_list'>sd_publish_list</span>
+  <span class='ivar'>@sd_publish_list</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="clear-instance_method">
+  
+    #<strong>clear</strong>  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Resets this Syskit configuration object</p>
+
+<p>Note that it is called by <span class='object_link'><a href="#initialize-instance_method" title="Syskit::RobyApp::Configuration#initialize (method)">#initialize</a></span></p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+99
+100
+101
+102
+103</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/roby_app/configuration.rb', line 99</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_clear'>clear</span>
+    <span class='ivar'>@deployment_group</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Models.html" title="Syskit::Models (module)">Models</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Models/DeploymentGroup.html" title="Syskit::Models::DeploymentGroup (class)">DeploymentGroup</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../Models/DeploymentGroup.html#initialize-instance_method" title="Syskit::Models::DeploymentGroup#initialize (method)">new</a></span></span>
+    <span class='ivar'>@logs</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="LoggingConfiguration.html" title="Syskit::RobyApp::LoggingConfiguration (class)">LoggingConfiguration</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="LoggingConfiguration.html#initialize-instance_method" title="Syskit::RobyApp::LoggingConfiguration#initialize (method)">new</a></span></span>
+    <span class='ivar'>@orocos</span> <span class='op'>=</span> <span class='const'>Roby</span><span class='op'>::</span><span class='const'>OpenStruct</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="clear_deployments-instance_method">
+  
+    #<strong>clear_deployments</strong>  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+547
+548
+549
+550</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/roby_app/configuration.rb', line 547</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_clear_deployments'>clear_deployments</span>
+    <span class='comment'>#Roby.warn_deprecated &quot;conf.clear_deployments is deprecated, use the profile-level deployment API&quot;
+</span>    <span class='ivar'>@deployment_group</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Models.html" title="Syskit::Models (module)">Models</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Models/DeploymentGroup.html" title="Syskit::Models::DeploymentGroup (class)">DeploymentGroup</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../Models/DeploymentGroup.html#initialize-instance_method" title="Syskit::Models::DeploymentGroup#initialize (method)">new</a></span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="connect_to_orocos_process_server-instance_method">
+  
+    #<strong>connect_to_orocos_process_server</strong>(name, host, port: Orocos::RemoteProcesses::DEFAULT_PORT, log_dir: nil, result_dir: nil, host_id: nil)  &#x21d2; <tt>Orocos::ProcessClient</tt>, <tt>Orocos::Generation::Project</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Call to declare a new process server and add to the set of servers that can
+be used by this plan manager</p>
+
+<p>If &#39;host&#39; is set to localhost, it disables the automatic startup of
+the local process server (i.e. sets orocos_disables_local_process_server to
+true)</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Orocos::ProcessClient</tt>, <tt>Orocos::Generation::Project</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Configuration/LocalOnlyConfiguration.html" title="Syskit::RobyApp::Configuration::LocalOnlyConfiguration (class)">LocalOnlyConfiguration</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>if host is not &#39;localhost&#39; and <span class='object_link'><a href="#local_only%3F-instance_method" title="Syskit::RobyApp::Configuration#local_only? (method)">#local_only?</a></span> is set</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Configuration/AlreadyConnected.html" title="Syskit::RobyApp::Configuration::AlreadyConnected (class)">AlreadyConnected</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>if there is already a process server registered with that name</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+461
+462
+463
+464
+465
+466
+467
+468
+469
+470
+471
+472
+473
+474
+475
+476
+477
+478
+479
+480
+481
+482
+483
+484
+485
+486
+487
+488
+489
+490
+491
+492
+493
+494
+495
+496
+497
+498
+499
+500</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/roby_app/configuration.rb', line 461</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_connect_to_orocos_process_server'>connect_to_orocos_process_server</span><span class='lparen'>(</span>
+    <span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_host'>host</span><span class='comma'>,</span> <span class='label'>port:</span> <span class='const'>Orocos</span><span class='op'>::</span><span class='const'>RemoteProcesses</span><span class='op'>::</span><span class='const'>DEFAULT_PORT</span><span class='comma'>,</span>
+    <span class='label'>log_dir:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>result_dir:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>host_id:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+
+    <span class='kw'>if</span> <span class='id identifier rubyid_log_dir'>log_dir</span> <span class='op'>||</span> <span class='id identifier rubyid_result_dir'>result_dir</span>
+        <span class='const'><span class='object_link'><a href="../../Syskit.html" title="Syskit (module)">Syskit</a></span></span><span class='period'>.</span><span class='id identifier rubyid_warn'>warn</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>specifying log and/or result dir for remote process servers is deprecated. Use &#39;syskit process_server&#39; instead of &#39;orocos_process_server&#39; which will take the log dir information from the environment/configuration</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>end</span>
+
+    <span class='kw'>if</span> <span class='id identifier rubyid_only_load_models?'>only_load_models?</span> <span class='op'>||</span> <span class='lparen'>(</span><span class='id identifier rubyid_app'>app</span><span class='period'>.</span><span class='id identifier rubyid_simulation?'>simulation?</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_app'>app</span><span class='period'>.</span><span class='id identifier rubyid_single?'>single?</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_client'>client</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Configuration/ModelOnlyServer.html" title="Syskit::RobyApp::Configuration::ModelOnlyServer (class)">ModelOnlyServer</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="#initialize-instance_method" title="Syskit::RobyApp::Configuration#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_app'>app</span><span class='period'>.</span><span class='id identifier rubyid_default_loader'>default_loader</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_register_process_server'>register_process_server</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_client'>client</span><span class='comma'>,</span> <span class='id identifier rubyid_app'>app</span><span class='period'>.</span><span class='id identifier rubyid_log_dir'>log_dir</span><span class='comma'>,</span> <span class='label'>host_id:</span> <span class='id identifier rubyid_host_id'>host_id</span> <span class='op'>||</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>syskit</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+        <span class='kw'>return</span> <span class='id identifier rubyid_client'>client</span>
+    <span class='kw'>elsif</span> <span class='id identifier rubyid_app'>app</span><span class='period'>.</span><span class='id identifier rubyid_single?'>single?</span>
+        <span class='id identifier rubyid_client'>client</span> <span class='op'>=</span> <span class='const'>Orocos</span><span class='op'>::</span><span class='const'>RemoteProcesses</span><span class='op'>::</span><span class='const'>Client</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span>
+            <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>localhost</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_port'>port</span><span class='comma'>,</span> <span class='label'>root_loader:</span> <span class='id identifier rubyid_app'>app</span><span class='period'>.</span><span class='id identifier rubyid_default_loader'>default_loader</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_register_process_server'>register_process_server</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_client'>client</span><span class='comma'>,</span> <span class='id identifier rubyid_app'>app</span><span class='period'>.</span><span class='id identifier rubyid_log_dir'>log_dir</span><span class='comma'>,</span> <span class='label'>host_id:</span> <span class='id identifier rubyid_host_id'>host_id</span> <span class='op'>||</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>localhost</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+        <span class='kw'>return</span> <span class='id identifier rubyid_client'>client</span>
+    <span class='kw'>end</span>
+
+    <span class='kw'>if</span> <span class='id identifier rubyid_local_only?'><span class='object_link'><a href="Plugin.html#local_only%3F-instance_method" title="Syskit::RobyApp::Plugin#local_only? (method)">local_only?</a></span></span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_host'>host</span> <span class='op'>!=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>localhost</span><span class='tstring_end'>&#39;</span></span>
+        <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="Configuration/LocalOnlyConfiguration.html" title="Syskit::RobyApp::Configuration::LocalOnlyConfiguration (class)">LocalOnlyConfiguration</a></span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>in local only mode, one can only connect to process servers on &#39;localhost&#39; (got </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_host'>host</span><span class='embexpr_end'>}</span><span class='tstring_content'>)</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>elsif</span> <span class='id identifier rubyid_process_servers'>process_servers</span><span class='lbracket'>[</span><span class='id identifier rubyid_name'>name</span><span class='rbracket'>]</span>
+        <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="Configuration/AlreadyConnected.html" title="Syskit::RobyApp::Configuration::AlreadyConnected (class)">AlreadyConnected</a></span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>we are already connected to a process server called </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>end</span>
+
+    <span class='kw'>if</span> <span class='id identifier rubyid_host'>host</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^(.*):(\d+)$</span><span class='regexp_end'>/</span></span>
+        <span class='id identifier rubyid_host'>host</span> <span class='op'>=</span> <span class='backref'>$1</span>
+        <span class='id identifier rubyid_port'>port</span> <span class='op'>=</span> <span class='const'>Integer</span><span class='lparen'>(</span><span class='backref'>$2</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+
+    <span class='kw'>if</span> <span class='id identifier rubyid_host'>host</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>localhost</span><span class='tstring_end'>&#39;</span></span>
+        <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_disables_local_process_server'>disables_local_process_server</span> <span class='op'>=</span> <span class='kw'>true</span>
+    <span class='kw'>end</span>
+
+    <span class='id identifier rubyid_client'>client</span> <span class='op'>=</span> <span class='const'>Orocos</span><span class='op'>::</span><span class='const'>RemoteProcesses</span><span class='op'>::</span><span class='const'>Client</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span>
+        <span class='id identifier rubyid_host'>host</span><span class='comma'>,</span> <span class='id identifier rubyid_port'>port</span><span class='comma'>,</span> <span class='label'>root_loader:</span> <span class='id identifier rubyid_app'>app</span><span class='period'>.</span><span class='id identifier rubyid_default_loader'>default_loader</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_client'>client</span><span class='period'>.</span><span class='id identifier rubyid_create_log_dir'>create_log_dir</span><span class='lparen'>(</span><span class='id identifier rubyid_log_dir'>log_dir</span><span class='comma'>,</span> <span class='const'>Roby</span><span class='period'>.</span><span class='id identifier rubyid_app'>app</span><span class='period'>.</span><span class='id identifier rubyid_time_tag'>time_tag</span><span class='comma'>,</span> <span class='const'>Hash</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>parent</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='const'>Roby</span><span class='period'>.</span><span class='id identifier rubyid_app'>app</span><span class='period'>.</span><span class='id identifier rubyid_app_metadata'>app_metadata</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_register_process_server'>register_process_server</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_client'>client</span><span class='comma'>,</span> <span class='id identifier rubyid_log_dir'>log_dir</span><span class='comma'>,</span> <span class='label'>host_id:</span> <span class='id identifier rubyid_host_id'>host_id</span> <span class='op'>||</span> <span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_client'>client</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="create_subfield-instance_method">
+  
+    #<strong>create_subfield</strong>(name)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+92
+93
+94</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/roby_app/configuration.rb', line 92</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_create_subfield'>create_subfield</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
+    <span class='const'>Roby</span><span class='op'>::</span><span class='const'>OpenStruct</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_model'>model</span><span class='comma'>,</span> <span class='kw'>self</span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="default_logging_buffer_size-instance_method">
+  
+    #<strong>default_logging_buffer_size</strong>  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <div class="note deprecated"><strong>Deprecated.</strong> <div class='inline'>
+<p>access <span class='object_link'><a href="#logs-instance_method" title="Syskit::RobyApp::Configuration#logs (method)">#logs</a></span> for logging configuration</p>
+</div></div>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+124
+125
+126
+127</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/roby_app/configuration.rb', line 124</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_default_logging_buffer_size'>default_logging_buffer_size</span>
+    <span class='const'>Roby</span><span class='period'>.</span><span class='id identifier rubyid_warn_deprecated'>warn_deprecated</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>logging configuration has been moved to Syskit.conf.logs (of type LoggingConfiguration)</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid_logs'>logs</span><span class='period'>.</span><span class='id identifier rubyid_default_logging_buffer_size'>default_logging_buffer_size</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="default_logging_buffer_size=-instance_method">
+  
+    #<strong>default_logging_buffer_size=</strong>(size)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <div class="note deprecated"><strong>Deprecated.</strong> <div class='inline'>
+<p>access <span class='object_link'><a href="#logs-instance_method" title="Syskit::RobyApp::Configuration#logs (method)">#logs</a></span> for logging configuration</p>
+</div></div>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+130
+131
+132
+133</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/roby_app/configuration.rb', line 130</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_default_logging_buffer_size='>default_logging_buffer_size=</span><span class='lparen'>(</span><span class='id identifier rubyid_size'>size</span><span class='rparen'>)</span>
+    <span class='const'>Roby</span><span class='period'>.</span><span class='id identifier rubyid_warn_deprecated'>warn_deprecated</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>logging configuration has been moved to Syskit.conf.logs (of type LoggingConfiguration)</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid_logs'>logs</span><span class='period'>.</span><span class='id identifier rubyid_default_logging_buffer_size'>default_logging_buffer_size</span><span class='op'>=</span><span class='id identifier rubyid_size'>size</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="default_prefix-instance_method">
+  
+    #<strong>default_prefix</strong>(deployment_model)  &#x21d2; <tt>String</tt><sup>?</sup> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the deployment prefix that should be used to start the given syskit
+deployment process</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>, <tt>nil</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the prefix that should be used when starting this deployment, or nil if
+there should be none</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+344
+345
+346
+347
+348
+349
+350
+351
+352
+353
+354</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/roby_app/configuration.rb', line 344</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_default_prefix'>default_prefix</span><span class='lparen'>(</span><span class='id identifier rubyid_deployment_model'>deployment_model</span><span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_prefix'>prefix</span>
+    <span class='id identifier rubyid_deployment_name'>deployment_name</span> <span class='op'>=</span> <span class='id identifier rubyid_deployment_model'>deployment_model</span><span class='period'>.</span><span class='id identifier rubyid_deployment_name'>deployment_name</span>
+
+    <span class='id identifier rubyid_exclude'>exclude</span> <span class='op'>=</span> <span class='id identifier rubyid_prefix_blacklist'>prefix_blacklist</span><span class='period'>.</span><span class='id identifier rubyid_any?'>any?</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_pattern'>pattern</span><span class='op'>|</span>
+        <span class='id identifier rubyid_pattern'>pattern</span> <span class='op'>===</span> <span class='id identifier rubyid_deployment_name'>deployment_name</span>
+    <span class='kw'>end</span>
+    <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_exclude'>exclude</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_prefix'>prefix</span><span class='embexpr_end'>}</span><span class='tstring_content'>_</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="default_run_options-instance_method">
+  
+    #<strong>default_run_options</strong>(deployment_model)  &#x21d2; <tt>String=&gt;String</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the set of options that should be given to Process.spawn to start
+the given deployment model</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String=&gt;String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the set of default options that should be used when starting the given
+deployment</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+328
+329
+330
+331
+332
+333
+334
+335
+336
+337</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/roby_app/configuration.rb', line 328</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_default_run_options'>default_run_options</span><span class='lparen'>(</span><span class='id identifier rubyid_deployment_model'>deployment_model</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_prefix'>prefix</span> <span class='op'>=</span> <span class='id identifier rubyid_default_prefix'>default_prefix</span><span class='lparen'>(</span><span class='id identifier rubyid_deployment_model'>deployment_model</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_result'>result</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>prefix</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_prefix'>prefix</span>
+    <span class='kw'>end</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_sd_domain'>sd_domain</span> <span class='op'>=</span> <span class='id identifier rubyid_default_sd_domain'>default_sd_domain</span><span class='lparen'>(</span><span class='id identifier rubyid_deployment_model'>deployment_model</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_result'>result</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sd-domain</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_sd_domain'>sd_domain</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_result'>result</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="default_sd_domain-instance_method">
+  
+    #<strong>default_sd_domain</strong>(deployment_model)  &#x21d2; <tt>String</tt><sup>?</sup> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Sets up mDNS support for the syskit deployment processes</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>, <tt>nil</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the SD domain on which this deployment should be published, or nil if none</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+360
+361
+362
+363
+364
+365
+366
+367
+368
+369
+370</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/roby_app/configuration.rb', line 360</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_default_sd_domain'>default_sd_domain</span><span class='lparen'>(</span><span class='id identifier rubyid_deployment_model'>deployment_model</span><span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_sd_domain'>sd_domain</span>
+    <span class='id identifier rubyid_deployment_name'>deployment_name</span> <span class='op'>=</span> <span class='id identifier rubyid_deployment_model'>deployment_model</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span>
+
+    <span class='id identifier rubyid_publish'>publish</span> <span class='op'>=</span> <span class='id identifier rubyid_publish_white_list'>publish_white_list</span><span class='period'>.</span><span class='id identifier rubyid_any?'>any?</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_pattern'>pattern</span><span class='op'>|</span>
+        <span class='id identifier rubyid_pattern'>pattern</span> <span class='op'>===</span> <span class='id identifier rubyid_deployment_name'>deployment_name</span>
+    <span class='kw'>end</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_publish'>publish</span>
+        <span class='id identifier rubyid_sd_domain'>sd_domain</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="define_default_process_managers=-instance_method">
+  
+    #<strong>define_default_process_managers=</strong>(value)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Controls whether Syskit sets up its default process managers (localhost,
+ruby_tasks, unmanaged_tasks and ros), or leaves it to the app to set them
+up</p>
+
+<p>This is internally used during tests</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li>define_default_process_managers</li>
+    
+      <li><span class='object_link'><a href="#define_default_process_managers%3F-instance_method" title="Syskit::RobyApp::Configuration#define_default_process_managers? (method)">#define_default_process_managers?</a></span></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+119
+120
+121</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/roby_app/configuration.rb', line 119</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_define_default_process_managers='>define_default_process_managers=</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span>
+    <span class='ivar'>@define_default_process_managers</span> <span class='op'>=</span> <span class='id identifier rubyid_value'>value</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="define_default_process_managers?-instance_method">
+  
+    #<strong>define_default_process_managers?</strong>  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Controls whether Syskit sets up its default process managers (localhost,
+ruby_tasks, unmanaged_tasks and ros), or leaves it to the app to set them
+up</p>
+
+<p>This is internally used during tests</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li>define_default_process_managers</li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+112
+113
+114</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/roby_app/configuration.rb', line 112</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_define_default_process_managers?'>define_default_process_managers?</span>
+    <span class='ivar'>@define_default_process_managers</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="disable_conf_logging-instance_method">
+  
+    #<strong>disable_conf_logging</strong>  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <div class="note deprecated"><strong>Deprecated.</strong> <div class='inline'>
+<p>access <span class='object_link'><a href="#logs-instance_method" title="Syskit::RobyApp::Configuration#logs (method)">#logs</a></span> for logging configuration</p>
+</div></div>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+192
+193
+194
+195</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/roby_app/configuration.rb', line 192</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_disable_conf_logging'>disable_conf_logging</span>
+    <span class='const'>Roby</span><span class='period'>.</span><span class='id identifier rubyid_warn_deprecated'>warn_deprecated</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>logging configuration has been moved to Syskit.conf.logs (of type LoggingConfiguration)</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid_logs'>logs</span><span class='period'>.</span><span class='id identifier rubyid_disable_conf_logging'>disable_conf_logging</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="disable_log_group-instance_method">
+  
+    #<strong>disable_log_group</strong>(name)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <div class="note deprecated"><strong>Deprecated.</strong> <div class='inline'>
+<p>access <span class='object_link'><a href="#logs-instance_method" title="Syskit::RobyApp::Configuration#logs (method)">#logs</a></span> for logging configuration</p>
+</div></div>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+165
+166
+167
+168</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/roby_app/configuration.rb', line 165</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_disable_log_group'>disable_log_group</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
+    <span class='const'>Roby</span><span class='period'>.</span><span class='id identifier rubyid_warn_deprecated'>warn_deprecated</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>logging configuration has been moved to Syskit.conf.logs (of type LoggingConfiguration)</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid_logs'>logs</span><span class='period'>.</span><span class='id identifier rubyid_disable_group'>disable_group</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="disable_logging-instance_method">
+  
+    #<strong>disable_logging</strong>  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <div class="note deprecated"><strong>Deprecated.</strong> <div class='inline'>
+<p>access <span class='object_link'><a href="#logs-instance_method" title="Syskit::RobyApp::Configuration#logs (method)">#logs</a></span> for logging configuration</p>
+</div></div>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+180
+181
+182
+183</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/roby_app/configuration.rb', line 180</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_disable_logging'>disable_logging</span>
+    <span class='const'>Roby</span><span class='period'>.</span><span class='id identifier rubyid_warn_deprecated'>warn_deprecated</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>logging configuration has been moved to Syskit.conf.logs (of type LoggingConfiguration)</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid_logs'>logs</span><span class='period'>.</span><span class='id identifier rubyid_disable_port_logging'>disable_port_logging</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="disables_local_process_server=-instance_method">
+  
+    #<strong>disables_local_process_server=</strong>(flag)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Controls whether Syskit auto-starts a process server locally</p>
+
+<p>In normal operations, a local proces server called &#39;localhost&#39; is
+automatically started on the local machine. If this predicate is set to
+true, with Syskit.conf.disables_local_process_server = true, this server
+won&#39;t be started.</p>
+
+<p>Disable this when the local process server is managed by other means, or
+when the machine that runs the Syskit instance is not the machine that runs
+the components</p>
+
+<p>The local process server won&#39;t be started if
+<span class='object_link'><a href="#define_default_process_managers%3F-instance_method" title="Syskit::RobyApp::Configuration#define_default_process_managers? (method)">#define_default_process_managers?</a></span> is explicitely set to false</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+244
+245
+246</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/roby_app/configuration.rb', line 244</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_disables_local_process_server='>disables_local_process_server=</span><span class='lparen'>(</span><span class='id identifier rubyid_flag'>flag</span><span class='rparen'>)</span>
+    <span class='ivar'>@disables_local_process_server</span> <span class='op'>=</span> <span class='id identifier rubyid_flag'>flag</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="disables_local_process_server?-instance_method">
+  
+    #<strong>disables_local_process_server?</strong>  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Controls whether Syskit auto-starts a process server locally</p>
+
+<p>In normal operations, a local proces server called &#39;localhost&#39; is
+automatically started on the local machine. If this predicate is set to
+true, with Syskit.conf.disables_local_process_server = true, this server
+won&#39;t be started.</p>
+
+<p>Disable this when the local process server is managed by other means, or
+when the machine that runs the Syskit instance is not the machine that runs
+the components</p>
+
+<p>The local process server won&#39;t be started if
+<span class='object_link'><a href="#define_default_process_managers%3F-instance_method" title="Syskit::RobyApp::Configuration#define_default_process_managers? (method)">#define_default_process_managers?</a></span> is explicitely set to false</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+239
+240
+241</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/roby_app/configuration.rb', line 239</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_disables_local_process_server?'>disables_local_process_server?</span>
+    <span class='ivar'>@disables_local_process_server</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="each_process_server-instance_method">
+  
+    #<strong>each_process_server</strong> {|process_server| ... } &#x21d2; <tt>void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p>
+<p>Enumerates all available process servers</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Yield Parameters:</p>
+<ul class="yieldparam">
+  
+    <li>
+      
+        <span class='name'>process_server</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the registered process server, as an object that conforms to
+orocos.rb&#39;s process server API</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+419
+420
+421
+422
+423
+424</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/roby_app/configuration.rb', line 419</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_each_process_server'>each_process_server</span>
+    <span class='kw'>return</span> <span class='id identifier rubyid_enum_for'>enum_for</span><span class='lparen'>(</span><span class='id identifier rubyid___method__'>__method__</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_block_given?'>block_given?</span>
+    <span class='id identifier rubyid_process_servers'>process_servers</span><span class='period'>.</span><span class='id identifier rubyid_each_value'>each_value</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_config'>config</span><span class='op'>|</span>
+        <span class='kw'>yield</span><span class='lparen'>(</span><span class='id identifier rubyid_config'>config</span><span class='period'>.</span><span class='id identifier rubyid_client'>client</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="each_process_server_config-instance_method">
+  
+    #<strong>each_process_server_config</strong> {|process_server| ... } &#x21d2; <tt>void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p>
+<p>Enumerates the registration information for all known process servers</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Yield Parameters:</p>
+<ul class="yieldparam">
+  
+    <li>
+      
+        <span class='name'>process_server</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Configuration/ProcessServerConfig.html" title="Syskit::RobyApp::Configuration::ProcessServerConfig (class)">ProcessServerConfig</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the registered process server, as an object that conforms to
+orocos.rb&#39;s process server API</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+431
+432
+433</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/roby_app/configuration.rb', line 431</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_each_process_server_config'>each_process_server_config</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_process_servers'>process_servers</span><span class='period'>.</span><span class='id identifier rubyid_each_value'>each_value</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="enable_conf_logging-instance_method">
+  
+    #<strong>enable_conf_logging</strong>  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <div class="note deprecated"><strong>Deprecated.</strong> <div class='inline'>
+<p>access <span class='object_link'><a href="#logs-instance_method" title="Syskit::RobyApp::Configuration#logs (method)">#logs</a></span> for logging configuration</p>
+</div></div>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+186
+187
+188
+189</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/roby_app/configuration.rb', line 186</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_enable_conf_logging'>enable_conf_logging</span>
+    <span class='const'>Roby</span><span class='period'>.</span><span class='id identifier rubyid_warn_deprecated'>warn_deprecated</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>logging configuration has been moved to Syskit.conf.logs (of type LoggingConfiguration)</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid_logs'>logs</span><span class='period'>.</span><span class='id identifier rubyid_enable_conf_logging'>enable_conf_logging</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="enable_log_group-instance_method">
+  
+    #<strong>enable_log_group</strong>(name)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <div class="note deprecated"><strong>Deprecated.</strong> <div class='inline'>
+<p>access <span class='object_link'><a href="#logs-instance_method" title="Syskit::RobyApp::Configuration#logs (method)">#logs</a></span> for logging configuration</p>
+</div></div>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+159
+160
+161
+162</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/roby_app/configuration.rb', line 159</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_enable_log_group'>enable_log_group</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
+    <span class='const'>Roby</span><span class='period'>.</span><span class='id identifier rubyid_warn_deprecated'>warn_deprecated</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>logging configuration has been moved to Syskit.conf.logs (of type LoggingConfiguration)</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid_logs'>logs</span><span class='period'>.</span><span class='id identifier rubyid_enable_group'>enable_group</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="enable_logging-instance_method">
+  
+    #<strong>enable_logging</strong>  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <div class="note deprecated"><strong>Deprecated.</strong> <div class='inline'>
+<p>access <span class='object_link'><a href="#logs-instance_method" title="Syskit::RobyApp::Configuration#logs (method)">#logs</a></span> for logging configuration</p>
+</div></div>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+175
+176
+177
+178</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/roby_app/configuration.rb', line 175</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_enable_logging'>enable_logging</span>
+    <span class='const'>Roby</span><span class='period'>.</span><span class='id identifier rubyid_warn_deprecated'>warn_deprecated</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>logging configuration has been moved to Syskit.conf.logs (of type LoggingConfiguration)</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid_logs'>logs</span><span class='period'>.</span><span class='id identifier rubyid_enable_port_logging'>enable_port_logging</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="exclude_from_log-instance_method">
+  
+    #<strong>exclude_from_log</strong>(object, subname = nil)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Permanently exclude object from the logging system</p>
+
+<p><code>object</code> can be</p>
+<ul><li>
+<p>a deployment model, in which case no task  in this deployment will be
+logged</p>
+</li><li>
+<p>a task model, in which case no port of any task of this type will be logged</p>
+</li><li>
+<p>a port model, in which case no such port will be logged (regardless of
+which task it is on)</p>
+</li><li>
+<p>a string. It can then either be a task name, a port name or a type name</p>
+</li></ul>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+154
+155
+156</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/roby_app/configuration.rb', line 154</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_exclude_from_log'>exclude_from_log</span><span class='lparen'>(</span><span class='id identifier rubyid_object'>object</span><span class='comma'>,</span> <span class='id identifier rubyid_subname'>subname</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_main_group'>main_group</span><span class='period'>.</span><span class='id identifier rubyid_add'>add</span><span class='lparen'>(</span><span class='id identifier rubyid_object'>object</span><span class='comma'>,</span> <span class='id identifier rubyid_subname'>subname</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="export_types=-instance_method">
+  
+    #<strong>export_types=</strong>(flag)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Controls whether the orogen types should be exported as Ruby constants</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>flag</span>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+35</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/roby_app/configuration.rb', line 35</span>
+
+<span class='id identifier rubyid_attr_predicate'>attr_predicate</span> <span class='symbol'>:export_types?</span><span class='comma'>,</span> <span class='kw'>true</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="export_types?-instance_method">
+  
+    #<strong>export_types?</strong>  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Controls whether the orogen types should be exported as Ruby constants</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+35</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/roby_app/configuration.rb', line 35</span>
+
+<span class='id identifier rubyid_attr_predicate'>attr_predicate</span> <span class='symbol'>:export_types?</span><span class='comma'>,</span> <span class='kw'>true</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="has_process_server?-instance_method">
+  
+    #<strong>has_process_server?</strong>(name)  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Tests whether there is a registered process server with that name</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+373
+374
+375</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/roby_app/configuration.rb', line 373</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_has_process_server?'>has_process_server?</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_process_servers'>process_servers</span><span class='lbracket'>[</span><span class='id identifier rubyid_name'>name</span><span class='period'>.</span><span class='id identifier rubyid_to_str'>to_str</span><span class='rbracket'>]</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="ignore_load_errors=-instance_method">
+  
+    #<strong>ignore_load_errors=</strong>(value)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>If true, files that raise an error will be ignored. This is usually used on
+“root” bundles (e.g. the Rock bundle) to have the benefit of GUIs like
+browse even though some files have errors</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+26</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/roby_app/configuration.rb', line 26</span>
+
+<span class='id identifier rubyid_attr_predicate'>attr_predicate</span> <span class='symbol'>:ignore_load_errors</span><span class='comma'>,</span> <span class='kw'>true</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="ignore_load_errors?-instance_method">
+  
+    #<strong>ignore_load_errors?</strong>  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>If true, files that raise an error will be ignored. This is usually used on
+“root” bundles (e.g. the Rock bundle) to have the benefit of GUIs like
+browse even though some files have errors</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+26</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/roby_app/configuration.rb', line 26</span>
+
+<span class='id identifier rubyid_attr_predicate'>attr_predicate</span> <span class='symbol'>:ignore_load_errors</span><span class='comma'>,</span> <span class='kw'>true</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="ignore_missing_orogen_projects_during_load=-instance_method">
+  
+    #<strong>ignore_missing_orogen_projects_during_load=</strong>(value)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>If true, files that raise an error during task library or type import will
+be ignored. This is usually used on “root” bundles (e.g. the Rock bundle)
+to have the benefit of GUIs like system_model even though some
+typekits/task libraries are not present</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+21</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/roby_app/configuration.rb', line 21</span>
+
+<span class='id identifier rubyid_attr_predicate'>attr_predicate</span> <span class='symbol'>:ignore_missing_orogen_projects_during_load</span><span class='comma'>,</span> <span class='kw'>true</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="ignore_missing_orogen_projects_during_load?-instance_method">
+  
+    #<strong>ignore_missing_orogen_projects_during_load?</strong>  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>If true, files that raise an error during task library or type import will
+be ignored. This is usually used on “root” bundles (e.g. the Rock bundle)
+to have the benefit of GUIs like system_model even though some
+typekits/task libraries are not present</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+21</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/roby_app/configuration.rb', line 21</span>
+
+<span class='id identifier rubyid_attr_predicate'>attr_predicate</span> <span class='symbol'>:ignore_missing_orogen_projects_during_load</span><span class='comma'>,</span> <span class='kw'>true</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="load_component_extensions=-instance_method">
+  
+    #<strong>load_component_extensions=</strong>(value)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>If true, we will load the component-specific code in tasks/orocos/. It is
+true by default</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+15</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/roby_app/configuration.rb', line 15</span>
+
+<span class='id identifier rubyid_attr_predicate'>attr_predicate</span> <span class='symbol'>:load_component_extensions</span><span class='comma'>,</span> <span class='kw'>true</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="load_component_extensions?-instance_method">
+  
+    #<strong>load_component_extensions?</strong>  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>If true, we will load the component-specific code in tasks/orocos/. It is
+true by default</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+15</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/roby_app/configuration.rb', line 15</span>
+
+<span class='id identifier rubyid_attr_predicate'>attr_predicate</span> <span class='symbol'>:load_component_extensions</span><span class='comma'>,</span> <span class='kw'>true</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="local_only=-instance_method">
+  
+    #<strong>local_only=</strong>(value)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>True if this application should not try to contact other machines/servers</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+412</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/roby_app/configuration.rb', line 412</span>
+
+<span class='id identifier rubyid_attr_predicate'>attr_predicate</span> <span class='symbol'>:local_only?</span><span class='comma'>,</span> <span class='kw'>true</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="local_only?-instance_method">
+  
+    #<strong>local_only?</strong>  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>True if this application should not try to contact other machines/servers</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+412</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/roby_app/configuration.rb', line 412</span>
+
+<span class='id identifier rubyid_attr_predicate'>attr_predicate</span> <span class='symbol'>:local_only?</span><span class='comma'>,</span> <span class='kw'>true</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="log_group-instance_method">
+  
+    #<strong>log_group</strong>(name, &amp;block)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <div class="note deprecated"><strong>Deprecated.</strong> <div class='inline'>
+<p>access <span class='object_link'><a href="#logs-instance_method" title="Syskit::RobyApp::Configuration#logs (method)">#logs</a></span> for logging configuration</p>
+</div></div>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+136
+137
+138
+139
+140
+141</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/roby_app/configuration.rb', line 136</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_log_group'>log_group</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+    <span class='const'>Roby</span><span class='period'>.</span><span class='id identifier rubyid_warn_deprecated'>warn_deprecated</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>logging configuration has been moved to Syskit.conf.logs (of type LoggingConfiguration)</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid_logs'>logs</span><span class='period'>.</span><span class='id identifier rubyid_create_group'>create_group</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_group'>group</span><span class='op'>|</span>
+        <span class='id identifier rubyid_group'>group</span><span class='period'>.</span><span class='id identifier rubyid_instance_eval'>instance_eval</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="only_load_models=-instance_method">
+  
+    #<strong>only_load_models=</strong>(flag)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>In normal operations, the plugin initializes the CORBA layer, which takes
+some time.</p>
+
+<p>In some tools, one only wants to manipulate models offline. In which case
+we don&#39;t need to waste time initializing the layer.</p>
+
+<p>Set this value to true to avoid initializing the CORBA layer</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+214
+215
+216</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/roby_app/configuration.rb', line 214</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_only_load_models='>only_load_models=</span><span class='lparen'>(</span><span class='id identifier rubyid_flag'>flag</span><span class='rparen'>)</span>
+    <span class='ivar'>@only_load_models</span> <span class='op'>=</span> <span class='id identifier rubyid_flag'>flag</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="only_load_models?-instance_method">
+  
+    #<strong>only_load_models?</strong>  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+218
+219
+220
+221
+222
+223
+224</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/roby_app/configuration.rb', line 218</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_only_load_models?'>only_load_models?</span>
+    <span class='kw'>if</span> <span class='ivar'>@only_load_models</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+        <span class='id identifier rubyid_app'>app</span><span class='period'>.</span><span class='id identifier rubyid_modelling_only?'>modelling_only?</span>
+    <span class='kw'>else</span>
+        <span class='ivar'>@only_load_models</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="permanent_deployments=-instance_method">
+  
+    #<strong>permanent_deployments=</strong>(value)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>If true (the default), deployments are markes as permanent, i.e. won&#39;t
+be garbage-collected when the corresponding tasks are unused</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+205</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/roby_app/configuration.rb', line 205</span>
+
+<span class='id identifier rubyid_attr_predicate'>attr_predicate</span> <span class='symbol'>:permanent_deployments?</span><span class='comma'>,</span> <span class='kw'>true</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="permanent_deployments?-instance_method">
+  
+    #<strong>permanent_deployments?</strong>  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>If true (the default), deployments are markes as permanent, i.e. won&#39;t
+be garbage-collected when the corresponding tasks are unused</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+205</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/roby_app/configuration.rb', line 205</span>
+
+<span class='id identifier rubyid_attr_predicate'>attr_predicate</span> <span class='symbol'>:permanent_deployments?</span><span class='comma'>,</span> <span class='kw'>true</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="prefixing?-instance_method">
+  
+    #<strong>prefixing?</strong>  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>True if deployments are going to be started with a prefix</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+257</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/roby_app/configuration.rb', line 257</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_prefixing?'>prefixing?</span><span class='semicolon'>;</span> <span class='op'>!</span><span class='op'>!</span><span class='id identifier rubyid_prefix'>prefix</span> <span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="process_server-instance_method">
+  
+    #<strong>process_server</strong>(*args)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <div class="note deprecated"><strong>Deprecated.</strong> <div class='inline'>
+<p>use <span class='object_link'><a href="#connect_to_orocos_process_server-instance_method" title="Syskit::RobyApp::Configuration#connect_to_orocos_process_server (method)">#connect_to_orocos_process_server</a></span> instead</p>
+</div></div>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+436
+437
+438</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/roby_app/configuration.rb', line 436</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_process_server'>process_server</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_connect_to_orocos_process_server'>connect_to_orocos_process_server</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="process_server_config_for-instance_method">
+  
+    #<strong>process_server_config_for</strong>(name)  &#x21d2; <tt><span class='object_link'><a href="Configuration/ProcessServerConfig.html" title="Syskit::RobyApp::Configuration::ProcessServerConfig (class)">ProcessServerConfig</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the process server object named <code>name</code></p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the process server name</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Configuration/ProcessServerConfig.html" title="Syskit::RobyApp::Configuration::ProcessServerConfig (class)">ProcessServerConfig</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Configuration/UnknownProcessServer.html" title="Syskit::RobyApp::Configuration::UnknownProcessServer (class)">UnknownProcessServer</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>if no such process server exists</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+392
+393
+394
+395
+396
+397
+398</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/roby_app/configuration.rb', line 392</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_process_server_config_for'>process_server_config_for</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_config'>config</span> <span class='op'>=</span> <span class='id identifier rubyid_process_servers'>process_servers</span><span class='lbracket'>[</span><span class='id identifier rubyid_name'>name</span><span class='rbracket'>]</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_config'>config</span> <span class='kw'>then</span> <span class='id identifier rubyid_config'>config</span>
+    <span class='kw'>else</span>
+        <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="Configuration/UnknownProcessServer.html" title="Syskit::RobyApp::Configuration::UnknownProcessServer (class)">UnknownProcessServer</a></span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>there is no registered process server called </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="process_server_for-instance_method">
+  
+    #<strong>process_server_for</strong>(name)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the process server object named <code>name</code></p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the process server name</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>an object that conforms to orocos.rb&#39;s process server API</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Configuration/UnknownProcessServer.html" title="Syskit::RobyApp::Configuration::UnknownProcessServer (class)">UnknownProcessServer</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>if no such process server exists</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+406
+407
+408</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/roby_app/configuration.rb', line 406</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_process_server_for'>process_server_for</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_process_server_config_for'>process_server_config_for</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_client'>client</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="redirect_local_process_server=-instance_method">
+  
+    #<strong>redirect_local_process_server=</strong>(value)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>If true, the output of the local process server will be saved in
+log_dir/local_process_server.txt</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+171</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/roby_app/configuration.rb', line 171</span>
+
+<span class='id identifier rubyid_attr_predicate'>attr_predicate</span> <span class='symbol'>:redirect_local_process_server?</span><span class='comma'>,</span> <span class='kw'>true</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="redirect_local_process_server?-instance_method">
+  
+    #<strong>redirect_local_process_server?</strong>  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>If true, the output of the local process server will be saved in
+log_dir/local_process_server.txt</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+171</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/roby_app/configuration.rb', line 171</span>
+
+<span class='id identifier rubyid_attr_predicate'>attr_predicate</span> <span class='symbol'>:redirect_local_process_server?</span><span class='comma'>,</span> <span class='kw'>true</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="register_configured_deployment-instance_method">
+  
+    #<strong>register_configured_deployment</strong>(configured_deployment)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+573
+574
+575</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/roby_app/configuration.rb', line 573</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_register_configured_deployment'>register_configured_deployment</span><span class='lparen'>(</span><span class='id identifier rubyid_configured_deployment'>configured_deployment</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_deployment_group'>deployment_group</span><span class='period'>.</span><span class='id identifier rubyid_register_configured_deployment'>register_configured_deployment</span><span class='lparen'>(</span><span class='id identifier rubyid_configured_deployment'>configured_deployment</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="register_process_server-instance_method">
+  
+    #<strong>register_process_server</strong>(name, client, log_dir = nil, host_id: name)  &#x21d2; <tt><span class='object_link'><a href="Configuration/ProcessServerConfig.html" title="Syskit::RobyApp::Configuration::ProcessServerConfig (class)">ProcessServerConfig</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Make a process server available to syskit</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the process server name</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>client</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the process server client object, which has to conform to the API of
+Orocos::Remotes::Client</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>log_dir</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the path to the server&#39;s log directory</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Configuration/ProcessServerConfig.html" title="Syskit::RobyApp::Configuration::ProcessServerConfig (class)">ProcessServerConfig</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+519
+520
+521
+522
+523
+524
+525
+526
+527</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/roby_app/configuration.rb', line 519</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_register_process_server'>register_process_server</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_client'>client</span><span class='comma'>,</span> <span class='id identifier rubyid_log_dir'>log_dir</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>host_id:</span> <span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_process_servers'>process_servers</span><span class='lbracket'>[</span><span class='id identifier rubyid_name'>name</span><span class='rbracket'>]</span>
+        <span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>there is already a process server registered as </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'>, call #remove_process_server first</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>end</span>
+
+    <span class='id identifier rubyid_ps'>ps</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Configuration/ProcessServerConfig.html" title="Syskit::RobyApp::Configuration::ProcessServerConfig (class)">ProcessServerConfig</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="#initialize-instance_method" title="Syskit::RobyApp::Configuration#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_client'>client</span><span class='comma'>,</span> <span class='id identifier rubyid_log_dir'>log_dir</span><span class='comma'>,</span> <span class='id identifier rubyid_host_id'>host_id</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_process_servers'>process_servers</span><span class='lbracket'>[</span><span class='id identifier rubyid_name'>name</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_ps'>ps</span>
+    <span class='id identifier rubyid_ps'>ps</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="reject_ambiguous_deployments=-instance_method">
+  
+    #<strong>reject_ambiguous_deployments=</strong>(value)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>If multiple deployments are available for a task, and this task is not a
+device driver, the resolution engine will randomly pick one if this flag is
+set to false. If set to true (the default), it will generate an error</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+201</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/roby_app/configuration.rb', line 201</span>
+
+<span class='id identifier rubyid_attr_predicate'>attr_predicate</span> <span class='symbol'>:reject_ambiguous_deployments?</span><span class='comma'>,</span> <span class='kw'>true</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="reject_ambiguous_deployments?-instance_method">
+  
+    #<strong>reject_ambiguous_deployments?</strong>  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>If multiple deployments are available for a task, and this task is not a
+device driver, the resolution engine will randomly pick one if this flag is
+set to false. If set to true (the default), it will generate an error</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+201</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/roby_app/configuration.rb', line 201</span>
+
+<span class='id identifier rubyid_attr_predicate'>attr_predicate</span> <span class='symbol'>:reject_ambiguous_deployments?</span><span class='comma'>,</span> <span class='kw'>true</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="remove_process_server-instance_method">
+  
+    #<strong>remove_process_server</strong>(name)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Deregisters a process server</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the process server name, as given to <span class='object_link'><a href="#register_process_server-instance_method" title="Syskit::RobyApp::Configuration#register_process_server (method)">#register_process_server</a></span></p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        
+        <div class='inline'>
+<p>ArgumentError if there is no process server with that name</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+534
+535
+536
+537
+538
+539
+540
+541
+542
+543
+544
+545</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/roby_app/configuration.rb', line 534</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_remove_process_server'>remove_process_server</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_ps'>ps</span> <span class='op'>=</span> <span class='id identifier rubyid_process_servers'>process_servers</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_ps'>ps</span>
+        <span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>there is no registered process server called </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>end</span>
+
+    <span class='id identifier rubyid_app'>app</span><span class='period'>.</span><span class='id identifier rubyid_default_loader'>default_loader</span><span class='period'>.</span><span class='id identifier rubyid_remove'>remove</span> <span class='id identifier rubyid_ps'>ps</span><span class='period'>.</span><span class='id identifier rubyid_client'>client</span><span class='period'>.</span><span class='id identifier rubyid_loader'>loader</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_app'>app</span><span class='period'>.</span><span class='id identifier rubyid_simulation?'>simulation?</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_process_servers'>process_servers</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'>-sim</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
+        <span class='id identifier rubyid_remove_process_server'>remove_process_server</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'>-sim</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_ps'>ps</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="sim_process_server-instance_method">
+  
+    #<strong>sim_process_server</strong>(name)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <div class="note deprecated"><strong>Deprecated.</strong> <div class='inline'>
+<p>use <span class='object_link'><a href="#sim_process_server_config_for-instance_method" title="Syskit::RobyApp::Configuration#sim_process_server_config_for (method)">#sim_process_server_config_for</a></span> instead for consistency with
+<span class='object_link'><a href="#process_server_config_for-instance_method" title="Syskit::RobyApp::Configuration#process_server_config_for (method)">#process_server_config_for</a></span></p>
+</div></div>
+
+<p>(see #sim_process_server_config_for)</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+302
+303
+304</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/roby_app/configuration.rb', line 302</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_sim_process_server'>sim_process_server</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_sim_process_server_config_for'>sim_process_server_config_for</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="sim_process_server_config_for-instance_method">
+  
+    #<strong>sim_process_server_config_for</strong>(name)  &#x21d2; <tt><span class='object_link'><a href="Configuration/ProcessServerConfig.html" title="Syskit::RobyApp::Configuration::ProcessServerConfig (class)">ProcessServerConfig</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Ensures that a ruby process server is present with the given name</p>
+
+<p>It is used when running in simulation mode, to “fake” the task contexts</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the name of the original process server</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Configuration/ProcessServerConfig.html" title="Syskit::RobyApp::Configuration::ProcessServerConfig (class)">ProcessServerConfig</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the registered process server</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+313
+314
+315
+316
+317
+318
+319
+320
+321</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/roby_app/configuration.rb', line 313</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_sim_process_server_config_for'>sim_process_server_config_for</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_sim_name'>sim_name</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'>-sim</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>unless</span> <span class='id identifier rubyid_process_servers'>process_servers</span><span class='lbracket'>[</span><span class='id identifier rubyid_sim_name'>sim_name</span><span class='rbracket'>]</span>
+        <span class='id identifier rubyid_mng'>mng</span> <span class='op'>=</span> <span class='const'>Orocos</span><span class='op'>::</span><span class='const'>RubyTasks</span><span class='op'>::</span><span class='const'>ProcessManager</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_app'>app</span><span class='period'>.</span><span class='id identifier rubyid_default_loader'>default_loader</span><span class='comma'>,</span>
+            <span class='label'>task_context_class:</span> <span class='const'>Orocos</span><span class='op'>::</span><span class='const'>RubyTasks</span><span class='op'>::</span><span class='const'>StubTaskContext</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_register_process_server'>register_process_server</span><span class='lparen'>(</span><span class='id identifier rubyid_sim_name'>sim_name</span><span class='comma'>,</span> <span class='id identifier rubyid_mng'>mng</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_process_server_config_for'>process_server_config_for</span><span class='lparen'>(</span><span class='id identifier rubyid_sim_name'>sim_name</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="use_deployment-instance_method">
+  
+    #<strong>use_deployment</strong>(*names, on: &#39;localhost&#39;, **run_options)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+562
+563
+564
+565
+566</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/roby_app/configuration.rb', line 562</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_use_deployment'><span class='object_link'><a href="../Test/NetworkManipulation.html#use_deployment-instance_method" title="Syskit::Test::NetworkManipulation#use_deployment (method)">use_deployment</a></span></span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_names'>names</span><span class='comma'>,</span> <span class='label'>on:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>localhost</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='op'>**</span><span class='id identifier rubyid_run_options'>run_options</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_deployment_group'>deployment_group</span><span class='period'>.</span><span class='id identifier rubyid_use_deployment'>use_deployment</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_names'>names</span><span class='comma'>,</span> <span class='label'>on:</span> <span class='id identifier rubyid_on'>on</span><span class='comma'>,</span>
+        <span class='label'>process_managers:</span> <span class='kw'>self</span><span class='comma'>,</span> <span class='label'>loader:</span> <span class='id identifier rubyid_app'>app</span><span class='period'>.</span><span class='id identifier rubyid_default_loader'>default_loader</span><span class='comma'>,</span>
+        <span class='op'>**</span><span class='id identifier rubyid_run_options'>run_options</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="use_deployments_from-instance_method">
+  
+    #<strong>use_deployments_from</strong>(*names, on: &#39;localhost&#39;, **run_options)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+568
+569
+570
+571</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/roby_app/configuration.rb', line 568</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_use_deployments_from'>use_deployments_from</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_names'>names</span><span class='comma'>,</span> <span class='label'>on:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>localhost</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='op'>**</span><span class='id identifier rubyid_run_options'>run_options</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_deployment_group'>deployment_group</span><span class='period'>.</span><span class='id identifier rubyid_use_deployment'>use_deployment</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_names'>names</span><span class='comma'>,</span> <span class='label'>on:</span> <span class='id identifier rubyid_on'>on</span><span class='comma'>,</span>
+        <span class='label'>process_managers:</span> <span class='kw'>self</span><span class='comma'>,</span> <span class='label'>loader:</span> <span class='id identifier rubyid_app'>app</span><span class='period'>.</span><span class='id identifier rubyid_default_loader'>default_loader</span><span class='comma'>,</span> <span class='op'>**</span><span class='id identifier rubyid_run_options'>run_options</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="use_only_model_pack=-instance_method">
+  
+    #<strong>use_only_model_pack=</strong>(value)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Controls whether models from the installed components should be used or not</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+32</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/roby_app/configuration.rb', line 32</span>
+
+<span class='id identifier rubyid_attr_predicate'>attr_predicate</span> <span class='symbol'>:use_only_model_pack?</span><span class='comma'>,</span> <span class='kw'>true</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="use_only_model_pack?-instance_method">
+  
+    #<strong>use_only_model_pack?</strong>  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Controls whether models from the installed components should be used or not</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+32</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/roby_app/configuration.rb', line 32</span>
+
+<span class='id identifier rubyid_attr_predicate'>attr_predicate</span> <span class='symbol'>:use_only_model_pack?</span><span class='comma'>,</span> <span class='kw'>true</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="use_ruby_tasks-instance_method">
+  
+    #<strong>use_ruby_tasks</strong>(mappings, on: &#39;ruby_tasks&#39;, remote_task: false)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+552
+553
+554
+555</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/roby_app/configuration.rb', line 552</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_use_ruby_tasks'><span class='object_link'><a href="../Test/NetworkManipulation.html#use_ruby_tasks-instance_method" title="Syskit::Test::NetworkManipulation#use_ruby_tasks (method)">use_ruby_tasks</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_mappings'>mappings</span><span class='comma'>,</span> <span class='label'>on:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>ruby_tasks</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='label'>remote_task:</span> <span class='kw'>false</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_deployment_group'>deployment_group</span><span class='period'>.</span><span class='id identifier rubyid_use_ruby_tasks'>use_ruby_tasks</span><span class='lparen'>(</span><span class='id identifier rubyid_mappings'>mappings</span><span class='comma'>,</span> <span class='label'>on:</span> <span class='id identifier rubyid_on'>on</span><span class='comma'>,</span>
+        <span class='label'>remote_task:</span> <span class='id identifier rubyid_remote_task'>remote_task</span><span class='comma'>,</span> <span class='label'>process_managers:</span> <span class='kw'>self</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="use_unmanaged_task-instance_method">
+  
+    #<strong>use_unmanaged_task</strong>(mappings, on: &#39;unmanaged_tasks&#39;)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+557
+558
+559
+560</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/roby_app/configuration.rb', line 557</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_use_unmanaged_task'><span class='object_link'><a href="../Test/NetworkManipulation.html#use_unmanaged_task-instance_method" title="Syskit::Test::NetworkManipulation#use_unmanaged_task (method)">use_unmanaged_task</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_mappings'>mappings</span><span class='comma'>,</span> <span class='label'>on:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>unmanaged_tasks</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_deployment_group'>deployment_group</span><span class='period'>.</span><span class='id identifier rubyid_use_unmanaged_task'>use_unmanaged_task</span><span class='lparen'>(</span><span class='id identifier rubyid_mappings'>mappings</span><span class='comma'>,</span> <span class='label'>on:</span> <span class='id identifier rubyid_on'>on</span><span class='comma'>,</span>
+        <span class='label'>process_managers:</span> <span class='kw'>self</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Wed Apr 10 21:56:37 2019 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.19 (ruby-2.5.1).
+</div>
+
+    </div>
+  </body>
+</html>

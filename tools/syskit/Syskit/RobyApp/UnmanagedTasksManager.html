@@ -1,0 +1,1128 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: Syskit::RobyApp::UnmanagedTasksManager
+  
+    &mdash; Documentation by YARD 0.9.19
+  
+</title>
+
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "Syskit::RobyApp::UnmanagedTasksManager";
+  relpath = '../../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../../_index.html">Index (U)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../Syskit.html" title="Syskit (module)">Syskit</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../RobyApp.html" title="Syskit::RobyApp (module)">RobyApp</a></span></span>
+     &raquo; 
+    <span class="title">UnmanagedTasksManager</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: Syskit::RobyApp::UnmanagedTasksManager
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName"><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></span>
+      
+        <ul class="fullTree">
+          <li><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></li>
+          
+            <li class="next">Syskit::RobyApp::UnmanagedTasksManager</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/syskit/roby_app/unmanaged_tasks_manager.rb</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>A class API-compatible with Orocos::RemoteProcesses::Client but that handle
+components started externally to syskit</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><h2>Defined Under Namespace</h2>
+<p class="children">
+  
+    
+  
+    
+      <strong class="classes">Classes:</strong> <span class='object_link'><a href="UnmanagedTasksManager/NameMappingsForbidden.html" title="Syskit::RobyApp::UnmanagedTasksManager::NameMappingsForbidden (class)">NameMappingsForbidden</a></span>, <span class='object_link'><a href="UnmanagedTasksManager/Status.html" title="Syskit::RobyApp::UnmanagedTasksManager::Status (class)">Status</a></span>
+    
+  
+</p>
+
+
+
+
+  <h2>Instance Attribute Summary <small><a href="#" class="summary_toggle">collapse</a></small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#loader-instance_method" title="#loader (instance method)">#<strong>loader</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>The OroGen loader.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#name_service-instance_method" title="#name_service (instance method)">#<strong>name_service</strong>  &#x21d2; #get </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>The name service that should be used to resolve the tasks.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#processes-instance_method" title="#processes (instance method)">#<strong>processes</strong>  &#x21d2; Hash&lt;String,UnmanagedProcess&gt; </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>The set of processes started so far.</p>
+</div></span>
+  
+</li>
+
+    
+  </ul>
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#create_log_dir-instance_method" title="#create_log_dir (instance method)">#<strong>create_log_dir</strong>(log_dir, time_tag, metadata = Hash.new)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Creates a new log dir, and save the given time tag in it (used later on by
+save_log_dir).</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#disconnect-instance_method" title="#disconnect (instance method)">#<strong>disconnect</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(loader: Roby.app.default_loader, name_service: Orocos::CORBA.name_service)  &#x21d2; UnmanagedTasksManager </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>A new instance of UnmanagedTasksManager.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#register_deployment_model-instance_method" title="#register_deployment_model (instance method)">#<strong>register_deployment_model</strong>(model)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Register a new deployment model on this server.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#save_log_dir-instance_method" title="#save_log_dir (instance method)">#<strong>save_log_dir</strong>(log_dir, results_dir)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Requests that the process server moves the log directory at
+<code>log_dir</code> to <code>results_dir</code>.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#start-instance_method" title="#start (instance method)">#<strong>start</strong>(name, deployment_name = name, name_mappings = Hash.new, prefix: nil, **options)  &#x21d2; UnmanagedProcess </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Start a registered deployment.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#stop-instance_method" title="#stop (instance method)">#<strong>stop</strong>(world_name)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Requests to stop the given deployment.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#wait_termination-instance_method" title="#wait_termination (instance method)">#<strong>wait_termination</strong>(timeout = nil)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Waits for processes to terminate.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    #<strong>initialize</strong>(loader: Roby.app.default_loader, name_service: Orocos::CORBA.name_service)  &#x21d2; <tt><span class='object_link'><a href="" title="Syskit::RobyApp::UnmanagedTasksManager (class)">UnmanagedTasksManager</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns a new instance of UnmanagedTasksManager</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+41
+42
+43
+44
+45
+46
+47</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/roby_app/unmanaged_tasks_manager.rb', line 41</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='label'>loader:</span> <span class='const'>Roby</span><span class='period'>.</span><span class='id identifier rubyid_app'>app</span><span class='period'>.</span><span class='id identifier rubyid_default_loader'>default_loader</span><span class='comma'>,</span>
+               <span class='label'>name_service:</span> <span class='const'>Orocos</span><span class='op'>::</span><span class='const'>CORBA</span><span class='period'>.</span><span class='id identifier rubyid_name_service'>name_service</span><span class='rparen'>)</span>
+    <span class='ivar'>@loader</span> <span class='op'>=</span> <span class='id identifier rubyid_loader'>loader</span>
+    <span class='ivar'>@processes</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+    <span class='ivar'>@name_service</span> <span class='op'>=</span> <span class='id identifier rubyid_name_service'>name_service</span>
+    <span class='ivar'>@deployments</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id=""></span>
+      <div class="method_details first">
+  <h3 class="signature first" id="loader-instance_method">
+  
+    #<strong>loader</strong>  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>The OroGen loader</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+39
+40
+41</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/roby_app/unmanaged_tasks_manager.rb', line 39</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_loader'>loader</span>
+  <span class='ivar'>@loader</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="name_service-instance_method">
+  
+    #<strong>name_service</strong>  &#x21d2; <tt>#get</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>The name service that should be used to resolve the tasks</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>#get</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+36
+37
+38</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/roby_app/unmanaged_tasks_manager.rb', line 36</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_name_service'>name_service</span>
+  <span class='ivar'>@name_service</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="processes-instance_method">
+  
+    #<strong>processes</strong>  &#x21d2; <tt>Hash&lt;String,<span class='object_link'><a href="UnmanagedProcess.html" title="Syskit::RobyApp::UnmanagedProcess (class)">UnmanagedProcess</a></span>&gt;</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>The set of processes started so far</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Hash&lt;String,<span class='object_link'><a href="UnmanagedProcess.html" title="Syskit::RobyApp::UnmanagedProcess (class)">UnmanagedProcess</a></span>&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>mapping from process name to the process object</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+31
+32
+33</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/roby_app/unmanaged_tasks_manager.rb', line 31</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_processes'>processes</span>
+  <span class='ivar'>@processes</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="create_log_dir-instance_method">
+  
+    #<strong>create_log_dir</strong>(log_dir, time_tag, metadata = Hash.new)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Creates a new log dir, and save the given time tag in it (used later on by
+save_log_dir)</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+106
+107</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/roby_app/unmanaged_tasks_manager.rb', line 106</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_create_log_dir'>create_log_dir</span><span class='lparen'>(</span><span class='id identifier rubyid_log_dir'>log_dir</span><span class='comma'>,</span> <span class='id identifier rubyid_time_tag'>time_tag</span><span class='comma'>,</span> <span class='id identifier rubyid_metadata'>metadata</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="disconnect-instance_method">
+  
+    #<strong>disconnect</strong>  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+49
+50</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/roby_app/unmanaged_tasks_manager.rb', line 49</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_disconnect'>disconnect</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="register_deployment_model-instance_method">
+  
+    #<strong>register_deployment_model</strong>(model)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Register a new deployment model on this server.</p>
+
+<p>If name mappings are needed, they must have been done in the model.
+<span class='object_link'><a href="#start-instance_method" title="Syskit::RobyApp::UnmanagedTasksManager#start (method)">#start</a></span> does not support name mappings</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+56
+57
+58</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/roby_app/unmanaged_tasks_manager.rb', line 56</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_register_deployment_model'>register_deployment_model</span><span class='lparen'>(</span><span class='id identifier rubyid_model'>model</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_loader'>loader</span><span class='period'>.</span><span class='id identifier rubyid_register_deployment_model'>register_deployment_model</span><span class='lparen'>(</span><span class='id identifier rubyid_model'>model</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="save_log_dir-instance_method">
+  
+    #<strong>save_log_dir</strong>(log_dir, results_dir)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Requests that the process server moves the log directory at
+<code>log_dir</code> to <code>results_dir</code></p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+101
+102</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/roby_app/unmanaged_tasks_manager.rb', line 101</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_save_log_dir'>save_log_dir</span><span class='lparen'>(</span><span class='id identifier rubyid_log_dir'>log_dir</span><span class='comma'>,</span> <span class='id identifier rubyid_results_dir'>results_dir</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="start-instance_method">
+  
+    #<strong>start</strong>(name, deployment_name = name, name_mappings = Hash.new, prefix: nil, **options)  &#x21d2; <tt><span class='object_link'><a href="UnmanagedProcess.html" title="Syskit::RobyApp::UnmanagedProcess (class)">UnmanagedProcess</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Start a registered deployment</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the desired process name</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>deployment_name</span>
+      
+      
+        <span class='type'>(<tt>String</tt>, <tt>OroGen::Spec::Deployment</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>name</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>either the name of a deployment model on <span class='object_link'><a href="#loader-instance_method" title="Syskit::RobyApp::UnmanagedTasksManager#loader (method)">#loader</a></span>, or the deployment model
+itself</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>name_mappings</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>Hash.new</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>name mappings. This is provided for compatibility with the process server
+API, but should always be empty</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>prefix</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>a prefix to be added to all tasks in the deployment.  This is provided for
+compatibility with the process server API, but should always be nil</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>options</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>additional spawn options. This is provided for compatibility with the
+process server API, but is ignored</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="UnmanagedProcess.html" title="Syskit::RobyApp::UnmanagedProcess (class)">UnmanagedProcess</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/roby_app/unmanaged_tasks_manager.rb', line 76</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_start'>start</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_deployment_name'>deployment_name</span> <span class='op'>=</span> <span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_name_mappings'>name_mappings</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='comma'>,</span> <span class='label'>prefix:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='op'>**</span><span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_model'>model</span> <span class='op'>=</span> <span class='kw'>if</span> <span class='id identifier rubyid_deployment_name'>deployment_name</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='symbol'>:to_str</span><span class='rparen'>)</span>
+                <span class='id identifier rubyid_loader'>loader</span><span class='period'>.</span><span class='id identifier rubyid_deployment_model_from_name'>deployment_model_from_name</span><span class='lparen'>(</span><span class='id identifier rubyid_deployment_name'>deployment_name</span><span class='rparen'>)</span>
+            <span class='kw'>else</span> <span class='id identifier rubyid_deployment_name'>deployment_name</span>
+            <span class='kw'>end</span>
+
+    <span class='kw'>if</span> <span class='id identifier rubyid_processes'>processes</span><span class='lbracket'>[</span><span class='id identifier rubyid_name'>name</span><span class='rbracket'>]</span>
+        <span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'> is already started in </span><span class='embexpr_beg'>#{</span><span class='kw'>self</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>end</span>
+
+    <span class='id identifier rubyid_prefix_mappings'>prefix_mappings</span> <span class='op'>=</span> <span class='const'>Orocos</span><span class='op'>::</span><span class='const'>ProcessBase</span><span class='period'>.</span><span class='id identifier rubyid_resolve_prefix'>resolve_prefix</span><span class='lparen'>(</span><span class='id identifier rubyid_model'>model</span><span class='comma'>,</span> <span class='id identifier rubyid_prefix'>prefix</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_name_mappings'>name_mappings</span> <span class='op'>=</span> <span class='id identifier rubyid_prefix_mappings'>prefix_mappings</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='id identifier rubyid_name_mappings'>name_mappings</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_name_mappings'>name_mappings</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_from'>from</span><span class='comma'>,</span> <span class='id identifier rubyid_to'>to</span><span class='op'>|</span>
+        <span class='kw'>if</span> <span class='id identifier rubyid_from'>from</span> <span class='op'>!=</span> <span class='id identifier rubyid_to'>to</span>
+            <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="UnmanagedTasksManager/NameMappingsForbidden.html" title="Syskit::RobyApp::UnmanagedTasksManager::NameMappingsForbidden (class)">NameMappingsForbidden</a></span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>cannot do name mapping in unmanaged processes</span><span class='tstring_end'>&quot;</span></span>
+        <span class='kw'>end</span>
+    <span class='kw'>end</span>
+
+    <span class='id identifier rubyid_process'>process</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="UnmanagedProcess.html" title="Syskit::RobyApp::UnmanagedProcess (class)">UnmanagedProcess</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="UnmanagedProcess.html#initialize-instance_method" title="Syskit::RobyApp::UnmanagedProcess#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='kw'>self</span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_model'>model</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_process'>process</span><span class='period'>.</span><span class='id identifier rubyid_spawn'>spawn</span>
+    <span class='id identifier rubyid_processes'>processes</span><span class='lbracket'>[</span><span class='id identifier rubyid_name'>name</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_process'>process</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="stop-instance_method">
+  
+    #<strong>stop</strong>(world_name)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Requests to stop the given deployment</p>
+
+<p>The call does not block until the process has quit. You will have to call
+#wait_termination to wait for the process end.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+140
+141
+142
+143
+144</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/roby_app/unmanaged_tasks_manager.rb', line 140</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_stop'>stop</span><span class='lparen'>(</span><span class='id identifier rubyid_world_name'>world_name</span><span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_w'>w</span> <span class='op'>=</span> <span class='id identifier rubyid_processes'>processes</span><span class='lbracket'>[</span><span class='id identifier rubyid_world_name'>world_name</span><span class='rbracket'>]</span>
+        <span class='id identifier rubyid_w'>w</span><span class='period'>.</span><span class='id identifier rubyid_kill'>kill</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="wait_termination-instance_method">
+  
+    #<strong>wait_termination</strong>(timeout = nil)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Waits for processes to terminate. <code>timeout</code> is the number of
+milliseconds we should wait. If set to nil, the call will block until a
+process terminates</p>
+
+<p>Returns a hash that maps deployment names to the Status object that
+represents their exit status.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/roby_app/unmanaged_tasks_manager.rb', line 115</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_wait_termination'>wait_termination</span><span class='lparen'>(</span><span class='id identifier rubyid_timeout'>timeout</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+    <span class='comment'># Verify that the monitor threads are in a good state, and
+</span>    <span class='comment'># gather the ones that are actually dead
+</span>    <span class='id identifier rubyid_dead_processes'>dead_processes</span> <span class='op'>=</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+    <span class='id identifier rubyid_processes'>processes</span><span class='period'>.</span><span class='id identifier rubyid_delete_if'>delete_if</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid__'>_</span><span class='comma'>,</span> <span class='id identifier rubyid_process'>process</span><span class='op'>|</span>
+        <span class='kw'>begin</span>
+            <span class='id identifier rubyid_process'>process</span><span class='period'>.</span><span class='id identifier rubyid_verify_threads_state'>verify_threads_state</span>
+        <span class='kw'>rescue</span> <span class='const'>Exception</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_e'>e</span>
+            <span class='id identifier rubyid_process'>process</span><span class='period'>.</span><span class='id identifier rubyid_fatal'>fatal</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>assuming </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_process'>process</span><span class='embexpr_end'>}</span><span class='tstring_content'> died because the background thread died with</span><span class='tstring_end'>&quot;</span></span>
+            <span class='const'>Roby</span><span class='period'>.</span><span class='id identifier rubyid_log_exception'>log_exception</span><span class='lparen'>(</span><span class='id identifier rubyid_e'>e</span><span class='comma'>,</span> <span class='id identifier rubyid_process'>process</span><span class='comma'>,</span> <span class='symbol'>:fatal</span><span class='rparen'>)</span>
+            <span class='id identifier rubyid_dead_processes'>dead_processes</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_process'>process</span>
+        <span class='kw'>end</span>
+
+        <span class='kw'>if</span> <span class='id identifier rubyid_process'>process</span><span class='period'>.</span><span class='id identifier rubyid_dead?'>dead?</span>
+            <span class='id identifier rubyid_dead_processes'>dead_processes</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_process'>process</span>
+        <span class='kw'>end</span>
+        <span class='id identifier rubyid_dead_processes'>dead_processes</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='id identifier rubyid_process'>process</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_dead_processes'>dead_processes</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Wed Apr 10 21:58:46 2019 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.19 (ruby-2.5.1).
+</div>
+
+    </div>
+  </body>
+</html>

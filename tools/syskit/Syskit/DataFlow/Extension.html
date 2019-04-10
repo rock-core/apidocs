@@ -1,0 +1,1707 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Module: Syskit::DataFlow::Extension
+  
+    &mdash; Documentation by YARD 0.9.19
+  
+</title>
+
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "Syskit::DataFlow::Extension";
+  relpath = '../../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../../_index.html">Index (E)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../Syskit.html" title="Syskit (module)">Syskit</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../DataFlow.html" title="Syskit::DataFlow (class)">DataFlow</a></span></span>
+     &raquo; 
+    <span class="title">Extension</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Module: Syskit::DataFlow::Extension
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/syskit/data_flow.rb</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>Methods that are mixed-in Syskit::Component to help with connection
+management</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><h2>Defined Under Namespace</h2>
+<p class="children">
+  
+    
+  
+    
+      <strong class="classes">Classes:</strong> <span class='object_link'><a href="Extension/NotComposition.html" title="Syskit::DataFlow::Extension::NotComposition (class)">NotComposition</a></span>, <span class='object_link'><a href="Extension/NotInputPort.html" title="Syskit::DataFlow::Extension::NotInputPort (class)">NotInputPort</a></span>, <span class='object_link'><a href="Extension/NotOutputPort.html" title="Syskit::DataFlow::Extension::NotOutputPort (class)">NotOutputPort</a></span>
+    
+  
+</p>
+
+
+
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#all_inputs_connected%3F-instance_method" title="#all_inputs_connected? (instance method)">#<strong>all_inputs_connected?</strong>(only_static: false)  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns true if all the declared connections to the inputs of
+<code>task</code> have been applied.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#connect_ports-instance_method" title="#connect_ports (instance method)">#<strong>connect_ports</strong>(sink_task, mappings)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Connect a set of ports between <code>self</code> and
+<code>target_task</code>.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#connected%3F-instance_method" title="#connected? (instance method)">#<strong>connected?</strong>(port_name)  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns true if <code>port_name</code> is connected.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#connected_to%3F-instance_method" title="#connected_to? (instance method)">#<strong>connected_to?</strong>(port_name, other_task, other_port)  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Tests if <code>port_name</code> is connected to <code>other_port</code> on
+<code>other_task</code>.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#disconnect_port-instance_method" title="#disconnect_port (instance method)">#<strong>disconnect_port</strong>(port_name)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#disconnect_ports-instance_method" title="#disconnect_ports (instance method)">#<strong>disconnect_ports</strong>(sink_task, mappings)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#each_concrete_input_connection-instance_method" title="#each_concrete_input_connection (instance method)">#<strong>each_concrete_input_connection</strong>(port = nil, &amp;block)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#each_concrete_output_connection-instance_method" title="#each_concrete_output_connection (instance method)">#<strong>each_concrete_output_connection</strong>(port = nil, &amp;block)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#each_input_connection-instance_method" title="#each_input_connection (instance method)">#<strong>each_input_connection</strong>(port = nil) {|source_task, source_port, sink_port, policy| ... } &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Yield or enumerates the connections that exist towards the input ports of
+self.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#each_output_connection-instance_method" title="#each_output_connection (instance method)">#<strong>each_output_connection</strong>(port = nil) {|source_port, sink_port, sink_task, policy| ... } &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Yield or enumerates the connections that exist from the output ports of
+self.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#ensure_has_input_port-instance_method" title="#ensure_has_input_port (instance method)">#<strong>ensure_has_input_port</strong>(name)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Makes sure that <code>self</code> has an input port called
+<code>name</code>.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#ensure_has_output_port-instance_method" title="#ensure_has_output_port (instance method)">#<strong>ensure_has_output_port</strong>(name)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Makes sure that <code>self</code> has an output port called
+<code>name</code>.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#forward_input_ports-instance_method" title="#forward_input_ports (instance method)">#<strong>forward_input_ports</strong>(task, mappings)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Forward an input of self to an input port of another task.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#forward_output_ports-instance_method" title="#forward_output_ports (instance method)">#<strong>forward_output_ports</strong>(task, mappings)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#has_concrete_input_connection%3F-instance_method" title="#has_concrete_input_connection? (instance method)">#<strong>has_concrete_input_connection?</strong>(port)  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Tests if an input port or any input ports is connected to an actual task
+(ignoring composition exports).</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#has_concrete_output_connection%3F-instance_method" title="#has_concrete_output_connection? (instance method)">#<strong>has_concrete_output_connection?</strong>(port)  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Tests if an output port or any output ports is connected to an actual task
+(ignoring composition exports).</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="all_inputs_connected?-instance_method">
+  
+    #<strong>all_inputs_connected?</strong>(only_static: false)  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns true if all the declared connections to the inputs of
+<code>task</code> have been applied. A given module won&#39;t be started
+until it is the case.</p>
+
+<p>If the <code>only_static</code> flag is set to true, only ports that
+require static connections will be considered</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+439
+440
+441
+442
+443
+444
+445
+446
+447
+448
+449
+450
+451
+452
+453
+454
+455
+456
+457
+458
+459
+460
+461
+462
+463
+464
+465
+466
+467
+468
+469
+470
+471
+472
+473
+474
+475
+476
+477
+478</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/data_flow.rb', line 439</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_all_inputs_connected?'>all_inputs_connected?</span><span class='lparen'>(</span><span class='label'>only_static:</span> <span class='kw'>false</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_logger'>logger</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Runtime.html" title="Syskit::Runtime (module)">Runtime</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Runtime/ConnectionManagement.html" title="Syskit::Runtime::ConnectionManagement (class)">ConnectionManagement</a></span></span>
+    <span class='id identifier rubyid_each_concrete_input_connection'>each_concrete_input_connection</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_source_task'>source_task</span><span class='comma'>,</span> <span class='id identifier rubyid_source_port'>source_port</span><span class='comma'>,</span> <span class='id identifier rubyid_sink_port'>sink_port</span><span class='comma'>,</span> <span class='id identifier rubyid_policy'>policy</span><span class='op'>|</span>
+        <span class='comment'># Our source may not be initialized at all
+</span>        <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_source_task'>source_task</span><span class='period'>.</span><span class='id identifier rubyid_orocos_task'>orocos_task</span>
+            <span class='id identifier rubyid_logger'>logger</span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span> <span class='kw'>do</span>
+                <span class='id identifier rubyid_logger'>logger</span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>missing input connection because the source task is not ready on port </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_sink_port'>sink_port</span><span class='embexpr_end'>}</span><span class='tstring_content'> of</span><span class='tstring_end'>&quot;</span></span>
+                <span class='id identifier rubyid_logger'>logger</span><span class='period'>.</span><span class='id identifier rubyid_log_pp'>log_pp</span> <span class='symbol'>:debug</span><span class='comma'>,</span> <span class='kw'>self</span>
+                <span class='id identifier rubyid_logger'>logger</span><span class='period'>.</span><span class='id identifier rubyid_log_nest'>log_nest</span><span class='lparen'>(</span><span class='int'>2</span><span class='rparen'>)</span> <span class='kw'>do</span>
+                    <span class='id identifier rubyid_logger'>logger</span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>connection expected to port </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_source_port'>source_port</span><span class='embexpr_end'>}</span><span class='tstring_content'> of</span><span class='tstring_end'>&quot;</span></span>
+                    <span class='id identifier rubyid_logger'>logger</span><span class='period'>.</span><span class='id identifier rubyid_log_pp'>log_pp</span> <span class='symbol'>:debug</span><span class='comma'>,</span> <span class='id identifier rubyid_source_task'>source_task</span>
+                <span class='kw'>end</span>
+                <span class='kw'>break</span>
+            <span class='kw'>end</span>
+            <span class='kw'>return</span> <span class='kw'>false</span>
+        <span class='kw'>end</span>
+        <span class='kw'>if</span> <span class='id identifier rubyid_only_static'>only_static</span> <span class='op'>&amp;&amp;</span> <span class='op'>!</span><span class='id identifier rubyid_concrete_model'>concrete_model</span><span class='period'>.</span><span class='id identifier rubyid_find_input_port'>find_input_port</span><span class='lparen'>(</span><span class='id identifier rubyid_sink_port'>sink_port</span><span class='rparen'>)</span>
+            <span class='kw'>next</span>
+        <span class='kw'>end</span>
+
+        <span class='id identifier rubyid_is_connected'>is_connected</span> <span class='op'>=</span>
+            <span class='const'><span class='object_link'><a href="../../Syskit.html#ActualDataFlow-constant" title="Syskit::ActualDataFlow (constant)">ActualDataFlow</a></span></span><span class='period'>.</span><span class='id identifier rubyid_has_edge?'>has_edge?</span><span class='lparen'>(</span><span class='id identifier rubyid_source_task'>source_task</span><span class='period'>.</span><span class='id identifier rubyid_orocos_task'>orocos_task</span><span class='comma'>,</span> <span class='id identifier rubyid_orocos_task'>orocos_task</span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span>
+            <span class='const'><span class='object_link'><a href="../../Syskit.html#ActualDataFlow-constant" title="Syskit::ActualDataFlow (constant)">ActualDataFlow</a></span></span><span class='period'>.</span><span class='id identifier rubyid_edge_info'>edge_info</span><span class='lparen'>(</span><span class='id identifier rubyid_source_task'>source_task</span><span class='period'>.</span><span class='id identifier rubyid_orocos_task'>orocos_task</span><span class='comma'>,</span> <span class='id identifier rubyid_orocos_task'>orocos_task</span><span class='rparen'>)</span><span class='period'>.</span>
+                <span class='id identifier rubyid_has_key?'>has_key?</span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='id identifier rubyid_source_port'>source_port</span><span class='comma'>,</span> <span class='id identifier rubyid_sink_port'>sink_port</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+
+        <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_is_connected'>is_connected</span>
+            <span class='id identifier rubyid_logger'>logger</span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span> <span class='kw'>do</span>
+                <span class='id identifier rubyid_logger'>logger</span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>missing input connection on port </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_sink_port'>sink_port</span><span class='embexpr_end'>}</span><span class='tstring_content'> of</span><span class='tstring_end'>&quot;</span></span>
+                <span class='id identifier rubyid_logger'>logger</span><span class='period'>.</span><span class='id identifier rubyid_log_pp'>log_pp</span> <span class='symbol'>:debug</span><span class='comma'>,</span> <span class='kw'>self</span>
+                <span class='id identifier rubyid_logger'>logger</span><span class='period'>.</span><span class='id identifier rubyid_log_nest'>log_nest</span><span class='lparen'>(</span><span class='int'>2</span><span class='rparen'>)</span> <span class='kw'>do</span>
+                    <span class='id identifier rubyid_logger'>logger</span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>  connection expected to port </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_source_port'>source_port</span><span class='embexpr_end'>}</span><span class='tstring_content'> of</span><span class='tstring_end'>&quot;</span></span>
+                    <span class='id identifier rubyid_logger'>logger</span><span class='period'>.</span><span class='id identifier rubyid_log_pp'>log_pp</span> <span class='symbol'>:debug</span><span class='comma'>,</span> <span class='id identifier rubyid_source_task'>source_task</span>
+                <span class='kw'>end</span>
+                <span class='kw'>break</span>
+            <span class='kw'>end</span>
+            <span class='kw'>return</span> <span class='kw'>false</span>
+        <span class='kw'>end</span>
+    <span class='kw'>end</span>
+    <span class='kw'>true</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="connect_ports-instance_method">
+  
+    #<strong>connect_ports</strong>(sink_task, mappings)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Connect a set of ports between <code>self</code> and
+<code>target_task</code>.</p>
+
+<p><code>mappings</code> describes the connections. It is a hash of the form</p>
+
+<pre class="code ruby"><code class="ruby">[source_port_name, sink_port_name] =&gt; connection_policy
+</code></pre>
+
+<p>where source_port_name is a port of <code>self</code> and sink_port_name a
+port of <code>target_task</code></p>
+
+<p>Raises ArgumentError if one of the ports do not exist.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+325
+326
+327
+328
+329
+330
+331
+332
+333</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/data_flow.rb', line 325</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_connect_ports'>connect_ports</span><span class='lparen'>(</span><span class='id identifier rubyid_sink_task'>sink_task</span><span class='comma'>,</span> <span class='id identifier rubyid_mappings'>mappings</span><span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='kw'>if</span> <span class='id identifier rubyid_mappings'>mappings</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
+
+    <span class='id identifier rubyid_mappings'>mappings</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='lparen'>(</span><span class='id identifier rubyid_out_port'>out_port</span><span class='comma'>,</span> <span class='id identifier rubyid_in_port'>in_port</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>|</span>
+        <span class='id identifier rubyid_ensure_has_output_port'>ensure_has_output_port</span><span class='lparen'>(</span><span class='id identifier rubyid_out_port'>out_port</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_sink_task'>sink_task</span><span class='period'>.</span><span class='id identifier rubyid_ensure_has_input_port'>ensure_has_input_port</span><span class='lparen'>(</span><span class='id identifier rubyid_in_port'>in_port</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_add_sink'>add_sink</span><span class='lparen'>(</span><span class='id identifier rubyid_sink_task'>sink_task</span><span class='comma'>,</span> <span class='id identifier rubyid_mappings'>mappings</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="connected?-instance_method">
+  
+    #<strong>connected?</strong>(port_name)  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns true if <code>port_name</code> is connected</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+302
+303
+304
+305
+306</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/data_flow.rb', line 302</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_connected?'>connected?</span><span class='lparen'>(</span><span class='id identifier rubyid_port_name'>port_name</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_dataflow_graph'>dataflow_graph</span> <span class='op'>=</span> <span class='id identifier rubyid_relation_graph_for'>relation_graph_for</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="../../Syskit.html#Flows-constant" title="Syskit::Flows (constant)">Flows</a></span></span><span class='op'>::</span><span class='const'>DataFlow</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_dataflow_graph'>dataflow_graph</span><span class='period'>.</span><span class='id identifier rubyid_has_out_connections?'>has_out_connections?</span><span class='lparen'>(</span><span class='kw'>self</span><span class='comma'>,</span> <span class='id identifier rubyid_port_name'>port_name</span><span class='rparen'>)</span> <span class='op'>||</span>
+        <span class='id identifier rubyid_dataflow_graph'>dataflow_graph</span><span class='period'>.</span><span class='id identifier rubyid_has_in_connections?'>has_in_connections?</span><span class='lparen'>(</span><span class='kw'>self</span><span class='comma'>,</span> <span class='id identifier rubyid_port_name'>port_name</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="connected_to?-instance_method">
+  
+    #<strong>connected_to?</strong>(port_name, other_task, other_port)  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Tests if <code>port_name</code> is connected to <code>other_port</code> on
+<code>other_task</code></p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+310
+311
+312
+313</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/data_flow.rb', line 310</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_connected_to?'>connected_to?</span><span class='lparen'>(</span><span class='id identifier rubyid_port_name'>port_name</span><span class='comma'>,</span> <span class='id identifier rubyid_other_task'>other_task</span><span class='comma'>,</span> <span class='id identifier rubyid_other_port'>other_port</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_relation_graph_for'>relation_graph_for</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="../../Syskit.html#Flows-constant" title="Syskit::Flows (constant)">Flows</a></span></span><span class='op'>::</span><span class='const'>DataFlow</span><span class='rparen'>)</span><span class='period'>.</span>
+        <span class='id identifier rubyid_connected?'>connected?</span><span class='lparen'>(</span><span class='kw'>self</span><span class='comma'>,</span> <span class='id identifier rubyid_port_name'>port_name</span><span class='comma'>,</span> <span class='id identifier rubyid_other_task'>other_task</span><span class='comma'>,</span> <span class='id identifier rubyid_other_port'>other_port</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="disconnect_port-instance_method">
+  
+    #<strong>disconnect_port</strong>(port_name)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+344
+345
+346
+347
+348
+349
+350
+351
+352
+353
+354
+355
+356
+357
+358
+359</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/data_flow.rb', line 344</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_disconnect_port'>disconnect_port</span><span class='lparen'>(</span><span class='id identifier rubyid_port_name'>port_name</span><span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_port_name'>port_name</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='symbol'>:name</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_port_name'>port_name</span> <span class='op'>=</span> <span class='id identifier rubyid_port_name'>port_name</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span>
+    <span class='kw'>end</span>
+
+    <span class='id identifier rubyid_each_source'>each_source</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_parent_task'>parent_task</span><span class='op'>|</span>
+        <span class='id identifier rubyid_current'>current</span> <span class='op'>=</span> <span class='id identifier rubyid_parent_task'>parent_task</span><span class='lbracket'>[</span><span class='kw'>self</span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="../../Syskit.html#Flows-constant" title="Syskit::Flows (constant)">Flows</a></span></span><span class='op'>::</span><span class='const'>DataFlow</span><span class='rbracket'>]</span>
+        <span class='id identifier rubyid_current'>current</span><span class='period'>.</span><span class='id identifier rubyid_delete_if'>delete_if</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='lparen'>(</span><span class='id identifier rubyid_from'>from</span><span class='comma'>,</span> <span class='id identifier rubyid_to'>to</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='id identifier rubyid_pol'>pol</span><span class='op'>|</span> <span class='id identifier rubyid_to'>to</span> <span class='op'>==</span> <span class='id identifier rubyid_port_name'>port_name</span> <span class='rbrace'>}</span>
+        <span class='id identifier rubyid_parent_task'>parent_task</span><span class='lbracket'>[</span><span class='kw'>self</span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="../../Syskit.html#Flows-constant" title="Syskit::Flows (constant)">Flows</a></span></span><span class='op'>::</span><span class='const'>DataFlow</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_current'>current</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_each_sink'>each_sink</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_child_task'>child_task</span><span class='op'>|</span>
+        <span class='id identifier rubyid_current'>current</span> <span class='op'>=</span> <span class='kw'>self</span><span class='lbracket'>[</span><span class='id identifier rubyid_child_task'>child_task</span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="../../Syskit.html#Flows-constant" title="Syskit::Flows (constant)">Flows</a></span></span><span class='op'>::</span><span class='const'>DataFlow</span><span class='rbracket'>]</span>
+        <span class='id identifier rubyid_current'>current</span><span class='period'>.</span><span class='id identifier rubyid_delete_if'>delete_if</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='lparen'>(</span><span class='id identifier rubyid_from'>from</span><span class='comma'>,</span> <span class='id identifier rubyid_to'>to</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='id identifier rubyid_pol'>pol</span><span class='op'>|</span> <span class='id identifier rubyid_from'>from</span> <span class='op'>==</span> <span class='id identifier rubyid_port_name'>port_name</span> <span class='rbrace'>}</span>
+        <span class='kw'>self</span><span class='lbracket'>[</span><span class='id identifier rubyid_child_task'>child_task</span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="../../Syskit.html#Flows-constant" title="Syskit::Flows (constant)">Flows</a></span></span><span class='op'>::</span><span class='const'>DataFlow</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_current'>current</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="disconnect_ports-instance_method">
+  
+    #<strong>disconnect_ports</strong>(sink_task, mappings)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+335
+336
+337
+338
+339
+340
+341
+342</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/data_flow.rb', line 335</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_disconnect_ports'>disconnect_ports</span><span class='lparen'>(</span><span class='id identifier rubyid_sink_task'>sink_task</span><span class='comma'>,</span> <span class='id identifier rubyid_mappings'>mappings</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_mappings'>mappings</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_out_port'>out_port</span><span class='comma'>,</span> <span class='id identifier rubyid_in_port'>in_port</span><span class='op'>|</span>
+        <span class='id identifier rubyid_ensure_has_output_port'>ensure_has_output_port</span><span class='lparen'>(</span><span class='id identifier rubyid_out_port'>out_port</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_sink_task'>sink_task</span><span class='period'>.</span><span class='id identifier rubyid_ensure_has_input_port'>ensure_has_input_port</span><span class='lparen'>(</span><span class='id identifier rubyid_in_port'>in_port</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_relation_graph_for'>relation_graph_for</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="../../Syskit.html#Flows-constant" title="Syskit::Flows (constant)">Flows</a></span></span><span class='op'>::</span><span class='const'>DataFlow</span><span class='rparen'>)</span><span class='period'>.</span>
+        <span class='id identifier rubyid_remove_connections'>remove_connections</span><span class='lparen'>(</span><span class='kw'>self</span><span class='comma'>,</span> <span class='id identifier rubyid_sink_task'>sink_task</span><span class='comma'>,</span> <span class='id identifier rubyid_mappings'>mappings</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="each_concrete_input_connection-instance_method">
+  
+    #<strong>each_concrete_input_connection</strong>(port = nil, &amp;block)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+385
+386
+387
+388</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/data_flow.rb', line 385</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_each_concrete_input_connection'>each_concrete_input_connection</span><span class='lparen'>(</span><span class='id identifier rubyid_port'>port</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_relation_graph_for'>relation_graph_for</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="../../Syskit.html#Flows-constant" title="Syskit::Flows (constant)">Flows</a></span></span><span class='op'>::</span><span class='const'>DataFlow</span><span class='rparen'>)</span><span class='period'>.</span>
+        <span class='id identifier rubyid_each_concrete_in_connection'>each_concrete_in_connection</span><span class='lparen'>(</span><span class='kw'>self</span><span class='comma'>,</span> <span class='id identifier rubyid_port'>port</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="each_concrete_output_connection-instance_method">
+  
+    #<strong>each_concrete_output_connection</strong>(port = nil, &amp;block)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+404
+405
+406
+407</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/data_flow.rb', line 404</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_each_concrete_output_connection'>each_concrete_output_connection</span><span class='lparen'>(</span><span class='id identifier rubyid_port'>port</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_relation_graph_for'>relation_graph_for</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="../../Syskit.html#Flows-constant" title="Syskit::Flows (constant)">Flows</a></span></span><span class='op'>::</span><span class='const'>DataFlow</span><span class='rparen'>)</span><span class='period'>.</span>
+        <span class='id identifier rubyid_each_concrete_out_connection'>each_concrete_out_connection</span><span class='lparen'>(</span><span class='kw'>self</span><span class='comma'>,</span> <span class='id identifier rubyid_port'>port</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="each_input_connection-instance_method">
+  
+    #<strong>each_input_connection</strong>(port = nil) {|source_task, source_port, sink_port, policy| ... } &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Yield or enumerates the connections that exist towards the input ports of
+self.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>port</span>
+      
+      
+        <span class='type'>(<tt>#name</tt>, <tt>String</tt>, <tt>nil</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>if non-nil, the port for which we want to enumerate the connections (in
+which case the sink_port yield parameter is guaranteed to be this name).
+Otherwise, all ports are enumerated.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Yields:</p>
+<ul class="yield">
+  
+    <li>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        
+        <div class='inline'>
+<p>each connections</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Yield Parameters:</p>
+<ul class="yieldparam">
+  
+    <li>
+      
+        <span class='name'>source_task</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../TaskContext.html" title="Syskit::TaskContext (class)">Syskit::TaskContext</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the source task in the connection</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>source_port</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the source port name on source_task</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>sink_port</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the sink port name on self. If the port argument is non-nil, it is
+guaranteed to be the same.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>policy</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the connection policy</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><span class='object_link'><a href="#each_concrete_input_connection-instance_method" title="Syskit::DataFlow::Extension#each_concrete_input_connection (method)">each_concrete_output_connection each_output_connection</a></span></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+380
+381
+382
+383</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/data_flow.rb', line 380</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_each_input_connection'>each_input_connection</span><span class='lparen'>(</span><span class='id identifier rubyid_port'>port</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_relation_graph_for'>relation_graph_for</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="../../Syskit.html#Flows-constant" title="Syskit::Flows (constant)">Flows</a></span></span><span class='op'>::</span><span class='const'>DataFlow</span><span class='rparen'>)</span><span class='period'>.</span>
+        <span class='id identifier rubyid_each_in_connection'>each_in_connection</span><span class='lparen'>(</span><span class='kw'>self</span><span class='comma'>,</span> <span class='id identifier rubyid_port'>port</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="each_output_connection-instance_method">
+  
+    #<strong>each_output_connection</strong>(port = nil) {|source_port, sink_port, sink_task, policy| ... } &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Yield or enumerates the connections that exist from the output ports of
+self.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>source_task</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../Component.html" title="Syskit::Component (class)">Component</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the task whose connections are being enumerated</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>port</span>
+      
+      
+        <span class='type'>(<tt>#name</tt>, <tt>String</tt>, <tt>nil</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>if non-nil, the port for which we want to enumerate the connections (in
+which case the source_port yield parameter is guaranteed to be this name).
+Otherwise, all ports are enumerated.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Yields:</p>
+<ul class="yield">
+  
+    <li>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        
+        <div class='inline'>
+<p>each connections</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Yield Parameters:</p>
+<ul class="yieldparam">
+  
+    <li>
+      
+        <span class='name'>source_port</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the source port name on self. If the port argument is non-nil, it is
+guaranteed to be the same.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>sink_port</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the sink port name on sink_task.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>sink_task</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../Component.html" title="Syskit::Component (class)">Syskit::Component</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the sink task in the connection</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>policy</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the connection policy</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+429
+430
+431
+432</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/data_flow.rb', line 429</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_each_output_connection'>each_output_connection</span><span class='lparen'>(</span><span class='id identifier rubyid_port'>port</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_relation_graph_for'>relation_graph_for</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="../../Syskit.html#Flows-constant" title="Syskit::Flows (constant)">Flows</a></span></span><span class='op'>::</span><span class='const'>DataFlow</span><span class='rparen'>)</span><span class='period'>.</span>
+        <span class='id identifier rubyid_each_out_connection'>each_out_connection</span><span class='lparen'>(</span><span class='kw'>self</span><span class='comma'>,</span> <span class='id identifier rubyid_port'>port</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="ensure_has_input_port-instance_method">
+  
+    #<strong>ensure_has_input_port</strong>(name)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Makes sure that <code>self</code> has an input port called
+<code>name</code>. It will instanciate a dynamic port if needed.</p>
+
+<p>Raises ArgumentError if no such port can ever exist on <code>self</code></p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+266
+267
+268
+269
+270</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/data_flow.rb', line 266</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_ensure_has_input_port'>ensure_has_input_port</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_model'>model</span><span class='period'>.</span><span class='id identifier rubyid_find_input_port'>find_input_port</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="Extension/NotInputPort.html" title="Syskit::DataFlow::Extension::NotInputPort (class)">NotInputPort</a></span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='kw'>self</span><span class='embexpr_end'>}</span><span class='tstring_content'> has no input port called </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="ensure_has_output_port-instance_method">
+  
+    #<strong>ensure_has_output_port</strong>(name)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Makes sure that <code>self</code> has an output port called
+<code>name</code>. It will instanciate a dynamic port if needed.</p>
+
+<p>Raises ArgumentError if no such port can ever exist on <code>self</code></p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+256
+257
+258
+259
+260</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/data_flow.rb', line 256</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_ensure_has_output_port'>ensure_has_output_port</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_model'>model</span><span class='period'>.</span><span class='id identifier rubyid_find_output_port'>find_output_port</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="Extension/NotOutputPort.html" title="Syskit::DataFlow::Extension::NotOutputPort (class)">NotOutputPort</a></span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='kw'>self</span><span class='embexpr_end'>}</span><span class='tstring_content'> has no output port called </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="forward_input_ports-instance_method">
+  
+    #<strong>forward_input_ports</strong>(task, mappings)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Forward an input of self to an input port of another task</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/data_flow.rb', line 273</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_forward_input_ports'>forward_input_ports</span><span class='lparen'>(</span><span class='id identifier rubyid_task'>task</span><span class='comma'>,</span> <span class='id identifier rubyid_mappings'>mappings</span><span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_fullfills?'>fullfills?</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="../Composition.html" title="Syskit::Composition (class)">Composition</a></span></span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="Extension/NotComposition.html" title="Syskit::DataFlow::Extension::NotComposition (class)">NotComposition</a></span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='kw'>self</span><span class='embexpr_end'>}</span><span class='tstring_content'> is not a composition</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>elsif</span> <span class='id identifier rubyid_mappings'>mappings</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
+        <span class='kw'>return</span>
+    <span class='kw'>end</span>
+
+    <span class='id identifier rubyid_mappings'>mappings</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='lparen'>(</span><span class='id identifier rubyid_from'>from</span><span class='comma'>,</span> <span class='id identifier rubyid_to'>to</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>|</span>
+        <span class='id identifier rubyid_ensure_has_input_port'>ensure_has_input_port</span><span class='lparen'>(</span><span class='id identifier rubyid_from'>from</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_task'>task</span><span class='period'>.</span><span class='id identifier rubyid_ensure_has_input_port'>ensure_has_input_port</span><span class='lparen'>(</span><span class='id identifier rubyid_to'>to</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_add_sink'>add_sink</span><span class='lparen'>(</span><span class='id identifier rubyid_task'>task</span><span class='comma'>,</span> <span class='id identifier rubyid_mappings'>mappings</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="forward_output_ports-instance_method">
+  
+    #<strong>forward_output_ports</strong>(task, mappings)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+287
+288
+289
+290
+291
+292
+293
+294
+295
+296
+297
+298
+299</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/data_flow.rb', line 287</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_forward_output_ports'>forward_output_ports</span><span class='lparen'>(</span><span class='id identifier rubyid_task'>task</span><span class='comma'>,</span> <span class='id identifier rubyid_mappings'>mappings</span><span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_task'>task</span><span class='period'>.</span><span class='id identifier rubyid_fullfills?'>fullfills?</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="../Composition.html" title="Syskit::Composition (class)">Composition</a></span></span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="Extension/NotComposition.html" title="Syskit::DataFlow::Extension::NotComposition (class)">NotComposition</a></span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='kw'>self</span><span class='embexpr_end'>}</span><span class='tstring_content'> is not a composition</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>elsif</span> <span class='id identifier rubyid_mappings'>mappings</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
+        <span class='kw'>return</span>
+    <span class='kw'>end</span>
+
+    <span class='id identifier rubyid_mappings'>mappings</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='lparen'>(</span><span class='id identifier rubyid_from'>from</span><span class='comma'>,</span> <span class='id identifier rubyid_to'>to</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>|</span>
+        <span class='id identifier rubyid_ensure_has_output_port'>ensure_has_output_port</span><span class='lparen'>(</span><span class='id identifier rubyid_from'>from</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_task'>task</span><span class='period'>.</span><span class='id identifier rubyid_ensure_has_output_port'>ensure_has_output_port</span><span class='lparen'>(</span><span class='id identifier rubyid_to'>to</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_add_sink'>add_sink</span><span class='lparen'>(</span><span class='id identifier rubyid_task'>task</span><span class='comma'>,</span> <span class='id identifier rubyid_mappings'>mappings</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="has_concrete_input_connection?-instance_method">
+  
+    #<strong>has_concrete_input_connection?</strong>(port)  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Tests if an input port or any input ports is connected to an actual task
+(ignoring composition exports)</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>port</span>
+      
+      
+        <span class='type'>(<tt>#name</tt>, <tt>String</tt>, <tt>nil</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>if non-nil, only connections involving this port will be tested against.
+Otherwise, the method tests for any inbound connection to self</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>true if the given port, or the task, is connected to something by an
+inbound connection</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+399
+400
+401
+402</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/data_flow.rb', line 399</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_has_concrete_input_connection?'>has_concrete_input_connection?</span><span class='lparen'>(</span><span class='id identifier rubyid_port'>port</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_each_concrete_input_connection'>each_concrete_input_connection</span><span class='lparen'>(</span><span class='id identifier rubyid_port'>port</span><span class='rparen'>)</span> <span class='lbrace'>{</span> <span class='kw'>return</span> <span class='kw'>true</span> <span class='rbrace'>}</span>
+    <span class='kw'>false</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="has_concrete_output_connection?-instance_method">
+  
+    #<strong>has_concrete_output_connection?</strong>(port)  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Tests if an output port or any output ports is connected to an actual task
+(ignoring composition exports)</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>port</span>
+      
+      
+        <span class='type'>(<tt>#name</tt>, <tt>String</tt>, <tt>nil</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>if non-nil, only connections involving this port will be tested against.
+Otherwise, the method tests for any outbound connection to self</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>true if the given port, or the task, is connected to something by an
+outbound connection</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+418
+419
+420
+421</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/data_flow.rb', line 418</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_has_concrete_output_connection?'>has_concrete_output_connection?</span><span class='lparen'>(</span><span class='id identifier rubyid_port'>port</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_each_concrete_output_connection'>each_concrete_output_connection</span><span class='lparen'>(</span><span class='id identifier rubyid_port'>port</span><span class='rparen'>)</span> <span class='lbrace'>{</span> <span class='kw'>return</span> <span class='kw'>true</span> <span class='rbrace'>}</span>
+    <span class='kw'>false</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Wed Apr 10 21:49:59 2019 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.19 (ruby-2.5.1).
+</div>
+
+    </div>
+  </body>
+</html>

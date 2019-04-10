@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: Orocos::Avahi::NameService
+  
+    &mdash; Documentation by YARD 0.9.19
+  
+</title>
+
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "Orocos::Avahi::NameService";
+  relpath = '../../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../../_index.html">Index (N)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../Orocos.html" title="Orocos (module)">Orocos</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Avahi.html" title="Orocos::Avahi (module)">Avahi</a></span></span>
+     &raquo; 
+    <span class="title">NameService</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: Orocos::Avahi::NameService
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName"><span class='object_link'><a href="../NameServiceBase.html" title="Orocos::NameServiceBase (class)">NameServiceBase</a></span></span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next"><span class='object_link'><a href="../NameServiceBase.html" title="Orocos::NameServiceBase (class)">NameServiceBase</a></span></li>
+          
+            <li class="next">Orocos::Avahi::NameService</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/orocos/name_service.rb</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>Name service to access Orocos Tasks which are publishing their IOR via
+Avahi</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+
+
+
+
+  <h2>Instance Attribute Summary</h2>
+  
+  <h3 class="inherited">Attributes inherited from <span class='object_link'><a href="../NameServiceBase.html" title="Orocos::NameServiceBase (class)">NameServiceBase</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../NameServiceBase.html#name-instance_method" title="Orocos::NameServiceBase#name (method)">#name</a></span></p>
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#deregister-instance_method" title="#deregister (instance method)">#<strong>deregister</strong>(task)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Deregisters the given name or task from the name service.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get-instance_method" title="#get (instance method)">#<strong>get</strong>(name, options = Hash.new)  &#x21d2; Orocos::TaskContext, Orocos::Log::TaskContext </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Gets an handle to a local/remote Orocos Task having the given name.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(searchdomain)  &#x21d2; NameService </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>A new instance of NameService which is listening on the given search
+domain.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#ior-instance_method" title="#ior (instance method)">#<strong>ior</strong>(name)  &#x21d2; String </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Gets the IOR for the given Orocos Task having the given name.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#names-instance_method" title="#names (instance method)">#<strong>names</strong>  &#x21d2; Array&lt;String&gt; </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns all Orocos Task names known by the name service  inclusive the
+namespace of the NameService instance.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#register-instance_method" title="#register (instance method)">#<strong>register</strong>(task, name = task.name)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Registers the IOR of the given <span class='object_link'><a href="../TaskContext.html" title="Orocos::TaskContext (class)">TaskContext</a></span> on the Avahi name
+service.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#same_namespace%3F-instance_method" title="#same_namespace? (instance method)">#<strong>same_namespace?</strong>(name)  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="../NameServiceBase.html" title="Orocos::NameServiceBase (class)">NameServiceBase</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../NameServiceBase.html#each_task-instance_method" title="Orocos::NameServiceBase#each_task (method)">#each_task</a></span>, <span class='object_link'><a href="../NameServiceBase.html#find_one_running-instance_method" title="Orocos::NameServiceBase#find_one_running (method)">#find_one_running</a></span>, <span class='object_link'><a href="../NameServiceBase.html#get_provides-instance_method" title="Orocos::NameServiceBase#get_provides (method)">#get_provides</a></span>, <span class='object_link'><a href="../NameServiceBase.html#reachable%3F-instance_method" title="Orocos::NameServiceBase#reachable? (method)">#reachable?</a></span>, <span class='object_link'><a href="../NameServiceBase.html#task_reachable%3F-instance_method" title="Orocos::NameServiceBase#task_reachable? (method)">#task_reachable?</a></span>, <span class='object_link'><a href="../NameServiceBase.html#validate-instance_method" title="Orocos::NameServiceBase#validate (method)">#validate</a></span></p>
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    #<strong>initialize</strong>(searchdomain)  &#x21d2; <tt><span class='object_link'><a href="" title="Orocos::Avahi::NameService (class)">NameService</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>A new instance of NameService which is listening on the given search
+domain. The serach domain must have a ._tcp or ._udp at the end for a
+protocol type.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>searchdomain</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The search domain the name service is listening to (_myrobot._tcp /
+_myrobot._udp)</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>ArgumentError</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+684
+685
+686
+687
+688
+689
+690
+691
+692
+693
+694
+695
+696
+697
+698
+699
+700
+701
+702
+703</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/orocos/name_service.rb', line 684</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_searchdomain'>searchdomain</span><span class='rparen'>)</span>
+
+    <span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>no serachdomain is given</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>unless</span> <span class='id identifier rubyid_searchdomain'>searchdomain</span>
+
+    <span class='ivar'>@registered_tasks</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+    <span class='ivar'>@searchdomain</span> <span class='op'>=</span> <span class='id identifier rubyid_searchdomain'>searchdomain</span>
+
+    <span class='kw'>begin</span>
+        <span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>servicediscovery</span><span class='tstring_end'>&#39;</span></span>
+        <span class='ivar'>@avahi_nameserver</span> <span class='op'>=</span> <span class='op'>::</span><span class='const'>Avahi</span><span class='op'>::</span><span class='const'>ServiceDiscovery</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+    <span class='kw'>rescue</span> <span class='const'>LoadError</span>
+        <span class='id identifier rubyid_raise'>raise</span> <span class='const'>LoadError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>NameService: &#39;distributed_nameserver&#39; needs to be installed for Avahi nameservice support</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>end</span>
+    <span class='comment'># Start listening on the given domains (this does refer to the _myservice._tcp service domain and not(!) the .local domain)
+</span>    <span class='kw'>begin</span>
+        <span class='ivar'>@avahi_nameserver</span><span class='period'>.</span><span class='id identifier rubyid_listen_on'>listen_on</span><span class='lparen'>(</span><span class='const'>Array</span><span class='lparen'>(</span><span class='ivar'>@searchdomain</span><span class='rparen'>)</span><span class='rparen'>)</span>
+    <span class='kw'>rescue</span> <span class='const'>RuntimeError</span>
+        <span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>given search domain </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_searchdomain'>searchdomain</span><span class='embexpr_end'>}</span><span class='tstring_content'> is invalid. Use &#39;_myservice._tcp&#39;.</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="deregister-instance_method">
+  
+    #<strong>deregister</strong>(task)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+  <div class="note notetag">
+    <strong>Note:</strong>
+    <div class='inline'>
+<p>This only works for tasks which were registered by the same ruby instance.</p>
+</div>
+  </div>
+
+
+<p>Deregisters the given name or task from the name service.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>task</span>
+      
+      
+        <span class='type'>(<tt>String</tt>, <tt><span class='object_link'><a href="../TaskContext.html" title="Orocos::TaskContext (class)">TaskContext</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The name or task</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+735
+736
+737
+738
+739
+740
+741
+742</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/orocos/name_service.rb', line 735</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_deregister'>deregister</span><span class='lparen'>(</span><span class='id identifier rubyid_task'>task</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_name'>name</span> <span class='op'>=</span> <span class='kw'>if</span> <span class='id identifier rubyid_task'>task</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span> <span class='symbol'>:name</span>
+               <span class='id identifier rubyid_task'>task</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span>
+           <span class='kw'>else</span>
+               <span class='id identifier rubyid_task'>task</span>
+           <span class='kw'>end</span>
+    <span class='ivar'>@registered_tasks</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span> <span class='id identifier rubyid_name'>name</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get-instance_method">
+  
+    #<strong>get</strong>(name, options = Hash.new)  &#x21d2; <tt><span class='object_link'><a href="../TaskContext.html" title="Orocos::TaskContext (class)">Orocos::TaskContext</a></span></tt>, <tt><span class='object_link'><a href="../Log/TaskContext.html" title="Orocos::Log::TaskContext (class)">Orocos::Log::TaskContext</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Gets an handle to a local/remote Orocos Task having the given name.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the name of the <span class='object_link'><a href="../TaskContext.html" title="Orocos::TaskContext (class)">TaskContext</a></span></p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>options</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>Hash.new</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the options used by the name service to find the <span class='object_link'><a href="../TaskContext.html" title="Orocos::TaskContext (class)">TaskContext</a></span></p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    
+    
+    <p class="tag_title">Options Hash (<tt>options</tt>):</p>
+    <ul class="option">
+      
+        <li>
+          <span class="name">:name</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>Overwrites The real name of the task</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:process</span>
+          <span class="type">(<tt><span class='object_link'><a href="../Process.html" title="Orocos::Process (class)">Orocos::Process</a></span></tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>The process supporting the task</p>
+</div>
+          
+        </li>
+      
+    </ul>
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../TaskContext.html" title="Orocos::TaskContext (class)">Orocos::TaskContext</a></span></tt>, <tt><span class='object_link'><a href="../Log/TaskContext.html" title="Orocos::Log::TaskContext (class)">Orocos::Log::TaskContext</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../NotFound.html" title="Orocos::NotFound (class)">Orocos::NotFound</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>if no <span class='object_link'><a href="../TaskContext.html" title="Orocos::TaskContext (class)">TaskContext</a></span> can be found</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><span class='object_link'><a href="../NameService.html" title="Orocos::NameService (class)">NameService</a></span></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+760
+761
+762
+763
+764
+765
+766
+767</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/orocos/name_service.rb', line 760</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span><span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='const'>Kernel</span><span class='period'>.</span><span class='id identifier rubyid_validate_options'>validate_options</span> <span class='id identifier rubyid_options'>options</span><span class='comma'>,</span><span class='symbol'>:name</span><span class='comma'>,</span><span class='symbol'>:namespace</span><span class='comma'>,</span><span class='symbol'>:process</span>
+    <span class='id identifier rubyid_ns'>ns</span><span class='comma'>,</span><span class='id identifier rubyid__'>_</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Namespace.html" title="Orocos::Namespace (module)">Namespace</a></span></span><span class='period'>.</span><span class='id identifier rubyid_split_name'><span class='object_link'><a href="../Namespace.html#split_name-class_method" title="Orocos::Namespace.split_name (method)">split_name</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:namespace</span><span class='rbracket'>]</span> <span class='op'>||=</span> <span class='id identifier rubyid_ns'>ns</span>
+    <span class='const'><span class='object_link'><a href="../../Orocos.html" title="Orocos (module)">Orocos</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../TaskContext.html" title="Orocos::TaskContext (class)">TaskContext</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../TaskContext.html#new-class_method" title="Orocos::TaskContext.new (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_ior'>ior</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span><span class='comma'>,</span><span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
+<span class='kw'>rescue</span> <span class='const'><span class='object_link'><a href="../../Orocos.html" title="Orocos (module)">Orocos</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../CORBA.html" title="Orocos::CORBA (module)">CORBA</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../CORBA/ComError.html" title="Orocos::CORBA::ComError (class)">ComError</a></span></span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_e'>e</span>
+    <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="../../Orocos.html" title="Orocos (module)">Orocos</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../NotFound.html" title="Orocos::NotFound (class)">NotFound</a></span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>task context </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'> is registered but cannot be reached.</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="ior-instance_method">
+  
+    #<strong>ior</strong>(name)  &#x21d2; <tt>String</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Gets the IOR for the given Orocos Task having the given name.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the name of the TaskContext</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../NotFound.html" title="Orocos::NotFound (class)">Orocos::NotFound</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>if the TaskContext cannot be found</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+745
+746
+747
+748
+749
+750
+751
+752
+753
+754
+755
+756
+757</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/orocos/name_service.rb', line 745</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_ior'>ior</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_services'>services</span> <span class='op'>=</span> <span class='ivar'>@avahi_nameserver</span><span class='period'>.</span><span class='id identifier rubyid_find_services'>find_services</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_services'>services</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
+        <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="../../Orocos.html" title="Orocos (module)">Orocos</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../NotFound.html" title="Orocos::NotFound (class)">NotFound</a></span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Avahi nameservice could not find a task named &#39;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'>&#39;</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>elsif</span> <span class='id identifier rubyid_services'>services</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span> <span class='op'>&gt;</span> <span class='int'>1</span>
+        <span class='id identifier rubyid_warn'>warn</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Avahi: &#39;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'>&#39; found multiple times. Possibly due to publishing on IPv4 and IPv6, or on multiple interfaces -- picking first one in list</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_ior'>ior</span> <span class='op'>=</span> <span class='id identifier rubyid_services'>services</span><span class='period'>.</span><span class='id identifier rubyid_first'>first</span><span class='period'>.</span><span class='id identifier rubyid_get_description'>get_description</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>IOR</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_ior'>ior</span> <span class='op'>||</span> <span class='id identifier rubyid_ior'>ior</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
+        <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="../../Orocos.html" title="Orocos (module)">Orocos</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../NotFound.html" title="Orocos::NotFound (class)">NotFound</a></span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Avahi nameservice could not retrieve an ior for task </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_ior'>ior</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="names-instance_method">
+  
+    #<strong>names</strong>  &#x21d2; <tt>Array&lt;String&gt;</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns all Orocos Task names known by the name service  inclusive the
+namespace of the NameService instance.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array&lt;String&gt;</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+706
+707
+708</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/orocos/name_service.rb', line 706</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_names'>names</span>
+    <span class='ivar'>@avahi_nameserver</span><span class='period'>.</span><span class='id identifier rubyid_get_all_services'>get_all_services</span><span class='period'>.</span><span class='id identifier rubyid_uniq'>uniq</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="register-instance_method">
+  
+    #<strong>register</strong>(task, name = task.name)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Registers the IOR of the given <span class='object_link'><a href="../TaskContext.html" title="Orocos::TaskContext (class)">TaskContext</a></span> on the Avahi name
+service</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>task</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../TaskContext.html" title="Orocos::TaskContext (class)">Orocos::TaskContext</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The task.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>task.name</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The name which is used to register the task.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+718
+719
+720
+721
+722
+723
+724
+725
+726
+727
+728
+729</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/orocos/name_service.rb', line 718</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_register'>register</span><span class='lparen'>(</span><span class='id identifier rubyid_task'>task</span><span class='comma'>,</span><span class='id identifier rubyid_name'>name</span><span class='op'>=</span><span class='id identifier rubyid_task'>task</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_existing_service'>existing_service</span> <span class='op'>=</span> <span class='ivar'>@registered_tasks</span><span class='lbracket'>[</span><span class='id identifier rubyid_name'>name</span><span class='rbracket'>]</span>
+    <span class='id identifier rubyid_service'>service</span> <span class='op'>=</span> <span class='id identifier rubyid_existing_service'>existing_service</span> <span class='op'>||</span> <span class='op'>::</span><span class='const'>Avahi</span><span class='op'>::</span><span class='const'>ServiceDiscovery</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+    <span class='id identifier rubyid_service'>service</span><span class='period'>.</span><span class='id identifier rubyid_set_description'>set_description</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>IOR</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span><span class='id identifier rubyid_task'>task</span><span class='period'>.</span><span class='id identifier rubyid_ior'>ior</span><span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_existing_service'>existing_service</span>
+        <span class='id identifier rubyid_service'>service</span><span class='period'>.</span><span class='id identifier rubyid_update'>update</span>
+    <span class='kw'>else</span>
+        <span class='ivar'>@registered_tasks</span><span class='lbracket'>[</span><span class='id identifier rubyid_name'>name</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_service'>service</span>
+        <span class='id identifier rubyid_service'>service</span><span class='period'>.</span><span class='id identifier rubyid_publish'>publish</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='ivar'>@searchdomain</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_service'>service</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="same_namespace?-instance_method">
+  
+    #<strong>same_namespace?</strong>(name)  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+710
+711
+712</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/orocos/name_service.rb', line 710</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_same_namespace?'>same_namespace?</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
+    <span class='kw'>true</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Wed Apr 10 22:10:27 2019 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.19 (ruby-2.5.1).
+</div>
+
+    </div>
+  </body>
+</html>

@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Module: Orocos::Scripts
+  
+    &mdash; Documentation by YARD 0.9.19
+  
+</title>
+
+  <link rel="stylesheet" href="../css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "Orocos::Scripts";
+  relpath = '../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../_index.html">Index (S)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../Orocos.html" title="Orocos (module)">Orocos</a></span></span>
+     &raquo; 
+    <span class="title">Scripts</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Module: Orocos::Scripts
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/orocos/scripts.rb</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>Common command-line option handling for Ruby scripts</p>
+
+<p>Its main functionality is to allow the override of run configuration with
+command line options, such as running under gdb or valgrind</p>
+
+<p>The following command-line options are implemented:</p>
+
+<p>–<a href=":IP">host=HOSTNAME</a> sets the hostname and IP of the CORBA name
+server to</p>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_connect'>connect</span> <span class='id identifier rubyid_to'>to</span>
+</code></pre>
+
+<p>–attach do not start deployment processes given to <span class='object_link'><a href="#run-class_method" title="Orocos::Scripts.run (method)">Scripts.run</a></span> if it</p>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_appears'>appears</span> <span class='id identifier rubyid_that'>that</span> <span class='id identifier rubyid_they'>they</span> <span class='id identifier rubyid_are'>are</span> <span class='id identifier rubyid_already'>already</span> <span class='id identifier rubyid_running'>running</span>
+</code></pre>
+
+<p>–conf-dir=DIR loads the given configuration directory</p>
+
+<p>–<a href=":FILE">conf=TASKNAME</a>,conf0,conf1 apply the configuration
+[conf0, conf1]</p>
+
+<pre class="code ruby"><code class="ruby">to the task whose name or model name is TASKNAME. This option is handled
+when {Scripts.conf} is called. If TASKNAME is omitted, the configuration
+becomes the default for all tasks.
+</code></pre>
+
+<p>–gdbserver make <span class='object_link'><a href="#run-class_method" title="Orocos::Scripts.run (method)">Scripts.run</a></span> start everything under gdb</p>
+
+<p>–valgrind make <span class='object_link'><a href="#run-class_method" title="Orocos::Scripts.run (method)">Scripts.run</a></span> start everything under valgrind</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+      <pre class="example code"><code>require &#39;orocos&#39;
+require &#39;orocos/scripts&#39;
+options = OptionParser.new do |opt|
+    opt.banner = &quot;myscript [options]&quot;
+    Orocos::Scripts.common_optparse_setup(opt)
+end
+arguments = options.parse(ARGV)
+...
+Orocos::Scripts.run &#39;my::Task&#39; =&gt; &#39;task&#39; do
+    task = Orocos.get &#39;task&#39;
+
+    # Replaces Orocos.apply_conf, taking into account the command
+    # line options
+    Orocos::Scripts.conf(task)
+
+    Orocos::Scripts.watch(task)
+end</code></pre>
+    
+  </div>
+
+
+</div>
+
+
+
+  <h2>Class Attribute Summary <small><a href="#" class="summary_toggle">collapse</a></small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#conf_default-class_method" title="conf_default (class method)">.<strong>conf_default</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute conf_default.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#conf_setup-class_method" title="conf_setup (class method)">.<strong>conf_setup</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>The configuration specifications stored so far, as a mapping from a task
+descriptor (either a task name or a task model name) to a list of
+configurations to apply.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#run_options-class_method" title="run_options (class method)">.<strong>run_options</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Options that should be passed to Orocos.run.</p>
+</div></span>
+  
+</li>
+
+    
+  </ul>
+
+
+
+
+  
+    <h2>
+      Class Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#common_optparse_setup-class_method" title="common_optparse_setup (class method)">.<strong>common_optparse_setup</strong>(optparse)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#conf-class_method" title="conf (class method)">.<strong>conf</strong>(task)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#parse_stream_option-class_method" title="parse_stream_option (class method)">.<strong>parse_stream_option</strong>(opt, type_name = nil)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#run-class_method" title="run (class method)">.<strong>run</strong>(*options, &amp;block)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#watch-class_method" title="watch (class method)">.<strong>watch</strong>(*objects, &amp;block)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Watch for a set of tasks, ports or port readers and display information
+about them during execution.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  <div id="class_attr_details" class="attr_details">
+    <h2>Class Attribute Details</h2>
+    
+      
+      <span id=""></span>
+      <div class="method_details first">
+  <h3 class="signature first" id="conf_default-class_method">
+  
+    .<strong>conf_default</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute conf_default</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+144
+145
+146</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/orocos/scripts.rb', line 144</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_conf_default'>conf_default</span>
+  <span class='ivar'>@conf_default</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="conf_setup-class_method">
+  
+    .<strong>conf_setup</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>The configuration specifications stored so far, as a mapping from a task
+descriptor (either a task name or a task model name) to a list of
+configurations to apply.</p>
+
+<p>The task name takes precedence on the model</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+143
+144
+145</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/orocos/scripts.rb', line 143</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_conf_setup'>conf_setup</span>
+  <span class='ivar'>@conf_setup</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="run_options-class_method">
+  
+    .<strong>run_options</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Options that should be passed to Orocos.run</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+146
+147
+148</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/orocos/scripts.rb', line 146</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_run_options'>run_options</span>
+  <span class='ivar'>@run_options</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="common_optparse_setup-class_method">
+  
+    .<strong>common_optparse_setup</strong>(optparse)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/orocos/scripts.rb', line 152</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_common_optparse_setup'>common_optparse_setup</span><span class='lparen'>(</span><span class='id identifier rubyid_optparse'>optparse</span><span class='rparen'>)</span>
+    <span class='ivar'>@attach</span> <span class='op'>=</span> <span class='kw'>false</span>
+    <span class='ivar'>@gui</span> <span class='op'>=</span> <span class='kw'>false</span>
+    <span class='ivar'>@run_options</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+    <span class='id identifier rubyid_optparse'>optparse</span><span class='period'>.</span><span class='id identifier rubyid_on'>on</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>--host=HOSTNAME</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='const'>String</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_hostname'>hostname</span><span class='op'>|</span>
+        <span class='const'><span class='object_link'><a href="../Orocos.html" title="Orocos (module)">Orocos</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="CORBA.html" title="Orocos::CORBA (module)">CORBA</a></span></span><span class='period'>.</span><span class='id identifier rubyid_name_service'><span class='object_link'><a href="CORBA.html#name_service-class_method" title="Orocos::CORBA.name_service (method)">name_service</a></span></span> <span class='op'>=</span> <span class='id identifier rubyid_hostname'>hostname</span><span class='period'>.</span><span class='id identifier rubyid_to_str'>to_str</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_optparse'>optparse</span><span class='period'>.</span><span class='id identifier rubyid_on'>on</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>--gui</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>start vizkit&#39;s task inspector instead of having a text state monitoring</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>do</span>
+        <span class='ivar'>@gui</span> <span class='op'>=</span> <span class='kw'>true</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_optparse'>optparse</span><span class='period'>.</span><span class='id identifier rubyid_on'>on</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>--attach</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>do not actually start the components, simply attach to running ones</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>do</span>
+        <span class='ivar'>@attach</span> <span class='op'>=</span> <span class='kw'>true</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_optparse'>optparse</span><span class='period'>.</span><span class='id identifier rubyid_on'>on</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>--conf-dir=DIR</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='const'>String</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>load the configuration files in this directory (not needed when using bundles)</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_conf_source'>conf_source</span><span class='op'>|</span>
+        <span class='const'><span class='object_link'><a href="../Orocos.html" title="Orocos (module)">Orocos</a></span></span><span class='period'>.</span><span class='id identifier rubyid_conf'><span class='object_link'><a href="../Orocos.html#conf-class_method" title="Orocos.conf (method)">conf</a></span></span><span class='period'>.</span><span class='id identifier rubyid_load_dir'>load_dir</span><span class='lparen'>(</span><span class='id identifier rubyid_conf_source'>conf_source</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_optparse'>optparse</span><span class='period'>.</span><span class='id identifier rubyid_on'>on</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>--conf=TASK[:FILE],conf0,conf1</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='const'>String</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>load this specific configuration for the given task. The task is given by its deployed name</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_conf_setup'>conf_setup</span><span class='op'>|</span>
+        <span class='id identifier rubyid_task'>task</span><span class='comma'>,</span> <span class='op'>*</span><span class='id identifier rubyid_conf_sections'>conf_sections</span> <span class='op'>=</span> <span class='id identifier rubyid_conf_setup'>conf_setup</span><span class='period'>.</span><span class='id identifier rubyid_split'>split</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>,</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_task'>task</span><span class='comma'>,</span> <span class='op'>*</span><span class='id identifier rubyid_file'>file</span> <span class='op'>=</span> <span class='id identifier rubyid_task'>task</span><span class='period'>.</span><span class='id identifier rubyid_split'>split</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>:</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+        <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_file'>file</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
+            <span class='id identifier rubyid_task'>task</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_task'>task</span><span class='embexpr_end'>}</span><span class='tstring_content'>:</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_file'>file</span><span class='lbracket'>[</span><span class='int'>0</span><span class='op'>..</span><span class='op'>-</span><span class='int'>2</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>:</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+            <span class='id identifier rubyid_file'>file</span> <span class='op'>=</span> <span class='id identifier rubyid_file'>file</span><span class='period'>.</span><span class='id identifier rubyid_pop'>pop</span>
+
+            <span class='kw'>if</span> <span class='op'>!</span><span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_file?'>file?</span><span class='lparen'>(</span><span class='id identifier rubyid_file'>file</span><span class='rparen'>)</span>
+                <span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>no such file </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_file'>file</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+            <span class='kw'>end</span>
+        <span class='kw'>else</span> <span class='id identifier rubyid_file'>file</span> <span class='op'>=</span> <span class='kw'>nil</span>
+        <span class='kw'>end</span>
+        <span class='kw'>if</span> <span class='id identifier rubyid_conf_sections'>conf_sections</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
+            <span class='id identifier rubyid_conf_sections'>conf_sections</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>default</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span>
+        <span class='kw'>end</span>
+        <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_task'>task</span>
+            <span class='ivar'>@conf_default</span> <span class='op'>=</span> <span class='id identifier rubyid_conf_sections'>conf_sections</span>
+        <span class='kw'>else</span>
+            <span class='ivar'>@conf_setup</span><span class='lbracket'>[</span><span class='id identifier rubyid_task'>task</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='id identifier rubyid_file'>file</span><span class='comma'>,</span> <span class='id identifier rubyid_conf_sections'>conf_sections</span><span class='rbracket'>]</span>
+        <span class='kw'>end</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_optparse'>optparse</span><span class='period'>.</span><span class='id identifier rubyid_on'>on</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>--gdbserver</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>start the component(s) with gdb</span><span class='tstring_end'>&#39;</span></span> <span class='kw'>do</span>
+        <span class='id identifier rubyid_run_options'>run_options</span><span class='lbracket'>[</span><span class='symbol'>:gdb</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='kw'>true</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_optparse'>optparse</span><span class='period'>.</span><span class='id identifier rubyid_on'>on</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>--valgrind</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>start the component(s) with gdb</span><span class='tstring_end'>&#39;</span></span> <span class='kw'>do</span>
+        <span class='id identifier rubyid_run_options'>run_options</span><span class='lbracket'>[</span><span class='symbol'>:valgrind</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='kw'>true</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_optparse'>optparse</span><span class='period'>.</span><span class='id identifier rubyid_on'>on</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>--help</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>show this help message</span><span class='tstring_end'>&#39;</span></span> <span class='kw'>do</span>
+        <span class='id identifier rubyid_puts'>puts</span> <span class='id identifier rubyid_optparse'>optparse</span>
+        <span class='id identifier rubyid_exit'>exit</span> <span class='int'>0</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="conf-class_method">
+  
+    .<strong>conf</strong>(task)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/orocos/scripts.rb', line 201</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_conf'>conf</span><span class='lparen'>(</span><span class='id identifier rubyid_task'>task</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_file'>file</span><span class='comma'>,</span> <span class='id identifier rubyid_sections'>sections</span> <span class='op'>=</span> <span class='id identifier rubyid_conf_setup'>conf_setup</span><span class='lbracket'>[</span><span class='id identifier rubyid_task'>task</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='id identifier rubyid_conf_setup'>conf_setup</span><span class='lbracket'>[</span><span class='id identifier rubyid_task'>task</span><span class='period'>.</span><span class='id identifier rubyid_model'>model</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='rbracket'>]</span>
+    <span class='id identifier rubyid_sections'>sections</span> <span class='op'>||=</span> <span class='id identifier rubyid_conf_default'>conf_default</span>
+
+    <span class='kw'>if</span> <span class='id identifier rubyid_file'>file</span>
+        <span class='const'><span class='object_link'><a href="../Orocos.html" title="Orocos (module)">Orocos</a></span></span><span class='period'>.</span><span class='id identifier rubyid_apply_conf'><span class='object_link'><a href="../Orocos.html#apply_conf-class_method" title="Orocos.apply_conf (method)">apply_conf</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_task'>task</span><span class='comma'>,</span> <span class='id identifier rubyid_file'>file</span><span class='comma'>,</span> <span class='id identifier rubyid_sections'>sections</span><span class='comma'>,</span> <span class='kw'>true</span><span class='rparen'>)</span>
+    <span class='kw'>else</span>
+        <span class='const'><span class='object_link'><a href="../Orocos.html" title="Orocos (module)">Orocos</a></span></span><span class='period'>.</span><span class='id identifier rubyid_conf'><span class='object_link'><a href="../Orocos.html#conf-class_method" title="Orocos.conf (method)">conf</a></span></span><span class='period'>.</span><span class='id identifier rubyid_apply'>apply</span><span class='lparen'>(</span><span class='id identifier rubyid_task'>task</span><span class='comma'>,</span> <span class='id identifier rubyid_sections'>sections</span><span class='comma'>,</span> <span class='kw'>true</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="parse_stream_option-class_method">
+  
+    .<strong>parse_stream_option</strong>(opt, type_name = nil)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/orocos/scripts.rb', line 212</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_parse_stream_option'>parse_stream_option</span><span class='lparen'>(</span><span class='id identifier rubyid_opt'>opt</span><span class='comma'>,</span> <span class='id identifier rubyid_type_name'>type_name</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_logfile'>logfile</span><span class='comma'>,</span> <span class='id identifier rubyid_stream_name'>stream_name</span> <span class='op'>=</span> <span class='id identifier rubyid_opt'>opt</span><span class='period'>.</span><span class='id identifier rubyid_split'>split</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>:</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_stream_name'>stream_name</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_type_name'>type_name</span>
+        <span class='const'>Pocolog</span><span class='op'>::</span><span class='const'>Logfiles</span><span class='period'>.</span><span class='id identifier rubyid_open'>open</span><span class='lparen'>(</span><span class='id identifier rubyid_logfile'>logfile</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_stream_from_type'>stream_from_type</span><span class='lparen'>(</span><span class='id identifier rubyid_type_name'>type_name</span><span class='rparen'>)</span>
+    <span class='kw'>elsif</span> <span class='op'>!</span><span class='id identifier rubyid_stream_name'>stream_name</span>
+        <span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>no stream name, and no type given</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>else</span>
+        <span class='const'>Pocolog</span><span class='op'>::</span><span class='const'>Logfiles</span><span class='period'>.</span><span class='id identifier rubyid_open'>open</span><span class='lparen'>(</span><span class='id identifier rubyid_logfile'>logfile</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_stream'>stream</span><span class='lparen'>(</span><span class='id identifier rubyid_stream_name'>stream_name</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="run-class_method">
+  
+    .<strong>run</strong>(*options, &amp;block)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/orocos/scripts.rb', line 223</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_run'>run</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_options'>options</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_deployments'>deployments</span><span class='comma'>,</span> <span class='id identifier rubyid_models'>models</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Orocos.html" title="Orocos (module)">Orocos</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Process.html" title="Orocos::Process (class)">Process</a></span></span><span class='period'>.</span><span class='id identifier rubyid_partition_run_options'><span class='object_link'><a href="Process.html#partition_run_options-class_method" title="Orocos::Process.partition_run_options (method)">partition_run_options</a></span></span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
+
+    <span class='kw'>if</span> <span class='id identifier rubyid_attach?'>attach?</span>
+        <span class='id identifier rubyid_deployments'>deployments</span><span class='period'>.</span><span class='id identifier rubyid_delete_if'>delete_if</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_depl'>depl</span><span class='comma'>,</span> <span class='id identifier rubyid__'>_</span><span class='op'>|</span>
+            <span class='const'><span class='object_link'><a href="Process.html" title="Orocos::Process (class)">Process</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Process.html#initialize-instance_method" title="Orocos::Process#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_depl'>depl</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_task_names'><span class='object_link'><a href="ProcessBase.html#task_names-instance_method" title="Orocos::ProcessBase#task_names (method)">task_names</a></span></span><span class='period'>.</span><span class='id identifier rubyid_any?'>any?</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_task_name'>task_name</span><span class='op'>|</span>
+                <span class='const'><span class='object_link'><a href="TaskContext.html" title="Orocos::TaskContext (class)">TaskContext</a></span></span><span class='period'>.</span><span class='id identifier rubyid_reachable?'><span class='object_link'><a href="TaskContextBase.html#reachable%3F-class_method" title="Orocos::TaskContextBase.reachable? (method)">reachable?</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_task_name'>task_name</span><span class='rparen'>)</span> <span class='comment'># assume the deployment is started
+</span>            <span class='kw'>end</span>
+        <span class='kw'>end</span>
+        <span class='id identifier rubyid_models'>models</span><span class='period'>.</span><span class='id identifier rubyid_delete_if'>delete_if</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_model'>model</span><span class='comma'>,</span> <span class='id identifier rubyid_task_name'>task_name</span><span class='op'>|</span>
+            <span class='const'><span class='object_link'><a href="TaskContext.html" title="Orocos::TaskContext (class)">TaskContext</a></span></span><span class='period'>.</span><span class='id identifier rubyid_reachable?'><span class='object_link'><a href="TaskContextBase.html#reachable%3F-class_method" title="Orocos::TaskContextBase.reachable? (method)">reachable?</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_task_name'>task_name</span><span class='rparen'>)</span> <span class='comment'># assume the deployment is started
+</span>        <span class='kw'>end</span>
+    <span class='kw'>end</span>
+
+    <span class='kw'>if</span> <span class='id identifier rubyid_deployments'>deployments</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_models'>models</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
+        <span class='kw'>yield</span>
+    <span class='kw'>else</span>
+        <span class='const'><span class='object_link'><a href="../Orocos.html" title="Orocos (module)">Orocos</a></span></span><span class='period'>.</span><span class='id identifier rubyid_run'><span class='object_link'><a href="../Orocos.html#run-class_method" title="Orocos.run (method)">run</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_deployments'>deployments</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='id identifier rubyid_models'>models</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='id identifier rubyid_run_options'>run_options</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="watch-class_method">
+  
+    .<strong>watch</strong>(*objects, &amp;block)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Watch for a set of tasks, ports or port readers and display information
+about them during execution</p>
+
+<p>This method will display:</p>
+<ul><li>
+<p>the current state of all the listed tasks. This display is updated only
+when the state of one of the tasks changed</p>
+</li><li>
+<p>whether new data arrived on one of the ports. By default, the new samples
+are pretty-printed. This can be changed by setting the :display option to
+false</p>
+</li></ul>
+
+<p>The update period can be changed with the :sleep option. It defaults to
+0.1. Note that all state changes are displayed regardless of the period
+chosen.</p>
+
+<p>If a task is given to the :main option, the loop will automatically quit if
+that task has finished execution.</p>
+
+<p>If a block is given, it is called at each loop with the set of tasks whose
+state changed and the set of ports which got new data (either or both can
+be empty). This block should return true if the loop should quit and false
+otherwise.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>[Array&lt;Port,TaskContext,Hash&gt;]</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>a customizable set of options</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    
+    
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+273
+274
+275
+276</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/orocos/scripts.rb', line 273</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_watch'>watch</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_objects'>objects</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+    <span class='comment'># TODO: move the code here and truly deprecate Orocos.watch
+</span>    <span class='const'><span class='object_link'><a href="../Orocos.html" title="Orocos (module)">Orocos</a></span></span><span class='period'>.</span><span class='id identifier rubyid_watch'><span class='object_link'><a href="../Orocos.html#watch-class_method" title="Orocos.watch (method)">watch</a></span></span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_objects'>objects</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Wed Apr 10 22:10:21 2019 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.19 (ruby-2.5.1).
+</div>
+
+    </div>
+  </body>
+</html>

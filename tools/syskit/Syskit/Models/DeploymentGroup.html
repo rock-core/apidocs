@@ -1,0 +1,2554 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: Syskit::Models::DeploymentGroup
+  
+    &mdash; Documentation by YARD 0.9.19
+  
+</title>
+
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "Syskit::Models::DeploymentGroup";
+  relpath = '../../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../../_index.html">Index (D)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../Syskit.html" title="Syskit (module)">Syskit</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Models.html" title="Syskit::Models (module)">Models</a></span></span>
+     &raquo; 
+    <span class="title">DeploymentGroup</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: Syskit::Models::DeploymentGroup
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName"><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></span>
+      
+        <ul class="fullTree">
+          <li><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></li>
+          
+            <li class="next">Syskit::Models::DeploymentGroup</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/syskit/models/deployment_group.rb</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>A set of deployments logically grouped together</p>
+
+<p>This is the underlying data structure used by Profile and
+<span class='object_link'><a href="../InstanceRequirements.html" title="Syskit::InstanceRequirements (class)">InstanceRequirements</a></span> to manage the deployments. It also provides the API
+to resolve a task&#39;s deployment</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+
+
+  <h2>Instance Attribute Summary <small><a href="#" class="summary_toggle">collapse</a></small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#deployed_tasks-instance_method" title="#deployed_tasks (instance method)">#<strong>deployed_tasks</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Mapping of a deployed task name to the underlying configured deployment
+that provides it.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#deployments-instance_method" title="#deployments (instance method)">#<strong>deployments</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>A mapping of a process server name to the underlying deployments it
+provides.</p>
+</div></span>
+  
+</li>
+
+    
+  </ul>
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#compute_task_context_deployment_candidates-instance_method" title="#compute_task_context_deployment_candidates (instance method)">#<strong>compute_task_context_deployment_candidates</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Computes <span class='object_link'><a href="#task_context_deployment_candidates-instance_method" title="Syskit::Models::DeploymentGroup#task_context_deployment_candidates (method)">#task_context_deployment_candidates</a></span>.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#deregister_configured_deployment-instance_method" title="#deregister_configured_deployment (instance method)">#<strong>deregister_configured_deployment</strong>(configured_deployment)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Remove a deployment from this group.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#each_configured_deployment-instance_method" title="#each_configured_deployment (instance method)">#<strong>each_configured_deployment</strong> {|| ... } &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Enumerates all the deployments registered on self.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#empty%3F-instance_method" title="#empty? (instance method)">#<strong>empty?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#find_all_deployments_from_process_manager-instance_method" title="#find_all_deployments_from_process_manager (instance method)">#<strong>find_all_deployments_from_process_manager</strong>(process_manager_name)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns all the deployments registered on a given process manager.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#find_all_suitable_deployments_for-instance_method" title="#find_all_suitable_deployments_for (instance method)">#<strong>find_all_suitable_deployments_for</strong>(task)  &#x21d2; Set&lt;ConfiguredDeployment&gt; </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the set of deployments that are available for a given task.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#find_deployed_task_by_name-instance_method" title="#find_deployed_task_by_name (instance method)">#<strong>find_deployed_task_by_name</strong>(task_name)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns a deployment group that represents a single deployed task.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#find_deployment_from_task_name-instance_method" title="#find_deployment_from_task_name (instance method)">#<strong>find_deployment_from_task_name</strong>(task_name)  &#x21d2; ConfiguredDeployment<sup>?</sup> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the deployment that provides the given task.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#has_deployed_task%3F-instance_method" title="#has_deployed_task? (instance method)">#<strong>has_deployed_task?</strong>(task_name)  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>  &#x21d2; DeploymentGroup </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>A new instance of DeploymentGroup.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize_copy-instance_method" title="#initialize_copy (instance method)">#<strong>initialize_copy</strong>(original)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#invalidate_caches-instance_method" title="#invalidate_caches (instance method)">#<strong>invalidate_caches</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Invalidate cached values computed based on the deployments available in
+this group.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#register_configured_deployment-instance_method" title="#register_configured_deployment (instance method)">#<strong>register_configured_deployment</strong>(configured_deployment)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Register a new deployment in this group.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#register_deployed_task-instance_method" title="#register_deployed_task (instance method)">#<strong>register_deployed_task</strong>(task_name, configured_deployment)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Register a specific task of a configured deployment.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#task_context_deployment_candidates-instance_method" title="#task_context_deployment_candidates (instance method)">#<strong>task_context_deployment_candidates</strong>  &#x21d2; {Models::TaskContext=&gt;Set&lt;(Models::Deployment,String)&gt;} </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>A mapping from task models to the set of registered deployments that apply
+on these task models.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#to_deployment_group-instance_method" title="#to_deployment_group (instance method)">#<strong>to_deployment_group</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Method expected by <span class='object_link'><a href="#use_group-instance_method" title="Syskit::Models::DeploymentGroup#use_group (method)">#use_group</a></span> and <span class='object_link'><a href="#use_group!-instance_method" title="Syskit::Models::DeploymentGroup#use_group! (method)">#use_group!</a></span> to normalize an object to
+a DeploymentGroup object.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#use_deployment-instance_method" title="#use_deployment (instance method)">#<strong>use_deployment</strong>(*names, on: &#39;localhost&#39;, simulation: Roby.app.simulation?, loader: Roby.app.default_loader, process_managers: Syskit.conf, **run_options)  &#x21d2; Array&lt;Deployment&gt; </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Add the given deployment (referred to by its process name, that is the name
+given in the oroGen file) to the set of deployments the engine can use.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#use_deployments_from-instance_method" title="#use_deployments_from (instance method)">#<strong>use_deployments_from</strong>(project_name, process_managers: Syskit.conf, loader: Roby.app.default_loader, **use_options)  &#x21d2; Array&lt;Model&lt;Deployment&gt;&gt; </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Add all the deployments defined in the given oroGen project to the set of
+deployments that the engine can use.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#use_group-instance_method" title="#use_group (instance method)">#<strong>use_group</strong>(other)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Add all deployments in &#39;other&#39; to self.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#use_group!-instance_method" title="#use_group! (instance method)">#<strong>use_group!</strong>(other)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Add all deployments in &#39;other&#39; to self.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#use_ruby_tasks-instance_method" title="#use_ruby_tasks (instance method)">#<strong>use_ruby_tasks</strong>(mappings, remote_task: false, on: &#39;ruby_tasks&#39;, process_managers: Syskit.conf)  &#x21d2; [ConfiguredDeployment] </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Deploy <span class='object_link'><a href="../RubyTaskContext.html" title="Syskit::RubyTaskContext (class)">RubyTaskContext</a></span> models.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#use_unmanaged_task-instance_method" title="#use_unmanaged_task (instance method)">#<strong>use_unmanaged_task</strong>(mappings, on: &#39;unmanaged_tasks&#39;, process_managers: Syskit.conf)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Declare tasks that are going to be started by some other process, but whose
+tasks are going to be integrated in the syskit network.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    #<strong>initialize</strong>  &#x21d2; <tt><span class='object_link'><a href="" title="Syskit::Models::DeploymentGroup (class)">DeploymentGroup</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns a new instance of DeploymentGroup</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+17
+18
+19
+20
+21</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/models/deployment_group.rb', line 17</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span>
+    <span class='ivar'>@deployed_tasks</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+    <span class='ivar'>@deployments</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+    <span class='id identifier rubyid_invalidate_caches'>invalidate_caches</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id=""></span>
+      <div class="method_details first">
+  <h3 class="signature first" id="deployed_tasks-instance_method">
+  
+    #<strong>deployed_tasks</strong>  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Mapping of a deployed task name to the underlying configured deployment
+that provides it</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+11
+12
+13</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/models/deployment_group.rb', line 11</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_deployed_tasks'>deployed_tasks</span>
+  <span class='ivar'>@deployed_tasks</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="deployments-instance_method">
+  
+    #<strong>deployments</strong>  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>A mapping of a process server name to the underlying deployments it
+provides</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+15
+16
+17</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/models/deployment_group.rb', line 15</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_deployments'>deployments</span>
+  <span class='ivar'>@deployments</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="compute_task_context_deployment_candidates-instance_method">
+  
+    #<strong>compute_task_context_deployment_candidates</strong>  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+
+<p>Computes <span class='object_link'><a href="#task_context_deployment_candidates-instance_method" title="Syskit::Models::DeploymentGroup#task_context_deployment_candidates (method)">#task_context_deployment_candidates</a></span></p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/models/deployment_group.rb', line 113</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_compute_task_context_deployment_candidates'>compute_task_context_deployment_candidates</span>
+    <span class='id identifier rubyid_deployed_models'>deployed_models</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+    <span class='id identifier rubyid_deployments'>deployments</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_machine_name'>machine_name</span><span class='comma'>,</span> <span class='id identifier rubyid_machine_deployments'>machine_deployments</span><span class='op'>|</span>
+        <span class='id identifier rubyid_machine_deployments'>machine_deployments</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_configured_deployment'>configured_deployment</span><span class='op'>|</span>
+            <span class='id identifier rubyid_configured_deployment'>configured_deployment</span><span class='period'>.</span><span class='id identifier rubyid_each_deployed_task_model'>each_deployed_task_model</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_task_name'>task_name</span><span class='comma'>,</span> <span class='id identifier rubyid_task_model'>task_model</span><span class='op'>|</span>
+                <span class='id identifier rubyid_deployed_models'>deployed_models</span><span class='lbracket'>[</span><span class='id identifier rubyid_task_model'>task_model</span><span class='rbracket'>]</span> <span class='op'>||=</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+                <span class='id identifier rubyid_deployed_models'>deployed_models</span><span class='lbracket'>[</span><span class='id identifier rubyid_task_model'>task_model</span><span class='rbracket'>]</span> <span class='op'>&lt;&lt;</span> <span class='lbracket'>[</span><span class='id identifier rubyid_configured_deployment'>configured_deployment</span><span class='comma'>,</span> <span class='id identifier rubyid_task_name'>task_name</span><span class='rbracket'>]</span>
+            <span class='kw'>end</span>
+        <span class='kw'>end</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_deployed_models'>deployed_models</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="deregister_configured_deployment-instance_method">
+  
+    #<strong>deregister_configured_deployment</strong>(configured_deployment)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Remove a deployment from this group</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+197
+198
+199
+200
+201
+202</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/models/deployment_group.rb', line 197</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_deregister_configured_deployment'>deregister_configured_deployment</span><span class='lparen'>(</span><span class='id identifier rubyid_configured_deployment'>configured_deployment</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_deployments'>deployments</span><span class='lbracket'>[</span><span class='id identifier rubyid_configured_deployment'>configured_deployment</span><span class='period'>.</span><span class='id identifier rubyid_process_server_name'>process_server_name</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='id identifier rubyid_configured_deployment'>configured_deployment</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_configured_deployment'>configured_deployment</span><span class='period'>.</span><span class='id identifier rubyid_each_orogen_deployed_task_context_model'>each_orogen_deployed_task_context_model</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_task'>task</span><span class='op'>|</span>
+        <span class='id identifier rubyid_deployed_tasks'>deployed_tasks</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='id identifier rubyid_task'>task</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="each_configured_deployment-instance_method">
+  
+    #<strong>each_configured_deployment</strong> {|| ... } &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Enumerates all the deployments registered on self</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Yield Parameters:</p>
+<ul class="yieldparam">
+  
+    <li>
+      
+        <span class='name'></span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="ConfiguredDeployment.html" title="Syskit::Models::ConfiguredDeployment (class)">ConfiguredDeployment</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+188
+189
+190
+191
+192
+193
+194</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/models/deployment_group.rb', line 188</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_each_configured_deployment'>each_configured_deployment</span>
+    <span class='kw'>return</span> <span class='id identifier rubyid_enum_for'>enum_for</span><span class='lparen'>(</span><span class='id identifier rubyid___method__'>__method__</span><span class='rparen'>)</span> <span class='kw'>unless</span> <span class='id identifier rubyid_block_given?'>block_given?</span>
+
+    <span class='id identifier rubyid_deployments'>deployments</span><span class='period'>.</span><span class='id identifier rubyid_each_value'>each_value</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_set'>set</span><span class='op'>|</span>
+        <span class='id identifier rubyid_set'>set</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_c'>c</span><span class='op'>|</span> <span class='kw'>yield</span><span class='lparen'>(</span><span class='id identifier rubyid_c'>c</span><span class='rparen'>)</span> <span class='rbrace'>}</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="empty?-instance_method">
+  
+    #<strong>empty?</strong>  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+23
+24
+25</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/models/deployment_group.rb', line 23</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_empty?'>empty?</span>
+    <span class='id identifier rubyid_deployments'>deployments</span><span class='period'>.</span><span class='id identifier rubyid_all?'>all?</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:empty?</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="find_all_deployments_from_process_manager-instance_method">
+  
+    #<strong>find_all_deployments_from_process_manager</strong>(process_manager_name)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns all the deployments registered on a given process manager</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+151
+152
+153</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/models/deployment_group.rb', line 151</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_find_all_deployments_from_process_manager'>find_all_deployments_from_process_manager</span><span class='lparen'>(</span><span class='id identifier rubyid_process_manager_name'>process_manager_name</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_deployments'>deployments</span><span class='lbracket'>[</span><span class='id identifier rubyid_process_manager_name'>process_manager_name</span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='const'>Array</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="find_all_suitable_deployments_for-instance_method">
+  
+    #<strong>find_all_suitable_deployments_for</strong>(task)  &#x21d2; <tt>Set&lt;<span class='object_link'><a href="ConfiguredDeployment.html" title="Syskit::Models::ConfiguredDeployment (class)">ConfiguredDeployment</a></span>&gt;</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the set of deployments that are available for a given task</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Set&lt;<span class='object_link'><a href="ConfiguredDeployment.html" title="Syskit::Models::ConfiguredDeployment (class)">ConfiguredDeployment</a></span>&gt;</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/models/deployment_group.rb', line 129</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_find_all_suitable_deployments_for'>find_all_suitable_deployments_for</span><span class='lparen'>(</span><span class='id identifier rubyid_task'>task</span><span class='rparen'>)</span>
+    <span class='comment'># task.model would be wrong here as task.model could be the
+</span>    <span class='comment'># singleton class (if there are dynamic services)
+</span>    <span class='id identifier rubyid_candidates'>candidates</span> <span class='op'>=</span> <span class='id identifier rubyid_task_context_deployment_candidates'>task_context_deployment_candidates</span><span class='lbracket'>[</span><span class='id identifier rubyid_task'>task</span><span class='period'>.</span><span class='id identifier rubyid_model'>model</span><span class='rbracket'>]</span>
+    <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_candidates'>candidates</span> <span class='op'>||</span> <span class='id identifier rubyid_candidates'>candidates</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
+        <span class='id identifier rubyid_candidates'>candidates</span> <span class='op'>=</span> <span class='id identifier rubyid_task_context_deployment_candidates'>task_context_deployment_candidates</span><span class='lbracket'>[</span><span class='id identifier rubyid_task'>task</span><span class='period'>.</span><span class='id identifier rubyid_concrete_model'>concrete_model</span><span class='rbracket'>]</span>
+        <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_candidates'>candidates</span> <span class='op'>||</span> <span class='id identifier rubyid_candidates'>candidates</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
+            <span class='const'><span class='object_link'><a href="../../Syskit.html" title="Syskit (module)">Syskit</a></span></span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span> <span class='lbrace'>{</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>no deployments found for </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_task'>task</span><span class='embexpr_end'>}</span><span class='tstring_content'> (</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_task'>task</span><span class='period'>.</span><span class='id identifier rubyid_concrete_model'>concrete_model</span><span class='embexpr_end'>}</span><span class='tstring_content'>)</span><span class='tstring_end'>&quot;</span></span> <span class='rbrace'>}</span>
+            <span class='kw'>return</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+        <span class='kw'>end</span>
+    <span class='kw'>end</span>
+    <span class='kw'>return</span> <span class='id identifier rubyid_candidates'>candidates</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="find_deployed_task_by_name-instance_method">
+  
+    #<strong>find_deployed_task_by_name</strong>(task_name)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns a deployment group that represents a single deployed task</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+88
+89
+90
+91
+92
+93
+94</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/models/deployment_group.rb', line 88</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_find_deployed_task_by_name'>find_deployed_task_by_name</span><span class='lparen'>(</span><span class='id identifier rubyid_task_name'>task_name</span><span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_configured_deployment'>configured_deployment</span> <span class='op'>=</span> <span class='id identifier rubyid_find_deployment_from_task_name'>find_deployment_from_task_name</span><span class='lparen'>(</span><span class='id identifier rubyid_task_name'>task_name</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='id identifier rubyid_new'>new</span>
+        <span class='id identifier rubyid_result'>result</span><span class='period'>.</span><span class='id identifier rubyid_register_deployed_task'>register_deployed_task</span><span class='lparen'>(</span><span class='id identifier rubyid_task_name'>task_name</span><span class='comma'>,</span> <span class='id identifier rubyid_configured_deployment'>configured_deployment</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_result'>result</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="find_deployment_from_task_name-instance_method">
+  
+    #<strong>find_deployment_from_task_name</strong>(task_name)  &#x21d2; <tt><span class='object_link'><a href="ConfiguredDeployment.html" title="Syskit::Models::ConfiguredDeployment (class)">ConfiguredDeployment</a></span></tt><sup>?</sup> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the deployment that provides the given task</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="ConfiguredDeployment.html" title="Syskit::Models::ConfiguredDeployment (class)">ConfiguredDeployment</a></span></tt>, <tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+146
+147
+148</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/models/deployment_group.rb', line 146</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_find_deployment_from_task_name'>find_deployment_from_task_name</span><span class='lparen'>(</span><span class='id identifier rubyid_task_name'>task_name</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_deployed_tasks'>deployed_tasks</span><span class='lbracket'>[</span><span class='id identifier rubyid_task_name'>task_name</span><span class='rbracket'>]</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="has_deployed_task?-instance_method">
+  
+    #<strong>has_deployed_task?</strong>(task_name)  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+83
+84
+85</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/models/deployment_group.rb', line 83</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_has_deployed_task?'>has_deployed_task?</span><span class='lparen'>(</span><span class='id identifier rubyid_task_name'>task_name</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_find_deployment_from_task_name'>find_deployment_from_task_name</span><span class='lparen'>(</span><span class='id identifier rubyid_task_name'>task_name</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="initialize_copy-instance_method">
+  
+    #<strong>initialize_copy</strong>(original)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+27
+28
+29
+30
+31
+32</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/models/deployment_group.rb', line 27</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize_copy'>initialize_copy</span><span class='lparen'>(</span><span class='id identifier rubyid_original'>original</span><span class='rparen'>)</span>
+    <span class='kw'>super</span>
+    <span class='ivar'>@deployed_tasks</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+    <span class='ivar'>@deployments</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+    <span class='id identifier rubyid_use_group!'>use_group!</span><span class='lparen'>(</span><span class='id identifier rubyid_original'>original</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="invalidate_caches-instance_method">
+  
+    #<strong>invalidate_caches</strong>  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+
+<p>Invalidate cached values computed based on the deployments available in
+this group</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+208
+209
+210</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/models/deployment_group.rb', line 208</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_invalidate_caches'>invalidate_caches</span>
+    <span class='ivar'>@task_context_deployment_candidates</span> <span class='op'>=</span> <span class='kw'>nil</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="register_configured_deployment-instance_method">
+  
+    #<strong>register_configured_deployment</strong>(configured_deployment)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Register a new deployment in this group</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/models/deployment_group.rb', line 170</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_register_configured_deployment'>register_configured_deployment</span><span class='lparen'>(</span><span class='id identifier rubyid_configured_deployment'>configured_deployment</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_configured_deployment'>configured_deployment</span><span class='period'>.</span><span class='id identifier rubyid_each_orogen_deployed_task_context_model'>each_orogen_deployed_task_context_model</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_task'>task</span><span class='op'>|</span>
+        <span class='id identifier rubyid_orocos_name'>orocos_name</span> <span class='op'>=</span> <span class='id identifier rubyid_task'>task</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span>
+        <span class='kw'>if</span> <span class='id identifier rubyid_deployed_tasks'>deployed_tasks</span><span class='lbracket'>[</span><span class='id identifier rubyid_orocos_name'>orocos_name</span><span class='rbracket'>]</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_deployed_tasks'>deployed_tasks</span><span class='lbracket'>[</span><span class='id identifier rubyid_orocos_name'>orocos_name</span><span class='rbracket'>]</span> <span class='op'>!=</span> <span class='id identifier rubyid_configured_deployment'>configured_deployment</span>
+            <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="../TaskNameAlreadyInUse.html" title="Syskit::TaskNameAlreadyInUse (class)">TaskNameAlreadyInUse</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../TaskNameAlreadyInUse.html#initialize-instance_method" title="Syskit::TaskNameAlreadyInUse#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_orocos_name'>orocos_name</span><span class='comma'>,</span> <span class='id identifier rubyid_deployed_tasks'>deployed_tasks</span><span class='lbracket'>[</span><span class='id identifier rubyid_orocos_name'>orocos_name</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_configured_deployment'>configured_deployment</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>there is already a deployment that provides </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_orocos_name'>orocos_name</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+        <span class='kw'>end</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_configured_deployment'>configured_deployment</span><span class='period'>.</span><span class='id identifier rubyid_each_orogen_deployed_task_context_model'>each_orogen_deployed_task_context_model</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_task'>task</span><span class='op'>|</span>
+        <span class='id identifier rubyid_deployed_tasks'>deployed_tasks</span><span class='lbracket'>[</span><span class='id identifier rubyid_task'>task</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_configured_deployment'>configured_deployment</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_deployments'>deployments</span><span class='lbracket'>[</span><span class='id identifier rubyid_configured_deployment'>configured_deployment</span><span class='period'>.</span><span class='id identifier rubyid_process_server_name'>process_server_name</span><span class='rbracket'>]</span> <span class='op'>||=</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+    <span class='id identifier rubyid_deployments'>deployments</span><span class='lbracket'>[</span><span class='id identifier rubyid_configured_deployment'>configured_deployment</span><span class='period'>.</span><span class='id identifier rubyid_process_server_name'>process_server_name</span><span class='rbracket'>]</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_configured_deployment'>configured_deployment</span>
+    <span class='id identifier rubyid_invalidate_caches'>invalidate_caches</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="register_deployed_task-instance_method">
+  
+    #<strong>register_deployed_task</strong>(task_name, configured_deployment)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Register a specific task of a configured deployment</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/models/deployment_group.rb', line 156</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_register_deployed_task'>register_deployed_task</span><span class='lparen'>(</span><span class='id identifier rubyid_task_name'>task_name</span><span class='comma'>,</span> <span class='id identifier rubyid_configured_deployment'>configured_deployment</span><span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_existing'>existing</span> <span class='op'>=</span> <span class='id identifier rubyid_find_deployment_from_task_name'>find_deployment_from_task_name</span><span class='lparen'>(</span><span class='id identifier rubyid_task_name'>task_name</span><span class='rparen'>)</span>
+        <span class='kw'>if</span> <span class='id identifier rubyid_existing'>existing</span> <span class='op'>!=</span> <span class='id identifier rubyid_configured_deployment'>configured_deployment</span>
+            <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="../TaskNameAlreadyInUse.html" title="Syskit::TaskNameAlreadyInUse (class)">TaskNameAlreadyInUse</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../TaskNameAlreadyInUse.html#initialize-instance_method" title="Syskit::TaskNameAlreadyInUse#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_task_name'>task_name</span><span class='comma'>,</span> <span class='id identifier rubyid_existing'>existing</span><span class='comma'>,</span> <span class='id identifier rubyid_configured_deployment'>configured_deployment</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>there is already a deployment that provides </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_task_name'>task_name</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+        <span class='kw'>end</span>
+        <span class='kw'>return</span>
+    <span class='kw'>end</span>
+
+    <span class='id identifier rubyid_deployed_tasks'>deployed_tasks</span><span class='lbracket'>[</span><span class='id identifier rubyid_tasks_name'>tasks_name</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_configured_deployment'>configured_deployment</span>
+    <span class='id identifier rubyid_deployments'>deployments</span><span class='lbracket'>[</span><span class='id identifier rubyid_configured_deployment'>configured_deployment</span><span class='period'>.</span><span class='id identifier rubyid_process_server_name'>process_server_name</span><span class='rbracket'>]</span> <span class='op'>||=</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+    <span class='id identifier rubyid_deployments'>deployments</span><span class='lbracket'>[</span><span class='id identifier rubyid_configured_deployment'>configured_deployment</span><span class='period'>.</span><span class='id identifier rubyid_process_server_name'>process_server_name</span><span class='rbracket'>]</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_configured_deployment'>configured_deployment</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="task_context_deployment_candidates-instance_method">
+  
+    #<strong>task_context_deployment_candidates</strong>  &#x21d2; <tt>{<span class='object_link'><a href="TaskContext.html" title="Syskit::Models::TaskContext (module)">Models::TaskContext</a></span>=&gt;Set&lt;(<span class='object_link'><a href="Deployment.html" title="Syskit::Models::Deployment (module)">Models::Deployment</a></span>,String)&gt;}</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>A mapping from task models to the set of registered deployments that apply
+on these task models</p>
+
+<p>It is lazily computed when needed by
+<span class='object_link'><a href="#compute_task_context_deployment_candidates-instance_method" title="Syskit::Models::DeploymentGroup#compute_task_context_deployment_candidates (method)">#compute_task_context_deployment_candidates</a></span></p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>{<span class='object_link'><a href="TaskContext.html" title="Syskit::Models::TaskContext (module)">Models::TaskContext</a></span>=&gt;Set&lt;(<span class='object_link'><a href="Deployment.html" title="Syskit::Models::Deployment (module)">Models::Deployment</a></span>,String)&gt;}</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>mapping from task context models to a set of
+(machine_name,deployment_model,task_name) tuples representing the known
+ways this task context model could be deployed</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+106
+107
+108</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/models/deployment_group.rb', line 106</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_task_context_deployment_candidates'>task_context_deployment_candidates</span>
+    <span class='ivar'>@task_context_deployment_candidates</span> <span class='op'>||=</span> <span class='id identifier rubyid_compute_task_context_deployment_candidates'>compute_task_context_deployment_candidates</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="to_deployment_group-instance_method">
+  
+    #<strong>to_deployment_group</strong>  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Method expected by <span class='object_link'><a href="#use_group-instance_method" title="Syskit::Models::DeploymentGroup#use_group (method)">#use_group</a></span> and <span class='object_link'><a href="#use_group!-instance_method" title="Syskit::Models::DeploymentGroup#use_group! (method)">#use_group!</a></span> to normalize an object to
+a DeploymentGroup object</p>
+
+<p>Define this method on objects that can be used as deployment groups to make
+their usage transparent</p>
+
+<p>This returns self</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+418
+419
+420</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/models/deployment_group.rb', line 418</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_to_deployment_group'>to_deployment_group</span>
+    <span class='kw'>self</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="use_deployment-instance_method">
+  
+    #<strong>use_deployment</strong>(*names, on: &#39;localhost&#39;, simulation: Roby.app.simulation?, loader: Roby.app.default_loader, process_managers: Syskit.conf, **run_options)  &#x21d2; <tt>Array&lt;<span class='object_link'><a href="Deployment.html" title="Syskit::Models::Deployment (module)">Deployment</a></span>&gt;</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Add the given deployment (referred to by its process name, that is the name
+given in the oroGen file) to the set of deployments the engine can use.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>options</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>a customizable set of options</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array&lt;<span class='object_link'><a href="Deployment.html" title="Syskit::Models::Deployment (module)">Deployment</a></span>&gt;</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+319
+320
+321
+322
+323
+324
+325
+326
+327
+328
+329
+330
+331
+332
+333
+334
+335
+336
+337
+338
+339
+340
+341
+342
+343
+344
+345
+346
+347
+348
+349
+350
+351
+352
+353
+354
+355
+356
+357
+358
+359
+360
+361
+362
+363
+364
+365
+366
+367
+368
+369
+370
+371
+372
+373
+374
+375
+376
+377
+378
+379
+380
+381
+382
+383
+384
+385
+386
+387
+388</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/models/deployment_group.rb', line 319</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_use_deployment'><span class='object_link'><a href="../Test/NetworkManipulation.html#use_deployment-instance_method" title="Syskit::Test::NetworkManipulation#use_deployment (method)">use_deployment</a></span></span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_names'>names</span><span class='comma'>,</span> <span class='label'>on:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>localhost</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='label'>simulation:</span> <span class='const'>Roby</span><span class='period'>.</span><span class='id identifier rubyid_app'>app</span><span class='period'>.</span><span class='id identifier rubyid_simulation?'>simulation?</span><span class='comma'>,</span>
+    <span class='label'>loader:</span> <span class='const'>Roby</span><span class='period'>.</span><span class='id identifier rubyid_app'>app</span><span class='period'>.</span><span class='id identifier rubyid_default_loader'>default_loader</span><span class='comma'>,</span> <span class='label'>process_managers:</span> <span class='const'><span class='object_link'><a href="../../Syskit.html" title="Syskit (module)">Syskit</a></span></span><span class='period'>.</span><span class='id identifier rubyid_conf'><span class='object_link'><a href="../../Syskit.html#conf-class_method" title="Syskit.conf (method)">conf</a></span></span><span class='comma'>,</span>
+    <span class='op'>**</span><span class='id identifier rubyid_run_options'>run_options</span><span class='rparen'>)</span>
+
+    <span class='id identifier rubyid_deployment_spec'>deployment_spec</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_names'>names</span><span class='period'>.</span><span class='id identifier rubyid_last'>last</span><span class='period'>.</span><span class='id identifier rubyid_kind_of?'>kind_of?</span><span class='lparen'>(</span><span class='const'>Hash</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_deployment_spec'>deployment_spec</span> <span class='op'>=</span> <span class='id identifier rubyid_names'>names</span><span class='period'>.</span><span class='id identifier rubyid_pop'>pop</span>
+    <span class='kw'>end</span>
+
+    <span class='id identifier rubyid_process_server_name'>process_server_name</span> <span class='op'>=</span> <span class='id identifier rubyid_on'>on</span>
+    <span class='id identifier rubyid_process_server_config'>process_server_config</span> <span class='op'>=</span>
+        <span class='kw'>if</span> <span class='id identifier rubyid_simulation'>simulation</span>
+            <span class='id identifier rubyid_process_managers'>process_managers</span><span class='period'>.</span><span class='id identifier rubyid_sim_process_server_config_for'>sim_process_server_config_for</span><span class='lparen'>(</span><span class='id identifier rubyid_process_server_name'>process_server_name</span><span class='rparen'>)</span>
+        <span class='kw'>else</span>
+            <span class='id identifier rubyid_process_managers'>process_managers</span><span class='period'>.</span><span class='id identifier rubyid_process_server_config_for'>process_server_config_for</span><span class='lparen'>(</span><span class='id identifier rubyid_process_server_name'>process_server_name</span><span class='rparen'>)</span>
+        <span class='kw'>end</span>
+
+    <span class='id identifier rubyid_deployments_by_name'>deployments_by_name</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+    <span class='id identifier rubyid_names'>names</span> <span class='op'>=</span> <span class='id identifier rubyid_names'>names</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_n'>n</span><span class='op'>|</span>
+        <span class='kw'>if</span> <span class='id identifier rubyid_n'>n</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='symbol'>:orogen_model</span><span class='rparen'>)</span>
+            <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_n'>n</span><span class='period'>.</span><span class='id identifier rubyid_kind_of?'>kind_of?</span><span class='lparen'>(</span><span class='const'>Class</span><span class='rparen'>)</span>
+                <span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>only deployment models can be given </span><span class='tstring_end'>&quot;</span></span>\
+                    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>without a name</span><span class='tstring_end'>&quot;</span></span>
+            <span class='kw'>elsif</span> <span class='id identifier rubyid_n'>n</span> <span class='op'>&lt;=</span> <span class='const'><span class='object_link'><a href="../../Syskit.html" title="Syskit (module)">Syskit</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../TaskContext.html" title="Syskit::TaskContext (class)">TaskContext</a></span></span> <span class='op'>&amp;&amp;</span> <span class='op'>!</span><span class='lparen'>(</span><span class='id identifier rubyid_n'>n</span> <span class='op'>&lt;=</span> <span class='const'><span class='object_link'><a href="../../Syskit.html" title="Syskit (module)">Syskit</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../RubyTaskContext.html" title="Syskit::RubyTaskContext (class)">RubyTaskContext</a></span></span><span class='rparen'>)</span>
+                <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="../TaskNameRequired.html" title="Syskit::TaskNameRequired (class)">TaskNameRequired</a></span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>you must provide a task name when </span><span class='tstring_end'>&quot;</span></span>\
+                    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>starting a component by type, as e.g. use_deployment </span><span class='tstring_end'>&quot;</span></span>\
+                    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>OroGen.xsens_imu.Task =&gt; &#39;imu&#39;</span><span class='tstring_end'>&quot;</span></span>
+            <span class='kw'>elsif</span> <span class='op'>!</span><span class='lparen'>(</span><span class='id identifier rubyid_n'>n</span> <span class='op'>&lt;=</span> <span class='const'><span class='object_link'><a href="../../Syskit.html" title="Syskit (module)">Syskit</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Deployment.html" title="Syskit::Deployment (class)">Deployment</a></span></span><span class='rparen'>)</span>
+                <span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>only deployment models can be given </span><span class='tstring_end'>&quot;</span></span>\
+                    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>without a name</span><span class='tstring_end'>&quot;</span></span>
+            <span class='kw'>end</span>
+            <span class='id identifier rubyid_deployments_by_name'>deployments_by_name</span><span class='lbracket'>[</span><span class='id identifier rubyid_n'>n</span><span class='period'>.</span><span class='id identifier rubyid_orogen_model'>orogen_model</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_n'>n</span>
+            <span class='id identifier rubyid_n'>n</span><span class='period'>.</span><span class='id identifier rubyid_orogen_model'>orogen_model</span>
+        <span class='kw'>else</span> <span class='id identifier rubyid_n'>n</span>
+        <span class='kw'>end</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_deployment_spec'>deployment_spec</span> <span class='op'>=</span> <span class='id identifier rubyid_deployment_spec'>deployment_spec</span><span class='period'>.</span><span class='id identifier rubyid_map_key'>map_key</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_k'>k</span><span class='op'>|</span>
+        <span class='kw'>if</span> <span class='id identifier rubyid_k'>k</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='symbol'>:to_str</span><span class='rparen'>)</span>
+            <span class='id identifier rubyid_k'>k</span>
+        <span class='kw'>else</span>
+            <span class='id identifier rubyid_is_valid'>is_valid</span> <span class='op'>=</span>
+                <span class='id identifier rubyid_k'>k</span><span class='period'>.</span><span class='id identifier rubyid_kind_of?'>kind_of?</span><span class='lparen'>(</span><span class='const'>Class</span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span>
+                <span class='lparen'>(</span><span class='id identifier rubyid_k'>k</span> <span class='op'>&lt;=</span> <span class='const'><span class='object_link'><a href="../../Syskit.html" title="Syskit (module)">Syskit</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../TaskContext.html" title="Syskit::TaskContext (class)">TaskContext</a></span></span> <span class='op'>||</span> <span class='id identifier rubyid_k'>k</span> <span class='op'>&lt;=</span> <span class='const'><span class='object_link'><a href="../../Syskit.html" title="Syskit (module)">Syskit</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Deployment.html" title="Syskit::Deployment (class)">Deployment</a></span></span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span>
+                <span class='op'>!</span><span class='lparen'>(</span><span class='id identifier rubyid_k'>k</span> <span class='op'>&lt;=</span> <span class='const'><span class='object_link'><a href="../../Syskit.html" title="Syskit (module)">Syskit</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../RubyTaskContext.html" title="Syskit::RubyTaskContext (class)">RubyTaskContext</a></span></span><span class='rparen'>)</span>
+            <span class='kw'>unless</span> <span class='id identifier rubyid_is_valid'>is_valid</span>
+                <span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>only deployment and task context </span><span class='tstring_end'>&quot;</span></span>\
+                    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>models can be deployed by use_deployment, got </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_k'>k</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+            <span class='kw'>end</span>
+            <span class='id identifier rubyid_deployments_by_name'>deployments_by_name</span><span class='lbracket'>[</span><span class='id identifier rubyid_k'>k</span><span class='period'>.</span><span class='id identifier rubyid_orogen_model'>orogen_model</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_k'>k</span>
+            <span class='id identifier rubyid_k'>k</span><span class='period'>.</span><span class='id identifier rubyid_orogen_model'>orogen_model</span>
+        <span class='kw'>end</span>
+    <span class='kw'>end</span>
+
+    <span class='id identifier rubyid_new_deployments'>new_deployments</span><span class='comma'>,</span> <span class='id identifier rubyid__'>_</span> <span class='op'>=</span> <span class='const'>Orocos</span><span class='op'>::</span><span class='const'>Process</span><span class='period'>.</span><span class='id identifier rubyid_parse_run_options'>parse_run_options</span><span class='lparen'>(</span>
+        <span class='op'>*</span><span class='id identifier rubyid_names'>names</span><span class='comma'>,</span> <span class='id identifier rubyid_deployment_spec'>deployment_spec</span><span class='comma'>,</span> <span class='label'>loader:</span> <span class='id identifier rubyid_loader'>loader</span><span class='comma'>,</span> <span class='op'>**</span><span class='id identifier rubyid_run_options'>run_options</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_new_deployments'>new_deployments</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_deployment_name'>deployment_name</span><span class='comma'>,</span> <span class='id identifier rubyid_name_mappings'>name_mappings</span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_spawn_options'>spawn_options</span><span class='op'>|</span>
+        <span class='kw'>unless</span> <span class='lparen'>(</span><span class='id identifier rubyid_model'>model</span> <span class='op'>=</span> <span class='id identifier rubyid_deployments_by_name'>deployments_by_name</span><span class='lbracket'>[</span><span class='id identifier rubyid_deployment_name'>deployment_name</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+            <span class='id identifier rubyid_orogen_model'>orogen_model</span> <span class='op'>=</span> <span class='id identifier rubyid_loader'>loader</span><span class='period'>.</span><span class='id identifier rubyid_deployment_model_from_name'>deployment_model_from_name</span><span class='lparen'>(</span><span class='id identifier rubyid_deployment_name'>deployment_name</span><span class='rparen'>)</span>
+            <span class='id identifier rubyid_model'>model</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../Syskit.html" title="Syskit (module)">Syskit</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Deployment.html" title="Syskit::Deployment (class)">Deployment</a></span></span><span class='period'>.</span><span class='id identifier rubyid_find_model_by_orogen'><span class='object_link'><a href="OrogenBase.html#find_model_by_orogen-instance_method" title="Syskit::Models::OrogenBase#find_model_by_orogen (method)">find_model_by_orogen</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_orogen_model'>orogen_model</span><span class='rparen'>)</span>
+        <span class='kw'>end</span>
+        <span class='id identifier rubyid_model'>model</span><span class='period'>.</span><span class='id identifier rubyid_default_run_options'>default_run_options</span><span class='period'>.</span><span class='id identifier rubyid_merge!'>merge!</span><span class='lparen'>(</span>
+            <span class='id identifier rubyid_process_managers'>process_managers</span><span class='period'>.</span><span class='id identifier rubyid_default_run_options'>default_run_options</span><span class='lparen'>(</span><span class='id identifier rubyid_model'>model</span><span class='rparen'>)</span><span class='rparen'>)</span>
+
+        <span class='id identifier rubyid_configured_deployment'>configured_deployment</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Models.html" title="Syskit::Models (module)">Models</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="ConfiguredDeployment.html" title="Syskit::Models::ConfiguredDeployment (class)">ConfiguredDeployment</a></span></span><span class='period'>.</span>
+            <span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_process_server_config'>process_server_config</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_model'>model</span><span class='comma'>,</span> <span class='id identifier rubyid_name_mappings'>name_mappings</span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span><span class='comma'>,</span>
+                <span class='id identifier rubyid_spawn_options'>spawn_options</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_register_configured_deployment'>register_configured_deployment</span><span class='lparen'>(</span><span class='id identifier rubyid_configured_deployment'>configured_deployment</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_configured_deployment'>configured_deployment</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="use_deployments_from-instance_method">
+  
+    #<strong>use_deployments_from</strong>(project_name, process_managers: Syskit.conf, loader: Roby.app.default_loader, **use_options)  &#x21d2; <tt>Array&lt;Model&lt;<span class='object_link'><a href="Deployment.html" title="Syskit::Models::Deployment (module)">Deployment</a></span>&gt;&gt;</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Add all the deployments defined in the given oroGen project to the set of
+deployments that the engine can use.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>options</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>a customizable set of options</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    
+    
+    
+    
+    
+    
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array&lt;Model&lt;<span class='object_link'><a href="Deployment.html" title="Syskit::Models::Deployment (module)">Deployment</a></span>&gt;&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the set of deployments</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><span class='object_link'><a href="#use_deployment-instance_method" title="Syskit::Models::DeploymentGroup#use_deployment (method)">#use_deployment</a></span></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+397
+398
+399
+400
+401
+402
+403
+404
+405
+406
+407
+408
+409</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/models/deployment_group.rb', line 397</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_use_deployments_from'>use_deployments_from</span><span class='lparen'>(</span><span class='id identifier rubyid_project_name'>project_name</span><span class='comma'>,</span> <span class='label'>process_managers:</span> <span class='const'><span class='object_link'><a href="../../Syskit.html" title="Syskit (module)">Syskit</a></span></span><span class='period'>.</span><span class='id identifier rubyid_conf'><span class='object_link'><a href="../../Syskit.html#conf-class_method" title="Syskit.conf (method)">conf</a></span></span><span class='comma'>,</span> <span class='label'>loader:</span> <span class='const'>Roby</span><span class='period'>.</span><span class='id identifier rubyid_app'>app</span><span class='period'>.</span><span class='id identifier rubyid_default_loader'>default_loader</span><span class='comma'>,</span> <span class='op'>**</span><span class='id identifier rubyid_use_options'>use_options</span><span class='rparen'>)</span>
+    <span class='const'><span class='object_link'><a href="../../Syskit.html" title="Syskit (module)">Syskit</a></span></span><span class='period'>.</span><span class='id identifier rubyid_info'>info</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>using deployments from </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_project_name'>project_name</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid_orogen'>orogen</span> <span class='op'>=</span> <span class='id identifier rubyid_loader'>loader</span><span class='period'>.</span><span class='id identifier rubyid_project_model_from_name'>project_model_from_name</span><span class='lparen'>(</span><span class='id identifier rubyid_project_name'>project_name</span><span class='rparen'>)</span>
+
+    <span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+    <span class='id identifier rubyid_orogen'>orogen</span><span class='period'>.</span><span class='id identifier rubyid_each_deployment'>each_deployment</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_deployment_def'>deployment_def</span><span class='op'>|</span>
+        <span class='kw'>if</span> <span class='id identifier rubyid_deployment_def'>deployment_def</span><span class='period'>.</span><span class='id identifier rubyid_install?'>install?</span>
+            <span class='const'><span class='object_link'><a href="../../Syskit.html" title="Syskit (module)">Syskit</a></span></span><span class='period'>.</span><span class='id identifier rubyid_info'>info</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>  </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_deployment_def'>deployment_def</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+            <span class='id identifier rubyid_result'>result</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_use_deployment'><span class='object_link'><a href="../Test/NetworkManipulation.html#use_deployment-instance_method" title="Syskit::Test::NetworkManipulation#use_deployment (method)">use_deployment</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_deployment_def'>deployment_def</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='label'>process_managers:</span> <span class='id identifier rubyid_process_managers'>process_managers</span><span class='comma'>,</span> <span class='label'>loader:</span> <span class='id identifier rubyid_loader'>loader</span><span class='comma'>,</span> <span class='op'>**</span><span class='id identifier rubyid_use_options'>use_options</span><span class='rparen'>)</span>
+        <span class='kw'>end</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_result'>result</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="use_group-instance_method">
+  
+    #<strong>use_group</strong>(other)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Add all deployments in &#39;other&#39; to self</p>
+
+<p>Unlike <span class='object_link'><a href="#use_group!-instance_method" title="Syskit::Models::DeploymentGroup#use_group! (method)">#use_group!</a></span>, it will raise</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>other</span>
+      
+      
+        <span class='type'>(<tt>#<span class='object_link'><a href="#to_deployment_group-instance_method" title="Syskit::Models::DeploymentGroup#to_deployment_group (method)">to_deployment_group</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the group that should be merged in self</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../TaskNameAlreadyInUse.html" title="Syskit::TaskNameAlreadyInUse (class)">TaskNameAlreadyInUse</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>if different deployments in &#39;other&#39; and in &#39;self&#39; use the
+same task name. Use <span class='object_link'><a href="#use_group!-instance_method" title="Syskit::Models::DeploymentGroup#use_group! (method)">#use_group!</a></span> if you want to override deployments in
+self instead.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><span class='object_link'><a href="#use_group!-instance_method" title="Syskit::Models::DeploymentGroup#use_group! (method)">#use_group!</a></span></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/models/deployment_group.rb', line 44</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_use_group'>use_group</span><span class='lparen'>(</span><span class='id identifier rubyid_other'>other</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_other'>other</span> <span class='op'>=</span> <span class='id identifier rubyid_other'>other</span><span class='period'>.</span><span class='id identifier rubyid_to_deployment_group'>to_deployment_group</span>
+    <span class='ivar'>@deployed_tasks</span> <span class='op'>=</span> <span class='ivar'>@deployed_tasks</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='id identifier rubyid_other'>other</span><span class='period'>.</span><span class='id identifier rubyid_deployed_tasks'>deployed_tasks</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_task_name'>task_name</span><span class='comma'>,</span> <span class='id identifier rubyid_self_deployment'>self_deployment</span><span class='comma'>,</span> <span class='id identifier rubyid_other_deployment'>other_deployment</span><span class='op'>|</span>
+        <span class='kw'>if</span> <span class='id identifier rubyid_self_deployment'>self_deployment</span> <span class='op'>!=</span> <span class='id identifier rubyid_other_deployment'>other_deployment</span>
+            <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="../TaskNameAlreadyInUse.html" title="Syskit::TaskNameAlreadyInUse (class)">TaskNameAlreadyInUse</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../TaskNameAlreadyInUse.html#initialize-instance_method" title="Syskit::TaskNameAlreadyInUse#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+                <span class='id identifier rubyid_task_name'>task_name</span><span class='comma'>,</span>
+                <span class='id identifier rubyid_self_deployment'>self_deployment</span><span class='comma'>,</span>
+                <span class='id identifier rubyid_other_deployment'>other_deployment</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>there is already a deployment that provides </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_task_name'>task_name</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+        <span class='kw'>end</span>
+        <span class='id identifier rubyid_self_deployment'>self_deployment</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_other'>other</span><span class='period'>.</span><span class='id identifier rubyid_deployments'>deployments</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_manager_name'>manager_name</span><span class='comma'>,</span> <span class='id identifier rubyid_manager_deployments'>manager_deployments</span><span class='op'>|</span>
+        <span class='lparen'>(</span><span class='id identifier rubyid_deployments'>deployments</span><span class='lbracket'>[</span><span class='id identifier rubyid_manager_name'>manager_name</span><span class='rbracket'>]</span> <span class='op'>||=</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='id identifier rubyid_manager_deployments'>manager_deployments</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_invalidate_caches'>invalidate_caches</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="use_group!-instance_method">
+  
+    #<strong>use_group!</strong>(other)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Add all deployments in &#39;other&#39; to self</p>
+
+<p>Unlike with <span class='object_link'><a href="#use_group-instance_method" title="Syskit::Models::DeploymentGroup#use_group (method)">#use_group</a></span>, it will override tasks existing in self by tasks
+from the argument that have the same name</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>other</span>
+      
+      
+        <span class='type'>(<tt>#<span class='object_link'><a href="#to_deployment_group-instance_method" title="Syskit::Models::DeploymentGroup#to_deployment_group (method)">to_deployment_group</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the group that should be merged in self</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><span class='object_link'><a href="#use_group-instance_method" title="Syskit::Models::DeploymentGroup#use_group (method)">#use_group</a></span></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/models/deployment_group.rb', line 69</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_use_group!'>use_group!</span><span class='lparen'>(</span><span class='id identifier rubyid_other'>other</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_other'>other</span> <span class='op'>=</span> <span class='id identifier rubyid_other'>other</span><span class='period'>.</span><span class='id identifier rubyid_to_deployment_group'>to_deployment_group</span>
+    <span class='ivar'>@deployed_tasks</span><span class='period'>.</span><span class='id identifier rubyid_merge!'>merge!</span><span class='lparen'>(</span><span class='id identifier rubyid_other'>other</span><span class='period'>.</span><span class='id identifier rubyid_deployed_tasks'>deployed_tasks</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_task_name'>task_name</span><span class='comma'>,</span> <span class='id identifier rubyid_self_deployment'>self_deployment</span><span class='comma'>,</span> <span class='id identifier rubyid_other_deployment'>other_deployment</span><span class='op'>|</span>
+        <span class='kw'>if</span> <span class='id identifier rubyid_self_deployment'>self_deployment</span> <span class='op'>!=</span> <span class='id identifier rubyid_other_deployment'>other_deployment</span>
+            <span class='id identifier rubyid_deployments'>deployments</span><span class='lbracket'>[</span><span class='id identifier rubyid_self_deployment'>self_deployment</span><span class='period'>.</span><span class='id identifier rubyid_process_server_name'>process_server_name</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='id identifier rubyid_self_deployment'>self_deployment</span><span class='rparen'>)</span>
+        <span class='kw'>end</span>
+        <span class='id identifier rubyid_other_deployment'>other_deployment</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_other'>other</span><span class='period'>.</span><span class='id identifier rubyid_deployments'>deployments</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_manager_name'>manager_name</span><span class='comma'>,</span> <span class='id identifier rubyid_manager_deployments'>manager_deployments</span><span class='op'>|</span>
+        <span class='lparen'>(</span><span class='id identifier rubyid_deployments'>deployments</span><span class='lbracket'>[</span><span class='id identifier rubyid_manager_name'>manager_name</span><span class='rbracket'>]</span> <span class='op'>||=</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='id identifier rubyid_manager_deployments'>manager_deployments</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_invalidate_caches'>invalidate_caches</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="use_ruby_tasks-instance_method">
+  
+    #<strong>use_ruby_tasks</strong>(mappings, remote_task: false, on: &#39;ruby_tasks&#39;, process_managers: Syskit.conf)  &#x21d2; <tt>[<span class='object_link'><a href="ConfiguredDeployment.html" title="Syskit::Models::ConfiguredDeployment (class)">ConfiguredDeployment</a></span>]</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Deploy <span class='object_link'><a href="../RubyTaskContext.html" title="Syskit::RubyTaskContext (class)">RubyTaskContext</a></span> models</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>remote_task</span>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>when running the task, tell the process manager to set it up as if it was a
+remote task, instead of an in-process ruby task. This is used for testing,
+to check for instance that Syskit code does not access blocking network
+calls in the main thread</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>on</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the name of the process manager that should be used</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>process_managers</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the object that maintains the set of process managers</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>[<span class='object_link'><a href="ConfiguredDeployment.html" title="Syskit::Models::ConfiguredDeployment (class)">ConfiguredDeployment</a></span>]</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/models/deployment_group.rb', line 224</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_use_ruby_tasks'><span class='object_link'><a href="../Test/NetworkManipulation.html#use_ruby_tasks-instance_method" title="Syskit::Test::NetworkManipulation#use_ruby_tasks (method)">use_ruby_tasks</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_mappings'>mappings</span><span class='comma'>,</span> <span class='label'>remote_task:</span> <span class='kw'>false</span><span class='comma'>,</span> <span class='label'>on:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>ruby_tasks</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+        <span class='label'>process_managers:</span> <span class='const'><span class='object_link'><a href="../../Syskit.html" title="Syskit (module)">Syskit</a></span></span><span class='period'>.</span><span class='id identifier rubyid_conf'><span class='object_link'><a href="../../Syskit.html#conf-class_method" title="Syskit.conf (method)">conf</a></span></span><span class='rparen'>)</span>
+
+    <span class='comment'># Verify that the process manager exists
+</span>    <span class='id identifier rubyid_process_managers'>process_managers</span><span class='period'>.</span><span class='id identifier rubyid_process_server_config_for'>process_server_config_for</span><span class='lparen'>(</span><span class='id identifier rubyid_on'>on</span><span class='rparen'>)</span>
+
+    <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_mappings'>mappings</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='symbol'>:each_key</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>mappings should be given as model =&gt; name</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>elsif</span> <span class='id identifier rubyid_mappings'>mappings</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span> <span class='op'>&gt;</span> <span class='int'>1</span>
+        <span class='const'>Roby</span><span class='period'>.</span><span class='id identifier rubyid_warn_deprecated'>warn_deprecated</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>defining more than one ruby task context </span><span class='tstring_end'>&quot;</span></span> \
+            <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>deployment in a single use_ruby_tasks call is deprecated</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>end</span>
+
+    <span class='id identifier rubyid_mappings'>mappings</span><span class='period'>.</span><span class='id identifier rubyid_each_key'>each_key</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_task_model'>task_model</span><span class='op'>|</span>
+        <span class='id identifier rubyid_valid_model'>valid_model</span> <span class='op'>=</span> <span class='id identifier rubyid_task_model'>task_model</span><span class='period'>.</span><span class='id identifier rubyid_kind_of?'>kind_of?</span><span class='lparen'>(</span><span class='const'>Class</span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span>
+            <span class='lparen'>(</span><span class='id identifier rubyid_task_model'>task_model</span> <span class='op'>&lt;=</span> <span class='const'><span class='object_link'><a href="../../Syskit.html" title="Syskit (module)">Syskit</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../RubyTaskContext.html" title="Syskit::RubyTaskContext (class)">RubyTaskContext</a></span></span><span class='rparen'>)</span>
+        <span class='kw'>unless</span> <span class='id identifier rubyid_valid_model'>valid_model</span>
+            <span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_task_model'>task_model</span><span class='embexpr_end'>}</span><span class='tstring_content'> is not a ruby task model</span><span class='tstring_end'>&quot;</span></span>
+        <span class='kw'>end</span>
+    <span class='kw'>end</span>
+
+    <span class='id identifier rubyid_task_context_class'>task_context_class</span> <span class='op'>=</span>
+        <span class='kw'>if</span> <span class='id identifier rubyid_remote_task'>remote_task</span>
+            <span class='const'>Orocos</span><span class='op'>::</span><span class='const'>RubyTasks</span><span class='op'>::</span><span class='const'>RemoteTaskContext</span>
+        <span class='kw'>else</span>
+            <span class='const'>Orocos</span><span class='op'>::</span><span class='const'>RubyTasks</span><span class='op'>::</span><span class='const'>TaskContext</span>
+        <span class='kw'>end</span>
+
+    <span class='id identifier rubyid_mappings'>mappings</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_task_model'>task_model</span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span><span class='op'>|</span>
+        <span class='id identifier rubyid_deployment_model'>deployment_model</span> <span class='op'>=</span> <span class='id identifier rubyid_task_model'>task_model</span><span class='period'>.</span><span class='id identifier rubyid_deployment_model'>deployment_model</span>
+        <span class='id identifier rubyid_configured_deployment'>configured_deployment</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Models.html" title="Syskit::Models (module)">Models</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="ConfiguredDeployment.html" title="Syskit::Models::ConfiguredDeployment (class)">ConfiguredDeployment</a></span></span><span class='period'>.</span>
+            <span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_on'>on</span><span class='comma'>,</span> <span class='id identifier rubyid_deployment_model'>deployment_model</span><span class='comma'>,</span> <span class='const'>Hash</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>task</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_name'>name</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span><span class='comma'>,</span>
+                <span class='const'>Hash</span><span class='lbracket'>[</span><span class='label'>task_context_class:</span> <span class='id identifier rubyid_task_context_class'>task_context_class</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_register_configured_deployment'>register_configured_deployment</span><span class='lparen'>(</span><span class='id identifier rubyid_configured_deployment'>configured_deployment</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_configured_deployment'>configured_deployment</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="use_unmanaged_task-instance_method">
+  
+    #<strong>use_unmanaged_task</strong>(mappings, on: &#39;unmanaged_tasks&#39;, process_managers: Syskit.conf)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Declare tasks that are going to be started by some other process, but whose
+tasks are going to be integrated in the syskit network</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291
+292
+293
+294
+295
+296
+297
+298
+299
+300
+301
+302
+303
+304
+305
+306
+307
+308
+309</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/models/deployment_group.rb', line 264</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_use_unmanaged_task'><span class='object_link'><a href="../Test/NetworkManipulation.html#use_unmanaged_task-instance_method" title="Syskit::Test::NetworkManipulation#use_unmanaged_task (method)">use_unmanaged_task</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_mappings'>mappings</span><span class='comma'>,</span> <span class='label'>on:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>unmanaged_tasks</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='label'>process_managers:</span> <span class='const'><span class='object_link'><a href="../../Syskit.html" title="Syskit (module)">Syskit</a></span></span><span class='period'>.</span><span class='id identifier rubyid_conf'><span class='object_link'><a href="../../Syskit.html#conf-class_method" title="Syskit.conf (method)">conf</a></span></span><span class='rparen'>)</span>
+
+    <span class='comment'># Verify that the process manager exists
+</span>    <span class='id identifier rubyid_process_managers'>process_managers</span><span class='period'>.</span><span class='id identifier rubyid_process_server_config_for'>process_server_config_for</span><span class='lparen'>(</span><span class='id identifier rubyid_on'>on</span><span class='rparen'>)</span>
+
+    <span class='id identifier rubyid_model_to_name'>model_to_name</span> <span class='op'>=</span> <span class='id identifier rubyid_mappings'>mappings</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_task_model'>task_model</span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span><span class='op'>|</span>
+        <span class='kw'>if</span> <span class='id identifier rubyid_task_model'>task_model</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='symbol'>:to_str</span><span class='rparen'>)</span>
+            <span class='const'>Roby</span><span class='period'>.</span><span class='id identifier rubyid_warn_deprecated'>warn_deprecated</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>specifying the task model as string </span><span class='tstring_end'>&quot;</span></span>\
+                <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>is deprecated. Load the task library and use Syskit&#39;s </span><span class='tstring_end'>&quot;</span></span>\
+                <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>task class</span><span class='tstring_end'>&quot;</span></span>
+            <span class='id identifier rubyid_task_model_name'>task_model_name</span> <span class='op'>=</span> <span class='id identifier rubyid_task_model'>task_model</span>
+            <span class='id identifier rubyid_task_model'>task_model</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../Syskit.html" title="Syskit (module)">Syskit</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../TaskContext.html" title="Syskit::TaskContext (class)">TaskContext</a></span></span><span class='period'>.</span>
+                <span class='id identifier rubyid_find_model_from_orogen_name'>find_model_from_orogen_name</span><span class='lparen'>(</span><span class='id identifier rubyid_task_model_name'>task_model_name</span><span class='rparen'>)</span>
+            <span class='kw'>unless</span> <span class='id identifier rubyid_task_model'>task_model</span>
+                <span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span>
+                    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_task_model_name'>task_model_name</span><span class='embexpr_end'>}</span><span class='tstring_content'> is not a known oroGen model name</span><span class='tstring_end'>&quot;</span></span>
+            <span class='kw'>end</span>
+        <span class='kw'>end</span>
+        <span class='lbracket'>[</span><span class='id identifier rubyid_task_model'>task_model</span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span><span class='rbracket'>]</span>
+    <span class='kw'>end</span>
+
+    <span class='id identifier rubyid_model_to_name'>model_to_name</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_task_model'>task_model</span><span class='comma'>,</span> <span class='id identifier rubyid__name'>_name</span><span class='op'>|</span>
+        <span class='id identifier rubyid_is_pure_task_context_model'>is_pure_task_context_model</span> <span class='op'>=</span>
+            <span class='id identifier rubyid_task_model'>task_model</span><span class='period'>.</span><span class='id identifier rubyid_kind_of?'>kind_of?</span><span class='lparen'>(</span><span class='const'>Class</span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span>
+            <span class='lparen'>(</span><span class='id identifier rubyid_task_model'>task_model</span> <span class='op'>&lt;=</span> <span class='const'><span class='object_link'><a href="../../Syskit.html" title="Syskit (module)">Syskit</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../TaskContext.html" title="Syskit::TaskContext (class)">TaskContext</a></span></span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span>
+            <span class='op'>!</span><span class='lparen'>(</span><span class='id identifier rubyid_task_model'>task_model</span> <span class='op'>&lt;=</span> <span class='const'><span class='object_link'><a href="../../Syskit.html" title="Syskit (module)">Syskit</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../RubyTaskContext.html" title="Syskit::RubyTaskContext (class)">RubyTaskContext</a></span></span><span class='rparen'>)</span>
+        <span class='kw'>unless</span> <span class='id identifier rubyid_is_pure_task_context_model'>is_pure_task_context_model</span>
+            <span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>expected a mapping from a task context </span><span class='tstring_end'>&quot;</span></span>\
+                <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>model to a name, but got </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_task_model'>task_model</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+        <span class='kw'>end</span>
+    <span class='kw'>end</span>
+
+    <span class='id identifier rubyid_model_to_name'>model_to_name</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_task_model'>task_model</span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span><span class='op'>|</span>
+        <span class='id identifier rubyid_orogen_model'>orogen_model</span> <span class='op'>=</span> <span class='id identifier rubyid_task_model'>task_model</span><span class='period'>.</span><span class='id identifier rubyid_orogen_model'>orogen_model</span>
+        <span class='id identifier rubyid_deployment_model'>deployment_model</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../Syskit.html" title="Syskit (module)">Syskit</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Deployment.html" title="Syskit::Deployment (class)">Deployment</a></span></span><span class='period'>.</span>
+            <span class='id identifier rubyid_new_submodel'>new_submodel</span><span class='lparen'>(</span><span class='label'>name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Deployment::Unmanaged::</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>do</span>
+                <span class='id identifier rubyid_task'>task</span> <span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_orogen_model'>orogen_model</span>
+            <span class='kw'>end</span>
+
+        <span class='id identifier rubyid_configured_deployment'>configured_deployment</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Models.html" title="Syskit::Models (module)">Models</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="ConfiguredDeployment.html" title="Syskit::Models::ConfiguredDeployment (class)">ConfiguredDeployment</a></span></span><span class='period'>.</span>
+            <span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_on'>on</span><span class='comma'>,</span> <span class='id identifier rubyid_deployment_model'>deployment_model</span><span class='comma'>,</span> <span class='const'>Hash</span><span class='lbracket'>[</span><span class='id identifier rubyid_name'>name</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_name'>name</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_register_configured_deployment'>register_configured_deployment</span><span class='lparen'>(</span><span class='id identifier rubyid_configured_deployment'>configured_deployment</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_configured_deployment'>configured_deployment</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Wed Apr 10 21:56:53 2019 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.19 (ruby-2.5.1).
+</div>
+
+    </div>
+  </body>
+</html>

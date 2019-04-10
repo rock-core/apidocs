@@ -1,0 +1,1316 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: Orocos::Log::Property
+  
+    &mdash; Documentation by YARD 0.9.19
+  
+</title>
+
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "Orocos::Log::Property";
+  relpath = '../../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../../_index.html">Index (P)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../Orocos.html" title="Orocos (module)">Orocos</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Log.html" title="Orocos::Log (module)">Log</a></span></span>
+     &raquo; 
+    <span class="title">Property</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: Orocos::Log::Property
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName"><span class='object_link'><a href="InterfaceObject.html" title="Orocos::Log::InterfaceObject (class)">InterfaceObject</a></span></span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next"><span class='object_link'><a href="InterfaceObject.html" title="Orocos::Log::InterfaceObject (class)">InterfaceObject</a></span></li>
+          
+            <li class="next">Orocos::Log::Property</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/orocos/log/task_context.rb</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>Simulated Property based on a configuration log file It is automatically
+replayed if at least one OutputPort of the task is replayed</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+
+
+  <h2>Instance Attribute Summary <small><a href="#" class="summary_toggle">collapse</a></small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#task-instance_method" title="#task (instance method)">#<strong>task</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>The underlying TaskContext instance.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#tracked-instance_method" title="#tracked (instance method)">#<strong>tracked</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>true –&gt;  this property shall be replayed.</p>
+</div></span>
+  
+</li>
+
+    
+  </ul>
+
+
+
+  
+  
+  <h3 class="inherited">Attributes inherited from <span class='object_link'><a href="InterfaceObject.html" title="Orocos::Log::InterfaceObject (class)">InterfaceObject</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="InterfaceObject.html#name-instance_method" title="Orocos::Log::InterfaceObject#name (method)">#name</a></span>, <span class='object_link'><a href="InterfaceObject.html#stream-instance_method" title="Orocos::Log::InterfaceObject#stream (method)">#stream</a></span>, <span class='object_link'><a href="InterfaceObject.html#type-instance_method" title="Orocos::Log::InterfaceObject#type (method)">#type</a></span>, <span class='object_link'><a href="InterfaceObject.html#type_name-instance_method" title="Orocos::Log::InterfaceObject#type_name (method)">#type_name</a></span></p>
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#aligned%3F-instance_method" title="#aligned? (instance method)">#<strong>aligned?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>returns true if Log::Replay is aligned.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#doc%3F-instance_method" title="#doc? (instance method)">#<strong>doc?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#full_name-instance_method" title="#full_name (instance method)">#<strong>full_name</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Give the full name for this property.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(task, stream)  &#x21d2; Property </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>A new instance of Property.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#metadata-instance_method" title="#metadata (instance method)">#<strong>metadata</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>returns the metadata associated with the underlying stream.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#new_sample-instance_method" title="#new_sample (instance method)">#<strong>new_sample</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#notify-instance_method" title="#notify (instance method)">#<strong>notify</strong>(&amp;block)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>registers a code block which will be called when the property changes.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#number_of_samples-instance_method" title="#number_of_samples (instance method)">#<strong>number_of_samples</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the number of samples for the property.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#on_change-instance_method" title="#on_change (instance method)">#<strong>on_change</strong>(&amp;block)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>registers a code block which will be called when the property changes.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#orocos_type_name-instance_method" title="#orocos_type_name (instance method)">#<strong>orocos_type_name</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#pretty_print-instance_method" title="#pretty_print (instance method)">#<strong>pretty_print</strong>(pp)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>:nodoc:.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#raw_read-instance_method" title="#raw_read (instance method)">#<strong>raw_read</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#read-instance_method" title="#read (instance method)">#<strong>read</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Read the current value of the property/attribute.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#update-instance_method" title="#update (instance method)">#<strong>update</strong>(sample_info)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#used%3F-instance_method" title="#used? (instance method)">#<strong>used?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="InterfaceObject.html" title="Orocos::Log::InterfaceObject (class)">InterfaceObject</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="InterfaceObject.html#guess_object_name-instance_method" title="Orocos::Log::InterfaceObject#guess_object_name (method)">#guess_object_name</a></span>, <span class='object_link'><a href="InterfaceObject.html#guess_orocos_type_name-instance_method" title="Orocos::Log::InterfaceObject#guess_orocos_type_name (method)">#guess_orocos_type_name</a></span></p>
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    #<strong>initialize</strong>(task, stream)  &#x21d2; <tt><span class='object_link'><a href="" title="Orocos::Log::Property (class)">Property</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns a new instance of Property</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+540
+541
+542
+543
+544
+545
+546</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/orocos/log/task_context.rb', line 540</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_task'>task</span><span class='comma'>,</span> <span class='id identifier rubyid_stream'>stream</span><span class='rparen'>)</span>
+    <span class='kw'>super</span><span class='lparen'>(</span><span class='id identifier rubyid_stream'>stream</span><span class='rparen'>)</span>
+
+    <span class='ivar'>@task</span> <span class='op'>=</span> <span class='id identifier rubyid_task'>task</span>
+    <span class='ivar'>@current_data</span> <span class='op'>=</span> <span class='kw'>nil</span>
+    <span class='ivar'>@notify_blocks</span> <span class='op'>=</span><span class='lbracket'>[</span><span class='rbracket'>]</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id=""></span>
+      <div class="method_details first">
+  <h3 class="signature first" id="task-instance_method">
+  
+    #<strong>task</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>The underlying TaskContext instance</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+538
+539
+540</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/orocos/log/task_context.rb', line 538</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_task'>task</span>
+  <span class='ivar'>@task</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="tracked=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="tracked-instance_method">
+  
+    #<strong>tracked</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>true –&gt;  this property shall be replayed</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+536
+537
+538</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/orocos/log/task_context.rb', line 536</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_tracked'>tracked</span>
+  <span class='ivar'>@tracked</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="aligned?-instance_method">
+  
+    #<strong>aligned?</strong>  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>returns true if Log::Replay is aligned</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+555
+556
+557</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/orocos/log/task_context.rb', line 555</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_aligned?'>aligned?</span>
+    <span class='id identifier rubyid_task'>task</span><span class='period'>.</span><span class='id identifier rubyid_log_replay'>log_replay</span><span class='period'>.</span><span class='id identifier rubyid_aligned?'>aligned?</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="doc?-instance_method">
+  
+    #<strong>doc?</strong>  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+559
+560
+561</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/orocos/log/task_context.rb', line 559</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_doc?'>doc?</span>
+    <span class='kw'>false</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="full_name-instance_method">
+  
+    #<strong>full_name</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Give the full name for this property. It is the stream name.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+616
+617
+618</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/orocos/log/task_context.rb', line 616</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_full_name'>full_name</span>
+    <span class='id identifier rubyid_stream'>stream</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="metadata-instance_method">
+  
+    #<strong>metadata</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>returns the metadata associated with the underlying stream</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+625
+626
+627</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/orocos/log/task_context.rb', line 625</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_metadata'>metadata</span>
+    <span class='id identifier rubyid_stream'>stream</span><span class='period'>.</span><span class='id identifier rubyid_metadata'>metadata</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="new_sample-instance_method">
+  
+    #<strong>new_sample</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+598
+599
+600</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/orocos/log/task_context.rb', line 598</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_new_sample'>new_sample</span>
+    <span class='id identifier rubyid_type'>type</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="notify-instance_method">
+  
+    #<strong>notify</strong>(&amp;block)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>registers a code block which will be called when the property changes</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+594
+595
+596</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/orocos/log/task_context.rb', line 594</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_notify'>notify</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+    <span class='ivar'>@notify_blocks</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_block'>block</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="number_of_samples-instance_method">
+  
+    #<strong>number_of_samples</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the number of samples for the property.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+611
+612
+613</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/orocos/log/task_context.rb', line 611</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_number_of_samples'>number_of_samples</span>
+    <span class='kw'>return</span> <span class='ivar'>@stream</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="on_change-instance_method">
+  
+    #<strong>on_change</strong>(&amp;block)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>registers a code block which will be called when the property changes</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+585
+586
+587
+588
+589
+590</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/orocos/log/task_context.rb', line 585</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_on_change'>on_change</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+    <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_tracked'>tracked</span> <span class='op'>=</span> <span class='kw'>true</span>
+    <span class='id identifier rubyid_notify'>notify</span> <span class='kw'>do</span>
+        <span class='id identifier rubyid_block'>block</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span><span class='lparen'>(</span><span class='id identifier rubyid_read'>read</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="orocos_type_name-instance_method">
+  
+    #<strong>orocos_type_name</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+602
+603
+604
+605
+606
+607
+608</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/orocos/log/task_context.rb', line 602</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_orocos_type_name'>orocos_type_name</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_metadata'>metadata</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_metadata'>metadata</span><span class='period'>.</span><span class='id identifier rubyid_has_key?'>has_key?</span><span class='lparen'>(</span><span class='symbol'>:rock_orocos_type_name</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_metadata'>metadata</span><span class='lbracket'>[</span><span class='symbol'>:rock_orocos_type_name</span><span class='rbracket'>]</span>
+    <span class='kw'>else</span>
+        <span class='id identifier rubyid_type_name'>type_name</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="pretty_print-instance_method">
+  
+    #<strong>pretty_print</strong>(pp)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>:nodoc:</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+620
+621
+622</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/orocos/log/task_context.rb', line 620</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_pretty_print'>pretty_print</span><span class='lparen'>(</span><span class='id identifier rubyid_pp'>pp</span><span class='rparen'>)</span> <span class='comment'># :nodoc:
+</span>    <span class='id identifier rubyid_pp'>pp</span><span class='period'>.</span><span class='id identifier rubyid_text'>text</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>property </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'> (</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_type'>type</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'>)</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="raw_read-instance_method">
+  
+    #<strong>raw_read</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+575
+576
+577
+578
+579
+580
+581</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/orocos/log/task_context.rb', line 575</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_raw_read'>raw_read</span>
+    <span class='kw'>if</span> <span class='ivar'>@sample_info</span> <span class='op'>&amp;&amp;</span> <span class='op'>!</span><span class='ivar'>@current_data</span>
+        <span class='id identifier rubyid_stream'>stream</span><span class='comma'>,</span> <span class='id identifier rubyid_position'>position</span> <span class='op'>=</span> <span class='op'>*</span><span class='ivar'>@sample_info</span>
+        <span class='ivar'>@current_data</span> <span class='op'>=</span> <span class='id identifier rubyid_stream'>stream</span><span class='period'>.</span><span class='id identifier rubyid_read_one_raw_data_sample'>read_one_raw_data_sample</span><span class='lparen'>(</span><span class='id identifier rubyid_position'>position</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+    <span class='ivar'>@current_data</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="read-instance_method">
+  
+    #<strong>read</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Read the current value of the property/attribute</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+569
+570
+571
+572
+573</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/orocos/log/task_context.rb', line 569</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_read'>read</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_sample'>sample</span> <span class='op'>=</span> <span class='id identifier rubyid_raw_read'>raw_read</span>
+        <span class='const'>Typelib</span><span class='period'>.</span><span class='id identifier rubyid_to_ruby'>to_ruby</span><span class='lparen'>(</span><span class='id identifier rubyid_sample'>sample</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="update-instance_method">
+  
+    #<strong>update</strong>(sample_info)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+563
+564
+565
+566</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/orocos/log/task_context.rb', line 563</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_update'>update</span><span class='lparen'>(</span><span class='id identifier rubyid_sample_info'>sample_info</span><span class='rparen'>)</span>
+    <span class='ivar'>@current_data</span> <span class='op'>=</span> <span class='kw'>nil</span>
+    <span class='ivar'>@sample_info</span> <span class='op'>=</span> <span class='id identifier rubyid_sample_info'>sample_info</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="used?-instance_method">
+  
+    #<strong>used?</strong>  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+629
+630
+631</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/orocos/log/task_context.rb', line 629</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_used?'>used?</span>
+    <span class='id identifier rubyid_tracked'>tracked</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Wed Apr 10 22:10:28 2019 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.19 (ruby-2.5.1).
+</div>
+
+    </div>
+  </body>
+</html>

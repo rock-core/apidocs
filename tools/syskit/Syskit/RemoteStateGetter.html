@@ -1,0 +1,2037 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: Syskit::RemoteStateGetter
+  
+    &mdash; Documentation by YARD 0.9.19
+  
+</title>
+
+  <link rel="stylesheet" href="../css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "Syskit::RemoteStateGetter";
+  relpath = '../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../_index.html">Index (R)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../Syskit.html" title="Syskit (module)">Syskit</a></span></span>
+     &raquo; 
+    <span class="title">RemoteStateGetter</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: Syskit::RemoteStateGetter
+  
+  
+  <span class="private note title">Private</span>
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName"><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></span>
+      
+        <ul class="fullTree">
+          <li><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></li>
+          
+            <li class="next">Syskit::RemoteStateGetter</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/syskit/remote_state_getter.rb</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This class is part of a private API.</strong>
+  You should avoid using this class if possible, as it may be removed or be changed in the future.
+</p>
+
+<p>Adapter that reads the synchronous state of a remote node asynchronously</p>
+
+<p>It is started in a paused state, waiting for <span class='object_link'><a href="#resume-instance_method" title="Syskit::RemoteStateGetter#resume (method)">#resume</a></span> to be called to
+start polling the remote state</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+
+
+  <h2>Instance Attribute Summary <small><a href="#" class="summary_toggle">collapse</a></small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#current_state-instance_method" title="#current_state (instance method)">#<strong>current_state</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>The newest known state.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#exit_condition-instance_method" title="#exit_condition (instance method)">#<strong>exit_condition</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>The condition used to make the polling thread quit.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#last_read_state-instance_method" title="#last_read_state (instance method)">#<strong>last_read_state</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>The last read state.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#orocos_task-instance_method" title="#orocos_task (instance method)">#<strong>orocos_task</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>The task we&#39;re polling.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#period-instance_method" title="#period (instance method)">#<strong>period</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>The polling period in seconds.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#poll_thread-instance_method" title="#poll_thread (instance method)">#<strong>poll_thread</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>The thread that polls #rtt_state.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#poll_thread_error-instance_method" title="#poll_thread_error (instance method)">#<strong>poll_thread_error</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>The exception that terminated <span class='object_link'><a href="#poll_thread-instance_method" title="Syskit::RemoteStateGetter#poll_thread (method)">#poll_thread</a></span>.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#poll_thread_exit_sync-instance_method" title="#poll_thread_exit_sync (instance method)">#<strong>poll_thread_exit_sync</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>To avoid deadlocking in <span class='object_link'><a href="#wait-instance_method" title="Syskit::RemoteStateGetter#wait (method)">#wait</a></span> if the thread quits.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#run_event-instance_method" title="#run_event (instance method)">#<strong>run_event</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Control for pause/resume.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#state_queue-instance_method" title="#state_queue (instance method)">#<strong>state_queue</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>The queue of values read by #poll_thread.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#sync_latch-instance_method" title="#sync_latch (instance method)">#<strong>sync_latch</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Holder for the latch that is used by <span class='object_link'><a href="#wait-instance_method" title="Syskit::RemoteStateGetter#wait (method)">#wait</a></span> for synchronization.</p>
+</div></span>
+  
+</li>
+
+    
+  </ul>
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#clear-instance_method" title="#clear (instance method)">#<strong>clear</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#connected%3F-instance_method" title="#connected? (instance method)">#<strong>connected?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Whether the polling thread is alive.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#disconnect-instance_method" title="#disconnect (instance method)">#<strong>disconnect</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Stop polling completely.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(orocos_task, initial_state: nil, period: 0.02)  &#x21d2; RemoteStateGetter </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>A new instance of RemoteStateGetter.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#join-instance_method" title="#join (instance method)">#<strong>join</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Wait for the poll thread to finish after a <span class='object_link'><a href="#disconnect-instance_method" title="Syskit::RemoteStateGetter#disconnect (method)">#disconnect</a></span>.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#pause-instance_method" title="#pause (instance method)">#<strong>pause</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Pause polling until <span class='object_link'><a href="#resume-instance_method" title="Syskit::RemoteStateGetter#resume (method)">#resume</a></span> or <span class='object_link'><a href="#disconnect-instance_method" title="Syskit::RemoteStateGetter#disconnect (method)">#disconnect</a></span> are called.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#poll_loop-instance_method" title="#poll_loop (instance method)">#<strong>poll_loop</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>The internal polling loop.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#read-instance_method" title="#read (instance method)">#<strong>read</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Read either a new or the last read state.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#read_new-instance_method" title="#read_new (instance method)">#<strong>read_new</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Read a new state change.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#ready%3F-instance_method" title="#ready? (instance method)">#<strong>ready?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Whether the state reader has read at least one state.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#resume-instance_method" title="#resume (instance method)">#<strong>resume</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Resume polling after a <span class='object_link'><a href="#pause-instance_method" title="Syskit::RemoteStateGetter#pause (method)">#pause</a></span>.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#wait-instance_method" title="#wait (instance method)">#<strong>wait</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Wait for the current state to be read and return it.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    #<strong>initialize</strong>(orocos_task, initial_state: nil, period: 0.02)  &#x21d2; <tt><span class='object_link'><a href="" title="Syskit::RemoteStateGetter (class)">RemoteStateGetter</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+
+<p>Returns a new instance of RemoteStateGetter</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/remote_state_getter.rb', line 32</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_orocos_task'>orocos_task</span><span class='comma'>,</span> <span class='label'>initial_state:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>period:</span> <span class='float'>0.02</span><span class='rparen'>)</span>
+    <span class='ivar'>@orocos_task</span> <span class='op'>=</span> <span class='id identifier rubyid_orocos_task'>orocos_task</span>
+    <span class='ivar'>@period</span> <span class='op'>=</span> <span class='id identifier rubyid_period'>period</span>
+    <span class='ivar'>@exit_condition</span> <span class='op'>=</span> <span class='const'>Concurrent</span><span class='op'>::</span><span class='const'>Event</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+    <span class='ivar'>@run_event</span> <span class='op'>=</span> <span class='const'>Concurrent</span><span class='op'>::</span><span class='const'>Event</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+    <span class='ivar'>@current_state</span> <span class='op'>=</span> <span class='const'>Concurrent</span><span class='op'>::</span><span class='const'>Atom</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_initial_state'>initial_state</span><span class='rparen'>)</span>
+    <span class='ivar'>@state_queue</span> <span class='op'>=</span> <span class='const'>Queue</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+    <span class='ivar'>@sync_latch</span> <span class='op'>=</span> <span class='const'>Concurrent</span><span class='op'>::</span><span class='const'>Atom</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='kw'>nil</span><span class='rparen'>)</span>
+    <span class='ivar'>@poll_thread_error</span> <span class='op'>=</span> <span class='const'>Concurrent</span><span class='op'>::</span><span class='const'>Atom</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='kw'>nil</span><span class='rparen'>)</span>
+    <span class='ivar'>@poll_thread_exit_sync</span> <span class='op'>=</span> <span class='const'>Mutex</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+    <span class='ivar'>@last_read_state</span> <span class='op'>=</span> <span class='kw'>nil</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_initial_state'>initial_state</span>
+        <span class='id identifier rubyid_state_queue'>state_queue</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span><span class='lparen'>(</span><span class='id identifier rubyid_initial_state'>initial_state</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+
+    <span class='id identifier rubyid_period'>period</span> <span class='op'>=</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_period'>period</span>
+    <span class='id identifier rubyid_exit_condition'>exit_condition</span><span class='period'>.</span><span class='id identifier rubyid_reset'>reset</span>
+    <span class='ivar'>@poll_thread</span> <span class='op'>=</span> <span class='const'>Thread</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='kw'>do</span>
+        <span class='id identifier rubyid_poll_loop'>poll_loop</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id=""></span>
+      <div class="method_details first">
+  <h3 class="signature first" id="current_state-instance_method">
+  
+    #<strong>current_state</strong>  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+
+<p>The newest known state</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+24
+25
+26</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/remote_state_getter.rb', line 24</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_current_state'>current_state</span>
+  <span class='ivar'>@current_state</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="exit_condition-instance_method">
+  
+    #<strong>exit_condition</strong>  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+
+<p>The condition used to make the polling thread quit</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+14
+15
+16</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/remote_state_getter.rb', line 14</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_exit_condition'>exit_condition</span>
+  <span class='ivar'>@exit_condition</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="last_read_state-instance_method">
+  
+    #<strong>last_read_state</strong>  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+
+<p>The last read state</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+26
+27
+28</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/remote_state_getter.rb', line 26</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_last_read_state'>last_read_state</span>
+  <span class='ivar'>@last_read_state</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="orocos_task-instance_method">
+  
+    #<strong>orocos_task</strong>  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+
+<p>The task we&#39;re polling</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+10
+11
+12</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/remote_state_getter.rb', line 10</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_orocos_task'>orocos_task</span>
+  <span class='ivar'>@orocos_task</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="period-instance_method">
+  
+    #<strong>period</strong>  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+
+<p>The polling period in seconds</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+12
+13
+14</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/remote_state_getter.rb', line 12</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_period'>period</span>
+  <span class='ivar'>@period</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="poll_thread-instance_method">
+  
+    #<strong>poll_thread</strong>  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+
+<p>The thread that polls #rtt_state</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+16
+17
+18</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/remote_state_getter.rb', line 16</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_poll_thread'>poll_thread</span>
+  <span class='ivar'>@poll_thread</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="poll_thread_error-instance_method">
+  
+    #<strong>poll_thread_error</strong>  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+
+<p>The exception that terminated <span class='object_link'><a href="#poll_thread-instance_method" title="Syskit::RemoteStateGetter#poll_thread (method)">#poll_thread</a></span></p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+18
+19
+20</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/remote_state_getter.rb', line 18</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_poll_thread_error'>poll_thread_error</span>
+  <span class='ivar'>@poll_thread_error</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="poll_thread_exit_sync-instance_method">
+  
+    #<strong>poll_thread_exit_sync</strong>  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+
+<p>To avoid deadlocking in <span class='object_link'><a href="#wait-instance_method" title="Syskit::RemoteStateGetter#wait (method)">#wait</a></span> if the thread quits</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+30
+31
+32</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/remote_state_getter.rb', line 30</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_poll_thread_exit_sync'>poll_thread_exit_sync</span>
+  <span class='ivar'>@poll_thread_exit_sync</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="run_event-instance_method">
+  
+    #<strong>run_event</strong>  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+
+<p>Control for pause/resume</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+28
+29
+30</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/remote_state_getter.rb', line 28</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_run_event'>run_event</span>
+  <span class='ivar'>@run_event</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="state_queue-instance_method">
+  
+    #<strong>state_queue</strong>  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+
+<p>The queue of values read by #poll_thread</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+20
+21
+22</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/remote_state_getter.rb', line 20</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_state_queue'>state_queue</span>
+  <span class='ivar'>@state_queue</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="sync_latch-instance_method">
+  
+    #<strong>sync_latch</strong>  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+
+<p>Holder for the latch that is used by <span class='object_link'><a href="#wait-instance_method" title="Syskit::RemoteStateGetter#wait (method)">#wait</a></span> for synchronization</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+22
+23
+24</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/remote_state_getter.rb', line 22</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_sync_latch'>sync_latch</span>
+  <span class='ivar'>@sync_latch</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="clear-instance_method">
+  
+    #<strong>clear</strong>  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+143
+144
+145
+146
+147</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/remote_state_getter.rb', line 143</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_clear'>clear</span>
+    <span class='id identifier rubyid_state_queue'>state_queue</span><span class='period'>.</span><span class='id identifier rubyid_clear'>clear</span>
+    <span class='id identifier rubyid_current_state'>current_state</span><span class='period'>.</span><span class='id identifier rubyid_reset'>reset</span><span class='lparen'>(</span><span class='kw'>nil</span><span class='rparen'>)</span>
+    <span class='ivar'>@last_read_state</span> <span class='op'>=</span> <span class='kw'>nil</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="connected?-instance_method">
+  
+    #<strong>connected?</strong>  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+
+<p>Whether the polling thread is alive</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+150
+151
+152</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/remote_state_getter.rb', line 150</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_connected?'>connected?</span>
+    <span class='op'>!</span><span class='id identifier rubyid_exit_condition'>exit_condition</span><span class='period'>.</span><span class='id identifier rubyid_set?'>set?</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="disconnect-instance_method">
+  
+    #<strong>disconnect</strong>  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+
+<p>Stop polling completely</p>
+
+<p>After calling <span class='object_link'><a href="#disconnect-instance_method" title="Syskit::RemoteStateGetter#disconnect (method)">#disconnect</a></span>, the reader cannot be connected again. Use
+<span class='object_link'><a href="#pause-instance_method" title="Syskit::RemoteStateGetter#pause (method)">#pause</a></span> and <span class='object_link'><a href="#resume-instance_method" title="Syskit::RemoteStateGetter#resume (method)">#resume</a></span> to temporarily stop polling</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+170
+171
+172
+173
+174
+175</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/remote_state_getter.rb', line 170</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_disconnect'>disconnect</span>
+    <span class='comment'># This order ensures that {#poll_thread} will quit immediately if it
+</span>    <span class='comment'># was paused
+</span>    <span class='id identifier rubyid_exit_condition'>exit_condition</span><span class='period'>.</span><span class='id identifier rubyid_set'>set</span>
+    <span class='id identifier rubyid_run_event'>run_event</span><span class='period'>.</span><span class='id identifier rubyid_set'>set</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="join-instance_method">
+  
+    #<strong>join</strong>  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+
+<p>Wait for the poll thread to finish after a <span class='object_link'><a href="#disconnect-instance_method" title="Syskit::RemoteStateGetter#disconnect (method)">#disconnect</a></span></p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+178
+179
+180</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/remote_state_getter.rb', line 178</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_join'>join</span>
+    <span class='id identifier rubyid_poll_thread'>poll_thread</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="pause-instance_method">
+  
+    #<strong>pause</strong>  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+
+<p>Pause polling until <span class='object_link'><a href="#resume-instance_method" title="Syskit::RemoteStateGetter#resume (method)">#resume</a></span> or <span class='object_link'><a href="#disconnect-instance_method" title="Syskit::RemoteStateGetter#disconnect (method)">#disconnect</a></span> are called</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+155
+156
+157</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/remote_state_getter.rb', line 155</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_pause'>pause</span>
+    <span class='id identifier rubyid_run_event'>run_event</span><span class='period'>.</span><span class='id identifier rubyid_reset'>reset</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="poll_loop-instance_method">
+  
+    #<strong>poll_loop</strong>  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+
+<p>The internal polling loop</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/remote_state_getter.rb', line 55</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_poll_loop'>poll_loop</span>
+    <span class='comment'># Analysis to avoid deadlocking in {#wait}
+</span>    <span class='comment'>#
+</span>    <span class='comment'># In the ensure block:
+</span>    <span class='comment'># - we&#39;ve had an exception and poll_thread_error is set
+</span>    <span class='comment'># - the loop quit because exit_condition was set
+</span>    <span class='comment'>#
+</span>    <span class='comment'># We synchronize the latch (from wait) and we set exit_condition in
+</span>    <span class='comment'># the synchronization section to ensure that {#wait} can check for
+</span>    <span class='comment'># exit_condition being set and set the latch only if it is not
+</span>    <span class='id identifier rubyid_last_state'>last_state</span> <span class='op'>=</span> <span class='kw'>nil</span>
+    <span class='kw'>while</span> <span class='op'>!</span><span class='id identifier rubyid_exit_condition'>exit_condition</span><span class='period'>.</span><span class='id identifier rubyid_set?'>set?</span>
+        <span class='kw'>if</span> <span class='id identifier rubyid_latch'>latch</span> <span class='op'>=</span> <span class='id identifier rubyid_sync_latch'>sync_latch</span><span class='period'>.</span><span class='id identifier rubyid_value'>value</span>
+            <span class='id identifier rubyid_latch'>latch</span><span class='period'>.</span><span class='id identifier rubyid_count_down'>count_down</span>
+        <span class='kw'>end</span>
+
+        <span class='id identifier rubyid_time'>time</span> <span class='op'>=</span> <span class='const'>Time</span><span class='period'>.</span><span class='id identifier rubyid_now'>now</span>
+        <span class='id identifier rubyid_state'>state</span> <span class='op'>=</span> <span class='id identifier rubyid_orocos_task'>orocos_task</span><span class='period'>.</span><span class='id identifier rubyid_rtt_state'>rtt_state</span>
+        <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_state'>state</span> <span class='op'>!=</span> <span class='id identifier rubyid_last_state'>last_state</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='op'>!</span><span class='id identifier rubyid_current_state'>current_state</span><span class='period'>.</span><span class='id identifier rubyid_value'>value</span>
+            <span class='id identifier rubyid_current_state'>current_state</span><span class='period'>.</span><span class='id identifier rubyid_reset'>reset</span><span class='lparen'>(</span><span class='id identifier rubyid_state'>state</span><span class='rparen'>)</span>
+            <span class='id identifier rubyid_state_queue'>state_queue</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span><span class='lparen'>(</span><span class='id identifier rubyid_state'>state</span><span class='rparen'>)</span>
+            <span class='id identifier rubyid_last_state'>last_state</span> <span class='op'>=</span> <span class='id identifier rubyid_state'>state</span>
+        <span class='kw'>end</span>
+        <span class='kw'>if</span> <span class='id identifier rubyid_latch'>latch</span>
+            <span class='id identifier rubyid_latch'>latch</span><span class='period'>.</span><span class='id identifier rubyid_count_down'>count_down</span>
+            <span class='id identifier rubyid_sync_latch'>sync_latch</span><span class='period'>.</span><span class='id identifier rubyid_reset'>reset</span><span class='lparen'>(</span><span class='kw'>nil</span><span class='rparen'>)</span>
+        <span class='kw'>end</span>
+        <span class='id identifier rubyid_spent'>spent</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='const'>Time</span><span class='period'>.</span><span class='id identifier rubyid_now'>now</span> <span class='op'>-</span> <span class='id identifier rubyid_time'>time</span><span class='rparen'>)</span>
+        <span class='kw'>if</span> <span class='id identifier rubyid_spent'>spent</span> <span class='op'>&lt;</span> <span class='id identifier rubyid_period'>period</span>
+            <span class='id identifier rubyid_exit_condition'>exit_condition</span><span class='period'>.</span><span class='id identifier rubyid_wait'>wait</span><span class='lparen'>(</span><span class='id identifier rubyid_period'>period</span> <span class='op'>-</span> <span class='id identifier rubyid_spent'>spent</span><span class='rparen'>)</span>
+        <span class='kw'>end</span>
+        <span class='id identifier rubyid_run_event'>run_event</span><span class='period'>.</span><span class='id identifier rubyid_wait'>wait</span>
+    <span class='kw'>end</span>
+
+<span class='kw'>rescue</span> <span class='const'>Exception</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_e'>e</span>
+    <span class='id identifier rubyid_poll_thread_error'>poll_thread_error</span><span class='period'>.</span><span class='id identifier rubyid_reset'>reset</span><span class='lparen'>(</span><span class='id identifier rubyid_e'>e</span><span class='rparen'>)</span>
+<span class='kw'>ensure</span>
+    <span class='id identifier rubyid_poll_thread_exit_sync'>poll_thread_exit_sync</span><span class='period'>.</span><span class='id identifier rubyid_synchronize'>synchronize</span> <span class='kw'>do</span>
+        <span class='id identifier rubyid_exit_condition'>exit_condition</span><span class='period'>.</span><span class='id identifier rubyid_set'>set</span>
+        <span class='kw'>if</span> <span class='id identifier rubyid_latch'>latch</span> <span class='op'>=</span> <span class='id identifier rubyid_sync_latch'>sync_latch</span><span class='period'>.</span><span class='id identifier rubyid_value'>value</span>
+            <span class='id identifier rubyid_latch'>latch</span><span class='period'>.</span><span class='id identifier rubyid_count_down'>count_down</span>
+            <span class='id identifier rubyid_latch'>latch</span><span class='period'>.</span><span class='id identifier rubyid_count_down'>count_down</span>
+        <span class='kw'>end</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="read-instance_method">
+  
+    #<strong>read</strong>  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+
+<p>Read either a new or the last read state</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+131
+132
+133</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/remote_state_getter.rb', line 131</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_read'>read</span>
+    <span class='id identifier rubyid_read_new'>read_new</span> <span class='op'>||</span> <span class='id identifier rubyid_last_read_state'>last_read_state</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="read_new-instance_method">
+  
+    #<strong>read_new</strong>  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+
+<p>Read a new state change</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+136
+137
+138
+139
+140
+141</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/remote_state_getter.rb', line 136</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_read_new'>read_new</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_new_state'>new_state</span> <span class='op'>=</span> <span class='id identifier rubyid_state_queue'>state_queue</span><span class='period'>.</span><span class='id identifier rubyid_pop'>pop</span><span class='lparen'>(</span><span class='kw'>true</span><span class='rparen'>)</span>
+        <span class='ivar'>@last_read_state</span> <span class='op'>=</span> <span class='id identifier rubyid_new_state'>new_state</span>
+    <span class='kw'>end</span>
+<span class='kw'>rescue</span> <span class='const'>ThreadError</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="ready?-instance_method">
+  
+    #<strong>ready?</strong>  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+
+<p>Whether the state reader has read at least one state</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+126
+127
+128</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/remote_state_getter.rb', line 126</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_ready?'>ready?</span>
+    <span class='id identifier rubyid_last_read_state'>last_read_state</span> <span class='op'>||</span> <span class='lparen'>(</span><span class='id identifier rubyid_state_queue'>state_queue</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span> <span class='op'>&gt;</span> <span class='int'>0</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="resume-instance_method">
+  
+    #<strong>resume</strong>  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+
+<p>Resume polling after a <span class='object_link'><a href="#pause-instance_method" title="Syskit::RemoteStateGetter#pause (method)">#pause</a></span></p>
+
+<p>It is safe to call even if the polling is currently active</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+162
+163
+164</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/remote_state_getter.rb', line 162</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_resume'>resume</span>
+    <span class='id identifier rubyid_run_event'>run_event</span><span class='period'>.</span><span class='id identifier rubyid_set'>set</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="wait-instance_method">
+  
+    #<strong>wait</strong>  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+
+<p>Wait for the current state to be read and return it</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/remote_state_getter.rb', line 102</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_wait'>wait</span>
+    <span class='id identifier rubyid_latch'>latch</span> <span class='op'>=</span> <span class='id identifier rubyid_poll_thread_exit_sync'>poll_thread_exit_sync</span><span class='period'>.</span><span class='id identifier rubyid_synchronize'>synchronize</span> <span class='kw'>do</span>
+        <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_run_event'>run_event</span><span class='period'>.</span><span class='id identifier rubyid_set?'>set?</span>
+            <span class='id identifier rubyid_raise'>raise</span> <span class='const'>ThreadError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='kw'>self</span><span class='embexpr_end'>}</span><span class='tstring_content'> is paused, cannot call #wait</span><span class='tstring_end'>&quot;</span></span>
+        <span class='kw'>elsif</span> <span class='id identifier rubyid_error'>error</span> <span class='op'>=</span> <span class='id identifier rubyid_poll_thread_error'>poll_thread_error</span><span class='period'>.</span><span class='id identifier rubyid_value'>value</span>
+            <span class='id identifier rubyid_raise'>raise</span> <span class='id identifier rubyid_error'>error</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='kw'>self</span><span class='embexpr_end'>}</span><span class='tstring_content'>&#39;s poll thread quit with </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_error'>error</span><span class='period'>.</span><span class='id identifier rubyid_message'>message</span><span class='embexpr_end'>}</span><span class='tstring_content'>, cannot call #wait</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='lparen'>(</span><span class='id identifier rubyid_error'>error</span><span class='period'>.</span><span class='id identifier rubyid_backtrace'>backtrace</span> <span class='op'>+</span> <span class='id identifier rubyid_caller'>caller</span><span class='rparen'>)</span>
+        <span class='kw'>elsif</span> <span class='id identifier rubyid_exit_condition'>exit_condition</span><span class='period'>.</span><span class='id identifier rubyid_set?'>set?</span>
+            <span class='id identifier rubyid_raise'>raise</span> <span class='const'>ThreadError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='kw'>self</span><span class='embexpr_end'>}</span><span class='tstring_content'> is quitting, cannot call #wait</span><span class='tstring_end'>&quot;</span></span>
+        <span class='kw'>end</span>
+        <span class='id identifier rubyid_sync_latch'>sync_latch</span><span class='period'>.</span><span class='id identifier rubyid_reset'>reset</span><span class='lparen'>(</span><span class='id identifier rubyid_latch'>latch</span> <span class='op'>=</span> <span class='const'>Concurrent</span><span class='op'>::</span><span class='const'>CountDownLatch</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='int'>2</span><span class='rparen'>)</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_latch'>latch</span>
+    <span class='kw'>end</span>
+
+    <span class='id identifier rubyid_latch'>latch</span><span class='period'>.</span><span class='id identifier rubyid_wait'>wait</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_error'>error</span> <span class='op'>=</span> <span class='id identifier rubyid_poll_thread_error'>poll_thread_error</span><span class='period'>.</span><span class='id identifier rubyid_value'>value</span>
+        <span class='id identifier rubyid_raise'>raise</span> <span class='id identifier rubyid_error'>error</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='kw'>self</span><span class='embexpr_end'>}</span><span class='tstring_content'>&#39;s poll thread quit with </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_error'>error</span><span class='period'>.</span><span class='id identifier rubyid_message'>message</span><span class='embexpr_end'>}</span><span class='tstring_content'> during #wait</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='lparen'>(</span><span class='id identifier rubyid_error'>error</span><span class='period'>.</span><span class='id identifier rubyid_backtrace'>backtrace</span> <span class='op'>+</span> <span class='id identifier rubyid_caller'>caller</span><span class='rparen'>)</span>
+    <span class='kw'>elsif</span> <span class='id identifier rubyid_exit_condition'>exit_condition</span><span class='period'>.</span><span class='id identifier rubyid_set?'>set?</span>
+        <span class='id identifier rubyid_raise'>raise</span> <span class='const'>ThreadError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='kw'>self</span><span class='embexpr_end'>}</span><span class='tstring_content'>#disconnect called within #wait</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>else</span>
+        <span class='id identifier rubyid_current_state'>current_state</span><span class='period'>.</span><span class='id identifier rubyid_value'>value</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Wed Apr 10 21:55:34 2019 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.19 (ruby-2.5.1).
+</div>
+
+    </div>
+  </body>
+</html>

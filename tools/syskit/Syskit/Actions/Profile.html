@@ -1,0 +1,5472 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: Syskit::Actions::Profile
+  
+    &mdash; Documentation by YARD 0.9.19
+  
+</title>
+
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "Syskit::Actions::Profile";
+  relpath = '../../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../../_index.html">Index (P)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../Syskit.html" title="Syskit (module)">Syskit</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Actions.html" title="Syskit::Actions (module)">Actions</a></span></span>
+     &raquo; 
+    <span class="title">Profile</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: Syskit::Actions::Profile
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName"><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></span>
+      
+        <ul class="fullTree">
+          <li><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></li>
+          
+            <li class="next">Syskit::Actions::Profile</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  <dl>
+      <dt>Includes:</dt>
+      <dd>MetaRuby::DSLs::FindThroughMethodMissing, Roby::DRoby::Identifiable, Roby::DRoby::V5::DRobyConstant::Dump</dd>
+  </dl>
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/syskit/actions/profile.rb</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>A representation of a set of dependency injections and definition of
+pre-instanciated models</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><h2>Defined Under Namespace</h2>
+<p class="children">
+  
+    
+      <strong class="modules">Modules:</strong> <span class='object_link'><a href="Profile/Models.html" title="Syskit::Actions::Profile::Models (module)">Models</a></span>, <span class='object_link'><a href="Profile/Tag.html" title="Syskit::Actions::Profile::Tag (module)">Tag</a></span>
+    
+  
+    
+      <strong class="classes">Classes:</strong> <span class='object_link'><a href="Profile/Definition.html" title="Syskit::Actions::Profile::Definition (class)">Definition</a></span>, <span class='object_link'><a href="Profile/ProfileInstanceRequirements.html" title="Syskit::Actions::Profile::ProfileInstanceRequirements (class)">ProfileInstanceRequirements</a></span>, <span class='object_link'><a href="Profile/RobotDefinition.html" title="Syskit::Actions::Profile::RobotDefinition (class)">RobotDefinition</a></span>
+    
+  
+</p>
+
+
+
+
+  <h2>Class Attribute Summary <small><a href="#" class="summary_toggle">collapse</a></small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#profiles-class_method" title="profiles (class method)">.<strong>profiles</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Set of known profiles.</p>
+</div></span>
+  
+</li>
+
+    
+  </ul>
+
+  <h2>Instance Attribute Summary <small><a href="#" class="summary_toggle">collapse</a></small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#definition_location-instance_method" title="#definition_location (instance method)">#<strong>definition_location</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>The call trace at the time of the profile definition.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#definitions-instance_method" title="#definitions (instance method)">#<strong>definitions</strong>  &#x21d2; Hash&lt;String,InstanceRequirements&gt; </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>The definitions.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#dependency_injection-instance_method" title="#dependency_injection (instance method)">#<strong>dependency_injection</strong>  &#x21d2; DependencyInjection </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>The DependencyInjection object that is being defined in this profile.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#deployment_group-instance_method" title="#deployment_group (instance method)">#<strong>deployment_group</strong>  &#x21d2; Models::DeploymentGroup </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>The deployments available on this profile.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#deployment_groups-instance_method" title="#deployment_groups (instance method)">#<strong>deployment_groups</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>A set of deployment groups that can be used to narrow deployments on tasks.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#name-instance_method" title="#name (instance method)">#<strong>name</strong>  &#x21d2; String </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>The profile name.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#tags-instance_method" title="#tags (instance method)">#<strong>tags</strong>  &#x21d2; Hash&lt;String,InstanceRequirements&gt; </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>The tags.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#used_profiles-instance_method" title="#used_profiles (instance method)">#<strong>used_profiles</strong>  &#x21d2; Array&lt;Profile&gt; </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>The set of profiles that have been used in this profile with <span class='object_link'><a href="#use_profile-instance_method" title="Syskit::Actions::Profile#use_profile (method)">#use_profile</a></span>.</p>
+</div></span>
+  
+</li>
+
+    
+  </ul>
+
+
+
+
+  
+    <h2>
+      Class Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#clear_model-class_method" title="clear_model (class method)">.<strong>clear_model</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#deregister_profile-class_method" title="deregister_profile (class method)">.<strong>deregister_profile</strong>(profile)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#each_submodel-class_method" title="each_submodel (class method)">.<strong>each_submodel</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Defined here to make profiles look like models w.r.t.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#filter_submodels-class_method" title="filter_submodels (class method)">.<strong>filter_submodels</strong> {|profile| ... } &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Helper method that allows to iterate over the registered profiles and
+possibly delete some of them.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#register_profile-class_method" title="register_profile (class method)">.<strong>register_profile</strong>(profile)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#all_used_profiles-instance_method" title="#all_used_profiles (instance method)">#<strong>all_used_profiles</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns all profiles that are used by self.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#basename-instance_method" title="#basename (instance method)">#<strong>basename</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>The profile&#39;s basename.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#clear_model-instance_method" title="#clear_model (instance method)">#<strong>clear_model</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Clears this profile of all data, leaving it blank.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#define-instance_method" title="#define (instance method)">#<strong>define</strong>(name, requirements)  &#x21d2; Definition </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Create a new definition based on a given instance requirement object.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#define_deployment_group-instance_method" title="#define_deployment_group (instance method)">#<strong>define_deployment_group</strong>(name, &amp;block)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Create a deployment group to specify definition deployments.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#definition-instance_method" title="#definition (instance method)">#<strong>definition</strong>(name)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the instance requirement object that represents the given
+definition.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#each_action-instance_method" title="#each_action (instance method)">#<strong>each_action</strong> {|action_model| ... } &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Yield all actions that can be used to access this profile&#39;s definitions
+and devices.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#each_definition-instance_method" title="#each_definition (instance method)">#<strong>each_definition</strong> {|definition| ... } &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Enumerate all definitions available on this profile.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#each_resolved_definition-instance_method" title="#each_resolved_definition (instance method)">#<strong>each_resolved_definition</strong> {|definition| ... } &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Enumerate all definitions on this profile and resolve them.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#each_submodel-instance_method" title="#each_submodel (instance method)">#<strong>each_submodel</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Defined here to make profiles look like models w.r.t.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#each_tag-instance_method" title="#each_tag (instance method)">#<strong>each_tag</strong> {|| ... } &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Enumerate the tags declared on this profile.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#each_used_profile-instance_method" title="#each_used_profile (instance method)">#<strong>each_used_profile</strong> {|profile| ... } &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Enumerate the profiles that have directly been imported in self.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#find_definition_by_name-instance_method" title="#find_definition_by_name (instance method)">#<strong>find_definition_by_name</strong>(name)  &#x21d2; nil, InstanceRequirements </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the instance requirement object that represents the given
+definition, if there is one.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#find_deployed_task_by_name-instance_method" title="#find_deployed_task_by_name (instance method)">#<strong>find_deployed_task_by_name</strong>(task_name)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#find_deployment_group_by_name-instance_method" title="#find_deployment_group_by_name (instance method)">#<strong>find_deployment_group_by_name</strong>(name)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns a deployment group defined with #create_deployment_group.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#find_device_requirements_by_name-instance_method" title="#find_device_requirements_by_name (instance method)">#<strong>find_device_requirements_by_name</strong>(name)  &#x21d2; InstanceRequirements<sup>?</sup> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the instance requirements that represent a certain device.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#find_tag-instance_method" title="#find_tag (instance method)">#<strong>find_tag</strong>(name)  &#x21d2; Tag<sup>?</sup> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns a tag by its name.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#find_tag_by_name-instance_method" title="#find_tag_by_name (instance method)">#<strong>find_tag_by_name</strong>(name)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the tag object for a given name.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#find_through_method_missing-instance_method" title="#find_through_method_missing (instance method)">#<strong>find_through_method_missing</strong>(m, args)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#from-instance_method" title="#from (instance method)">#<strong>from</strong>(accessor)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Get an argument from a task accessor.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#from_state-instance_method" title="#from_state (instance method)">#<strong>from_state</strong>(state_object = State)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Get an argument from a state object.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#has_definition%3F-instance_method" title="#has_definition? (instance method)">#<strong>has_definition?</strong>(name)  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Tests whether self has a definition with a given name.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#has_deployed_task%3F-instance_method" title="#has_deployed_task? (instance method)">#<strong>has_deployed_task?</strong>(task_name)  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#has_deployment_group%3F-instance_method" title="#has_deployment_group? (instance method)">#<strong>has_deployment_group?</strong>(name)  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Whether this profile has a group with the given name.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#has_device%3F-instance_method" title="#has_device? (instance method)">#<strong>has_device?</strong>(name)  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#has_tag%3F-instance_method" title="#has_tag? (instance method)">#<strong>has_tag?</strong>(name)  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Whether a tag with this name exists.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#has_through_method_missing%3F-instance_method" title="#has_through_method_missing? (instance method)">#<strong>has_through_method_missing?</strong>(m)  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(name = nil, register: false)  &#x21d2; Profile </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>A new instance of Profile.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize_copy-instance_method" title="#initialize_copy (instance method)">#<strong>initialize_copy</strong>(old)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#inject_di_context-instance_method" title="#inject_di_context (instance method)">#<strong>inject_di_context</strong>(req)  &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Injects the DI information registered in this profile in the given instance
+requirements.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#invalidate_dependency_injection-instance_method" title="#invalidate_dependency_injection (instance method)">#<strong>invalidate_dependency_injection</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Invalidate the cached dependency inject object.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#nothing-instance_method" title="#nothing (instance method)">#<strong>nothing</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Dependency injection object that signifies “select nothing for this”.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#permanent_model=-instance_method" title="#permanent_model= (instance method)">#<strong>permanent_model=</strong>(value)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Whether this profile should be kept across app setup/cleanup cycles and
+during model reloading.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#permanent_model%3F-instance_method" title="#permanent_model? (instance method)">#<strong>permanent_model?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Whether this profile should be kept across app setup/cleanup cycles and
+during model reloading.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#promote_requirements-instance_method" title="#promote_requirements (instance method)">#<strong>promote_requirements</strong>(profile, req, tags = Hash.new)  &#x21d2; InstanceRequirements </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Promote requirements taken from another profile to this profile.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#register_definition-instance_method" title="#register_definition (instance method)">#<strong>register_definition</strong>(name, requirements, doc: nil)  &#x21d2; Definition </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Register requirements to a definition name.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#resolve_tag_selection-instance_method" title="#resolve_tag_selection (instance method)">#<strong>resolve_tag_selection</strong>(profile, tags)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Resolves the names in the tags argument given to <span class='object_link'><a href="#use_profile-instance_method" title="Syskit::Actions::Profile#use_profile (method)">#use_profile</a></span>.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#resolve_used_profiles-instance_method" title="#resolve_used_profiles (instance method)">#<strong>resolve_used_profiles</strong>(list, set)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Recursively lists all profiles that are used by self.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#resolved_definition-instance_method" title="#resolved_definition (instance method)">#<strong>resolved_definition</strong>(name)  &#x21d2; InstanceRequirements </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the instance requirement object that represents the given
+definition, with all the dependency injection information contained in this
+profile applied.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#resolved_dependency_injection-instance_method" title="#resolved_dependency_injection (instance method)">#<strong>resolved_dependency_injection</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Resolve the profile&#39;s global dependency injection object.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#robot-instance_method" title="#robot (instance method)">#<strong>robot</strong>(&amp;block)  &#x21d2; Syskit::Robot::RobotDefinition </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Gets and/or modifies the robot definition of this profile.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#spacename-instance_method" title="#spacename (instance method)">#<strong>spacename</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>The profile&#39;s namespace.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#tag-instance_method" title="#tag (instance method)">#<strong>tag</strong>(name, *models)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#to_s-instance_method" title="#to_s (instance method)">#<strong>to_s</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#use-instance_method" title="#use (instance method)">#<strong>use</strong>(*args)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Add some dependency injections for the definitions in this profile.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#use_deployment-instance_method" title="#use_deployment (instance method)">#<strong>use_deployment</strong>(*names, on: &#39;localhost&#39;, loader: deployment_group.loader, **run_options)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#use_deployments_from-instance_method" title="#use_deployments_from (instance method)">#<strong>use_deployments_from</strong>(project_name, loader: deployment_group.loader, **use_options)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#use_group-instance_method" title="#use_group (instance method)">#<strong>use_group</strong>(deployment_group)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#use_profile-instance_method" title="#use_profile (instance method)">#<strong>use_profile</strong>(profile, tags = Hash.new, transform_names: -&gt;(k) { k })  &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Adds the given profile DI information and registered definitions to this
+one.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#use_ruby_tasks-instance_method" title="#use_ruby_tasks (instance method)">#<strong>use_ruby_tasks</strong>(mappings, on: &#39;ruby_tasks&#39;)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#uses_profile%3F-instance_method" title="#uses_profile? (instance method)">#<strong>uses_profile?</strong>(profile)  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Whether self uses the given profile.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  <div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    #<strong>initialize</strong>(name = nil, register: false)  &#x21d2; <tt><span class='object_link'><a href="" title="Syskit::Actions::Profile (class)">Profile</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns a new instance of Profile</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/actions/profile.rb', line 191</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>register:</span> <span class='kw'>false</span><span class='rparen'>)</span>
+    <span class='ivar'>@name</span> <span class='op'>=</span> <span class='id identifier rubyid_name'>name</span>
+    <span class='ivar'>@permanent_model</span> <span class='op'>=</span> <span class='kw'>false</span>
+    <span class='ivar'>@definitions</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+    <span class='ivar'>@tags</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+    <span class='ivar'>@used_profiles</span> <span class='op'>=</span> <span class='const'>Array</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+    <span class='ivar'>@dependency_injection</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../DependencyInjection.html" title="Syskit::DependencyInjection (class)">DependencyInjection</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../DependencyInjection.html#initialize-instance_method" title="Syskit::DependencyInjection#initialize (method)">new</a></span></span>
+    <span class='ivar'>@robot</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Profile/RobotDefinition.html" title="Syskit::Actions::Profile::RobotDefinition (class)">RobotDefinition</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Profile/RobotDefinition.html#initialize-instance_method" title="Syskit::Actions::Profile::RobotDefinition#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='kw'>self</span><span class='rparen'>)</span>
+    <span class='ivar'>@definition_location</span> <span class='op'>=</span> <span class='id identifier rubyid_caller_locations'>caller_locations</span>
+    <span class='ivar'>@deployment_group</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../Syskit.html" title="Syskit (module)">Syskit</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Models.html" title="Syskit::Models (module)">Models</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Models/DeploymentGroup.html" title="Syskit::Models::DeploymentGroup (class)">DeploymentGroup</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../Models/DeploymentGroup.html#initialize-instance_method" title="Syskit::Models::DeploymentGroup#initialize (method)">new</a></span></span>
+    <span class='ivar'>@deployment_groups</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+    <span class='kw'>super</span><span class='lparen'>(</span><span class='rparen'>)</span>
+
+    <span class='kw'>if</span> <span class='id identifier rubyid_register'>register</span>
+        <span class='const'><span class='object_link'><a href="" title="Syskit::Actions::Profile (class)">Profile</a></span></span><span class='period'>.</span><span class='id identifier rubyid_profiles'><span class='object_link'><a href="#profiles-class_method" title="Syskit::Actions::Profile.profiles (method)">profiles</a></span></span> <span class='op'>&lt;&lt;</span> <span class='const'>WeakRef</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='kw'>self</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+  <div id="class_attr_details" class="attr_details">
+    <h2>Class Attribute Details</h2>
+    
+      
+      <span id=""></span>
+      <div class="method_details first">
+  <h3 class="signature first" id="profiles-class_method">
+  
+    .<strong>profiles</strong>  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Set of known profiles</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+10
+11
+12</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/actions/profile.rb', line 10</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_profiles'>profiles</span>
+  <span class='ivar'>@profiles</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id=""></span>
+      <div class="method_details first">
+  <h3 class="signature first" id="definition_location-instance_method">
+  
+    #<strong>definition_location</strong>  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>The call trace at the time of the profile definition</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+104
+105
+106</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/actions/profile.rb', line 104</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_definition_location'>definition_location</span>
+  <span class='ivar'>@definition_location</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="definitions-instance_method">
+  
+    #<strong>definitions</strong>  &#x21d2; <tt>Hash&lt;String,<span class='object_link'><a href="../InstanceRequirements.html" title="Syskit::InstanceRequirements (class)">InstanceRequirements</a></span>&gt;</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>The definitions</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Hash&lt;String,<span class='object_link'><a href="../InstanceRequirements.html" title="Syskit::InstanceRequirements (class)">InstanceRequirements</a></span>&gt;</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+114
+115
+116</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/actions/profile.rb', line 114</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_definitions'>definitions</span>
+  <span class='ivar'>@definitions</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="dependency_injection-instance_method">
+  
+    #<strong>dependency_injection</strong>  &#x21d2; <tt><span class='object_link'><a href="../DependencyInjection.html" title="Syskit::DependencyInjection (class)">DependencyInjection</a></span></tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>The DependencyInjection object that is being defined in this profile</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../DependencyInjection.html" title="Syskit::DependencyInjection (class)">DependencyInjection</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+125
+126
+127</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/actions/profile.rb', line 125</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_dependency_injection'>dependency_injection</span>
+  <span class='ivar'>@dependency_injection</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="deployment_group-instance_method">
+  
+    #<strong>deployment_group</strong>  &#x21d2; <tt><span class='object_link'><a href="../Models/DeploymentGroup.html" title="Syskit::Models::DeploymentGroup (class)">Models::DeploymentGroup</a></span></tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>The deployments available on this profile</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../Models/DeploymentGroup.html" title="Syskit::Models::DeploymentGroup (class)">Models::DeploymentGroup</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+129
+130
+131</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/actions/profile.rb', line 129</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_deployment_group'>deployment_group</span>
+  <span class='ivar'>@deployment_group</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="deployment_groups-instance_method">
+  
+    #<strong>deployment_groups</strong>  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>A set of deployment groups that can be used to narrow deployments on tasks</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+132
+133
+134</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/actions/profile.rb', line 132</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_deployment_groups'>deployment_groups</span>
+  <span class='ivar'>@deployment_groups</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="name-instance_method">
+  
+    #<strong>name</strong>  &#x21d2; <tt>String</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>The profile name</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+107
+108
+109</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/actions/profile.rb', line 107</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_name'>name</span>
+  <span class='ivar'>@name</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="tags-instance_method">
+  
+    #<strong>tags</strong>  &#x21d2; <tt>Hash&lt;String,<span class='object_link'><a href="../InstanceRequirements.html" title="Syskit::InstanceRequirements (class)">InstanceRequirements</a></span>&gt;</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>The tags</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Hash&lt;String,<span class='object_link'><a href="../InstanceRequirements.html" title="Syskit::InstanceRequirements (class)">InstanceRequirements</a></span>&gt;</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+117
+118
+119</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/actions/profile.rb', line 117</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_tags'>tags</span>
+  <span class='ivar'>@tags</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="used_profiles-instance_method">
+  
+    #<strong>used_profiles</strong>  &#x21d2; <tt>Array&lt;<span class='object_link'><a href="" title="Syskit::Actions::Profile (class)">Profile</a></span>&gt;</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>The set of profiles that have been used in this profile with <span class='object_link'><a href="#use_profile-instance_method" title="Syskit::Actions::Profile#use_profile (method)">#use_profile</a></span></p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array&lt;<span class='object_link'><a href="" title="Syskit::Actions::Profile (class)">Profile</a></span>&gt;</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+121
+122
+123</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/actions/profile.rb', line 121</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_used_profiles'>used_profiles</span>
+  <span class='ivar'>@used_profiles</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="clear_model-class_method">
+  
+    .<strong>clear_model</strong>  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+656
+657</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/actions/profile.rb', line 656</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_clear_model'>clear_model</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="deregister_profile-class_method">
+  
+    .<strong>deregister_profile</strong>(profile)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+650
+651
+652
+653
+654</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/actions/profile.rb', line 650</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_deregister_profile'>deregister_profile</span><span class='lparen'>(</span><span class='id identifier rubyid_profile'>profile</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_filter_submodels'>filter_submodels</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_pr'>pr</span><span class='op'>|</span>
+        <span class='id identifier rubyid_pr'>pr</span> <span class='op'>==</span> <span class='id identifier rubyid_profile'>profile</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="each_submodel-class_method">
+  
+    .<strong>each_submodel</strong>  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Defined here to make profiles look like models w.r.t. Roby&#39;s
+clear_model implementation</p>
+
+<p>It enumerates the profiles created so far</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+638
+639
+640
+641
+642
+643
+644</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/actions/profile.rb', line 638</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_each_submodel'>each_submodel</span>
+    <span class='kw'>return</span> <span class='id identifier rubyid_enum_for'>enum_for</span><span class='lparen'>(</span><span class='id identifier rubyid___method__'>__method__</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_block_given?'>block_given?</span>
+    <span class='id identifier rubyid_filter_submodels'>filter_submodels</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_profile'>profile</span><span class='op'>|</span>
+        <span class='kw'>yield</span><span class='lparen'>(</span><span class='id identifier rubyid_profile'>profile</span><span class='rparen'>)</span>
+        <span class='kw'>false</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="filter_submodels-class_method">
+  
+    .<strong>filter_submodels</strong> {|profile| ... } &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Helper method that allows to iterate over the registered profiles and
+possibly delete some of them</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Yield Parameters:</p>
+<ul class="yieldparam">
+  
+    <li>
+      
+        <span class='name'>profile</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="" title="Syskit::Actions::Profile (class)">Profile</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Yield Returns:</p>
+<ul class="yieldreturn">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>true if this profile should be deleted, false otherwise</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+623
+624
+625
+626
+627
+628
+629
+630
+631
+632</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/actions/profile.rb', line 623</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_filter_submodels'>filter_submodels</span>
+    <span class='id identifier rubyid_profiles'>profiles</span><span class='period'>.</span><span class='id identifier rubyid_delete_if'>delete_if</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_weakref'>weakref</span><span class='op'>|</span>
+        <span class='kw'>begin</span>
+            <span class='id identifier rubyid_obj'>obj</span> <span class='op'>=</span> <span class='id identifier rubyid_weakref'>weakref</span><span class='period'>.</span><span class='id identifier rubyid___getobj__'>__getobj__</span>
+            <span class='kw'>yield</span><span class='lparen'>(</span><span class='id identifier rubyid_obj'>obj</span><span class='rparen'>)</span>
+        <span class='kw'>rescue</span> <span class='const'>WeakRef</span><span class='op'>::</span><span class='const'>RefError</span>
+            <span class='kw'>true</span>
+        <span class='kw'>end</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="register_profile-class_method">
+  
+    .<strong>register_profile</strong>(profile)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+646
+647
+648</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/actions/profile.rb', line 646</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_register_profile'>register_profile</span><span class='lparen'>(</span><span class='id identifier rubyid_profile'>profile</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_profiles'>profiles</span> <span class='op'>&lt;&lt;</span> <span class='const'>WeakRef</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_profile'>profile</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="all_used_profiles-instance_method">
+  
+    #<strong>all_used_profiles</strong>  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns all profiles that are used by self</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+546
+547
+548</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/actions/profile.rb', line 546</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_all_used_profiles'>all_used_profiles</span>
+    <span class='id identifier rubyid_resolve_used_profiles'>resolve_used_profiles</span><span class='lparen'>(</span><span class='const'>Array</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='comma'>,</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="basename-instance_method">
+  
+    #<strong>basename</strong>  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>The profile&#39;s basename</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+109</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/actions/profile.rb', line 109</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_basename'>basename</span><span class='semicolon'>;</span> <span class='id identifier rubyid_name'>name</span><span class='period'>.</span><span class='id identifier rubyid_gsub'>gsub</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>.*::</span><span class='regexp_end'>/</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="clear_model-instance_method">
+  
+    #<strong>clear_model</strong>  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Clears this profile of all data, leaving it blank</p>
+
+<p>This is mostly used in Roby&#39;s model-reloading procedures</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+601
+602
+603
+604
+605
+606
+607
+608
+609
+610
+611
+612
+613
+614
+615</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/actions/profile.rb', line 601</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_clear_model'>clear_model</span>
+    <span class='ivar'>@robot</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Robot.html" title="Syskit::Robot (module)">Robot</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Robot/RobotDefinition.html" title="Syskit::Robot::RobotDefinition (class)">RobotDefinition</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../Robot/RobotDefinition.html#initialize-instance_method" title="Syskit::Robot::RobotDefinition#initialize (method)">new</a></span></span>
+    <span class='id identifier rubyid_definitions'>definitions</span><span class='period'>.</span><span class='id identifier rubyid_clear'>clear</span>
+    <span class='ivar'>@dependency_injection</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../DependencyInjection.html" title="Syskit::DependencyInjection (class)">DependencyInjection</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../DependencyInjection.html#initialize-instance_method" title="Syskit::DependencyInjection#initialize (method)">new</a></span></span>
+    <span class='ivar'>@deployment_groups</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+    <span class='ivar'>@deployment_group</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../Syskit.html" title="Syskit (module)">Syskit</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Models.html" title="Syskit::Models (module)">Models</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Models/DeploymentGroup.html" title="Syskit::Models::DeploymentGroup (class)">DeploymentGroup</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../Models/DeploymentGroup.html#initialize-instance_method" title="Syskit::Models::DeploymentGroup#initialize (method)">new</a></span></span>
+    <span class='id identifier rubyid_used_profiles'>used_profiles</span><span class='period'>.</span><span class='id identifier rubyid_clear'>clear</span>
+    <span class='kw'>super</span> <span class='kw'>if</span> <span class='kw'>defined?</span> <span class='kw'>super</span>
+
+    <span class='kw'>if</span> <span class='const'>MetaRuby</span><span class='op'>::</span><span class='const'>Registration</span><span class='period'>.</span><span class='id identifier rubyid_accessible_by_name?'>accessible_by_name?</span><span class='lparen'>(</span><span class='kw'>self</span><span class='rparen'>)</span>
+        <span class='const'>MetaRuby</span><span class='op'>::</span><span class='const'>Registration</span><span class='period'>.</span><span class='id identifier rubyid_deregister_constant'>deregister_constant</span><span class='lparen'>(</span><span class='kw'>self</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+
+    <span class='const'><span class='object_link'><a href="" title="Syskit::Actions::Profile (class)">Profile</a></span></span><span class='period'>.</span><span class='id identifier rubyid_deregister_profile'><span class='object_link'><a href="#deregister_profile-class_method" title="Syskit::Actions::Profile.deregister_profile (method)">deregister_profile</a></span></span><span class='lparen'>(</span><span class='kw'>self</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="define-instance_method">
+  
+    #<strong>define</strong>(name, requirements)  &#x21d2; <tt><span class='object_link'><a href="Profile/Definition.html" title="Syskit::Actions::Profile::Definition (class)">Definition</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Create a new definition based on a given instance requirement object</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>the</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>definition name</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>requirements</span>
+      
+      
+        <span class='type'>(<tt>#to_instance_requirements</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the IR object</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Profile/Definition.html" title="Syskit::Actions::Profile::Definition (class)">Definition</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the added instance requirement</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+359
+360
+361
+362
+363
+364
+365</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/actions/profile.rb', line 359</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_define'>define</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_requirements'>requirements</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_resolved'>resolved</span> <span class='op'>=</span> <span class='id identifier rubyid_resolved_dependency_injection'>resolved_dependency_injection</span><span class='period'>.</span>
+        <span class='id identifier rubyid_direct_selection_for'>direct_selection_for</span><span class='lparen'>(</span><span class='id identifier rubyid_requirements'>requirements</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='id identifier rubyid_requirements'>requirements</span>
+    <span class='id identifier rubyid_doc'>doc</span> <span class='op'>=</span> <span class='const'>MetaRuby</span><span class='op'>::</span><span class='const'>DSLs</span><span class='period'>.</span><span class='id identifier rubyid_parse_documentation_block'>parse_documentation_block</span><span class='lparen'>(</span>
+        <span class='tlambda'>-&gt;</span><span class='lparen'>(</span><span class='id identifier rubyid_file'>file</span><span class='rparen'>)</span> <span class='tlambeg'>{</span> <span class='const'>Roby</span><span class='period'>.</span><span class='id identifier rubyid_app'>app</span><span class='period'>.</span><span class='id identifier rubyid_app_file?'>app_file?</span><span class='lparen'>(</span><span class='id identifier rubyid_file'>file</span><span class='rparen'>)</span> <span class='rbrace'>}</span><span class='comma'>,</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^define$</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_register_definition'>register_definition</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_resolved'>resolved</span><span class='period'>.</span><span class='id identifier rubyid_to_instance_requirements'>to_instance_requirements</span><span class='comma'>,</span> <span class='label'>doc:</span> <span class='id identifier rubyid_doc'>doc</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="define_deployment_group-instance_method">
+  
+    #<strong>define_deployment_group</strong>(name, &amp;block)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Create a deployment group to specify definition deployments</p>
+
+<p>This only defines the group, but does not declare that the profile should
+use it. To use a group in a profile, do the following:</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+      <pre class="example code"><code><span class='id identifier rubyid_create_deployment_group'>create_deployment_group</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>left_arm</span><span class='tstring_end'>&#39;</span></span> <span class='kw'>do</span>
+    <span class='id identifier rubyid_use_deployments_from'>use_deployments_from</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>left_arm</span><span class='tstring_end'>&#39;</span></span>
+<span class='kw'>end</span>
+<span class='id identifier rubyid_use_group'>use_group</span> <span class='id identifier rubyid_left_arm_deployment_group'>left_arm_deployment_group</span></code></pre>
+    
+  </div>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+519
+520
+521
+522
+523</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/actions/profile.rb', line 519</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_define_deployment_group'>define_deployment_group</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_group'>group</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../Syskit.html" title="Syskit (module)">Syskit</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Models.html" title="Syskit::Models (module)">Models</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Models/DeploymentGroup.html" title="Syskit::Models::DeploymentGroup (class)">DeploymentGroup</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../Models/DeploymentGroup.html#initialize-instance_method" title="Syskit::Models::DeploymentGroup#initialize (method)">new</a></span></span>
+    <span class='id identifier rubyid_group'>group</span><span class='period'>.</span><span class='id identifier rubyid_instance_eval'>instance_eval</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_deployment_groups'>deployment_groups</span><span class='lbracket'>[</span><span class='id identifier rubyid_name'>name</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_group'>group</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="definition-instance_method">
+  
+    #<strong>definition</strong>(name)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the instance requirement object that represents the given
+definition</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the definition name</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>ArgumentError</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>if the definition does not exist</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><span class='object_link'><a href="#resolved_definition-instance_method" title="Syskit::Actions::Profile#resolved_definition (method)">#resolved_definition</a></span></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+405
+406
+407
+408
+409
+410
+411</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/actions/profile.rb', line 405</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_definition'>definition</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_req'>req</span> <span class='op'>=</span> <span class='id identifier rubyid_find_definition_by_name'>find_definition_by_name</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_req'>req</span>
+    <span class='kw'>else</span>
+        <span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>profile </span><span class='embexpr_beg'>#{</span><span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'> has no definition called </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="each_action-instance_method">
+  
+    #<strong>each_action</strong> {|action_model| ... } &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Yield all actions that can be used to access this profile&#39;s definitions
+and devices</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Yield Parameters:</p>
+<ul class="yieldparam">
+  
+    <li>
+      
+        <span class='name'>action_model</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Models/Action.html" title="Syskit::Actions::Models::Action (class)">Models::Action</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+663
+664
+665
+666
+667
+668
+669
+670
+671
+672
+673
+674
+675
+676</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/actions/profile.rb', line 663</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_each_action'>each_action</span>
+    <span class='kw'>return</span> <span class='id identifier rubyid_enum_for'>enum_for</span><span class='lparen'>(</span><span class='id identifier rubyid___method__'>__method__</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_block_given?'>block_given?</span>
+
+    <span class='id identifier rubyid_robot'>robot</span><span class='period'>.</span><span class='id identifier rubyid_each_master_device'>each_master_device</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_dev'>dev</span><span class='op'>|</span>
+        <span class='id identifier rubyid_action_model'>action_model</span> <span class='op'>=</span> <span class='id identifier rubyid_dev'>dev</span><span class='period'>.</span><span class='id identifier rubyid_to_action_model'>to_action_model</span>
+        <span class='kw'>yield</span><span class='lparen'>(</span><span class='id identifier rubyid_action_model'>action_model</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+
+    <span class='id identifier rubyid_definitions'>definitions</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_req'>req</span><span class='op'>|</span>
+        <span class='id identifier rubyid_action_model'>action_model</span> <span class='op'>=</span> <span class='id identifier rubyid_req'>req</span><span class='period'>.</span><span class='id identifier rubyid_to_action_model'>to_action_model</span>
+        <span class='id identifier rubyid_action_model'>action_model</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'>_def</span><span class='tstring_end'>&quot;</span></span>
+        <span class='kw'>yield</span><span class='lparen'>(</span><span class='id identifier rubyid_action_model'>action_model</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="each_definition-instance_method">
+  
+    #<strong>each_definition</strong> {|definition| ... } &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Enumerate all definitions available on this profile</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Yield Parameters:</p>
+<ul class="yieldparam">
+  
+    <li>
+      
+        <span class='name'>definition</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Profile/Definition.html" title="Syskit::Actions::Profile::Definition (class)">Definition</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the definition object as given to <span class='object_link'><a href="#define-instance_method" title="Syskit::Actions::Profile#define (method)">#define</a></span></p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><span class='object_link'><a href="#each_resolved_definition-instance_method" title="Syskit::Actions::Profile#each_resolved_definition (method)">#each_resolved_definition</a></span></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+389
+390
+391
+392
+393
+394
+395
+396
+397</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/actions/profile.rb', line 389</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_each_definition'>each_definition</span>
+    <span class='kw'>return</span> <span class='id identifier rubyid_enum_for'>enum_for</span><span class='lparen'>(</span><span class='id identifier rubyid___method__'>__method__</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_block_given?'>block_given?</span>
+
+    <span class='id identifier rubyid_definitions'>definitions</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_definition'>definition</span><span class='op'>|</span>
+        <span class='id identifier rubyid_definition'>definition</span> <span class='op'>=</span> <span class='id identifier rubyid_definition'>definition</span><span class='period'>.</span><span class='id identifier rubyid_dup'>dup</span>
+        <span class='id identifier rubyid_definition'>definition</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span> <span class='op'>=</span> <span class='id identifier rubyid_name'>name</span>
+        <span class='kw'>yield</span><span class='lparen'>(</span><span class='id identifier rubyid_definition'>definition</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="each_resolved_definition-instance_method">
+  
+    #<strong>each_resolved_definition</strong> {|definition| ... } &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Enumerate all definitions on this profile and resolve them</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Yield Parameters:</p>
+<ul class="yieldparam">
+  
+    <li>
+      
+        <span class='name'>definition</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Profile/Definition.html" title="Syskit::Actions::Profile::Definition (class)">Definition</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the definition resolved with <span class='object_link'><a href="#resolved_definition-instance_method" title="Syskit::Actions::Profile#resolved_definition (method)">#resolved_definition</a></span></p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+466
+467
+468
+469
+470
+471</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/actions/profile.rb', line 466</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_each_resolved_definition'>each_resolved_definition</span>
+    <span class='kw'>return</span> <span class='id identifier rubyid_enum_for'>enum_for</span><span class='lparen'>(</span><span class='id identifier rubyid___method__'>__method__</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_block_given?'>block_given?</span>
+    <span class='id identifier rubyid_definitions'>definitions</span><span class='period'>.</span><span class='id identifier rubyid_each_value'>each_value</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_req'>req</span><span class='op'>|</span>
+        <span class='kw'>yield</span><span class='lparen'>(</span><span class='id identifier rubyid_req'>req</span><span class='period'>.</span><span class='id identifier rubyid_resolve'>resolve</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="each_submodel-instance_method">
+  
+    #<strong>each_submodel</strong>  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Defined here to make profiles look like models w.r.t. Roby&#39;s
+clear_model implementation</p>
+
+<p>It does nothing</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+100
+101</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/actions/profile.rb', line 100</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_each_submodel'>each_submodel</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="each_tag-instance_method">
+  
+    #<strong>each_tag</strong> {|| ... } &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Enumerate the tags declared on this profile</p>
+
+<p>It never enumerates tags from used profiles</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Yield Parameters:</p>
+<ul class="yieldparam">
+  
+    <li>
+      
+        <span class='name'></span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Profile/Models.html#Tag-constant" title="Syskit::Actions::Profile::Models::Tag (constant)">Models::Tag</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+223
+224
+225</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/actions/profile.rb', line 223</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_each_tag'>each_tag</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_tags'>tags</span><span class='period'>.</span><span class='id identifier rubyid_each_value'>each_value</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="each_used_profile-instance_method">
+  
+    #<strong>each_used_profile</strong> {|profile| ... } &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Enumerate the profiles that have directly been imported in self</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Yield Parameters:</p>
+<ul class="yieldparam">
+  
+    <li>
+      
+        <span class='name'>profile</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="" title="Syskit::Actions::Profile (class)">Profile</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+305
+306
+307
+308
+309
+310</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/actions/profile.rb', line 305</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_each_used_profile'>each_used_profile</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='id identifier rubyid_enum_for'>enum_for</span><span class='lparen'>(</span><span class='id identifier rubyid___method__'>__method__</span><span class='rparen'>)</span> <span class='kw'>unless</span> <span class='id identifier rubyid_block_given?'>block_given?</span>
+    <span class='id identifier rubyid_used_profiles'>used_profiles</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_profile'>profile</span><span class='comma'>,</span> <span class='id identifier rubyid__tags'>_tags</span><span class='op'>|</span>
+        <span class='kw'>yield</span><span class='lparen'>(</span><span class='id identifier rubyid_profile'>profile</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="find_definition_by_name-instance_method">
+  
+    #<strong>find_definition_by_name</strong>(name)  &#x21d2; <tt>nil</tt>, <tt><span class='object_link'><a href="../InstanceRequirements.html" title="Syskit::InstanceRequirements (class)">InstanceRequirements</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the instance requirement object that represents the given
+definition, if there is one</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the definition name</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>nil</tt>, <tt><span class='object_link'><a href="../InstanceRequirements.html" title="Syskit::InstanceRequirements (class)">InstanceRequirements</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the object matching the given name, or nil if there is none</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><span class='object_link'><a href="#definition-instance_method" title="Syskit::Actions::Profile#definition (method)">resolved_definition</a></span></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+420
+421
+422
+423
+424</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/actions/profile.rb', line 420</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_find_definition_by_name'>find_definition_by_name</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_req'>req</span> <span class='op'>=</span> <span class='id identifier rubyid_definitions'>definitions</span><span class='lbracket'>[</span><span class='id identifier rubyid_name'>name</span><span class='rbracket'>]</span>
+        <span class='id identifier rubyid_req'>req</span><span class='period'>.</span><span class='id identifier rubyid_dup'>dup</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="find_deployed_task_by_name-instance_method">
+  
+    #<strong>find_deployed_task_by_name</strong>(task_name)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+474
+475
+476</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/actions/profile.rb', line 474</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_find_deployed_task_by_name'>find_deployed_task_by_name</span><span class='lparen'>(</span><span class='id identifier rubyid_task_name'>task_name</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_deployment_group'>deployment_group</span><span class='period'>.</span><span class='id identifier rubyid_find_deployed_task_by_name'>find_deployed_task_by_name</span><span class='lparen'>(</span><span class='id identifier rubyid_task_name'>task_name</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="find_deployment_group_by_name-instance_method">
+  
+    #<strong>find_deployment_group_by_name</strong>(name)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns a deployment group defined with #create_deployment_group</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+531
+532
+533</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/actions/profile.rb', line 531</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_find_deployment_group_by_name'>find_deployment_group_by_name</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_deployment_groups'>deployment_groups</span><span class='lbracket'>[</span><span class='id identifier rubyid_name'>name</span><span class='rbracket'>]</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="find_device_requirements_by_name-instance_method">
+  
+    #<strong>find_device_requirements_by_name</strong>(name)  &#x21d2; <tt><span class='object_link'><a href="../InstanceRequirements.html" title="Syskit::InstanceRequirements (class)">InstanceRequirements</a></span></tt><sup>?</sup> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the instance requirements that represent a certain device</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../InstanceRequirements.html" title="Syskit::InstanceRequirements (class)">InstanceRequirements</a></span></tt>, <tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+536
+537
+538</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/actions/profile.rb', line 536</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_find_device_requirements_by_name'>find_device_requirements_by_name</span><span class='lparen'>(</span><span class='id identifier rubyid_device_name'>device_name</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_robot'>robot</span><span class='period'>.</span><span class='id identifier rubyid_devices'>devices</span><span class='lbracket'>[</span><span class='id identifier rubyid_device_name'>device_name</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_instance_requirements'>to_instance_requirements</span><span class='period'>.</span><span class='id identifier rubyid_dup'>dup</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="find_tag-instance_method">
+  
+    #<strong>find_tag</strong>(name)  &#x21d2; <tt><span class='object_link'><a href="Profile/Tag.html" title="Syskit::Actions::Profile::Tag (module)">Tag</a></span></tt><sup>?</sup> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns a tag by its name</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Profile/Tag.html" title="Syskit::Actions::Profile::Tag (module)">Tag</a></span></tt>, <tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+687
+688
+689</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/actions/profile.rb', line 687</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_find_tag'>find_tag</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_tags'>tags</span><span class='lbracket'>[</span><span class='id identifier rubyid_name'>name</span><span class='rbracket'>]</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="find_tag_by_name-instance_method">
+  
+    #<strong>find_tag_by_name</strong>(name)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the tag object for a given name</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+541
+542
+543</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/actions/profile.rb', line 541</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_find_tag_by_name'>find_tag_by_name</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_tags'>tags</span><span class='lbracket'>[</span><span class='id identifier rubyid_name'>name</span><span class='rbracket'>]</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="find_through_method_missing-instance_method">
+  
+    #<strong>find_through_method_missing</strong>(m, args)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+715
+716
+717
+718
+719
+720
+721
+722
+723</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/actions/profile.rb', line 715</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_find_through_method_missing'><span class='object_link'><a href="../Coordination/Models/FaultResponseTableExtension.html#find_through_method_missing-instance_method" title="Syskit::Coordination::Models::FaultResponseTableExtension#find_through_method_missing (method)">find_through_method_missing</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_m'>m</span><span class='comma'>,</span> <span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span>
+    <span class='const'>MetaRuby</span><span class='op'>::</span><span class='const'>DSLs</span><span class='period'>.</span><span class='id identifier rubyid_find_through_method_missing'>find_through_method_missing</span><span class='lparen'>(</span>
+        <span class='kw'>self</span><span class='comma'>,</span> <span class='id identifier rubyid_m'>m</span><span class='comma'>,</span> <span class='id identifier rubyid_args'>args</span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>_tag</span><span class='tstring_end'>&#39;</span></span><span class='period'>.</span><span class='id identifier rubyid_freeze'>freeze</span> <span class='op'>=&gt;</span> <span class='symbol'>:find_tag</span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>_def</span><span class='tstring_end'>&#39;</span></span><span class='period'>.</span><span class='id identifier rubyid_freeze'>freeze</span> <span class='op'>=&gt;</span> <span class='symbol'>:find_definition_by_name</span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>_dev</span><span class='tstring_end'>&#39;</span></span><span class='period'>.</span><span class='id identifier rubyid_freeze'>freeze</span> <span class='op'>=&gt;</span> <span class='symbol'>:find_device_requirements_by_name</span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>_task</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='symbol'>:find_deployed_task_by_name</span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>_deployment_group</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='symbol'>:find_deployment_group_by_name</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='kw'>super</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="from-instance_method">
+  
+    #<strong>from</strong>(accessor)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Get an argument from a task accessor</p>
+
+<p>The common usage for this is to forward an argument from the task&#39;s
+parent:</p>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_define'>define</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>test</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="../Composition.html" title="Syskit::Composition (class)">Composition</a></span></span><span class='period'>.</span><span class='id identifier rubyid_use'><span class='object_link'><a href="../Models/Composition.html#use-instance_method" title="Syskit::Models::Composition#use (method)">use</a></span></span><span class='lparen'>(</span>
+  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>some_child</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='const'>Model</span><span class='period'>.</span><span class='id identifier rubyid_with_arguments'>with_arguments</span><span class='lparen'>(</span><span class='label'>test:</span> <span class='id identifier rubyid_from'>from</span><span class='lparen'>(</span><span class='symbol'>:parent_task</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_test'>test</span><span class='rparen'>)</span><span class='rparen'>)</span>
+</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+153
+154
+155</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/actions/profile.rb', line 153</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_from'>from</span><span class='lparen'>(</span><span class='id identifier rubyid_accessor'>accessor</span><span class='rparen'>)</span>
+    <span class='const'>Roby</span><span class='op'>::</span><span class='const'>Task</span><span class='period'>.</span><span class='id identifier rubyid_from'>from</span><span class='lparen'>(</span><span class='id identifier rubyid_accessor'>accessor</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="from_state-instance_method">
+  
+    #<strong>from_state</strong>(state_object = State)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Get an argument from a state object</p>
+
+<p>The common usage for this is to access a state variable</p>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_define'>define</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>test</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="../Composition.html" title="Syskit::Composition (class)">Composition</a></span></span><span class='period'>.</span><span class='id identifier rubyid_use'><span class='object_link'><a href="../Models/Composition.html#use-instance_method" title="Syskit::Models::Composition#use (method)">use</a></span></span><span class='lparen'>(</span>
+  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>some_child</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='const'>Model</span><span class='period'>.</span><span class='id identifier rubyid_with_arguments'>with_arguments</span><span class='lparen'>(</span><span class='label'>enabled:</span> <span class='id identifier rubyid_from_state'>from_state</span><span class='period'>.</span><span class='id identifier rubyid_enabled?'>enabled?</span><span class='rparen'>)</span><span class='rparen'>)</span>
+</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+163
+164
+165</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/actions/profile.rb', line 163</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_from_state'>from_state</span><span class='lparen'>(</span><span class='id identifier rubyid_state_object'>state_object</span> <span class='op'>=</span> <span class='const'>State</span><span class='rparen'>)</span>
+    <span class='const'>Roby</span><span class='op'>::</span><span class='const'>Task</span><span class='period'>.</span><span class='id identifier rubyid_from_state'>from_state</span><span class='lparen'>(</span><span class='id identifier rubyid_state_object'>state_object</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="has_definition?-instance_method">
+  
+    #<strong>has_definition?</strong>(name)  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Tests whether self has a definition with a given name</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+381
+382
+383</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/actions/profile.rb', line 381</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_has_definition?'>has_definition?</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_definitions'>definitions</span><span class='period'>.</span><span class='id identifier rubyid_has_key?'>has_key?</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="has_deployed_task?-instance_method">
+  
+    #<strong>has_deployed_task?</strong>(task_name)  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+479
+480
+481</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/actions/profile.rb', line 479</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_has_deployed_task?'>has_deployed_task?</span><span class='lparen'>(</span><span class='id identifier rubyid_task_name'>task_name</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_deployment_group'>deployment_group</span><span class='period'>.</span><span class='id identifier rubyid_has_deployed_task?'>has_deployed_task?</span><span class='lparen'>(</span><span class='id identifier rubyid_task_name'>task_name</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="has_deployment_group?-instance_method">
+  
+    #<strong>has_deployment_group?</strong>(name)  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Whether this profile has a group with the given name</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+526
+527
+528</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/actions/profile.rb', line 526</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_has_deployment_group?'>has_deployment_group?</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_deployment_groups'>deployment_groups</span><span class='period'>.</span><span class='id identifier rubyid_has_key?'>has_key?</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="has_device?-instance_method">
+  
+    #<strong>has_device?</strong>(name)  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+691
+692
+693</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/actions/profile.rb', line 691</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_has_device?'>has_device?</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
+    <span class='op'>!</span><span class='op'>!</span><span class='id identifier rubyid_robot'>robot</span><span class='period'>.</span><span class='id identifier rubyid_devices'>devices</span><span class='lbracket'>[</span><span class='id identifier rubyid_name'>name</span><span class='rbracket'>]</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="has_tag?-instance_method">
+  
+    #<strong>has_tag?</strong>(name)  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Whether a tag with this name exists</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+679
+680
+681</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/actions/profile.rb', line 679</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_has_tag?'>has_tag?</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
+    <span class='op'>!</span><span class='op'>!</span><span class='id identifier rubyid_tags'>tags</span><span class='lbracket'>[</span><span class='id identifier rubyid_name'>name</span><span class='rbracket'>]</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="has_through_method_missing?-instance_method">
+  
+    #<strong>has_through_method_missing?</strong>(m)  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+705
+706
+707
+708
+709
+710
+711
+712
+713</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/actions/profile.rb', line 705</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_has_through_method_missing?'><span class='object_link'><a href="../Coordination/Models/FaultResponseTableExtension.html#has_through_method_missing%3F-instance_method" title="Syskit::Coordination::Models::FaultResponseTableExtension#has_through_method_missing? (method)">has_through_method_missing?</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_m'>m</span><span class='rparen'>)</span>
+    <span class='const'>MetaRuby</span><span class='op'>::</span><span class='const'>DSLs</span><span class='period'>.</span><span class='id identifier rubyid_has_through_method_missing?'>has_through_method_missing?</span><span class='lparen'>(</span>
+        <span class='kw'>self</span><span class='comma'>,</span> <span class='id identifier rubyid_m'>m</span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>_tag</span><span class='tstring_end'>&#39;</span></span><span class='period'>.</span><span class='id identifier rubyid_freeze'>freeze</span> <span class='op'>=&gt;</span> <span class='symbol'>:has_tag?</span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>_def</span><span class='tstring_end'>&#39;</span></span><span class='period'>.</span><span class='id identifier rubyid_freeze'>freeze</span> <span class='op'>=&gt;</span> <span class='symbol'>:has_definition?</span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>_dev</span><span class='tstring_end'>&#39;</span></span><span class='period'>.</span><span class='id identifier rubyid_freeze'>freeze</span> <span class='op'>=&gt;</span> <span class='symbol'>:has_device?</span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>_task</span><span class='tstring_end'>&#39;</span></span><span class='period'>.</span><span class='id identifier rubyid_freeze'>freeze</span> <span class='op'>=&gt;</span> <span class='symbol'>:has_deployed_task?</span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>_deployment_group</span><span class='tstring_end'>&#39;</span></span><span class='period'>.</span><span class='id identifier rubyid_freeze'>freeze</span> <span class='op'>=&gt;</span> <span class='symbol'>:has_deployment_group?</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='kw'>super</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="initialize_copy-instance_method">
+  
+    #<strong>initialize_copy</strong>(old)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+577
+578
+579
+580
+581
+582</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/actions/profile.rb', line 577</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize_copy'>initialize_copy</span><span class='lparen'>(</span><span class='id identifier rubyid_old'>old</span><span class='rparen'>)</span>
+    <span class='kw'>super</span>
+    <span class='id identifier rubyid_old'>old</span><span class='period'>.</span><span class='id identifier rubyid_definitions'>definitions</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_req'>req</span><span class='op'>|</span>
+        <span class='id identifier rubyid_definitions'>definitions</span><span class='lbracket'>[</span><span class='id identifier rubyid_name'>name</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_req'>req</span><span class='period'>.</span><span class='id identifier rubyid_dup'>dup</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="inject_di_context-instance_method">
+  
+    #<strong>inject_di_context</strong>(req)  &#x21d2; <tt>void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p>
+<p>Injects the DI information registered in this profile in the given instance
+requirements</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>req</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../InstanceRequirements.html" title="Syskit::InstanceRequirements (class)">InstanceRequirements</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the instance requirement object</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+570
+571
+572
+573
+574
+575</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/actions/profile.rb', line 570</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_inject_di_context'>inject_di_context</span><span class='lparen'>(</span><span class='id identifier rubyid_req'>req</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_req'>req</span><span class='period'>.</span><span class='id identifier rubyid_deployment_group'>deployment_group</span><span class='period'>.</span><span class='id identifier rubyid_use_group'>use_group</span><span class='lparen'>(</span><span class='id identifier rubyid_deployment_group'>deployment_group</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_req'>req</span><span class='period'>.</span><span class='id identifier rubyid_push_dependency_injection'>push_dependency_injection</span><span class='lparen'>(</span><span class='id identifier rubyid_resolved_dependency_injection'>resolved_dependency_injection</span><span class='rparen'>)</span>
+    <span class='kw'>super</span> <span class='kw'>if</span> <span class='kw'>defined?</span> <span class='kw'>super</span>
+    <span class='kw'>nil</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="invalidate_dependency_injection-instance_method">
+  
+    #<strong>invalidate_dependency_injection</strong>  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Invalidate the cached dependency inject object</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><span class='object_link'><a href="#resolved_dependency_injection-instance_method" title="Syskit::Actions::Profile#resolved_dependency_injection (method)">#resolved_dependency_injection</a></span></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+237
+238
+239</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/actions/profile.rb', line 237</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_invalidate_dependency_injection'>invalidate_dependency_injection</span>
+    <span class='ivar'>@di</span> <span class='op'>=</span> <span class='kw'>nil</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="nothing-instance_method">
+  
+    #<strong>nothing</strong>  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Dependency injection object that signifies “select nothing for this”</p>
+
+<p>This is used to override more generic selections, or to make sure that a
+compositions&#39; optional child is not present</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+        <p class="example_title"><div class='inline'>
+<p>disable the optional &#39;pose&#39; child of Camera composition</p>
+</div></p>
+      
+      <pre class="example code"><code><span class='const'>Compositions</span><span class='op'>::</span><span class='const'>Camera</span><span class='period'>.</span><span class='id identifier rubyid_use'>use</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>pose</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_nothing'>nothing</span><span class='rparen'>)</span></code></pre>
+    
+  </div>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+143
+144
+145</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/actions/profile.rb', line 143</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_nothing'>nothing</span>
+    <span class='const'><span class='object_link'><a href="../DependencyInjection.html" title="Syskit::DependencyInjection (class)">DependencyInjection</a></span></span><span class='period'>.</span><span class='id identifier rubyid_nothing'><span class='object_link'><a href="../DependencyInjection.html#nothing-class_method" title="Syskit::DependencyInjection.nothing (method)">nothing</a></span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="permanent_model=-instance_method">
+  
+    #<strong>permanent_model=</strong>(value)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Whether this profile should be kept across app setup/cleanup cycles and
+during model reloading</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+94</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/actions/profile.rb', line 94</span>
+
+<span class='id identifier rubyid_attr_predicate'>attr_predicate</span> <span class='symbol'>:permanent_model?</span><span class='comma'>,</span> <span class='kw'>true</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="permanent_model?-instance_method">
+  
+    #<strong>permanent_model?</strong>  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Whether this profile should be kept across app setup/cleanup cycles and
+during model reloading</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+94</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/actions/profile.rb', line 94</span>
+
+<span class='id identifier rubyid_attr_predicate'>attr_predicate</span> <span class='symbol'>:permanent_model?</span><span class='comma'>,</span> <span class='kw'>true</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="promote_requirements-instance_method">
+  
+    #<strong>promote_requirements</strong>(profile, req, tags = Hash.new)  &#x21d2; <tt><span class='object_link'><a href="../InstanceRequirements.html" title="Syskit::InstanceRequirements (class)">InstanceRequirements</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Promote requirements taken from another profile to this profile</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>profile</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="" title="Syskit::Actions::Profile (class)">Profile</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the profile the requirements are originating from</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>req</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../InstanceRequirements.html" title="Syskit::InstanceRequirements (class)">InstanceRequirements</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the instance requirement object</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>tags</span>
+      
+      
+        <span class='type'>(<tt>{String=&gt;<span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span>}</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>Hash.new</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>selections for tags in profile, from the tag name to the selected object</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../InstanceRequirements.html" title="Syskit::InstanceRequirements (class)">InstanceRequirements</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the promoted requirement object. It might be the same than the req
+parameter (i.e. it is not guaranteed to be a copy)</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+275
+276
+277
+278
+279
+280
+281
+282
+283</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/actions/profile.rb', line 275</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_promote_requirements'>promote_requirements</span><span class='lparen'>(</span><span class='id identifier rubyid_profile'>profile</span><span class='comma'>,</span> <span class='id identifier rubyid_req'>req</span><span class='comma'>,</span> <span class='id identifier rubyid_tags'>tags</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_req'>req</span><span class='period'>.</span><span class='id identifier rubyid_composition_model?'>composition_model?</span>
+        <span class='id identifier rubyid_req'>req</span> <span class='op'>=</span> <span class='id identifier rubyid_req'>req</span><span class='period'>.</span><span class='id identifier rubyid_dup'>dup</span>
+        <span class='id identifier rubyid_tags'>tags</span> <span class='op'>=</span> <span class='id identifier rubyid_resolve_tag_selection'>resolve_tag_selection</span><span class='lparen'>(</span><span class='id identifier rubyid_profile'>profile</span><span class='comma'>,</span> <span class='id identifier rubyid_tags'>tags</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_req'>req</span><span class='period'>.</span><span class='id identifier rubyid_push_selections'>push_selections</span>
+        <span class='id identifier rubyid_req'>req</span><span class='period'>.</span><span class='id identifier rubyid_use'>use</span><span class='lparen'>(</span><span class='id identifier rubyid_tags'>tags</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_req'>req</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="register_definition-instance_method">
+  
+    #<strong>register_definition</strong>(name, requirements, doc: nil)  &#x21d2; <tt><span class='object_link'><a href="Profile/Definition.html" title="Syskit::Actions::Profile::Definition (class)">Definition</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+
+<p>Register requirements to a definition name</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Profile/Definition.html" title="Syskit::Actions::Profile::Definition (class)">Definition</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the definition object</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+372
+373
+374
+375
+376
+377
+378</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/actions/profile.rb', line 372</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_register_definition'>register_definition</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_requirements'>requirements</span><span class='comma'>,</span> <span class='label'>doc:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_definition'>definition</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Profile/Definition.html" title="Syskit::Actions::Profile::Definition (class)">Definition</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Profile/ProfileInstanceRequirements.html#initialize-instance_method" title="Syskit::Actions::Profile::ProfileInstanceRequirements#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='kw'>self</span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_definition'>definition</span><span class='period'>.</span><span class='id identifier rubyid_doc'>doc</span><span class='lparen'>(</span><span class='id identifier rubyid_doc'>doc</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_doc'>doc</span>
+    <span class='id identifier rubyid_definition'>definition</span><span class='period'>.</span><span class='id identifier rubyid_advanced'>advanced</span> <span class='op'>=</span> <span class='kw'>false</span>
+    <span class='id identifier rubyid_definition'>definition</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='id identifier rubyid_requirements'>requirements</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_definitions'>definitions</span><span class='lbracket'>[</span><span class='id identifier rubyid_name'>name</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_definition'>definition</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="resolve_tag_selection-instance_method">
+  
+    #<strong>resolve_tag_selection</strong>(profile, tags)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+
+<p>Resolves the names in the tags argument given to <span class='object_link'><a href="#use_profile-instance_method" title="Syskit::Actions::Profile#use_profile (method)">#use_profile</a></span></p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+288
+289
+290
+291
+292
+293
+294
+295</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/actions/profile.rb', line 288</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_resolve_tag_selection'>resolve_tag_selection</span><span class='lparen'>(</span><span class='id identifier rubyid_profile'>profile</span><span class='comma'>,</span> <span class='id identifier rubyid_tags'>tags</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_tags'>tags</span><span class='period'>.</span><span class='id identifier rubyid_map_key'>map_key</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_key'>key</span><span class='comma'>,</span> <span class='id identifier rubyid__'>_</span><span class='op'>|</span>
+        <span class='kw'>if</span> <span class='id identifier rubyid_key'>key</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='symbol'>:to_str</span><span class='rparen'>)</span>
+            <span class='id identifier rubyid_profile'>profile</span><span class='period'>.</span><span class='id identifier rubyid_send'>send</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_key'>key</span><span class='period'>.</span><span class='id identifier rubyid_gsub'>gsub</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>_tag$</span><span class='regexp_end'>/</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>_tag</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+        <span class='kw'>else</span> <span class='id identifier rubyid_key'>key</span>
+        <span class='kw'>end</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="resolve_used_profiles-instance_method">
+  
+    #<strong>resolve_used_profiles</strong>(list, set)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+
+<p>Recursively lists all profiles that are used by self</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+553
+554
+555
+556
+557
+558
+559
+560
+561
+562
+563</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/actions/profile.rb', line 553</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_resolve_used_profiles'>resolve_used_profiles</span><span class='lparen'>(</span><span class='id identifier rubyid_list'>list</span><span class='comma'>,</span> <span class='id identifier rubyid_set'>set</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_new_profiles'>new_profiles</span> <span class='op'>=</span> <span class='id identifier rubyid_used_profiles'>used_profiles</span><span class='period'>.</span><span class='id identifier rubyid_find_all'>find_all</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_p'>p</span><span class='comma'>,</span> <span class='id identifier rubyid__'>_</span><span class='op'>|</span>
+        <span class='op'>!</span><span class='id identifier rubyid_set'>set</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='id identifier rubyid_p'>p</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_list'>list</span><span class='period'>.</span><span class='id identifier rubyid_concat'>concat</span><span class='lparen'>(</span><span class='id identifier rubyid_new_profiles'>new_profiles</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_set'>set</span> <span class='op'>|=</span> <span class='id identifier rubyid_new_profiles'>new_profiles</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:first</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to_set'>to_set</span>
+    <span class='id identifier rubyid_new_profiles'>new_profiles</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_p'>p</span><span class='comma'>,</span> <span class='id identifier rubyid__'>_</span><span class='op'>|</span>
+        <span class='id identifier rubyid_p'>p</span><span class='period'>.</span><span class='id identifier rubyid_resolve_used_profiles'>resolve_used_profiles</span><span class='lparen'>(</span><span class='id identifier rubyid_list'>list</span><span class='comma'>,</span> <span class='id identifier rubyid_set'>set</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_list'>list</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="resolved_definition-instance_method">
+  
+    #<strong>resolved_definition</strong>(name)  &#x21d2; <tt><span class='object_link'><a href="../InstanceRequirements.html" title="Syskit::InstanceRequirements (class)">InstanceRequirements</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the instance requirement object that represents the given
+definition, with all the dependency injection information contained in this
+profile applied</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the definition name</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../InstanceRequirements.html" title="Syskit::InstanceRequirements (class)">InstanceRequirements</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the instance requirement representing the definition</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>ArgumentError</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>if the definition does not exist</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><span class='object_link'><a href="#definition-instance_method" title="Syskit::Actions::Profile#definition (method)">#definition</a></span></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+440
+441
+442
+443
+444
+445
+446
+447</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/actions/profile.rb', line 440</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_resolved_definition'>resolved_definition</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_req'>req</span> <span class='op'>=</span> <span class='id identifier rubyid_definitions'>definitions</span><span class='lbracket'>[</span><span class='id identifier rubyid_name'>name</span><span class='rbracket'>]</span>
+    <span class='kw'>unless</span> <span class='id identifier rubyid_req'>req</span>
+        <span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>profile </span><span class='embexpr_beg'>#{</span><span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'> has no definition called </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_req'>req</span><span class='period'>.</span><span class='id identifier rubyid_resolve'>resolve</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="resolved_dependency_injection-instance_method">
+  
+    #<strong>resolved_dependency_injection</strong>  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+
+<p>Resolve the profile&#39;s global dependency injection object</p>
+
+<p>This is an internal cache, and is updated as-needed</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><span class='object_link'><a href="#invalidate_dependency_injection-instance_method" title="Syskit::Actions::Profile#invalidate_dependency_injection (method)">#invalidate_dependency_injection</a></span></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/actions/profile.rb', line 248</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_resolved_dependency_injection'>resolved_dependency_injection</span>
+    <span class='kw'>if</span> <span class='op'>!</span><span class='ivar'>@di</span>
+        <span class='id identifier rubyid_di'>di</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../DependencyInjectionContext.html" title="Syskit::DependencyInjectionContext (class)">DependencyInjectionContext</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../DependencyInjectionContext.html#initialize-instance_method" title="Syskit::DependencyInjectionContext#initialize (method)">new</a></span></span>
+        <span class='id identifier rubyid_di'>di</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span><span class='lparen'>(</span><span class='id identifier rubyid_robot'>robot</span><span class='period'>.</span><span class='id identifier rubyid_to_dependency_injection'>to_dependency_injection</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_all_used_profiles'>all_used_profiles</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_prof'>prof</span><span class='comma'>,</span> <span class='id identifier rubyid__'>_</span><span class='op'>|</span>
+            <span class='id identifier rubyid_di'>di</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span><span class='lparen'>(</span><span class='id identifier rubyid_prof'>prof</span><span class='period'>.</span><span class='id identifier rubyid_dependency_injection'>dependency_injection</span><span class='rparen'>)</span>
+        <span class='kw'>end</span>
+        <span class='id identifier rubyid_di'>di</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span><span class='lparen'>(</span><span class='id identifier rubyid_dependency_injection'>dependency_injection</span><span class='rparen'>)</span>
+        <span class='ivar'>@di</span> <span class='op'>=</span> <span class='id identifier rubyid_di'>di</span><span class='period'>.</span><span class='id identifier rubyid_current_state'>current_state</span>
+    <span class='kw'>end</span>
+    <span class='ivar'>@di</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="robot-instance_method">
+  
+    
+      <span class="overload">#<strong>robot</strong>  &#x21d2; <tt><span class='object_link'><a href="../Robot/RobotDefinition.html" title="Syskit::Robot::RobotDefinition (class)">Syskit::Robot::RobotDefinition</a></span></tt> </span>
+    
+      <span class="overload">#<strong>robot</strong>({ ... })  &#x21d2; <tt><span class='object_link'><a href="../Robot/RobotDefinition.html" title="Syskit::Robot::RobotDefinition (class)">Syskit::Robot::RobotDefinition</a></span></tt> </span>
+    
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Gets and/or modifies the robot definition of this profile</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../Robot/RobotDefinition.html" title="Syskit::Robot::RobotDefinition (class)">Syskit::Robot::RobotDefinition</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the robot definition object</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+591
+592
+593
+594
+595
+596</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/actions/profile.rb', line 591</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_robot'>robot</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_block_given?'>block_given?</span>
+        <span class='ivar'>@robot</span><span class='period'>.</span><span class='id identifier rubyid_instance_eval'>instance_eval</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+    <span class='ivar'>@robot</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="spacename-instance_method">
+  
+    #<strong>spacename</strong>  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>The profile&#39;s namespace</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+111</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/actions/profile.rb', line 111</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_spacename'>spacename</span><span class='semicolon'>;</span> <span class='id identifier rubyid_name'>name</span><span class='period'>.</span><span class='id identifier rubyid_gsub'>gsub</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>::[^:]*$</span><span class='regexp_end'>/</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="tag-instance_method">
+  
+    #<strong>tag</strong>(name, *models)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+209
+210
+211
+212
+213
+214
+215
+216</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/actions/profile.rb', line 209</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_tag'>tag</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='op'>*</span><span class='id identifier rubyid_models'>models</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_tags'>tags</span><span class='lbracket'>[</span><span class='id identifier rubyid_name'>name</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Profile/Models.html" title="Syskit::Actions::Profile::Models (module)">Models</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Profile/Models.html#Tag-constant" title="Syskit::Actions::Profile::Models::Tag (constant)">Tag</a></span></span><span class='period'>.</span><span class='id identifier rubyid_create_for'>create_for</span><span class='lparen'>(</span>
+        <span class='id identifier rubyid_models'>models</span><span class='comma'>,</span>
+        <span class='label'>as:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='kw'>self</span><span class='embexpr_end'>}</span><span class='tstring_content'>.</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'>_tag</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_tags'>tags</span><span class='lbracket'>[</span><span class='id identifier rubyid_name'>name</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_tag_name'>tag_name</span> <span class='op'>=</span> <span class='id identifier rubyid_name'>name</span>
+    <span class='id identifier rubyid_tags'>tags</span><span class='lbracket'>[</span><span class='id identifier rubyid_name'>name</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_profile'>profile</span> <span class='op'>=</span> <span class='kw'>self</span>
+    <span class='id identifier rubyid_tags'>tags</span><span class='lbracket'>[</span><span class='id identifier rubyid_name'>name</span><span class='rbracket'>]</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="to_s-instance_method">
+  
+    #<strong>to_s</strong>  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+261
+262
+263</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/actions/profile.rb', line 261</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_to_s'>to_s</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>profile:</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="use-instance_method">
+  
+    #<strong>use</strong>(*args)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Add some dependency injections for the definitions in this profile</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+228
+229
+230
+231
+232</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/actions/profile.rb', line 228</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_use'>use</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_invalidate_dependency_injection'>invalidate_dependency_injection</span>
+    <span class='id identifier rubyid_dependency_injection'>dependency_injection</span><span class='period'>.</span><span class='id identifier rubyid_add'>add</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span>
+    <span class='kw'>self</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="use_deployment-instance_method">
+  
+    #<strong>use_deployment</strong>(*names, on: &#39;localhost&#39;, loader: deployment_group.loader, **run_options)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+499
+500
+501</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/actions/profile.rb', line 499</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_use_deployment'><span class='object_link'><a href="../Test/NetworkManipulation.html#use_deployment-instance_method" title="Syskit::Test::NetworkManipulation#use_deployment (method)">use_deployment</a></span></span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_names'>names</span><span class='comma'>,</span> <span class='label'>on:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>localhost</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='label'>loader:</span> <span class='id identifier rubyid_deployment_group'>deployment_group</span><span class='period'>.</span><span class='id identifier rubyid_loader'>loader</span><span class='comma'>,</span> <span class='op'>**</span><span class='id identifier rubyid_run_options'>run_options</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_deployment_group'>deployment_group</span><span class='period'>.</span><span class='id identifier rubyid_use_deployment'>use_deployment</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_names'>names</span><span class='comma'>,</span> <span class='label'>on:</span> <span class='id identifier rubyid_on'>on</span><span class='comma'>,</span> <span class='label'>loader:</span> <span class='id identifier rubyid_loader'>loader</span><span class='comma'>,</span> <span class='op'>**</span><span class='id identifier rubyid_run_options'>run_options</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="use_deployments_from-instance_method">
+  
+    #<strong>use_deployments_from</strong>(project_name, loader: deployment_group.loader, **use_options)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+504
+505
+506</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/actions/profile.rb', line 504</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_use_deployments_from'>use_deployments_from</span><span class='lparen'>(</span><span class='id identifier rubyid_project_name'>project_name</span><span class='comma'>,</span> <span class='label'>loader:</span> <span class='id identifier rubyid_deployment_group'>deployment_group</span><span class='period'>.</span><span class='id identifier rubyid_loader'>loader</span><span class='comma'>,</span> <span class='op'>**</span><span class='id identifier rubyid_use_options'>use_options</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_deployment_group'>deployment_group</span><span class='period'>.</span><span class='id identifier rubyid_use_deployments_from'>use_deployments_from</span><span class='lparen'>(</span><span class='id identifier rubyid_project_name'>project_name</span><span class='comma'>,</span> <span class='label'>loader:</span> <span class='id identifier rubyid_loader'>loader</span><span class='comma'>,</span> <span class='op'>**</span><span class='id identifier rubyid_use_options'>use_options</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="use_group-instance_method">
+  
+    #<strong>use_group</strong>(deployment_group)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+484
+485
+486</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/actions/profile.rb', line 484</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_use_group'>use_group</span><span class='lparen'>(</span><span class='id identifier rubyid_deployment_group'>deployment_group</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_deployment_group'>deployment_group</span><span class='period'>.</span><span class='id identifier rubyid_use_group'>use_group</span><span class='lparen'>(</span><span class='id identifier rubyid_deployment_group'>deployment_group</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="use_profile-instance_method">
+  
+    #<strong>use_profile</strong>(profile, tags = Hash.new, transform_names: -&gt;(k) { k })  &#x21d2; <tt>void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p>
+<p>Adds the given profile DI information and registered definitions to this
+one.</p>
+
+<p>If a definitions has the same name in self than in the given profile, the
+local definition takes precedence</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>profile</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="" title="Syskit::Actions::Profile (class)">Profile</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+320
+321
+322
+323
+324
+325
+326
+327
+328
+329
+330
+331
+332
+333
+334
+335
+336
+337
+338
+339
+340
+341
+342
+343
+344
+345
+346
+347
+348
+349
+350
+351</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/actions/profile.rb', line 320</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_use_profile'>use_profile</span><span class='lparen'>(</span><span class='id identifier rubyid_profile'>profile</span><span class='comma'>,</span> <span class='id identifier rubyid_tags'>tags</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='comma'>,</span> <span class='label'>transform_names:</span> <span class='tlambda'>-&gt;</span><span class='lparen'>(</span><span class='id identifier rubyid_k'>k</span><span class='rparen'>)</span> <span class='tlambeg'>{</span> <span class='id identifier rubyid_k'>k</span> <span class='rbrace'>}</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_invalidate_dependency_injection'>invalidate_dependency_injection</span>
+    <span class='id identifier rubyid_tags'>tags</span> <span class='op'>=</span> <span class='id identifier rubyid_resolve_tag_selection'>resolve_tag_selection</span><span class='lparen'>(</span><span class='id identifier rubyid_profile'>profile</span><span class='comma'>,</span> <span class='id identifier rubyid_tags'>tags</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_used_profiles'>used_profiles</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='id identifier rubyid_profile'>profile</span><span class='comma'>,</span> <span class='id identifier rubyid_tags'>tags</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_deployment_group'>deployment_group</span><span class='period'>.</span><span class='id identifier rubyid_use_group'>use_group</span><span class='lparen'>(</span><span class='id identifier rubyid_profile'>profile</span><span class='period'>.</span><span class='id identifier rubyid_deployment_group'>deployment_group</span><span class='rparen'>)</span>
+
+    <span class='comment'># Register the definitions, but let the user override
+</span>    <span class='comment'># definitions of the given profile locally
+</span>    <span class='id identifier rubyid_new_definitions'>new_definitions</span> <span class='op'>=</span> <span class='const'>Array</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+    <span class='id identifier rubyid_profile'>profile</span><span class='period'>.</span><span class='id identifier rubyid_definitions'>definitions</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_req'>req</span><span class='op'>|</span>
+        <span class='id identifier rubyid_name'>name</span> <span class='op'>=</span> <span class='id identifier rubyid_transform_names'>transform_names</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_req'>req</span> <span class='op'>=</span> <span class='id identifier rubyid_promote_requirements'>promote_requirements</span><span class='lparen'>(</span><span class='id identifier rubyid_profile'>profile</span><span class='comma'>,</span> <span class='id identifier rubyid_req'>req</span><span class='comma'>,</span> <span class='id identifier rubyid_tags'>tags</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_definition'>definition</span> <span class='op'>=</span> <span class='id identifier rubyid_register_definition'>register_definition</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_req'>req</span><span class='comma'>,</span> <span class='label'>doc:</span> <span class='id identifier rubyid_req'>req</span><span class='period'>.</span><span class='id identifier rubyid_doc'>doc</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_new_definitions'>new_definitions</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_definition'>definition</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_new_definitions'>new_definitions</span><span class='period'>.</span><span class='id identifier rubyid_concat'>concat</span><span class='lparen'>(</span><span class='id identifier rubyid_robot'>robot</span><span class='period'>.</span><span class='id identifier rubyid_use_robot'>use_robot</span><span class='lparen'>(</span><span class='id identifier rubyid_profile'>profile</span><span class='period'>.</span><span class='id identifier rubyid_robot'>robot</span><span class='rparen'>)</span><span class='rparen'>)</span>
+
+    <span class='comment'># Now, map possible IR objects or IR-derived Action objects that
+</span>    <span class='comment'># are present within the arguments
+</span>    <span class='id identifier rubyid_new_definitions'>new_definitions</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_req'>req</span><span class='op'>|</span>
+        <span class='id identifier rubyid_rebound_arguments'>rebound_arguments</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+        <span class='id identifier rubyid_req'>req</span><span class='period'>.</span><span class='id identifier rubyid_arguments'>arguments</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_value'>value</span><span class='op'>|</span>
+            <span class='kw'>if</span> <span class='id identifier rubyid_value'>value</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='symbol'>:rebind_requirements</span><span class='rparen'>)</span>
+                <span class='id identifier rubyid_rebound_arguments'>rebound_arguments</span><span class='lbracket'>[</span><span class='id identifier rubyid_name'>name</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_value'>value</span><span class='period'>.</span><span class='id identifier rubyid_rebind_requirements'>rebind_requirements</span><span class='lparen'>(</span><span class='kw'>self</span><span class='rparen'>)</span>
+            <span class='kw'>end</span>
+        <span class='kw'>end</span>
+        <span class='id identifier rubyid_req'>req</span><span class='period'>.</span><span class='id identifier rubyid_with_arguments'>with_arguments</span><span class='lparen'>(</span><span class='op'>**</span><span class='id identifier rubyid_rebound_arguments'>rebound_arguments</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+
+    <span class='kw'>super</span> <span class='kw'>if</span> <span class='kw'>defined?</span> <span class='kw'>super</span>
+    <span class='id identifier rubyid_new_definitions'>new_definitions</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="use_ruby_tasks-instance_method">
+  
+    #<strong>use_ruby_tasks</strong>(mappings, on: &#39;ruby_tasks&#39;)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+489
+490
+491</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/actions/profile.rb', line 489</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_use_ruby_tasks'><span class='object_link'><a href="../Test/NetworkManipulation.html#use_ruby_tasks-instance_method" title="Syskit::Test::NetworkManipulation#use_ruby_tasks (method)">use_ruby_tasks</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_mappings'>mappings</span><span class='comma'>,</span> <span class='label'>on:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>ruby_tasks</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_deployment_group'>deployment_group</span><span class='period'>.</span><span class='id identifier rubyid_use_ruby_tasks'>use_ruby_tasks</span><span class='lparen'>(</span><span class='id identifier rubyid_mappings'>mappings</span><span class='comma'>,</span> <span class='label'>on:</span> <span class='id identifier rubyid_on'>on</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="uses_profile?-instance_method">
+  
+    #<strong>uses_profile?</strong>(profile)  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Whether self uses the given profile</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+298
+299
+300</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/actions/profile.rb', line 298</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_uses_profile?'>uses_profile?</span><span class='lparen'>(</span><span class='id identifier rubyid_profile'>profile</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_used_profiles'>used_profiles</span><span class='period'>.</span><span class='id identifier rubyid_any?'>any?</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_used_profile'>used_profile</span><span class='comma'>,</span> <span class='id identifier rubyid__tags'>_tags</span><span class='op'>|</span> <span class='id identifier rubyid_used_profile'>used_profile</span> <span class='op'>==</span> <span class='id identifier rubyid_profile'>profile</span> <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Wed Apr 10 21:54:21 2019 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.19 (ruby-2.5.1).
+</div>
+
+    </div>
+  </body>
+</html>

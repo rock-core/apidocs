@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: Syskit::GUI::ModelViews::Composition
+  
+    &mdash; Documentation by YARD 0.9.19
+  
+</title>
+
+  <link rel="stylesheet" href="../../../css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../../../css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "Syskit::GUI::ModelViews::Composition";
+  relpath = '../../../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../../../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../../../_index.html">Index (C)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../../Syskit.html" title="Syskit (module)">Syskit</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../../GUI.html" title="Syskit::GUI (module)">GUI</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../ModelViews.html" title="Syskit::GUI::ModelViews (module)">ModelViews</a></span></span>
+     &raquo; 
+    <span class="title">Composition</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: Syskit::GUI::ModelViews::Composition
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName"><span class='object_link'><a href="../ComponentNetworkView.html" title="Syskit::GUI::ComponentNetworkView (class)">ComponentNetworkView</a></span></span>
+      
+        <ul class="fullTree">
+          <li><span class='object_link'><a href="../../../Object.html" title="Object (class)">Object</a></span></li>
+          
+            <li class="next">Qt::Object</li>
+          
+            <li class="next"><span class='object_link'><a href="../ComponentNetworkBaseView.html" title="Syskit::GUI::ComponentNetworkBaseView (class)">ComponentNetworkBaseView</a></span></li>
+          
+            <li class="next"><span class='object_link'><a href="../ComponentNetworkView.html" title="Syskit::GUI::ComponentNetworkView (class)">ComponentNetworkView</a></span></li>
+          
+            <li class="next">Syskit::GUI::ModelViews::Composition</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/syskit/gui/model_views/composition.rb</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>Visualization of a composition model</p>
+
+<p>In addition to the plain component network, it visualizes the
+specializations and allows to select them dynamically</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+
+  <h2>Constant Summary</h2>
+  
+  <h3 class="inherited">Constants inherited
+     from <span class='object_link'><a href="../ComponentNetworkBaseView.html" title="Syskit::GUI::ComponentNetworkBaseView (class)">ComponentNetworkBaseView</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../ComponentNetworkBaseView.html#Button-constant" title="Syskit::GUI::ComponentNetworkBaseView::Button (constant)">ComponentNetworkBaseView::Button</a></span>, <span class='object_link'><a href="../ComponentNetworkBaseView.html#DATA_SERVICE_WITHOUT_NAMES_TEMPLATE-constant" title="Syskit::GUI::ComponentNetworkBaseView::DATA_SERVICE_WITHOUT_NAMES_TEMPLATE (constant)">ComponentNetworkBaseView::DATA_SERVICE_WITHOUT_NAMES_TEMPLATE</a></span>, <span class='object_link'><a href="../ComponentNetworkBaseView.html#DATA_SERVICE_WITH_NAMES_TEMPLATE-constant" title="Syskit::GUI::ComponentNetworkBaseView::DATA_SERVICE_WITH_NAMES_TEMPLATE (constant)">ComponentNetworkBaseView::DATA_SERVICE_WITH_NAMES_TEMPLATE</a></span></p>
+
+
+  <h2>Instance Attribute Summary <small><a href="#" class="summary_toggle">collapse</a></small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#specializations-instance_method" title="#specializations (instance method)">#<strong>specializations</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute specializations.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#task_model_view-instance_method" title="#task_model_view (instance method)">#<strong>task_model_view</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute task_model_view.</p>
+</div></span>
+  
+</li>
+
+    
+  </ul>
+
+
+
+  
+  
+  <h3 class="inherited">Attributes inherited from <span class='object_link'><a href="../ComponentNetworkView.html" title="Syskit::GUI::ComponentNetworkView (class)">ComponentNetworkView</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../ComponentNetworkView.html#dataflow_options-instance_method" title="Syskit::GUI::ComponentNetworkView#dataflow_options (method)">#dataflow_options</a></span>, <span class='object_link'><a href="../ComponentNetworkView.html#hierarchy_options-instance_method" title="Syskit::GUI::ComponentNetworkView#hierarchy_options (method)">#hierarchy_options</a></span>, <span class='object_link'><a href="../ComponentNetworkView.html#plan-instance_method" title="Syskit::GUI::ComponentNetworkView#plan (method)">#plan</a></span>, <span class='object_link'><a href="../ComponentNetworkView.html#task-instance_method" title="Syskit::GUI::ComponentNetworkView#task (method)">#task</a></span></p>
+
+  
+  
+  <h3 class="inherited">Attributes inherited from <span class='object_link'><a href="../ComponentNetworkBaseView.html" title="Syskit::GUI::ComponentNetworkBaseView (class)">ComponentNetworkBaseView</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../ComponentNetworkBaseView.html#current_model-instance_method" title="Syskit::GUI::ComponentNetworkBaseView#current_model (method)">#current_model</a></span>, <span class='object_link'><a href="../ComponentNetworkBaseView.html#page-instance_method" title="Syskit::GUI::ComponentNetworkBaseView#page (method)">#page</a></span>, <span class='object_link'><a href="../ComponentNetworkBaseView.html#plan-instance_method" title="Syskit::GUI::ComponentNetworkBaseView#plan (method)">#plan</a></span></p>
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#clear-instance_method" title="#clear (instance method)">#<strong>clear</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#clickedSpecialization-instance_method" title="#clickedSpecialization (instance method)">#<strong>clickedSpecialization</strong>(task)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#create_specialization_graph-instance_method" title="#create_specialization_graph (instance method)">#<strong>create_specialization_graph</strong>(root_model)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#disable-instance_method" title="#disable (instance method)">#<strong>disable</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#enable-instance_method" title="#enable (instance method)">#<strong>enable</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(page)  &#x21d2; Composition </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>A new instance of Composition.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#linkClicked-instance_method" title="#linkClicked (instance method)">#<strong>linkClicked</strong>(url)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#render-instance_method" title="#render (instance method)">#<strong>render</strong>(model, doc: true, **options)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#render_specializations-instance_method" title="#render_specializations (instance method)">#<strong>render_specializations</strong>(model)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="../ComponentNetworkView.html" title="Syskit::GUI::ComponentNetworkView (class)">ComponentNetworkView</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../ComponentNetworkView.html#process_options-instance_method" title="Syskit::GUI::ComponentNetworkView#process_options (method)">#process_options</a></span>, <span class='object_link'><a href="../ComponentNetworkView.html#render_plan-instance_method" title="Syskit::GUI::ComponentNetworkView#render_plan (method)">#render_plan</a></span>, <span class='object_link'><a href="../ComponentNetworkView.html#view_partial_plans=-instance_method" title="Syskit::GUI::ComponentNetworkView#view_partial_plans= (method)">#view_partial_plans=</a></span>, <span class='object_link'><a href="../ComponentNetworkView.html#view_partial_plans%3F-instance_method" title="Syskit::GUI::ComponentNetworkView#view_partial_plans? (method)">#view_partial_plans?</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="../ComponentNetworkBaseView.html" title="Syskit::GUI::ComponentNetworkBaseView (class)">ComponentNetworkBaseView</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../ComponentNetworkBaseView.html#buttonClicked-instance_method" title="Syskit::GUI::ComponentNetworkBaseView#buttonClicked (method)">#buttonClicked</a></span>, <span class='object_link'><a href="../ComponentNetworkBaseView.html#common_graph_buttons-class_method" title="Syskit::GUI::ComponentNetworkBaseView.common_graph_buttons (method)">common_graph_buttons</a></span>, <span class='object_link'><a href="../ComponentNetworkBaseView.html#compute_system_network-instance_method" title="Syskit::GUI::ComponentNetworkBaseView#compute_system_network (method)">#compute_system_network</a></span>, <span class='object_link'><a href="../ComponentNetworkBaseView.html#find_definition_place-class_method" title="Syskit::GUI::ComponentNetworkBaseView.find_definition_place (method)">find_definition_place</a></span>, <span class='object_link'><a href="../ComponentNetworkBaseView.html#graph_annotation_buttons-class_method" title="Syskit::GUI::ComponentNetworkBaseView.graph_annotation_buttons (method)">graph_annotation_buttons</a></span>, <span class='object_link'><a href="../ComponentNetworkBaseView.html#html_defined_in-class_method" title="Syskit::GUI::ComponentNetworkBaseView.html_defined_in (method)">html_defined_in</a></span>, <span class='object_link'><a href="../ComponentNetworkBaseView.html#instanciate_model-instance_method" title="Syskit::GUI::ComponentNetworkBaseView#instanciate_model (method)">#instanciate_model</a></span>, <span class='object_link'><a href="../ComponentNetworkBaseView.html#list_services-instance_method" title="Syskit::GUI::ComponentNetworkBaseView#list_services (method)">#list_services</a></span>, <span class='object_link'><a href="../ComponentNetworkBaseView.html#make_annotation_buttons-class_method" title="Syskit::GUI::ComponentNetworkBaseView.make_annotation_buttons (method)">make_annotation_buttons</a></span>, <span class='object_link'><a href="../ComponentNetworkBaseView.html#push_plan-instance_method" title="Syskit::GUI::ComponentNetworkBaseView#push_plan (method)">#push_plan</a></span>, <span class='object_link'><a href="../ComponentNetworkBaseView.html#render_data_services-instance_method" title="Syskit::GUI::ComponentNetworkBaseView#render_data_services (method)">#render_data_services</a></span>, <span class='object_link'><a href="../ComponentNetworkBaseView.html#render_require_section-instance_method" title="Syskit::GUI::ComponentNetworkBaseView#render_require_section (method)">#render_require_section</a></span>, <span class='object_link'><a href="../ComponentNetworkBaseView.html#save_svg-instance_method" title="Syskit::GUI::ComponentNetworkBaseView#save_svg (method)">#save_svg</a></span>, <span class='object_link'><a href="../ComponentNetworkBaseView.html#task_annotation_buttons-class_method" title="Syskit::GUI::ComponentNetworkBaseView.task_annotation_buttons (method)">task_annotation_buttons</a></span></p>
+
+  <div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    #<strong>initialize</strong>(page)  &#x21d2; <tt><span class='object_link'><a href="" title="Syskit::GUI::ModelViews::Composition (class)">Composition</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns a new instance of Composition</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+15
+16
+17
+18
+19</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/gui/model_views/composition.rb', line 15</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_page'>page</span><span class='rparen'>)</span>
+    <span class='kw'>super</span><span class='lparen'>(</span><span class='id identifier rubyid_page'>page</span><span class='rparen'>)</span>
+    <span class='ivar'>@specializations</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+    <span class='ivar'>@task_model_view</span> <span class='op'>=</span> <span class='const'>Roby</span><span class='op'>::</span><span class='const'>GUI</span><span class='op'>::</span><span class='const'>ModelViews</span><span class='op'>::</span><span class='const'>Task</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_page'>page</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id=""></span>
+      <div class="method_details first">
+  <h3 class="signature first" id="specializations-instance_method">
+  
+    #<strong>specializations</strong>  &#x21d2; <tt><span class='object_link'><a href="../../../Object.html" title="Object (class)">Object</a></span></tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute specializations</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+12
+13
+14</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/gui/model_views/composition.rb', line 12</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_specializations'>specializations</span>
+  <span class='ivar'>@specializations</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="task_model_view-instance_method">
+  
+    #<strong>task_model_view</strong>  &#x21d2; <tt><span class='object_link'><a href="../../../Object.html" title="Object (class)">Object</a></span></tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute task_model_view</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+13
+14
+15</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/gui/model_views/composition.rb', line 13</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_task_model_view'>task_model_view</span>
+  <span class='ivar'>@task_model_view</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="clear-instance_method">
+  
+    #<strong>clear</strong>  &#x21d2; <tt><span class='object_link'><a href="../../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+74
+75
+76
+77</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/gui/model_views/composition.rb', line 74</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_clear'>clear</span>
+    <span class='kw'>super</span>
+    <span class='id identifier rubyid_specializations'>specializations</span><span class='period'>.</span><span class='id identifier rubyid_clear'>clear</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="clickedSpecialization-instance_method">
+  
+    #<strong>clickedSpecialization</strong>(task)  &#x21d2; <tt><span class='object_link'><a href="../../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/gui/model_views/composition.rb', line 41</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_clickedSpecialization'>clickedSpecialization</span><span class='lparen'>(</span><span class='id identifier rubyid_task'>task</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_clicked'>clicked</span>  <span class='op'>=</span> <span class='id identifier rubyid_task'>task</span><span class='period'>.</span><span class='id identifier rubyid_model'>model</span><span class='period'>.</span><span class='id identifier rubyid_applied_specializations'>applied_specializations</span><span class='period'>.</span><span class='id identifier rubyid_dup'>dup</span><span class='period'>.</span><span class='id identifier rubyid_to_set'>to_set</span>
+    <span class='id identifier rubyid_selected'>selected</span> <span class='op'>=</span> <span class='id identifier rubyid_current_model'>current_model</span><span class='period'>.</span><span class='id identifier rubyid_applied_specializations'>applied_specializations</span><span class='period'>.</span><span class='id identifier rubyid_dup'>dup</span><span class='period'>.</span><span class='id identifier rubyid_to_set'>to_set</span>
+
+    <span class='kw'>if</span> <span class='id identifier rubyid_clicked'>clicked</span><span class='period'>.</span><span class='id identifier rubyid_all?'>all?</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_s'>s</span><span class='op'>|</span> <span class='id identifier rubyid_selected'>selected</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='id identifier rubyid_s'>s</span><span class='rparen'>)</span> <span class='rbrace'>}</span>
+        <span class='comment'># This specialization is already selected, remove it
+</span>        <span class='id identifier rubyid_clicked'>clicked</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_s'>s</span><span class='op'>|</span> <span class='id identifier rubyid_selected'>selected</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='id identifier rubyid_s'>s</span><span class='rparen'>)</span> <span class='rbrace'>}</span>
+        <span class='id identifier rubyid_new_selection'>new_selection</span> <span class='op'>=</span> <span class='id identifier rubyid_selected'>selected</span>
+
+        <span class='id identifier rubyid_new_merged_selection'>new_merged_selection</span> <span class='op'>=</span> <span class='id identifier rubyid_new_selection'>new_selection</span><span class='period'>.</span><span class='id identifier rubyid_inject'>inject</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="../../../Syskit.html" title="Syskit (module)">Syskit</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../../Models.html" title="Syskit::Models (module)">Models</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../../Models/CompositionSpecialization.html" title="Syskit::Models::CompositionSpecialization (class)">CompositionSpecialization</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../../Models/CompositionSpecialization.html#initialize-instance_method" title="Syskit::Models::CompositionSpecialization#initialize (method)">new</a></span></span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_merged'>merged</span><span class='comma'>,</span> <span class='id identifier rubyid_s'>s</span><span class='op'>|</span>
+            <span class='id identifier rubyid_merged'>merged</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='id identifier rubyid_s'>s</span><span class='rparen'>)</span>
+        <span class='kw'>end</span>
+    <span class='kw'>else</span>
+        <span class='comment'># This is not already selected, add it to the set. We have to
+</span>        <span class='comment'># take care that some of the currently selected specializations
+</span>        <span class='comment'># might not be compatible
+</span>        <span class='id identifier rubyid_new_selection'>new_selection</span> <span class='op'>=</span> <span class='id identifier rubyid_clicked'>clicked</span>
+        <span class='id identifier rubyid_new_merged_selection'>new_merged_selection</span> <span class='op'>=</span> <span class='id identifier rubyid_new_selection'>new_selection</span><span class='period'>.</span><span class='id identifier rubyid_inject'>inject</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="../../../Syskit.html" title="Syskit (module)">Syskit</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../../Models.html" title="Syskit::Models (module)">Models</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../../Models/CompositionSpecialization.html" title="Syskit::Models::CompositionSpecialization (class)">CompositionSpecialization</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../../Models/CompositionSpecialization.html#initialize-instance_method" title="Syskit::Models::CompositionSpecialization#initialize (method)">new</a></span></span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_merged'>merged</span><span class='comma'>,</span> <span class='id identifier rubyid_s'>s</span><span class='op'>|</span>
+            <span class='id identifier rubyid_merged'>merged</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='id identifier rubyid_s'>s</span><span class='rparen'>)</span>
+        <span class='kw'>end</span>
+
+        <span class='id identifier rubyid_selected'>selected</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_s'>s</span><span class='op'>|</span>
+            <span class='kw'>if</span> <span class='id identifier rubyid_new_merged_selection'>new_merged_selection</span><span class='period'>.</span><span class='id identifier rubyid_compatible_with?'>compatible_with?</span><span class='lparen'>(</span><span class='id identifier rubyid_s'>s</span><span class='rparen'>)</span>
+                <span class='id identifier rubyid_new_selection'>new_selection</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_s'>s</span>
+                <span class='id identifier rubyid_new_merged_selection'>new_merged_selection</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='id identifier rubyid_s'>s</span><span class='rparen'>)</span>
+            <span class='kw'>end</span>
+        <span class='kw'>end</span>
+    <span class='kw'>end</span>
+
+    <span class='id identifier rubyid_new_model'>new_model</span> <span class='op'>=</span> <span class='id identifier rubyid_current_model'>current_model</span><span class='period'>.</span><span class='id identifier rubyid_root_model'>root_model</span><span class='period'>.</span><span class='id identifier rubyid_specializations'>specializations</span><span class='period'>.</span><span class='id identifier rubyid_create_specialized_model'>create_specialized_model</span><span class='lparen'>(</span><span class='id identifier rubyid_new_merged_selection'>new_merged_selection</span><span class='comma'>,</span> <span class='id identifier rubyid_new_selection'>new_selection</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_render'>render</span><span class='lparen'>(</span><span class='id identifier rubyid_new_model'>new_model</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="create_specialization_graph-instance_method">
+  
+    #<strong>create_specialization_graph</strong>(root_model)  &#x21d2; <tt><span class='object_link'><a href="../../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/gui/model_views/composition.rb', line 79</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_create_specialization_graph'>create_specialization_graph</span><span class='lparen'>(</span><span class='id identifier rubyid_root_model'>root_model</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_plan'>plan</span> <span class='op'>=</span> <span class='const'>Roby</span><span class='op'>::</span><span class='const'>Plan</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+    <span class='id identifier rubyid_specializations'>specializations</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+    <span class='id identifier rubyid_root_model'>root_model</span><span class='period'>.</span><span class='id identifier rubyid_specializations'>specializations</span><span class='period'>.</span><span class='id identifier rubyid_each_specialization'>each_specialization</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_spec'>spec</span><span class='op'>|</span>
+        <span class='id identifier rubyid_task_model'>task_model</span> <span class='op'>=</span> <span class='id identifier rubyid_root_model'>root_model</span><span class='period'>.</span><span class='id identifier rubyid_specializations'>specializations</span><span class='period'>.</span><span class='id identifier rubyid_specialized_model'>specialized_model</span><span class='lparen'>(</span><span class='id identifier rubyid_spec'>spec</span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='id identifier rubyid_spec'>spec</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_plan'>plan</span><span class='period'>.</span><span class='id identifier rubyid_add'>add</span><span class='lparen'>(</span><span class='id identifier rubyid_task'>task</span> <span class='op'>=</span> <span class='id identifier rubyid_task_model'>task_model</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_specializations'>specializations</span><span class='lbracket'>[</span><span class='id identifier rubyid_spec'>spec</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_task'>task</span>
+    <span class='kw'>end</span>
+
+    <span class='kw'>return</span> <span class='id identifier rubyid_plan'>plan</span><span class='comma'>,</span> <span class='id identifier rubyid_specializations'>specializations</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="disable-instance_method">
+  
+    #<strong>disable</strong>  &#x21d2; <tt><span class='object_link'><a href="../../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+26
+27
+28
+29</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/gui/model_views/composition.rb', line 26</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_disable'>disable</span>
+    <span class='id identifier rubyid_disconnect'>disconnect</span><span class='lparen'>(</span><span class='id identifier rubyid_page'>page</span><span class='comma'>,</span> <span class='const'>SIGNAL</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>linkClicked(const QUrl&amp;)</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='comma'>,</span> <span class='kw'>self</span><span class='comma'>,</span> <span class='const'>SLOT</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>linkClicked(const QUrl&amp;)</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='rparen'>)</span>
+    <span class='kw'>super</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="enable-instance_method">
+  
+    #<strong>enable</strong>  &#x21d2; <tt><span class='object_link'><a href="../../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+21
+22
+23
+24</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/gui/model_views/composition.rb', line 21</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_enable'><span class='object_link'><a href="../../RobyApp/Plugin.html#enable-class_method" title="Syskit::RobyApp::Plugin.enable (method)">enable</a></span></span>
+    <span class='id identifier rubyid_connect'>connect</span><span class='lparen'>(</span><span class='id identifier rubyid_page'>page</span><span class='comma'>,</span> <span class='const'>SIGNAL</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>linkClicked(const QUrl&amp;)</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='comma'>,</span> <span class='kw'>self</span><span class='comma'>,</span> <span class='const'>SLOT</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>linkClicked(const QUrl&amp;)</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='rparen'>)</span>
+    <span class='kw'>super</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="linkClicked-instance_method">
+  
+    #<strong>linkClicked</strong>(url)  &#x21d2; <tt><span class='object_link'><a href="../../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+31
+32
+33
+34
+35
+36
+37
+38</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/gui/model_views/composition.rb', line 31</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_linkClicked'>linkClicked</span><span class='lparen'>(</span><span class='id identifier rubyid_url'>url</span><span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_url'>url</span><span class='period'>.</span><span class='id identifier rubyid_scheme'>scheme</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>plan</span><span class='tstring_end'>&#39;</span></span>
+        <span class='id identifier rubyid_id'>id</span> <span class='op'>=</span> <span class='const'>Integer</span><span class='lparen'>(</span><span class='id identifier rubyid_url'>url</span><span class='period'>.</span><span class='id identifier rubyid_path'>path</span><span class='period'>.</span><span class='id identifier rubyid_gsub'>gsub</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\/</span><span class='regexp_end'>/</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='rparen'>)</span>
+        <span class='kw'>if</span> <span class='id identifier rubyid_task'>task</span> <span class='op'>=</span> <span class='id identifier rubyid_specializations'>specializations</span><span class='period'>.</span><span class='id identifier rubyid_values'>values</span><span class='period'>.</span><span class='id identifier rubyid_find'>find</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_task'>task</span><span class='op'>|</span> <span class='id identifier rubyid_task'>task</span><span class='period'>.</span><span class='id identifier rubyid_dot_id'>dot_id</span> <span class='op'>==</span> <span class='id identifier rubyid_id'>id</span> <span class='rbrace'>}</span>
+            <span class='id identifier rubyid_clickedSpecialization'>clickedSpecialization</span><span class='lparen'>(</span><span class='id identifier rubyid_task'>task</span><span class='rparen'>)</span>
+        <span class='kw'>end</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="render-instance_method">
+  
+    #<strong>render</strong>(model, doc: true, **options)  &#x21d2; <tt><span class='object_link'><a href="../../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/gui/model_views/composition.rb', line 118</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_render'>render</span><span class='lparen'>(</span><span class='id identifier rubyid_model'>model</span><span class='comma'>,</span> <span class='label'>doc:</span> <span class='kw'>true</span><span class='comma'>,</span> <span class='op'>**</span><span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_doc'>doc</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_model'>model</span><span class='period'>.</span><span class='id identifier rubyid_doc'>doc</span>
+        <span class='id identifier rubyid_page'>page</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id identifier rubyid_page'>page</span><span class='period'>.</span><span class='id identifier rubyid_main_doc'>main_doc</span><span class='lparen'>(</span><span class='id identifier rubyid_model'>model</span><span class='period'>.</span><span class='id identifier rubyid_doc'>doc</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+
+    <span class='kw'>super</span><span class='lparen'>(</span><span class='id identifier rubyid_model'>model</span><span class='comma'>,</span> <span class='op'>**</span><span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_task_model_view'>task_model_view</span><span class='period'>.</span><span class='id identifier rubyid_render'>render</span><span class='lparen'>(</span><span class='id identifier rubyid_model'>model</span><span class='comma'>,</span> <span class='label'>doc:</span> <span class='kw'>false</span><span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_task'>task</span>
+        <span class='id identifier rubyid_render_data_services'>render_data_services</span><span class='lparen'>(</span><span class='id identifier rubyid_task'>task</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_render_specializations'>render_specializations</span><span class='lparen'>(</span><span class='id identifier rubyid_model'>model</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="render_specializations-instance_method">
+  
+    #<strong>render_specializations</strong>(model)  &#x21d2; <tt><span class='object_link'><a href="../../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/gui/model_views/composition.rb', line 91</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_render_specializations'>render_specializations</span><span class='lparen'>(</span><span class='id identifier rubyid_model'>model</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_plan'>plan</span><span class='comma'>,</span> <span class='ivar'>@specializations</span> <span class='op'>=</span> <span class='id identifier rubyid_create_specialization_graph'>create_specialization_graph</span><span class='lparen'>(</span><span class='id identifier rubyid_model'>model</span><span class='period'>.</span><span class='id identifier rubyid_root_model'>root_model</span><span class='rparen'>)</span>
+
+    <span class='id identifier rubyid_current_specializations'>current_specializations</span><span class='comma'>,</span> <span class='id identifier rubyid_incompatible_specializations'>incompatible_specializations</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_model'>model</span><span class='period'>.</span><span class='id identifier rubyid_root_model'>root_model</span> <span class='op'>!=</span> <span class='id identifier rubyid_model'>model</span>
+        <span class='id identifier rubyid_current_specializations'>current_specializations</span> <span class='op'>=</span> <span class='id identifier rubyid_model'>model</span><span class='period'>.</span><span class='id identifier rubyid_applied_specializations'>applied_specializations</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_s'>s</span><span class='op'>|</span> <span class='id identifier rubyid_specializations'>specializations</span><span class='lbracket'>[</span><span class='id identifier rubyid_s'>s</span><span class='rbracket'>]</span> <span class='rbrace'>}</span>
+
+        <span class='id identifier rubyid_incompatible_specializations'>incompatible_specializations</span> <span class='op'>=</span> <span class='id identifier rubyid_specializations'>specializations</span><span class='period'>.</span><span class='id identifier rubyid_dup'>dup</span>
+        <span class='id identifier rubyid_incompatible_specializations'>incompatible_specializations</span><span class='period'>.</span><span class='id identifier rubyid_delete_if'>delete_if</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_spec'>spec</span><span class='comma'>,</span> <span class='id identifier rubyid_task'>task</span><span class='op'>|</span>
+            <span class='id identifier rubyid_model'>model</span><span class='period'>.</span><span class='id identifier rubyid_applied_specializations'>applied_specializations</span><span class='period'>.</span><span class='id identifier rubyid_all?'>all?</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_applied_spec'>applied_spec</span><span class='op'>|</span> <span class='id identifier rubyid_applied_spec'>applied_spec</span><span class='period'>.</span><span class='id identifier rubyid_compatible_with?'>compatible_with?</span><span class='lparen'>(</span><span class='id identifier rubyid_spec'>spec</span><span class='rparen'>)</span> <span class='rbrace'>}</span>
+        <span class='kw'>end</span>
+    <span class='kw'>end</span>
+
+    <span class='id identifier rubyid_display_options'>display_options</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='lbracket'>[</span>
+        <span class='label'>accessor:</span> <span class='symbol'>:each_compatible_specialization</span><span class='comma'>,</span>
+        <span class='label'>dot_edge_mark:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>--</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+        <span class='label'>dot_graph_type:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>graph</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+        <span class='label'>graphviz_tool:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>fdp</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+        <span class='label'>highlights:</span> <span class='id identifier rubyid_current_specializations'>current_specializations</span><span class='comma'>,</span>
+        <span class='label'>toned_down:</span> <span class='id identifier rubyid_incompatible_specializations'>incompatible_specializations</span><span class='period'>.</span><span class='id identifier rubyid_values'>values</span><span class='comma'>,</span>
+        <span class='label'>annotations:</span> <span class='lbracket'>[</span><span class='rbracket'>]</span><span class='comma'>,</span>
+        <span class='label'>id:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>specializations</span><span class='tstring_end'>&#39;</span></span>
+    <span class='rbracket'>]</span>
+    <span class='id identifier rubyid_page'>page</span><span class='period'>.</span><span class='id identifier rubyid_push_plan'>push_plan</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Specializations</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>relation_to_dot</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+                             <span class='id identifier rubyid_plan'>plan</span><span class='comma'>,</span> <span class='id identifier rubyid_display_options'>display_options</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Wed Apr 10 21:57:38 2019 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.19 (ruby-2.5.1).
+</div>
+
+    </div>
+  </body>
+</html>

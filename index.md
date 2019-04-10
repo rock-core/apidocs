@@ -4,10 +4,18 @@ title: API Documentation
 ---
 
 # Master
-A selected set of API documentation based on the master branches is made available through the
-[rock-core/apidocs](https://github.com/rock-core.github.io/apidocs).
+A selected set of API documentation based on the master branches is made available through the 
+repository [rock-core/apidocs](https://github.com/apidocs).
 
+ * [base/console_bridge](base/console_bridge)
+ * [base/numeric](base/numeric)
+ * [base/orogen/types](base/orogen/types)
+ * [base/scripts](base/scripts)
+ * [base/types](base/types)
  * [oroGen](orogen)
+ * [roby](https://www.rubydoc.info/github/rock-core/tools-roby)
+ * [syskit](tools/syskit)
+ * [tools/orocos.rb](tools/orocos.rb)
 
 
 # Rock Debian Packages

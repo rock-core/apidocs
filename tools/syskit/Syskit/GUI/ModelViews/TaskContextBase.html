@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: Syskit::GUI::ModelViews::TaskContextBase
+  
+    &mdash; Documentation by YARD 0.9.19
+  
+</title>
+
+  <link rel="stylesheet" href="../../../css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../../../css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "Syskit::GUI::ModelViews::TaskContextBase";
+  relpath = '../../../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../../../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../../../_index.html">Index (T)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../../Syskit.html" title="Syskit (module)">Syskit</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../../GUI.html" title="Syskit::GUI (module)">GUI</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../ModelViews.html" title="Syskit::GUI::ModelViews (module)">ModelViews</a></span></span>
+     &raquo; 
+    <span class="title">TaskContextBase</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: Syskit::GUI::ModelViews::TaskContextBase
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName"><span class='object_link'><a href="Component.html" title="Syskit::GUI::ModelViews::Component (class)">Component</a></span></span>
+      
+        <ul class="fullTree">
+          <li><span class='object_link'><a href="../../../Object.html" title="Object (class)">Object</a></span></li>
+          
+            <li class="next">Qt::Object</li>
+          
+            <li class="next"><span class='object_link'><a href="../ComponentNetworkBaseView.html" title="Syskit::GUI::ComponentNetworkBaseView (class)">ComponentNetworkBaseView</a></span></li>
+          
+            <li class="next"><span class='object_link'><a href="Component.html" title="Syskit::GUI::ModelViews::Component (class)">Component</a></span></li>
+          
+            <li class="next">Syskit::GUI::ModelViews::TaskContextBase</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/syskit/gui/model_views/task_context_base.rb</dd>
+  </dl>
+  
+</div>
+
+<div id="subclasses">
+  <h2>Direct Known Subclasses</h2>
+  <p class="children"><span class='object_link'><a href="RubyTaskContext.html" title="Syskit::GUI::ModelViews::RubyTaskContext (class)">RubyTaskContext</a></span>, <span class='object_link'><a href="TaskContext.html" title="Syskit::GUI::ModelViews::TaskContext (class)">TaskContext</a></span></p>
+</div>
+
+
+
+  <h2>Constant Summary</h2>
+  
+  <h3 class="inherited">Constants inherited
+     from <span class='object_link'><a href="../ComponentNetworkBaseView.html" title="Syskit::GUI::ComponentNetworkBaseView (class)">ComponentNetworkBaseView</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../ComponentNetworkBaseView.html#Button-constant" title="Syskit::GUI::ComponentNetworkBaseView::Button (constant)">ComponentNetworkBaseView::Button</a></span>, <span class='object_link'><a href="../ComponentNetworkBaseView.html#DATA_SERVICE_WITHOUT_NAMES_TEMPLATE-constant" title="Syskit::GUI::ComponentNetworkBaseView::DATA_SERVICE_WITHOUT_NAMES_TEMPLATE (constant)">ComponentNetworkBaseView::DATA_SERVICE_WITHOUT_NAMES_TEMPLATE</a></span>, <span class='object_link'><a href="../ComponentNetworkBaseView.html#DATA_SERVICE_WITH_NAMES_TEMPLATE-constant" title="Syskit::GUI::ComponentNetworkBaseView::DATA_SERVICE_WITH_NAMES_TEMPLATE (constant)">ComponentNetworkBaseView::DATA_SERVICE_WITH_NAMES_TEMPLATE</a></span></p>
+
+
+  <h2>Instance Attribute Summary <small><a href="#" class="summary_toggle">collapse</a></small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#orogen_rendering-instance_method" title="#orogen_rendering (instance method)">#<strong>orogen_rendering</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute orogen_rendering.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#task_model_view-instance_method" title="#task_model_view (instance method)">#<strong>task_model_view</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute task_model_view.</p>
+</div></span>
+  
+</li>
+
+    
+  </ul>
+
+
+
+  
+  
+  <h3 class="inherited">Attributes inherited from <span class='object_link'><a href="Component.html" title="Syskit::GUI::ModelViews::Component (class)">Component</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="Component.html#interface_options-instance_method" title="Syskit::GUI::ModelViews::Component#interface_options (method)">#interface_options</a></span></p>
+
+  
+  
+  <h3 class="inherited">Attributes inherited from <span class='object_link'><a href="../ComponentNetworkBaseView.html" title="Syskit::GUI::ComponentNetworkBaseView (class)">ComponentNetworkBaseView</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../ComponentNetworkBaseView.html#current_model-instance_method" title="Syskit::GUI::ComponentNetworkBaseView#current_model (method)">#current_model</a></span>, <span class='object_link'><a href="../ComponentNetworkBaseView.html#page-instance_method" title="Syskit::GUI::ComponentNetworkBaseView#page (method)">#page</a></span>, <span class='object_link'><a href="../ComponentNetworkBaseView.html#plan-instance_method" title="Syskit::GUI::ComponentNetworkBaseView#plan (method)">#plan</a></span></p>
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(page)  &#x21d2; TaskContextBase </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>A new instance of TaskContextBase.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#render-instance_method" title="#render (instance method)">#<strong>render</strong>(model, external_objects: false)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#render_doc-instance_method" title="#render_doc (instance method)">#<strong>render_doc</strong>(model)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="../ComponentNetworkBaseView.html" title="Syskit::GUI::ComponentNetworkBaseView (class)">ComponentNetworkBaseView</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../ComponentNetworkBaseView.html#buttonClicked-instance_method" title="Syskit::GUI::ComponentNetworkBaseView#buttonClicked (method)">#buttonClicked</a></span>, <span class='object_link'><a href="../ComponentNetworkBaseView.html#clear-instance_method" title="Syskit::GUI::ComponentNetworkBaseView#clear (method)">#clear</a></span>, <span class='object_link'><a href="../ComponentNetworkBaseView.html#common_graph_buttons-class_method" title="Syskit::GUI::ComponentNetworkBaseView.common_graph_buttons (method)">common_graph_buttons</a></span>, <span class='object_link'><a href="../ComponentNetworkBaseView.html#compute_system_network-instance_method" title="Syskit::GUI::ComponentNetworkBaseView#compute_system_network (method)">#compute_system_network</a></span>, <span class='object_link'><a href="../ComponentNetworkBaseView.html#disable-instance_method" title="Syskit::GUI::ComponentNetworkBaseView#disable (method)">#disable</a></span>, <span class='object_link'><a href="../ComponentNetworkBaseView.html#enable-instance_method" title="Syskit::GUI::ComponentNetworkBaseView#enable (method)">#enable</a></span>, <span class='object_link'><a href="../ComponentNetworkBaseView.html#find_definition_place-class_method" title="Syskit::GUI::ComponentNetworkBaseView.find_definition_place (method)">find_definition_place</a></span>, <span class='object_link'><a href="../ComponentNetworkBaseView.html#graph_annotation_buttons-class_method" title="Syskit::GUI::ComponentNetworkBaseView.graph_annotation_buttons (method)">graph_annotation_buttons</a></span>, <span class='object_link'><a href="../ComponentNetworkBaseView.html#html_defined_in-class_method" title="Syskit::GUI::ComponentNetworkBaseView.html_defined_in (method)">html_defined_in</a></span>, <span class='object_link'><a href="../ComponentNetworkBaseView.html#instanciate_model-instance_method" title="Syskit::GUI::ComponentNetworkBaseView#instanciate_model (method)">#instanciate_model</a></span>, <span class='object_link'><a href="../ComponentNetworkBaseView.html#list_services-instance_method" title="Syskit::GUI::ComponentNetworkBaseView#list_services (method)">#list_services</a></span>, <span class='object_link'><a href="../ComponentNetworkBaseView.html#make_annotation_buttons-class_method" title="Syskit::GUI::ComponentNetworkBaseView.make_annotation_buttons (method)">make_annotation_buttons</a></span>, <span class='object_link'><a href="../ComponentNetworkBaseView.html#push_plan-instance_method" title="Syskit::GUI::ComponentNetworkBaseView#push_plan (method)">#push_plan</a></span>, <span class='object_link'><a href="../ComponentNetworkBaseView.html#render_data_services-instance_method" title="Syskit::GUI::ComponentNetworkBaseView#render_data_services (method)">#render_data_services</a></span>, <span class='object_link'><a href="../ComponentNetworkBaseView.html#render_require_section-instance_method" title="Syskit::GUI::ComponentNetworkBaseView#render_require_section (method)">#render_require_section</a></span>, <span class='object_link'><a href="../ComponentNetworkBaseView.html#save_svg-instance_method" title="Syskit::GUI::ComponentNetworkBaseView#save_svg (method)">#save_svg</a></span>, <span class='object_link'><a href="../ComponentNetworkBaseView.html#task_annotation_buttons-class_method" title="Syskit::GUI::ComponentNetworkBaseView.task_annotation_buttons (method)">task_annotation_buttons</a></span></p>
+
+  <div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    #<strong>initialize</strong>(page)  &#x21d2; <tt><span class='object_link'><a href="" title="Syskit::GUI::ModelViews::TaskContextBase (class)">TaskContextBase</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns a new instance of TaskContextBase</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/gui/model_views/task_context_base.rb', line 7</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_page'>page</span><span class='rparen'>)</span>
+    <span class='kw'>super</span><span class='lparen'>(</span><span class='id identifier rubyid_page'>page</span><span class='rparen'>)</span>
+    <span class='ivar'>@task_model_view</span> <span class='op'>=</span> <span class='const'>Roby</span><span class='op'>::</span><span class='const'>GUI</span><span class='op'>::</span><span class='const'>ModelViews</span><span class='op'>::</span><span class='const'>Task</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_page'>page</span><span class='rparen'>)</span>
+    <span class='ivar'>@orogen_rendering</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../../OroGen.html" title="OroGen (module)">OroGen</a></span></span><span class='op'>::</span><span class='const'>HTML</span><span class='op'>::</span><span class='const'>TaskContext</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_page'>page</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_buttons'>buttons</span> <span class='op'>=</span> <span class='const'>Array</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+    <span class='id identifier rubyid_buttons'>buttons</span><span class='period'>.</span><span class='id identifier rubyid_concat'>concat</span><span class='lparen'>(</span><span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_common_graph_buttons'>common_graph_buttons</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>interface</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='rparen'>)</span>
+
+    <span class='id identifier rubyid_all_annotations'>all_annotations</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../../Syskit.html" title="Syskit (module)">Syskit</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../../Graphviz.html" title="Syskit::Graphviz (class)">Graphviz</a></span></span><span class='period'>.</span><span class='id identifier rubyid_available_task_annotations'><span class='object_link'><a href="../../Graphviz.html#available_task_annotations-class_method" title="Syskit::Graphviz.available_task_annotations (method)">available_task_annotations</a></span></span><span class='period'>.</span><span class='id identifier rubyid_sort'>sort</span>
+    <span class='id identifier rubyid_buttons'>buttons</span><span class='period'>.</span><span class='id identifier rubyid_concat'>concat</span><span class='lparen'>(</span><span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_make_annotation_buttons'>make_annotation_buttons</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>interface</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_all_annotations'>all_annotations</span><span class='comma'>,</span> <span class='id identifier rubyid_all_annotations'>all_annotations</span><span class='rparen'>)</span><span class='rparen'>)</span>
+    <span class='const'><span class='object_link'><a href="../../../Syskit.html" title="Syskit (module)">Syskit</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../../Graphviz.html" title="Syskit::Graphviz (class)">Graphviz</a></span></span><span class='period'>.</span><span class='id identifier rubyid_available_task_annotations'><span class='object_link'><a href="../../Graphviz.html#available_task_annotations-class_method" title="Syskit::Graphviz.available_task_annotations (method)">available_task_annotations</a></span></span><span class='period'>.</span><span class='id identifier rubyid_sort'>sort</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_ann_name'>ann_name</span><span class='op'>|</span>
+        <span class='id identifier rubyid_interface_options'>interface_options</span><span class='lbracket'>[</span><span class='symbol'>:annotations</span><span class='rbracket'>]</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_ann_name'>ann_name</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_interface_options'>interface_options</span><span class='lbracket'>[</span><span class='symbol'>:buttons</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_buttons'>buttons</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id=""></span>
+      <div class="method_details first">
+  <h3 class="signature first" id="orogen_rendering-instance_method">
+  
+    #<strong>orogen_rendering</strong>  &#x21d2; <tt><span class='object_link'><a href="../../../Object.html" title="Object (class)">Object</a></span></tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute orogen_rendering</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+4
+5
+6</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/gui/model_views/task_context_base.rb', line 4</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_orogen_rendering'>orogen_rendering</span>
+  <span class='ivar'>@orogen_rendering</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="task_model_view-instance_method">
+  
+    #<strong>task_model_view</strong>  &#x21d2; <tt><span class='object_link'><a href="../../../Object.html" title="Object (class)">Object</a></span></tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute task_model_view</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+5
+6
+7</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/gui/model_views/task_context_base.rb', line 5</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_task_model_view'>task_model_view</span>
+  <span class='ivar'>@task_model_view</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="render-instance_method">
+  
+    #<strong>render</strong>(model, external_objects: false)  &#x21d2; <tt><span class='object_link'><a href="../../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+29
+30
+31
+32
+33
+34
+35
+36</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/gui/model_views/task_context_base.rb', line 29</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_render'>render</span><span class='lparen'>(</span><span class='id identifier rubyid_model'>model</span><span class='comma'>,</span> <span class='label'>external_objects:</span> <span class='kw'>false</span><span class='rparen'>)</span>
+    <span class='kw'>super</span>
+
+    <span class='id identifier rubyid_page'>page</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>oroGen Model</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>&lt;p&gt;&lt;b&gt;oroGen name:&lt;/b&gt; </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_model'>model</span><span class='period'>.</span><span class='id identifier rubyid_orogen_model'>orogen_model</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'>&lt;/p&gt;</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_orogen_rendering'>orogen_rendering</span><span class='period'>.</span><span class='id identifier rubyid_render'>render</span><span class='lparen'>(</span><span class='id identifier rubyid_model'>model</span><span class='period'>.</span><span class='id identifier rubyid_orogen_model'>orogen_model</span><span class='comma'>,</span> <span class='label'>external_objects:</span> <span class='id identifier rubyid_external_objects'>external_objects</span><span class='comma'>,</span> <span class='label'>doc:</span> <span class='kw'>false</span><span class='rparen'>)</span>
+
+    <span class='id identifier rubyid_task_model_view'>task_model_view</span><span class='period'>.</span><span class='id identifier rubyid_render'>render</span><span class='lparen'>(</span><span class='id identifier rubyid_model'>model</span><span class='comma'>,</span> <span class='label'>external_objects:</span> <span class='id identifier rubyid_external_objects'>external_objects</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="render_doc-instance_method">
+  
+    #<strong>render_doc</strong>(model)  &#x21d2; <tt><span class='object_link'><a href="../../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+22
+23
+24
+25
+26
+27</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/gui/model_views/task_context_base.rb', line 22</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_render_doc'>render_doc</span><span class='lparen'>(</span><span class='id identifier rubyid_model'>model</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_doc'>doc</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='id identifier rubyid_model'>model</span><span class='period'>.</span><span class='id identifier rubyid_doc'>doc</span><span class='comma'>,</span> <span class='id identifier rubyid_model'>model</span><span class='period'>.</span><span class='id identifier rubyid_orogen_model'>orogen_model</span><span class='period'>.</span><span class='id identifier rubyid_doc'>doc</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_compact'>compact</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\n\n</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_strip'>strip</span>
+    <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_doc'>doc</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
+        <span class='id identifier rubyid_page'>page</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id identifier rubyid_page'>page</span><span class='period'>.</span><span class='id identifier rubyid_main_doc'>main_doc</span><span class='lparen'>(</span><span class='id identifier rubyid_doc'>doc</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Wed Apr 10 21:58:47 2019 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.19 (ruby-2.5.1).
+</div>
+
+    </div>
+  </body>
+</html>

@@ -1,0 +1,1077 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: Orocos::ROS::ProcessManager
+  
+    &mdash; Documentation by YARD 0.9.19
+  
+</title>
+
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "Orocos::ROS::ProcessManager";
+  relpath = '../../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../../_index.html">Index (P)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../Orocos.html" title="Orocos (module)">Orocos</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../ROS.html" title="Orocos::ROS (module)">ROS</a></span></span>
+     &raquo; 
+    <span class="title">ProcessManager</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: Orocos::ROS::ProcessManager
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">Orocos::ROS::ProcessManager</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/orocos/ros/process_manager.rb</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>This class corresponds to the ProcessClient and is a drop-in replacement
+for ProcessClient.  It allows to start ROS launch files using the process
+server</p>
+
+<p>In this context launch files correspond to oroGen deployments The naming
+&#39;deployments&#39; is kept when required by the top level interface
+otherwise &#39;launcher&#39; is being used to clarify that this should be a
+ROS Launcher object</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+
+
+  <h2>Instance Attribute Summary <small><a href="#" class="summary_toggle">collapse</a></small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#dying_launcher_processes-instance_method" title="#dying_launcher_processes (instance method)">#<strong>dying_launcher_processes</strong>  &#x21d2; Set&lt;LauncherProcess&gt; </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>The set of launcher processes for which <span class='object_link'><a href="#kill-instance_method" title="Orocos::ROS::ProcessManager#kill (method)">#kill</a></span> has been called but the
+exit status has not yet been read by <span class='object_link'><a href="#wait_termination-instance_method" title="Orocos::ROS::ProcessManager#wait_termination (method)">#wait_termination</a></span>.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#launcher_processes-instance_method" title="#launcher_processes (instance method)">#<strong>launcher_processes</strong>  &#x21d2; Object </a>
+    
+
+    
+      (also: #processes)
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Mapping from a launcher name to the corresponding Launcher instance, for
+launcher processes that have been started by this client.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#loader-instance_method" title="#loader (instance method)">#<strong>loader</strong>  &#x21d2; OroGen::ROS::Loader </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>The loader object that should be used to get ROS models.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#name_service-instance_method" title="#name_service (instance method)">#<strong>name_service</strong>  &#x21d2; Orocos::ROS::NameService </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>The ROS nameservice used by this process manager.</p>
+</div></span>
+  
+</li>
+
+    
+  </ul>
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#create_log_dir-instance_method" title="#create_log_dir (instance method)">#<strong>create_log_dir</strong>(log_dir, time_tag, metadata = Hash.new)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Creates a new log dir, and save the given time tag in it (used later on by
+save_log_dir).</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#disconnect-instance_method" title="#disconnect (instance method)">#<strong>disconnect</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(loader = Orocos::ROS.default_loader)  &#x21d2; ProcessManager </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Initialize process server.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#kill-instance_method" title="#kill (instance method)">#<strong>kill</strong>(launcher_process)  &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Kills the given launcher process and registers it in
+<span class='object_link'><a href="#dying_launcher_processes-instance_method" title="Orocos::ROS::ProcessManager#dying_launcher_processes (method)">#dying_launcher_processes</a></span> for later reporting by <span class='object_link'><a href="#wait_termination-instance_method" title="Orocos::ROS::ProcessManager#wait_termination (method)">#wait_termination</a></span>.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#save_log_dir-instance_method" title="#save_log_dir (instance method)">#<strong>save_log_dir</strong>(log_dir, results_dir)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Requests that the process server moves the log directory at
+<code>log_dir</code> to <code>results_dir</code>.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#start-instance_method" title="#start (instance method)">#<strong>start</strong>(process_name, launcher, name_mappings = Hash.new, options = Hash.new)  &#x21d2; Orocos::ROS::LauncherProcess </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Start a launcher process under the given process_name.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#wait_termination-instance_method" title="#wait_termination (instance method)">#<strong>wait_termination</strong>(timeout = nil)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Waits for processes to terminate.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    #<strong>initialize</strong>(loader = Orocos::ROS.default_loader)  &#x21d2; <tt><span class='object_link'><a href="" title="Orocos::ROS::ProcessManager (class)">ProcessManager</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Initialize process server</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+37
+38
+39
+40
+41</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/orocos/ros/process_manager.rb', line 37</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_loader'>loader</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../Orocos.html" title="Orocos (module)">Orocos</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../ROS.html" title="Orocos::ROS (module)">ROS</a></span></span><span class='period'>.</span><span class='id identifier rubyid_default_loader'><span class='object_link'><a href="../ROS.html#default_loader-class_method" title="Orocos::ROS.default_loader (method)">default_loader</a></span></span><span class='rparen'>)</span>
+    <span class='ivar'>@launcher_processes</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+    <span class='ivar'>@dying_launcher_processes</span> <span class='op'>=</span> <span class='const'>Array</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+    <span class='ivar'>@loader</span> <span class='op'>=</span> <span class='id identifier rubyid_loader'>loader</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id=""></span>
+      <div class="method_details first">
+  <h3 class="signature first" id="dying_launcher_processes-instance_method">
+  
+    #<strong>dying_launcher_processes</strong>  &#x21d2; <tt>Set&lt;<span class='object_link'><a href="LauncherProcess.html" title="Orocos::ROS::LauncherProcess (class)">LauncherProcess</a></span>&gt;</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the set of launcher processes for which <span class='object_link'><a href="#kill-instance_method" title="Orocos::ROS::ProcessManager#kill (method)">#kill</a></span> has been called but
+the exit status has not yet been read by <span class='object_link'><a href="#wait_termination-instance_method" title="Orocos::ROS::ProcessManager#wait_termination (method)">#wait_termination</a></span></p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Set&lt;<span class='object_link'><a href="LauncherProcess.html" title="Orocos::ROS::LauncherProcess (class)">LauncherProcess</a></span>&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the set of launcher processes for which <span class='object_link'><a href="#kill-instance_method" title="Orocos::ROS::ProcessManager#kill (method)">#kill</a></span> has been called but the
+exit status has not yet been read by <span class='object_link'><a href="#wait_termination-instance_method" title="Orocos::ROS::ProcessManager#wait_termination (method)">#wait_termination</a></span></p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+27
+28
+29</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/orocos/ros/process_manager.rb', line 27</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_dying_launcher_processes'>dying_launcher_processes</span>
+  <span class='ivar'>@dying_launcher_processes</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="launcher_processes-instance_method">
+  
+    #<strong>launcher_processes</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+    <span class="aliases">Also known as:
+    <span class="names"><span id='processes-instance_method'>processes</span></span>
+    </span>
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Mapping from a launcher name to the corresponding Launcher instance, for
+launcher processes that have been started by this client.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+21
+22
+23</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/orocos/ros/process_manager.rb', line 21</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_launcher_processes'>launcher_processes</span>
+  <span class='ivar'>@launcher_processes</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="loader-instance_method">
+  
+    #<strong>loader</strong>  &#x21d2; <tt>OroGen::ROS::Loader</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>The loader object that should be used to get ROS models</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>OroGen::ROS::Loader</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+17
+18
+19</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/orocos/ros/process_manager.rb', line 17</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_loader'>loader</span>
+  <span class='ivar'>@loader</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="name_service=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="name_service-instance_method">
+  
+    #<strong>name_service</strong>  &#x21d2; <tt><span class='object_link'><a href="NameService.html" title="Orocos::ROS::NameService (class)">Orocos::ROS::NameService</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the ROS nameservice used by this process manager</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="NameService.html" title="Orocos::ROS::NameService (class)">Orocos::ROS::NameService</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the ROS nameservice used by this process manager</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+30
+31
+32</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/orocos/ros/process_manager.rb', line 30</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_name_service'>name_service</span>
+    <span class='ivar'>@name_service</span> <span class='op'>||=</span> <span class='const'><span class='object_link'><a href="../../Orocos.html" title="Orocos (module)">Orocos</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../ROS.html" title="Orocos::ROS (module)">ROS</a></span></span><span class='period'>.</span><span class='id identifier rubyid_name_service'><span class='object_link'><a href="../ROS.html#name_service-class_method" title="Orocos::ROS.name_service (method)">name_service</a></span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="create_log_dir-instance_method">
+  
+    #<strong>create_log_dir</strong>(log_dir, time_tag, metadata = Hash.new)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Creates a new log dir, and save the given time tag in it (used later on by
+save_log_dir)</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+74
+75</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/orocos/ros/process_manager.rb', line 74</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_create_log_dir'>create_log_dir</span><span class='lparen'>(</span><span class='id identifier rubyid_log_dir'>log_dir</span><span class='comma'>,</span> <span class='id identifier rubyid_time_tag'>time_tag</span><span class='comma'>,</span> <span class='id identifier rubyid_metadata'>metadata</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="disconnect-instance_method">
+  
+    #<strong>disconnect</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+43
+44</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/orocos/ros/process_manager.rb', line 43</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_disconnect'>disconnect</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="kill-instance_method">
+  
+    #<strong>kill</strong>(launcher_process)  &#x21d2; <tt>void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p>
+<p>Kills the given launcher process and registers it in
+<span class='object_link'><a href="#dying_launcher_processes-instance_method" title="Orocos::ROS::ProcessManager#dying_launcher_processes (method)">#dying_launcher_processes</a></span> for later reporting by <span class='object_link'><a href="#wait_termination-instance_method" title="Orocos::ROS::ProcessManager#wait_termination (method)">#wait_termination</a></span></p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>launcher</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="LauncherProcess.html" title="Orocos::ROS::LauncherProcess (class)">LauncherProcess</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the launcher process to be killed</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+109
+110
+111
+112
+113
+114</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/orocos/ros/process_manager.rb', line 109</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_kill'>kill</span><span class='lparen'>(</span><span class='id identifier rubyid_launcher_process'>launcher_process</span><span class='rparen'>)</span>
+    <span class='const'><span class='object_link'><a href="../ROS.html" title="Orocos::ROS (module)">ROS</a></span></span><span class='period'>.</span><span class='id identifier rubyid_info'>info</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ProcessManager is killing launcher process </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_launcher_process'>launcher_process</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'> with pid &#39;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_launcher_process'>launcher_process</span><span class='period'>.</span><span class='id identifier rubyid_pid'>pid</span><span class='embexpr_end'>}</span><span class='tstring_content'>&#39;</span><span class='tstring_end'>&quot;</span></span>
+    <span class='op'>::</span><span class='const'>Process</span><span class='period'>.</span><span class='id identifier rubyid_kill'>kill</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>SIGTERM</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_launcher_process'>launcher_process</span><span class='period'>.</span><span class='id identifier rubyid_pid'>pid</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_dying_launcher_processes'>dying_launcher_processes</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_launcher_process'>launcher_process</span>
+    <span class='kw'>nil</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="save_log_dir-instance_method">
+  
+    #<strong>save_log_dir</strong>(log_dir, results_dir)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Requests that the process server moves the log directory at
+<code>log_dir</code> to <code>results_dir</code></p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+69
+70</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/orocos/ros/process_manager.rb', line 69</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_save_log_dir'>save_log_dir</span><span class='lparen'>(</span><span class='id identifier rubyid_log_dir'>log_dir</span><span class='comma'>,</span> <span class='id identifier rubyid_results_dir'>results_dir</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="start-instance_method">
+  
+    #<strong>start</strong>(process_name, launcher, name_mappings = Hash.new, options = Hash.new)  &#x21d2; <tt><span class='object_link'><a href="LauncherProcess.html" title="Orocos::ROS::LauncherProcess (class)">Orocos::ROS::LauncherProcess</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Start a launcher process under the given process_name</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="LauncherProcess.html" title="Orocos::ROS::LauncherProcess (class)">Orocos::ROS::LauncherProcess</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The launcher process which started by the process manager</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/orocos/ros/process_manager.rb', line 48</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_start'>start</span><span class='lparen'>(</span><span class='id identifier rubyid_process_name'>process_name</span><span class='comma'>,</span> <span class='id identifier rubyid_launcher'>launcher</span><span class='comma'>,</span> <span class='id identifier rubyid_name_mappings'>name_mappings</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_launcher_model'>launcher_model</span> <span class='op'>=</span> <span class='kw'>if</span> <span class='id identifier rubyid_launcher'>launcher</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='symbol'>:to_str</span><span class='rparen'>)</span>
+                         <span class='id identifier rubyid_loader'>loader</span><span class='period'>.</span><span class='id identifier rubyid_deployment_model_from_name'>deployment_model_from_name</span><span class='lparen'>(</span><span class='id identifier rubyid_launcher'>launcher</span><span class='rparen'>)</span>
+                     <span class='kw'>else</span> <span class='id identifier rubyid_launcher'>launcher</span>
+                     <span class='kw'>end</span>
+
+    <span class='const'><span class='object_link'><a href="" title="Orocos::ROS::ProcessManager (class)">ProcessManager</a></span></span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>launcher: &#39;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_launcher_model'>launcher_model</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'>&#39; with processname &#39;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_process_name'>process_name</span><span class='embexpr_end'>}</span><span class='tstring_content'>&#39;</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid_launcher_processes'>launcher_processes</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_process_name'>process_name</span><span class='comma'>,</span> <span class='id identifier rubyid_l'>l</span><span class='op'>|</span> 
+        <span class='kw'>if</span> <span class='id identifier rubyid_l'>l</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span> <span class='op'>==</span> <span class='id identifier rubyid_launcher_model'>launcher_model</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span>
+            <span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>launcher </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_launcher_model'>launcher_model</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'> is already started with processname </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_process_name'>process_name</span><span class='embexpr_end'>}</span><span class='tstring_content'> in </span><span class='embexpr_beg'>#{</span><span class='kw'>self</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+        <span class='kw'>end</span>
+    <span class='kw'>end</span>
+
+    <span class='id identifier rubyid_ros_launcher'>ros_launcher</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="LauncherProcess.html" title="Orocos::ROS::LauncherProcess (class)">LauncherProcess</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="LauncherProcess.html#initialize-instance_method" title="Orocos::ROS::LauncherProcess#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='kw'>self</span><span class='comma'>,</span> <span class='id identifier rubyid_process_name'>process_name</span><span class='comma'>,</span> <span class='id identifier rubyid_launcher_model'>launcher_model</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_ros_launcher'>ros_launcher</span><span class='period'>.</span><span class='id identifier rubyid_spawn'>spawn</span>
+    <span class='id identifier rubyid_launcher_processes'>launcher_processes</span><span class='lbracket'>[</span><span class='id identifier rubyid_process_name'>process_name</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_ros_launcher'>ros_launcher</span>
+    <span class='id identifier rubyid_ros_launcher'>ros_launcher</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="wait_termination-instance_method">
+  
+    #<strong>wait_termination</strong>(timeout = nil)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Waits for processes to terminate. <code>timeout</code> is the number of
+milliseconds we should wait. If set to nil, the call will block until a
+process terminates</p>
+
+<p>Returns a hash that maps launcher names to the Status object that
+represents their exit status.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/orocos/ros/process_manager.rb', line 83</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_wait_termination'>wait_termination</span><span class='lparen'>(</span><span class='id identifier rubyid_timeout'>timeout</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_timeout'>timeout</span> <span class='op'>!=</span> <span class='int'>0</span>
+        <span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='embexpr_end'>}</span><span class='tstring_content'> does not support non-zero timeouts in #wait_termination</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>end</span>
+
+    <span class='id identifier rubyid_terminated_launchers'>terminated_launchers</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+    <span class='id identifier rubyid_dying_launcher_processes'>dying_launcher_processes</span><span class='period'>.</span><span class='id identifier rubyid_delete_if'>delete_if</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_launcher_process'>launcher_process</span><span class='op'>|</span>
+        <span class='id identifier rubyid__'>_</span><span class='comma'>,</span> <span class='id identifier rubyid_status'>status</span> <span class='op'>=</span> <span class='op'>::</span><span class='const'>Process</span><span class='period'>.</span><span class='id identifier rubyid_waitpid2'>waitpid2</span><span class='lparen'>(</span><span class='id identifier rubyid_launcher_process'>launcher_process</span><span class='period'>.</span><span class='id identifier rubyid_pid'>pid</span><span class='comma'>,</span> <span class='op'>::</span><span class='const'>Process</span><span class='op'>::</span><span class='const'>WUNTRACED</span> <span class='op'>|</span> <span class='op'>::</span><span class='const'>Process</span><span class='op'>::</span><span class='const'>WNOHANG</span><span class='rparen'>)</span>
+        <span class='kw'>if</span> <span class='id identifier rubyid_status'>status</span>
+            <span class='const'><span class='object_link'><a href="../ROS.html" title="Orocos::ROS (module)">ROS</a></span></span><span class='period'>.</span><span class='id identifier rubyid_info'>info</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>announing dead launcher_process: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_launcher_process'>launcher_process</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+            <span class='id identifier rubyid_terminated_launchers'>terminated_launchers</span><span class='lbracket'>[</span><span class='id identifier rubyid_launcher_process'>launcher_process</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_status'>status</span>
+            <span class='id identifier rubyid_launcher_processes'>launcher_processes</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='id identifier rubyid_launcher_process'>launcher_process</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
+            <span class='id identifier rubyid_launcher_process'>launcher_process</span><span class='period'>.</span><span class='id identifier rubyid_dead!'>dead!</span><span class='lparen'>(</span><span class='id identifier rubyid_status'>status</span><span class='rparen'>)</span>
+            <span class='kw'>true</span>
+        <span class='kw'>else</span>
+            <span class='kw'>false</span>
+        <span class='kw'>end</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_terminated_launchers'>terminated_launchers</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Wed Apr 10 22:10:31 2019 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.19 (ruby-2.5.1).
+</div>
+
+    </div>
+  </body>
+</html>

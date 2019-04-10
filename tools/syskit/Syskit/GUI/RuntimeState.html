@@ -1,0 +1,3602 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: Syskit::GUI::RuntimeState
+  
+    &mdash; Documentation by YARD 0.9.19
+  
+</title>
+
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "Syskit::GUI::RuntimeState";
+  relpath = '../../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../../_index.html">Index (R)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../Syskit.html" title="Syskit (module)">Syskit</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../GUI.html" title="Syskit::GUI (module)">GUI</a></span></span>
+     &raquo; 
+    <span class="title">RuntimeState</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: Syskit::GUI::RuntimeState
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName">Qt::Widget</span>
+      
+        <ul class="fullTree">
+          <li><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></li>
+          
+            <li class="next">Qt::Widget</li>
+          
+            <li class="next">Syskit::GUI::RuntimeState</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  <dl>
+      <dt>Includes:</dt>
+      <dd>Roby::Hooks, Roby::Hooks::InstanceHooks</dd>
+  </dl>
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/syskit/gui/runtime_state.rb</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>UI that displays and allows to control jobs</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><h2>Defined Under Namespace</h2>
+<p class="children">
+  
+    
+  
+    
+      <strong class="classes">Classes:</strong> <span class='object_link'><a href="RuntimeState/ActionListDelegate.html" title="Syskit::GUI::RuntimeState::ActionListDelegate (class)">ActionListDelegate</a></span>, <span class='object_link'><a href="RuntimeState/EventWidget.html" title="Syskit::GUI::RuntimeState::EventWidget (class)">EventWidget</a></span>
+    
+  
+</p>
+
+
+
+
+  <h2>Instance Attribute Summary <small><a href="#" class="summary_toggle">collapse</a></small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#action_combo-instance_method" title="#action_combo (instance method)">#<strong>action_combo</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>The combo box used to create new jobs.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#all_job_info-instance_method" title="#all_job_info (instance method)">#<strong>all_job_info</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Job information for tasks in the rebuilt plan.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#all_tasks-instance_method" title="#all_tasks (instance method)">#<strong>all_tasks</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>All known tasks.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#connection_state-instance_method" title="#connection_state (instance method)">#<strong>connection_state</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>The connection state, which gives access to the global Syskit state.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#current_job-instance_method" title="#current_job (instance method)">#<strong>current_job</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>The job that is currently selected.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#current_orocos_tasks-instance_method" title="#current_orocos_tasks (instance method)">#<strong>current_orocos_tasks</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>The list of task names of the task currently displayed by the task
+inspector.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#current_state-instance_method" title="#current_state (instance method)">#<strong>current_state</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>The current connection state.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#global_actions-instance_method" title="#global_actions (instance method)">#<strong>global_actions</strong>  &#x21d2; Array&lt;Qt::Action&gt; </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns a list of actions that can be performed on the Roby instance.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#job_expanded_status-instance_method" title="#job_expanded_status (instance method)">#<strong>job_expanded_status</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>The [ExpandedJobStatus] widget in which we display expanded job
+information.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#job_status_list-instance_method" title="#job_status_list (instance method)">#<strong>job_status_list</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>The [WidgetList] widget in which we display the summary of job status.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#main_layout-instance_method" title="#main_layout (instance method)">#<strong>main_layout</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>The toplevel layout.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#name_service-instance_method" title="#name_service (instance method)">#<strong>name_service</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>The name service which allows us to resolve Rock task contexts.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#new_job_layout-instance_method" title="#new_job_layout (instance method)">#<strong>new_job_layout</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>The layout used to organize the widgets to create new jobs.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#syskit-instance_method" title="#syskit (instance method)">#<strong>syskit</strong>  &#x21d2; Roby::Interface::Async::Interface </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>The underlying syskit interface.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#syskit_log_stream-instance_method" title="#syskit_log_stream (instance method)">#<strong>syskit_log_stream</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>An async object to access the log stream.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#syskit_poll-instance_method" title="#syskit_poll (instance method)">#<strong>syskit_poll</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute syskit_poll.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#ui_logging_configuration-instance_method" title="#ui_logging_configuration (instance method)">#<strong>ui_logging_configuration</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>A logging configuration widget we use to manage logging.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#ui_task_inspector-instance_method" title="#ui_task_inspector (instance method)">#<strong>ui_task_inspector</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>A task inspector widget we use to display the task states.</p>
+</div></span>
+  
+</li>
+
+    
+  </ul>
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#app_quit-instance_method" title="#app_quit (instance method)">#<strong>app_quit</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#app_restart-instance_method" title="#app_restart (instance method)">#<strong>app_restart</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#app_start-instance_method" title="#app_start (instance method)">#<strong>app_start</strong>(robot_name: &#39;default&#39;)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#create_ui-instance_method" title="#create_ui (instance method)">#<strong>create_ui</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#create_ui_event_button-instance_method" title="#create_ui_event_button (instance method)">#<strong>create_ui_event_button</strong>(text)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#create_ui_event_frame-instance_method" title="#create_ui_event_frame (instance method)">#<strong>create_ui_event_frame</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#create_ui_event_orogen_config_changed-instance_method" title="#create_ui_event_orogen_config_changed (instance method)">#<strong>create_ui_event_orogen_config_changed</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#create_ui_event_orogen_config_reloaded-instance_method" title="#create_ui_event_orogen_config_reloaded (instance method)">#<strong>create_ui_event_orogen_config_reloaded</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#create_ui_event_widgets-instance_method" title="#create_ui_event_widgets (instance method)">#<strong>create_ui_event_widgets</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#create_ui_new_job-instance_method" title="#create_ui_new_job (instance method)">#<strong>create_ui_new_job</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#deselect_job-instance_method" title="#deselect_job (instance method)">#<strong>deselect_job</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#hide_loggers%3F-instance_method" title="#hide_loggers? (instance method)">#<strong>hide_loggers?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(parent: nil, robot_name: &#39;default&#39;, syskit: Roby::Interface::Async::Interface.new, poll_period: 50)  &#x21d2; RuntimeState </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>A new instance of RuntimeState.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#logger_task%3F-instance_method" title="#logger_task? (instance method)">#<strong>logger_task?</strong>(t)  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#monitor_job-instance_method" title="#monitor_job (instance method)">#<strong>monitor_job</strong>(job)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Create the UI elements for the given job.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#monitor_syskit_startup-instance_method" title="#monitor_syskit_startup (instance method)">#<strong>monitor_syskit_startup</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#poll_syskit_interface-instance_method" title="#poll_syskit_interface (instance method)">#<strong>poll_syskit_interface</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Sets up polling on a given syskit interface.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#remote_name-instance_method" title="#remote_name (instance method)">#<strong>remote_name</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#reset-instance_method" title="#reset (instance method)">#<strong>reset</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#select_job-instance_method" title="#select_job (instance method)">#<strong>select_job</strong>(job_status)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#update_log_server_connection-instance_method" title="#update_log_server_connection (instance method)">#<strong>update_log_server_connection</strong>(port)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#update_orocos_tasks-instance_method" title="#update_orocos_tasks (instance method)">#<strong>update_orocos_tasks</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#update_tasks_info-instance_method" title="#update_tasks_info (instance method)">#<strong>update_tasks_info</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  <div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    #<strong>initialize</strong>(parent: nil, robot_name: &#39;default&#39;, syskit: Roby::Interface::Async::Interface.new, poll_period: 50)  &#x21d2; <tt><span class='object_link'><a href="" title="Syskit::GUI::RuntimeState (class)">RuntimeState</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns a new instance of RuntimeState</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>syskit</span>
+      
+      
+        <span class='type'>(<tt>Roby::Interface::Async::Interface</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the underlying syskit interface</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>poll_period</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>how often should the syskit interface be polled (milliseconds). Set to nil
+if the polling is already done externally</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/gui/runtime_state.rb', line 115</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='label'>parent:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>robot_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>default</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='label'>syskit:</span> <span class='const'>Roby</span><span class='op'>::</span><span class='const'>Interface</span><span class='op'>::</span><span class='const'>Async</span><span class='op'>::</span><span class='const'>Interface</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='comma'>,</span> <span class='label'>poll_period:</span> <span class='int'>50</span><span class='rparen'>)</span>
+
+    <span class='kw'>super</span><span class='lparen'>(</span><span class='id identifier rubyid_parent'>parent</span><span class='rparen'>)</span>
+
+    <span class='ivar'>@syskit</span> <span class='op'>=</span> <span class='id identifier rubyid_syskit'><span class='object_link'><a href="../../top-level-namespace.html#syskit-instance_method" title="#syskit (method)">syskit</a></span></span>
+    <span class='ivar'>@robot_name</span> <span class='op'>=</span> <span class='id identifier rubyid_robot_name'>robot_name</span>
+    <span class='id identifier rubyid_reset'>reset</span>
+
+    <span class='ivar'>@syskit_poll</span> <span class='op'>=</span> <span class='const'>Qt</span><span class='op'>::</span><span class='const'>Timer</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+    <span class='ivar'>@syskit_poll_period</span> <span class='op'>=</span> <span class='id identifier rubyid_poll_period'>poll_period</span>
+    <span class='id identifier rubyid_connect'>connect</span> <span class='id identifier rubyid_syskit_poll'>syskit_poll</span><span class='comma'>,</span> <span class='const'>SIGNAL</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>timeout()</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='comma'>,</span>
+        <span class='kw'>self</span><span class='comma'>,</span> <span class='const'>SLOT</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>poll_syskit_interface()</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+
+    <span class='kw'>if</span> <span class='id identifier rubyid_poll_period'>poll_period</span>
+        <span class='ivar'>@syskit_poll</span><span class='period'>.</span><span class='id identifier rubyid_start'>start</span><span class='lparen'>(</span><span class='id identifier rubyid_poll_period'>poll_period</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+
+    <span class='id identifier rubyid_create_ui'>create_ui</span>
+
+    <span class='ivar'>@global_actions</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+    <span class='id identifier rubyid_action'>action</span> <span class='op'>=</span> <span class='id identifier rubyid_global_actions'>global_actions</span><span class='lbracket'>[</span><span class='symbol'>:start</span><span class='rbracket'>]</span>   <span class='op'>=</span> <span class='const'>Qt</span><span class='op'>::</span><span class='const'>Action</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Start</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='kw'>self</span><span class='rparen'>)</span>
+    <span class='ivar'>@starting_monitor</span> <span class='op'>=</span> <span class='const'>Qt</span><span class='op'>::</span><span class='const'>Timer</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+    <span class='id identifier rubyid_connect'>connect</span> <span class='ivar'>@starting_monitor</span><span class='comma'>,</span> <span class='const'>SIGNAL</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>timeout()</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='comma'>,</span>
+        <span class='kw'>self</span><span class='comma'>,</span> <span class='const'>SLOT</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>monitor_syskit_startup()</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_connect'>connect</span> <span class='id identifier rubyid_action'>action</span><span class='comma'>,</span> <span class='const'>SIGNAL</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>triggered()</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='kw'>do</span>
+        <span class='id identifier rubyid_app_start'>app_start</span><span class='lparen'>(</span><span class='label'>robot_name:</span> <span class='ivar'>@robot_name</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_action'>action</span> <span class='op'>=</span> <span class='id identifier rubyid_global_actions'>global_actions</span><span class='lbracket'>[</span><span class='symbol'>:restart</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='const'>Qt</span><span class='op'>::</span><span class='const'>Action</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Restart</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='kw'>self</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_connect'>connect</span> <span class='id identifier rubyid_action'>action</span><span class='comma'>,</span> <span class='const'>SIGNAL</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>triggered()</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='kw'>do</span>
+        <span class='id identifier rubyid_app_restart'>app_restart</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_action'>action</span> <span class='op'>=</span> <span class='id identifier rubyid_global_actions'>global_actions</span><span class='lbracket'>[</span><span class='symbol'>:quit</span><span class='rbracket'>]</span>    <span class='op'>=</span> <span class='const'>Qt</span><span class='op'>::</span><span class='const'>Action</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Quit</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='kw'>self</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_connect'>connect</span> <span class='id identifier rubyid_action'>action</span><span class='comma'>,</span> <span class='const'>SIGNAL</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>triggered()</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='kw'>do</span>
+        <span class='id identifier rubyid_app_quit'>app_quit</span>
+    <span class='kw'>end</span>
+
+    <span class='ivar'>@current_job</span> <span class='op'>=</span> <span class='kw'>nil</span>
+    <span class='ivar'>@current_orocos_tasks</span> <span class='op'>=</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+    <span class='ivar'>@all_tasks</span> <span class='op'>=</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+    <span class='ivar'>@known_loggers</span> <span class='op'>=</span> <span class='kw'>nil</span>
+    <span class='ivar'>@all_job_info</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+    <span class='id identifier rubyid_syskit'><span class='object_link'><a href="../../top-level-namespace.html#syskit-instance_method" title="#syskit (method)">syskit</a></span></span><span class='period'>.</span><span class='id identifier rubyid_on_ui_event'>on_ui_event</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_event_name'>event_name</span><span class='comma'>,</span> <span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='op'>|</span>
+        <span class='kw'>if</span> <span class='id identifier rubyid_w'>w</span> <span class='op'>=</span> <span class='ivar'>@ui_event_widgets</span><span class='lbracket'>[</span><span class='id identifier rubyid_event_name'>event_name</span><span class='rbracket'>]</span>
+            <span class='id identifier rubyid_w'>w</span><span class='period'>.</span><span class='id identifier rubyid_show'>show</span>
+            <span class='id identifier rubyid_w'>w</span><span class='period'>.</span><span class='id identifier rubyid_update'>update</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span>
+        <span class='kw'>else</span>
+            <span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>don&#39;t know what to do with UI event </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_event_name'>event_name</span><span class='embexpr_end'>}</span><span class='tstring_content'>, known events: </span><span class='embexpr_beg'>#{</span><span class='ivar'>@ui_event_widgets</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+        <span class='kw'>end</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_on_connection_state_changed'>on_connection_state_changed</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_state'>state</span><span class='op'>|</span>
+        <span class='ivar'>@current_state</span> <span class='op'>=</span> <span class='id identifier rubyid_state'>state</span>
+        <span class='id identifier rubyid_connection_state'>connection_state</span><span class='period'>.</span><span class='id identifier rubyid_update_state'>update_state</span> <span class='id identifier rubyid_state'>state</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_syskit'><span class='object_link'><a href="../../top-level-namespace.html#syskit-instance_method" title="#syskit (method)">syskit</a></span></span><span class='period'>.</span><span class='id identifier rubyid_on_reachable'>on_reachable</span> <span class='kw'>do</span>
+        <span class='ivar'>@syskit_commands</span> <span class='op'>=</span> <span class='id identifier rubyid_syskit'><span class='object_link'><a href="../../top-level-namespace.html#syskit-instance_method" title="#syskit (method)">syskit</a></span></span><span class='period'>.</span><span class='id identifier rubyid_client'>client</span><span class='period'>.</span><span class='id identifier rubyid_syskit'>syskit</span>
+        <span class='id identifier rubyid_update_log_server_connection'>update_log_server_connection</span><span class='lparen'>(</span><span class='id identifier rubyid_syskit'><span class='object_link'><a href="../../top-level-namespace.html#syskit-instance_method" title="#syskit (method)">syskit</a></span></span><span class='period'>.</span><span class='id identifier rubyid_log_server_port'>log_server_port</span><span class='rparen'>)</span>
+        <span class='ivar'>@job_status_list</span><span class='period'>.</span><span class='id identifier rubyid_each_widget'>each_widget</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_w'>w</span><span class='op'>|</span>
+            <span class='id identifier rubyid_w'>w</span><span class='period'>.</span><span class='id identifier rubyid_show_actions'>show_actions</span> <span class='op'>=</span> <span class='kw'>true</span>
+        <span class='kw'>end</span>
+        <span class='id identifier rubyid_action_combo'>action_combo</span><span class='period'>.</span><span class='id identifier rubyid_clear'>clear</span>
+        <span class='id identifier rubyid_action_combo'>action_combo</span><span class='period'>.</span><span class='id identifier rubyid_enabled'>enabled</span> <span class='op'>=</span> <span class='kw'>true</span>
+        <span class='id identifier rubyid_syskit'><span class='object_link'><a href="../../top-level-namespace.html#syskit-instance_method" title="#syskit (method)">syskit</a></span></span><span class='period'>.</span><span class='id identifier rubyid_actions'>actions</span><span class='period'>.</span><span class='id identifier rubyid_sort_by'>sort_by</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:name</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_action'>action</span><span class='op'>|</span>
+            <span class='kw'>next</span> <span class='kw'>if</span> <span class='id identifier rubyid_action'>action</span><span class='period'>.</span><span class='id identifier rubyid_advanced?'>advanced?</span>
+            <span class='id identifier rubyid_action_combo'>action_combo</span><span class='period'>.</span><span class='id identifier rubyid_add_item'>add_item</span><span class='lparen'>(</span><span class='id identifier rubyid_action'>action</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='const'>Qt</span><span class='op'>::</span><span class='const'>Variant</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_action'>action</span><span class='period'>.</span><span class='id identifier rubyid_doc'>doc</span><span class='rparen'>)</span><span class='rparen'>)</span>
+        <span class='kw'>end</span>
+        <span class='id identifier rubyid_ui_logging_configuration'>ui_logging_configuration</span><span class='period'>.</span><span class='id identifier rubyid_refresh'>refresh</span>
+        <span class='id identifier rubyid_global_actions'>global_actions</span><span class='lbracket'>[</span><span class='symbol'>:start</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_visible'>visible</span> <span class='op'>=</span> <span class='kw'>false</span>
+        <span class='id identifier rubyid_global_actions'>global_actions</span><span class='lbracket'>[</span><span class='symbol'>:restart</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_visible'>visible</span> <span class='op'>=</span> <span class='kw'>true</span>
+        <span class='id identifier rubyid_global_actions'>global_actions</span><span class='lbracket'>[</span><span class='symbol'>:quit</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_visible'>visible</span> <span class='op'>=</span> <span class='kw'>true</span>
+        <span class='ivar'>@starting_monitor</span><span class='period'>.</span><span class='id identifier rubyid_stop'>stop</span>
+        <span class='id identifier rubyid_run_hook'>run_hook</span> <span class='symbol'>:on_connection_state_changed</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>CONNECTED</span><span class='tstring_end'>&#39;</span></span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_syskit'><span class='object_link'><a href="../../top-level-namespace.html#syskit-instance_method" title="#syskit (method)">syskit</a></span></span><span class='period'>.</span><span class='id identifier rubyid_on_unreachable'>on_unreachable</span> <span class='kw'>do</span>
+        <span class='ivar'>@syskit_commands</span> <span class='op'>=</span> <span class='kw'>nil</span>
+        <span class='ivar'>@job_status_list</span><span class='period'>.</span><span class='id identifier rubyid_each_widget'>each_widget</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_w'>w</span><span class='op'>|</span>
+            <span class='id identifier rubyid_w'>w</span><span class='period'>.</span><span class='id identifier rubyid_show_actions'>show_actions</span> <span class='op'>=</span> <span class='kw'>false</span>
+        <span class='kw'>end</span>
+        <span class='ivar'>@ui_event_widgets</span><span class='period'>.</span><span class='id identifier rubyid_each_value'>each_value</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:hide</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_action_combo'>action_combo</span><span class='period'>.</span><span class='id identifier rubyid_enabled'>enabled</span> <span class='op'>=</span> <span class='kw'>false</span>
+        <span class='ivar'>@batch_manager</span><span class='period'>.</span><span class='id identifier rubyid_cancel'>cancel</span>
+        <span class='kw'>if</span> <span class='id identifier rubyid_remote_name'>remote_name</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>localhost</span><span class='tstring_end'>&#39;</span></span>
+            <span class='id identifier rubyid_global_actions'>global_actions</span><span class='lbracket'>[</span><span class='symbol'>:start</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_visible'>visible</span> <span class='op'>=</span> <span class='kw'>true</span>
+        <span class='kw'>end</span>
+        <span class='id identifier rubyid_ui_logging_configuration'>ui_logging_configuration</span><span class='period'>.</span><span class='id identifier rubyid_refresh'>refresh</span>
+        <span class='id identifier rubyid_global_actions'>global_actions</span><span class='lbracket'>[</span><span class='symbol'>:restart</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_visible'>visible</span> <span class='op'>=</span> <span class='kw'>false</span>
+        <span class='id identifier rubyid_global_actions'>global_actions</span><span class='lbracket'>[</span><span class='symbol'>:quit</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_visible'>visible</span> <span class='op'>=</span> <span class='kw'>false</span>
+        <span class='kw'>if</span> <span class='ivar'>@current_state</span> <span class='op'>!=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>RESTARTING</span><span class='tstring_end'>&#39;</span></span>
+            <span class='id identifier rubyid_run_hook'>run_hook</span> <span class='symbol'>:on_connection_state_changed</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>UNREACHABLE</span><span class='tstring_end'>&#39;</span></span>
+        <span class='kw'>end</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_syskit'><span class='object_link'><a href="../../top-level-namespace.html#syskit-instance_method" title="#syskit (method)">syskit</a></span></span><span class='period'>.</span><span class='id identifier rubyid_on_job'>on_job</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_job'>job</span><span class='op'>|</span>
+        <span class='id identifier rubyid_job'>job</span><span class='period'>.</span><span class='id identifier rubyid_start'>start</span>
+        <span class='id identifier rubyid_monitor_job'>monitor_job</span><span class='lparen'>(</span><span class='id identifier rubyid_job'>job</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id=""></span>
+      <div class="method_details first">
+  <h3 class="signature first" id="action_combo-instance_method">
+  
+    #<strong>action_combo</strong>  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>The combo box used to create new jobs</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+36
+37
+38</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/gui/runtime_state.rb', line 36</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_action_combo'>action_combo</span>
+  <span class='ivar'>@action_combo</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="all_job_info-instance_method">
+  
+    #<strong>all_job_info</strong>  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Job information for tasks in the rebuilt plan</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+46
+47
+48</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/gui/runtime_state.rb', line 46</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_all_job_info'>all_job_info</span>
+  <span class='ivar'>@all_job_info</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="all_tasks-instance_method">
+  
+    #<strong>all_tasks</strong>  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>All known tasks</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+44
+45
+46</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/gui/runtime_state.rb', line 44</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_all_tasks'>all_tasks</span>
+  <span class='ivar'>@all_tasks</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="connection_state-instance_method">
+  
+    #<strong>connection_state</strong>  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>The connection state, which gives access to the global Syskit state</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+41
+42
+43</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/gui/runtime_state.rb', line 41</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_connection_state'>connection_state</span>
+  <span class='ivar'>@connection_state</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="current_job-instance_method">
+  
+    #<strong>current_job</strong>  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>The job that is currently selected</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+38
+39
+40</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/gui/runtime_state.rb', line 38</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_current_job'>current_job</span>
+  <span class='ivar'>@current_job</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="current_orocos_tasks-instance_method">
+  
+    #<strong>current_orocos_tasks</strong>  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>The list of task names of the task currently displayed by the task
+inspector</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+56
+57
+58</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/gui/runtime_state.rb', line 56</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_current_orocos_tasks'>current_orocos_tasks</span>
+  <span class='ivar'>@current_orocos_tasks</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="current_state-instance_method">
+  
+    #<strong>current_state</strong>  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>The current connection state</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+65
+66
+67</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/gui/runtime_state.rb', line 65</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_current_state'>current_state</span>
+  <span class='ivar'>@current_state</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="global_actions-instance_method">
+  
+    #<strong>global_actions</strong>  &#x21d2; <tt>Array&lt;Qt::Action&gt;</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns a list of actions that can be performed on the Roby instance</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array&lt;Qt::Action&gt;</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+62
+63
+64</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/gui/runtime_state.rb', line 62</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_global_actions'>global_actions</span>
+  <span class='ivar'>@global_actions</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="job_expanded_status-instance_method">
+  
+    #<strong>job_expanded_status</strong>  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>The [ExpandedJobStatus] widget in which we display expanded job information</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+34
+35
+36</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/gui/runtime_state.rb', line 34</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_job_expanded_status'>job_expanded_status</span>
+  <span class='ivar'>@job_expanded_status</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="job_status_list-instance_method">
+  
+    #<strong>job_status_list</strong>  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>The [WidgetList] widget in which we display the summary of job status</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+31
+32
+33</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/gui/runtime_state.rb', line 31</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_job_status_list'>job_status_list</span>
+  <span class='ivar'>@job_status_list</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="main_layout-instance_method">
+  
+    #<strong>main_layout</strong>  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>The toplevel layout</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+26
+27
+28</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/gui/runtime_state.rb', line 26</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_main_layout'>main_layout</span>
+  <span class='ivar'>@main_layout</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="name_service-instance_method">
+  
+    #<strong>name_service</strong>  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>The name service which allows us to resolve Rock task contexts</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+49
+50
+51</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/gui/runtime_state.rb', line 49</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_name_service'>name_service</span>
+  <span class='ivar'>@name_service</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="new_job_layout-instance_method">
+  
+    #<strong>new_job_layout</strong>  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>The layout used to organize the widgets to create new jobs</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+28
+29
+30</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/gui/runtime_state.rb', line 28</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_new_job_layout'>new_job_layout</span>
+  <span class='ivar'>@new_job_layout</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="syskit-instance_method">
+  
+    #<strong>syskit</strong>  &#x21d2; <tt>Roby::Interface::Async::Interface</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the underlying syskit interface</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Roby::Interface::Async::Interface</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the underlying syskit interface</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+21
+22
+23</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/gui/runtime_state.rb', line 21</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_syskit'><span class='object_link'><a href="../../top-level-namespace.html#syskit-instance_method" title="#syskit (method)">syskit</a></span></span>
+  <span class='ivar'>@syskit</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="syskit_log_stream-instance_method">
+  
+    #<strong>syskit_log_stream</strong>  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>An async object to access the log stream</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+23
+24
+25</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/gui/runtime_state.rb', line 23</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_syskit_log_stream'>syskit_log_stream</span>
+  <span class='ivar'>@syskit_log_stream</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="syskit_poll-instance_method">
+  
+    #<strong>syskit_poll</strong>  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute syskit_poll</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+553
+554
+555</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/gui/runtime_state.rb', line 553</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_syskit_poll'>syskit_poll</span>
+  <span class='ivar'>@syskit_poll</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="ui_logging_configuration-instance_method">
+  
+    #<strong>ui_logging_configuration</strong>  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>A logging configuration widget we use to manage logging</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+53
+54
+55</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/gui/runtime_state.rb', line 53</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_ui_logging_configuration'>ui_logging_configuration</span>
+  <span class='ivar'>@ui_logging_configuration</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="ui_task_inspector-instance_method">
+  
+    #<strong>ui_task_inspector</strong>  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>A task inspector widget we use to display the task states</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+51
+52
+53</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/gui/runtime_state.rb', line 51</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_ui_task_inspector'>ui_task_inspector</span>
+  <span class='ivar'>@ui_task_inspector</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="app_quit-instance_method">
+  
+    #<strong>app_quit</strong>  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+294
+295
+296</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/gui/runtime_state.rb', line 294</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_app_quit'>app_quit</span>
+    <span class='id identifier rubyid_syskit'><span class='object_link'><a href="../../top-level-namespace.html#syskit-instance_method" title="#syskit (method)">syskit</a></span></span><span class='period'>.</span><span class='id identifier rubyid_quit'>quit</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="app_restart-instance_method">
+  
+    #<strong>app_restart</strong>  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+298
+299
+300
+301
+302
+303
+304</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/gui/runtime_state.rb', line 298</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_app_restart'>app_restart</span>
+    <span class='id identifier rubyid_run_hook'>run_hook</span> <span class='symbol'>:on_connection_state_changed</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>RESTARTING</span><span class='tstring_end'>&#39;</span></span>
+    <span class='kw'>if</span> <span class='ivar'>@syskit_pid</span>
+        <span class='ivar'>@starting_monitor</span><span class='period'>.</span><span class='id identifier rubyid_start'>start</span><span class='lparen'>(</span><span class='int'>100</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_syskit'><span class='object_link'><a href="../../top-level-namespace.html#syskit-instance_method" title="#syskit (method)">syskit</a></span></span><span class='period'>.</span><span class='id identifier rubyid_restart'>restart</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="app_start-instance_method">
+  
+    #<strong>app_start</strong>(robot_name: &#39;default&#39;)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291
+292</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/gui/runtime_state.rb', line 273</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_app_start'>app_start</span><span class='lparen'>(</span><span class='label'>robot_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>default</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_robot_name'>robot_name</span><span class='comma'>,</span> <span class='id identifier rubyid_start_controller'>start_controller</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="AppStartDialog.html" title="Syskit::GUI::AppStartDialog (class)">AppStartDialog</a></span></span><span class='period'>.</span><span class='id identifier rubyid_exec'><span class='object_link'><a href="AppStartDialog.html#exec-class_method" title="Syskit::GUI::AppStartDialog.exec (method)">exec</a></span></span><span class='lparen'>(</span><span class='const'>Roby</span><span class='period'>.</span><span class='id identifier rubyid_app'>app</span><span class='period'>.</span><span class='id identifier rubyid_robots'>robots</span><span class='period'>.</span><span class='id identifier rubyid_names'>names</span><span class='comma'>,</span> <span class='kw'>self</span><span class='comma'>,</span> <span class='label'>default_robot_name:</span> <span class='id identifier rubyid_robot_name'>robot_name</span><span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='kw'>unless</span> <span class='id identifier rubyid_robot_name'>robot_name</span>
+
+    <span class='id identifier rubyid_extra_args'>extra_args</span> <span class='op'>=</span> <span class='const'>Array</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+    <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_robot_name'>robot_name</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
+        <span class='id identifier rubyid_extra_args'>extra_args</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>-r</span><span class='tstring_end'>&quot;</span></span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_robot_name'>robot_name</span>
+    <span class='kw'>end</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_start_controller'>start_controller</span>
+        <span class='id identifier rubyid_extra_args'>extra_args</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>-c</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_extra_args'>extra_args</span><span class='period'>.</span><span class='id identifier rubyid_concat'>concat</span><span class='lparen'>(</span>
+        <span class='const'>Roby</span><span class='period'>.</span><span class='id identifier rubyid_app'>app</span><span class='period'>.</span><span class='id identifier rubyid_argv_set'>argv_set</span><span class='period'>.</span><span class='id identifier rubyid_flat_map'>flat_map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_arg'>arg</span><span class='op'>|</span> <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>--set</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_arg'>arg</span><span class='rbracket'>]</span> <span class='rbrace'>}</span><span class='rparen'>)</span>
+    <span class='ivar'>@syskit_pid</span> <span class='op'>=</span>
+        <span class='const'>Kernel</span><span class='period'>.</span><span class='id identifier rubyid_spawn'>spawn</span> <span class='const'>Gem</span><span class='period'>.</span><span class='id identifier rubyid_ruby'>ruby</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>-S</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>syskit</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>run</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>--wait-shell-connection</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+            <span class='op'>*</span><span class='id identifier rubyid_extra_args'>extra_args</span><span class='comma'>,</span>
+            <span class='label'>pgroup:</span> <span class='kw'>true</span>
+    <span class='ivar'>@starting_monitor</span><span class='period'>.</span><span class='id identifier rubyid_start'>start</span><span class='lparen'>(</span><span class='int'>100</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_run_hook'>run_hook</span> <span class='symbol'>:on_connection_state_changed</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>STARTING</span><span class='tstring_end'>&#39;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="create_ui-instance_method">
+  
+    #<strong>create_ui</strong>  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+387
+388
+389
+390
+391
+392
+393
+394
+395
+396
+397
+398
+399
+400
+401
+402
+403
+404
+405
+406
+407
+408
+409
+410
+411
+412
+413
+414
+415
+416
+417
+418
+419
+420
+421
+422
+423
+424
+425
+426
+427
+428
+429
+430
+431
+432
+433
+434
+435
+436
+437
+438
+439
+440
+441
+442
+443
+444
+445
+446
+447
+448
+449
+450
+451
+452
+453
+454
+455
+456
+457
+458
+459
+460
+461
+462</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/gui/runtime_state.rb', line 387</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_create_ui'>create_ui</span>
+    <span class='id identifier rubyid_job_summary'>job_summary</span> <span class='op'>=</span> <span class='const'>Qt</span><span class='op'>::</span><span class='const'>Widget</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+    <span class='id identifier rubyid_job_summary_layout'>job_summary_layout</span> <span class='op'>=</span> <span class='const'>Qt</span><span class='op'>::</span><span class='const'>VBoxLayout</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_job_summary'>job_summary</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_job_summary_layout'>job_summary_layout</span><span class='period'>.</span><span class='id identifier rubyid_add_layout'>add_layout</span><span class='lparen'>(</span><span class='ivar'>@new_job_layout</span>  <span class='op'>=</span> <span class='id identifier rubyid_create_ui_new_job'>create_ui_new_job</span><span class='rparen'>)</span>
+
+    <span class='ivar'>@connection_state</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="GlobalStateLabel.html" title="Syskit::GUI::GlobalStateLabel (class)">GlobalStateLabel</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="GlobalStateLabel.html#initialize-instance_method" title="Syskit::GUI::GlobalStateLabel#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='label'>name:</span> <span class='id identifier rubyid_remote_name'>remote_name</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_on_progress'>on_progress</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_message'>message</span><span class='op'>|</span>
+        <span class='id identifier rubyid_state'>state</span> <span class='op'>=</span> <span class='id identifier rubyid_connection_state'>connection_state</span><span class='period'>.</span><span class='id identifier rubyid_current_state'>current_state</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span>
+        <span class='id identifier rubyid_connection_state'>connection_state</span><span class='period'>.</span><span class='id identifier rubyid_update_text'>update_text</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>%s - %s</span><span class='tstring_end'>&quot;</span></span> <span class='op'>%</span> <span class='lbracket'>[</span><span class='id identifier rubyid_state'>state</span><span class='comma'>,</span> <span class='id identifier rubyid_message'>message</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_job_summary_layout'>job_summary_layout</span><span class='period'>.</span><span class='id identifier rubyid_add_widget'>add_widget</span><span class='lparen'>(</span><span class='id identifier rubyid_connection_state'>connection_state</span><span class='comma'>,</span> <span class='int'>0</span><span class='rparen'>)</span>
+
+    <span class='ivar'>@clear_button</span> <span class='op'>=</span> <span class='const'>Qt</span><span class='op'>::</span><span class='const'>PushButton</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Clear Finished Jobs</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_job_summary_layout'>job_summary_layout</span><span class='period'>.</span><span class='id identifier rubyid_add_widget'>add_widget</span><span class='lparen'>(</span><span class='ivar'>@clear_button</span><span class='rparen'>)</span>
+    <span class='ivar'>@clear_button</span><span class='period'>.</span><span class='id identifier rubyid_connect'>connect</span><span class='lparen'>(</span><span class='const'>SIGNAL</span><span class='lparen'>(</span><span class='symbol'>:clicked</span><span class='rparen'>)</span><span class='rparen'>)</span> <span class='kw'>do</span>
+        <span class='ivar'>@job_status_list</span><span class='period'>.</span><span class='id identifier rubyid_clear_widgets'>clear_widgets</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_w'>w</span><span class='op'>|</span>
+            <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_w'>w</span><span class='period'>.</span><span class='id identifier rubyid_job'>job</span><span class='period'>.</span><span class='id identifier rubyid_active?'>active?</span>
+                <span class='id identifier rubyid_w'>w</span><span class='period'>.</span><span class='id identifier rubyid_job'>job</span><span class='period'>.</span><span class='id identifier rubyid_stop'>stop</span>
+                <span class='kw'>true</span>
+            <span class='kw'>end</span>
+        <span class='kw'>end</span>
+    <span class='kw'>end</span>
+
+    <span class='ivar'>@batch_manager</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="BatchManager.html" title="Syskit::GUI::BatchManager (class)">BatchManager</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="BatchManager.html#initialize-instance_method" title="Syskit::GUI::BatchManager#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='ivar'>@syskit</span><span class='comma'>,</span> <span class='kw'>self</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_job_summary_layout'>job_summary_layout</span><span class='period'>.</span><span class='id identifier rubyid_add_widget'>add_widget</span><span class='lparen'>(</span><span class='ivar'>@batch_manager</span><span class='rparen'>)</span>
+    <span class='ivar'>@batch_manager</span><span class='period'>.</span><span class='id identifier rubyid_connect'>connect</span><span class='lparen'>(</span><span class='const'>SIGNAL</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>active(bool)</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_active'>active</span><span class='op'>|</span>
+        <span class='kw'>if</span> <span class='id identifier rubyid_active'>active</span> <span class='kw'>then</span> <span class='ivar'>@batch_manager</span><span class='period'>.</span><span class='id identifier rubyid_show'>show</span>
+        <span class='kw'>else</span> <span class='ivar'>@batch_manager</span><span class='period'>.</span><span class='id identifier rubyid_hide'>hide</span>
+        <span class='kw'>end</span>
+    <span class='kw'>end</span>
+    <span class='ivar'>@batch_manager</span><span class='period'>.</span><span class='id identifier rubyid_hide'>hide</span>
+    <span class='id identifier rubyid_connection_state'>connection_state</span><span class='period'>.</span><span class='id identifier rubyid_connect'>connect</span><span class='lparen'>(</span><span class='const'>SIGNAL</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>clicked(QPoint)</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='rparen'>)</span> <span class='kw'>do</span>
+        <span class='id identifier rubyid_deselect_job'>deselect_job</span>
+    <span class='kw'>end</span>
+
+    <span class='ivar'>@job_status_list</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="WidgetList.html" title="Syskit::GUI::WidgetList (class)">WidgetList</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="WidgetList.html#initialize-instance_method" title="Syskit::GUI::WidgetList#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='kw'>self</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_job_status_scroll'>job_status_scroll</span> <span class='op'>=</span> <span class='const'>Qt</span><span class='op'>::</span><span class='const'>ScrollArea</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+    <span class='id identifier rubyid_job_status_scroll'>job_status_scroll</span><span class='period'>.</span><span class='id identifier rubyid_widget'>widget</span> <span class='op'>=</span> <span class='ivar'>@job_status_list</span>
+    <span class='id identifier rubyid_job_summary_layout'>job_summary_layout</span><span class='period'>.</span><span class='id identifier rubyid_add_widget'>add_widget</span><span class='lparen'>(</span><span class='id identifier rubyid_job_status_scroll'>job_status_scroll</span><span class='comma'>,</span> <span class='int'>1</span><span class='rparen'>)</span>
+    <span class='ivar'>@main_layout</span> <span class='op'>=</span> <span class='const'>Qt</span><span class='op'>::</span><span class='const'>VBoxLayout</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='kw'>self</span><span class='rparen'>)</span>
+
+    <span class='ivar'>@ui_event_widgets</span> <span class='op'>=</span> <span class='id identifier rubyid_create_ui_event_widgets'>create_ui_event_widgets</span>
+    <span class='ivar'>@ui_event_widgets</span><span class='period'>.</span><span class='id identifier rubyid_each_value'>each_value</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_w'>w</span><span class='op'>|</span>
+        <span class='ivar'>@main_layout</span><span class='period'>.</span><span class='id identifier rubyid_add_widget'>add_widget</span><span class='lparen'>(</span><span class='id identifier rubyid_w'>w</span><span class='period'>.</span><span class='id identifier rubyid_widget'>widget</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+
+    <span class='id identifier rubyid_splitter'>splitter</span> <span class='op'>=</span> <span class='const'>Qt</span><span class='op'>::</span><span class='const'>Splitter</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+    <span class='id identifier rubyid_splitter'>splitter</span><span class='period'>.</span><span class='id identifier rubyid_add_widget'>add_widget</span> <span class='id identifier rubyid_job_summary'>job_summary</span>
+    <span class='id identifier rubyid_splitter'>splitter</span><span class='period'>.</span><span class='id identifier rubyid_add_widget'>add_widget</span><span class='lparen'>(</span><span class='ivar'>@job_expanded_status</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="ExpandedJobStatus.html" title="Syskit::GUI::ExpandedJobStatus (class)">ExpandedJobStatus</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="ExpandedJobStatus.html#initialize-instance_method" title="Syskit::GUI::ExpandedJobStatus#initialize (method)">new</a></span></span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_connect'>connect</span><span class='lparen'>(</span><span class='ivar'>@job_expanded_status</span><span class='comma'>,</span> <span class='const'>SIGNAL</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>fileOpenClicked(const QUrl&amp;)</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='comma'>,</span>
+        <span class='kw'>self</span><span class='comma'>,</span> <span class='const'>SIGNAL</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>fileOpenClicked(const QUrl&amp;)</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='rparen'>)</span>
+
+    <span class='id identifier rubyid_task_inspector_widget'>task_inspector_widget</span> <span class='op'>=</span> <span class='const'>Qt</span><span class='op'>::</span><span class='const'>Widget</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+    <span class='id identifier rubyid_task_inspector_layout'>task_inspector_layout</span> <span class='op'>=</span> <span class='const'>Qt</span><span class='op'>::</span><span class='const'>VBoxLayout</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_task_inspector_widget'>task_inspector_widget</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_task_inspector_layout'>task_inspector_layout</span><span class='period'>.</span><span class='id identifier rubyid_add_widget'>add_widget</span><span class='lparen'>(</span>
+        <span class='ivar'>@ui_hide_loggers</span> <span class='op'>=</span> <span class='const'>Qt</span><span class='op'>::</span><span class='const'>CheckBox</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Show loggers</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_task_inspector_layout'>task_inspector_layout</span><span class='period'>.</span><span class='id identifier rubyid_add_widget'>add_widget</span><span class='lparen'>(</span>
+        <span class='ivar'>@ui_task_inspector</span> <span class='op'>=</span> <span class='const'>Vizkit</span><span class='period'>.</span><span class='id identifier rubyid_default_loader'>default_loader</span><span class='period'>.</span><span class='const'>TaskInspector</span><span class='rparen'>)</span>
+    <span class='ivar'>@ui_hide_loggers</span><span class='period'>.</span><span class='id identifier rubyid_checked'>checked</span> <span class='op'>=</span> <span class='kw'>false</span>
+    <span class='ivar'>@ui_hide_loggers</span><span class='period'>.</span><span class='id identifier rubyid_connect'>connect</span> <span class='const'>SIGNAL</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>toggled(bool)</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_checked'>checked</span><span class='op'>|</span>
+        <span class='ivar'>@known_loggers</span> <span class='op'>=</span> <span class='kw'>nil</span>
+        <span class='id identifier rubyid_update_tasks_info'>update_tasks_info</span>
+    <span class='kw'>end</span>
+
+    <span class='ivar'>@ui_logging_configuration</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="LoggingConfiguration.html" title="Syskit::GUI::LoggingConfiguration (class)">LoggingConfiguration</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="LoggingConfiguration.html#initialize-instance_method" title="Syskit::GUI::LoggingConfiguration#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_syskit'><span class='object_link'><a href="../../top-level-namespace.html#syskit-instance_method" title="#syskit (method)">syskit</a></span></span><span class='rparen'>)</span>
+
+    <span class='id identifier rubyid_management_tab_widget'>management_tab_widget</span> <span class='op'>=</span> <span class='const'>Qt</span><span class='op'>::</span><span class='const'>TabWidget</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='kw'>self</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_management_tab_widget'>management_tab_widget</span><span class='period'>.</span><span class='id identifier rubyid_addTab'>addTab</span><span class='lparen'>(</span><span class='id identifier rubyid_task_inspector_widget'>task_inspector_widget</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Tasks</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_management_tab_widget'>management_tab_widget</span><span class='period'>.</span><span class='id identifier rubyid_addTab'>addTab</span><span class='lparen'>(</span><span class='id identifier rubyid_ui_logging_configuration'>ui_logging_configuration</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Logging</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+
+    <span class='id identifier rubyid_splitter'>splitter</span><span class='period'>.</span><span class='id identifier rubyid_add_widget'>add_widget</span><span class='lparen'>(</span><span class='id identifier rubyid_management_tab_widget'>management_tab_widget</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_job_expanded_status'>job_expanded_status</span><span class='period'>.</span><span class='id identifier rubyid_set_size_policy'>set_size_policy</span><span class='lparen'>(</span><span class='const'>Qt</span><span class='op'>::</span><span class='const'>SizePolicy</span><span class='op'>::</span><span class='const'>MinimumExpanding</span><span class='comma'>,</span> <span class='const'>Qt</span><span class='op'>::</span><span class='const'>SizePolicy</span><span class='op'>::</span><span class='const'>MinimumExpanding</span><span class='rparen'>)</span>
+    <span class='ivar'>@main_layout</span><span class='period'>.</span><span class='id identifier rubyid_add_widget'>add_widget</span> <span class='id identifier rubyid_splitter'>splitter</span><span class='comma'>,</span> <span class='int'>1</span>
+    <span class='id identifier rubyid_w'>w</span> <span class='op'>=</span> <span class='id identifier rubyid_splitter'>splitter</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span><span class='period'>.</span><span class='id identifier rubyid_width'>width</span>
+    <span class='id identifier rubyid_splitter'>splitter</span><span class='period'>.</span><span class='id identifier rubyid_sizes'>sizes</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='const'>Integer</span><span class='lparen'>(</span><span class='id identifier rubyid_w'>w</span> <span class='op'>*</span> <span class='float'>0.25</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='const'>Integer</span><span class='lparen'>(</span><span class='id identifier rubyid_w'>w</span> <span class='op'>*</span> <span class='float'>0.50</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='const'>Integer</span><span class='lparen'>(</span><span class='id identifier rubyid_w'>w</span> <span class='op'>*</span> <span class='float'>0.25</span><span class='rparen'>)</span><span class='rbracket'>]</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="create_ui_event_button-instance_method">
+  
+    #<strong>create_ui_event_button</strong>(text)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+471
+472
+473
+474
+475</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/gui/runtime_state.rb', line 471</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_create_ui_event_button'>create_ui_event_button</span><span class='lparen'>(</span><span class='id identifier rubyid_text'>text</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_button'>button</span> <span class='op'>=</span> <span class='const'>Qt</span><span class='op'>::</span><span class='const'>PushButton</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_text'>text</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_button'>button</span><span class='period'>.</span><span class='id identifier rubyid_flat'>flat</span> <span class='op'>=</span> <span class='kw'>true</span>
+    <span class='id identifier rubyid_button'>button</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="create_ui_event_frame-instance_method">
+  
+    #<strong>create_ui_event_frame</strong>  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+464
+465
+466
+467
+468
+469</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/gui/runtime_state.rb', line 464</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_create_ui_event_frame'>create_ui_event_frame</span>
+    <span class='id identifier rubyid_frame'>frame</span> <span class='op'>=</span> <span class='const'>Qt</span><span class='op'>::</span><span class='const'>Frame</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='kw'>self</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_frame'>frame</span><span class='period'>.</span><span class='id identifier rubyid_frame_shape'>frame_shape</span> <span class='op'>=</span> <span class='const'>Qt</span><span class='op'>::</span><span class='const'>Frame</span><span class='op'>::</span><span class='const'>StyledPanel</span>
+    <span class='id identifier rubyid_frame'>frame</span><span class='period'>.</span><span class='id identifier rubyid_setStyleSheet'>setStyleSheet</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>QFrame { background-color: rgb(205,235,255); border-radius: 2px; }</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_frame'>frame</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="create_ui_event_orogen_config_changed-instance_method">
+  
+    #<strong>create_ui_event_orogen_config_changed</strong>  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+477
+478
+479
+480
+481
+482
+483
+484
+485
+486
+487
+488
+489
+490
+491
+492</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/gui/runtime_state.rb', line 477</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_create_ui_event_orogen_config_changed'>create_ui_event_orogen_config_changed</span>
+    <span class='id identifier rubyid_syskit_orogen_config_changed'>syskit_orogen_config_changed</span> <span class='op'>=</span> <span class='id identifier rubyid_create_ui_event_frame'>create_ui_event_frame</span>
+    <span class='id identifier rubyid_layout'>layout</span> <span class='op'>=</span> <span class='const'>Qt</span><span class='op'>::</span><span class='const'>HBoxLayout</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_syskit_orogen_config_changed'>syskit_orogen_config_changed</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_layout'>layout</span><span class='period'>.</span><span class='id identifier rubyid_add_widget'>add_widget</span><span class='lparen'>(</span><span class='const'>Qt</span><span class='op'>::</span><span class='const'>Label</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>oroGen configuration files changes on disk</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span> <span class='int'>1</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_layout'>layout</span><span class='period'>.</span><span class='id identifier rubyid_add_widget'>add_widget</span><span class='lparen'>(</span><span class='id identifier rubyid_reload'>reload</span> <span class='op'>=</span> <span class='id identifier rubyid_create_ui_event_button'>create_ui_event_button</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Reload</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_layout'>layout</span><span class='period'>.</span><span class='id identifier rubyid_add_widget'>add_widget</span><span class='lparen'>(</span><span class='id identifier rubyid_close'>close</span>  <span class='op'>=</span> <span class='id identifier rubyid_create_ui_event_button'>create_ui_event_button</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Close</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_reload'>reload</span><span class='period'>.</span><span class='id identifier rubyid_connect'>connect</span><span class='lparen'>(</span><span class='const'>SIGNAL</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>clicked()</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='rparen'>)</span> <span class='kw'>do</span>
+        <span class='ivar'>@syskit_commands</span><span class='period'>.</span><span class='id identifier rubyid_async_reload_config'>async_reload_config</span> <span class='kw'>do</span>
+            <span class='id identifier rubyid_syskit_orogen_config_changed'>syskit_orogen_config_changed</span><span class='period'>.</span><span class='id identifier rubyid_hide'>hide</span>
+        <span class='kw'>end</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_close'>close</span><span class='period'>.</span><span class='id identifier rubyid_connect'>connect</span><span class='lparen'>(</span><span class='const'>SIGNAL</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>clicked()</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='rparen'>)</span> <span class='kw'>do</span>
+        <span class='id identifier rubyid_syskit_orogen_config_changed'>syskit_orogen_config_changed</span><span class='period'>.</span><span class='id identifier rubyid_hide'>hide</span>
+    <span class='kw'>end</span>
+    <span class='const'><span class='object_link'><a href="RuntimeState/EventWidget.html" title="Syskit::GUI::RuntimeState::EventWidget (class)">EventWidget</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="#initialize-instance_method" title="Syskit::GUI::RuntimeState#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>syskit_orogen_config_changed</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_syskit_orogen_config_changed'>syskit_orogen_config_changed</span><span class='comma'>,</span> <span class='id identifier rubyid_lambda'>lambda</span> <span class='lbrace'>{</span> <span class='rbrace'>}</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="create_ui_event_orogen_config_reloaded-instance_method">
+  
+    #<strong>create_ui_event_orogen_config_reloaded</strong>  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+494
+495
+496
+497
+498
+499
+500
+501
+502
+503
+504
+505
+506
+507
+508
+509
+510
+511
+512
+513
+514
+515
+516
+517
+518
+519
+520
+521
+522
+523</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/gui/runtime_state.rb', line 494</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_create_ui_event_orogen_config_reloaded'>create_ui_event_orogen_config_reloaded</span>
+    <span class='id identifier rubyid_syskit_orogen_config_reloaded'>syskit_orogen_config_reloaded</span> <span class='op'>=</span> <span class='id identifier rubyid_create_ui_event_frame'>create_ui_event_frame</span>
+    <span class='id identifier rubyid_layout'>layout</span> <span class='op'>=</span> <span class='const'>Qt</span><span class='op'>::</span><span class='const'>HBoxLayout</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_syskit_orogen_config_reloaded'>syskit_orogen_config_reloaded</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_layout'>layout</span><span class='period'>.</span><span class='id identifier rubyid_add_widget'>add_widget</span><span class='lparen'>(</span><span class='id identifier rubyid_label'>label</span> <span class='op'>=</span> <span class='const'>Qt</span><span class='op'>::</span><span class='const'>Label</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='int'>1</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_layout'>layout</span><span class='period'>.</span><span class='id identifier rubyid_add_widget'>add_widget</span><span class='lparen'>(</span><span class='id identifier rubyid_apply'>apply</span> <span class='op'>=</span> <span class='id identifier rubyid_create_ui_event_button'>create_ui_event_button</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Reconfigure</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_layout'>layout</span><span class='period'>.</span><span class='id identifier rubyid_add_widget'>add_widget</span><span class='lparen'>(</span><span class='id identifier rubyid_close'>close</span> <span class='op'>=</span> <span class='id identifier rubyid_create_ui_event_button'>create_ui_event_button</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Close</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_apply'>apply</span><span class='period'>.</span><span class='id identifier rubyid_connect'>connect</span><span class='lparen'>(</span><span class='const'>SIGNAL</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>clicked()</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='rparen'>)</span> <span class='kw'>do</span>
+        <span class='ivar'>@syskit_commands</span><span class='period'>.</span><span class='id identifier rubyid_async_redeploy'>async_redeploy</span> <span class='kw'>do</span>
+            <span class='id identifier rubyid_syskit_orogen_config_reloaded'>syskit_orogen_config_reloaded</span><span class='period'>.</span><span class='id identifier rubyid_hide'>hide</span>
+        <span class='kw'>end</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_close'>close</span><span class='period'>.</span><span class='id identifier rubyid_connect'>connect</span><span class='lparen'>(</span><span class='const'>SIGNAL</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>clicked()</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='rparen'>)</span> <span class='kw'>do</span>
+        <span class='id identifier rubyid_syskit_orogen_config_reloaded'>syskit_orogen_config_reloaded</span><span class='period'>.</span><span class='id identifier rubyid_hide'>hide</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_syskit_orogen_config_reloaded_hook'>syskit_orogen_config_reloaded_hook</span> <span class='op'>=</span> <span class='id identifier rubyid_lambda'>lambda</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_changed_tasks'>changed_tasks</span><span class='comma'>,</span> <span class='id identifier rubyid_changed_tasks_running'>changed_tasks_running</span><span class='op'>|</span>
+        <span class='kw'>if</span> <span class='id identifier rubyid_changed_tasks'>changed_tasks</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
+            <span class='id identifier rubyid_label'>label</span><span class='period'>.</span><span class='id identifier rubyid_text'>text</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>oroGen configuration updated</span><span class='tstring_end'>&quot;</span></span>
+            <span class='id identifier rubyid_apply'>apply</span><span class='period'>.</span><span class='id identifier rubyid_hide'>hide</span>
+        <span class='kw'>elsif</span> <span class='id identifier rubyid_changed_tasks_running'>changed_tasks_running</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
+            <span class='id identifier rubyid_label'>label</span><span class='period'>.</span><span class='id identifier rubyid_text'>text</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>oroGen configuration modifications applied to </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_changed_tasks'>changed_tasks</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span><span class='embexpr_end'>}</span><span class='tstring_content'> configured but not running tasks</span><span class='tstring_end'>&quot;</span></span>
+            <span class='id identifier rubyid_apply'>apply</span><span class='period'>.</span><span class='id identifier rubyid_hide'>hide</span>
+        <span class='kw'>else</span>
+            <span class='id identifier rubyid_label'>label</span><span class='period'>.</span><span class='id identifier rubyid_text'>text</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>oroGen configuration modifications applied to </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_changed_tasks_running'>changed_tasks_running</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span><span class='embexpr_end'>}</span><span class='tstring_content'> running tasks and </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_changed_tasks'>changed_tasks</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span> <span class='op'>-</span> <span class='id identifier rubyid_changed_tasks_running'>changed_tasks_running</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span><span class='embexpr_end'>}</span><span class='tstring_content'> configured but not running tasks</span><span class='tstring_end'>&quot;</span></span>
+            <span class='id identifier rubyid_apply'>apply</span><span class='period'>.</span><span class='id identifier rubyid_show'>show</span>
+        <span class='kw'>end</span>
+    <span class='kw'>end</span>
+    <span class='const'><span class='object_link'><a href="RuntimeState/EventWidget.html" title="Syskit::GUI::RuntimeState::EventWidget (class)">EventWidget</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="#initialize-instance_method" title="Syskit::GUI::RuntimeState#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>syskit_orogen_config_reloaded</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+                    <span class='id identifier rubyid_syskit_orogen_config_reloaded'>syskit_orogen_config_reloaded</span><span class='comma'>,</span>
+                    <span class='id identifier rubyid_syskit_orogen_config_reloaded_hook'>syskit_orogen_config_reloaded_hook</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="create_ui_event_widgets-instance_method">
+  
+    #<strong>create_ui_event_widgets</strong>  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+525
+526
+527
+528
+529
+530
+531
+532
+533
+534
+535
+536</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/gui/runtime_state.rb', line 525</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_create_ui_event_widgets'>create_ui_event_widgets</span>
+    <span class='id identifier rubyid_widgets'>widgets</span> <span class='op'>=</span> <span class='lbracket'>[</span>
+        <span class='id identifier rubyid_create_ui_event_orogen_config_reloaded'>create_ui_event_orogen_config_reloaded</span><span class='comma'>,</span>
+        <span class='id identifier rubyid_create_ui_event_orogen_config_changed'>create_ui_event_orogen_config_changed</span>
+    <span class='rbracket'>]</span>
+    <span class='id identifier rubyid_ui_event_widgets'>ui_event_widgets</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+    <span class='id identifier rubyid_widgets'>widgets</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_w'>w</span><span class='op'>|</span>
+        <span class='id identifier rubyid_w'>w</span><span class='period'>.</span><span class='id identifier rubyid_hide'>hide</span>
+        <span class='id identifier rubyid_ui_event_widgets'>ui_event_widgets</span><span class='lbracket'>[</span><span class='id identifier rubyid_w'>w</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_w'>w</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_ui_event_widgets'>ui_event_widgets</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="create_ui_new_job-instance_method">
+  
+    #<strong>create_ui_new_job</strong>  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+538
+539
+540
+541
+542
+543
+544
+545
+546
+547
+548
+549
+550
+551</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/gui/runtime_state.rb', line 538</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_create_ui_new_job'>create_ui_new_job</span>
+    <span class='id identifier rubyid_new_job_layout'>new_job_layout</span> <span class='op'>=</span> <span class='const'>Qt</span><span class='op'>::</span><span class='const'>HBoxLayout</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+    <span class='id identifier rubyid_label'>label</span>   <span class='op'>=</span> <span class='const'>Qt</span><span class='op'>::</span><span class='const'>Label</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>New Job</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='kw'>self</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_label'>label</span><span class='period'>.</span><span class='id identifier rubyid_set_size_policy'>set_size_policy</span><span class='lparen'>(</span><span class='const'>Qt</span><span class='op'>::</span><span class='const'>SizePolicy</span><span class='op'>::</span><span class='const'>Minimum</span><span class='comma'>,</span> <span class='const'>Qt</span><span class='op'>::</span><span class='const'>SizePolicy</span><span class='op'>::</span><span class='const'>Minimum</span><span class='rparen'>)</span>
+    <span class='ivar'>@action_combo</span> <span class='op'>=</span> <span class='const'>Qt</span><span class='op'>::</span><span class='const'>ComboBox</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='kw'>self</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_action_combo'>action_combo</span><span class='period'>.</span><span class='id identifier rubyid_enabled'>enabled</span> <span class='op'>=</span> <span class='kw'>false</span>
+    <span class='id identifier rubyid_action_combo'>action_combo</span><span class='period'>.</span><span class='id identifier rubyid_item_delegate'>item_delegate</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="RuntimeState/ActionListDelegate.html" title="Syskit::GUI::RuntimeState::ActionListDelegate (class)">ActionListDelegate</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="#initialize-instance_method" title="Syskit::GUI::RuntimeState#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='kw'>self</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_new_job_layout'>new_job_layout</span><span class='period'>.</span><span class='id identifier rubyid_add_widget'>add_widget</span> <span class='id identifier rubyid_label'>label</span>
+    <span class='id identifier rubyid_new_job_layout'>new_job_layout</span><span class='period'>.</span><span class='id identifier rubyid_add_widget'>add_widget</span> <span class='id identifier rubyid_action_combo'>action_combo</span><span class='comma'>,</span> <span class='int'>1</span>
+    <span class='id identifier rubyid_action_combo'>action_combo</span><span class='period'>.</span><span class='id identifier rubyid_connect'>connect</span><span class='lparen'>(</span><span class='const'>SIGNAL</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>activated(QString)</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_action_name'>action_name</span><span class='op'>|</span>
+        <span class='ivar'>@batch_manager</span><span class='period'>.</span><span class='id identifier rubyid_create_new_job'>create_new_job</span><span class='lparen'>(</span><span class='id identifier rubyid_action_name'>action_name</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_new_job_layout'>new_job_layout</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="deselect_job-instance_method">
+  
+    #<strong>deselect_job</strong>  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+583
+584
+585
+586
+587
+588
+589
+590
+591
+592
+593</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/gui/runtime_state.rb', line 583</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_deselect_job'>deselect_job</span>
+    <span class='ivar'>@current_job</span> <span class='op'>=</span> <span class='kw'>nil</span>
+    <span class='id identifier rubyid_job_expanded_status'>job_expanded_status</span><span class='period'>.</span><span class='id identifier rubyid_deselect'>deselect</span>
+    <span class='id identifier rubyid_all_tasks'>all_tasks</span><span class='period'>.</span><span class='id identifier rubyid_clear'>clear</span>
+    <span class='ivar'>@known_loggers</span> <span class='op'>=</span> <span class='kw'>nil</span>
+    <span class='id identifier rubyid_all_job_info'>all_job_info</span><span class='period'>.</span><span class='id identifier rubyid_clear'>clear</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_syskit_log_stream'>syskit_log_stream</span>
+        <span class='id identifier rubyid_update_tasks_info'>update_tasks_info</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_job_expanded_status'>job_expanded_status</span><span class='period'>.</span><span class='id identifier rubyid_add_tasks_info'>add_tasks_info</span><span class='lparen'>(</span><span class='id identifier rubyid_all_tasks'>all_tasks</span><span class='comma'>,</span> <span class='id identifier rubyid_all_job_info'>all_job_info</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="hide_loggers?-instance_method">
+  
+    #<strong>hide_loggers?</strong>  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+265
+266
+267</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/gui/runtime_state.rb', line 265</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_hide_loggers?'>hide_loggers?</span>
+    <span class='op'>!</span><span class='ivar'>@ui_hide_loggers</span><span class='period'>.</span><span class='id identifier rubyid_checked?'>checked?</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="logger_task?-instance_method">
+  
+    #<strong>logger_task?</strong>(t)  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+306
+307
+308
+309
+310
+311</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/gui/runtime_state.rb', line 306</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_logger_task?'>logger_task?</span><span class='lparen'>(</span><span class='id identifier rubyid_t'>t</span><span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='kw'>if</span> <span class='ivar'>@logger_m</span> <span class='op'>==</span> <span class='kw'>false</span>
+    <span class='ivar'>@logger_m</span> <span class='op'>||=</span> <span class='const'><span class='object_link'><a href="../../Syskit.html" title="Syskit (module)">Syskit</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../TaskContext.html" title="Syskit::TaskContext (class)">TaskContext</a></span></span><span class='period'>.</span>
+        <span class='id identifier rubyid_find_model_from_orogen_name'>find_model_from_orogen_name</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>logger::Logger</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='op'>||</span> <span class='kw'>false</span>
+    <span class='id identifier rubyid_t'>t</span><span class='period'>.</span><span class='id identifier rubyid_kind_of?'>kind_of?</span><span class='lparen'>(</span><span class='ivar'>@logger_m</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="monitor_job-instance_method">
+  
+    #<strong>monitor_job</strong>(job)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+
+<p>Create the UI elements for the given job</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>job</span>
+      
+      
+        <span class='type'>(<tt>Roby::Interface::Async::JobMonitor</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+575
+576
+577
+578
+579
+580
+581</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/gui/runtime_state.rb', line 575</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_monitor_job'>monitor_job</span><span class='lparen'>(</span><span class='id identifier rubyid_job'>job</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_job_status'>job_status</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="JobStatusDisplay.html" title="Syskit::GUI::JobStatusDisplay (class)">JobStatusDisplay</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="JobStatusDisplay.html#initialize-instance_method" title="Syskit::GUI::JobStatusDisplay#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_job'>job</span><span class='comma'>,</span> <span class='ivar'>@batch_manager</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_job_status_list'>job_status_list</span><span class='period'>.</span><span class='id identifier rubyid_add_widget'>add_widget</span> <span class='id identifier rubyid_job_status'>job_status</span>
+    <span class='id identifier rubyid_job_status'>job_status</span><span class='period'>.</span><span class='id identifier rubyid_connect'>connect</span><span class='lparen'>(</span><span class='const'>SIGNAL</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>clicked()</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='rparen'>)</span> <span class='kw'>do</span>
+        <span class='id identifier rubyid_select_job'>select_job</span><span class='lparen'>(</span><span class='id identifier rubyid_job_status'>job_status</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="monitor_syskit_startup-instance_method">
+  
+    #<strong>monitor_syskit_startup</strong>  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/gui/runtime_state.rb', line 212</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_monitor_syskit_startup'>monitor_syskit_startup</span>
+    <span class='kw'>return</span> <span class='kw'>unless</span> <span class='ivar'>@syskit_pid</span>
+
+    <span class='kw'>begin</span>
+        <span class='id identifier rubyid__pid'>_pid</span><span class='comma'>,</span> <span class='id identifier rubyid_has_quit'>has_quit</span> <span class='op'>=</span> <span class='const'>Process</span><span class='period'>.</span><span class='id identifier rubyid_waitpid2'>waitpid2</span><span class='lparen'>(</span>
+            <span class='ivar'>@syskit_pid</span><span class='comma'>,</span> <span class='const'>Process</span><span class='op'>::</span><span class='const'>WNOHANG</span><span class='rparen'>)</span>
+    <span class='kw'>rescue</span> <span class='const'>Errno</span><span class='op'>::</span><span class='const'>ECHILD</span>
+        <span class='id identifier rubyid_has_quit'>has_quit</span> <span class='op'>=</span> <span class='kw'>true</span>
+    <span class='kw'>end</span>
+
+    <span class='kw'>if</span> <span class='id identifier rubyid_has_quit'>has_quit</span>
+        <span class='ivar'>@syskit_pid</span> <span class='op'>=</span> <span class='kw'>nil</span>
+        <span class='id identifier rubyid_run_hook'>run_hook</span> <span class='symbol'>:on_connection_state_changed</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>UNREACHABLE</span><span class='tstring_end'>&#39;</span></span>
+        <span class='ivar'>@starting_monitor</span><span class='period'>.</span><span class='id identifier rubyid_stop'>stop</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="poll_syskit_interface-instance_method">
+  
+    #<strong>poll_syskit_interface</strong>  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+
+<p>Sets up polling on a given syskit interface</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+558
+559
+560
+561
+562
+563
+564
+565
+566
+567</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/gui/runtime_state.rb', line 558</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_poll_syskit_interface'>poll_syskit_interface</span>
+    <span class='id identifier rubyid_syskit'><span class='object_link'><a href="../../top-level-namespace.html#syskit-instance_method" title="#syskit (method)">syskit</a></span></span><span class='period'>.</span><span class='id identifier rubyid_poll'>poll</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_syskit_log_stream'>syskit_log_stream</span>
+        <span class='kw'>if</span> <span class='id identifier rubyid_syskit_log_stream'>syskit_log_stream</span><span class='period'>.</span><span class='id identifier rubyid_poll'>poll</span><span class='lparen'>(</span><span class='label'>max:</span> <span class='float'>0.05</span><span class='rparen'>)</span> <span class='op'>==</span> <span class='const'>Roby</span><span class='op'>::</span><span class='const'>Interface</span><span class='op'>::</span><span class='const'>Async</span><span class='op'>::</span><span class='const'>Log</span><span class='op'>::</span><span class='const'>STATE_PENDING_DATA</span>
+            <span class='id identifier rubyid_syskit_poll'>syskit_poll</span><span class='period'>.</span><span class='id identifier rubyid_interval'>interval</span> <span class='op'>=</span> <span class='int'>0</span>
+        <span class='kw'>else</span>
+            <span class='id identifier rubyid_syskit_poll'>syskit_poll</span><span class='period'>.</span><span class='id identifier rubyid_interval'>interval</span> <span class='op'>=</span> <span class='ivar'>@syskit_poll_period</span>
+        <span class='kw'>end</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="remote_name-instance_method">
+  
+    #<strong>remote_name</strong>  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+269
+270
+271</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/gui/runtime_state.rb', line 269</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_remote_name'>remote_name</span>
+    <span class='id identifier rubyid_syskit'><span class='object_link'><a href="../../top-level-namespace.html#syskit-instance_method" title="#syskit (method)">syskit</a></span></span><span class='period'>.</span><span class='id identifier rubyid_remote_name'>remote_name</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="reset-instance_method">
+  
+    #<strong>reset</strong>  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+230
+231
+232
+233
+234
+235</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/gui/runtime_state.rb', line 230</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_reset'>reset</span>
+    <span class='const'>Orocos</span><span class='period'>.</span><span class='id identifier rubyid_initialize'>initialize</span>
+    <span class='ivar'>@logger_m</span> <span class='op'>=</span> <span class='kw'>nil</span>
+    <span class='id identifier rubyid_orocos_corba_nameservice'>orocos_corba_nameservice</span> <span class='op'>=</span> <span class='const'>Orocos</span><span class='op'>::</span><span class='const'>CORBA</span><span class='op'>::</span><span class='const'>NameService</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_syskit'><span class='object_link'><a href="../../top-level-namespace.html#syskit-instance_method" title="#syskit (method)">syskit</a></span></span><span class='period'>.</span><span class='id identifier rubyid_remote_name'>remote_name</span><span class='rparen'>)</span>
+    <span class='ivar'>@name_service</span> <span class='op'>=</span> <span class='const'>Orocos</span><span class='op'>::</span><span class='const'>Async</span><span class='op'>::</span><span class='const'>NameService</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_orocos_corba_nameservice'>orocos_corba_nameservice</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="select_job-instance_method">
+  
+    #<strong>select_job</strong>(job_status)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+595
+596
+597
+598
+599
+600
+601
+602
+603</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/gui/runtime_state.rb', line 595</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_select_job'>select_job</span><span class='lparen'>(</span><span class='id identifier rubyid_job_status'>job_status</span><span class='rparen'>)</span>
+    <span class='ivar'>@current_job</span> <span class='op'>=</span> <span class='id identifier rubyid_job_status'>job_status</span><span class='period'>.</span><span class='id identifier rubyid_job'>job</span>
+    <span class='id identifier rubyid_all_tasks'>all_tasks</span><span class='period'>.</span><span class='id identifier rubyid_clear'>clear</span>
+    <span class='ivar'>@known_loggers</span> <span class='op'>=</span> <span class='kw'>nil</span>
+    <span class='id identifier rubyid_all_job_info'>all_job_info</span><span class='period'>.</span><span class='id identifier rubyid_clear'>clear</span>
+    <span class='id identifier rubyid_update_tasks_info'>update_tasks_info</span>
+    <span class='id identifier rubyid_job_expanded_status'>job_expanded_status</span><span class='period'>.</span><span class='id identifier rubyid_select'>select</span><span class='lparen'>(</span><span class='id identifier rubyid_job_status'>job_status</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_job_expanded_status'>job_expanded_status</span><span class='period'>.</span><span class='id identifier rubyid_add_tasks_info'>add_tasks_info</span><span class='lparen'>(</span><span class='id identifier rubyid_all_tasks'>all_tasks</span><span class='comma'>,</span> <span class='id identifier rubyid_all_job_info'>all_job_info</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="update_log_server_connection-instance_method">
+  
+    #<strong>update_log_server_connection</strong>(port)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/gui/runtime_state.rb', line 237</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_update_log_server_connection'>update_log_server_connection</span><span class='lparen'>(</span><span class='id identifier rubyid_port'>port</span><span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_syskit_log_stream'>syskit_log_stream</span> <span class='op'>&amp;&amp;</span> <span class='lparen'>(</span><span class='id identifier rubyid_syskit_log_stream'>syskit_log_stream</span><span class='period'>.</span><span class='id identifier rubyid_port'>port</span> <span class='op'>==</span> <span class='id identifier rubyid_port'>port</span><span class='rparen'>)</span>
+        <span class='kw'>return</span>
+    <span class='kw'>elsif</span> <span class='id identifier rubyid_syskit_log_stream'>syskit_log_stream</span>
+        <span class='id identifier rubyid_syskit_log_stream'>syskit_log_stream</span><span class='period'>.</span><span class='id identifier rubyid_close'>close</span>
+    <span class='kw'>end</span>
+    <span class='ivar'>@syskit_log_stream</span> <span class='op'>=</span> <span class='const'>Roby</span><span class='op'>::</span><span class='const'>Interface</span><span class='op'>::</span><span class='const'>Async</span><span class='op'>::</span><span class='const'>Log</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_syskit'><span class='object_link'><a href="../../top-level-namespace.html#syskit-instance_method" title="#syskit (method)">syskit</a></span></span><span class='period'>.</span><span class='id identifier rubyid_remote_name'>remote_name</span><span class='comma'>,</span> <span class='label'>port:</span> <span class='id identifier rubyid_port'>port</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_syskit_log_stream'>syskit_log_stream</span><span class='period'>.</span><span class='id identifier rubyid_on_reachable'>on_reachable</span> <span class='kw'>do</span>
+        <span class='id identifier rubyid_deselect_job'>deselect_job</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_syskit_log_stream'>syskit_log_stream</span><span class='period'>.</span><span class='id identifier rubyid_on_init_progress'>on_init_progress</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_rx'>rx</span><span class='comma'>,</span> <span class='id identifier rubyid_expected'>expected</span><span class='op'>|</span>
+        <span class='id identifier rubyid_run_hook'>run_hook</span> <span class='symbol'>:on_progress</span><span class='comma'>,</span> <span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>loading %02i</span><span class='tstring_end'>&quot;</span></span> <span class='op'>%</span> <span class='lbracket'>[</span><span class='const'>Float</span><span class='lparen'>(</span><span class='id identifier rubyid_rx'>rx</span><span class='rparen'>)</span> <span class='op'>/</span> <span class='id identifier rubyid_expected'>expected</span> <span class='op'>*</span> <span class='int'>100</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_syskit_log_stream'>syskit_log_stream</span><span class='period'>.</span><span class='id identifier rubyid_on_update'>on_update</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_cycle_index'>cycle_index</span><span class='comma'>,</span> <span class='id identifier rubyid_cycle_time'>cycle_time</span><span class='op'>|</span>
+        <span class='kw'>if</span> <span class='id identifier rubyid_syskit_log_stream'>syskit_log_stream</span><span class='period'>.</span><span class='id identifier rubyid_init_done?'>init_done?</span>
+            <span class='id identifier rubyid_time_s'>time_s</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_cycle_time'>cycle_time</span><span class='period'>.</span><span class='id identifier rubyid_strftime'>strftime</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>%H:%M:%S.%3N</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+            <span class='id identifier rubyid_run_hook'>run_hook</span> <span class='symbol'>:on_progress</span><span class='comma'>,</span> <span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>@%i %s</span><span class='tstring_end'>&quot;</span></span> <span class='op'>%</span> <span class='lbracket'>[</span><span class='id identifier rubyid_cycle_index'>cycle_index</span><span class='comma'>,</span> <span class='id identifier rubyid_time_s'>time_s</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+
+            <span class='id identifier rubyid_job_expanded_status'>job_expanded_status</span><span class='period'>.</span><span class='id identifier rubyid_update_time'>update_time</span><span class='lparen'>(</span><span class='id identifier rubyid_cycle_index'>cycle_index</span><span class='comma'>,</span> <span class='id identifier rubyid_cycle_time'>cycle_time</span><span class='rparen'>)</span>
+            <span class='id identifier rubyid_update_tasks_info'>update_tasks_info</span>
+            <span class='id identifier rubyid_job_expanded_status'>job_expanded_status</span><span class='period'>.</span><span class='id identifier rubyid_add_tasks_info'>add_tasks_info</span><span class='lparen'>(</span><span class='id identifier rubyid_all_tasks'>all_tasks</span><span class='comma'>,</span> <span class='id identifier rubyid_all_job_info'>all_job_info</span><span class='rparen'>)</span>
+            <span class='id identifier rubyid_job_expanded_status'>job_expanded_status</span><span class='period'>.</span><span class='id identifier rubyid_scheduler_state'>scheduler_state</span> <span class='op'>=</span> <span class='id identifier rubyid_syskit_log_stream'>syskit_log_stream</span><span class='period'>.</span><span class='id identifier rubyid_scheduler_state'>scheduler_state</span>
+            <span class='id identifier rubyid_job_expanded_status'>job_expanded_status</span><span class='period'>.</span><span class='id identifier rubyid_update_chronicle'>update_chronicle</span>
+        <span class='kw'>end</span>
+        <span class='id identifier rubyid_syskit_log_stream'>syskit_log_stream</span><span class='period'>.</span><span class='id identifier rubyid_clear_integrated'>clear_integrated</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="update_orocos_tasks-instance_method">
+  
+    #<strong>update_orocos_tasks</strong>  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+360
+361
+362
+363
+364
+365
+366
+367
+368
+369
+370
+371
+372
+373</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/gui/runtime_state.rb', line 360</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_update_orocos_tasks'>update_orocos_tasks</span>
+    <span class='id identifier rubyid_candidate_tasks'>candidate_tasks</span> <span class='op'>=</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_all_tasks'>all_tasks</span><span class='period'>.</span>
+        <span class='id identifier rubyid_find_all'>find_all</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_t'>t</span><span class='op'>|</span> <span class='id identifier rubyid_t'>t</span><span class='period'>.</span><span class='id identifier rubyid_kind_of?'>kind_of?</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="../../Syskit.html" title="Syskit (module)">Syskit</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../TaskContext.html" title="Syskit::TaskContext (class)">TaskContext</a></span></span><span class='rparen'>)</span> <span class='rbrace'>}</span>
+    <span class='id identifier rubyid_orocos_tasks'>orocos_tasks</span> <span class='op'>=</span> <span class='id identifier rubyid_candidate_tasks'>candidate_tasks</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_t'>t</span><span class='op'>|</span> <span class='id identifier rubyid_t'>t</span><span class='period'>.</span><span class='id identifier rubyid_arguments'>arguments</span><span class='lbracket'>[</span><span class='symbol'>:orocos_name</span><span class='rbracket'>]</span> <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_compact'>compact</span><span class='period'>.</span><span class='id identifier rubyid_to_set'>to_set</span>
+    <span class='id identifier rubyid_removed'>removed</span> <span class='op'>=</span> <span class='id identifier rubyid_current_orocos_tasks'>current_orocos_tasks</span> <span class='op'>-</span> <span class='id identifier rubyid_orocos_tasks'>orocos_tasks</span>
+    <span class='id identifier rubyid_new'>new</span>     <span class='op'>=</span> <span class='id identifier rubyid_orocos_tasks'>orocos_tasks</span> <span class='op'>-</span> <span class='id identifier rubyid_current_orocos_tasks'>current_orocos_tasks</span>
+    <span class='id identifier rubyid_removed'>removed</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_task_name'>task_name</span><span class='op'>|</span>
+        <span class='id identifier rubyid_ui_task_inspector'>ui_task_inspector</span><span class='period'>.</span><span class='id identifier rubyid_remove_task'>remove_task</span><span class='lparen'>(</span><span class='id identifier rubyid_task_name'>task_name</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_new'>new</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_task_name'>task_name</span><span class='op'>|</span>
+        <span class='id identifier rubyid_ui_task_inspector'>ui_task_inspector</span><span class='period'>.</span><span class='id identifier rubyid_add_task'>add_task</span><span class='lparen'>(</span><span class='id identifier rubyid_name_service'>name_service</span><span class='period'>.</span><span class='id identifier rubyid_proxy'>proxy</span><span class='lparen'>(</span><span class='id identifier rubyid_task_name'>task_name</span><span class='rparen'>)</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+    <span class='ivar'>@current_orocos_tasks</span> <span class='op'>=</span> <span class='id identifier rubyid_orocos_tasks'>orocos_tasks</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="update_tasks_info-instance_method">
+  
+    #<strong>update_tasks_info</strong>  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+313
+314
+315
+316
+317
+318
+319
+320
+321
+322
+323
+324
+325
+326
+327
+328
+329
+330
+331
+332
+333
+334
+335
+336
+337
+338
+339
+340
+341
+342
+343
+344
+345
+346
+347
+348
+349
+350
+351
+352
+353
+354
+355
+356
+357
+358</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/gui/runtime_state.rb', line 313</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_update_tasks_info'>update_tasks_info</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_current_job'>current_job</span>
+        <span class='id identifier rubyid_job_task'>job_task</span> <span class='op'>=</span> <span class='id identifier rubyid_syskit_log_stream'>syskit_log_stream</span><span class='period'>.</span><span class='id identifier rubyid_plan'>plan</span><span class='period'>.</span><span class='id identifier rubyid_find_tasks'>find_tasks</span><span class='lparen'>(</span><span class='const'>Roby</span><span class='op'>::</span><span class='const'>Interface</span><span class='op'>::</span><span class='const'>Job</span><span class='rparen'>)</span><span class='period'>.</span>
+            <span class='id identifier rubyid_with_arguments'>with_arguments</span><span class='lparen'>(</span><span class='label'>job_id:</span> <span class='id identifier rubyid_current_job'>current_job</span><span class='period'>.</span><span class='id identifier rubyid_job_id'>job_id</span><span class='rparen'>)</span><span class='period'>.</span>
+            <span class='id identifier rubyid_first'>first</span>
+        <span class='kw'>return</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_job_task'>job_task</span>
+        <span class='id identifier rubyid_placeholder_task'>placeholder_task</span> <span class='op'>=</span> <span class='id identifier rubyid_job_task'>job_task</span><span class='period'>.</span><span class='id identifier rubyid_planned_task'>planned_task</span>
+        <span class='kw'>return</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_placeholder_task'>placeholder_task</span>
+
+        <span class='id identifier rubyid_dependency'>dependency</span> <span class='op'>=</span> <span class='id identifier rubyid_placeholder_task'>placeholder_task</span><span class='period'>.</span><span class='id identifier rubyid_relation_graph_for'>relation_graph_for</span><span class='lparen'>(</span><span class='const'>Roby</span><span class='op'>::</span><span class='const'>TaskStructure</span><span class='op'>::</span><span class='const'>Dependency</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_tasks'>tasks</span> <span class='op'>=</span> <span class='id identifier rubyid_dependency'>dependency</span><span class='period'>.</span><span class='id identifier rubyid_enum_for'>enum_for</span><span class='lparen'>(</span><span class='symbol'>:depth_first_visit</span><span class='comma'>,</span> <span class='id identifier rubyid_placeholder_task'>placeholder_task</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to_a'>to_a</span>
+        <span class='id identifier rubyid_tasks'>tasks</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_job_task'>job_task</span>
+    <span class='kw'>else</span>
+        <span class='id identifier rubyid_tasks'>tasks</span> <span class='op'>=</span> <span class='id identifier rubyid_syskit_log_stream'>syskit_log_stream</span><span class='period'>.</span><span class='id identifier rubyid_plan'>plan</span><span class='period'>.</span><span class='id identifier rubyid_tasks'>tasks</span>
+    <span class='kw'>end</span>
+
+    <span class='kw'>if</span> <span class='id identifier rubyid_hide_loggers?'>hide_loggers?</span>
+        <span class='kw'>if</span> <span class='op'>!</span><span class='ivar'>@known_loggers</span>
+            <span class='ivar'>@known_loggers</span> <span class='op'>=</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+            <span class='id identifier rubyid_all_tasks'>all_tasks</span><span class='period'>.</span><span class='id identifier rubyid_delete_if'>delete_if</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_t'>t</span><span class='op'>|</span>
+                <span class='ivar'>@known_loggers</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_t'>t</span> <span class='kw'>if</span> <span class='id identifier rubyid_logger_task?'>logger_task?</span><span class='lparen'>(</span><span class='id identifier rubyid_t'>t</span><span class='rparen'>)</span>
+            <span class='kw'>end</span>
+        <span class='kw'>end</span>
+
+        <span class='id identifier rubyid_tasks'>tasks</span> <span class='op'>=</span> <span class='id identifier rubyid_tasks'>tasks</span><span class='period'>.</span><span class='id identifier rubyid_find_all'>find_all</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_t'>t</span><span class='op'>|</span>
+            <span class='kw'>if</span> <span class='id identifier rubyid_all_tasks'>all_tasks</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='id identifier rubyid_t'>t</span><span class='rparen'>)</span>
+                <span class='kw'>true</span>
+            <span class='kw'>elsif</span> <span class='ivar'>@known_loggers</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='id identifier rubyid_t'>t</span><span class='rparen'>)</span>
+                <span class='kw'>false</span>
+            <span class='kw'>elsif</span> <span class='id identifier rubyid_logger_task?'>logger_task?</span><span class='lparen'>(</span><span class='id identifier rubyid_t'>t</span><span class='rparen'>)</span>
+                <span class='ivar'>@known_loggers</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_t'>t</span>
+                <span class='kw'>false</span>
+            <span class='kw'>else</span> <span class='kw'>true</span>
+            <span class='kw'>end</span>
+        <span class='kw'>end</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_all_tasks'>all_tasks</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='id identifier rubyid_tasks'>tasks</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_tasks'>tasks</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_job'>job</span><span class='op'>|</span>
+        <span class='kw'>if</span> <span class='id identifier rubyid_job'>job</span><span class='period'>.</span><span class='id identifier rubyid_kind_of?'>kind_of?</span><span class='lparen'>(</span><span class='const'>Roby</span><span class='op'>::</span><span class='const'>Interface</span><span class='op'>::</span><span class='const'>Job</span><span class='rparen'>)</span>
+            <span class='kw'>if</span> <span class='id identifier rubyid_placeholder_task'>placeholder_task</span> <span class='op'>=</span> <span class='id identifier rubyid_job'>job</span><span class='period'>.</span><span class='id identifier rubyid_planned_task'>planned_task</span>
+                <span class='id identifier rubyid_all_job_info'>all_job_info</span><span class='lbracket'>[</span><span class='id identifier rubyid_placeholder_task'>placeholder_task</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_job'>job</span>
+            <span class='kw'>end</span>
+        <span class='kw'>end</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_update_orocos_tasks'>update_orocos_tasks</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Wed Apr 10 21:54:55 2019 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.19 (ruby-2.5.1).
+</div>
+
+    </div>
+  </body>
+</html>

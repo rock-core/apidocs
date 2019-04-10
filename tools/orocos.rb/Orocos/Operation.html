@@ -1,0 +1,1573 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: Orocos::Operation
+  
+    &mdash; Documentation by YARD 0.9.19
+  
+</title>
+
+  <link rel="stylesheet" href="../css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "Orocos::Operation";
+  relpath = '../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../_index.html">Index (O)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../Orocos.html" title="Orocos (module)">Orocos</a></span></span>
+     &raquo; 
+    <span class="title">Operation</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: Orocos::Operation
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">Orocos::Operation</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/orocos/operations.rb<span class="defines">,<br />
+  ext/rorocos/operations.cc</span>
+</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>Base class for RTTMethod and Command</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+
+
+  <h2>Instance Attribute Summary <small><a href="#" class="summary_toggle">collapse</a></small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#arguments_spec-instance_method" title="#arguments_spec (instance method)">#<strong>arguments_spec</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>An array describing the arguments.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#arguments_types-instance_method" title="#arguments_types (instance method)">#<strong>arguments_types</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>The typelib types for the arguments.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#description-instance_method" title="#description (instance method)">#<strong>description</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>The method description.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#inout_arguments-instance_method" title="#inout_arguments (instance method)">#<strong>inout_arguments</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute inout_arguments.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#name-instance_method" title="#name (instance method)">#<strong>name</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>The method name.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#orocos_arguments_typenames-instance_method" title="#orocos_arguments_typenames (instance method)">#<strong>orocos_arguments_typenames</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>The typelib types for the arguments.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#orocos_return_typenames-instance_method" title="#orocos_return_typenames (instance method)">#<strong>orocos_return_typenames</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>The subclass of Typelib::Type that represents the type of the return value,
+as declared by the Orocos.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#return_spec-instance_method" title="#return_spec (instance method)">#<strong>return_spec</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>The type name of the return value.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#return_types-instance_method" title="#return_types (instance method)">#<strong>return_types</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>The subclass of Typelib::Type that will be manipulated by the Ruby code.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#task-instance_method" title="#task (instance method)">#<strong>task</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>The task this method is part of.</p>
+</div></span>
+  
+</li>
+
+    
+  </ul>
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#callop-instance_method" title="#callop (instance method)">#<strong>callop</strong>(*args)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Calls the method with the provided arguments, waiting for the method to
+finish.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#common_call-instance_method" title="#common_call (instance method)">#<strong>common_call</strong>(args)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Helper method for RTTMethod and Command.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(task, name, return_spec, arguments_spec)  &#x21d2; Operation </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>A new instance of Operation.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#new_argument-instance_method" title="#new_argument (instance method)">#<strong>new_argument</strong>(index)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns a new Typelib value for the Nth argument.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#new_result-instance_method" title="#new_result (instance method)">#<strong>new_result</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns a Typelib value that can store the result of this operation.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#result_value_for-instance_method" title="#result_value_for (instance method)">#<strong>result_value_for</strong>(type)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#sendop-instance_method" title="#sendop (instance method)">#<strong>sendop</strong>(*args)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Requests the operation to be started.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#typelib_types_for-instance_method" title="#typelib_types_for (instance method)">#<strong>typelib_types_for</strong>(types)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Replaces in <code>types</code> the opaque types by the types that should be
+used on the Ruby side.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    #<strong>initialize</strong>(task, name, return_spec, arguments_spec)  &#x21d2; <tt><span class='object_link'><a href="" title="Orocos::Operation (class)">Operation</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns a new instance of Operation</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/orocos/operations.rb', line 81</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_task'>task</span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_return_spec'>return_spec</span><span class='comma'>,</span> <span class='id identifier rubyid_arguments_spec'>arguments_spec</span><span class='rparen'>)</span>
+    <span class='ivar'>@task</span><span class='comma'>,</span> <span class='ivar'>@name</span><span class='comma'>,</span> <span class='ivar'>@return_spec</span><span class='comma'>,</span> <span class='ivar'>@arguments_spec</span> <span class='op'>=</span>
+        <span class='id identifier rubyid_task'>task</span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_return_spec'>return_spec</span><span class='comma'>,</span> <span class='id identifier rubyid_arguments_spec'>arguments_spec</span>
+
+    <span class='ivar'>@orocos_return_typenames</span> <span class='op'>=</span> <span class='id identifier rubyid_return_spec'>return_spec</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_type_name'>type_name</span><span class='op'>|</span>
+        <span class='id identifier rubyid_type_name'>type_name</span> <span class='op'>=</span> <span class='const'>OroGen</span><span class='period'>.</span><span class='id identifier rubyid_unqualified_cxx_type'>unqualified_cxx_type</span><span class='lparen'>(</span><span class='id identifier rubyid_type_name'>type_name</span><span class='rparen'>)</span>
+        <span class='const'><span class='object_link'><a href="../Orocos.html" title="Orocos (module)">Orocos</a></span></span><span class='period'>.</span><span class='id identifier rubyid_normalize_typename'><span class='object_link'><a href="../Orocos.html#normalize_typename-class_method" title="Orocos.normalize_typename (method)">normalize_typename</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_type_name'>type_name</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+    <span class='ivar'>@orocos_arguments_typenames</span> <span class='op'>=</span> <span class='id identifier rubyid_arguments_spec'>arguments_spec</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid__'>_</span><span class='comma'>,</span> <span class='id identifier rubyid__'>_</span><span class='comma'>,</span> <span class='id identifier rubyid_type_name'>type_name</span><span class='op'>|</span>
+        <span class='id identifier rubyid_type_name'>type_name</span> <span class='op'>=</span> <span class='const'>OroGen</span><span class='period'>.</span><span class='id identifier rubyid_unqualified_cxx_type'>unqualified_cxx_type</span><span class='lparen'>(</span><span class='id identifier rubyid_type_name'>type_name</span><span class='rparen'>)</span>
+        <span class='const'><span class='object_link'><a href="../Orocos.html" title="Orocos (module)">Orocos</a></span></span><span class='period'>.</span><span class='id identifier rubyid_normalize_typename'><span class='object_link'><a href="../Orocos.html#normalize_typename-class_method" title="Orocos.normalize_typename (method)">normalize_typename</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_type_name'>type_name</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+    <span class='ivar'>@inout_arguments</span> <span class='op'>=</span> <span class='id identifier rubyid_arguments_spec'>arguments_spec</span><span class='period'>.</span><span class='id identifier rubyid_each_with_index'>each_with_index</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='kw'>do</span> <span class='op'>|</span><span class='lparen'>(</span><span class='id identifier rubyid__'>_</span><span class='comma'>,</span> <span class='id identifier rubyid__'>_</span><span class='comma'>,</span> <span class='id identifier rubyid_type_name'>type_name</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='id identifier rubyid_i'>i</span><span class='op'>|</span>
+        <span class='kw'>if</span> <span class='id identifier rubyid_type_name'>type_name</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>&amp;</span><span class='regexp_end'>/</span></span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_type_name'>type_name</span> <span class='op'>!~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>(^|[^\w])const($|[^\w])</span><span class='regexp_end'>/</span></span>
+            <span class='id identifier rubyid_i'>i</span>
+        <span class='kw'>end</span>
+    <span class='kw'>end</span><span class='period'>.</span><span class='id identifier rubyid_compact'>compact</span>
+
+    <span class='comment'># Remove a void return type
+</span>    <span class='kw'>if</span> <span class='const'><span class='object_link'><a href="../Orocos.html" title="Orocos (module)">Orocos</a></span></span><span class='period'>.</span><span class='id identifier rubyid_registry'><span class='object_link'><a href="../Orocos.html#registry-class_method" title="Orocos.registry (method)">registry</a></span></span><span class='period'>.</span><span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span><span class='id identifier rubyid_orocos_return_typenames'>orocos_return_typenames</span><span class='period'>.</span><span class='id identifier rubyid_first'>first</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_null?'>null?</span>
+        <span class='ivar'>@void_return</span> <span class='op'>=</span> <span class='kw'>true</span>
+        <span class='id identifier rubyid_orocos_return_typenames'>orocos_return_typenames</span><span class='period'>.</span><span class='id identifier rubyid_shift'>shift</span> 
+    <span class='kw'>else</span>
+        <span class='ivar'>@void_return</span> <span class='op'>=</span> <span class='kw'>false</span>
+    <span class='kw'>end</span>
+
+    <span class='ivar'>@return_types</span>    <span class='op'>=</span> <span class='id identifier rubyid_typelib_types_for'>typelib_types_for</span><span class='lparen'>(</span><span class='id identifier rubyid_orocos_return_typenames'>orocos_return_typenames</span><span class='rparen'>)</span>
+    <span class='ivar'>@arguments_types</span> <span class='op'>=</span> <span class='id identifier rubyid_typelib_types_for'>typelib_types_for</span><span class='lparen'>(</span><span class='id identifier rubyid_orocos_arguments_typenames'>orocos_arguments_typenames</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id=""></span>
+      <div class="method_details first">
+  <h3 class="signature first" id="arguments_spec-instance_method">
+  
+    #<strong>arguments_spec</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>An array describing the arguments. Each element is a <code>[name, doc,
+type_name]</code> tuple</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+67
+68
+69</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/orocos/operations.rb', line 67</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_arguments_spec'>arguments_spec</span>
+  <span class='ivar'>@arguments_spec</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="arguments_types-instance_method">
+  
+    #<strong>arguments_types</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>The typelib types for the arguments. This is an array of subclasses of
+Typelib::Type, with each element being the type of the corresponding
+element in #arguments_spec. It describes the types that the Ruby side will
+manipulate</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+77
+78
+79</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/orocos/operations.rb', line 77</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_arguments_types'>arguments_types</span>
+  <span class='ivar'>@arguments_types</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="description-instance_method">
+  
+    #<strong>description</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>The method description</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+57
+58
+59</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/orocos/operations.rb', line 57</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_description'>description</span>
+  <span class='ivar'>@description</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="inout_arguments-instance_method">
+  
+    #<strong>inout_arguments</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute inout_arguments</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+79
+80
+81</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/orocos/operations.rb', line 79</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_inout_arguments'>inout_arguments</span>
+  <span class='ivar'>@inout_arguments</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="name-instance_method">
+  
+    #<strong>name</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>The method name</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+55
+56
+57</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/orocos/operations.rb', line 55</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_name'>name</span>
+  <span class='ivar'>@name</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="orocos_arguments_typenames-instance_method">
+  
+    #<strong>orocos_arguments_typenames</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>The typelib types for the arguments. This is an array of subclasses of
+Typelib::Type, with each element being the type of the corresponding
+element in #arguments_spec. It describes the types that the C++ side
+manipulates (i.e. declared in the Orocos component)</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+72
+73
+74</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/orocos/operations.rb', line 72</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_orocos_arguments_typenames'>orocos_arguments_typenames</span>
+  <span class='ivar'>@orocos_arguments_typenames</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="orocos_return_typenames-instance_method">
+  
+    #<strong>orocos_return_typenames</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>The subclass of Typelib::Type that represents the type of the return value,
+as declared by the Orocos</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+61
+62
+63</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/orocos/operations.rb', line 61</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_orocos_return_typenames'>orocos_return_typenames</span>
+  <span class='ivar'>@orocos_return_typenames</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="return_spec-instance_method">
+  
+    #<strong>return_spec</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>The type name of the return value</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+59
+60
+61</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/orocos/operations.rb', line 59</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_return_spec'>return_spec</span>
+  <span class='ivar'>@return_spec</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="return_types-instance_method">
+  
+    #<strong>return_types</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>The subclass of Typelib::Type that will be manipulated by the Ruby code</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+64
+65
+66</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/orocos/operations.rb', line 64</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_return_types'>return_types</span>
+  <span class='ivar'>@return_types</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="task-instance_method">
+  
+    #<strong>task</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>The task this method is part of</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+52
+53
+54</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/orocos/operations.rb', line 52</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_task'>task</span>
+  <span class='ivar'>@task</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="callop-instance_method">
+  
+    #<strong>callop</strong>(*args)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Calls the method with the provided arguments, waiting for the method to
+finish. It returns the value returned by the remote method.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/orocos/operations.rb', line 174</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_callop'>callop</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_raw_result'>raw_result</span> <span class='op'>=</span> <span class='id identifier rubyid_common_call'>common_call</span><span class='lparen'>(</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_filtered'>filtered</span><span class='op'>|</span>
+        <span class='id identifier rubyid_return_typename'>return_typename</span><span class='comma'>,</span> <span class='id identifier rubyid_return_value'>return_value</span> <span class='op'>=</span> <span class='kw'>nil</span>
+        <span class='kw'>if</span> <span class='op'>!</span><span class='ivar'>@void_return</span>
+            <span class='id identifier rubyid_return_typename'>return_typename</span> <span class='op'>=</span> <span class='id identifier rubyid_orocos_return_typenames'>orocos_return_typenames</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span>
+            <span class='id identifier rubyid_return_value'>return_value</span> <span class='op'>=</span> <span class='id identifier rubyid_result_value_for'>result_value_for</span><span class='lparen'>(</span><span class='id identifier rubyid_return_types'>return_types</span><span class='period'>.</span><span class='id identifier rubyid_first'>first</span><span class='rparen'>)</span>
+        <span class='kw'>end</span>
+
+        <span class='id identifier rubyid_task'>task</span><span class='period'>.</span><span class='id identifier rubyid_do_operation_call'>do_operation_call</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_return_typename'>return_typename</span><span class='comma'>,</span> <span class='id identifier rubyid_return_value'>return_value</span><span class='comma'>,</span>
+                   <span class='id identifier rubyid_orocos_arguments_typenames'>orocos_arguments_typenames</span><span class='comma'>,</span> <span class='id identifier rubyid_filtered'>filtered</span><span class='rparen'>)</span>
+
+        <span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+        <span class='kw'>if</span> <span class='id identifier rubyid_return_value'>return_value</span>
+            <span class='id identifier rubyid_result'>result</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_return_value'>return_value</span>
+        <span class='kw'>end</span>
+        <span class='id identifier rubyid_inout_arguments'>inout_arguments</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_index'>index</span><span class='op'>|</span>
+            <span class='id identifier rubyid_result'>result</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_filtered'>filtered</span><span class='lbracket'>[</span><span class='id identifier rubyid_index'>index</span><span class='rbracket'>]</span>
+        <span class='kw'>end</span>
+        <span class='id identifier rubyid_result'>result</span>
+    <span class='kw'>end</span>
+
+    <span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+    <span class='id identifier rubyid_raw_result'>raw_result</span><span class='period'>.</span><span class='id identifier rubyid_each_with_index'>each_with_index</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_v'>v</span><span class='comma'>,</span> <span class='id identifier rubyid_i'>i</span><span class='op'>|</span>
+        <span class='id identifier rubyid_result'>result</span> <span class='op'>&lt;&lt;</span> <span class='const'>Typelib</span><span class='period'>.</span><span class='id identifier rubyid_to_ruby'>to_ruby</span><span class='lparen'>(</span><span class='id identifier rubyid_v'>v</span><span class='comma'>,</span> <span class='id identifier rubyid_return_types'>return_types</span><span class='lbracket'>[</span><span class='id identifier rubyid_i'>i</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_result'>result</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span> <span class='kw'>then</span> <span class='kw'>nil</span>
+    <span class='kw'>elsif</span> <span class='id identifier rubyid_result'>result</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span> <span class='op'>==</span> <span class='int'>1</span> <span class='kw'>then</span> <span class='id identifier rubyid_result'>result</span><span class='period'>.</span><span class='id identifier rubyid_first'>first</span>
+    <span class='kw'>else</span> <span class='id identifier rubyid_result'>result</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="common_call-instance_method">
+  
+    #<strong>common_call</strong>(args)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Helper method for RTTMethod and Command</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/orocos/operations.rb', line 130</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_common_call'>common_call</span><span class='lparen'>(</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span> <span class='comment'># :nodoc:
+</span>    <span class='kw'>if</span> <span class='id identifier rubyid_args'>args</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span> <span class='op'>!=</span> <span class='id identifier rubyid_arguments_spec'>arguments_spec</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span>
+        <span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>expected </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_arguments_spec'>arguments_spec</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span><span class='embexpr_end'>}</span><span class='tstring_content'> arguments but got </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_args'>args</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>end</span>
+
+    <span class='id identifier rubyid_filtered'>filtered</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+    <span class='id identifier rubyid_args'>args</span><span class='period'>.</span><span class='id identifier rubyid_each_with_index'>each_with_index</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_v'>v</span><span class='comma'>,</span> <span class='id identifier rubyid_i'>i</span><span class='op'>|</span>
+        <span class='id identifier rubyid_filtered'>filtered</span> <span class='op'>&lt;&lt;</span> <span class='const'>Typelib</span><span class='period'>.</span><span class='id identifier rubyid_from_ruby'>from_ruby</span><span class='lparen'>(</span><span class='id identifier rubyid_v'>v</span><span class='comma'>,</span> <span class='id identifier rubyid_arguments_types'>arguments_types</span><span class='lbracket'>[</span><span class='id identifier rubyid_i'>i</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+    <span class='const'><span class='object_link'><a href="CORBA.html" title="Orocos::CORBA (module)">CORBA</a></span></span><span class='period'>.</span><span class='id identifier rubyid_refine_exceptions'><span class='object_link'><a href="CORBA.html#refine_exceptions-class_method" title="Orocos::CORBA.refine_exceptions (method)">refine_exceptions</a></span></span><span class='lparen'>(</span><span class='kw'>self</span><span class='rparen'>)</span> <span class='kw'>do</span>
+        <span class='kw'>yield</span><span class='lparen'>(</span><span class='id identifier rubyid_filtered'>filtered</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="new_argument-instance_method">
+  
+    #<strong>new_argument</strong>(index)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns a new Typelib value for the Nth argument</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+125
+126
+127</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/orocos/operations.rb', line 125</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_new_argument'>new_argument</span><span class='lparen'>(</span><span class='id identifier rubyid_index'>index</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_arguments_types'>arguments_types</span><span class='lbracket'>[</span><span class='id identifier rubyid_index'>index</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="new_result-instance_method">
+  
+    #<strong>new_result</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns a Typelib value that can store the result of this operation</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+153
+154
+155
+156
+157</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/orocos/operations.rb', line 153</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_new_result'>new_result</span>
+    <span class='id identifier rubyid_return_types'>return_types</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_type'>type</span><span class='op'>|</span>
+        <span class='id identifier rubyid_result_value_for'>result_value_for</span><span class='lparen'>(</span><span class='id identifier rubyid_type'>type</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="result_value_for-instance_method">
+  
+    #<strong>result_value_for</strong>(type)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+144
+145
+146
+147
+148
+149
+150</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/orocos/operations.rb', line 144</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_result_value_for'>result_value_for</span><span class='lparen'>(</span><span class='id identifier rubyid_type'>type</span><span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_type'>type</span><span class='period'>.</span><span class='id identifier rubyid_opaque?'>opaque?</span>
+        <span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>I don&#39;t know how to handle </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_type'>type</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>else</span>
+        <span class='id identifier rubyid_type'>type</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="sendop-instance_method">
+  
+    #<strong>sendop</strong>(*args)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Requests the operation to be started. It does not wait for it to finish,
+returning instead an OperationHandle object that can be used to query the
+operation status and return value</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+162
+163
+164
+165
+166
+167
+168
+169
+170</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/orocos/operations.rb', line 162</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_sendop'>sendop</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_common_call'>common_call</span><span class='lparen'>(</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_filtered'>filtered</span><span class='op'>|</span>
+        <span class='id identifier rubyid_handle'>handle</span> <span class='op'>=</span> <span class='id identifier rubyid_task'>task</span><span class='period'>.</span><span class='id identifier rubyid_do_operation_send'>do_operation_send</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_orocos_arguments_typenames'>orocos_arguments_typenames</span><span class='comma'>,</span> <span class='id identifier rubyid_filtered'>filtered</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_handle'>handle</span><span class='period'>.</span><span class='id identifier rubyid_instance_variable_set'>instance_variable_set</span> <span class='symbol'>:@operation</span><span class='comma'>,</span> <span class='kw'>self</span>
+        <span class='id identifier rubyid_handle'>handle</span><span class='period'>.</span><span class='id identifier rubyid_instance_variable_set'>instance_variable_set</span> <span class='symbol'>:@orocos_return_types</span><span class='comma'>,</span> <span class='ivar'>@orocos_return_typenames</span><span class='period'>.</span><span class='id identifier rubyid_dup'>dup</span>
+        <span class='id identifier rubyid_handle'>handle</span><span class='period'>.</span><span class='id identifier rubyid_instance_variable_set'>instance_variable_set</span> <span class='symbol'>:@return_values</span><span class='comma'>,</span> <span class='id identifier rubyid_new_result'>new_result</span>
+        <span class='id identifier rubyid_handle'>handle</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="typelib_types_for-instance_method">
+  
+    #<strong>typelib_types_for</strong>(types)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Replaces in <code>types</code> the opaque types by the types that should be
+used on the Ruby side</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/orocos/operations.rb', line 113</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_typelib_types_for'>typelib_types_for</span><span class='lparen'>(</span><span class='id identifier rubyid_types'>types</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_types'>types</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_t'>t</span><span class='op'>|</span>
+        <span class='kw'>begin</span>
+            <span class='const'><span class='object_link'><a href="../Orocos.html" title="Orocos (module)">Orocos</a></span></span><span class='period'>.</span><span class='id identifier rubyid_typelib_type_for'><span class='object_link'><a href="../Orocos.html#typelib_type_for-class_method" title="Orocos.typelib_type_for (method)">typelib_type_for</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_t'>t</span><span class='rparen'>)</span>
+        <span class='kw'>rescue</span> <span class='const'>Typelib</span><span class='op'>::</span><span class='const'>NotFound</span>
+            <span class='const'><span class='object_link'><a href="../Orocos.html" title="Orocos (module)">Orocos</a></span></span><span class='period'>.</span><span class='id identifier rubyid_load_typekit_for'><span class='object_link'><a href="../Orocos.html#load_typekit_for-class_method" title="Orocos.load_typekit_for (method)">load_typekit_for</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_t'>t</span><span class='rparen'>)</span>
+            <span class='const'><span class='object_link'><a href="../Orocos.html" title="Orocos (module)">Orocos</a></span></span><span class='period'>.</span><span class='id identifier rubyid_typelib_type_for'><span class='object_link'><a href="../Orocos.html#typelib_type_for-class_method" title="Orocos.typelib_type_for (method)">typelib_type_for</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_t'>t</span><span class='rparen'>)</span>
+        <span class='kw'>end</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Wed Apr 10 22:10:24 2019 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.19 (ruby-2.5.1).
+</div>
+
+    </div>
+  </body>
+</html>

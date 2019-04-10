@@ -1,0 +1,1061 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: Orocos::Async::CORBA::OutputReader
+  
+    &mdash; Documentation by YARD 0.9.19
+  
+</title>
+
+  <link rel="stylesheet" href="../../../css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../../../css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "Orocos::Async::CORBA::OutputReader";
+  relpath = '../../../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../../../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../../../_index.html">Index (O)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../../Orocos.html" title="Orocos (module)">Orocos</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../../Async.html" title="Orocos::Async (module)">Async</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../CORBA.html" title="Orocos::Async::CORBA (module)">CORBA</a></span></span>
+     &raquo; 
+    <span class="title">OutputReader</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: Orocos::Async::CORBA::OutputReader
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName"><span class='object_link'><a href="../ObjectBase.html" title="Orocos::Async::ObjectBase (class)">ObjectBase</a></span></span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next"><span class='object_link'><a href="../ObjectBase.html" title="Orocos::Async::ObjectBase (class)">ObjectBase</a></span></li>
+          
+            <li class="next">Orocos::Async::CORBA::OutputReader</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  <dl>
+      <dt>Extended by:</dt>
+      <dd><span class='object_link'><a href="../ObjectBase/Periodic/ClassMethods.html" title="Orocos::Async::ObjectBase::Periodic::ClassMethods (module)">ObjectBase::Periodic::ClassMethods</a></span>, Utilrb::EventLoop::Forwardable</dd>
+  </dl>
+  
+  
+  
+  <dl>
+      <dt>Includes:</dt>
+      <dd><span class='object_link'><a href="../ObjectBase/Periodic.html" title="Orocos::Async::ObjectBase::Periodic (module)">ObjectBase::Periodic</a></span></dd>
+  </dl>
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/orocos/async/ports.rb</dd>
+  </dl>
+  
+</div>
+
+
+
+
+
+  <h2>Instance Attribute Summary <small><a href="#" class="summary_toggle">collapse</a></small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#period-instance_method" title="#period (instance method)">#<strong>period</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute period.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#policy-instance_method" title="#policy (instance method)">#<strong>policy</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute policy.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#poll_timer-instance_method" title="#poll_timer (instance method)">#<strong>poll_timer</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>The event loop timer that is polling the connection.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#raw_last_sample-instance_method" title="#raw_last_sample (instance method)">#<strong>raw_last_sample</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute raw_last_sample.</p>
+</div></span>
+  
+</li>
+
+    
+  </ul>
+
+
+
+  
+  
+  <h3 class="inherited">Attributes included from <span class='object_link'><a href="../ObjectBase/Periodic/ClassMethods.html" title="Orocos::Async::ObjectBase::Periodic::ClassMethods (module)">ObjectBase::Periodic::ClassMethods</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../ObjectBase/Periodic/ClassMethods.html#default_period-instance_method" title="Orocos::Async::ObjectBase::Periodic::ClassMethods#default_period (method)">#default_period</a></span></p>
+
+  
+  
+  <h3 class="inherited">Attributes inherited from <span class='object_link'><a href="../ObjectBase.html" title="Orocos::Async::ObjectBase (class)">ObjectBase</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../ObjectBase.html#emitting-instance_method" title="Orocos::Async::ObjectBase#emitting (method)">#emitting</a></span>, <span class='object_link'><a href="../ObjectBase.html#event_loop-instance_method" title="Orocos::Async::ObjectBase#event_loop (method)">#event_loop</a></span>, <span class='object_link'><a href="../ObjectBase.html#name-instance_method" title="Orocos::Async::ObjectBase#name (method)">#name</a></span>, <span class='object_link'><a href="../ObjectBase.html#options-instance_method" title="Orocos::Async::ObjectBase#options (method)">#options</a></span>, <span class='object_link'><a href="../ObjectBase.html#pending_adds-instance_method" title="Orocos::Async::ObjectBase#pending_adds (method)">#pending_adds</a></span></p>
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(port, reader, period: default_period)  &#x21d2; OutputReader </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>A new instance of OutputReader.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#last_sample-instance_method" title="#last_sample (instance method)">#<strong>last_sample</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#reachable!-instance_method" title="#reachable! (instance method)">#<strong>reachable!</strong>(reader, options = Hash.new)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#reachable%3F-instance_method" title="#reachable? (instance method)">#<strong>reachable?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#really_add_listener-instance_method" title="#really_add_listener (instance method)">#<strong>really_add_listener</strong>(listener)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#remove_listener-instance_method" title="#remove_listener (instance method)">#<strong>remove_listener</strong>(listener)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#unreachable!-instance_method" title="#unreachable! (instance method)">#<strong>unreachable!</strong>(options = Hash.new)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>TODO keep timer and remote connection in mind.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="../ObjectBase/Periodic.html" title="Orocos::Async::ObjectBase::Periodic (module)">ObjectBase::Periodic</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../ObjectBase/Periodic.html#default_period-instance_method" title="Orocos::Async::ObjectBase::Periodic#default_period (method)">#default_period</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="../ObjectBase.html" title="Orocos::Async::ObjectBase (class)">ObjectBase</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../ObjectBase.html#add_listener-instance_method" title="Orocos::Async::ObjectBase#add_listener (method)">#add_listener</a></span>, <span class='object_link'><a href="../ObjectBase.html#define_event-class_method" title="Orocos::Async::ObjectBase.define_event (method)">define_event</a></span>, <span class='object_link'><a href="../ObjectBase.html#define_events-class_method" title="Orocos::Async::ObjectBase.define_events (method)">define_events</a></span>, <span class='object_link'><a href="../ObjectBase.html#disable_emitting-instance_method" title="Orocos::Async::ObjectBase#disable_emitting (method)">#disable_emitting</a></span>, <span class='object_link'><a href="../ObjectBase.html#event-instance_method" title="Orocos::Async::ObjectBase#event (method)">#event</a></span>, <span class='object_link'><a href="../ObjectBase.html#event_names-class_method" title="Orocos::Async::ObjectBase.event_names (method)">event_names</a></span>, <span class='object_link'><a href="../ObjectBase.html#event_names-instance_method" title="Orocos::Async::ObjectBase#event_names (method)">#event_names</a></span>, <span class='object_link'><a href="../ObjectBase.html#invalidate_delegator!-instance_method" title="Orocos::Async::ObjectBase#invalidate_delegator! (method)">#invalidate_delegator!</a></span>, <span class='object_link'><a href="../ObjectBase.html#listener%3F-instance_method" title="Orocos::Async::ObjectBase#listener? (method)">#listener?</a></span>, <span class='object_link'><a href="../ObjectBase.html#listeners-instance_method" title="Orocos::Async::ObjectBase#listeners (method)">#listeners</a></span>, <span class='object_link'><a href="../ObjectBase.html#number_of_listeners-instance_method" title="Orocos::Async::ObjectBase#number_of_listeners (method)">#number_of_listeners</a></span>, <span class='object_link'><a href="../ObjectBase.html#on_event-instance_method" title="Orocos::Async::ObjectBase#on_event (method)">#on_event</a></span>, <span class='object_link'><a href="../ObjectBase.html#proxy_event-instance_method" title="Orocos::Async::ObjectBase#proxy_event (method)">#proxy_event</a></span>, <span class='object_link'><a href="../ObjectBase.html#remove_all_listeners-instance_method" title="Orocos::Async::ObjectBase#remove_all_listeners (method)">#remove_all_listeners</a></span>, <span class='object_link'><a href="../ObjectBase.html#remove_proxy_event-instance_method" title="Orocos::Async::ObjectBase#remove_proxy_event (method)">#remove_proxy_event</a></span>, <span class='object_link'><a href="../ObjectBase.html#valid_delegator%3F-instance_method" title="Orocos::Async::ObjectBase#valid_delegator? (method)">#valid_delegator?</a></span>, <span class='object_link'><a href="../ObjectBase.html#valid_event%3F-class_method" title="Orocos::Async::ObjectBase.valid_event? (method)">valid_event?</a></span>, <span class='object_link'><a href="../ObjectBase.html#valid_event%3F-instance_method" title="Orocos::Async::ObjectBase#valid_event? (method)">#valid_event?</a></span>, <span class='object_link'><a href="../ObjectBase.html#validate_event-class_method" title="Orocos::Async::ObjectBase.validate_event (method)">validate_event</a></span>, <span class='object_link'><a href="../ObjectBase.html#validate_event-instance_method" title="Orocos::Async::ObjectBase#validate_event (method)">#validate_event</a></span>, <span class='object_link'><a href="../ObjectBase.html#wait-instance_method" title="Orocos::Async::ObjectBase#wait (method)">#wait</a></span></p>
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    #<strong>initialize</strong>(port, reader, period: default_period)  &#x21d2; <tt><span class='object_link'><a href="" title="Orocos::Async::CORBA::OutputReader (class)">OutputReader</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns a new instance of OutputReader</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>port</span>
+      
+      
+        <span class='type'>(<tt>Async::OutputPort</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The Asyn::OutputPort</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>reader</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../OutputReader.html" title="Orocos::OutputReader (class)">Orocos::OutputReader</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The designated reader</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/orocos/async/ports.rb', line 20</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_port'>port</span><span class='comma'>,</span> <span class='id identifier rubyid_reader'>reader</span><span class='comma'>,</span> <span class='label'>period:</span> <span class='id identifier rubyid_default_period'>default_period</span><span class='rparen'>)</span>
+    <span class='kw'>super</span><span class='lparen'>(</span><span class='id identifier rubyid_port'>port</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span><span class='id identifier rubyid_port'>port</span><span class='period'>.</span><span class='id identifier rubyid_event_loop'>event_loop</span><span class='rparen'>)</span>
+    <span class='ivar'>@port</span> <span class='op'>=</span> <span class='id identifier rubyid_port'>port</span>
+    <span class='ivar'>@raw_last_sample</span> <span class='op'>=</span> <span class='kw'>nil</span>
+    <span class='ivar'>@policy</span> <span class='op'>=</span> <span class='id identifier rubyid_reader'>reader</span><span class='period'>.</span><span class='id identifier rubyid_policy'>policy</span>
+    <span class='ivar'>@period</span> <span class='op'>=</span> <span class='id identifier rubyid_period'>period</span>
+
+    <span class='id identifier rubyid_timeout'>timeout</span> <span class='op'>=</span>
+        <span class='kw'>if</span> <span class='id identifier rubyid_reader'>reader</span><span class='period'>.</span><span class='id identifier rubyid_policy'>policy</span><span class='lbracket'>[</span><span class='symbol'>:type</span><span class='rbracket'>]</span> <span class='op'>==</span> <span class='symbol'>:buffer</span>
+            <span class='id identifier rubyid_period'>period</span>
+        <span class='kw'>else</span> <span class='int'>0</span>
+        <span class='kw'>end</span>
+
+    <span class='id identifier rubyid_poll_timer'>poll_timer</span> <span class='op'>=</span> <span class='ivar'>@event_loop</span><span class='period'>.</span><span class='id identifier rubyid_async_every'>async_every</span><span class='lparen'>(</span>
+        <span class='id identifier rubyid_method'>method</span><span class='lparen'>(</span><span class='symbol'>:thread_read</span><span class='rparen'>)</span><span class='comma'>,</span>
+        <span class='const'>Hash</span><span class='lbracket'>[</span><span class='label'>period:</span> <span class='id identifier rubyid_period'>period</span><span class='comma'>,</span>
+             <span class='label'>start:</span> <span class='kw'>false</span><span class='comma'>,</span>
+             <span class='label'>known_errors:</span> <span class='const'><span class='object_link'><a href="../../../Orocos.html" title="Orocos (module)">Orocos</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../../Async.html" title="Orocos::Async (module)">Async</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../../Async.html#KNOWN_ERRORS-constant" title="Orocos::Async::KNOWN_ERRORS (constant)">KNOWN_ERRORS</a></span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+        <span class='id identifier rubyid_timeout'>timeout</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_method'>method</span><span class='lparen'>(</span><span class='symbol'>:thread_read_callback</span><span class='rparen'>)</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_poll_timer'>poll_timer</span><span class='period'>.</span><span class='id identifier rubyid_doc'>doc</span> <span class='op'>=</span> <span class='id identifier rubyid_port'>port</span><span class='period'>.</span><span class='id identifier rubyid_full_name'>full_name</span>
+    <span class='ivar'>@poll_timer</span> <span class='op'>=</span> <span class='id identifier rubyid_poll_timer'>poll_timer</span>
+
+    <span class='comment'># otherwise event reachable will be queued and all 
+</span>    <span class='comment'># listeners will be called twice (one for registering and one because
+</span>    <span class='comment'># of the queued event)
+</span>    <span class='id identifier rubyid_disable_emitting'>disable_emitting</span> <span class='kw'>do</span>
+        <span class='id identifier rubyid_reachable!'>reachable!</span> <span class='id identifier rubyid_reader'>reader</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_proxy_event'>proxy_event</span> <span class='ivar'>@port</span><span class='comma'>,</span><span class='symbol'>:unreachable</span>
+<span class='kw'>rescue</span> <span class='const'><span class='object_link'><a href="../../../Orocos.html" title="Orocos (module)">Orocos</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../../NotFound.html" title="Orocos::NotFound (class)">NotFound</a></span></span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_e'>e</span>
+    <span class='id identifier rubyid_emit_error'>emit_error</span> <span class='id identifier rubyid_e'>e</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id="period=-instance_method"></span>
+      <div class="method_details first">
+  <h3 class="signature first" id="period-instance_method">
+  
+    #<strong>period</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute period</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+11
+12
+13</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/orocos/async/ports.rb', line 11</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_period'>period</span>
+  <span class='ivar'>@period</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="policy-instance_method">
+  
+    #<strong>policy</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute policy</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+8
+9
+10</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/orocos/async/ports.rb', line 8</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_policy'>policy</span>
+  <span class='ivar'>@policy</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="poll_timer-instance_method">
+  
+    #<strong>poll_timer</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>The event loop timer that is polling the connection</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+14
+15
+16</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/orocos/async/ports.rb', line 14</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_poll_timer'>poll_timer</span>
+  <span class='ivar'>@poll_timer</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="raw_last_sample-instance_method">
+  
+    #<strong>raw_last_sample</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute raw_last_sample</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+9
+10
+11</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/orocos/async/ports.rb', line 9</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_raw_last_sample'>raw_last_sample</span>
+  <span class='ivar'>@raw_last_sample</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="last_sample-instance_method">
+  
+    #<strong>last_sample</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+53
+54
+55
+56
+57</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/orocos/async/ports.rb', line 53</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_last_sample'>last_sample</span>
+    <span class='kw'>if</span> <span class='ivar'>@raw_last_sample</span>
+        <span class='const'>Typelib</span><span class='period'>.</span><span class='id identifier rubyid_to_ruby'>to_ruby</span><span class='lparen'>(</span><span class='ivar'>@raw_last_sample</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="reachable!-instance_method">
+  
+    #<strong>reachable!</strong>(reader, options = Hash.new)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+85
+86
+87
+88
+89
+90</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/orocos/async/ports.rb', line 85</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_reachable!'>reachable!</span><span class='lparen'>(</span><span class='id identifier rubyid_reader'>reader</span><span class='comma'>,</span><span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='rparen'>)</span>
+    <span class='kw'>super</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_number_of_listeners'>number_of_listeners</span><span class='lparen'>(</span><span class='symbol'>:data</span><span class='rparen'>)</span> <span class='op'>!=</span> <span class='int'>0</span>
+        <span class='id identifier rubyid_poll_timer'>poll_timer</span><span class='period'>.</span><span class='id identifier rubyid_start'>start</span> <span class='id identifier rubyid_period'>period</span> <span class='kw'>unless</span> <span class='id identifier rubyid_poll_timer'>poll_timer</span><span class='period'>.</span><span class='id identifier rubyid_running?'>running?</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="reachable?-instance_method">
+  
+    #<strong>reachable?</strong>  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+81
+82
+83</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/orocos/async/ports.rb', line 81</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_reachable?'>reachable?</span>
+    <span class='kw'>super</span> <span class='op'>&amp;&amp;</span> <span class='ivar'>@port</span><span class='period'>.</span><span class='id identifier rubyid_reachable?'>reachable?</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="really_add_listener-instance_method">
+  
+    #<strong>really_add_listener</strong>(listener)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/orocos/async/ports.rb', line 97</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_really_add_listener'>really_add_listener</span><span class='lparen'>(</span><span class='id identifier rubyid_listener'>listener</span><span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_listener'>listener</span><span class='period'>.</span><span class='id identifier rubyid_event'>event</span> <span class='op'>==</span> <span class='symbol'>:data</span>
+        <span class='id identifier rubyid_poll_timer'>poll_timer</span><span class='period'>.</span><span class='id identifier rubyid_start'>start</span><span class='lparen'>(</span><span class='id identifier rubyid_period'>period</span><span class='rparen'>)</span> <span class='kw'>unless</span> <span class='id identifier rubyid_poll_timer'>poll_timer</span><span class='period'>.</span><span class='id identifier rubyid_running?'>running?</span>
+        <span class='id identifier rubyid_listener'>listener</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span> <span class='const'>Typelib</span><span class='period'>.</span><span class='id identifier rubyid_to_ruby'>to_ruby</span><span class='lparen'>(</span><span class='ivar'>@raw_last_sample</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='ivar'>@raw_last_sample</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_listener'>listener</span><span class='period'>.</span><span class='id identifier rubyid_use_last_value?'>use_last_value?</span>
+    <span class='kw'>elsif</span> <span class='id identifier rubyid_listener'>listener</span><span class='period'>.</span><span class='id identifier rubyid_event'>event</span> <span class='op'>==</span> <span class='symbol'>:raw_data</span>
+        <span class='id identifier rubyid_poll_timer'>poll_timer</span><span class='period'>.</span><span class='id identifier rubyid_start'>start</span><span class='lparen'>(</span><span class='id identifier rubyid_period'>period</span><span class='rparen'>)</span> <span class='kw'>unless</span> <span class='id identifier rubyid_poll_timer'>poll_timer</span><span class='period'>.</span><span class='id identifier rubyid_running?'>running?</span>
+        <span class='id identifier rubyid_listener'>listener</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span> <span class='ivar'>@raw_last_sample</span> <span class='kw'>if</span> <span class='ivar'>@raw_last_sample</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_listener'>listener</span><span class='period'>.</span><span class='id identifier rubyid_use_last_value?'>use_last_value?</span>
+    <span class='kw'>end</span>
+    <span class='kw'>super</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="remove_listener-instance_method">
+  
+    #<strong>remove_listener</strong>(listener)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+108
+109
+110
+111
+112
+113</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/orocos/async/ports.rb', line 108</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_remove_listener'>remove_listener</span><span class='lparen'>(</span><span class='id identifier rubyid_listener'>listener</span><span class='rparen'>)</span>
+    <span class='kw'>super</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_number_of_listeners'>number_of_listeners</span><span class='lparen'>(</span><span class='symbol'>:data</span><span class='rparen'>)</span> <span class='op'>==</span> <span class='int'>0</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_number_of_listeners'>number_of_listeners</span><span class='lparen'>(</span><span class='symbol'>:raw_data</span><span class='rparen'>)</span> <span class='op'>==</span> <span class='int'>0</span>
+        <span class='id identifier rubyid_poll_timer'>poll_timer</span><span class='period'>.</span><span class='id identifier rubyid_cancel'>cancel</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="unreachable!-instance_method">
+  
+    #<strong>unreachable!</strong>(options = Hash.new)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>TODO keep timer and remote connection in mind</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/orocos/async/ports.rb', line 60</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_unreachable!'>unreachable!</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_poll_timer'>poll_timer</span><span class='period'>.</span><span class='id identifier rubyid_cancel'>cancel</span>
+    <span class='ivar'>@raw_last_sample</span> <span class='op'>=</span> <span class='kw'>nil</span>
+
+    <span class='comment'># ensure that this is always called from the
+</span>    <span class='comment'># event loop thread
+</span>    <span class='ivar'>@event_loop</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span> <span class='kw'>do</span>
+        <span class='id identifier rubyid_old'>old</span> <span class='op'>=</span> <span class='kw'>begin</span>
+                  <span class='ivar'>@delegator_obj</span><span class='period'>.</span><span class='id identifier rubyid_disconnect'>disconnect</span> <span class='kw'>if</span> <span class='id identifier rubyid_valid_delegator?'>valid_delegator?</span>
+              <span class='kw'>rescue</span> <span class='const'><span class='object_link'><a href="../../../Orocos.html" title="Orocos (module)">Orocos</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../../ComError.html" title="Orocos::ComError (class)">ComError</a></span></span><span class='comma'>,</span><span class='const'><span class='object_link'><a href="../../../Orocos.html" title="Orocos (module)">Orocos</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../../NotFound.html" title="Orocos::NotFound (class)">NotFound</a></span></span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_e'>e</span>
+              <span class='kw'>ensure</span>
+                  <span class='kw'>if</span> <span class='id identifier rubyid_valid_delegator?'>valid_delegator?</span>
+                      <span class='id identifier rubyid_event'>event</span> <span class='symbol'>:unreachable</span>
+                      <span class='ivar'>@delegator_obj</span>
+                  <span class='kw'>end</span>
+              <span class='kw'>end</span>
+        <span class='kw'>super</span>
+        <span class='id identifier rubyid_old'>old</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Wed Apr 10 22:10:24 2019 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.19 (ruby-2.5.1).
+</div>
+
+    </div>
+  </body>
+</html>

@@ -1,0 +1,1614 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Module: Syskit::Test::ProfileAssertions
+  
+    &mdash; Documentation by YARD 0.9.19
+  
+</title>
+
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "Syskit::Test::ProfileAssertions";
+  relpath = '../../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../../_index.html">Index (P)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../Syskit.html" title="Syskit (module)">Syskit</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Test.html" title="Syskit::Test (module)">Test</a></span></span>
+     &raquo; 
+    <span class="title">ProfileAssertions</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Module: Syskit::Test::ProfileAssertions
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+
+  
+  
+  
+  
+  <dl>
+      <dt>Includes:</dt>
+      <dd><span class='object_link'><a href="NetworkManipulation.html" title="Syskit::Test::NetworkManipulation (module)">NetworkManipulation</a></span></dd>
+  </dl>
+  
+  
+
+  
+  <dl>
+    <dt>Included in:</dt>
+    <dd><span class='object_link'><a href="ActionInterfaceTest.html" title="Syskit::Test::ActionInterfaceTest (class)">ActionInterfaceTest</a></span>, <span class='object_link'><a href="ActionTest.html" title="Syskit::Test::ActionTest (class)">ActionTest</a></span>, <span class='object_link'><a href="ProfileTest.html" title="Syskit::Test::ProfileTest (class)">ProfileTest</a></span></dd>
+  </dl>
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/syskit/test/profile_assertions.rb</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>Defines assertions for definitions (Syskit::Actions::Profile) or actions
+that are created from these definitions (Roby::Actions::Interface)</p>
+
+<p>It assumes that the test class was extended using ProfileModelAssertions</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><h2>Defined Under Namespace</h2>
+<p class="children">
+  
+    
+  
+    
+      <strong class="classes">Classes:</strong> <span class='object_link'><a href="ProfileAssertions/ProfileAssertionFailed.html" title="Syskit::Test::ProfileAssertions::ProfileAssertionFailed (class)">ProfileAssertionFailed</a></span>
+    
+  
+</p>
+
+
+
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#Actions-instance_method" title="#Actions (instance method)">#<strong>Actions</strong>(arg)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Validates an argument that can be an action, an action collection (e.g. a
+profile) or an array of action, and normalizes it into an array of actions.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#assert_can_configure_together-instance_method" title="#assert_can_configure_together (instance method)">#<strong>assert_can_configure_together</strong>(*actions)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Tests that the given syskit-generated actions can be deployed together and
+that the task contexts #configure method can be called successfully.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#assert_can_deploy-instance_method" title="#assert_can_deploy (instance method)">#<strong>assert_can_deploy</strong>(action_or_profile = subject_syskit_model, exclude: [])  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Tests that the following syskit-generated actions can be deployed, that is
+they result in a valid, non-abstract network whose all components have a
+deployment.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#assert_can_deploy_together-instance_method" title="#assert_can_deploy_together (instance method)">#<strong>assert_can_deploy_together</strong>(*actions)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Tests that the given syskit-generated actions can be deployed together.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#assert_can_instanciate-instance_method" title="#assert_can_instanciate (instance method)">#<strong>assert_can_instanciate</strong>(action_or_profile = subject_syskit_model, exclude: [])  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Tests that the following definition can be successfully instanciated in a
+valid, non-abstract network.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#assert_can_instanciate_together-instance_method" title="#assert_can_instanciate_together (instance method)">#<strong>assert_can_instanciate_together</strong>(*actions)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Tests that the given syskit-generated actions can be instanciated together,
+i.e.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#assert_is_self_contained-instance_method" title="#assert_is_self_contained (instance method)">#<strong>assert_is_self_contained</strong>(action_or_profile = subject_syskit_model, message: &quot;%s is not self contained&quot;, exclude: [], **instanciate_options)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Tests that a definition or all definitions of a profile are self-contained,
+that is that the only variation points in the profile are profile tags.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#AtomicActions-instance_method" title="#AtomicActions (instance method)">#<strong>AtomicActions</strong>(arg, &amp;block)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Like #Actions, but expands coordination models into their consistuent
+actions.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#BulkAssertAtomicActions-instance_method" title="#BulkAssertAtomicActions (instance method)">#<strong>BulkAssertAtomicActions</strong>(arg, exclude: [], &amp;block)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Like <span class='object_link'><a href="#AtomicActions-instance_method" title="Syskit::Test::ProfileAssertions#AtomicActions (method)">#AtomicActions</a></span> but filters out actions that cannot be handled by the
+bulk assertions, and returns them.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#can_configure_together-instance_method" title="#can_configure_together (instance method)">#<strong>can_configure_together</strong>(*actions)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Spec-style call for <span class='object_link'><a href="#assert_can_configure_together-instance_method" title="Syskit::Test::ProfileAssertions#assert_can_configure_together (method)">#assert_can_configure_together</a></span>.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#can_deploy-instance_method" title="#can_deploy (instance method)">#<strong>can_deploy</strong>(action_or_profile = subject_syskit_model)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Spec-style call for <span class='object_link'><a href="#assert_can_deploy-instance_method" title="Syskit::Test::ProfileAssertions#assert_can_deploy (method)">#assert_can_deploy</a></span>.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#can_deploy_together-instance_method" title="#can_deploy_together (instance method)">#<strong>can_deploy_together</strong>(*actions)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Spec-style call for <span class='object_link'><a href="#assert_can_deploy_together-instance_method" title="Syskit::Test::ProfileAssertions#assert_can_deploy_together (method)">#assert_can_deploy_together</a></span>.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#can_instanciate-instance_method" title="#can_instanciate (instance method)">#<strong>can_instanciate</strong>(action_or_profile = subject_syskit_model)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Spec-style call for <span class='object_link'><a href="#assert_can_instanciate-instance_method" title="Syskit::Test::ProfileAssertions#assert_can_instanciate (method)">#assert_can_instanciate</a></span>.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#can_instanciate_together-instance_method" title="#can_instanciate_together (instance method)">#<strong>can_instanciate_together</strong>(*actions)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Spec-style call for <span class='object_link'><a href="#assert_can_instanciate_together-instance_method" title="Syskit::Test::ProfileAssertions#assert_can_instanciate_together (method)">#assert_can_instanciate_together</a></span>.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#expand_coordination_models-instance_method" title="#expand_coordination_models (instance method)">#<strong>expand_coordination_models</strong>(action)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Given an action, returns the list of atomic actions it refers to.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#is_self_contained-instance_method" title="#is_self_contained (instance method)">#<strong>is_self_contained</strong>(action_or_profile = subject_syskit_model, options = Hash.new)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Spec-style call for <span class='object_link'><a href="#assert_is_self_contained-instance_method" title="Syskit::Test::ProfileAssertions#assert_is_self_contained (method)">#assert_is_self_contained</a></span>.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="NetworkManipulation.html" title="Syskit::Test::NetworkManipulation (module)">NetworkManipulation</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="NetworkManipulation.html#__syskit_root_components-instance_method" title="Syskit::Test::NetworkManipulation#__syskit_root_components (method)">#__syskit_root_components</a></span>, <span class='object_link'><a href="NetworkManipulation.html#normalize_instanciation_models-instance_method" title="Syskit::Test::NetworkManipulation#normalize_instanciation_models (method)">#normalize_instanciation_models</a></span>, <span class='object_link'><a href="NetworkManipulation.html#resolve_orocos_writer-instance_method" title="Syskit::Test::NetworkManipulation#resolve_orocos_writer (method)">#resolve_orocos_writer</a></span>, <span class='object_link'><a href="NetworkManipulation.html#setup-instance_method" title="Syskit::Test::NetworkManipulation#setup (method)">#setup</a></span>, <span class='object_link'><a href="NetworkManipulation.html#syskit_configure-instance_method" title="Syskit::Test::NetworkManipulation#syskit_configure (method)">#syskit_configure</a></span>, <span class='object_link'><a href="NetworkManipulation.html#syskit_configure_and_start-instance_method" title="Syskit::Test::NetworkManipulation#syskit_configure_and_start (method)">#syskit_configure_and_start</a></span>, <span class='object_link'><a href="NetworkManipulation.html#syskit_default_stub_name-instance_method" title="Syskit::Test::NetworkManipulation#syskit_default_stub_name (method)">#syskit_default_stub_name</a></span>, <span class='object_link'><a href="NetworkManipulation.html#syskit_deploy-instance_method" title="Syskit::Test::NetworkManipulation#syskit_deploy (method)">#syskit_deploy</a></span>, <span class='object_link'><a href="NetworkManipulation.html#syskit_deploy_and_configure-instance_method" title="Syskit::Test::NetworkManipulation#syskit_deploy_and_configure (method)">#syskit_deploy_and_configure</a></span>, <span class='object_link'><a href="NetworkManipulation.html#syskit_deploy_configure_and_start-instance_method" title="Syskit::Test::NetworkManipulation#syskit_deploy_configure_and_start (method)">#syskit_deploy_configure_and_start</a></span>, <span class='object_link'><a href="NetworkManipulation.html#syskit_engine_resolve_handle_plan_export-instance_method" title="Syskit::Test::NetworkManipulation#syskit_engine_resolve_handle_plan_export (method)">#syskit_engine_resolve_handle_plan_export</a></span>, <span class='object_link'><a href="NetworkManipulation.html#syskit_export_to_svg-instance_method" title="Syskit::Test::NetworkManipulation#syskit_export_to_svg (method)">#syskit_export_to_svg</a></span>, <span class='object_link'><a href="NetworkManipulation.html#syskit_generate_network-instance_method" title="Syskit::Test::NetworkManipulation#syskit_generate_network (method)">#syskit_generate_network</a></span>, <span class='object_link'><a href="NetworkManipulation.html#syskit_guard_against_configure-instance_method" title="Syskit::Test::NetworkManipulation#syskit_guard_against_configure (method)">#syskit_guard_against_configure</a></span>, <span class='object_link'><a href="NetworkManipulation.html#syskit_guard_against_start_and_configure-instance_method" title="Syskit::Test::NetworkManipulation#syskit_guard_against_start_and_configure (method)">#syskit_guard_against_start_and_configure</a></span>, <span class='object_link'><a href="NetworkManipulation.html#syskit_prepare_configure-instance_method" title="Syskit::Test::NetworkManipulation#syskit_prepare_configure (method)">#syskit_prepare_configure</a></span>, <span class='object_link'><a href="NetworkManipulation.html#syskit_prepare_start-instance_method" title="Syskit::Test::NetworkManipulation#syskit_prepare_start (method)">#syskit_prepare_start</a></span>, <span class='object_link'><a href="NetworkManipulation.html#syskit_protect_configuration_manager-instance_method" title="Syskit::Test::NetworkManipulation#syskit_protect_configuration_manager (method)">#syskit_protect_configuration_manager</a></span>, <span class='object_link'><a href="NetworkManipulation.html#syskit_start-instance_method" title="Syskit::Test::NetworkManipulation#syskit_start (method)">#syskit_start</a></span>, <span class='object_link'><a href="NetworkManipulation.html#syskit_start_all_execution_agents-instance_method" title="Syskit::Test::NetworkManipulation#syskit_start_all_execution_agents (method)">#syskit_start_all_execution_agents</a></span>, <span class='object_link'><a href="NetworkManipulation.html#syskit_start_execution_agents-instance_method" title="Syskit::Test::NetworkManipulation#syskit_start_execution_agents (method)">#syskit_start_execution_agents</a></span>, <span class='object_link'><a href="NetworkManipulation.html#syskit_stub-instance_method" title="Syskit::Test::NetworkManipulation#syskit_stub (method)">#syskit_stub</a></span>, <span class='object_link'><a href="NetworkManipulation.html#syskit_stub_and_deploy-instance_method" title="Syskit::Test::NetworkManipulation#syskit_stub_and_deploy (method)">#syskit_stub_and_deploy</a></span>, <span class='object_link'><a href="NetworkManipulation.html#syskit_stub_attached_device-instance_method" title="Syskit::Test::NetworkManipulation#syskit_stub_attached_device (method)">#syskit_stub_attached_device</a></span>, <span class='object_link'><a href="NetworkManipulation.html#syskit_stub_com_bus-instance_method" title="Syskit::Test::NetworkManipulation#syskit_stub_com_bus (method)">#syskit_stub_com_bus</a></span>, <span class='object_link'><a href="NetworkManipulation.html#syskit_stub_component-instance_method" title="Syskit::Test::NetworkManipulation#syskit_stub_component (method)">#syskit_stub_component</a></span>, <span class='object_link'><a href="NetworkManipulation.html#syskit_stub_composition_requirements-instance_method" title="Syskit::Test::NetworkManipulation#syskit_stub_composition_requirements (method)">#syskit_stub_composition_requirements</a></span>, <span class='object_link'><a href="NetworkManipulation.html#syskit_stub_conf-instance_method" title="Syskit::Test::NetworkManipulation#syskit_stub_conf (method)">#syskit_stub_conf</a></span>, <span class='object_link'><a href="NetworkManipulation.html#syskit_stub_configured_deployment-instance_method" title="Syskit::Test::NetworkManipulation#syskit_stub_configured_deployment (method)">#syskit_stub_configured_deployment</a></span>, <span class='object_link'><a href="NetworkManipulation.html#syskit_stub_deploy_and_configure-instance_method" title="Syskit::Test::NetworkManipulation#syskit_stub_deploy_and_configure (method)">#syskit_stub_deploy_and_configure</a></span>, <span class='object_link'><a href="NetworkManipulation.html#syskit_stub_deploy_configure_and_start-instance_method" title="Syskit::Test::NetworkManipulation#syskit_stub_deploy_configure_and_start (method)">#syskit_stub_deploy_configure_and_start</a></span>, <span class='object_link'><a href="NetworkManipulation.html#syskit_stub_deployment-instance_method" title="Syskit::Test::NetworkManipulation#syskit_stub_deployment (method)">#syskit_stub_deployment</a></span>, <span class='object_link'><a href="NetworkManipulation.html#syskit_stub_deployment_model-instance_method" title="Syskit::Test::NetworkManipulation#syskit_stub_deployment_model (method)">#syskit_stub_deployment_model</a></span>, <span class='object_link'><a href="NetworkManipulation.html#syskit_stub_device-instance_method" title="Syskit::Test::NetworkManipulation#syskit_stub_device (method)">#syskit_stub_device</a></span>, <span class='object_link'><a href="NetworkManipulation.html#syskit_stub_driver_model_for-instance_method" title="Syskit::Test::NetworkManipulation#syskit_stub_driver_model_for (method)">#syskit_stub_driver_model_for</a></span>, <span class='object_link'><a href="NetworkManipulation.html#syskit_stub_model_id-instance_method" title="Syskit::Test::NetworkManipulation#syskit_stub_model_id (method)">#syskit_stub_model_id</a></span>, <span class='object_link'><a href="NetworkManipulation.html#syskit_stub_network-instance_method" title="Syskit::Test::NetworkManipulation#syskit_stub_network (method)">#syskit_stub_network</a></span>, <span class='object_link'><a href="NetworkManipulation.html#syskit_stub_network_abstract_component-instance_method" title="Syskit::Test::NetworkManipulation#syskit_stub_network_abstract_component (method)">#syskit_stub_network_abstract_component</a></span>, <span class='object_link'><a href="NetworkManipulation.html#syskit_stub_network_deployment-instance_method" title="Syskit::Test::NetworkManipulation#syskit_stub_network_deployment (method)">#syskit_stub_network_deployment</a></span>, <span class='object_link'><a href="NetworkManipulation.html#syskit_stub_placeholder-instance_method" title="Syskit::Test::NetworkManipulation#syskit_stub_placeholder (method)">#syskit_stub_placeholder</a></span>, <span class='object_link'><a href="NetworkManipulation.html#syskit_stub_required_devices-instance_method" title="Syskit::Test::NetworkManipulation#syskit_stub_required_devices (method)">#syskit_stub_required_devices</a></span>, <span class='object_link'><a href="NetworkManipulation.html#syskit_stub_requirements-instance_method" title="Syskit::Test::NetworkManipulation#syskit_stub_requirements (method)">#syskit_stub_requirements</a></span>, <span class='object_link'><a href="NetworkManipulation.html#syskit_stub_resolves_remote_tasks=-instance_method" title="Syskit::Test::NetworkManipulation#syskit_stub_resolves_remote_tasks= (method)">#syskit_stub_resolves_remote_tasks=</a></span>, <span class='object_link'><a href="NetworkManipulation.html#syskit_stub_resolves_remote_tasks%3F-instance_method" title="Syskit::Test::NetworkManipulation#syskit_stub_resolves_remote_tasks? (method)">#syskit_stub_resolves_remote_tasks?</a></span>, <span class='object_link'><a href="NetworkManipulation.html#syskit_stub_task_context_model-instance_method" title="Syskit::Test::NetworkManipulation#syskit_stub_task_context_model (method)">#syskit_stub_task_context_model</a></span>, <span class='object_link'><a href="NetworkManipulation.html#syskit_stub_task_context_requirements-instance_method" title="Syskit::Test::NetworkManipulation#syskit_stub_task_context_requirements (method)">#syskit_stub_task_context_requirements</a></span>, <span class='object_link'><a href="NetworkManipulation.html#syskit_wait_ready-instance_method" title="Syskit::Test::NetworkManipulation#syskit_wait_ready (method)">#syskit_wait_ready</a></span>, <span class='object_link'><a href="NetworkManipulation.html#syskit_write-instance_method" title="Syskit::Test::NetworkManipulation#syskit_write (method)">#syskit_write</a></span>, <span class='object_link'><a href="NetworkManipulation.html#teardown-instance_method" title="Syskit::Test::NetworkManipulation#teardown (method)">#teardown</a></span>, <span class='object_link'><a href="NetworkManipulation.html#use_deployment-instance_method" title="Syskit::Test::NetworkManipulation#use_deployment (method)">#use_deployment</a></span>, <span class='object_link'><a href="NetworkManipulation.html#use_ruby_tasks-instance_method" title="Syskit::Test::NetworkManipulation#use_ruby_tasks (method)">#use_ruby_tasks</a></span>, <span class='object_link'><a href="NetworkManipulation.html#use_unmanaged_task-instance_method" title="Syskit::Test::NetworkManipulation#use_unmanaged_task (method)">#use_unmanaged_task</a></span></p>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="Actions-instance_method">
+  
+    #<strong>Actions</strong>(arg)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Validates an argument that can be an action, an action collection (e.g. a
+profile) or an array of action, and normalizes it into an array of actions</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>ArgumentError</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>if the argument is invalid</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/test/profile_assertions.rb', line 36</span>
+
+<span class='kw'>def</span> <span class='const'>Actions</span><span class='lparen'>(</span><span class='id identifier rubyid_arg'>arg</span><span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_arg'>arg</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='symbol'>:each_action</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_arg'>arg</span><span class='period'>.</span><span class='id identifier rubyid_each_action'>each_action</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:to_action</span><span class='rparen'>)</span>
+    <span class='kw'>elsif</span> <span class='id identifier rubyid_arg'>arg</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='symbol'>:to_action</span><span class='rparen'>)</span>
+        <span class='lbracket'>[</span><span class='id identifier rubyid_arg'>arg</span><span class='period'>.</span><span class='id identifier rubyid_to_action'>to_action</span><span class='rbracket'>]</span>
+    <span class='kw'>elsif</span> <span class='id identifier rubyid_arg'>arg</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='symbol'>:flat_map</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_arg'>arg</span><span class='period'>.</span><span class='id identifier rubyid_flat_map'>flat_map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_a'>a</span><span class='op'>|</span> <span class='const'>Actions</span><span class='lparen'>(</span><span class='id identifier rubyid_a'>a</span><span class='rparen'>)</span> <span class='rbrace'>}</span>
+    <span class='kw'>else</span>
+        <span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>expected an action or a collection of actions, but got </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_arg'>arg</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="assert_can_configure_together-instance_method">
+  
+    #<strong>assert_can_configure_together</strong>(*actions)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Tests that the given syskit-generated actions can be deployed together and
+that the task contexts #configure method can be called successfully</p>
+
+<p>It requires running the actual deployments, even though the components
+themselve never get started</p>
+
+<p>It is stronger (and therefore includes) <span class='object_link'><a href="#assert_can_deploy_together-instance_method" title="Syskit::Test::ProfileAssertions#assert_can_deploy_together (method)">#assert_can_deploy_together</a></span></p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291
+292
+293
+294
+295
+296
+297
+298
+299</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/test/profile_assertions.rb', line 278</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_assert_can_configure_together'>assert_can_configure_together</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_actions'>actions</span><span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_actions'>actions</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
+        <span class='id identifier rubyid_actions'>actions</span> <span class='op'>=</span> <span class='id identifier rubyid_subject_syskit_model'>subject_syskit_model</span>
+    <span class='kw'>end</span>
+    <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_assertions'>assertions</span> <span class='op'>+=</span> <span class='int'>1</span>
+    <span class='id identifier rubyid_roots'>roots</span> <span class='op'>=</span> <span class='id identifier rubyid_assert_can_deploy_together'>assert_can_deploy_together</span><span class='lparen'>(</span><span class='op'>*</span><span class='const'><span class='object_link'><a href="#AtomicActions-instance_method" title="Syskit::Test::ProfileAssertions#AtomicActions (method)">AtomicActions</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_actions'>actions</span><span class='rparen'>)</span><span class='rparen'>)</span>
+    <span class='comment'># assert_can_deploy_together has one of its idiotic return
+</span>    <span class='comment'># interface that returns either a single task if a single action
+</span>    <span class='comment'># was given, or an array otherwise. I&#39;d like to have someone
+</span>    <span class='comment'># to talk me out of this kind of ideas.
+</span>    <span class='id identifier rubyid_tasks'>tasks</span> <span class='op'>=</span> <span class='id identifier rubyid_plan'>plan</span><span class='period'>.</span><span class='id identifier rubyid_compute_useful_tasks'>compute_useful_tasks</span><span class='lparen'>(</span><span class='const'>Array</span><span class='lparen'>(</span><span class='id identifier rubyid_roots'>roots</span><span class='rparen'>)</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_task_contexts'>task_contexts</span> <span class='op'>=</span> <span class='id identifier rubyid_tasks'>tasks</span><span class='period'>.</span><span class='id identifier rubyid_find_all'>find_all</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_t'>t</span><span class='op'>|</span> <span class='id identifier rubyid_t'>t</span><span class='period'>.</span><span class='id identifier rubyid_kind_of?'>kind_of?</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="../../Syskit.html" title="Syskit (module)">Syskit</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../TaskContext.html" title="Syskit::TaskContext (class)">TaskContext</a></span></span><span class='rparen'>)</span> <span class='rbrace'>}</span><span class='period'>.</span>
+        <span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_task_context'>task_context</span><span class='op'>|</span>
+            <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_task_context'>task_context</span><span class='period'>.</span><span class='id identifier rubyid_plan'>plan</span>
+                <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="ProfileAssertions/ProfileAssertionFailed.html" title="Syskit::Test::ProfileAssertions::ProfileAssertionFailed (class)">ProfileAssertionFailed</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="ProfileAssertions/ProfileAssertionFailed.html#initialize-instance_method" title="Syskit::Test::ProfileAssertions::ProfileAssertionFailed#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_actions'>actions</span><span class='comma'>,</span> <span class='kw'>nil</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_task_context'>task_context</span><span class='embexpr_end'>}</span><span class='tstring_content'> got garbage-collected before it got configured</span><span class='tstring_end'>&quot;</span></span>
+            <span class='kw'>end</span>
+        <span class='kw'>end</span>
+    <span class='id identifier rubyid_syskit_configure'><span class='object_link'><a href="NetworkManipulation.html#syskit_configure-instance_method" title="Syskit::Test::NetworkManipulation#syskit_configure (method)">syskit_configure</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_task_contexts'>task_contexts</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_roots'>roots</span>
+<span class='kw'>rescue</span> <span class='const'>Exception</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_e'>e</span>
+    <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="ProfileAssertions/ProfileAssertionFailed.html" title="Syskit::Test::ProfileAssertions::ProfileAssertionFailed (class)">ProfileAssertionFailed</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="ProfileAssertions/ProfileAssertionFailed.html#initialize-instance_method" title="Syskit::Test::ProfileAssertions::ProfileAssertionFailed#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_actions'>actions</span><span class='comma'>,</span> <span class='id identifier rubyid_e'>e</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='id identifier rubyid_e'>e</span><span class='period'>.</span><span class='id identifier rubyid_message'>message</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="assert_can_deploy-instance_method">
+  
+    #<strong>assert_can_deploy</strong>(action_or_profile = subject_syskit_model, exclude: [])  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Tests that the following syskit-generated actions can be deployed, that is
+they result in a valid, non-abstract network whose all components have a
+deployment</p>
+
+<p>If given a profile, it will perform the test on each action of the profile
+taken in isolation. If you want to test whether actions can be deployed at
+the same time, use <span class='object_link'><a href="#assert_can_deploy_together-instance_method" title="Syskit::Test::ProfileAssertions#assert_can_deploy_together (method)">#assert_can_deploy_together</a></span></p>
+
+<p>If called without argument, it tests the spec&#39;s context profile</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/test/profile_assertions.rb', line 220</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_assert_can_deploy'>assert_can_deploy</span><span class='lparen'>(</span><span class='id identifier rubyid_action_or_profile'>action_or_profile</span> <span class='op'>=</span> <span class='id identifier rubyid_subject_syskit_model'>subject_syskit_model</span><span class='comma'>,</span> <span class='label'>exclude:</span> <span class='lbracket'>[</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_actions'>actions</span><span class='comma'>,</span> <span class='id identifier rubyid_skipped_actions'>skipped_actions</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="#BulkAssertAtomicActions-instance_method" title="Syskit::Test::ProfileAssertions#BulkAssertAtomicActions (method)">BulkAssertAtomicActions</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_action_or_profile'>action_or_profile</span><span class='comma'>,</span> <span class='label'>exclude:</span> <span class='id identifier rubyid_exclude'>exclude</span><span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_skipped_actions'>skipped_actions</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
+        <span class='id identifier rubyid_flunk'>flunk</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>could not validate </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_skipped_actions'>skipped_actions</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span><span class='embexpr_end'>}</span><span class='tstring_content'> non-Syskit actions: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_skipped_actions'>skipped_actions</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:name</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_sort'>sort</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>, </span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>, pass them to the &#39;exclude&#39; argument to </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid___method__'>__method__</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>end</span>
+
+    <span class='id identifier rubyid_actions'>actions</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_action'>action</span><span class='op'>|</span>
+        <span class='id identifier rubyid_task'>task</span> <span class='op'>=</span> <span class='id identifier rubyid_assert_can_deploy_together'>assert_can_deploy_together</span><span class='lparen'>(</span><span class='id identifier rubyid_action'>action</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_plan'>plan</span><span class='period'>.</span><span class='id identifier rubyid_unmark_mission_task'>unmark_mission_task</span><span class='lparen'>(</span><span class='id identifier rubyid_task'>task</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_expect_execution'>expect_execution</span><span class='period'>.</span><span class='id identifier rubyid_garbage_collect'>garbage_collect</span><span class='lparen'>(</span><span class='kw'>true</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to_run'>to_run</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="assert_can_deploy_together-instance_method">
+  
+    #<strong>assert_can_deploy_together</strong>(*actions)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Tests that the given syskit-generated actions can be deployed together</p>
+
+<p>It is stronger (and therefore includes) <span class='object_link'><a href="#assert_can_instanciate_together-instance_method" title="Syskit::Test::ProfileAssertions#assert_can_instanciate_together (method)">#assert_can_instanciate_together</a></span></p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/test/profile_assertions.rb', line 247</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_assert_can_deploy_together'>assert_can_deploy_together</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_actions'>actions</span><span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_actions'>actions</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
+        <span class='id identifier rubyid_actions'>actions</span> <span class='op'>=</span> <span class='id identifier rubyid_subject_syskit_model'>subject_syskit_model</span>
+    <span class='kw'>end</span>
+    <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_assertions'>assertions</span> <span class='op'>+=</span> <span class='int'>1</span>
+    <span class='id identifier rubyid_syskit_deploy'><span class='object_link'><a href="NetworkManipulation.html#syskit_deploy-instance_method" title="Syskit::Test::NetworkManipulation#syskit_deploy (method)">syskit_deploy</a></span></span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="#AtomicActions-instance_method" title="Syskit::Test::ProfileAssertions#AtomicActions (method)">AtomicActions</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_actions'>actions</span><span class='rparen'>)</span><span class='comma'>,</span>
+                     <span class='label'>compute_policies:</span> <span class='kw'>true</span><span class='comma'>,</span>
+                     <span class='label'>compute_deployments:</span> <span class='kw'>true</span><span class='rparen'>)</span>
+<span class='kw'>rescue</span> <span class='const'>Exception</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_e'>e</span>
+    <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="ProfileAssertions/ProfileAssertionFailed.html" title="Syskit::Test::ProfileAssertions::ProfileAssertionFailed (class)">ProfileAssertionFailed</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="ProfileAssertions/ProfileAssertionFailed.html#initialize-instance_method" title="Syskit::Test::ProfileAssertions::ProfileAssertionFailed#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_actions'>actions</span><span class='comma'>,</span> <span class='id identifier rubyid_e'>e</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='id identifier rubyid_e'>e</span><span class='period'>.</span><span class='id identifier rubyid_message'>message</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="assert_can_instanciate-instance_method">
+  
+    #<strong>assert_can_instanciate</strong>(action_or_profile = subject_syskit_model, exclude: [])  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Tests that the following definition can be successfully instanciated in a
+valid, non-abstract network.</p>
+
+<p>If given a profile, it will perform the test on each action of the profile
+taken in isolation. If you want to test whether actions can be instanciated
+at the same time, use <span class='object_link'><a href="#assert_can_instanciate_together-instance_method" title="Syskit::Test::ProfileAssertions#assert_can_instanciate_together (method)">#assert_can_instanciate_together</a></span></p>
+
+<p>If called without argument, it tests the spec&#39;s context profile</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/test/profile_assertions.rb', line 143</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_assert_can_instanciate'>assert_can_instanciate</span><span class='lparen'>(</span><span class='id identifier rubyid_action_or_profile'>action_or_profile</span> <span class='op'>=</span> <span class='id identifier rubyid_subject_syskit_model'>subject_syskit_model</span><span class='comma'>,</span> <span class='label'>exclude:</span> <span class='lbracket'>[</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_actions'>actions</span><span class='comma'>,</span> <span class='id identifier rubyid_skipped_actions'>skipped_actions</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="#BulkAssertAtomicActions-instance_method" title="Syskit::Test::ProfileAssertions#BulkAssertAtomicActions (method)">BulkAssertAtomicActions</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_action_or_profile'>action_or_profile</span><span class='comma'>,</span> <span class='label'>exclude:</span> <span class='id identifier rubyid_exclude'>exclude</span><span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_skipped_actions'>skipped_actions</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
+        <span class='id identifier rubyid_flunk'>flunk</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>could not validate </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_skipped_actions'>skipped_actions</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span><span class='embexpr_end'>}</span><span class='tstring_content'> non-Syskit actions: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_skipped_actions'>skipped_actions</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:name</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_sort'>sort</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>, </span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>, pass them to the &#39;exclude&#39; argumet to </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid___method__'>__method__</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>end</span>
+
+    <span class='id identifier rubyid_actions'>actions</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_action'>action</span><span class='op'>|</span>
+        <span class='id identifier rubyid_task'>task</span> <span class='op'>=</span> <span class='id identifier rubyid_assert_can_instanciate_together'>assert_can_instanciate_together</span><span class='lparen'>(</span><span class='id identifier rubyid_action'>action</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_plan'>plan</span><span class='period'>.</span><span class='id identifier rubyid_unmark_mission_task'>unmark_mission_task</span><span class='lparen'>(</span><span class='id identifier rubyid_task'>task</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_expect_execution'>expect_execution</span><span class='period'>.</span><span class='id identifier rubyid_garbage_collect'>garbage_collect</span><span class='lparen'>(</span><span class='kw'>true</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to_run'>to_run</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="assert_can_instanciate_together-instance_method">
+  
+    #<strong>assert_can_instanciate_together</strong>(*actions)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Tests that the given syskit-generated actions can be instanciated together,
+i.e. that the resulting network is valid and non-abstract (does not contain
+abstract tasks or data services)</p>
+
+<p>Note that it passes even though the resulting network cannot be deployed
+(e.g. if some components do not have a corresponding deployment)</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/test/profile_assertions.rb', line 173</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_assert_can_instanciate_together'>assert_can_instanciate_together</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_actions'>actions</span><span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_actions'>actions</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
+        <span class='id identifier rubyid_actions'>actions</span> <span class='op'>=</span> <span class='id identifier rubyid_subject_syskit_model'>subject_syskit_model</span>
+    <span class='kw'>end</span>
+    <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_assertions'>assertions</span> <span class='op'>+=</span> <span class='int'>1</span>
+    <span class='id identifier rubyid_syskit_deploy'><span class='object_link'><a href="NetworkManipulation.html#syskit_deploy-instance_method" title="Syskit::Test::NetworkManipulation#syskit_deploy (method)">syskit_deploy</a></span></span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="#AtomicActions-instance_method" title="Syskit::Test::ProfileAssertions#AtomicActions (method)">AtomicActions</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_actions'>actions</span><span class='rparen'>)</span><span class='comma'>,</span>
+                     <span class='label'>compute_policies:</span> <span class='kw'>false</span><span class='comma'>,</span>
+                     <span class='label'>compute_deployments:</span> <span class='kw'>false</span><span class='rparen'>)</span>
+<span class='kw'>rescue</span> <span class='const'>Exception</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_e'>e</span>
+    <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="ProfileAssertions/ProfileAssertionFailed.html" title="Syskit::Test::ProfileAssertions::ProfileAssertionFailed (class)">ProfileAssertionFailed</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="ProfileAssertions/ProfileAssertionFailed.html#initialize-instance_method" title="Syskit::Test::ProfileAssertions::ProfileAssertionFailed#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_actions'>actions</span><span class='comma'>,</span> <span class='id identifier rubyid_e'>e</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='id identifier rubyid_e'>e</span><span class='period'>.</span><span class='id identifier rubyid_message'>message</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="assert_is_self_contained-instance_method">
+  
+    #<strong>assert_is_self_contained</strong>(action_or_profile = subject_syskit_model, message: &quot;%s is not self contained&quot;, exclude: [], **instanciate_options)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Tests that a definition or all definitions of a profile are self-contained,
+that is that the only variation points in the profile are profile tags.</p>
+
+<p>If given a profile as argument, or no profile at all, will test on all
+definitions of resp. the given profile or the test&#39;s subject</p>
+
+<p>Note that it is a really good idea to maintain this property. No.
+Seriously. Keep it in your tests.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/test/profile_assertions.rb', line 91</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_assert_is_self_contained'>assert_is_self_contained</span><span class='lparen'>(</span><span class='id identifier rubyid_action_or_profile'>action_or_profile</span> <span class='op'>=</span> <span class='id identifier rubyid_subject_syskit_model'>subject_syskit_model</span><span class='comma'>,</span> <span class='label'>message:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>%s is not self contained</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='label'>exclude:</span> <span class='lbracket'>[</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='op'>**</span><span class='id identifier rubyid_instanciate_options'>instanciate_options</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_actions'>actions</span><span class='comma'>,</span> <span class='id identifier rubyid_skipped_actions'>skipped_actions</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="#BulkAssertAtomicActions-instance_method" title="Syskit::Test::ProfileAssertions#BulkAssertAtomicActions (method)">BulkAssertAtomicActions</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_action_or_profile'>action_or_profile</span><span class='comma'>,</span> <span class='label'>exclude:</span> <span class='id identifier rubyid_exclude'>exclude</span><span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_skipped_actions'>skipped_actions</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
+        <span class='id identifier rubyid_flunk'>flunk</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>could not validate </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_skipped_actions'>skipped_actions</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span><span class='embexpr_end'>}</span><span class='tstring_content'> non-Syskit actions: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_skipped_actions'>skipped_actions</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:name</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_sort'>sort</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>, </span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>, pass them to the &#39;exclude&#39; argumet to </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid___method__'>__method__</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>end</span>
+
+    <span class='id identifier rubyid_actions'>actions</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_act'>act</span><span class='op'>|</span>
+        <span class='kw'>begin</span>
+            <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_assertions'>assertions</span> <span class='op'>+=</span> <span class='int'>1</span>
+            <span class='id identifier rubyid_syskit_engine'>syskit_engine</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../Syskit.html" title="Syskit (module)">Syskit</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../NetworkGeneration.html" title="Syskit::NetworkGeneration (module)">NetworkGeneration</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../NetworkGeneration/Engine.html" title="Syskit::NetworkGeneration::Engine (class)">Engine</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../NetworkGeneration/Engine.html#initialize-instance_method" title="Syskit::NetworkGeneration::Engine#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_plan'>plan</span><span class='rparen'>)</span>
+            <span class='id identifier rubyid_task'>task</span> <span class='op'>=</span> <span class='id identifier rubyid_syskit_deploy'><span class='object_link'><a href="NetworkManipulation.html#syskit_deploy-instance_method" title="Syskit::Test::NetworkManipulation#syskit_deploy (method)">syskit_deploy</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_act'>act</span><span class='comma'>,</span> <span class='label'>syskit_engine:</span> <span class='id identifier rubyid_syskit_engine'>syskit_engine</span><span class='comma'>,</span>
+                                 <span class='label'>compute_policies:</span> <span class='kw'>false</span><span class='comma'>,</span> <span class='label'>compute_deployments:</span> <span class='kw'>false</span><span class='comma'>,</span>
+                                 <span class='label'>validate_generated_network:</span> <span class='kw'>false</span><span class='comma'>,</span> <span class='op'>**</span><span class='id identifier rubyid_instanciate_options'>instanciate_options</span><span class='rparen'>)</span>
+            <span class='comment'># Get rid of all the tasks that 
+</span>            <span class='id identifier rubyid_still_abstract'>still_abstract</span> <span class='op'>=</span> <span class='id identifier rubyid_plan'>plan</span><span class='period'>.</span><span class='id identifier rubyid_find_local_tasks'>find_local_tasks</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="../../Syskit.html" title="Syskit (module)">Syskit</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Component.html" title="Syskit::Component (class)">Component</a></span></span><span class='rparen'>)</span><span class='period'>.</span>
+                <span class='id identifier rubyid_abstract'>abstract</span><span class='period'>.</span><span class='id identifier rubyid_to_set'>to_set</span>
+            <span class='id identifier rubyid_still_abstract'>still_abstract</span> <span class='op'>&amp;=</span> <span class='id identifier rubyid_plan'>plan</span><span class='period'>.</span><span class='id identifier rubyid_compute_useful_tasks'>compute_useful_tasks</span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='id identifier rubyid_task'>task</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+            <span class='id identifier rubyid_tags'>tags</span><span class='comma'>,</span> <span class='id identifier rubyid_other'>other</span> <span class='op'>=</span> <span class='id identifier rubyid_still_abstract'>still_abstract</span><span class='period'>.</span><span class='id identifier rubyid_partition'>partition</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_task'>task</span><span class='op'>|</span> <span class='id identifier rubyid_task'>task</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span> <span class='op'>&lt;=</span> <span class='const'><span class='object_link'><a href="#Actions-instance_method" title="Syskit::Test::ProfileAssertions#Actions (method)">Actions</a></span></span><span class='op'>::</span><span class='const'>Profile</span><span class='op'>::</span><span class='const'>Tag</span> <span class='rbrace'>}</span>
+            <span class='id identifier rubyid_tags_from_other'>tags_from_other</span> <span class='op'>=</span> <span class='id identifier rubyid_tags'>tags</span><span class='period'>.</span><span class='id identifier rubyid_find_all'>find_all</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_task'>task</span><span class='op'>|</span> <span class='id identifier rubyid_task'>task</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_profile'>profile</span> <span class='op'>!=</span> <span class='id identifier rubyid_subject_syskit_model'>subject_syskit_model</span> <span class='rbrace'>}</span>
+            <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_other'>other</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
+                <span class='id identifier rubyid_raise'>raise</span> <span class='const'>Roby</span><span class='op'>::</span><span class='const'>Test</span><span class='op'>::</span><span class='const'>Assertion</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="../TaskAllocationFailed.html" title="Syskit::TaskAllocationFailed (class)">TaskAllocationFailed</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../TaskAllocationFailed.html#initialize-instance_method" title="Syskit::TaskAllocationFailed#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_syskit_engine'>syskit_engine</span><span class='comma'>,</span> <span class='id identifier rubyid_other'>other</span><span class='rparen'>)</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='id identifier rubyid_message'>message</span> <span class='op'>%</span> <span class='lbracket'>[</span><span class='id identifier rubyid_act'>act</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='rbracket'>]</span>
+            <span class='kw'>elsif</span> <span class='op'>!</span><span class='id identifier rubyid_tags_from_other'>tags_from_other</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
+                <span class='id identifier rubyid_other_profiles'>other_profiles</span> <span class='op'>=</span> <span class='id identifier rubyid_tags_from_other'>tags_from_other</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_t'>t</span><span class='op'>|</span> <span class='id identifier rubyid_t'>t</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_profile'>profile</span> <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_uniq'>uniq</span>
+                <span class='id identifier rubyid_raise'>raise</span> <span class='const'>Roby</span><span class='op'>::</span><span class='const'>Test</span><span class='op'>::</span><span class='const'>Assertion</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="../TaskAllocationFailed.html" title="Syskit::TaskAllocationFailed (class)">TaskAllocationFailed</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../TaskAllocationFailed.html#initialize-instance_method" title="Syskit::TaskAllocationFailed#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_syskit_engine'>syskit_engine</span><span class='comma'>,</span> <span class='id identifier rubyid_tags'>tags</span><span class='rparen'>)</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_act'>act</span><span class='embexpr_end'>}</span><span class='tstring_content'> contains tags from another profile (found </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_other_profiles'>other_profiles</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:name</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_sort'>sort</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>, </span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>, expected </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_subject_syskit_model'>subject_syskit_model</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+            <span class='kw'>end</span>
+            <span class='id identifier rubyid_plan'>plan</span><span class='period'>.</span><span class='id identifier rubyid_unmark_mission_task'>unmark_mission_task</span><span class='lparen'>(</span><span class='id identifier rubyid_task'>task</span><span class='rparen'>)</span>
+            <span class='id identifier rubyid_expect_execution'>expect_execution</span><span class='period'>.</span><span class='id identifier rubyid_garbage_collect'>garbage_collect</span><span class='lparen'>(</span><span class='kw'>true</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to_run'>to_run</span>
+        <span class='kw'>rescue</span> <span class='const'>Exception</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_e'>e</span>
+            <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="ProfileAssertions/ProfileAssertionFailed.html" title="Syskit::Test::ProfileAssertions::ProfileAssertionFailed (class)">ProfileAssertionFailed</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="ProfileAssertions/ProfileAssertionFailed.html#initialize-instance_method" title="Syskit::Test::ProfileAssertions::ProfileAssertionFailed#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_act'>act</span><span class='comma'>,</span> <span class='id identifier rubyid_e'>e</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='id identifier rubyid_e'>e</span><span class='period'>.</span><span class='id identifier rubyid_message'>message</span>
+        <span class='kw'>end</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="AtomicActions-instance_method">
+  
+    #<strong>AtomicActions</strong>(arg, &amp;block)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Like #Actions, but expands coordination models into their consistuent
+actions</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+50
+51
+52
+53
+54</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/test/profile_assertions.rb', line 50</span>
+
+<span class='kw'>def</span> <span class='const'>AtomicActions</span><span class='lparen'>(</span><span class='id identifier rubyid_arg'>arg</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+    <span class='const'><span class='object_link'><a href="#Actions-instance_method" title="Syskit::Test::ProfileAssertions#Actions (method)">Actions</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_arg'>arg</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_flat_map'>flat_map</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_action'>action</span><span class='op'>|</span>
+        <span class='id identifier rubyid_expand_coordination_models'>expand_coordination_models</span><span class='lparen'>(</span><span class='id identifier rubyid_action'>action</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="BulkAssertAtomicActions-instance_method">
+  
+    #<strong>BulkAssertAtomicActions</strong>(arg, exclude: [], &amp;block)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Like <span class='object_link'><a href="#AtomicActions-instance_method" title="Syskit::Test::ProfileAssertions#AtomicActions (method)">#AtomicActions</a></span> but filters out actions that cannot be handled by the
+bulk assertions, and returns them</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>arg</span>
+      
+      
+        <span class='type'>(<tt>Array</tt>, <tt>Action</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the action that is expanded</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>actions</span>
+      
+      
+        <span class='type'>(<tt>Array&lt;Roby::Actions::Action&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>that should be ignored. Actions are compared on the basis of their model
+(arguments do not count)</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/test/profile_assertions.rb', line 63</span>
+
+<span class='kw'>def</span> <span class='const'>BulkAssertAtomicActions</span><span class='lparen'>(</span><span class='id identifier rubyid_arg'>arg</span><span class='comma'>,</span> <span class='label'>exclude:</span> <span class='lbracket'>[</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_exclude'>exclude</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="#Actions-instance_method" title="Syskit::Test::ProfileAssertions#Actions (method)">Actions</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_exclude'>exclude</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:model</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_skipped_actions'>skipped_actions</span> <span class='op'>=</span> <span class='const'>Array</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+    <span class='id identifier rubyid_actions'>actions</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="#AtomicActions-instance_method" title="Syskit::Test::ProfileAssertions#AtomicActions (method)">AtomicActions</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_arg'>arg</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_find_all'>find_all</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_action'>action</span><span class='op'>|</span>
+        <span class='kw'>if</span> <span class='id identifier rubyid_exclude'>exclude</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='id identifier rubyid_action'>action</span><span class='period'>.</span><span class='id identifier rubyid_model'>model</span><span class='rparen'>)</span>
+            <span class='kw'>false</span>
+        <span class='kw'>elsif</span> <span class='op'>!</span><span class='id identifier rubyid_action'>action</span><span class='period'>.</span><span class='id identifier rubyid_kind_of?'>kind_of?</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="#Actions-instance_method" title="Syskit::Test::ProfileAssertions#Actions (method)">Actions</a></span></span><span class='op'>::</span><span class='const'>Action</span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_action'>action</span><span class='period'>.</span><span class='id identifier rubyid_has_missing_required_arg?'>has_missing_required_arg?</span>
+            <span class='id identifier rubyid_skipped_actions'>skipped_actions</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_action'>action</span>
+            <span class='kw'>false</span>
+        <span class='kw'>else</span>
+            <span class='kw'>true</span>
+        <span class='kw'>end</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_skipped_actions'>skipped_actions</span><span class='period'>.</span><span class='id identifier rubyid_delete_if'>delete_if</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_skipped_action'>skipped_action</span><span class='op'>|</span>
+        <span class='id identifier rubyid_actions'>actions</span><span class='period'>.</span><span class='id identifier rubyid_any?'>any?</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_action'>action</span><span class='op'>|</span> <span class='id identifier rubyid_action'>action</span><span class='period'>.</span><span class='id identifier rubyid_model'>model</span> <span class='op'>==</span> <span class='id identifier rubyid_skipped_action'>skipped_action</span><span class='period'>.</span><span class='id identifier rubyid_model'>model</span> <span class='rbrace'>}</span>
+    <span class='kw'>end</span>
+    <span class='kw'>return</span> <span class='id identifier rubyid_actions'>actions</span><span class='comma'>,</span> <span class='id identifier rubyid_skipped_actions'>skipped_actions</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="can_configure_together-instance_method">
+  
+    #<strong>can_configure_together</strong>(*actions)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Spec-style call for <span class='object_link'><a href="#assert_can_configure_together-instance_method" title="Syskit::Test::ProfileAssertions#assert_can_configure_together (method)">#assert_can_configure_together</a></span></p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+302
+303
+304</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/test/profile_assertions.rb', line 302</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_can_configure_together'>can_configure_together</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_actions'>actions</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_assert_can_configure_together'>assert_can_configure_together</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_actions'>actions</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="can_deploy-instance_method">
+  
+    #<strong>can_deploy</strong>(action_or_profile = subject_syskit_model)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Spec-style call for <span class='object_link'><a href="#assert_can_deploy-instance_method" title="Syskit::Test::ProfileAssertions#assert_can_deploy (method)">#assert_can_deploy</a></span></p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+        <p class="example_title"><div class='inline'>
+<p>verify that each definition of a profile can be deployed</p>
+</div></p>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_describe'>describe</span> <span class='const'>MyBundle</span><span class='op'>::</span><span class='const'>Profiles</span><span class='op'>::</span><span class='const'>MyProfile</span> <span class='kw'>do</span>
+  <span class='id identifier rubyid_it'>it</span> <span class='lbrace'>{</span> <span class='id identifier rubyid_can_deploy'>can_deploy</span> <span class='rbrace'>}</span>
+<span class='kw'>end</span></code></pre>
+    
+  </div>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+239
+240
+241</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/test/profile_assertions.rb', line 239</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_can_deploy'>can_deploy</span><span class='lparen'>(</span><span class='id identifier rubyid_action_or_profile'>action_or_profile</span> <span class='op'>=</span> <span class='id identifier rubyid_subject_syskit_model'>subject_syskit_model</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_assert_can_deploy'>assert_can_deploy</span><span class='lparen'>(</span><span class='id identifier rubyid_action_or_profile'>action_or_profile</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="can_deploy_together-instance_method">
+  
+    #<strong>can_deploy_together</strong>(*actions)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Spec-style call for <span class='object_link'><a href="#assert_can_deploy_together-instance_method" title="Syskit::Test::ProfileAssertions#assert_can_deploy_together (method)">#assert_can_deploy_together</a></span></p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+        <p class="example_title"><div class='inline'>
+<p>verify that all definitions of a profile can be deployed at the same time</p>
+</div></p>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_describe'>describe</span> <span class='const'>MyBundle</span><span class='op'>::</span><span class='const'>Profiles</span><span class='op'>::</span><span class='const'>MyProfile</span> <span class='kw'>do</span>
+  <span class='id identifier rubyid_it'>it</span> <span class='lbrace'>{</span> <span class='id identifier rubyid_can_deploy_together'>can_deploy_together</span> <span class='rbrace'>}</span>
+<span class='kw'>end</span></code></pre>
+    
+  </div>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+265
+266
+267</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/test/profile_assertions.rb', line 265</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_can_deploy_together'>can_deploy_together</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_actions'>actions</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_assert_can_deploy_together'>assert_can_deploy_together</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_actions'>actions</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="can_instanciate-instance_method">
+  
+    #<strong>can_instanciate</strong>(action_or_profile = subject_syskit_model)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Spec-style call for <span class='object_link'><a href="#assert_can_instanciate-instance_method" title="Syskit::Test::ProfileAssertions#assert_can_instanciate (method)">#assert_can_instanciate</a></span></p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+        <p class="example_title"><div class='inline'>
+<p>verify that all definitions of a profile can be instanciated</p>
+</div></p>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_describe'>describe</span> <span class='const'>MyBundle</span><span class='op'>::</span><span class='const'>Profiles</span><span class='op'>::</span><span class='const'>MyProfile</span> <span class='kw'>do</span>
+  <span class='id identifier rubyid_it'>it</span> <span class='lbrace'>{</span> <span class='id identifier rubyid_can_instanciate'>can_instanciate</span> <span class='rbrace'>}</span>
+<span class='kw'>end</span></code></pre>
+    
+  </div>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+162
+163
+164</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/test/profile_assertions.rb', line 162</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_can_instanciate'>can_instanciate</span><span class='lparen'>(</span><span class='id identifier rubyid_action_or_profile'>action_or_profile</span> <span class='op'>=</span> <span class='id identifier rubyid_subject_syskit_model'>subject_syskit_model</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_assert_can_instanciate'>assert_can_instanciate</span><span class='lparen'>(</span><span class='id identifier rubyid_action_or_profile'>action_or_profile</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="can_instanciate_together-instance_method">
+  
+    #<strong>can_instanciate_together</strong>(*actions)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Spec-style call for <span class='object_link'><a href="#assert_can_instanciate_together-instance_method" title="Syskit::Test::ProfileAssertions#assert_can_instanciate_together (method)">#assert_can_instanciate_together</a></span></p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+        <p class="example_title"><div class='inline'>
+<p>verify that all definitions of a profile can be instanciated all at the
+same time</p>
+</div></p>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_describe'>describe</span> <span class='const'>MyBundle</span><span class='op'>::</span><span class='const'>Profiles</span><span class='op'>::</span><span class='const'>MyProfile</span> <span class='kw'>do</span>
+  <span class='id identifier rubyid_it'>it</span> <span class='lbrace'>{</span> <span class='id identifier rubyid_can_instanciate_together'>can_instanciate_together</span> <span class='rbrace'>}</span>
+<span class='kw'>end</span></code></pre>
+    
+  </div>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+191
+192
+193</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/test/profile_assertions.rb', line 191</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_can_instanciate_together'>can_instanciate_together</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_actions'>actions</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_assert_can_instanciate_together'>assert_can_instanciate_together</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_actions'>actions</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="expand_coordination_models-instance_method">
+  
+    #<strong>expand_coordination_models</strong>(action)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+
+<p>Given an action, returns the list of atomic actions it refers to</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/test/profile_assertions.rb', line 198</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_expand_coordination_models'>expand_coordination_models</span><span class='lparen'>(</span><span class='id identifier rubyid_action'>action</span><span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_action'>action</span><span class='period'>.</span><span class='id identifier rubyid_model'>model</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='symbol'>:coordination_model</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_actions'>actions</span> <span class='op'>=</span> <span class='id identifier rubyid_action'>action</span><span class='period'>.</span><span class='id identifier rubyid_model'>model</span><span class='period'>.</span><span class='id identifier rubyid_coordination_model'>coordination_model</span><span class='period'>.</span><span class='id identifier rubyid_each_task'>each_task</span><span class='period'>.</span><span class='id identifier rubyid_flat_map'>flat_map</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_coordination_task'>coordination_task</span><span class='op'>|</span>
+            <span class='kw'>if</span> <span class='id identifier rubyid_coordination_task'>coordination_task</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='symbol'>:action</span><span class='rparen'>)</span>
+                <span class='id identifier rubyid_expand_coordination_models'>expand_coordination_models</span><span class='lparen'>(</span><span class='id identifier rubyid_coordination_task'>coordination_task</span><span class='period'>.</span><span class='id identifier rubyid_action'>action</span><span class='rparen'>)</span>
+            <span class='kw'>end</span>
+        <span class='kw'>end</span><span class='period'>.</span><span class='id identifier rubyid_compact'>compact</span>
+    <span class='kw'>else</span>
+        <span class='lbracket'>[</span><span class='id identifier rubyid_action'>action</span><span class='rbracket'>]</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="is_self_contained-instance_method">
+  
+    #<strong>is_self_contained</strong>(action_or_profile = subject_syskit_model, options = Hash.new)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Spec-style call for <span class='object_link'><a href="#assert_is_self_contained-instance_method" title="Syskit::Test::ProfileAssertions#assert_is_self_contained (method)">#assert_is_self_contained</a></span></p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+        <p class="example_title"><div class='inline'>
+<p>verify that all definitions of a profile are self-contained</p>
+</div></p>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_describe'>describe</span> <span class='const'>MyBundle</span><span class='op'>::</span><span class='const'>Profiles</span><span class='op'>::</span><span class='const'>MyProfile</span> <span class='kw'>do</span>
+  <span class='id identifier rubyid_it'>it</span> <span class='lbrace'>{</span> <span class='id identifier rubyid_is_self_contained'>is_self_contained</span> <span class='rbrace'>}</span>
+<span class='kw'>end</span></code></pre>
+    
+  </div>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+130
+131
+132</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/test/profile_assertions.rb', line 130</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_is_self_contained'>is_self_contained</span><span class='lparen'>(</span><span class='id identifier rubyid_action_or_profile'>action_or_profile</span> <span class='op'>=</span> <span class='id identifier rubyid_subject_syskit_model'>subject_syskit_model</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_assert_is_self_contained'>assert_is_self_contained</span><span class='lparen'>(</span><span class='id identifier rubyid_action_or_profile'>action_or_profile</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Wed Apr 10 21:51:30 2019 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.19 (ruby-2.5.1).
+</div>
+
+    </div>
+  </body>
+</html>

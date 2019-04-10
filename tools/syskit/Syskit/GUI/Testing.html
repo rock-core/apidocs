@@ -1,0 +1,3673 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: Syskit::GUI::Testing
+  
+    &mdash; Documentation by YARD 0.9.19
+  
+</title>
+
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "Syskit::GUI::Testing";
+  relpath = '../../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../../_index.html">Index (T)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../Syskit.html" title="Syskit (module)">Syskit</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../GUI.html" title="Syskit::GUI (module)">GUI</a></span></span>
+     &raquo; 
+    <span class="title">Testing</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: Syskit::GUI::Testing
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName">Qt::Widget</span>
+      
+        <ul class="fullTree">
+          <li><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></li>
+          
+            <li class="next">Qt::Widget</li>
+          
+            <li class="next">Syskit::GUI::Testing</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/syskit/gui/testing.rb</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>GUI to interface with testing</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><h2>Defined Under Namespace</h2>
+<p class="children">
+  
+    
+  
+    
+      <strong class="classes">Classes:</strong> <span class='object_link'><a href="Testing/Stats.html" title="Syskit::GUI::Testing::Stats (class)">Stats</a></span>, <span class='object_link'><a href="Testing/SubprocessItem.html" title="Syskit::GUI::Testing::SubprocessItem (class)">SubprocessItem</a></span>
+    
+  
+</p>
+
+
+
+
+  <h2>Instance Attribute Summary <small><a href="#" class="summary_toggle">collapse</a></small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#app-instance_method" title="#app (instance method)">#<strong>app</strong>  &#x21d2; Roby::Application </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>The roby application we&#39;re working on.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#discovery_count-instance_method" title="#discovery_count (instance method)">#<strong>discovery_count</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>The count of slaves that are doing discovery.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#exception_rendering-instance_method" title="#exception_rendering (instance method)">#<strong>exception_rendering</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute exception_rendering.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#item_model-instance_method" title="#item_model (instance method)">#<strong>item_model</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>The item model that represents the subprocess state.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#manager-instance_method" title="#manager (instance method)">#<strong>manager</strong>  &#x21d2; Autorespawn::Manager </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>The test manager.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#pid_to_slave-instance_method" title="#pid_to_slave (instance method)">#<strong>pid_to_slave</strong>  &#x21d2; Hash&lt;Integer,Autorespawn::Slave&gt; </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>PID-to-slave mapping.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#poll_timer-instance_method" title="#poll_timer (instance method)">#<strong>poll_timer</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>The timer used to call <span class='object_link'><a href="#manager-instance_method" title="Syskit::GUI::Testing#manager (method)">#manager</a></span>.poll periodically.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#process_lock-instance_method" title="#process_lock (instance method)">#<strong>process_lock</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Synchronization primitive between the DRb incoming thread and the Qt
+thread.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#process_sync-instance_method" title="#process_sync (instance method)">#<strong>process_sync</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Synchronization primitive between the DRb incoming thread and the Qt
+thread.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#selected_item-instance_method" title="#selected_item (instance method)">#<strong>selected_item</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>The currently selected item.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#server-instance_method" title="#server (instance method)">#<strong>server</strong>  &#x21d2; Roby::App::TestServer </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>The test server that allow us to communicate with the tests.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#slaves-instance_method" title="#slaves (instance method)">#<strong>slaves</strong>  &#x21d2; Hash&lt;Numeric,(Autorespawn::Slave,Qt::StandardItem)&gt; </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Registered slaves.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#test_count-instance_method" title="#test_count (instance method)">#<strong>test_count</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>The count of slaves that are doing discovery.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#test_list_ui-instance_method" title="#test_list_ui (instance method)">#<strong>test_list_ui</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute test_list_ui.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#test_result_page-instance_method" title="#test_result_page (instance method)">#<strong>test_result_page</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute test_result_page.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#test_result_ui-instance_method" title="#test_result_ui (instance method)">#<strong>test_result_ui</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute test_result_ui.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#work_queue-instance_method" title="#work_queue (instance method)">#<strong>work_queue</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Synchronization primitive between the DRb incoming thread and the Qt
+thread.</p>
+</div></span>
+  
+</li>
+
+    
+  </ul>
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#add_hooks-instance_method" title="#add_hooks (instance method)">#<strong>add_hooks</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Add hooks on <span class='object_link'><a href="#manager-instance_method" title="Syskit::GUI::Testing#manager (method)">#manager</a></span> and <span class='object_link'><a href="#server-instance_method" title="Syskit::GUI::Testing#server (method)">#server</a></span> that will allow us to track the test
+progress.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#add_test_slaves-instance_method" title="#add_test_slaves (instance method)">#<strong>add_test_slaves</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#create_status_bar_ui-instance_method" title="#create_status_bar_ui (instance method)">#<strong>create_status_bar_ui</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#create_ui-instance_method" title="#create_ui (instance method)">#<strong>create_ui</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#deregister_slave_pid-instance_method" title="#deregister_slave_pid (instance method)">#<strong>deregister_slave_pid</strong>(pid)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Deregister a PID-to-slave mapping.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#discover_exceptions_from_failure-instance_method" title="#discover_exceptions_from_failure (instance method)">#<strong>discover_exceptions_from_failure</strong>(failure)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#display_item_details-instance_method" title="#display_item_details (instance method)">#<strong>display_item_details</strong>(item)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(parent = nil, app: Roby.app, poll_period: 0.1)  &#x21d2; Testing </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>A new instance of Testing.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#item_from_pid-instance_method" title="#item_from_pid (instance method)">#<strong>item_from_pid</strong>(pid)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Resolves an item from the slave PID.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#item_from_slave-instance_method" title="#item_from_slave (instance method)">#<strong>item_from_slave</strong>(slave)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Resolves a slave item from its object.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#process-instance_method" title="#process (instance method)">#<strong>process</strong>(&amp;block)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#process_pending_work-instance_method" title="#process_pending_work (instance method)">#<strong>process_pending_work</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#queue_work-instance_method" title="#queue_work (instance method)">#<strong>queue_work</strong>(&amp;block)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#register_slave-instance_method" title="#register_slave (instance method)">#<strong>register_slave</strong>(slave)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Register a new slave and add it to the item model.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#register_slave_pid-instance_method" title="#register_slave_pid (instance method)">#<strong>register_slave_pid</strong>(slave)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Register a PID-to-slave mapping.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#reloaded-instance_method" title="#reloaded (instance method)">#<strong>reloaded</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Call this after reloading the app so that the list of tests gets refreshed
+as well.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#restore_from_settings-instance_method" title="#restore_from_settings (instance method)">#<strong>restore_from_settings</strong>(settings)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#running%3F-instance_method" title="#running? (instance method)">#<strong>running?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#save_to_settings-instance_method" title="#save_to_settings (instance method)">#<strong>save_to_settings</strong>(settings)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#slave_from_pid-instance_method" title="#slave_from_pid (instance method)">#<strong>slave_from_pid</strong>(pid)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Resolves a slave from its PID.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#start-instance_method" title="#start (instance method)">#<strong>start</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#stats-instance_method" title="#stats (instance method)">#<strong>stats</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#stop-instance_method" title="#stop (instance method)">#<strong>stop</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#update_item_details-instance_method" title="#update_item_details (instance method)">#<strong>update_item_details</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#update_selected_item_state-instance_method" title="#update_selected_item_state (instance method)">#<strong>update_selected_item_state</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#update_status_label-instance_method" title="#update_status_label (instance method)">#<strong>update_status_label</strong>(status_label)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  <div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    #<strong>initialize</strong>(parent = nil, app: Roby.app, poll_period: 0.1)  &#x21d2; <tt><span class='object_link'><a href="" title="Syskit::GUI::Testing (class)">Testing</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns a new instance of Testing</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/gui/testing.rb', line 61</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_parent'>parent</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>app:</span> <span class='const'>Roby</span><span class='period'>.</span><span class='id identifier rubyid_app'>app</span><span class='comma'>,</span> <span class='label'>poll_period:</span> <span class='float'>0.1</span><span class='rparen'>)</span>
+    <span class='kw'>super</span><span class='lparen'>(</span><span class='id identifier rubyid_parent'>parent</span><span class='rparen'>)</span>
+    <span class='ivar'>@app</span> <span class='op'>=</span> <span class='id identifier rubyid_app'>app</span>
+    <span class='ivar'>@slaves</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+    <span class='ivar'>@pid_to_slave</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+
+    <span class='ivar'>@work_queue</span> <span class='op'>=</span> <span class='const'>Array</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+    <span class='ivar'>@process_lock</span> <span class='op'>=</span> <span class='const'>Mutex</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+    <span class='ivar'>@process_sync</span> <span class='op'>=</span> <span class='const'>ConditionVariable</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+    <span class='ivar'>@discovery_count</span> <span class='op'>=</span> <span class='int'>0</span>
+    <span class='ivar'>@test_count</span> <span class='op'>=</span> <span class='int'>0</span>
+    <span class='ivar'>@running</span> <span class='op'>=</span> <span class='kw'>false</span>
+
+    <span class='ivar'>@manager</span> <span class='op'>=</span> <span class='const'>Autorespawn</span><span class='op'>::</span><span class='const'>Manager</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='label'>name:</span> <span class='const'>Hash</span><span class='lbracket'>[</span><span class='label'>models:</span> <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>syskit-ide</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+    <span class='ivar'>@server</span>  <span class='op'>=</span> <span class='const'>Roby</span><span class='op'>::</span><span class='const'>App</span><span class='op'>::</span><span class='const'>TestServer</span><span class='period'>.</span><span class='id identifier rubyid_start'>start</span><span class='lparen'>(</span><span class='const'>Process</span><span class='period'>.</span><span class='id identifier rubyid_pid'>pid</span><span class='rparen'>)</span>
+    <span class='ivar'>@item_model</span> <span class='op'>=</span> <span class='const'>Qt</span><span class='op'>::</span><span class='const'>StandardItemModel</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='kw'>self</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_create_ui'>create_ui</span>
+    <span class='ivar'>@test_result_page</span> <span class='op'>=</span> <span class='const'>MetaRuby</span><span class='op'>::</span><span class='const'>GUI</span><span class='op'>::</span><span class='const'>HTML</span><span class='op'>::</span><span class='const'>Page</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_test_result_ui'>test_result_ui</span><span class='period'>.</span><span class='id identifier rubyid_page'>page</span><span class='rparen'>)</span>
+    <span class='ivar'>@exception_rendering</span> <span class='op'>=</span> <span class='const'>Roby</span><span class='op'>::</span><span class='const'>GUI</span><span class='op'>::</span><span class='const'>ExceptionRendering</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_test_result_page'>test_result_page</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_test_result_page'>test_result_page</span><span class='period'>.</span><span class='id identifier rubyid_enable_exception_rendering'>enable_exception_rendering</span><span class='lparen'>(</span><span class='id identifier rubyid_exception_rendering'>exception_rendering</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_exception_rendering'>exception_rendering</span><span class='period'>.</span><span class='id identifier rubyid_add_excluded_pattern'>add_excluded_pattern</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\/lib\/minitest(?:\.rb:|\/)</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_exception_rendering'>exception_rendering</span><span class='period'>.</span><span class='id identifier rubyid_add_excluded_pattern'>add_excluded_pattern</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\/lib\/autorespawn(?:\.rb:|\/)</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span>
+
+    <span class='id identifier rubyid_connect'>connect</span> <span class='id identifier rubyid_test_result_page'>test_result_page</span><span class='comma'>,</span> <span class='const'>SIGNAL</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>fileOpenClicked(const QUrl&amp;)</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='comma'>,</span> <span class='kw'>self</span><span class='comma'>,</span> <span class='const'>SIGNAL</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>fileOpenClicked(const QUrl&amp;)</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+
+    <span class='id identifier rubyid_test_list_ui'>test_list_ui</span><span class='period'>.</span><span class='id identifier rubyid_connect'>connect</span><span class='lparen'>(</span><span class='const'>SIGNAL</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>clicked(const QModelIndex&amp;)</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_index'>index</span><span class='op'>|</span>
+        <span class='id identifier rubyid_item'>item</span> <span class='op'>=</span> <span class='id identifier rubyid_item_model'>item_model</span><span class='period'>.</span><span class='id identifier rubyid_item_from_index'>item_from_index</span><span class='lparen'>(</span><span class='id identifier rubyid_index'>index</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_display_item_details'>display_item_details</span><span class='lparen'>(</span><span class='id identifier rubyid_item'>item</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_test_list_ui'>test_list_ui</span><span class='period'>.</span><span class='id identifier rubyid_connect'>connect</span><span class='lparen'>(</span><span class='const'>SIGNAL</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>doubleClicked(const QModelIndex&amp;)</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_index'>index</span><span class='op'>|</span>
+        <span class='id identifier rubyid_item'>item</span> <span class='op'>=</span> <span class='id identifier rubyid_item_model'>item_model</span><span class='period'>.</span><span class='id identifier rubyid_item_from_index'>item_from_index</span><span class='lparen'>(</span><span class='id identifier rubyid_index'>index</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_manager'>manager</span><span class='period'>.</span><span class='id identifier rubyid_queue'>queue</span><span class='lparen'>(</span><span class='id identifier rubyid_item'>item</span><span class='period'>.</span><span class='id identifier rubyid_slave'>slave</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_add_hooks'>add_hooks</span>
+
+    <span class='ivar'>@poll_timer</span> <span class='op'>=</span> <span class='const'>Qt</span><span class='op'>::</span><span class='const'>Timer</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+    <span class='id identifier rubyid_poll_timer'>poll_timer</span><span class='period'>.</span><span class='id identifier rubyid_connect'>connect</span><span class='lparen'>(</span><span class='const'>SIGNAL</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>timeout()</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='rparen'>)</span> <span class='kw'>do</span>
+        <span class='id identifier rubyid_manager'>manager</span><span class='period'>.</span><span class='id identifier rubyid_poll'>poll</span><span class='lparen'>(</span><span class='label'>autospawn:</span> <span class='id identifier rubyid_running?'>running?</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_process_pending_work'>process_pending_work</span>
+        <span class='kw'>if</span> <span class='id identifier rubyid_item'>item</span> <span class='op'>=</span> <span class='ivar'>@selected_item</span>
+            <span class='id identifier rubyid_runtime'>runtime</span> <span class='op'>=</span> <span class='ivar'>@selected_item</span><span class='period'>.</span><span class='id identifier rubyid_runtime'>runtime</span>
+            <span class='kw'>if</span> <span class='id identifier rubyid_runtime'>runtime</span> <span class='op'>!=</span> <span class='ivar'>@selected_item_runtime</span>
+                <span class='id identifier rubyid_update_selected_item_state'>update_selected_item_state</span>
+                <span class='ivar'>@selected_item_runtime</span> <span class='op'>=</span> <span class='id identifier rubyid_runtime'>runtime</span>
+            <span class='kw'>end</span>
+        <span class='kw'>end</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_poll_timer'>poll_timer</span><span class='period'>.</span><span class='id identifier rubyid_start'>start</span><span class='lparen'>(</span><span class='const'>Integer</span><span class='lparen'>(</span><span class='id identifier rubyid_poll_period'>poll_period</span> <span class='op'>*</span> <span class='int'>1000</span><span class='rparen'>)</span><span class='rparen'>)</span>
+
+    <span class='id identifier rubyid_add_test_slaves'>add_test_slaves</span>
+    <span class='id identifier rubyid_emit'>emit</span> <span class='id identifier rubyid_statsChanged'>statsChanged</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id=""></span>
+      <div class="method_details first">
+  <h3 class="signature first" id="app-instance_method">
+  
+    #<strong>app</strong>  &#x21d2; <tt>Roby::Application</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the roby application we&#39;re working on</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Roby::Application</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the roby application we&#39;re working on</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+11
+12
+13</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/gui/testing.rb', line 11</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_app'>app</span>
+  <span class='ivar'>@app</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="discovery_count-instance_method">
+  
+    #<strong>discovery_count</strong>  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>The count of slaves that are doing discovery</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+53
+54
+55</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/gui/testing.rb', line 53</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_discovery_count'>discovery_count</span>
+  <span class='ivar'>@discovery_count</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="exception_rendering-instance_method">
+  
+    #<strong>exception_rendering</strong>  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute exception_rendering</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+35
+36
+37</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/gui/testing.rb', line 35</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_exception_rendering'>exception_rendering</span>
+  <span class='ivar'>@exception_rendering</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="item_model-instance_method">
+  
+    #<strong>item_model</strong>  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>The item model that represents the subprocess state</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+31
+32
+33</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/gui/testing.rb', line 31</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_item_model'>item_model</span>
+  <span class='ivar'>@item_model</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="manager-instance_method">
+  
+    #<strong>manager</strong>  &#x21d2; <tt>Autorespawn::Manager</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the test manager</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Autorespawn::Manager</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the test manager</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+14
+15
+16</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/gui/testing.rb', line 14</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_manager'>manager</span>
+  <span class='ivar'>@manager</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="pid_to_slave-instance_method">
+  
+    #<strong>pid_to_slave</strong>  &#x21d2; <tt>Hash&lt;Integer,Autorespawn::Slave&gt;</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>PID-to-slave mapping</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Hash&lt;Integer,Autorespawn::Slave&gt;</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+28
+29
+30</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/gui/testing.rb', line 28</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_pid_to_slave'>pid_to_slave</span>
+  <span class='ivar'>@pid_to_slave</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="poll_timer-instance_method">
+  
+    #<strong>poll_timer</strong>  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>The timer used to call <span class='object_link'><a href="#manager-instance_method" title="Syskit::GUI::Testing#manager (method)">#manager</a></span>.poll periodically</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+38
+39
+40</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/gui/testing.rb', line 38</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_poll_timer'>poll_timer</span>
+  <span class='ivar'>@poll_timer</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="process_lock-instance_method">
+  
+    #<strong>process_lock</strong>  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Synchronization primitive between the DRb incoming thread and the Qt thread</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+46
+47
+48</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/gui/testing.rb', line 46</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_process_lock'>process_lock</span>
+  <span class='ivar'>@process_lock</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="process_sync-instance_method">
+  
+    #<strong>process_sync</strong>  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Synchronization primitive between the DRb incoming thread and the Qt thread</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+50
+51
+52</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/gui/testing.rb', line 50</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_process_sync'>process_sync</span>
+  <span class='ivar'>@process_sync</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="selected_item-instance_method">
+  
+    #<strong>selected_item</strong>  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>The currently selected item</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+59
+60
+61</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/gui/testing.rb', line 59</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_selected_item'>selected_item</span>
+  <span class='ivar'>@selected_item</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="server-instance_method">
+  
+    #<strong>server</strong>  &#x21d2; <tt>Roby::App::TestServer</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the test server that allow us to communicate with the tests</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Roby::App::TestServer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the test server that allow us to communicate with the tests</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+18
+19
+20</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/gui/testing.rb', line 18</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_server'>server</span>
+  <span class='ivar'>@server</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="slaves-instance_method">
+  
+    #<strong>slaves</strong>  &#x21d2; <tt>Hash&lt;Numeric,(Autorespawn::Slave,Qt::StandardItem)&gt;</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Registered slaves</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Hash&lt;Numeric,(Autorespawn::Slave,Qt::StandardItem)&gt;</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+23
+24
+25</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/gui/testing.rb', line 23</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_slaves'>slaves</span>
+  <span class='ivar'>@slaves</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="test_count-instance_method">
+  
+    #<strong>test_count</strong>  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>The count of slaves that are doing discovery</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+56
+57
+58</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/gui/testing.rb', line 56</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_test_count'>test_count</span>
+  <span class='ivar'>@test_count</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="test_list_ui-instance_method">
+  
+    #<strong>test_list_ui</strong>  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute test_list_ui</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+32
+33
+34</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/gui/testing.rb', line 32</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_test_list_ui'>test_list_ui</span>
+  <span class='ivar'>@test_list_ui</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="test_result_page-instance_method">
+  
+    #<strong>test_result_page</strong>  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute test_result_page</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+34
+35
+36</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/gui/testing.rb', line 34</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_test_result_page'>test_result_page</span>
+  <span class='ivar'>@test_result_page</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="test_result_ui-instance_method">
+  
+    #<strong>test_result_ui</strong>  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute test_result_ui</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+33
+34
+35</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/gui/testing.rb', line 33</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_test_result_ui'>test_result_ui</span>
+  <span class='ivar'>@test_result_ui</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="work_queue-instance_method">
+  
+    #<strong>work_queue</strong>  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Synchronization primitive between the DRb incoming thread and the Qt thread</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+42
+43
+44</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/gui/testing.rb', line 42</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_work_queue'>work_queue</span>
+  <span class='ivar'>@work_queue</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="add_hooks-instance_method">
+  
+    #<strong>add_hooks</strong>  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Add hooks on <span class='object_link'><a href="#manager-instance_method" title="Syskit::GUI::Testing#manager (method)">#manager</a></span> and <span class='object_link'><a href="#server-instance_method" title="Syskit::GUI::Testing#server (method)">#server</a></span> that will allow us to track the test
+progress</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+607
+608
+609
+610
+611
+612
+613
+614
+615
+616
+617
+618
+619
+620
+621
+622
+623
+624
+625
+626
+627
+628
+629
+630
+631
+632
+633
+634
+635
+636
+637
+638
+639
+640
+641
+642
+643
+644
+645
+646
+647
+648
+649
+650
+651
+652
+653
+654
+655
+656
+657
+658
+659
+660
+661
+662
+663
+664
+665
+666
+667
+668
+669
+670
+671
+672
+673
+674
+675
+676
+677
+678</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/gui/testing.rb', line 607</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_add_hooks'>add_hooks</span>
+    <span class='id identifier rubyid_manager'>manager</span><span class='period'>.</span><span class='id identifier rubyid_on_slave_new'>on_slave_new</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_slave'>slave</span><span class='op'>|</span>
+        <span class='id identifier rubyid_queue_work'>queue_work</span> <span class='kw'>do</span>
+            <span class='id identifier rubyid_register_slave'>register_slave</span><span class='lparen'>(</span><span class='id identifier rubyid_slave'>slave</span><span class='rparen'>)</span>
+            <span class='id identifier rubyid_emit'>emit</span> <span class='id identifier rubyid_statsChanged'>statsChanged</span>
+        <span class='kw'>end</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_manager'>manager</span><span class='period'>.</span><span class='id identifier rubyid_on_slave_start'>on_slave_start</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_slave'>slave</span><span class='op'>|</span>
+        <span class='id identifier rubyid_queue_work'>queue_work</span> <span class='kw'>do</span>
+            <span class='id identifier rubyid_register_slave_pid'>register_slave_pid</span><span class='lparen'>(</span><span class='id identifier rubyid_slave'>slave</span><span class='rparen'>)</span>
+            <span class='id identifier rubyid_item'>item</span> <span class='op'>=</span> <span class='id identifier rubyid_item_from_slave'>item_from_slave</span><span class='lparen'>(</span><span class='id identifier rubyid_slave'>slave</span><span class='rparen'>)</span>
+            <span class='id identifier rubyid_item'>item</span><span class='period'>.</span><span class='id identifier rubyid_start'>start</span>
+            <span class='kw'>if</span> <span class='id identifier rubyid_selected_item'>selected_item</span> <span class='op'>==</span> <span class='id identifier rubyid_item'>item</span>
+                <span class='id identifier rubyid_update_item_details'>update_item_details</span>
+            <span class='kw'>end</span>
+            <span class='id identifier rubyid_emit'>emit</span> <span class='id identifier rubyid_statsChanged'>statsChanged</span>
+        <span class='kw'>end</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_manager'>manager</span><span class='period'>.</span><span class='id identifier rubyid_on_slave_finished'>on_slave_finished</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_slave'>slave</span><span class='op'>|</span>
+        <span class='id identifier rubyid_queue_work'>queue_work</span> <span class='kw'>do</span>
+            <span class='id identifier rubyid_deregister_slave_pid'>deregister_slave_pid</span><span class='lparen'>(</span><span class='id identifier rubyid_slave'>slave</span><span class='period'>.</span><span class='id identifier rubyid_pid'>pid</span><span class='rparen'>)</span>
+            <span class='id identifier rubyid_item'>item</span> <span class='op'>=</span> <span class='id identifier rubyid_item_from_slave'>item_from_slave</span><span class='lparen'>(</span><span class='id identifier rubyid_slave'>slave</span><span class='rparen'>)</span>
+            <span class='id identifier rubyid_item'>item</span><span class='period'>.</span><span class='id identifier rubyid_finished'>finished</span><span class='lparen'>(</span><span class='id identifier rubyid_slave'>slave</span><span class='period'>.</span><span class='id identifier rubyid_status'>status</span><span class='rparen'>)</span>
+            <span class='kw'>if</span> <span class='id identifier rubyid_selected_item'>selected_item</span> <span class='op'>==</span> <span class='id identifier rubyid_item'>item</span>
+                <span class='id identifier rubyid_update_item_details'>update_item_details</span>
+            <span class='kw'>end</span>
+        <span class='kw'>end</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_server'>server</span><span class='period'>.</span><span class='id identifier rubyid_on_exception'>on_exception</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_pid'>pid</span><span class='comma'>,</span> <span class='id identifier rubyid_exception'>exception</span><span class='op'>|</span>
+        <span class='id identifier rubyid_queue_work'>queue_work</span> <span class='kw'>do</span>
+            <span class='id identifier rubyid_item'>item</span> <span class='op'>=</span> <span class='id identifier rubyid_item_from_pid'>item_from_pid</span><span class='lparen'>(</span><span class='id identifier rubyid_pid'>pid</span><span class='rparen'>)</span>
+            <span class='id identifier rubyid_item'>item</span><span class='period'>.</span><span class='id identifier rubyid_add_exception'>add_exception</span><span class='lparen'>(</span><span class='id identifier rubyid_exception'>exception</span><span class='rparen'>)</span>
+            <span class='kw'>if</span> <span class='id identifier rubyid_selected_item'>selected_item</span> <span class='op'>==</span> <span class='id identifier rubyid_item'>item</span>
+                <span class='id identifier rubyid_update_item_details'>update_item_details</span>
+            <span class='kw'>end</span>
+        <span class='kw'>end</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_server'>server</span><span class='period'>.</span><span class='id identifier rubyid_on_discovery_start'>on_discovery_start</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_pid'>pid</span><span class='op'>|</span>
+        <span class='id identifier rubyid_queue_work'>queue_work</span> <span class='kw'>do</span>
+            <span class='ivar'>@discovery_count</span> <span class='op'>+=</span> <span class='int'>1</span>
+            <span class='id identifier rubyid_item_from_pid'>item_from_pid</span><span class='lparen'>(</span><span class='id identifier rubyid_pid'>pid</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_discovery_start'>discovery_start</span>
+        <span class='kw'>end</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_server'>server</span><span class='period'>.</span><span class='id identifier rubyid_on_discovery_finished'>on_discovery_finished</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_pid'>pid</span><span class='op'>|</span>
+        <span class='id identifier rubyid_queue_work'>queue_work</span> <span class='kw'>do</span>
+            <span class='ivar'>@discovery_count</span> <span class='op'>-=</span> <span class='int'>1</span>
+            <span class='id identifier rubyid_item_from_pid'>item_from_pid</span><span class='lparen'>(</span><span class='id identifier rubyid_pid'>pid</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_discovery_finished'>discovery_finished</span>
+        <span class='kw'>end</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_server'>server</span><span class='period'>.</span><span class='id identifier rubyid_on_test_start'>on_test_start</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_pid'>pid</span><span class='op'>|</span>
+        <span class='id identifier rubyid_queue_work'>queue_work</span> <span class='kw'>do</span>
+            <span class='ivar'>@test_count</span> <span class='op'>+=</span> <span class='int'>1</span>
+            <span class='id identifier rubyid_item_from_pid'>item_from_pid</span><span class='lparen'>(</span><span class='id identifier rubyid_pid'>pid</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_test_start'>test_start</span>
+        <span class='kw'>end</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_server'>server</span><span class='period'>.</span><span class='id identifier rubyid_on_test_result'>on_test_result</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_pid'>pid</span><span class='comma'>,</span> <span class='id identifier rubyid_file'>file</span><span class='comma'>,</span> <span class='id identifier rubyid_test_case_name'>test_case_name</span><span class='comma'>,</span> <span class='id identifier rubyid_test_name'>test_name</span><span class='comma'>,</span> <span class='id identifier rubyid_failures'>failures</span><span class='comma'>,</span> <span class='id identifier rubyid_assertions'>assertions</span><span class='comma'>,</span> <span class='id identifier rubyid_time'>time</span><span class='op'>|</span>
+        <span class='id identifier rubyid_queue_work'>queue_work</span> <span class='kw'>do</span>
+            <span class='id identifier rubyid_item'>item</span> <span class='op'>=</span> <span class='id identifier rubyid_item_from_pid'>item_from_pid</span><span class='lparen'>(</span><span class='id identifier rubyid_pid'>pid</span><span class='rparen'>)</span>
+            <span class='id identifier rubyid_item'>item</span><span class='period'>.</span><span class='id identifier rubyid_add_test_result'>add_test_result</span><span class='lparen'>(</span><span class='id identifier rubyid_file'>file</span><span class='comma'>,</span> <span class='id identifier rubyid_test_case_name'>test_case_name</span><span class='comma'>,</span> <span class='id identifier rubyid_test_name'>test_name</span><span class='comma'>,</span> <span class='id identifier rubyid_failures'>failures</span><span class='comma'>,</span> <span class='id identifier rubyid_assertions'>assertions</span><span class='comma'>,</span> <span class='id identifier rubyid_time'>time</span><span class='rparen'>)</span>
+            <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_selected_item'>selected_item</span> <span class='op'>||</span> <span class='lparen'>(</span><span class='id identifier rubyid_selected_item'>selected_item</span> <span class='op'>==</span> <span class='id identifier rubyid_item'>item</span><span class='rparen'>)</span>
+                <span class='id identifier rubyid_update_item_details'>update_item_details</span>
+            <span class='kw'>end</span>
+            <span class='id identifier rubyid_emit'>emit</span> <span class='id identifier rubyid_statsChanged'>statsChanged</span>
+        <span class='kw'>end</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_server'>server</span><span class='period'>.</span><span class='id identifier rubyid_on_test_finished'>on_test_finished</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_pid'>pid</span><span class='op'>|</span>
+        <span class='id identifier rubyid_queue_work'>queue_work</span> <span class='kw'>do</span>
+            <span class='ivar'>@test_count</span> <span class='op'>-=</span> <span class='int'>1</span>
+            <span class='id identifier rubyid_item_from_pid'>item_from_pid</span><span class='lparen'>(</span><span class='id identifier rubyid_pid'>pid</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_test_finished'>test_finished</span>
+        <span class='kw'>end</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="add_test_slaves-instance_method">
+  
+    #<strong>add_test_slaves</strong>  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+680
+681
+682
+683
+684
+685
+686
+687
+688
+689
+690
+691
+692
+693
+694
+695
+696
+697
+698
+699
+700</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/gui/testing.rb', line 680</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_add_test_slaves'>add_test_slaves</span>
+    <span class='id identifier rubyid_tests'>tests</span> <span class='op'>=</span> <span class='id identifier rubyid_app'>app</span><span class='period'>.</span><span class='id identifier rubyid_discover_test_files'>discover_test_files</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_path'>path</span><span class='comma'>,</span> <span class='id identifier rubyid_models'>models</span><span class='op'>|</span>
+        <span class='id identifier rubyid_process_id'>process_id</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='lbracket'>[</span><span class='label'>path:</span> <span class='id identifier rubyid_path'>path</span><span class='rbracket'>]</span>
+        <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_models'>models</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
+            <span class='id identifier rubyid_process_id'>process_id</span><span class='lbracket'>[</span><span class='symbol'>:models</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_models'>models</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:name</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_sort'>sort</span>
+        <span class='kw'>end</span>
+        <span class='lbracket'>[</span><span class='id identifier rubyid_path'>path</span><span class='comma'>,</span> <span class='id identifier rubyid_process_id'>process_id</span><span class='rbracket'>]</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_argv_set'>argv_set</span> <span class='op'>=</span> <span class='id identifier rubyid_app'>app</span><span class='period'>.</span><span class='id identifier rubyid_argv_set'>argv_set</span><span class='period'>.</span><span class='id identifier rubyid_flat_map'>flat_map</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_string'>string</span><span class='op'>|</span>
+        <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>--set</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_string'>string</span><span class='rbracket'>]</span>
+    <span class='kw'>end</span>
+
+    <span class='id identifier rubyid_tests'>tests</span><span class='period'>.</span><span class='id identifier rubyid_sort_by'>sort_by</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:first</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_path'>path</span><span class='comma'>,</span> <span class='id identifier rubyid_process_id'>process_id</span><span class='op'>|</span>
+        <span class='id identifier rubyid_slave'>slave</span> <span class='op'>=</span> <span class='id identifier rubyid_manager'>manager</span><span class='period'>.</span><span class='id identifier rubyid_add_slave'>add_slave</span><span class='lparen'>(</span>
+            <span class='const'>Gem</span><span class='period'>.</span><span class='id identifier rubyid_ruby'>ruby</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>-S</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>roby</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>autotest</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>--server</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_server'>server</span><span class='period'>.</span><span class='id identifier rubyid_server_id'>server_id</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='comma'>,</span> <span class='id identifier rubyid_path'>path</span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>-r</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_app'>app</span><span class='period'>.</span><span class='id identifier rubyid_robot_name'>robot_name</span><span class='comma'>,</span>
+            <span class='op'>*</span><span class='id identifier rubyid_argv_set'>argv_set</span><span class='comma'>,</span>
+            <span class='label'>name:</span> <span class='id identifier rubyid_process_id'>process_id</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_slave'>slave</span><span class='period'>.</span><span class='id identifier rubyid_register_files'>register_files</span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='const'>Pathname</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_path'>path</span><span class='rparen'>)</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="create_status_bar_ui-instance_method">
+  
+    #<strong>create_status_bar_ui</strong>  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/gui/testing.rb', line 126</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_create_status_bar_ui'>create_status_bar_ui</span>
+    <span class='id identifier rubyid_status_bar'>status_bar</span> <span class='op'>=</span> <span class='const'>Qt</span><span class='op'>::</span><span class='const'>HBoxLayout</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+    <span class='id identifier rubyid_status_bar'>status_bar</span><span class='period'>.</span><span class='id identifier rubyid_add_widget'>add_widget</span><span class='lparen'>(</span><span class='id identifier rubyid_start_stop_button'>start_stop_button</span> <span class='op'>=</span>
+        <span class='const'>Qt</span><span class='op'>::</span><span class='const'>PushButton</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Start Tests</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='kw'>self</span><span class='rparen'>)</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_connect'>connect</span> <span class='const'>SIGNAL</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>started()</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='kw'>do</span>
+        <span class='id identifier rubyid_start_stop_button'>start_stop_button</span><span class='period'>.</span><span class='id identifier rubyid_text'>text</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Stop</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_connect'>connect</span> <span class='const'>SIGNAL</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>stopped()</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='kw'>do</span>
+        <span class='id identifier rubyid_start_stop_button'>start_stop_button</span><span class='period'>.</span><span class='id identifier rubyid_text'>text</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Start</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>end</span>
+
+    <span class='id identifier rubyid_start_stop_button'>start_stop_button</span><span class='period'>.</span><span class='id identifier rubyid_connect'>connect</span><span class='lparen'>(</span><span class='const'>SIGNAL</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>clicked()</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='rparen'>)</span> <span class='kw'>do</span>
+        <span class='kw'>if</span> <span class='id identifier rubyid_running?'>running?</span>
+            <span class='id identifier rubyid_stop'>stop</span>
+        <span class='kw'>else</span> <span class='id identifier rubyid_start'>start</span>
+        <span class='kw'>end</span>
+    <span class='kw'>end</span>
+
+    <span class='id identifier rubyid_status_bar'>status_bar</span><span class='period'>.</span><span class='id identifier rubyid_add_widget'>add_widget</span><span class='lparen'>(</span><span class='id identifier rubyid_status_label'>status_label</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="StateLabel.html" title="Syskit::GUI::StateLabel (class)">StateLabel</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="StateLabel.html#initialize-instance_method" title="Syskit::GUI::StateLabel#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='label'>parent:</span> <span class='kw'>self</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='int'>1</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_status_label'>status_label</span><span class='period'>.</span><span class='id identifier rubyid_declare_state'>declare_state</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>STOPPED</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='symbol'>:blue</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_status_label'>status_label</span><span class='period'>.</span><span class='id identifier rubyid_declare_state'>declare_state</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>RUNNING</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='symbol'>:green</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_connect'>connect</span> <span class='const'>SIGNAL</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>statsChanged()</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='kw'>do</span>
+        <span class='id identifier rubyid_update_status_label'>update_status_label</span><span class='lparen'>(</span><span class='id identifier rubyid_status_label'>status_label</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+
+    <span class='kw'>return</span> <span class='id identifier rubyid_status_bar'>status_bar</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="create_ui-instance_method">
+  
+    #<strong>create_ui</strong>  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/gui/testing.rb', line 154</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_create_ui'>create_ui</span>
+    <span class='id identifier rubyid_layout'>layout</span> <span class='op'>=</span> <span class='const'>Qt</span><span class='op'>::</span><span class='const'>VBoxLayout</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='kw'>self</span><span class='rparen'>)</span>
+
+    <span class='id identifier rubyid_status_bar'>status_bar</span> <span class='op'>=</span> <span class='id identifier rubyid_create_status_bar_ui'>create_status_bar_ui</span>
+    <span class='id identifier rubyid_layout'>layout</span><span class='period'>.</span><span class='id identifier rubyid_add_layout'>add_layout</span><span class='lparen'>(</span><span class='id identifier rubyid_status_bar'>status_bar</span><span class='rparen'>)</span>
+
+    <span class='id identifier rubyid_splitter'>splitter</span> <span class='op'>=</span> <span class='const'>Qt</span><span class='op'>::</span><span class='const'>Splitter</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='kw'>self</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_layout'>layout</span><span class='period'>.</span><span class='id identifier rubyid_add_widget'>add_widget</span><span class='lparen'>(</span><span class='id identifier rubyid_splitter'>splitter</span><span class='comma'>,</span> <span class='int'>1</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_splitter'>splitter</span><span class='period'>.</span><span class='id identifier rubyid_add_widget'>add_widget</span><span class='lparen'>(</span><span class='ivar'>@test_list_ui</span> <span class='op'>=</span> <span class='const'>Qt</span><span class='op'>::</span><span class='const'>ListView</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='kw'>self</span><span class='rparen'>)</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_test_list_ui'>test_list_ui</span><span class='period'>.</span><span class='id identifier rubyid_model'>model</span> <span class='op'>=</span> <span class='id identifier rubyid_item_model'>item_model</span>
+    <span class='id identifier rubyid_test_list_ui'>test_list_ui</span><span class='period'>.</span><span class='id identifier rubyid_edit_triggers'>edit_triggers</span> <span class='op'>=</span> <span class='const'>Qt</span><span class='op'>::</span><span class='const'>AbstractItemView</span><span class='op'>::</span><span class='const'>NoEditTriggers</span>
+    <span class='id identifier rubyid_splitter'>splitter</span><span class='period'>.</span><span class='id identifier rubyid_add_widget'>add_widget</span><span class='lparen'>(</span><span class='ivar'>@test_result_ui</span> <span class='op'>=</span> <span class='const'>Qt</span><span class='op'>::</span><span class='const'>WebView</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='kw'>self</span><span class='rparen'>)</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="deregister_slave_pid-instance_method">
+  
+    #<strong>deregister_slave_pid</strong>(pid)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Deregister a PID-to-slave mapping</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>pid</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+576
+577
+578
+579
+580</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/gui/testing.rb', line 576</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_deregister_slave_pid'>deregister_slave_pid</span><span class='lparen'>(</span><span class='id identifier rubyid_pid'>pid</span><span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='op'>!</span><span class='lparen'>(</span><span class='id identifier rubyid_slave'>slave</span> <span class='op'>=</span> <span class='id identifier rubyid_pid_to_slave'>pid_to_slave</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='id identifier rubyid_pid'>pid</span><span class='rparen'>)</span><span class='rparen'>)</span>
+        <span class='const'>Roby</span><span class='period'>.</span><span class='id identifier rubyid_warn'>warn</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>no slave registered for PID </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_pid'>pid</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="discover_exceptions_from_failure-instance_method">
+  
+    #<strong>discover_exceptions_from_failure</strong>(failure)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/gui/testing.rb', line 245</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_discover_exceptions_from_failure'>discover_exceptions_from_failure</span><span class='lparen'>(</span><span class='id identifier rubyid_failure'>failure</span><span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_failure'>failure</span><span class='period'>.</span><span class='id identifier rubyid_kind_of?'>kind_of?</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="../../Minitest.html" title="Minitest (module)">Minitest</a></span></span><span class='op'>::</span><span class='const'>UnexpectedError</span><span class='rparen'>)</span>
+        <span class='kw'>return</span> <span class='id identifier rubyid_discover_exceptions_from_failure'>discover_exceptions_from_failure</span><span class='lparen'>(</span><span class='id identifier rubyid_failure'>failure</span><span class='period'>.</span><span class='id identifier rubyid_exception'>exception</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+
+    <span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='id identifier rubyid_failure'>failure</span><span class='rbracket'>]</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_failure'>failure</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='symbol'>:original_exceptions</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_result'>result</span><span class='period'>.</span><span class='id identifier rubyid_concat'>concat</span> <span class='id identifier rubyid_failure'>failure</span><span class='period'>.</span><span class='id identifier rubyid_original_exceptions'>original_exceptions</span><span class='period'>.</span><span class='id identifier rubyid_flat_map'>flat_map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_e'>e</span><span class='op'>|</span> <span class='id identifier rubyid_discover_exceptions_from_failure'>discover_exceptions_from_failure</span><span class='lparen'>(</span><span class='id identifier rubyid_e'>e</span><span class='rparen'>)</span> <span class='rbrace'>}</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_result'>result</span><span class='period'>.</span><span class='id identifier rubyid_uniq'>uniq</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="display_item_details-instance_method">
+  
+    #<strong>display_item_details</strong>(item)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/gui/testing.rb', line 182</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_display_item_details'>display_item_details</span><span class='lparen'>(</span><span class='id identifier rubyid_item'>item</span><span class='rparen'>)</span>
+    <span class='ivar'>@selected_item</span> <span class='op'>=</span> <span class='id identifier rubyid_item'>item</span>
+    <span class='ivar'>@selected_item_runtime</span> <span class='op'>=</span> <span class='kw'>nil</span>
+    <span class='id identifier rubyid_test_result_page'>test_result_page</span><span class='period'>.</span><span class='id identifier rubyid_clear'>clear</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_test_file_path'>test_file_path</span> <span class='op'>=</span> <span class='id identifier rubyid_item'>item</span><span class='period'>.</span><span class='id identifier rubyid_slave'>slave</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='lbracket'>[</span><span class='symbol'>:path</span><span class='rbracket'>]</span>
+        <span class='id identifier rubyid_items'>items</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+        <span class='id identifier rubyid_items'>items</span> <span class='op'>&lt;&lt;</span> <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>title</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Test file</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span>
+        <span class='id identifier rubyid_items'>items</span> <span class='op'>&lt;&lt;</span> <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_test_result_page'>test_result_page</span><span class='period'>.</span><span class='id identifier rubyid_link_to'>link_to</span><span class='lparen'>(</span><span class='const'>Pathname</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_test_file_path'>test_file_path</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='id identifier rubyid_test_file_path'>test_file_path</span><span class='rparen'>)</span><span class='rbracket'>]</span>
+
+        <span class='id identifier rubyid_models'>models</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='id identifier rubyid_item'>item</span><span class='period'>.</span><span class='id identifier rubyid_slave'>slave</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='lbracket'>[</span><span class='symbol'>:models</span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='const'>Array</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='rparen'>)</span>
+        <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_models'>models</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
+            <span class='id identifier rubyid_items'>items</span> <span class='op'>&lt;&lt;</span> <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>title</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Models</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span>
+            <span class='id identifier rubyid_models'>models</span><span class='period'>.</span><span class='id identifier rubyid_sort'>sort</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_model_name'>model_name</span><span class='op'>|</span>
+                <span class='kw'>begin</span>
+                    <span class='id identifier rubyid_model_object'>model_object</span> <span class='op'>=</span> <span class='id identifier rubyid_constant'>constant</span><span class='lparen'>(</span><span class='id identifier rubyid_model_name'>model_name</span><span class='rparen'>)</span>
+                <span class='kw'>rescue</span> <span class='const'>NameError</span>
+                    <span class='id identifier rubyid_items'>items</span> <span class='op'>&lt;&lt;</span> <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_model_name'>model_name</span><span class='rbracket'>]</span>
+                    <span class='kw'>next</span>
+                <span class='kw'>end</span>
+
+                <span class='kw'>if</span> <span class='id identifier rubyid_definition_file'>definition_file</span> <span class='op'>=</span> <span class='const'>Roby</span><span class='period'>.</span><span class='id identifier rubyid_app'>app</span><span class='period'>.</span><span class='id identifier rubyid_definition_file_for'>definition_file_for</span><span class='lparen'>(</span><span class='id identifier rubyid_model_object'>model_object</span><span class='rparen'>)</span>
+                    <span class='id identifier rubyid_link'>link</span> <span class='op'>=</span> <span class='id identifier rubyid_test_result_page'>test_result_page</span><span class='period'>.</span><span class='id identifier rubyid_link_to'>link_to</span><span class='lparen'>(</span><span class='const'>Pathname</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_definition_file'>definition_file</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Open File</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+                    <span class='id identifier rubyid_items'>items</span> <span class='op'>&lt;&lt;</span> <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_model_name'>model_name</span><span class='embexpr_end'>}</span><span class='tstring_content'> [</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_link'>link</span><span class='embexpr_end'>}</span><span class='tstring_content'>]</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
+                <span class='kw'>else</span>
+                    <span class='id identifier rubyid_items'>items</span> <span class='op'>&lt;&lt;</span> <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_model_name'>model_name</span><span class='rbracket'>]</span>
+                <span class='kw'>end</span>
+            <span class='kw'>end</span>
+        <span class='kw'>end</span>
+
+        <span class='id identifier rubyid_items'>items</span> <span class='op'>=</span> <span class='id identifier rubyid_items'>items</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_li_class'>li_class</span><span class='comma'>,</span> <span class='id identifier rubyid_text'>text</span><span class='op'>|</span>
+            <span class='kw'>if</span> <span class='id identifier rubyid_li_class'>li_class</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
+                <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>&lt;li&gt;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_text'>text</span><span class='embexpr_end'>}</span><span class='tstring_content'>&lt;/li&gt;</span><span class='tstring_end'>&quot;</span></span>
+            <span class='kw'>else</span>
+                <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>&lt;li class=\&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_li_class'>li_class</span><span class='embexpr_end'>}</span><span class='tstring_content'>\&quot;&gt;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_text'>text</span><span class='embexpr_end'>}</span><span class='tstring_content'>&lt;/li&gt;</span><span class='tstring_end'>&quot;</span></span>
+            <span class='kw'>end</span>
+        <span class='kw'>end</span>
+        <span class='id identifier rubyid_test_result_page'>test_result_page</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>&lt;ul class=&#39;body-header-list&#39;&gt;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_items'>items</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>&lt;/ul&gt;</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_update_selected_item_state'>update_selected_item_state</span>
+
+    <span class='id identifier rubyid_item'>item</span><span class='period'>.</span><span class='id identifier rubyid_exceptions'>exceptions</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_e'>e</span><span class='op'>|</span>
+        <span class='id identifier rubyid_test_result_page'>test_result_page</span><span class='period'>.</span><span class='id identifier rubyid_push_exception'>push_exception</span><span class='lparen'>(</span><span class='kw'>nil</span><span class='comma'>,</span> <span class='id identifier rubyid_e'>e</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_item'>item</span><span class='period'>.</span><span class='id identifier rubyid_each_test_result'>each_test_result</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_r'>r</span><span class='op'>|</span>
+        <span class='id identifier rubyid_name'>name</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_r'>r</span><span class='period'>.</span><span class='id identifier rubyid_test_case_name'>test_case_name</span><span class='embexpr_end'>}</span><span class='tstring_content'>::</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_r'>r</span><span class='period'>.</span><span class='id identifier rubyid_test_name'>test_name</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+        <span class='id identifier rubyid_info'>info</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_r'>r</span><span class='period'>.</span><span class='id identifier rubyid_skip_count'>skip_count</span><span class='embexpr_end'>}</span><span class='tstring_content'> skips, </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_r'>r</span><span class='period'>.</span><span class='id identifier rubyid_failure_count'>failure_count</span><span class='embexpr_end'>}</span><span class='tstring_content'> failures and </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_r'>r</span><span class='period'>.</span><span class='id identifier rubyid_assertions'>assertions</span><span class='embexpr_end'>}</span><span class='tstring_content'> assertions executed in %.3fs</span><span class='tstring_end'>&quot;</span></span> <span class='op'>%</span> <span class='lbracket'>[</span><span class='id identifier rubyid_r'>r</span><span class='period'>.</span><span class='id identifier rubyid_time'>time</span><span class='rbracket'>]</span>
+
+        <span class='id identifier rubyid_color'>color</span> <span class='op'>=</span> <span class='kw'>if</span> <span class='id identifier rubyid_r'>r</span><span class='period'>.</span><span class='id identifier rubyid_failure_count'>failure_count</span> <span class='op'>&gt;</span> <span class='int'>0</span> <span class='kw'>then</span> <span class='symbol'>:red</span>
+                <span class='kw'>elsif</span> <span class='id identifier rubyid_r'>r</span><span class='period'>.</span><span class='id identifier rubyid_skip_count'>skip_count</span> <span class='op'>&gt;</span> <span class='int'>0</span> <span class='kw'>then</span> <span class='symbol'>:orange</span>
+                <span class='kw'>else</span> <span class='symbol'>:green</span>
+                <span class='kw'>end</span>
+        <span class='id identifier rubyid_color'>color</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Testing/SubprocessItem.html" title="Syskit::GUI::Testing::SubprocessItem (class)">SubprocessItem</a></span></span><span class='period'>.</span><span class='id identifier rubyid_html_color'><span class='object_link'><a href="Testing/SubprocessItem.html#html_color-class_method" title="Syskit::GUI::Testing::SubprocessItem.html_color (method)">html_color</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_color'>color</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_style'>style</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>padding: .1em; background-color: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_color'>color</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+        <span class='id identifier rubyid_test_result_page'>test_result_page</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span><span class='lparen'>(</span><span class='kw'>nil</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>&lt;div class=\&quot;test_result\&quot; style=\&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_style'>style</span><span class='embexpr_end'>}</span><span class='tstring_content'>\&quot;&gt;</span><span class='embexpr_beg'>#{</span><span class='const'>MetaRuby</span><span class='op'>::</span><span class='const'>GUI</span><span class='op'>::</span><span class='const'>HTML</span><span class='period'>.</span><span class='id identifier rubyid_escape_html'>escape_html</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>: </span><span class='embexpr_beg'>#{</span><span class='const'>MetaRuby</span><span class='op'>::</span><span class='const'>GUI</span><span class='op'>::</span><span class='const'>HTML</span><span class='period'>.</span><span class='id identifier rubyid_escape_html'>escape_html</span><span class='lparen'>(</span><span class='id identifier rubyid_info'>info</span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>&lt;/div&gt;</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_all_exceptions'>all_exceptions</span> <span class='op'>=</span> <span class='id identifier rubyid_r'>r</span><span class='period'>.</span><span class='id identifier rubyid_failures'>failures</span><span class='period'>.</span><span class='id identifier rubyid_flat_map'>flat_map</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_e'>e</span><span class='op'>|</span>
+            <span class='id identifier rubyid_discover_exceptions_from_failure'>discover_exceptions_from_failure</span><span class='lparen'>(</span><span class='id identifier rubyid_e'>e</span><span class='rparen'>)</span>
+        <span class='kw'>end</span><span class='period'>.</span><span class='id identifier rubyid_uniq'>uniq</span>
+        <span class='id identifier rubyid_all_exceptions'>all_exceptions</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_e'>e</span><span class='op'>|</span>
+            <span class='id identifier rubyid_test_result_page'>test_result_page</span><span class='period'>.</span><span class='id identifier rubyid_push_exception'>push_exception</span><span class='lparen'>(</span><span class='kw'>nil</span><span class='comma'>,</span> <span class='id identifier rubyid_e'>e</span><span class='rparen'>)</span>
+        <span class='kw'>end</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="item_from_pid-instance_method">
+  
+    #<strong>item_from_pid</strong>(pid)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Resolves an item from the slave PID</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>ArgumentError</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>if there is no slave for the given PID</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+552
+553
+554</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/gui/testing.rb', line 552</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_item_from_pid'>item_from_pid</span><span class='lparen'>(</span><span class='id identifier rubyid_pid'>pid</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_item_from_slave'>item_from_slave</span><span class='lparen'>(</span><span class='id identifier rubyid_slave_from_pid'>slave_from_pid</span><span class='lparen'>(</span><span class='id identifier rubyid_pid'>pid</span><span class='rparen'>)</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="item_from_slave-instance_method">
+  
+    #<strong>item_from_slave</strong>(slave)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Resolves a slave item from its object</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>ArgumentError</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>if no such slave has been registered with <span class='object_link'><a href="#register_slave-instance_method" title="Syskit::GUI::Testing#register_slave (method)">#register_slave</a></span></p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+530
+531
+532
+533
+534
+535
+536</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/gui/testing.rb', line 530</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_item_from_slave'>item_from_slave</span><span class='lparen'>(</span><span class='id identifier rubyid_slave'>slave</span><span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_info'>info</span> <span class='op'>=</span> <span class='id identifier rubyid_slaves'>slaves</span><span class='lbracket'>[</span><span class='id identifier rubyid_slave'>slave</span><span class='period'>.</span><span class='id identifier rubyid_object_id'>object_id</span><span class='rbracket'>]</span>
+        <span class='kw'>return</span> <span class='id identifier rubyid_info'>info</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span>
+    <span class='kw'>else</span>
+        <span class='const'>Kernel</span><span class='period'>.</span><span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_slave'>slave</span><span class='embexpr_end'>}</span><span class='tstring_content'> is not registered</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="process-instance_method">
+  
+    #<strong>process</strong>(&amp;block)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+598
+599
+600
+601
+602
+603</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/gui/testing.rb', line 598</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_process'>process</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_process_lock'>process_lock</span><span class='period'>.</span><span class='id identifier rubyid_synchronize'>synchronize</span> <span class='kw'>do</span>
+        <span class='id identifier rubyid_work_queue'>work_queue</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_block'>block</span>
+        <span class='id identifier rubyid_process_sync'>process_sync</span><span class='period'>.</span><span class='id identifier rubyid_wait'>wait</span><span class='lparen'>(</span><span class='id identifier rubyid_process_lock'>process_lock</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="process_pending_work-instance_method">
+  
+    #<strong>process_pending_work</strong>  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+582
+583
+584
+585
+586
+587
+588
+589</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/gui/testing.rb', line 582</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_process_pending_work'>process_pending_work</span>
+    <span class='id identifier rubyid_process_lock'>process_lock</span><span class='period'>.</span><span class='id identifier rubyid_synchronize'>synchronize</span> <span class='kw'>do</span>
+        <span class='kw'>while</span> <span class='op'>!</span><span class='id identifier rubyid_work_queue'>work_queue</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
+            <span class='id identifier rubyid_work_queue'>work_queue</span><span class='period'>.</span><span class='id identifier rubyid_shift'>shift</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span>
+        <span class='kw'>end</span>
+        <span class='id identifier rubyid_process_sync'>process_sync</span><span class='period'>.</span><span class='id identifier rubyid_signal'>signal</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="queue_work-instance_method">
+  
+    #<strong>queue_work</strong>(&amp;block)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+592
+593
+594
+595
+596</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/gui/testing.rb', line 592</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_queue_work'>queue_work</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_process_lock'>process_lock</span><span class='period'>.</span><span class='id identifier rubyid_synchronize'>synchronize</span> <span class='kw'>do</span>
+        <span class='id identifier rubyid_work_queue'>work_queue</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_block'>block</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="register_slave-instance_method">
+  
+    #<strong>register_slave</strong>(slave)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Register a new slave and add it to the item model</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+557
+558
+559
+560
+561</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/gui/testing.rb', line 557</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_register_slave'>register_slave</span><span class='lparen'>(</span><span class='id identifier rubyid_slave'>slave</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_item'>item</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Testing/SubprocessItem.html" title="Syskit::GUI::Testing::SubprocessItem (class)">SubprocessItem</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Testing/SubprocessItem.html#initialize-instance_method" title="Syskit::GUI::Testing::SubprocessItem#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_app'>app</span><span class='comma'>,</span> <span class='id identifier rubyid_slave'>slave</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_slaves'>slaves</span><span class='lbracket'>[</span><span class='id identifier rubyid_slave'>slave</span><span class='period'>.</span><span class='id identifier rubyid_object_id'>object_id</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='id identifier rubyid_slave'>slave</span><span class='comma'>,</span> <span class='id identifier rubyid_item'>item</span><span class='rbracket'>]</span>
+    <span class='id identifier rubyid_item_model'>item_model</span><span class='period'>.</span><span class='id identifier rubyid_append_row'>append_row</span><span class='lparen'>(</span><span class='id identifier rubyid_item'>item</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="register_slave_pid-instance_method">
+  
+    #<strong>register_slave_pid</strong>(slave)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Register a PID-to-slave mapping</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>slave</span>
+      
+      
+        <span class='type'>(<tt>Autorespawn::Slave</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the slave, whose #pid attribute is expected to be set appropriately</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+567
+568
+569
+570
+571</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/gui/testing.rb', line 567</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_register_slave_pid'>register_slave_pid</span><span class='lparen'>(</span><span class='id identifier rubyid_slave'>slave</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_item'>item</span> <span class='op'>=</span> <span class='id identifier rubyid_item_from_slave'>item_from_slave</span><span class='lparen'>(</span><span class='id identifier rubyid_slave'>slave</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_pid_to_slave'>pid_to_slave</span><span class='lbracket'>[</span><span class='id identifier rubyid_slave'>slave</span><span class='period'>.</span><span class='id identifier rubyid_pid'>pid</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_slave'>slave</span>
+    <span class='id identifier rubyid_item'>item</span><span class='period'>.</span><span class='id identifier rubyid_slave_pid'>slave_pid</span> <span class='op'>=</span> <span class='id identifier rubyid_slave'>slave</span><span class='period'>.</span><span class='id identifier rubyid_pid'>pid</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="reloaded-instance_method">
+  
+    #<strong>reloaded</strong>  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Call this after reloading the app so that the list of tests gets refreshed
+as well</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+312
+313
+314
+315
+316
+317
+318</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/gui/testing.rb', line 312</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_reloaded'>reloaded</span>
+    <span class='id identifier rubyid_slaves'>slaves</span><span class='period'>.</span><span class='id identifier rubyid_clear'>clear</span>
+    <span class='id identifier rubyid_pid_to_slave'>pid_to_slave</span><span class='period'>.</span><span class='id identifier rubyid_clear'>clear</span>
+    <span class='id identifier rubyid_item_model'>item_model</span><span class='period'>.</span><span class='id identifier rubyid_clear'>clear</span>
+    <span class='id identifier rubyid_manager'>manager</span><span class='period'>.</span><span class='id identifier rubyid_clear'>clear</span>
+    <span class='id identifier rubyid_add_test_slaves'>add_test_slaves</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="restore_from_settings-instance_method">
+  
+    #<strong>restore_from_settings</strong>(settings)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+119
+120
+121
+122
+123
+124</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/gui/testing.rb', line 119</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_restore_from_settings'>restore_from_settings</span><span class='lparen'>(</span><span class='id identifier rubyid_settings'>settings</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_parallel'>parallel</span> <span class='op'>=</span> <span class='id identifier rubyid_settings'>settings</span><span class='period'>.</span><span class='id identifier rubyid_value'>value</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>parallel_level</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_parallel'>parallel</span><span class='period'>.</span><span class='id identifier rubyid_null?'>null?</span>
+        <span class='id identifier rubyid_manager'>manager</span><span class='period'>.</span><span class='id identifier rubyid_parallel_level'>parallel_level</span> <span class='op'>=</span> <span class='id identifier rubyid_parallel'>parallel</span><span class='period'>.</span><span class='id identifier rubyid_to_int'>to_int</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="running?-instance_method">
+  
+    #<strong>running?</strong>  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+263
+264
+265</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/gui/testing.rb', line 263</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_running?'>running?</span>
+    <span class='ivar'>@running</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="save_to_settings-instance_method">
+  
+    #<strong>save_to_settings</strong>(settings)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+116
+117</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/gui/testing.rb', line 116</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_save_to_settings'>save_to_settings</span><span class='lparen'>(</span><span class='id identifier rubyid_settings'>settings</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="slave_from_pid-instance_method">
+  
+    #<strong>slave_from_pid</strong>(pid)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Resolves a slave from its PID</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>ArgumentError</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>if there is no slave associated to this PID</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+541
+542
+543
+544
+545
+546
+547</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/gui/testing.rb', line 541</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_slave_from_pid'>slave_from_pid</span><span class='lparen'>(</span><span class='id identifier rubyid_pid'>pid</span><span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_slave'>slave</span> <span class='op'>=</span> <span class='id identifier rubyid_pid_to_slave'>pid_to_slave</span><span class='lbracket'>[</span><span class='id identifier rubyid_pid'>pid</span><span class='rbracket'>]</span>
+        <span class='kw'>return</span> <span class='id identifier rubyid_slave'>slave</span>
+    <span class='kw'>else</span>
+        <span class='const'>Kernel</span><span class='period'>.</span><span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>no slave registered for PID </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_pid'>pid</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="start-instance_method">
+  
+    #<strong>start</strong>  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+267
+268
+269
+270
+271
+272</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/gui/testing.rb', line 267</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_start'>start</span>
+    <span class='kw'>return</span> <span class='kw'>if</span> <span class='id identifier rubyid_running?'>running?</span>
+    <span class='ivar'>@running</span> <span class='op'>=</span> <span class='kw'>true</span>
+    <span class='id identifier rubyid_emit'>emit</span> <span class='id identifier rubyid_statsChanged'>statsChanged</span>
+    <span class='id identifier rubyid_emit'>emit</span> <span class='id identifier rubyid_started'>started</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="stats-instance_method">
+  
+    #<strong>stats</strong>  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+286
+287
+288
+289
+290
+291
+292
+293
+294
+295
+296
+297
+298
+299</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/gui/testing.rb', line 286</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_stats'>stats</span>
+    <span class='id identifier rubyid_stats'>stats</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Testing/Stats.html" title="Syskit::GUI::Testing::Stats (class)">Stats</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="#initialize-instance_method" title="Syskit::GUI::Testing#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_manager'>manager</span><span class='period'>.</span><span class='id identifier rubyid_slave_count'>slave_count</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_slaves'>slaves</span><span class='period'>.</span><span class='id identifier rubyid_each_value'>each_value</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid__'>_</span><span class='comma'>,</span> <span class='id identifier rubyid_slave'>slave</span><span class='op'>|</span>
+        <span class='id identifier rubyid_stats'>stats</span><span class='period'>.</span><span class='id identifier rubyid_executed_test_count'>executed_test_count</span> <span class='op'>+=</span> <span class='int'>1</span> <span class='kw'>if</span> <span class='id identifier rubyid_slave'>slave</span><span class='period'>.</span><span class='id identifier rubyid_has_tested?'>has_tested?</span>
+        <span class='id identifier rubyid_stats'>stats</span><span class='period'>.</span><span class='id identifier rubyid_executed_count'>executed_count</span> <span class='op'>+=</span> <span class='int'>1</span> <span class='kw'>if</span> <span class='id identifier rubyid_slave'>slave</span><span class='period'>.</span><span class='id identifier rubyid_executed?'>executed?</span>
+        <span class='id identifier rubyid_stats'>stats</span><span class='period'>.</span><span class='id identifier rubyid_run_count'>run_count</span> <span class='op'>+=</span> <span class='id identifier rubyid_slave'>slave</span><span class='period'>.</span><span class='id identifier rubyid_run_count'>run_count</span>
+        <span class='id identifier rubyid_stats'>stats</span><span class='period'>.</span><span class='id identifier rubyid_failure_count'>failure_count</span> <span class='op'>+=</span> <span class='id identifier rubyid_slave'>slave</span><span class='period'>.</span><span class='id identifier rubyid_failure_count'>failure_count</span>
+        <span class='id identifier rubyid_stats'>stats</span><span class='period'>.</span><span class='id identifier rubyid_assertions_count'>assertions_count</span> <span class='op'>+=</span> <span class='id identifier rubyid_slave'>slave</span><span class='period'>.</span><span class='id identifier rubyid_assertions_count'>assertions_count</span>
+        <span class='id identifier rubyid_stats'>stats</span><span class='period'>.</span><span class='id identifier rubyid_skip_count'>skip_count</span> <span class='op'>+=</span> <span class='id identifier rubyid_slave'>slave</span><span class='period'>.</span><span class='id identifier rubyid_skip_count'>skip_count</span>
+    <span class='kw'>end</span>
+    <span class='comment'># Remove the &quot;self&quot; slave
+</span>    <span class='id identifier rubyid_stats'>stats</span><span class='period'>.</span><span class='id identifier rubyid_executed_count'>executed_count</span> <span class='op'>-=</span> <span class='int'>1</span>
+    <span class='id identifier rubyid_stats'>stats</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="stop-instance_method">
+  
+    #<strong>stop</strong>  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+274
+275
+276
+277
+278
+279
+280</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/gui/testing.rb', line 274</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_stop'>stop</span>
+    <span class='id identifier rubyid_manager'>manager</span><span class='period'>.</span><span class='id identifier rubyid_kill'>kill</span>
+    <span class='id identifier rubyid_process_pending_work'>process_pending_work</span>
+    <span class='ivar'>@running</span> <span class='op'>=</span> <span class='kw'>false</span>
+    <span class='id identifier rubyid_emit'>emit</span> <span class='id identifier rubyid_statsChanged'>statsChanged</span>
+    <span class='id identifier rubyid_emit'>emit</span> <span class='id identifier rubyid_stopped'>stopped</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="update_item_details-instance_method">
+  
+    #<strong>update_item_details</strong>  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+257
+258
+259
+260
+261</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/gui/testing.rb', line 257</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_update_item_details'>update_item_details</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_selected_item'>selected_item</span>
+        <span class='id identifier rubyid_display_item_details'>display_item_details</span><span class='lparen'>(</span><span class='id identifier rubyid_selected_item'>selected_item</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="update_selected_item_state-instance_method">
+  
+    #<strong>update_selected_item_state</strong>  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/gui/testing.rb', line 168</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_update_selected_item_state'>update_selected_item_state</span>
+    <span class='id identifier rubyid_item'>item</span> <span class='op'>=</span> <span class='ivar'>@selected_item</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_runtime'>runtime</span> <span class='op'>=</span> <span class='id identifier rubyid_item'>item</span><span class='period'>.</span><span class='id identifier rubyid_runtime'>runtime</span>
+        <span class='id identifier rubyid_status_text'>status_text</span> <span class='op'>=</span> <span class='id identifier rubyid_item'>item</span><span class='period'>.</span><span class='id identifier rubyid_status_text'>status_text</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>&lt;br/&gt;</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+        <span class='kw'>if</span> <span class='id identifier rubyid_item'>item</span><span class='period'>.</span><span class='id identifier rubyid_finished?'>finished?</span>
+            <span class='id identifier rubyid_test_result_page'>test_result_page</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Run %i ran for %.01fs: %s</span><span class='tstring_end'>&quot;</span></span> <span class='op'>%</span> <span class='lbracket'>[</span><span class='id identifier rubyid_item'>item</span><span class='period'>.</span><span class='id identifier rubyid_total_run_count'>total_run_count</span><span class='comma'>,</span> <span class='id identifier rubyid_runtime'>runtime</span><span class='comma'>,</span> <span class='id identifier rubyid_status_text'>status_text</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='label'>id:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>status</span><span class='tstring_end'>&#39;</span></span>
+        <span class='kw'>elsif</span> <span class='id identifier rubyid_runtime'>runtime</span> <span class='op'>=</span> <span class='id identifier rubyid_item'>item</span><span class='period'>.</span><span class='id identifier rubyid_runtime'>runtime</span>
+            <span class='id identifier rubyid_test_result_page'>test_result_page</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Run %i currently running %.01fs: %s</span><span class='tstring_end'>&quot;</span></span> <span class='op'>%</span> <span class='lbracket'>[</span><span class='id identifier rubyid_item'>item</span><span class='period'>.</span><span class='id identifier rubyid_total_run_count'>total_run_count</span><span class='comma'>,</span> <span class='id identifier rubyid_runtime'>runtime</span><span class='comma'>,</span> <span class='id identifier rubyid_status_text'>status_text</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='label'>id:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>status</span><span class='tstring_end'>&#39;</span></span>
+        <span class='kw'>end</span>
+    <span class='kw'>else</span>
+        <span class='id identifier rubyid_test_result_page'>test_result_page</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Never ran</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='label'>id:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>status</span><span class='tstring_end'>&#39;</span></span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="update_status_label-instance_method">
+  
+    #<strong>update_status_label</strong>(status_label)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+301
+302
+303
+304
+305
+306
+307
+308</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/gui/testing.rb', line 301</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_update_status_label'>update_status_label</span><span class='lparen'>(</span><span class='id identifier rubyid_status_label'>status_label</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_stats'>stats</span> <span class='op'>=</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_stats'>stats</span>
+    <span class='id identifier rubyid_state_name'>state_name</span> <span class='op'>=</span> <span class='kw'>if</span> <span class='id identifier rubyid_running?'>running?</span> <span class='kw'>then</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>RUNNING</span><span class='tstring_end'>&#39;</span></span>
+                 <span class='kw'>else</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>STOPPED</span><span class='tstring_end'>&#39;</span></span>
+                 <span class='kw'>end</span>
+    <span class='id identifier rubyid_status_label'>status_label</span><span class='period'>.</span><span class='id identifier rubyid_update_state'>update_state</span><span class='lparen'>(</span>
+        <span class='id identifier rubyid_state_name'>state_name</span><span class='comma'>,</span> <span class='label'>text:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_stats'>stats</span><span class='period'>.</span><span class='id identifier rubyid_executed_count'>executed_count</span><span class='embexpr_end'>}</span><span class='tstring_content'> of </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_stats'>stats</span><span class='period'>.</span><span class='id identifier rubyid_test_count'>test_count</span><span class='embexpr_end'>}</span><span class='tstring_content'> test files executed, </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_stats'>stats</span><span class='period'>.</span><span class='id identifier rubyid_run_count'>run_count</span><span class='embexpr_end'>}</span><span class='tstring_content'> runs, </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_stats'>stats</span><span class='period'>.</span><span class='id identifier rubyid_skip_count'>skip_count</span><span class='embexpr_end'>}</span><span class='tstring_content'> skips, </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_stats'>stats</span><span class='period'>.</span><span class='id identifier rubyid_failure_count'>failure_count</span><span class='embexpr_end'>}</span><span class='tstring_content'> failures and </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_stats'>stats</span><span class='period'>.</span><span class='id identifier rubyid_assertions_count'>assertions_count</span><span class='embexpr_end'>}</span><span class='tstring_content'> assertions</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Wed Apr 10 21:53:40 2019 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.19 (ruby-2.5.1).
+</div>
+
+    </div>
+  </body>
+</html>

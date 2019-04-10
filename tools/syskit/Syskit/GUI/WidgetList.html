@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: Syskit::GUI::WidgetList
+  
+    &mdash; Documentation by YARD 0.9.19
+  
+</title>
+
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "Syskit::GUI::WidgetList";
+  relpath = '../../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../../_index.html">Index (W)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../Syskit.html" title="Syskit (module)">Syskit</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../GUI.html" title="Syskit::GUI (module)">GUI</a></span></span>
+     &raquo; 
+    <span class="title">WidgetList</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: Syskit::GUI::WidgetList
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName">Qt::Widget</span>
+      
+        <ul class="fullTree">
+          <li><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></li>
+          
+            <li class="next">Qt::Widget</li>
+          
+            <li class="next">Syskit::GUI::WidgetList</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/syskit/gui/widget_list.rb</dd>
+  </dl>
+  
+</div>
+
+<div id="subclasses">
+  <h2>Direct Known Subclasses</h2>
+  <p class="children"><span class='object_link'><a href="BatchManager.html" title="Syskit::GUI::BatchManager (class)">BatchManager</a></span>, <span class='object_link'><a href="ExpandedJobStatus.html" title="Syskit::GUI::ExpandedJobStatus (class)">ExpandedJobStatus</a></span></p>
+</div>
+<h2>Defined Under Namespace</h2>
+<p class="children">
+  
+    
+  
+    
+      <strong class="classes">Classes:</strong> <span class='object_link'><a href="WidgetList/ListItem.html" title="Syskit::GUI::WidgetList::ListItem (class)">ListItem</a></span>
+    
+  
+</p>
+
+
+
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#add_after-instance_method" title="#add_after (instance method)">#<strong>add_after</strong>(widget, after, permanent: false)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#add_before-instance_method" title="#add_before (instance method)">#<strong>add_before</strong>(widget, before, permanent: false)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#add_separator-instance_method" title="#add_separator (instance method)">#<strong>add_separator</strong>(name, label, permanent: true)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#add_widget-instance_method" title="#add_widget (instance method)">#<strong>add_widget</strong>(w, permanent: false)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#auto_resize%3F-instance_method" title="#auto_resize? (instance method)">#<strong>auto_resize?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#children_size_updated-instance_method" title="#children_size_updated (instance method)">#<strong>children_size_updated</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#clear_widgets-instance_method" title="#clear_widgets (instance method)">#<strong>clear_widgets</strong> {|item| ... } &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Clear widgets for which the given filter returns true.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#each_widget-instance_method" title="#each_widget (instance method)">#<strong>each_widget</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Enumerate the widgets in the list.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(parent = nil, auto_resize: true)  &#x21d2; WidgetList </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>A new instance of WidgetList.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#resizeEvent-instance_method" title="#resizeEvent (instance method)">#<strong>resizeEvent</strong>(event)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  <div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    #<strong>initialize</strong>(parent = nil, auto_resize: true)  &#x21d2; <tt><span class='object_link'><a href="" title="Syskit::GUI::WidgetList (class)">WidgetList</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns a new instance of WidgetList</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/gui/widget_list.rb', line 18</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_parent'>parent</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>auto_resize:</span> <span class='kw'>true</span><span class='rparen'>)</span>
+    <span class='kw'>super</span><span class='lparen'>(</span><span class='id identifier rubyid_parent'>parent</span><span class='rparen'>)</span>
+
+    <span class='ivar'>@main_layout</span> <span class='op'>=</span> <span class='const'>Qt</span><span class='op'>::</span><span class='const'>VBoxLayout</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='kw'>self</span><span class='rparen'>)</span>
+    <span class='ivar'>@widgets</span> <span class='op'>=</span> <span class='const'>Array</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+    <span class='ivar'>@main_layout</span><span class='period'>.</span><span class='id identifier rubyid_size_constraint'>size_constraint</span> <span class='op'>=</span> <span class='const'>Qt</span><span class='op'>::</span><span class='const'>Layout</span><span class='op'>::</span><span class='const'>SetMinAndMaxSize</span>
+    <span class='ivar'>@auto_resize</span> <span class='op'>=</span> <span class='id identifier rubyid_auto_resize'>auto_resize</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_auto_resize'>auto_resize</span>
+        <span class='ivar'>@main_layout</span><span class='period'>.</span><span class='id identifier rubyid_add_stretch'>add_stretch</span><span class='lparen'>(</span><span class='int'>1</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+    <span class='ivar'>@separators</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="add_after-instance_method">
+  
+    #<strong>add_after</strong>(widget, after, permanent: false)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/gui/widget_list.rb', line 49</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_add_after'>add_after</span><span class='lparen'>(</span><span class='id identifier rubyid_widget'>widget</span><span class='comma'>,</span> <span class='id identifier rubyid_after'>after</span><span class='comma'>,</span> <span class='label'>permanent:</span> <span class='kw'>false</span><span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_after'>after</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='symbol'>:to_str</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_after'>after</span> <span class='op'>=</span> <span class='ivar'>@separators</span><span class='period'>.</span><span class='id identifier rubyid_fetch'>fetch</span><span class='lparen'>(</span><span class='id identifier rubyid_after'>after</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+
+    <span class='kw'>if</span> <span class='id identifier rubyid_i'>i</span> <span class='op'>=</span> <span class='ivar'>@widgets</span><span class='period'>.</span><span class='id identifier rubyid_index'>index</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_w'>w</span><span class='op'>|</span> <span class='id identifier rubyid_w'>w</span><span class='period'>.</span><span class='id identifier rubyid_widget'>widget</span> <span class='op'>==</span> <span class='id identifier rubyid_after'>after</span> <span class='rbrace'>}</span>
+        <span class='ivar'>@main_layout</span><span class='period'>.</span><span class='id identifier rubyid_insert_widget'>insert_widget</span><span class='lparen'>(</span><span class='id identifier rubyid_i'>i</span> <span class='op'>+</span> <span class='int'>1</span><span class='comma'>,</span> <span class='id identifier rubyid_widget'>widget</span><span class='rparen'>)</span>
+        <span class='ivar'>@widgets</span><span class='period'>.</span><span class='id identifier rubyid_insert'>insert</span><span class='lparen'>(</span><span class='id identifier rubyid_i'>i</span> <span class='op'>+</span> <span class='int'>1</span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="WidgetList/ListItem.html" title="Syskit::GUI::WidgetList::ListItem (class)">ListItem</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="#initialize-instance_method" title="Syskit::GUI::WidgetList#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_widget'>widget</span><span class='comma'>,</span> <span class='id identifier rubyid_permanent'>permanent</span><span class='rparen'>)</span><span class='rparen'>)</span>
+    <span class='kw'>else</span> <span class='const'>Kernel</span><span class='period'>.</span><span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_after'>after</span><span class='embexpr_end'>}</span><span class='tstring_content'> is not part of </span><span class='embexpr_beg'>#{</span><span class='kw'>self</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="add_before-instance_method">
+  
+    #<strong>add_before</strong>(widget, before, permanent: false)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/gui/widget_list.rb', line 37</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_add_before'>add_before</span><span class='lparen'>(</span><span class='id identifier rubyid_widget'>widget</span><span class='comma'>,</span> <span class='id identifier rubyid_before'>before</span><span class='comma'>,</span> <span class='label'>permanent:</span> <span class='kw'>false</span><span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_before'>before</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='symbol'>:to_str</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_before'>before</span> <span class='op'>=</span> <span class='ivar'>@separators</span><span class='period'>.</span><span class='id identifier rubyid_fetch'>fetch</span><span class='lparen'>(</span><span class='id identifier rubyid_before'>before</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+
+    <span class='kw'>if</span> <span class='id identifier rubyid_i'>i</span> <span class='op'>=</span> <span class='ivar'>@widgets</span><span class='period'>.</span><span class='id identifier rubyid_index'>index</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_w'>w</span><span class='op'>|</span> <span class='id identifier rubyid_w'>w</span><span class='period'>.</span><span class='id identifier rubyid_widget'>widget</span> <span class='op'>==</span> <span class='id identifier rubyid_before'>before</span> <span class='rbrace'>}</span>
+        <span class='ivar'>@main_layout</span><span class='period'>.</span><span class='id identifier rubyid_insert_widget'>insert_widget</span><span class='lparen'>(</span><span class='id identifier rubyid_i'>i</span><span class='comma'>,</span> <span class='id identifier rubyid_widget'>widget</span><span class='rparen'>)</span>
+        <span class='ivar'>@widgets</span><span class='period'>.</span><span class='id identifier rubyid_insert'>insert</span><span class='lparen'>(</span><span class='id identifier rubyid_i'>i</span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="WidgetList/ListItem.html" title="Syskit::GUI::WidgetList::ListItem (class)">ListItem</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="#initialize-instance_method" title="Syskit::GUI::WidgetList#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_widget'>widget</span><span class='comma'>,</span> <span class='id identifier rubyid_permanent'>permanent</span><span class='rparen'>)</span><span class='rparen'>)</span>
+    <span class='kw'>else</span> <span class='const'>Kernel</span><span class='period'>.</span><span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_before'>before</span><span class='embexpr_end'>}</span><span class='tstring_content'> is not part of </span><span class='embexpr_beg'>#{</span><span class='kw'>self</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="add_separator-instance_method">
+  
+    #<strong>add_separator</strong>(name, label, permanent: true)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+31
+32
+33
+34
+35</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/gui/widget_list.rb', line 31</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_add_separator'>add_separator</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_label'>label</span><span class='comma'>,</span> <span class='label'>permanent:</span> <span class='kw'>true</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_add_widget'>add_widget</span><span class='lparen'>(</span><span class='id identifier rubyid_w'>w</span> <span class='op'>=</span> <span class='const'>Qt</span><span class='op'>::</span><span class='const'>Label</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_label'>label</span><span class='comma'>,</span> <span class='kw'>self</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='label'>permanent:</span> <span class='id identifier rubyid_permanent'>permanent</span><span class='rparen'>)</span>
+    <span class='ivar'>@separators</span><span class='lbracket'>[</span><span class='id identifier rubyid_name'>name</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_w'>w</span>
+    <span class='id identifier rubyid_w'>w</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="add_widget-instance_method">
+  
+    #<strong>add_widget</strong>(w, permanent: false)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+61
+62
+63
+64
+65
+66
+67
+68</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/gui/widget_list.rb', line 61</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_add_widget'>add_widget</span><span class='lparen'>(</span><span class='id identifier rubyid_w'>w</span><span class='comma'>,</span> <span class='label'>permanent:</span> <span class='kw'>false</span><span class='rparen'>)</span>
+    <span class='ivar'>@widgets</span> <span class='op'>&lt;&lt;</span> <span class='const'><span class='object_link'><a href="WidgetList/ListItem.html" title="Syskit::GUI::WidgetList::ListItem (class)">ListItem</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="#initialize-instance_method" title="Syskit::GUI::WidgetList#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_w'>w</span><span class='comma'>,</span> <span class='id identifier rubyid_permanent'>permanent</span><span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_auto_resize?'>auto_resize?</span>
+        <span class='ivar'>@main_layout</span><span class='period'>.</span><span class='id identifier rubyid_insert_widget'>insert_widget</span><span class='lparen'>(</span><span class='ivar'>@widgets</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span> <span class='op'>-</span> <span class='int'>1</span><span class='comma'>,</span> <span class='id identifier rubyid_w'>w</span><span class='rparen'>)</span>
+    <span class='kw'>else</span>
+        <span class='ivar'>@main_layout</span><span class='period'>.</span><span class='id identifier rubyid_add_widget'>add_widget</span><span class='lparen'>(</span><span class='id identifier rubyid_w'>w</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="auto_resize?-instance_method">
+  
+    #<strong>auto_resize?</strong>  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+4
+5
+6</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/gui/widget_list.rb', line 4</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_auto_resize?'>auto_resize?</span>
+    <span class='ivar'>@auto_resize</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="children_size_updated-instance_method">
+  
+    #<strong>children_size_updated</strong>  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/gui/widget_list.rb', line 70</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_children_size_updated'>children_size_updated</span>
+    <span class='id identifier rubyid_s'>s</span> <span class='op'>=</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span>
+    <span class='id identifier rubyid_new_height'>new_height</span> <span class='op'>=</span> <span class='ivar'>@widgets</span><span class='period'>.</span><span class='id identifier rubyid_inject'>inject</span><span class='lparen'>(</span><span class='int'>0</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_h'>h</span><span class='comma'>,</span> <span class='id identifier rubyid_w'>w</span><span class='op'>|</span>
+        <span class='id identifier rubyid_h'>h</span> <span class='op'>+</span> <span class='kw'>if</span> <span class='id identifier rubyid_w'>w</span><span class='period'>.</span><span class='id identifier rubyid_widget'>widget</span><span class='period'>.</span><span class='id identifier rubyid_hidden?'>hidden?</span> <span class='kw'>then</span> <span class='int'>0</span>
+            <span class='kw'>else</span> <span class='id identifier rubyid_w'>w</span><span class='period'>.</span><span class='id identifier rubyid_widget'>widget</span><span class='period'>.</span><span class='id identifier rubyid_contents_height'>contents_height</span>
+            <span class='kw'>end</span>
+    <span class='kw'>end</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_new_height'>new_height</span> <span class='op'>!=</span> <span class='id identifier rubyid_s'>s</span><span class='period'>.</span><span class='id identifier rubyid_height'>height</span>
+        <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span> <span class='op'>=</span> <span class='id identifier rubyid_s'>s</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="clear_widgets-instance_method">
+  
+    #<strong>clear_widgets</strong> {|item| ... } &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Clear widgets for which the given filter returns true</p>
+
+<p>It removes all widgets if no filter is given</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Yield Parameters:</p>
+<ul class="yieldparam">
+  
+    <li>
+      
+        <span class='name'>item</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="WidgetList/ListItem.html" title="Syskit::GUI::WidgetList::ListItem (class)">ListItem</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/gui/widget_list.rb', line 102</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_clear_widgets'>clear_widgets</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_filter'>filter</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_filter'>filter</span> <span class='op'>||=</span> <span class='tlambda'>-&gt;</span><span class='lparen'>(</span><span class='id identifier rubyid_w'>w</span><span class='rparen'>)</span> <span class='tlambeg'>{</span> <span class='kw'>true</span> <span class='rbrace'>}</span>
+    <span class='id identifier rubyid_separators'>separators</span> <span class='op'>=</span> <span class='ivar'>@separators</span><span class='period'>.</span><span class='id identifier rubyid_values'>values</span>
+
+    <span class='id identifier rubyid_kept_widgets'>kept_widgets</span> <span class='op'>=</span> <span class='const'>Array</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+    <span class='kw'>while</span> <span class='op'>!</span><span class='ivar'>@widgets</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
+        <span class='id identifier rubyid_w'>w</span> <span class='op'>=</span> <span class='ivar'>@widgets</span><span class='period'>.</span><span class='id identifier rubyid_last'>last</span>
+        <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_separators'>separators</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='id identifier rubyid_w'>w</span><span class='period'>.</span><span class='id identifier rubyid_widget'>widget</span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span> <span class='op'>!</span><span class='id identifier rubyid_w'>w</span><span class='period'>.</span><span class='id identifier rubyid_permanent?'>permanent?</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_filter'>filter</span><span class='lbracket'>[</span><span class='id identifier rubyid_w'>w</span><span class='period'>.</span><span class='id identifier rubyid_widget'>widget</span><span class='rbracket'>]</span>
+            <span class='ivar'>@main_layout</span><span class='period'>.</span><span class='id identifier rubyid_remove_widget'>remove_widget</span><span class='lparen'>(</span><span class='id identifier rubyid_w'>w</span><span class='period'>.</span><span class='id identifier rubyid_widget'>widget</span><span class='rparen'>)</span>
+            <span class='id identifier rubyid_w'>w</span><span class='period'>.</span><span class='id identifier rubyid_widget'>widget</span><span class='period'>.</span><span class='id identifier rubyid_dispose'>dispose</span>
+        <span class='kw'>else</span>
+            <span class='id identifier rubyid_kept_widgets'>kept_widgets</span><span class='period'>.</span><span class='id identifier rubyid_unshift'>unshift</span> <span class='id identifier rubyid_w'>w</span>
+        <span class='kw'>end</span>
+        <span class='ivar'>@widgets</span><span class='period'>.</span><span class='id identifier rubyid_pop'>pop</span>
+    <span class='kw'>end</span>
+<span class='kw'>ensure</span>
+    <span class='ivar'>@widgets</span><span class='period'>.</span><span class='id identifier rubyid_concat'>concat</span><span class='lparen'>(</span><span class='id identifier rubyid_kept_widgets'>kept_widgets</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="each_widget-instance_method">
+  
+    #<strong>each_widget</strong>  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Enumerate the widgets in the list</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+90
+91
+92
+93
+94
+95</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/gui/widget_list.rb', line 90</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_each_widget'>each_widget</span>
+    <span class='kw'>return</span> <span class='id identifier rubyid_enum_for'>enum_for</span><span class='lparen'>(</span><span class='id identifier rubyid___method__'>__method__</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_block_given?'>block_given?</span>
+    <span class='ivar'>@widgets</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_item'>item</span><span class='op'>|</span>
+        <span class='kw'>yield</span><span class='lparen'>(</span><span class='id identifier rubyid_item'>item</span><span class='period'>.</span><span class='id identifier rubyid_widget'>widget</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="resizeEvent-instance_method">
+  
+    #<strong>resizeEvent</strong>(event)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+82
+83
+84
+85
+86
+87</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/gui/widget_list.rb', line 82</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_resizeEvent'>resizeEvent</span><span class='lparen'>(</span><span class='id identifier rubyid_event'>event</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_s'>s</span> <span class='op'>=</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span>
+    <span class='id identifier rubyid_s'>s</span><span class='period'>.</span><span class='id identifier rubyid_width'>width</span> <span class='op'>=</span> <span class='id identifier rubyid_event'>event</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span><span class='period'>.</span><span class='id identifier rubyid_width'>width</span>
+    <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span> <span class='op'>=</span> <span class='id identifier rubyid_s'>s</span>
+    <span class='id identifier rubyid_event'>event</span><span class='period'>.</span><span class='id identifier rubyid_accept'>accept</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Wed Apr 10 21:54:29 2019 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.19 (ruby-2.5.1).
+</div>
+
+    </div>
+  </body>
+</html>

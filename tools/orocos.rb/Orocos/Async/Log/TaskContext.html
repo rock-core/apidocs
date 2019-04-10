@@ -1,0 +1,1125 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: Orocos::Async::Log::TaskContext
+  
+    &mdash; Documentation by YARD 0.9.19
+  
+</title>
+
+  <link rel="stylesheet" href="../../../css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../../../css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "Orocos::Async::Log::TaskContext";
+  relpath = '../../../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../../../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../../../_index.html">Index (T)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../../Orocos.html" title="Orocos (module)">Orocos</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../../Async.html" title="Orocos::Async (module)">Async</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Log.html" title="Orocos::Async::Log (module)">Log</a></span></span>
+     &raquo; 
+    <span class="title">TaskContext</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: Orocos::Async::Log::TaskContext
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName"><span class='object_link'><a href="../ObjectBase.html" title="Orocos::Async::ObjectBase (class)">ObjectBase</a></span></span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next"><span class='object_link'><a href="../ObjectBase.html" title="Orocos::Async::ObjectBase (class)">ObjectBase</a></span></li>
+          
+            <li class="next">Orocos::Async::Log::TaskContext</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  <dl>
+      <dt>Extended by:</dt>
+      <dd><span class='object_link'><a href="../ObjectBase/Periodic/ClassMethods.html" title="Orocos::Async::ObjectBase::Periodic::ClassMethods (module)">ObjectBase::Periodic::ClassMethods</a></span>, Utilrb::EventLoop::Forwardable</dd>
+  </dl>
+  
+  
+  
+  <dl>
+      <dt>Includes:</dt>
+      <dd><span class='object_link'><a href="../ObjectBase/Periodic.html" title="Orocos::Async::ObjectBase::Periodic (module)">ObjectBase::Periodic</a></span></dd>
+  </dl>
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/orocos/async/log/task_context.rb</dd>
+  </dl>
+  
+</div>
+
+
+
+
+
+
+
+  <h2>Instance Attribute Summary</h2>
+  
+  <h3 class="inherited">Attributes included from <span class='object_link'><a href="../ObjectBase/Periodic/ClassMethods.html" title="Orocos::Async::ObjectBase::Periodic::ClassMethods (module)">ObjectBase::Periodic::ClassMethods</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../ObjectBase/Periodic/ClassMethods.html#default_period-instance_method" title="Orocos::Async::ObjectBase::Periodic::ClassMethods#default_period (method)">#default_period</a></span></p>
+
+  
+  
+  <h3 class="inherited">Attributes inherited from <span class='object_link'><a href="../ObjectBase.html" title="Orocos::Async::ObjectBase (class)">ObjectBase</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../ObjectBase.html#emitting-instance_method" title="Orocos::Async::ObjectBase#emitting (method)">#emitting</a></span>, <span class='object_link'><a href="../ObjectBase.html#event_loop-instance_method" title="Orocos::Async::ObjectBase#event_loop (method)">#event_loop</a></span>, <span class='object_link'><a href="../ObjectBase.html#name-instance_method" title="Orocos::Async::ObjectBase#name (method)">#name</a></span>, <span class='object_link'><a href="../ObjectBase.html#options-instance_method" title="Orocos::Async::ObjectBase#options (method)">#options</a></span>, <span class='object_link'><a href="../ObjectBase.html#pending_adds-instance_method" title="Orocos::Async::ObjectBase#pending_adds (method)">#pending_adds</a></span></p>
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#attribute-instance_method" title="#attribute (instance method)">#<strong>attribute</strong>(name, options = {}, &amp;block)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#each_attribute-instance_method" title="#each_attribute (instance method)">#<strong>each_attribute</strong>(&amp;block)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>call-seq:  task.each_attribute { |a| … } =&gt; task.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#each_port-instance_method" title="#each_port (instance method)">#<strong>each_port</strong>(&amp;block)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>call-seq:  task.each_port { |p| … } =&gt; task.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#each_property-instance_method" title="#each_property (instance method)">#<strong>each_property</strong>(&amp;block)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>call-seq:  task.each_property { |a| … } =&gt; task.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(log_task, options = Hash.new)  &#x21d2; TaskContext </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>A new instance of TaskContext.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#port-instance_method" title="#port (instance method)">#<strong>port</strong>(name, verify = true, options = Hash.new, &amp;block)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#property-instance_method" title="#property (instance method)">#<strong>property</strong>(name, options = {}, &amp;block)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#really_add_listener-instance_method" title="#really_add_listener (instance method)">#<strong>really_add_listener</strong>(listener)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#ruby_task_context%3F-instance_method" title="#ruby_task_context? (instance method)">#<strong>ruby_task_context?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Checks whether this log task has a corresponding ruby task context.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#to_async-instance_method" title="#to_async (instance method)">#<strong>to_async</strong>(options = Hash.new)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#to_proxy-instance_method" title="#to_proxy (instance method)">#<strong>to_proxy</strong>(options = Hash.new)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#to_ruby-instance_method" title="#to_ruby (instance method)">#<strong>to_ruby</strong>  &#x21d2; RubyTasks::TaskContext </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Creates a <span class='object_link'><a href="../../RubyTasks/TaskContext.html" title="Orocos::RubyTasks::TaskContext (class)">RubyTasks::TaskContext</a></span> on which all logged values should be
+mirrored.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="../ObjectBase/Periodic.html" title="Orocos::Async::ObjectBase::Periodic (module)">ObjectBase::Periodic</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../ObjectBase/Periodic.html#default_period-instance_method" title="Orocos::Async::ObjectBase::Periodic#default_period (method)">#default_period</a></span>, <span class='object_link'><a href="../ObjectBase/Periodic.html#period-instance_method" title="Orocos::Async::ObjectBase::Periodic#period (method)">#period</a></span>, <span class='object_link'><a href="../ObjectBase/Periodic.html#period=-instance_method" title="Orocos::Async::ObjectBase::Periodic#period= (method)">#period=</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="../ObjectBase.html" title="Orocos::Async::ObjectBase (class)">ObjectBase</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../ObjectBase.html#add_listener-instance_method" title="Orocos::Async::ObjectBase#add_listener (method)">#add_listener</a></span>, <span class='object_link'><a href="../ObjectBase.html#define_event-class_method" title="Orocos::Async::ObjectBase.define_event (method)">define_event</a></span>, <span class='object_link'><a href="../ObjectBase.html#define_events-class_method" title="Orocos::Async::ObjectBase.define_events (method)">define_events</a></span>, <span class='object_link'><a href="../ObjectBase.html#disable_emitting-instance_method" title="Orocos::Async::ObjectBase#disable_emitting (method)">#disable_emitting</a></span>, <span class='object_link'><a href="../ObjectBase.html#event-instance_method" title="Orocos::Async::ObjectBase#event (method)">#event</a></span>, <span class='object_link'><a href="../ObjectBase.html#event_names-class_method" title="Orocos::Async::ObjectBase.event_names (method)">event_names</a></span>, <span class='object_link'><a href="../ObjectBase.html#event_names-instance_method" title="Orocos::Async::ObjectBase#event_names (method)">#event_names</a></span>, <span class='object_link'><a href="../ObjectBase.html#invalidate_delegator!-instance_method" title="Orocos::Async::ObjectBase#invalidate_delegator! (method)">#invalidate_delegator!</a></span>, <span class='object_link'><a href="../ObjectBase.html#listener%3F-instance_method" title="Orocos::Async::ObjectBase#listener? (method)">#listener?</a></span>, <span class='object_link'><a href="../ObjectBase.html#listeners-instance_method" title="Orocos::Async::ObjectBase#listeners (method)">#listeners</a></span>, <span class='object_link'><a href="../ObjectBase.html#number_of_listeners-instance_method" title="Orocos::Async::ObjectBase#number_of_listeners (method)">#number_of_listeners</a></span>, <span class='object_link'><a href="../ObjectBase.html#on_event-instance_method" title="Orocos::Async::ObjectBase#on_event (method)">#on_event</a></span>, <span class='object_link'><a href="../ObjectBase.html#proxy_event-instance_method" title="Orocos::Async::ObjectBase#proxy_event (method)">#proxy_event</a></span>, <span class='object_link'><a href="../ObjectBase.html#reachable!-instance_method" title="Orocos::Async::ObjectBase#reachable! (method)">#reachable!</a></span>, <span class='object_link'><a href="../ObjectBase.html#reachable%3F-instance_method" title="Orocos::Async::ObjectBase#reachable? (method)">#reachable?</a></span>, <span class='object_link'><a href="../ObjectBase.html#remove_all_listeners-instance_method" title="Orocos::Async::ObjectBase#remove_all_listeners (method)">#remove_all_listeners</a></span>, <span class='object_link'><a href="../ObjectBase.html#remove_listener-instance_method" title="Orocos::Async::ObjectBase#remove_listener (method)">#remove_listener</a></span>, <span class='object_link'><a href="../ObjectBase.html#remove_proxy_event-instance_method" title="Orocos::Async::ObjectBase#remove_proxy_event (method)">#remove_proxy_event</a></span>, <span class='object_link'><a href="../ObjectBase.html#unreachable!-instance_method" title="Orocos::Async::ObjectBase#unreachable! (method)">#unreachable!</a></span>, <span class='object_link'><a href="../ObjectBase.html#valid_delegator%3F-instance_method" title="Orocos::Async::ObjectBase#valid_delegator? (method)">#valid_delegator?</a></span>, <span class='object_link'><a href="../ObjectBase.html#valid_event%3F-class_method" title="Orocos::Async::ObjectBase.valid_event? (method)">valid_event?</a></span>, <span class='object_link'><a href="../ObjectBase.html#valid_event%3F-instance_method" title="Orocos::Async::ObjectBase#valid_event? (method)">#valid_event?</a></span>, <span class='object_link'><a href="../ObjectBase.html#validate_event-class_method" title="Orocos::Async::ObjectBase.validate_event (method)">validate_event</a></span>, <span class='object_link'><a href="../ObjectBase.html#validate_event-instance_method" title="Orocos::Async::ObjectBase#validate_event (method)">#validate_event</a></span>, <span class='object_link'><a href="../ObjectBase.html#wait-instance_method" title="Orocos::Async::ObjectBase#wait (method)">#wait</a></span></p>
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    #<strong>initialize</strong>(log_task, options = Hash.new)  &#x21d2; <tt><span class='object_link'><a href="" title="Orocos::Async::Log::TaskContext (class)">TaskContext</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns a new instance of TaskContext</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/orocos/async/log/task_context.rb', line 19</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_log_task'>log_task</span><span class='comma'>,</span><span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='rparen'>)</span>
+    <span class='ivar'>@options</span> <span class='op'>||=</span> <span class='const'>Kernel</span><span class='period'>.</span><span class='id identifier rubyid_validate_options'>validate_options</span> <span class='id identifier rubyid_options'>options</span><span class='comma'>,</span><span class='symbol'>:raise</span> <span class='op'>=&gt;</span> <span class='kw'>false</span><span class='comma'>,</span><span class='symbol'>:event_loop</span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="../../../Orocos.html" title="Orocos (module)">Orocos</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../../Async.html" title="Orocos::Async (module)">Async</a></span></span><span class='period'>.</span><span class='id identifier rubyid_event_loop'><span class='object_link'><a href="../../Async.html#event_loop-class_method" title="Orocos::Async.event_loop (method)">event_loop</a></span></span><span class='comma'>,</span><span class='symbol'>:period</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_default_period'>default_period</span>
+    <span class='kw'>super</span><span class='lparen'>(</span><span class='id identifier rubyid_log_task'>log_task</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span><span class='ivar'>@options</span><span class='lbracket'>[</span><span class='symbol'>:event_loop</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_log_task'>log_task</span><span class='period'>.</span><span class='id identifier rubyid_has_port?'>has_port?</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>state</span><span class='tstring_end'>&quot;</span></span>
+        <span class='id identifier rubyid_log_task'>log_task</span><span class='period'>.</span><span class='id identifier rubyid_port'>port</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>state</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_on_data'>on_data</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_sample'>sample</span><span class='op'>|</span>
+            <span class='id identifier rubyid_emit_state_change'>emit_state_change</span> <span class='id identifier rubyid_log_task'>log_task</span><span class='period'>.</span><span class='id identifier rubyid_state'>state</span>
+        <span class='kw'>end</span>
+    <span class='kw'>end</span>
+    <span class='comment'># do not queue reachable event no listeners are registered so far
+</span>    <span class='id identifier rubyid_disable_emitting'>disable_emitting</span> <span class='kw'>do</span> 
+        <span class='id identifier rubyid_reachable!'>reachable!</span><span class='lparen'>(</span><span class='id identifier rubyid_log_task'>log_task</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_log_task'>log_task</span><span class='period'>.</span><span class='id identifier rubyid_on_port_reachable'>on_port_reachable</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_name'>name</span><span class='op'>|</span>
+        <span class='id identifier rubyid_emit_port_reachable'>emit_port_reachable</span> <span class='id identifier rubyid_name'>name</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_log_task'>log_task</span><span class='period'>.</span><span class='id identifier rubyid_on_property_reachable'>on_property_reachable</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_name'>name</span><span class='op'>|</span>
+        <span class='id identifier rubyid_emit_property_reachable'>emit_property_reachable</span> <span class='id identifier rubyid_name'>name</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_log_task'>log_task</span><span class='period'>.</span><span class='id identifier rubyid_on_state_change'>on_state_change</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_val'>val</span><span class='op'>|</span>
+        <span class='id identifier rubyid_emit_state_change'>emit_state_change</span> <span class='id identifier rubyid_val'>val</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="attribute-instance_method">
+  
+    #<strong>attribute</strong>(name, options = {}, &amp;block)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+92
+93
+94
+95
+96
+97
+98
+99
+100</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/orocos/async/log/task_context.rb', line 92</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_attribute'>attribute</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span><span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_block'>block</span>
+        <span class='id identifier rubyid_orig_attribute'>orig_attribute</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_attr'>attr</span><span class='op'>|</span>
+            <span class='id identifier rubyid_block'>block</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span> <span class='const'><span class='object_link'><a href="Attribute.html" title="Orocos::Async::Log::Attribute (class)">Attribute</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="AttributeBase.html#initialize-instance_method" title="Orocos::Async::Log::AttributeBase#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='kw'>self</span><span class='comma'>,</span><span class='id identifier rubyid_attr'>attr</span><span class='rparen'>)</span>
+        <span class='kw'>end</span>
+    <span class='kw'>else</span>
+        <span class='const'><span class='object_link'><a href="Attribute.html" title="Orocos::Async::Log::Attribute (class)">Attribute</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="AttributeBase.html#initialize-instance_method" title="Orocos::Async::Log::AttributeBase#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='kw'>self</span><span class='comma'>,</span><span class='id identifier rubyid_orig_attribute'>orig_attribute</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="each_attribute-instance_method">
+  
+    #<strong>each_attribute</strong>(&amp;block)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>call-seq:</p>
+
+<pre class="code ruby"><code class="ruby">task.each_attribute { |a| ... } =&gt; task
+</code></pre>
+
+<p>Enumerates the attributes that are available on this task, as instances of
+Orocos::Attribute</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/orocos/async/log/task_context.rb', line 152</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_each_attribute'>each_attribute</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_block_given?'>block_given?</span>
+        <span class='kw'>return</span> <span class='id identifier rubyid_enum_for'>enum_for</span><span class='lparen'>(</span><span class='symbol'>:each_attribute</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+
+    <span class='id identifier rubyid_names'>names</span> <span class='op'>=</span> <span class='id identifier rubyid_attribute_names'>attribute_names</span>
+    <span class='id identifier rubyid_names'>names</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_name'>name</span><span class='op'>|</span>
+        <span class='kw'>yield</span><span class='lparen'>(</span><span class='id identifier rubyid_attribute'>attribute</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="each_port-instance_method">
+  
+    #<strong>each_port</strong>(&amp;block)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>call-seq:</p>
+
+<pre class="code ruby"><code class="ruby">task.each_port { |p| ... } =&gt; task
+</code></pre>
+
+<p>Enumerates the ports that are available on this task, as instances of
+either Orocos::InputPort or Orocos::OutputPort</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/orocos/async/log/task_context.rb', line 168</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_each_port'>each_port</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_block_given?'>block_given?</span>
+        <span class='kw'>return</span> <span class='id identifier rubyid_enum_for'>enum_for</span><span class='lparen'>(</span><span class='symbol'>:each_port</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+
+    <span class='id identifier rubyid_port_names'>port_names</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_name'>name</span><span class='op'>|</span>
+        <span class='kw'>yield</span><span class='lparen'>(</span><span class='id identifier rubyid_port'>port</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+    <span class='kw'>self</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="each_property-instance_method">
+  
+    #<strong>each_property</strong>(&amp;block)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>call-seq:</p>
+
+<pre class="code ruby"><code class="ruby">task.each_property { |a| ... } =&gt; task
+</code></pre>
+
+<p>Enumerates the properties that are available on this task, as instances of
+Orocos::Attribute</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/orocos/async/log/task_context.rb', line 136</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_each_property'>each_property</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_block_given?'>block_given?</span>
+        <span class='kw'>return</span> <span class='id identifier rubyid_enum_for'>enum_for</span><span class='lparen'>(</span><span class='symbol'>:each_property</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_names'>names</span> <span class='op'>=</span> <span class='id identifier rubyid_property_names'>property_names</span>
+    <span class='id identifier rubyid_puts'>puts</span> <span class='id identifier rubyid_names'>names</span>
+    <span class='id identifier rubyid_names'>names</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_name'>name</span><span class='op'>|</span>
+        <span class='kw'>yield</span><span class='lparen'>(</span><span class='id identifier rubyid_property'>property</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="port-instance_method">
+  
+    #<strong>port</strong>(name, verify = true, options = Hash.new, &amp;block)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+112
+113
+114
+115
+116
+117
+118
+119
+120</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/orocos/async/log/task_context.rb', line 112</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_port'>port</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_verify'>verify</span> <span class='op'>=</span> <span class='kw'>true</span><span class='comma'>,</span><span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='comma'>,</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_block'>block</span>
+        <span class='id identifier rubyid_orig_port'>orig_port</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span><span class='id identifier rubyid_verify'>verify</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_port'>port</span><span class='op'>|</span>
+            <span class='id identifier rubyid_block'>block</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span> <span class='const'><span class='object_link'><a href="OutputPort.html" title="Orocos::Async::Log::OutputPort (class)">OutputPort</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="OutputPort.html#initialize-instance_method" title="Orocos::Async::Log::OutputPort#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='kw'>self</span><span class='comma'>,</span><span class='id identifier rubyid_port'>port</span><span class='rparen'>)</span>
+        <span class='kw'>end</span>
+    <span class='kw'>else</span>
+        <span class='const'><span class='object_link'><a href="OutputPort.html" title="Orocos::Async::Log::OutputPort (class)">OutputPort</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="OutputPort.html#initialize-instance_method" title="Orocos::Async::Log::OutputPort#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='kw'>self</span><span class='comma'>,</span><span class='id identifier rubyid_orig_port'>orig_port</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="property-instance_method">
+  
+    #<strong>property</strong>(name, options = {}, &amp;block)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+102
+103
+104
+105
+106
+107
+108
+109
+110</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/orocos/async/log/task_context.rb', line 102</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_property'>property</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span><span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_block'>block</span>
+        <span class='id identifier rubyid_orig_property'>orig_property</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_prop'>prop</span><span class='op'>|</span>
+            <span class='id identifier rubyid_block'>block</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span> <span class='const'><span class='object_link'><a href="Property.html" title="Orocos::Async::Log::Property (class)">Property</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="AttributeBase.html#initialize-instance_method" title="Orocos::Async::Log::AttributeBase#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='kw'>self</span><span class='comma'>,</span><span class='id identifier rubyid_prop'>prop</span><span class='rparen'>)</span>
+        <span class='kw'>end</span>
+    <span class='kw'>else</span>
+        <span class='const'><span class='object_link'><a href="Property.html" title="Orocos::Async::Log::Property (class)">Property</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="AttributeBase.html#initialize-instance_method" title="Orocos::Async::Log::AttributeBase#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='kw'>self</span><span class='comma'>,</span><span class='id identifier rubyid_orig_property'>orig_property</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="really_add_listener-instance_method">
+  
+    #<strong>really_add_listener</strong>(listener)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/orocos/async/log/task_context.rb', line 61</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_really_add_listener'>really_add_listener</span><span class='lparen'>(</span><span class='id identifier rubyid_listener'>listener</span><span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='kw'>super</span> <span class='kw'>unless</span> <span class='id identifier rubyid_listener'>listener</span><span class='period'>.</span><span class='id identifier rubyid_use_last_value?'>use_last_value?</span>
+
+    <span class='comment'># call new listeners with the current value
+</span>    <span class='comment'># to prevent different behaviors depending on
+</span>    <span class='comment'># the calling order
+</span>    <span class='kw'>if</span> <span class='id identifier rubyid_listener'>listener</span><span class='period'>.</span><span class='id identifier rubyid_event'>event</span> <span class='op'>==</span> <span class='symbol'>:state_change</span>
+        <span class='id identifier rubyid_state'>state</span> <span class='op'>=</span> <span class='ivar'>@delegator_obj</span><span class='period'>.</span><span class='id identifier rubyid_current_state'>current_state</span>
+        <span class='id identifier rubyid_event_loop'>event_loop</span><span class='period'>.</span><span class='id identifier rubyid_once'>once</span><span class='lbrace'>{</span><span class='id identifier rubyid_listener'>listener</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span> <span class='id identifier rubyid_state'>state</span><span class='rbrace'>}</span> <span class='kw'>if</span> <span class='id identifier rubyid_state'>state</span>
+    <span class='kw'>elsif</span> <span class='id identifier rubyid_listener'>listener</span><span class='period'>.</span><span class='id identifier rubyid_event'>event</span> <span class='op'>==</span> <span class='symbol'>:port_reachable</span>
+        <span class='id identifier rubyid_event_loop'>event_loop</span><span class='period'>.</span><span class='id identifier rubyid_once'>once</span> <span class='kw'>do</span>
+            <span class='id identifier rubyid_port_names'>port_names</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_name'>name</span><span class='op'>|</span>
+                <span class='id identifier rubyid_listener'>listener</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span> <span class='id identifier rubyid_name'>name</span> <span class='kw'>if</span> <span class='ivar'>@delegator_obj</span><span class='period'>.</span><span class='id identifier rubyid_port'>port</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_used?'>used?</span>
+            <span class='kw'>end</span>
+        <span class='kw'>end</span>
+    <span class='kw'>elsif</span> <span class='id identifier rubyid_listener'>listener</span><span class='period'>.</span><span class='id identifier rubyid_event'>event</span> <span class='op'>==</span> <span class='symbol'>:property_reachable</span>
+        <span class='id identifier rubyid_event_loop'>event_loop</span><span class='period'>.</span><span class='id identifier rubyid_once'>once</span> <span class='kw'>do</span>
+            <span class='id identifier rubyid_property_names'>property_names</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_name'>name</span><span class='op'>|</span>
+                <span class='id identifier rubyid_listener'>listener</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span> <span class='id identifier rubyid_name'>name</span> <span class='kw'>if</span> <span class='ivar'>@delegator_obj</span><span class='period'>.</span><span class='id identifier rubyid_property'>property</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_used?'>used?</span>
+            <span class='kw'>end</span>
+        <span class='kw'>end</span>
+    <span class='kw'>elsif</span> <span class='id identifier rubyid_listener'>listener</span><span class='period'>.</span><span class='id identifier rubyid_event'>event</span> <span class='op'>==</span> <span class='symbol'>:attribute_reachable</span>
+        <span class='id identifier rubyid_event_loop'>event_loop</span><span class='period'>.</span><span class='id identifier rubyid_once'>once</span> <span class='kw'>do</span>
+            <span class='id identifier rubyid_attribute_names'>attribute_names</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_name'>name</span><span class='op'>|</span>
+                <span class='id identifier rubyid_listener'>listener</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span> <span class='id identifier rubyid_name'>name</span> <span class='kw'>if</span> <span class='ivar'>@delegator_obj</span><span class='period'>.</span><span class='id identifier rubyid_attribute'>attribute</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_used?'>used?</span>
+            <span class='kw'>end</span>
+        <span class='kw'>end</span>
+    <span class='kw'>end</span>
+    <span class='kw'>super</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="ruby_task_context?-instance_method">
+  
+    #<strong>ruby_task_context?</strong>  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Checks whether this log task has a corresponding ruby task context</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><span class='object_link'><a href="#to_ruby-instance_method" title="Orocos::Async::Log::TaskContext#to_ruby (method)">#to_ruby</a></span></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+57
+58
+59</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/orocos/async/log/task_context.rb', line 57</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_ruby_task_context?'>ruby_task_context?</span>
+    <span class='op'>!</span><span class='op'>!</span><span class='ivar'>@ruby_task_context</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="to_async-instance_method">
+  
+    #<strong>to_async</strong>(options = Hash.new)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+122
+123
+124</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/orocos/async/log/task_context.rb', line 122</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_to_async'>to_async</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='rparen'>)</span>
+    <span class='kw'>self</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="to_proxy-instance_method">
+  
+    #<strong>to_proxy</strong>(options = Hash.new)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+126
+127
+128
+129</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/orocos/async/log/task_context.rb', line 126</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_to_proxy'>to_proxy</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:use</span><span class='rbracket'>]</span> <span class='op'>||=</span> <span class='kw'>self</span>
+    <span class='const'><span class='object_link'><a href="../../../Orocos.html" title="Orocos (module)">Orocos</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../../Async.html" title="Orocos::Async (module)">Async</a></span></span><span class='period'>.</span><span class='id identifier rubyid_proxy'><span class='object_link'><a href="../../Async.html#proxy-class_method" title="Orocos::Async.proxy (method)">proxy</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span><span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_wait'>wait</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="to_ruby-instance_method">
+  
+    #<strong>to_ruby</strong>  &#x21d2; <tt><span class='object_link'><a href="../../RubyTasks/TaskContext.html" title="Orocos::RubyTasks::TaskContext (class)">RubyTasks::TaskContext</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Creates a <span class='object_link'><a href="../../RubyTasks/TaskContext.html" title="Orocos::RubyTasks::TaskContext (class)">RubyTasks::TaskContext</a></span> on which all logged values should be
+mirrored</p>
+
+<p>It will create only one such task context, i.e. the method will always
+return the same object</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../RubyTasks/TaskContext.html" title="Orocos::RubyTasks::TaskContext (class)">RubyTasks::TaskContext</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+49
+50
+51</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/orocos/async/log/task_context.rb', line 49</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_to_ruby'>to_ruby</span>
+    <span class='ivar'>@ruby_task_context</span> <span class='op'>||=</span> <span class='const'><span class='object_link'><a href="../TaskContextBase.html" title="Orocos::Async::TaskContextBase (class)">TaskContextBase</a></span></span><span class='period'>.</span><span class='id identifier rubyid_to_ruby'><span class='object_link'><a href="../TaskContextBase.html#to_ruby-class_method" title="Orocos::Async::TaskContextBase.to_ruby (method)">to_ruby</a></span></span><span class='lparen'>(</span><span class='kw'>self</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Wed Apr 10 22:10:31 2019 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.19 (ruby-2.5.1).
+</div>
+
+    </div>
+  </body>
+</html>

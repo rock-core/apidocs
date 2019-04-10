@@ -1,0 +1,1291 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: Syskit::GUI::ComponentNetworkView
+  
+    &mdash; Documentation by YARD 0.9.19
+  
+</title>
+
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "Syskit::GUI::ComponentNetworkView";
+  relpath = '../../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../../_index.html">Index (C)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../Syskit.html" title="Syskit (module)">Syskit</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../GUI.html" title="Syskit::GUI (module)">GUI</a></span></span>
+     &raquo; 
+    <span class="title">ComponentNetworkView</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: Syskit::GUI::ComponentNetworkView
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName"><span class='object_link'><a href="ComponentNetworkBaseView.html" title="Syskit::GUI::ComponentNetworkBaseView (class)">ComponentNetworkBaseView</a></span></span>
+      
+        <ul class="fullTree">
+          <li><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></li>
+          
+            <li class="next">Qt::Object</li>
+          
+            <li class="next"><span class='object_link'><a href="ComponentNetworkBaseView.html" title="Syskit::GUI::ComponentNetworkBaseView (class)">ComponentNetworkBaseView</a></span></li>
+          
+            <li class="next">Syskit::GUI::ComponentNetworkView</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/syskit/gui/component_network_view.rb</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>Generic component network visualization</p>
+
+<p>It displays the task hierarchy as well as the dataflow network</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><div id="subclasses">
+  <h2>Direct Known Subclasses</h2>
+  <p class="children"><span class='object_link'><a href="ModelViews/Composition.html" title="Syskit::GUI::ModelViews::Composition (class)">ModelViews::Composition</a></span>, <span class='object_link'><a href="ModelViews/ProfileElementView.html" title="Syskit::GUI::ModelViews::ProfileElementView (class)">ModelViews::ProfileElementView</a></span></p>
+</div>
+
+
+
+  <h2>Constant Summary</h2>
+  
+  <h3 class="inherited">Constants inherited
+     from <span class='object_link'><a href="ComponentNetworkBaseView.html" title="Syskit::GUI::ComponentNetworkBaseView (class)">ComponentNetworkBaseView</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="ComponentNetworkBaseView.html#Button-constant" title="Syskit::GUI::ComponentNetworkBaseView::Button (constant)">Syskit::GUI::ComponentNetworkBaseView::Button</a></span>, <span class='object_link'><a href="ComponentNetworkBaseView.html#DATA_SERVICE_WITHOUT_NAMES_TEMPLATE-constant" title="Syskit::GUI::ComponentNetworkBaseView::DATA_SERVICE_WITHOUT_NAMES_TEMPLATE (constant)">Syskit::GUI::ComponentNetworkBaseView::DATA_SERVICE_WITHOUT_NAMES_TEMPLATE</a></span>, <span class='object_link'><a href="ComponentNetworkBaseView.html#DATA_SERVICE_WITH_NAMES_TEMPLATE-constant" title="Syskit::GUI::ComponentNetworkBaseView::DATA_SERVICE_WITH_NAMES_TEMPLATE (constant)">Syskit::GUI::ComponentNetworkBaseView::DATA_SERVICE_WITH_NAMES_TEMPLATE</a></span></p>
+
+
+  <h2>Instance Attribute Summary <small><a href="#" class="summary_toggle">collapse</a></small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#dataflow_options-instance_method" title="#dataflow_options (instance method)">#<strong>dataflow_options</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Default rendering options for <span class='object_link'><a href="ComponentNetworkBaseView.html#push_plan-instance_method" title="Syskit::GUI::ComponentNetworkBaseView#push_plan (method)">Syskit::GUI::ComponentNetworkBaseView#push_plan</a></span> for the
+dataflow graph.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#hierarchy_options-instance_method" title="#hierarchy_options (instance method)">#<strong>hierarchy_options</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Default rendering options for <span class='object_link'><a href="ComponentNetworkBaseView.html#push_plan-instance_method" title="Syskit::GUI::ComponentNetworkBaseView#push_plan (method)">Syskit::GUI::ComponentNetworkBaseView#push_plan</a></span> for the
+hierarchy graph.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#plan-instance_method" title="#plan (instance method)">#<strong>plan</strong>  &#x21d2; Roby::Plan </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>The plan object that holds the network we render.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#task-instance_method" title="#task (instance method)">#<strong>task</strong>  &#x21d2; Syskit::Component </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>The toplevel task for the model we render.</p>
+</div></span>
+  
+</li>
+
+    
+  </ul>
+
+
+
+  
+  
+  <h3 class="inherited">Attributes inherited from <span class='object_link'><a href="ComponentNetworkBaseView.html" title="Syskit::GUI::ComponentNetworkBaseView (class)">ComponentNetworkBaseView</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="ComponentNetworkBaseView.html#current_model-instance_method" title="Syskit::GUI::ComponentNetworkBaseView#current_model (method)">#current_model</a></span>, <span class='object_link'><a href="ComponentNetworkBaseView.html#page-instance_method" title="Syskit::GUI::ComponentNetworkBaseView#page (method)">#page</a></span></p>
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(page)  &#x21d2; ComponentNetworkView </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>A new instance of ComponentNetworkView.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#process_options-instance_method" title="#process_options (instance method)">#<strong>process_options</strong>(kind, model, options)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#render-instance_method" title="#render (instance method)">#<strong>render</strong>(model, method: :instanciate_model, name: nil, show_requirements: false, instanciate_options: Hash.new, dataflow: Hash.new, hierarchy: Hash.new, **render_options)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Render a model on this view.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#render_plan-instance_method" title="#render_plan (instance method)">#<strong>render_plan</strong>(hierarchy: Hash.new, dataflow: Hash.new, **options)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Renders <span class='object_link'><a href="#plan-instance_method" title="Syskit::GUI::ComponentNetworkView#plan (method)">#plan</a></span>.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#view_partial_plans=-instance_method" title="#view_partial_plans= (instance method)">#<strong>view_partial_plans=</strong>(flag)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Whether the plan should be displayed regardless of errors during deployment
+or not.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#view_partial_plans%3F-instance_method" title="#view_partial_plans? (instance method)">#<strong>view_partial_plans?</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Whether the plan should be displayed regardless of errors during deployment
+or not.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="ComponentNetworkBaseView.html" title="Syskit::GUI::ComponentNetworkBaseView (class)">ComponentNetworkBaseView</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="ComponentNetworkBaseView.html#buttonClicked-instance_method" title="Syskit::GUI::ComponentNetworkBaseView#buttonClicked (method)">#buttonClicked</a></span>, <span class='object_link'><a href="ComponentNetworkBaseView.html#clear-instance_method" title="Syskit::GUI::ComponentNetworkBaseView#clear (method)">#clear</a></span>, <span class='object_link'><a href="ComponentNetworkBaseView.html#common_graph_buttons-class_method" title="Syskit::GUI::ComponentNetworkBaseView.common_graph_buttons (method)">common_graph_buttons</a></span>, <span class='object_link'><a href="ComponentNetworkBaseView.html#compute_system_network-instance_method" title="Syskit::GUI::ComponentNetworkBaseView#compute_system_network (method)">#compute_system_network</a></span>, <span class='object_link'><a href="ComponentNetworkBaseView.html#disable-instance_method" title="Syskit::GUI::ComponentNetworkBaseView#disable (method)">#disable</a></span>, <span class='object_link'><a href="ComponentNetworkBaseView.html#enable-instance_method" title="Syskit::GUI::ComponentNetworkBaseView#enable (method)">#enable</a></span>, <span class='object_link'><a href="ComponentNetworkBaseView.html#find_definition_place-class_method" title="Syskit::GUI::ComponentNetworkBaseView.find_definition_place (method)">find_definition_place</a></span>, <span class='object_link'><a href="ComponentNetworkBaseView.html#graph_annotation_buttons-class_method" title="Syskit::GUI::ComponentNetworkBaseView.graph_annotation_buttons (method)">graph_annotation_buttons</a></span>, <span class='object_link'><a href="ComponentNetworkBaseView.html#html_defined_in-class_method" title="Syskit::GUI::ComponentNetworkBaseView.html_defined_in (method)">html_defined_in</a></span>, <span class='object_link'><a href="ComponentNetworkBaseView.html#instanciate_model-instance_method" title="Syskit::GUI::ComponentNetworkBaseView#instanciate_model (method)">#instanciate_model</a></span>, <span class='object_link'><a href="ComponentNetworkBaseView.html#list_services-instance_method" title="Syskit::GUI::ComponentNetworkBaseView#list_services (method)">#list_services</a></span>, <span class='object_link'><a href="ComponentNetworkBaseView.html#make_annotation_buttons-class_method" title="Syskit::GUI::ComponentNetworkBaseView.make_annotation_buttons (method)">make_annotation_buttons</a></span>, <span class='object_link'><a href="ComponentNetworkBaseView.html#push_plan-instance_method" title="Syskit::GUI::ComponentNetworkBaseView#push_plan (method)">#push_plan</a></span>, <span class='object_link'><a href="ComponentNetworkBaseView.html#render_data_services-instance_method" title="Syskit::GUI::ComponentNetworkBaseView#render_data_services (method)">#render_data_services</a></span>, <span class='object_link'><a href="ComponentNetworkBaseView.html#render_require_section-instance_method" title="Syskit::GUI::ComponentNetworkBaseView#render_require_section (method)">#render_require_section</a></span>, <span class='object_link'><a href="ComponentNetworkBaseView.html#save_svg-instance_method" title="Syskit::GUI::ComponentNetworkBaseView#save_svg (method)">#save_svg</a></span>, <span class='object_link'><a href="ComponentNetworkBaseView.html#task_annotation_buttons-class_method" title="Syskit::GUI::ComponentNetworkBaseView.task_annotation_buttons (method)">task_annotation_buttons</a></span></p>
+
+  <div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    #<strong>initialize</strong>(page)  &#x21d2; <tt><span class='object_link'><a href="" title="Syskit::GUI::ComponentNetworkView (class)">ComponentNetworkView</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns a new instance of ComponentNetworkView</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/gui/component_network_view.rb', line 34</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_page'>page</span><span class='rparen'>)</span>
+    <span class='kw'>super</span>
+    <span class='ivar'>@view_partial_plans</span> <span class='op'>=</span> <span class='kw'>true</span>
+    <span class='ivar'>@plan</span> <span class='op'>=</span> <span class='const'>Roby</span><span class='op'>::</span><span class='const'>Plan</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+
+    <span class='ivar'>@hierarchy_options</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='lbracket'>[</span>
+        <span class='label'>title:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Task Dependency Hierarchy</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+        <span class='label'>id:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hierarchy</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+        <span class='label'>remove_compositions:</span> <span class='kw'>false</span><span class='comma'>,</span>
+        <span class='label'>annotations:</span> <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>task_info</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>port_details</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_set'>to_set</span><span class='comma'>,</span>
+        <span class='label'>zoom:</span> <span class='int'>1</span>
+    <span class='rbracket'>]</span>
+    <span class='ivar'>@dataflow_options</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='lbracket'>[</span>
+        <span class='label'>title:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Dataflow</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+        <span class='label'>id:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>dataflow</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+        <span class='label'>remove_compositions:</span> <span class='kw'>false</span><span class='comma'>,</span>
+        <span class='label'>show_all_ports:</span> <span class='kw'>false</span><span class='comma'>,</span>
+        <span class='label'>annotations:</span> <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>task_info</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_set'>to_set</span><span class='comma'>,</span>
+        <span class='label'>excluded_models:</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='comma'>,</span>
+        <span class='label'>zoom:</span> <span class='int'>1</span>
+    <span class='rbracket'>]</span>
+
+    <span class='id identifier rubyid_buttons'>buttons</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+    <span class='id identifier rubyid_buttons'>buttons</span> <span class='op'>&lt;&lt;</span> <span class='const'><span class='object_link'><a href="ComponentNetworkBaseView.html#Button-constant" title="Syskit::GUI::ComponentNetworkBaseView::Button (constant)">Button</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="ComponentNetworkBaseView.html#initialize-instance_method" title="Syskit::GUI::ComponentNetworkBaseView#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>dataflow/show_compositions</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+                          <span class='label'>on_text:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Show compositions</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+                          <span class='label'>off_text:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Hide compositions</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+                          <span class='label'>state:</span> <span class='op'>!</span><span class='id identifier rubyid_dataflow_options'>dataflow_options</span><span class='lbracket'>[</span><span class='symbol'>:remove_compositions</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_buttons'>buttons</span> <span class='op'>&lt;&lt;</span> <span class='const'><span class='object_link'><a href="ComponentNetworkBaseView.html#Button-constant" title="Syskit::GUI::ComponentNetworkBaseView::Button (constant)">Button</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="ComponentNetworkBaseView.html#initialize-instance_method" title="Syskit::GUI::ComponentNetworkBaseView#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>dataflow/show_all_ports</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+                          <span class='label'>on_text:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Show all ports</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+                          <span class='label'>off_text:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Hide unused ports</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+                          <span class='label'>state:</span> <span class='id identifier rubyid_dataflow_options'>dataflow_options</span><span class='lbracket'>[</span><span class='symbol'>:show_all_ports</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+
+    <span class='kw'>if</span> <span class='kw'>defined?</span> <span class='const'><span class='object_link'><a href="../../OroGen.html" title="OroGen (module)">OroGen</a></span></span><span class='op'>::</span><span class='const'>Logger</span><span class='op'>::</span><span class='const'>Logger</span>
+        <span class='id identifier rubyid_dataflow_options'>dataflow_options</span><span class='lbracket'>[</span><span class='symbol'>:excluded_models</span><span class='rbracket'>]</span> <span class='op'>&lt;&lt;</span> <span class='const'><span class='object_link'><a href="../../OroGen.html" title="OroGen (module)">OroGen</a></span></span><span class='op'>::</span><span class='const'>Logger</span><span class='op'>::</span><span class='const'>Logger</span>
+        <span class='id identifier rubyid_buttons'>buttons</span> <span class='op'>&lt;&lt;</span> <span class='const'><span class='object_link'><a href="ComponentNetworkBaseView.html#Button-constant" title="Syskit::GUI::ComponentNetworkBaseView::Button (constant)">Button</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="ComponentNetworkBaseView.html#initialize-instance_method" title="Syskit::GUI::ComponentNetworkBaseView#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>dataflow/show_loggers</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+                              <span class='label'>on_text:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Show loggers</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+                              <span class='label'>off_text:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Hide loggers</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+                              <span class='label'>state:</span> <span class='kw'>false</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+
+    <span class='id identifier rubyid_buttons'>buttons</span><span class='period'>.</span><span class='id identifier rubyid_concat'>concat</span><span class='lparen'>(</span><span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_common_graph_buttons'>common_graph_buttons</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>dataflow</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_buttons'>buttons</span><span class='period'>.</span><span class='id identifier rubyid_concat'>concat</span><span class='lparen'>(</span><span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_task_annotation_buttons'>task_annotation_buttons</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>dataflow</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_dataflow_options'>dataflow_options</span><span class='lbracket'>[</span><span class='symbol'>:annotations</span><span class='rbracket'>]</span><span class='rparen'>)</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_buttons'>buttons</span><span class='period'>.</span><span class='id identifier rubyid_concat'>concat</span><span class='lparen'>(</span><span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_graph_annotation_buttons'>graph_annotation_buttons</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>dataflow</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_dataflow_options'>dataflow_options</span><span class='lbracket'>[</span><span class='symbol'>:annotations</span><span class='rbracket'>]</span><span class='rparen'>)</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_dataflow_options'>dataflow_options</span><span class='lbracket'>[</span><span class='symbol'>:buttons</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_buttons'>buttons</span>
+
+    <span class='id identifier rubyid_buttons'>buttons</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+    <span class='id identifier rubyid_buttons'>buttons</span><span class='period'>.</span><span class='id identifier rubyid_concat'>concat</span><span class='lparen'>(</span><span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_common_graph_buttons'>common_graph_buttons</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hierarchy</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_hierarchy_options'>hierarchy_options</span><span class='lbracket'>[</span><span class='symbol'>:buttons</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_buttons'>buttons</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id=""></span>
+      <div class="method_details first">
+  <h3 class="signature first" id="dataflow_options-instance_method">
+  
+    #<strong>dataflow_options</strong>  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Default rendering options for <span class='object_link'><a href="ComponentNetworkBaseView.html#push_plan-instance_method" title="Syskit::GUI::ComponentNetworkBaseView#push_plan (method)">Syskit::GUI::ComponentNetworkBaseView#push_plan</a></span> for the
+dataflow graph</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+18
+19
+20</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/gui/component_network_view.rb', line 18</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_dataflow_options'>dataflow_options</span>
+  <span class='ivar'>@dataflow_options</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="hierarchy_options-instance_method">
+  
+    #<strong>hierarchy_options</strong>  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Default rendering options for <span class='object_link'><a href="ComponentNetworkBaseView.html#push_plan-instance_method" title="Syskit::GUI::ComponentNetworkBaseView#push_plan (method)">Syskit::GUI::ComponentNetworkBaseView#push_plan</a></span> for the
+hierarchy graph</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+22
+23
+24</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/gui/component_network_view.rb', line 22</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_hierarchy_options'>hierarchy_options</span>
+  <span class='ivar'>@hierarchy_options</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="plan-instance_method">
+  
+    #<strong>plan</strong>  &#x21d2; <tt>Roby::Plan</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>The plan object that holds the network we render</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Roby::Plan</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+27
+28
+29</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/gui/component_network_view.rb', line 27</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_plan'>plan</span>
+  <span class='ivar'>@plan</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="task-instance_method">
+  
+    #<strong>task</strong>  &#x21d2; <tt><span class='object_link'><a href="../Component.html" title="Syskit::Component (class)">Syskit::Component</a></span></tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>The toplevel task for the model we render</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../Component.html" title="Syskit::Component (class)">Syskit::Component</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+32
+33
+34</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/gui/component_network_view.rb', line 32</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_task'>task</span>
+  <span class='ivar'>@task</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="process_options-instance_method">
+  
+    #<strong>process_options</strong>(kind, model, options)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/gui/component_network_view.rb', line 157</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_process_options'>process_options</span><span class='lparen'>(</span><span class='id identifier rubyid_kind'>kind</span><span class='comma'>,</span> <span class='id identifier rubyid_model'>model</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='const'>Kernel</span><span class='period'>.</span><span class='id identifier rubyid_normalize_options'>normalize_options</span> <span class='id identifier rubyid_options'>options</span>
+
+    <span class='id identifier rubyid_name'>name</span> <span class='op'>=</span> <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:name</span><span class='rbracket'>]</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:id</span><span class='rbracket'>]</span>
+        <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:id</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:id</span><span class='rbracket'>]</span> <span class='op'>%</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_kind'>kind</span><span class='embexpr_end'>}</span><span class='tstring_content'>-</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>end</span>
+
+    <span class='kw'>if</span> <span class='id identifier rubyid_externals'>externals</span> <span class='op'>=</span> <span class='id identifier rubyid_options'>options</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='symbol'>:external_objects</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:external_objects</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_externals'>externals</span> <span class='op'>%</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_kind'>kind</span><span class='embexpr_end'>}</span><span class='tstring_content'>-</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_options'>options</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="render-instance_method">
+  
+    #<strong>render</strong>(model, method: :instanciate_model, name: nil, show_requirements: false, instanciate_options: Hash.new, dataflow: Hash.new, hierarchy: Hash.new, **render_options)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Render a model on this view</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>model</span>
+      
+      
+        <span class='type'>(<tt>Model&lt;<span class='object_link'><a href="../Component.html" title="Syskit::Component (class)">Component</a></span>&gt;</tt>)</span>
+      
+      
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>method</span>
+      
+      
+        <span class='type'>(<tt>Symbol</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>how to render the model. It either is :instanciate_model
+(#<span class='object_link'><a href="ComponentNetworkBaseView.html#instanciate_model-instance_method" title="Syskit::GUI::ComponentNetworkBaseView#instanciate_model (method)">Syskit::GUI::ComponentNetworkBaseView#instanciate_model</a></span>) or :compute_system_network
+(#<span class='object_link'><a href="ComponentNetworkBaseView.html#compute_system_network-instance_method" title="Syskit::GUI::ComponentNetworkBaseView#compute_system_network (method)">Syskit::GUI::ComponentNetworkBaseView#compute_system_network</a></span>)</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>show_requirements</span>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>whether model.to_instance_requirements should be rendered as well</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>instanciate_options</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>options to be passed to <span class='object_link'><a href="ComponentNetworkBaseView.html#instanciate_model-instance_method" title="Syskit::GUI::ComponentNetworkBaseView#instanciate_model (method)">Syskit::GUI::ComponentNetworkBaseView#instanciate_model</a></span> if
+&#39;method&#39; is :intsanciate_model</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>dataflow</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>additional arguments for the rendering of the dataflow grap in
+<span class='object_link'><a href="#render_plan-instance_method" title="Syskit::GUI::ComponentNetworkView#render_plan (method)">#render_plan</a></span></p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>hierarchy</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>additional arguments for the rendering of the hierarchy graph in
+<span class='object_link'><a href="#render_plan-instance_method" title="Syskit::GUI::ComponentNetworkView#render_plan (method)">#render_plan</a></span></p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>render_options</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>additional options for the rendering of both graphs in <span class='object_link'><a href="#render_plan-instance_method" title="Syskit::GUI::ComponentNetworkView#render_plan (method)">#render_plan</a></span></p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/gui/component_network_view.rb', line 102</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_render'>render</span><span class='lparen'>(</span><span class='id identifier rubyid_model'>model</span><span class='comma'>,</span>
+           <span class='label'>method:</span> <span class='symbol'>:instanciate_model</span><span class='comma'>,</span>
+           <span class='label'>name:</span> <span class='kw'>nil</span><span class='comma'>,</span>
+           <span class='label'>show_requirements:</span> <span class='kw'>false</span><span class='comma'>,</span>
+           <span class='label'>instanciate_options:</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='comma'>,</span>
+           <span class='label'>dataflow:</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='comma'>,</span>
+           <span class='label'>hierarchy:</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='comma'>,</span>
+           <span class='op'>**</span><span class='id identifier rubyid_render_options'>render_options</span><span class='rparen'>)</span>
+    <span class='kw'>super</span>
+
+    <span class='id identifier rubyid_plan'>plan</span><span class='period'>.</span><span class='id identifier rubyid_clear'>clear</span>
+
+    <span class='kw'>if</span> <span class='id identifier rubyid_show_requirements'>show_requirements</span>
+        <span class='id identifier rubyid_html'>html</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="ModelViews.html" title="Syskit::GUI::ModelViews (module)">ModelViews</a></span></span><span class='period'>.</span><span class='id identifier rubyid_render_instance_requirements'><span class='object_link'><a href="ModelViews.html#render_instance_requirements-class_method" title="Syskit::GUI::ModelViews.render_instance_requirements (method)">render_instance_requirements</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_page'>page</span><span class='comma'>,</span>
+                <span class='id identifier rubyid_model'>model</span><span class='period'>.</span><span class='id identifier rubyid_to_instance_requirements'>to_instance_requirements</span><span class='comma'>,</span>
+                <span class='label'>resolve_dependency_injection:</span> <span class='kw'>true</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\n</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_page'>page</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Resolved Requirements</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>&lt;pre&gt;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_html'>html</span><span class='embexpr_end'>}</span><span class='tstring_content'>&lt;/pre&gt;</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+
+    <span class='kw'>begin</span>
+        <span class='kw'>if</span> <span class='id identifier rubyid_method'>method</span> <span class='op'>==</span> <span class='symbol'>:compute_system_network</span>
+            <span class='id identifier rubyid_tic'>tic</span> <span class='op'>=</span> <span class='const'>Time</span><span class='period'>.</span><span class='id identifier rubyid_now'>now</span>
+            <span class='ivar'>@task</span> <span class='op'>=</span> <span class='id identifier rubyid_compute_system_network'>compute_system_network</span><span class='lparen'>(</span><span class='id identifier rubyid_model'>model</span><span class='comma'>,</span> <span class='id identifier rubyid_plan'>plan</span><span class='rparen'>)</span>
+            <span class='id identifier rubyid_timing'>timing</span> <span class='op'>=</span> <span class='const'>Time</span><span class='period'>.</span><span class='id identifier rubyid_now'>now</span> <span class='op'>-</span> <span class='id identifier rubyid_tic'>tic</span>
+        <span class='kw'>else</span>
+            <span class='ivar'>@task</span> <span class='op'>=</span> <span class='id identifier rubyid_instanciate_model'>instanciate_model</span><span class='lparen'>(</span><span class='id identifier rubyid_model'>model</span><span class='comma'>,</span> <span class='id identifier rubyid_plan'>plan</span><span class='comma'>,</span> <span class='id identifier rubyid_instanciate_options'>instanciate_options</span><span class='rparen'>)</span>
+        <span class='kw'>end</span>
+    <span class='kw'>rescue</span> <span class='const'>Exception</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_e'>e</span>
+        <span class='kw'>if</span> <span class='id identifier rubyid_view_partial_plans?'>view_partial_plans?</span> <span class='kw'>then</span>
+            <span class='id identifier rubyid_exception'>exception</span> <span class='op'>=</span> <span class='id identifier rubyid_e'>e</span>
+        <span class='kw'>else</span> <span class='id identifier rubyid_raise'>raise</span>
+        <span class='kw'>end</span>
+    <span class='kw'>end</span>
+
+    <span class='id identifier rubyid_render_options'>render_options</span><span class='lbracket'>[</span><span class='symbol'>:name</span><span class='rbracket'>]</span> <span class='op'>||=</span> <span class='id identifier rubyid_model'>model</span><span class='period'>.</span><span class='id identifier rubyid_object_id'>object_id</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_timing'>timing</span>
+        <span class='id identifier rubyid_page'>page</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>&lt;p&gt;Network generated in %.3f&lt;/p&gt;</span><span class='tstring_end'>&quot;</span></span> <span class='op'>%</span> <span class='lbracket'>[</span><span class='id identifier rubyid_timing'>timing</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='label'>id:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>timing-</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+
+    <span class='id identifier rubyid_hierarchy_options'>hierarchy_options</span> <span class='op'>=</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_hierarchy_options'>hierarchy_options</span><span class='period'>.</span>
+        <span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='id identifier rubyid_render_options'>render_options</span><span class='rparen'>)</span><span class='period'>.</span>
+        <span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='id identifier rubyid_hierarchy'>hierarchy</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_hierarchy_options'>hierarchy_options</span> <span class='op'>=</span> <span class='id identifier rubyid_process_options'>process_options</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hierarchy</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_model'>model</span><span class='comma'>,</span> <span class='id identifier rubyid_hierarchy_options'>hierarchy_options</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_dataflow_options'>dataflow_options</span> <span class='op'>=</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_dataflow_options'>dataflow_options</span><span class='period'>.</span>
+        <span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='id identifier rubyid_render_options'>render_options</span><span class='rparen'>)</span><span class='period'>.</span>
+        <span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='id identifier rubyid_dataflow'>dataflow</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_dataflow_options'>dataflow_options</span> <span class='op'>=</span> <span class='id identifier rubyid_process_options'>process_options</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>dataflow</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_model'>model</span><span class='comma'>,</span> <span class='id identifier rubyid_dataflow_options'>dataflow_options</span><span class='rparen'>)</span>
+
+
+    <span class='id identifier rubyid_render_plan'>render_plan</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_exception'>exception</span>
+        <span class='id identifier rubyid_raise'>raise</span> <span class='id identifier rubyid_exception'>exception</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="render_plan-instance_method">
+  
+    #<strong>render_plan</strong>(hierarchy: Hash.new, dataflow: Hash.new, **options)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Renders <span class='object_link'><a href="#plan-instance_method" title="Syskit::GUI::ComponentNetworkView#plan (method)">#plan</a></span></p>
+
+<p>This renders the plan&#39;s hierarchy and dataflow</p>
+
+<p><span class='object_link'><a href="ComponentNetworkBaseView.html#push_plan-instance_method" title="Syskit::GUI::ComponentNetworkBaseView#push_plan (method)">Syskit::GUI::ComponentNetworkBaseView#push_plan</a></span> for both the hierarchy and dataflow graphs</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>hierarchy</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>options to pass to <span class='object_link'><a href="ComponentNetworkBaseView.html#push_plan-instance_method" title="Syskit::GUI::ComponentNetworkBaseView#push_plan (method)">Syskit::GUI::ComponentNetworkBaseView#push_plan</a></span> in addition to
+&#39;options&#39; and <span class='object_link'><a href="#hierarchy_options-instance_method" title="Syskit::GUI::ComponentNetworkView#hierarchy_options (method)">#hierarchy_options</a></span></p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>dataflow</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>options to pass to <span class='object_link'><a href="ComponentNetworkBaseView.html#push_plan-instance_method" title="Syskit::GUI::ComponentNetworkBaseView#push_plan (method)">Syskit::GUI::ComponentNetworkBaseView#push_plan</a></span> in addition to
+&#39;options&#39; and <span class='object_link'><a href="#dataflow_options-instance_method" title="Syskit::GUI::ComponentNetworkView#dataflow_options (method)">#dataflow_options</a></span></p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>options</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>options that should be passed to</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/gui/component_network_view.rb', line 183</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_render_plan'>render_plan</span><span class='lparen'>(</span><span class='label'>hierarchy:</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='comma'>,</span> <span class='label'>dataflow:</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='comma'>,</span> <span class='op'>**</span><span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_all_annotations'>all_annotations</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../Syskit.html" title="Syskit (module)">Syskit</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Graphviz.html" title="Syskit::Graphviz (class)">Graphviz</a></span></span><span class='period'>.</span><span class='id identifier rubyid_available_annotations'><span class='object_link'><a href="../Graphviz.html#available_annotations-class_method" title="Syskit::Graphviz.available_annotations (method)">available_annotations</a></span></span><span class='period'>.</span><span class='id identifier rubyid_to_set'>to_set</span>
+
+    <span class='id identifier rubyid_hierarchy_options'>hierarchy_options</span> <span class='op'>=</span> <span class='id identifier rubyid_options'>options</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_hierarchy_options'>hierarchy_options</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='id identifier rubyid_hierarchy'>hierarchy</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_push_plan'>push_plan</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hierarchy</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_plan'>plan</span><span class='comma'>,</span> <span class='id identifier rubyid_hierarchy_options'>hierarchy_options</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_dataflow_options'>dataflow_options</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='lbracket'>[</span><span class='label'>annotations:</span> <span class='id identifier rubyid_all_annotations'>all_annotations</span><span class='rbracket'>]</span><span class='period'>.</span>
+        <span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_dataflow_options'>dataflow_options</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='id identifier rubyid_dataflow'>dataflow</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_push_plan'>push_plan</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>dataflow</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_plan'>plan</span><span class='comma'>,</span> <span class='id identifier rubyid_dataflow_options'>dataflow_options</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_emit'>emit</span> <span class='id identifier rubyid_updated'>updated</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="view_partial_plans=-instance_method">
+  
+    #<strong>view_partial_plans=</strong>(flag)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Whether the plan should be displayed regardless of errors during deployment
+or not. It defaults to true.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+14</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/gui/component_network_view.rb', line 14</span>
+
+<span class='id identifier rubyid_attr_predicate'>attr_predicate</span> <span class='symbol'>:view_partial_plans?</span><span class='comma'>,</span> <span class='kw'>true</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="view_partial_plans?-instance_method">
+  
+    #<strong>view_partial_plans?</strong>  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Whether the plan should be displayed regardless of errors during deployment
+or not. It defaults to true.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+14</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/gui/component_network_view.rb', line 14</span>
+
+<span class='id identifier rubyid_attr_predicate'>attr_predicate</span> <span class='symbol'>:view_partial_plans?</span><span class='comma'>,</span> <span class='kw'>true</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Wed Apr 10 21:57:30 2019 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.19 (ruby-2.5.1).
+</div>
+
+    </div>
+  </body>
+</html>

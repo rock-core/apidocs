@@ -1,0 +1,1493 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: Syskit::RobyApp::RESTDeploymentManager
+  
+    &mdash; Documentation by YARD 0.9.19
+  
+</title>
+
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "Syskit::RobyApp::RESTDeploymentManager";
+  relpath = '../../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../../_index.html">Index (R)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../Syskit.html" title="Syskit (module)">Syskit</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../RobyApp.html" title="Syskit::RobyApp (module)">RobyApp</a></span></span>
+     &raquo; 
+    <span class="title">RESTDeploymentManager</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: Syskit::RobyApp::RESTDeploymentManager
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName"><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></span>
+      
+        <ul class="fullTree">
+          <li><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></li>
+          
+            <li class="next">Syskit::RobyApp::RESTDeploymentManager</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/syskit/roby_app/rest_deployment_manager.rb</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>Management of the deployments for the REST API</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><h2>Defined Under Namespace</h2>
+<p class="children">
+  
+    
+  
+    
+      <strong class="classes">Classes:</strong> <span class='object_link'><a href="RESTDeploymentManager/AlreadyOverriden.html" title="Syskit::RobyApp::RESTDeploymentManager::AlreadyOverriden (class)">AlreadyOverriden</a></span>, <span class='object_link'><a href="RESTDeploymentManager/CannotOverride.html" title="Syskit::RobyApp::RESTDeploymentManager::CannotOverride (class)">CannotOverride</a></span>, <span class='object_link'><a href="RESTDeploymentManager/Forbidden.html" title="Syskit::RobyApp::RESTDeploymentManager::Forbidden (class)">Forbidden</a></span>, <span class='object_link'><a href="RESTDeploymentManager/NotCreatedHere.html" title="Syskit::RobyApp::RESTDeploymentManager::NotCreatedHere (class)">NotCreatedHere</a></span>, <span class='object_link'><a href="RESTDeploymentManager/NotFound.html" title="Syskit::RobyApp::RESTDeploymentManager::NotFound (class)">NotFound</a></span>, <span class='object_link'><a href="RESTDeploymentManager/NotOrogen.html" title="Syskit::RobyApp::RESTDeploymentManager::NotOrogen (class)">NotOrogen</a></span>, <span class='object_link'><a href="RESTDeploymentManager/NotOverriden.html" title="Syskit::RobyApp::RESTDeploymentManager::NotOverriden (class)">NotOverriden</a></span>, <span class='object_link'><a href="RESTDeploymentManager/UsedInOverride.html" title="Syskit::RobyApp::RESTDeploymentManager::UsedInOverride (class)">UsedInOverride</a></span>
+    
+  
+</p>
+
+
+
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#clear-instance_method" title="#clear (instance method)">#<strong>clear</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Clear all overrides and new deployments.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#command_line-instance_method" title="#command_line (instance method)">#<strong>command_line</strong>(id, tracing: false, name_service_ip: &#39;localhost&#39;, working_directory: @conf.app.log_dir, loader: @conf.app.default_pkgconfig_loader)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the command line needed to start the given deployment with the
+given spawn options.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#created_here%3F-instance_method" title="#created_here? (instance method)">#<strong>created_here?</strong>(deployment)  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Whether this deployment has been created by this manager.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#deregister_deployment-instance_method" title="#deregister_deployment (instance method)">#<strong>deregister_deployment</strong>(id)  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Remove a deployment.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#deregister_override-instance_method" title="#deregister_override (instance method)">#<strong>deregister_override</strong>(id)  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Remove overrides created by <span class='object_link'><a href="#make_unmanaged-instance_method" title="Syskit::RobyApp::RESTDeploymentManager#make_unmanaged (method)">#make_unmanaged</a></span>.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#each_overriden_deployment-instance_method" title="#each_overriden_deployment (instance method)">#<strong>each_overriden_deployment</strong>(&amp;block)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Enumerate the deployments that are being overriden.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#find_new_deployment_by_id-instance_method" title="#find_new_deployment_by_id (instance method)">#<strong>find_new_deployment_by_id</strong>(id)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Finds a newly defined deployment by ID.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#find_overriden_deployment_by_id-instance_method" title="#find_overriden_deployment_by_id (instance method)">#<strong>find_overriden_deployment_by_id</strong>(id)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Finds an overriden deployment by ID.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#find_registered_deployment_by_id-instance_method" title="#find_registered_deployment_by_id (instance method)">#<strong>find_registered_deployment_by_id</strong>(id)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Finds a registered deployment by ID.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(conf)  &#x21d2; RESTDeploymentManager </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>A new instance of RESTDeploymentManager.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#make_unmanaged-instance_method" title="#make_unmanaged (instance method)">#<strong>make_unmanaged</strong>(id)  &#x21d2; Array<sup>?</sup> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Change the configuration so that all tasks from the given deployment are
+declared as unmanaged.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#orogen_deployment%3F-instance_method" title="#orogen_deployment? (instance method)">#<strong>orogen_deployment?</strong>(deployment)  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Whether the given deployment is an oroGen deployment.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#overriden%3F-instance_method" title="#overriden? (instance method)">#<strong>overriden?</strong>(id)  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Whether the given deployment is already overriden.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#use_deployment-instance_method" title="#use_deployment (instance method)">#<strong>use_deployment</strong>(*names, **run_options)  &#x21d2; Integer </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Define a new deployment.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#used_in_override%3F-instance_method" title="#used_in_override? (instance method)">#<strong>used_in_override?</strong>(deployment)  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Whether the given deployment is used as override.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    #<strong>initialize</strong>(conf)  &#x21d2; <tt><span class='object_link'><a href="" title="Syskit::RobyApp::RESTDeploymentManager (class)">RESTDeploymentManager</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns a new instance of RESTDeploymentManager</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+5
+6
+7
+8
+9
+10</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/roby_app/rest_deployment_manager.rb', line 5</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_conf'>conf</span><span class='rparen'>)</span>
+    <span class='ivar'>@conf</span> <span class='op'>=</span> <span class='id identifier rubyid_conf'>conf</span>
+    <span class='ivar'>@deployment_group</span> <span class='op'>=</span> <span class='id identifier rubyid_conf'>conf</span><span class='period'>.</span><span class='id identifier rubyid_deployment_group'>deployment_group</span>
+    <span class='ivar'>@new_deployments</span> <span class='op'>=</span> <span class='const'>Array</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+    <span class='ivar'>@overrides</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="clear-instance_method">
+  
+    #<strong>clear</strong>  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Clear all overrides and new deployments</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/roby_app/rest_deployment_manager.rb', line 69</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_clear'>clear</span>
+    <span class='ivar'>@overrides</span><span class='period'>.</span><span class='id identifier rubyid_delete_if'>delete_if</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_original'>original</span><span class='comma'>,</span> <span class='id identifier rubyid_overriden_by'>overriden_by</span><span class='op'>|</span>
+        <span class='id identifier rubyid_overriden_by'>overriden_by</span><span class='period'>.</span><span class='id identifier rubyid_delete_if'>delete_if</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_c'>c</span><span class='op'>|</span>
+            <span class='ivar'>@deployment_group</span><span class='period'>.</span><span class='id identifier rubyid_deregister_configured_deployment'>deregister_configured_deployment</span><span class='lparen'>(</span><span class='id identifier rubyid_c'>c</span><span class='rparen'>)</span>
+            <span class='kw'>true</span>
+        <span class='kw'>end</span>
+        <span class='ivar'>@deployment_group</span><span class='period'>.</span><span class='id identifier rubyid_register_configured_deployment'>register_configured_deployment</span><span class='lparen'>(</span><span class='id identifier rubyid_original'>original</span><span class='rparen'>)</span>
+        <span class='kw'>true</span>
+    <span class='kw'>end</span>
+    <span class='ivar'>@new_deployments</span><span class='period'>.</span><span class='id identifier rubyid_delete_if'>delete_if</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_c'>c</span><span class='op'>|</span>
+        <span class='ivar'>@deployment_group</span><span class='period'>.</span><span class='id identifier rubyid_deregister_configured_deployment'>deregister_configured_deployment</span><span class='lparen'>(</span><span class='id identifier rubyid_c'>c</span><span class='rparen'>)</span>
+        <span class='kw'>true</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="command_line-instance_method">
+  
+    #<strong>command_line</strong>(id, tracing: false, name_service_ip: &#39;localhost&#39;, working_directory: @conf.app.log_dir, loader: @conf.app.default_pkgconfig_loader)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the command line needed to start the given deployment with the
+given spawn options</p>
+
+<p>The returned command line assumes that the Syskit process runs on the
+machine where it will be executed</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/roby_app/rest_deployment_manager.rb', line 186</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_command_line'>command_line</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='comma'>,</span> <span class='label'>tracing:</span> <span class='kw'>false</span><span class='comma'>,</span>
+        <span class='label'>name_service_ip:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>localhost</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+        <span class='label'>working_directory:</span> <span class='ivar'>@conf</span><span class='period'>.</span><span class='id identifier rubyid_app'>app</span><span class='period'>.</span><span class='id identifier rubyid_log_dir'>log_dir</span><span class='comma'>,</span>
+        <span class='label'>loader:</span> <span class='ivar'>@conf</span><span class='period'>.</span><span class='id identifier rubyid_app'>app</span><span class='period'>.</span><span class='id identifier rubyid_default_pkgconfig_loader'>default_pkgconfig_loader</span><span class='rparen'>)</span>
+
+    <span class='id identifier rubyid_deployment'>deployment</span> <span class='op'>=</span> <span class='id identifier rubyid_find_registered_deployment_by_id'>find_registered_deployment_by_id</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span> <span class='op'>||</span>
+        <span class='id identifier rubyid_find_overriden_deployment_by_id'>find_overriden_deployment_by_id</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_deployment'>deployment</span>
+        <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="RESTDeploymentManager/NotFound.html" title="Syskit::RobyApp::RESTDeploymentManager::NotFound (class)">NotFound</a></span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_id'>id</span><span class='embexpr_end'>}</span><span class='tstring_content'> is not a known deployment</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>elsif</span> <span class='op'>!</span><span class='id identifier rubyid_orogen_deployment?'>orogen_deployment?</span><span class='lparen'>(</span><span class='id identifier rubyid_deployment'>deployment</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="RESTDeploymentManager/NotOrogen.html" title="Syskit::RobyApp::RESTDeploymentManager::NotOrogen (class)">NotOrogen</a></span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_id'>id</span><span class='embexpr_end'>}</span><span class='tstring_content'> is not an oroGen deployment, cannot generate a command line</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>end</span>
+
+    <span class='id identifier rubyid_deployment'>deployment</span><span class='period'>.</span><span class='id identifier rubyid_command_line'>command_line</span><span class='lparen'>(</span>
+        <span class='label'>working_directory:</span> <span class='id identifier rubyid_working_directory'>working_directory</span><span class='comma'>,</span>
+        <span class='label'>tracing:</span> <span class='id identifier rubyid_tracing'>tracing</span><span class='comma'>,</span>
+        <span class='label'>name_service_ip:</span> <span class='id identifier rubyid_name_service_ip'>name_service_ip</span><span class='comma'>,</span>
+        <span class='label'>loader:</span> <span class='id identifier rubyid_loader'>loader</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="created_here?-instance_method">
+  
+    #<strong>created_here?</strong>(deployment)  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Whether this deployment has been created by this manager</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+90
+91
+92
+93</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/roby_app/rest_deployment_manager.rb', line 90</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_created_here?'>created_here?</span><span class='lparen'>(</span><span class='id identifier rubyid_deployment'>deployment</span><span class='rparen'>)</span>
+    <span class='ivar'>@new_deployments</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='id identifier rubyid_deployment'>deployment</span><span class='rparen'>)</span> <span class='op'>||</span>
+        <span class='id identifier rubyid_used_in_override?'>used_in_override?</span><span class='lparen'>(</span><span class='id identifier rubyid_deployment'>deployment</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="deregister_deployment-instance_method">
+  
+    #<strong>deregister_deployment</strong>(id)  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Remove a deployment</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>true if the deployment ID was valid, false otherwise</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/roby_app/rest_deployment_manager.rb', line 135</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_deregister_deployment'>deregister_deployment</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_deployment'>deployment</span> <span class='op'>=</span> <span class='id identifier rubyid_find_new_deployment_by_id'>find_new_deployment_by_id</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_deployment'>deployment</span>
+        <span class='kw'>if</span> <span class='id identifier rubyid_deployment'>deployment</span> <span class='op'>=</span> <span class='id identifier rubyid_find_registered_deployment_by_id'>find_registered_deployment_by_id</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span>
+            <span class='kw'>if</span> <span class='id identifier rubyid_used_in_override?'>used_in_override?</span><span class='lparen'>(</span><span class='id identifier rubyid_deployment'>deployment</span><span class='rparen'>)</span>
+                <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="RESTDeploymentManager/UsedInOverride.html" title="Syskit::RobyApp::RESTDeploymentManager::UsedInOverride (class)">UsedInOverride</a></span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_id'>id</span><span class='embexpr_end'>}</span><span class='tstring_content'> has been created for the purpose of an override, cannot deregister it</span><span class='tstring_end'>&quot;</span></span>
+            <span class='kw'>else</span>
+                <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="RESTDeploymentManager/NotCreatedHere.html" title="Syskit::RobyApp::RESTDeploymentManager::NotCreatedHere (class)">NotCreatedHere</a></span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_id'>id</span><span class='embexpr_end'>}</span><span class='tstring_content'> has not been registered through the REST API, cannot deregister it</span><span class='tstring_end'>&quot;</span></span>
+            <span class='kw'>end</span>
+        <span class='kw'>else</span>
+            <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="RESTDeploymentManager/NotFound.html" title="Syskit::RobyApp::RESTDeploymentManager::NotFound (class)">NotFound</a></span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_id'>id</span><span class='embexpr_end'>}</span><span class='tstring_content'> is not a known deployment</span><span class='tstring_end'>&quot;</span></span>
+        <span class='kw'>end</span>
+    <span class='kw'>end</span>
+
+    <span class='ivar'>@deployment_group</span><span class='period'>.</span><span class='id identifier rubyid_deregister_configured_deployment'>deregister_configured_deployment</span><span class='lparen'>(</span><span class='id identifier rubyid_deployment'>deployment</span><span class='rparen'>)</span>
+    <span class='ivar'>@new_deployments</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='id identifier rubyid_deployment'>deployment</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="deregister_override-instance_method">
+  
+    #<strong>deregister_override</strong>(id)  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Remove overrides created by <span class='object_link'><a href="#make_unmanaged-instance_method" title="Syskit::RobyApp::RESTDeploymentManager#make_unmanaged (method)">#make_unmanaged</a></span></p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>true if the deployment ID was valid, false otherwise</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/roby_app/rest_deployment_manager.rb', line 156</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_deregister_override'>deregister_override</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_overriden_deployment'>overriden_deployment</span> <span class='op'>=</span> <span class='ivar'>@overrides</span><span class='period'>.</span><span class='id identifier rubyid_keys'>keys</span><span class='period'>.</span><span class='id identifier rubyid_find'>find</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_c'>c</span><span class='op'>|</span> <span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_object_id'>object_id</span> <span class='op'>==</span> <span class='id identifier rubyid_id'>id</span> <span class='rbrace'>}</span>
+    <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_overriden_deployment'>overriden_deployment</span>
+        <span class='id identifier rubyid_deployment'>deployment</span> <span class='op'>=</span> <span class='id identifier rubyid_find_registered_deployment_by_id'>find_registered_deployment_by_id</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span>
+        <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_deployment'>deployment</span>
+            <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="RESTDeploymentManager/NotFound.html" title="Syskit::RobyApp::RESTDeploymentManager::NotFound (class)">NotFound</a></span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_id'>id</span><span class='embexpr_end'>}</span><span class='tstring_content'> is not an existing deployment</span><span class='tstring_end'>&quot;</span></span>
+        <span class='kw'>else</span>
+            <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="RESTDeploymentManager/NotOverriden.html" title="Syskit::RobyApp::RESTDeploymentManager::NotOverriden (class)">NotOverriden</a></span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_id'>id</span><span class='embexpr_end'>}</span><span class='tstring_content'> is not an overriden deployment, cannot deregister</span><span class='tstring_end'>&quot;</span></span>
+        <span class='kw'>end</span>
+    <span class='kw'>end</span>
+
+    <span class='id identifier rubyid_overrides'>overrides</span> <span class='op'>=</span> <span class='ivar'>@overrides</span><span class='lbracket'>[</span><span class='id identifier rubyid_overriden_deployment'>overriden_deployment</span><span class='rbracket'>]</span>
+    <span class='id identifier rubyid_overrides'>overrides</span><span class='period'>.</span><span class='id identifier rubyid_delete_if'>delete_if</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_c'>c</span><span class='op'>|</span>
+        <span class='ivar'>@deployment_group</span><span class='period'>.</span><span class='id identifier rubyid_deregister_configured_deployment'>deregister_configured_deployment</span><span class='lparen'>(</span><span class='id identifier rubyid_c'>c</span><span class='rparen'>)</span>
+        <span class='kw'>true</span>
+    <span class='kw'>end</span>
+    <span class='ivar'>@overrides</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='id identifier rubyid_overriden_deployment'>overriden_deployment</span><span class='rparen'>)</span>
+    <span class='kw'>true</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="each_overriden_deployment-instance_method">
+  
+    #<strong>each_overriden_deployment</strong>(&amp;block)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Enumerate the deployments that are being overriden</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+85
+86
+87</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/roby_app/rest_deployment_manager.rb', line 85</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_each_overriden_deployment'>each_overriden_deployment</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+    <span class='ivar'>@overrides</span><span class='period'>.</span><span class='id identifier rubyid_each_key'>each_key</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="find_new_deployment_by_id-instance_method">
+  
+    #<strong>find_new_deployment_by_id</strong>(id)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Finds a newly defined deployment by ID</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+119
+120
+121</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/roby_app/rest_deployment_manager.rb', line 119</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_find_new_deployment_by_id'>find_new_deployment_by_id</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span>
+    <span class='ivar'>@new_deployments</span><span class='period'>.</span><span class='id identifier rubyid_find'>find</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_c'>c</span><span class='op'>|</span> <span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_object_id'>object_id</span> <span class='op'>==</span> <span class='id identifier rubyid_id'>id</span> <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="find_overriden_deployment_by_id-instance_method">
+  
+    #<strong>find_overriden_deployment_by_id</strong>(id)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Finds an overriden deployment by ID</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+114
+115
+116</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/roby_app/rest_deployment_manager.rb', line 114</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_find_overriden_deployment_by_id'>find_overriden_deployment_by_id</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span>
+    <span class='ivar'>@overrides</span><span class='period'>.</span><span class='id identifier rubyid_keys'>keys</span><span class='period'>.</span><span class='id identifier rubyid_find'>find</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_c'>c</span><span class='op'>|</span> <span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_object_id'>object_id</span> <span class='op'>==</span> <span class='id identifier rubyid_id'>id</span> <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="find_registered_deployment_by_id-instance_method">
+  
+    #<strong>find_registered_deployment_by_id</strong>(id)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Finds a registered deployment by ID</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+108
+109
+110
+111</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/roby_app/rest_deployment_manager.rb', line 108</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_find_registered_deployment_by_id'>find_registered_deployment_by_id</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span>
+    <span class='ivar'>@deployment_group</span><span class='period'>.</span><span class='id identifier rubyid_each_configured_deployment'>each_configured_deployment</span><span class='period'>.</span>
+        <span class='id identifier rubyid_find'>find</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_c'>c</span><span class='op'>|</span> <span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_object_id'>object_id</span> <span class='op'>==</span> <span class='id identifier rubyid_id'>id</span> <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="make_unmanaged-instance_method">
+  
+    #<strong>make_unmanaged</strong>(id)  &#x21d2; <tt>Array</tt><sup>?</sup> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Change the configuration so that all tasks from the given deployment are
+declared as unmanaged</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>configured_deployment</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../Models/ConfiguredDeployment.html" title="Syskit::Models::ConfiguredDeployment (class)">Models::ConfiguredDeployment</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array</tt>, <tt>nil</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the list of the IDs of the newly created deployments, or nil if the given
+ID does not match any registered deployment</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/roby_app/rest_deployment_manager.rb', line 28</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_make_unmanaged'>make_unmanaged</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span>
+    <span class='comment'># Define early to simplify the rescue clause
+</span>    <span class='id identifier rubyid_overrides'>overrides</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+
+    <span class='id identifier rubyid_configured_deployment'>configured_deployment</span> <span class='op'>=</span> <span class='id identifier rubyid_find_registered_deployment_by_id'>find_registered_deployment_by_id</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_configured_deployment'>configured_deployment</span>
+        <span class='kw'>if</span> <span class='id identifier rubyid_overriden?'>overriden?</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span>
+            <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="RESTDeploymentManager/AlreadyOverriden.html" title="Syskit::RobyApp::RESTDeploymentManager::AlreadyOverriden (class)">AlreadyOverriden</a></span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_id'>id</span><span class='embexpr_end'>}</span><span class='tstring_content'> is already overriden, cannot override it again</span><span class='tstring_end'>&quot;</span></span>
+        <span class='kw'>else</span>
+            <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="RESTDeploymentManager/NotFound.html" title="Syskit::RobyApp::RESTDeploymentManager::NotFound (class)">NotFound</a></span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_id'>id</span><span class='embexpr_end'>}</span><span class='tstring_content'> is not a known deployment</span><span class='tstring_end'>&quot;</span></span>
+        <span class='kw'>end</span>
+    <span class='kw'>elsif</span> <span class='id identifier rubyid_used_in_override?'>used_in_override?</span><span class='lparen'>(</span><span class='id identifier rubyid_configured_deployment'>configured_deployment</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="RESTDeploymentManager/UsedInOverride.html" title="Syskit::RobyApp::RESTDeploymentManager::UsedInOverride (class)">UsedInOverride</a></span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_id'>id</span><span class='embexpr_end'>}</span><span class='tstring_content'> is already used in an override, cannot override it</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>end</span>
+
+    <span class='ivar'>@deployment_group</span><span class='period'>.</span><span class='id identifier rubyid_deregister_configured_deployment'>deregister_configured_deployment</span><span class='lparen'>(</span><span class='id identifier rubyid_configured_deployment'>configured_deployment</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_configured_deployment'>configured_deployment</span><span class='period'>.</span><span class='id identifier rubyid_each_orogen_deployed_task_context_model'>each_orogen_deployed_task_context_model</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_orogen_m'>orogen_m</span><span class='op'>|</span>
+        <span class='id identifier rubyid_task_m'>task_m</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../Syskit.html" title="Syskit (module)">Syskit</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../TaskContext.html" title="Syskit::TaskContext (class)">TaskContext</a></span></span><span class='period'>.</span><span class='id identifier rubyid_find_model_by_orogen'><span class='object_link'><a href="../Models/OrogenBase.html#find_model_by_orogen-instance_method" title="Syskit::Models::OrogenBase#find_model_by_orogen (method)">find_model_by_orogen</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_orogen_m'>orogen_m</span><span class='period'>.</span><span class='id identifier rubyid_task_model'>task_model</span><span class='rparen'>)</span>
+        <span class='ivar'>@conf</span><span class='period'>.</span><span class='id identifier rubyid_process_server_config_for'>process_server_config_for</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>unmanaged_tasks</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_new_deployments'>new_deployments</span> <span class='op'>=</span> <span class='ivar'>@deployment_group</span><span class='period'>.</span><span class='id identifier rubyid_use_unmanaged_task'><span class='object_link'><a href="../Test/NetworkManipulation.html#use_unmanaged_task-instance_method" title="Syskit::Test::NetworkManipulation#use_unmanaged_task (method)">use_unmanaged_task</a></span></span><span class='lparen'>(</span>
+            <span class='lbrace'>{</span> <span class='id identifier rubyid_task_m'>task_m</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_orogen_m'>orogen_m</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span> <span class='rbrace'>}</span><span class='comma'>,</span> 
+            <span class='label'>process_managers:</span> <span class='ivar'>@conf</span><span class='rparen'>)</span>
+        <span class='comment'># Update overrides at each iteration (instead of using a functional
+</span>        <span class='comment'># construct) so that the rescue clause can undo the overrides that
+</span>        <span class='comment'># have already been done when an exception is raised
+</span>        <span class='id identifier rubyid_overrides'>overrides</span><span class='period'>.</span><span class='id identifier rubyid_concat'>concat</span><span class='lparen'>(</span><span class='id identifier rubyid_new_deployments'>new_deployments</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+    <span class='ivar'>@overrides</span><span class='lbracket'>[</span><span class='id identifier rubyid_configured_deployment'>configured_deployment</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_overrides'>overrides</span>
+    <span class='id identifier rubyid_overrides'>overrides</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:object_id</span><span class='rparen'>)</span>
+
+<span class='kw'>rescue</span> <span class='const'>Exception</span>
+    <span class='id identifier rubyid_overrides'>overrides</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_c'>c</span><span class='op'>|</span>
+        <span class='ivar'>@deployment_group</span><span class='period'>.</span><span class='id identifier rubyid_deregister_configured_deployment'>deregister_configured_deployment</span><span class='lparen'>(</span><span class='id identifier rubyid_c'>c</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_configured_deployment'>configured_deployment</span>
+        <span class='ivar'>@deployment_group</span><span class='period'>.</span><span class='id identifier rubyid_register_configured_deployment'>register_configured_deployment</span><span class='lparen'>(</span><span class='id identifier rubyid_configured_deployment'>configured_deployment</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_raise'>raise</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="orogen_deployment?-instance_method">
+  
+    #<strong>orogen_deployment?</strong>(deployment)  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Whether the given deployment is an oroGen deployment</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+177
+178
+179
+180</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/roby_app/rest_deployment_manager.rb', line 177</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_orogen_deployment?'>orogen_deployment?</span><span class='lparen'>(</span><span class='id identifier rubyid_deployment'>deployment</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_manager'>manager</span> <span class='op'>=</span> <span class='ivar'>@conf</span><span class='period'>.</span><span class='id identifier rubyid_process_server_config_for'>process_server_config_for</span><span class='lparen'>(</span><span class='id identifier rubyid_deployment'>deployment</span><span class='period'>.</span><span class='id identifier rubyid_process_server_name'>process_server_name</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_manager'>manager</span><span class='period'>.</span><span class='id identifier rubyid_client'>client</span><span class='period'>.</span><span class='id identifier rubyid_kind_of?'>kind_of?</span><span class='lparen'>(</span><span class='const'>Orocos</span><span class='op'>::</span><span class='const'>RemoteProcesses</span><span class='op'>::</span><span class='const'>Client</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="overriden?-instance_method">
+  
+    #<strong>overriden?</strong>(id)  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Whether the given deployment is already overriden</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+96
+97
+98</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/roby_app/rest_deployment_manager.rb', line 96</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_overriden?'>overriden?</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span>
+    <span class='ivar'>@overrides</span><span class='period'>.</span><span class='id identifier rubyid_keys'>keys</span><span class='period'>.</span><span class='id identifier rubyid_any?'>any?</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_c'>c</span><span class='op'>|</span> <span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_object_id'>object_id</span> <span class='op'>==</span> <span class='id identifier rubyid_id'>id</span> <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="use_deployment-instance_method">
+  
+    #<strong>use_deployment</strong>(*names, **run_options)  &#x21d2; <tt>Integer</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Define a new deployment</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the new deployment ID</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+126
+127
+128
+129
+130</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/roby_app/rest_deployment_manager.rb', line 126</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_use_deployment'><span class='object_link'><a href="../Test/NetworkManipulation.html#use_deployment-instance_method" title="Syskit::Test::NetworkManipulation#use_deployment (method)">use_deployment</a></span></span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_names'>names</span><span class='comma'>,</span> <span class='op'>**</span><span class='id identifier rubyid_run_options'>run_options</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_c'>c</span> <span class='op'>=</span> <span class='ivar'>@deployment_group</span><span class='period'>.</span><span class='id identifier rubyid_use_deployment'><span class='object_link'><a href="../Test/NetworkManipulation.html#use_deployment-instance_method" title="Syskit::Test::NetworkManipulation#use_deployment (method)">use_deployment</a></span></span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_names'>names</span><span class='comma'>,</span> <span class='op'>**</span><span class='id identifier rubyid_run_options'>run_options</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_first'>first</span>
+    <span class='ivar'>@new_deployments</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_c'>c</span>
+    <span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_object_id'>object_id</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="used_in_override?-instance_method">
+  
+    #<strong>used_in_override?</strong>(deployment)  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Whether the given deployment is used as override</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+101
+102
+103
+104
+105</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/roby_app/rest_deployment_manager.rb', line 101</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_used_in_override?'>used_in_override?</span><span class='lparen'>(</span><span class='id identifier rubyid_deployment'>deployment</span><span class='rparen'>)</span>
+    <span class='ivar'>@overrides</span><span class='period'>.</span><span class='id identifier rubyid_each_value'>each_value</span><span class='period'>.</span><span class='id identifier rubyid_any?'>any?</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_overrides'>overrides</span><span class='op'>|</span>
+        <span class='id identifier rubyid_overrides'>overrides</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='id identifier rubyid_deployment'>deployment</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Wed Apr 10 21:58:44 2019 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.19 (ruby-2.5.1).
+</div>
+
+    </div>
+  </body>
+</html>

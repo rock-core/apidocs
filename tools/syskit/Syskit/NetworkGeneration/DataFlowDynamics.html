@@ -1,0 +1,2707 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: Syskit::NetworkGeneration::DataFlowDynamics
+  
+    &mdash; Documentation by YARD 0.9.19
+  
+</title>
+
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "Syskit::NetworkGeneration::DataFlowDynamics";
+  relpath = '../../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../../_index.html">Index (D)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../Syskit.html" title="Syskit (module)">Syskit</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../NetworkGeneration.html" title="Syskit::NetworkGeneration (module)">NetworkGeneration</a></span></span>
+     &raquo; 
+    <span class="title">DataFlowDynamics</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: Syskit::NetworkGeneration::DataFlowDynamics
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName"><span class='object_link'><a href="DataFlowComputation.html" title="Syskit::NetworkGeneration::DataFlowComputation (class)">DataFlowComputation</a></span></span>
+      
+        <ul class="fullTree">
+          <li><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></li>
+          
+            <li class="next"><span class='object_link'><a href="DataFlowComputation.html" title="Syskit::NetworkGeneration::DataFlowComputation (class)">DataFlowComputation</a></span></li>
+          
+            <li class="next">Syskit::NetworkGeneration::DataFlowDynamics</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/syskit/network_generation/dataflow_dynamics.rb</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>Algorithms that make use of the dataflow modelling</p>
+
+<p>The main task of this class is to compute the update rates and the default
+policies for each of the existing connections in <code>plan</code>. The
+resulting information is stored in #dynamics</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+
+
+  <h2>Instance Attribute Summary <small><a href="#" class="summary_toggle">collapse</a></small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#plan-instance_method" title="#plan (instance method)">#<strong>plan</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute plan.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#task_from_name-instance_method" title="#task_from_name (instance method)">#<strong>task_from_name</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Mapping from a deployed task name to the corresponding Roby task object.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#triggers-instance_method" title="#triggers (instance method)">#<strong>triggers</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute triggers.</p>
+</div></span>
+  
+</li>
+
+    
+  </ul>
+
+
+
+  
+  
+  <h3 class="inherited">Attributes inherited from <span class='object_link'><a href="DataFlowComputation.html" title="Syskit::NetworkGeneration::DataFlowComputation (class)">DataFlowComputation</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="DataFlowComputation.html#done_ports-instance_method" title="Syskit::NetworkGeneration::DataFlowComputation#done_ports (method)">#done_ports</a></span>, <span class='object_link'><a href="DataFlowComputation.html#missing_ports-instance_method" title="Syskit::NetworkGeneration::DataFlowComputation#missing_ports (method)">#missing_ports</a></span>, <span class='object_link'><a href="DataFlowComputation.html#result-instance_method" title="Syskit::NetworkGeneration::DataFlowComputation#result (method)">#result</a></span>, <span class='object_link'><a href="DataFlowComputation.html#triggering_connections-instance_method" title="Syskit::NetworkGeneration::DataFlowComputation#triggering_connections (method)">#triggering_connections</a></span>, <span class='object_link'><a href="DataFlowComputation.html#triggering_dependencies-instance_method" title="Syskit::NetworkGeneration::DataFlowComputation#triggering_dependencies (method)">#triggering_dependencies</a></span></p>
+
+
+  
+    <h2>
+      Class Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#compute_connection_policies-class_method" title="compute_connection_policies (class method)">.<strong>compute_connection_policies</strong>(plan)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#add_port_trigger-instance_method" title="#add_port_trigger (instance method)">#<strong>add_port_trigger</strong>(task, port_name, name, period, burst)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#add_task_info-instance_method" title="#add_task_info (instance method)">#<strong>add_task_info</strong>(task, info)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#add_task_trigger-instance_method" title="#add_task_trigger (instance method)">#<strong>add_task_trigger</strong>(task, name, period, burst)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#compute_connection_policies-instance_method" title="#compute_connection_policies (instance method)">#<strong>compute_connection_policies</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Computes desired connection policies, based on the port dynamics and the
+oroGen&#39;s input port specifications.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#compute_info_for-instance_method" title="#compute_info_for (instance method)">#<strong>compute_info_for</strong>(task, port_name)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Try to compute the information for the given task and port (or, if
+port_name is nil, for the task).</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#create_port_info-instance_method" title="#create_port_info (instance method)">#<strong>create_port_info</strong>(task, port_name)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#done_task_info-instance_method" title="#done_task_info (instance method)">#<strong>done_task_info</strong>(task)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#find_period_of-instance_method" title="#find_period_of (instance method)">#<strong>find_period_of</strong>(task)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#has_final_information_for_task%3F-instance_method" title="#has_final_information_for_task? (instance method)">#<strong>has_final_information_for_task?</strong>(task)  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#has_information_for_task%3F-instance_method" title="#has_information_for_task? (instance method)">#<strong>has_information_for_task?</strong>(task)  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initial_combus_information-instance_method" title="#initial_combus_information (instance method)">#<strong>initial_combus_information</strong>(task)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Computes the initial port dynamics due to the devices that go through a
+communication bus.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initial_device_information-instance_method" title="#initial_device_information (instance method)">#<strong>initial_device_information</strong>(task)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Adds triggering information from the attached devices to
+<code>task</code>&#39;s ports.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initial_device_information_common-instance_method" title="#initial_device_information_common (instance method)">#<strong>initial_device_information_common</strong>(task, triggering_devices)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Common external loop for adding initial device information in
+#initial_device_information.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initial_device_information_internal_triggering-instance_method" title="#initial_device_information_internal_triggering (instance method)">#<strong>initial_device_information_internal_triggering</strong>(task, triggering_devices)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Computes the initial port dynamics due to devices when the task gets
+triggered by the devices it is attached to.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initial_device_information_periodic_triggering-instance_method" title="#initial_device_information_periodic_triggering (instance method)">#<strong>initial_device_information_periodic_triggering</strong>(task, triggering_devices, period)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Computes the initial port dynamics due to devices when the task is
+triggered periodically.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initial_information-instance_method" title="#initial_information (instance method)">#<strong>initial_information</strong>(task)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Computes the initial port dynamics, i.e.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initial_slaves_information-instance_method" title="#initial_slaves_information (instance method)">#<strong>initial_slaves_information</strong>(task)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Computes a task&#39;s slaves initial information.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initial_task_information-instance_method" title="#initial_task_information (instance method)">#<strong>initial_task_information</strong>(task)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Computes a task&#39;s initial information.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(plan)  &#x21d2; DataFlowDynamics </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>A new instance of DataFlowDynamics.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#policy_for-instance_method" title="#policy_for (instance method)">#<strong>policy_for</strong>(source_task, source_port_name, sink_port_name, sink_task, policy)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Given the current knowledge about the port dynamics, returns the policy for
+the provided connection.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#propagate_task-instance_method" title="#propagate_task (instance method)">#<strong>propagate_task</strong>(task)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#required_information-instance_method" title="#required_information (instance method)">#<strong>required_information</strong>(tasks)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the set of objects for which information is required as an output
+of the algorithm.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#reset-instance_method" title="#reset (instance method)">#<strong>reset</strong>(tasks = Array.new)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#task_info-instance_method" title="#task_info (instance method)">#<strong>task_info</strong>(task)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#triggering_inputs-instance_method" title="#triggering_inputs (instance method)">#<strong>triggering_inputs</strong>(task)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Computes the set of input ports in <code>task</code> that are used during
+the information propagation.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="DataFlowComputation.html" title="Syskit::NetworkGeneration::DataFlowComputation (class)">DataFlowComputation</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="DataFlowComputation.html#add_port_info-instance_method" title="Syskit::NetworkGeneration::DataFlowComputation#add_port_info (method)">#add_port_info</a></span>, <span class='object_link'><a href="DataFlowComputation.html#apply_merges-instance_method" title="Syskit::NetworkGeneration::DataFlowComputation#apply_merges (method)">#apply_merges</a></span>, <span class='object_link'><a href="DataFlowComputation.html#done_port_info-instance_method" title="Syskit::NetworkGeneration::DataFlowComputation#done_port_info (method)">#done_port_info</a></span>, <span class='object_link'><a href="DataFlowComputation.html#has_final_information_for_port%3F-instance_method" title="Syskit::NetworkGeneration::DataFlowComputation#has_final_information_for_port? (method)">#has_final_information_for_port?</a></span>, <span class='object_link'><a href="DataFlowComputation.html#has_information_for_port%3F-instance_method" title="Syskit::NetworkGeneration::DataFlowComputation#has_information_for_port? (method)">#has_information_for_port?</a></span>, <span class='object_link'><a href="DataFlowComputation.html#port_info-instance_method" title="Syskit::NetworkGeneration::DataFlowComputation#port_info (method)">#port_info</a></span>, <span class='object_link'><a href="DataFlowComputation.html#propagate-instance_method" title="Syskit::NetworkGeneration::DataFlowComputation#propagate (method)">#propagate</a></span>, <span class='object_link'><a href="DataFlowComputation.html#remove_port_info-instance_method" title="Syskit::NetworkGeneration::DataFlowComputation#remove_port_info (method)">#remove_port_info</a></span>, <span class='object_link'><a href="DataFlowComputation.html#set_port_info-instance_method" title="Syskit::NetworkGeneration::DataFlowComputation#set_port_info (method)">#set_port_info</a></span>, <span class='object_link'><a href="DataFlowComputation.html#triggering_port_connections-instance_method" title="Syskit::NetworkGeneration::DataFlowComputation#triggering_port_connections (method)">#triggering_port_connections</a></span></p>
+
+  
+  <div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    #<strong>initialize</strong>(plan)  &#x21d2; <tt><span class='object_link'><a href="" title="Syskit::NetworkGeneration::DataFlowDynamics (class)">DataFlowDynamics</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns a new instance of DataFlowDynamics</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+152
+153
+154
+155</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/network_generation/dataflow_dynamics.rb', line 152</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_plan'>plan</span><span class='rparen'>)</span>
+    <span class='ivar'>@plan</span> <span class='op'>=</span> <span class='id identifier rubyid_plan'>plan</span>
+    <span class='kw'>super</span><span class='lparen'>(</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id=""></span>
+      <div class="method_details first">
+  <h3 class="signature first" id="plan-instance_method">
+  
+    #<strong>plan</strong>  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute plan</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+143
+144
+145</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/network_generation/dataflow_dynamics.rb', line 143</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_plan'>plan</span>
+  <span class='ivar'>@plan</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="task_from_name-instance_method">
+  
+    #<strong>task_from_name</strong>  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Mapping from a deployed task name to the corresponding Roby task object</p>
+
+<p>This is necessary to speedup lookup in some places of the algorithm</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+150
+151
+152</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/network_generation/dataflow_dynamics.rb', line 150</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_task_from_name'>task_from_name</span>
+  <span class='ivar'>@task_from_name</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="triggers-instance_method">
+  
+    #<strong>triggers</strong>  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute triggers</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+145
+146
+147</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/network_generation/dataflow_dynamics.rb', line 145</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_triggers'>triggers</span>
+  <span class='ivar'>@triggers</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="compute_connection_policies-class_method">
+  
+    .<strong>compute_connection_policies</strong>(plan)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+157
+158
+159
+160
+161</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/network_generation/dataflow_dynamics.rb', line 157</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_compute_connection_policies'>compute_connection_policies</span><span class='lparen'>(</span><span class='id identifier rubyid_plan'>plan</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_engine'>engine</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="" title="Syskit::NetworkGeneration::DataFlowDynamics (class)">DataFlowDynamics</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="#initialize-instance_method" title="Syskit::NetworkGeneration::DataFlowDynamics#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_plan'>plan</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_engine'>engine</span><span class='period'>.</span><span class='id identifier rubyid_compute_connection_policies'>compute_connection_policies</span>
+    <span class='id identifier rubyid_engine'>engine</span><span class='period'>.</span><span class='id identifier rubyid_result'>result</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="add_port_trigger-instance_method">
+  
+    #<strong>add_port_trigger</strong>(task, port_name, name, period, burst)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+211
+212
+213
+214
+215
+216
+217
+218
+219</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/network_generation/dataflow_dynamics.rb', line 211</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_add_port_trigger'>add_port_trigger</span><span class='lparen'>(</span><span class='id identifier rubyid_task'>task</span><span class='comma'>,</span> <span class='id identifier rubyid_port_name'>port_name</span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_period'>period</span><span class='comma'>,</span> <span class='id identifier rubyid_burst'>burst</span><span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_has_information_for_port?'>has_information_for_port?</span><span class='lparen'>(</span><span class='id identifier rubyid_task'>task</span><span class='comma'>,</span> <span class='id identifier rubyid_port_name'>port_name</span><span class='rparen'>)</span>
+        <span class='ivar'>@result</span><span class='lbracket'>[</span><span class='id identifier rubyid_task'>task</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='id identifier rubyid_port_name'>port_name</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_add_trigger'>add_trigger</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_period'>period</span><span class='comma'>,</span> <span class='id identifier rubyid_burst'>burst</span><span class='rparen'>)</span>
+    <span class='kw'>else</span>
+        <span class='id identifier rubyid_info'>info</span> <span class='op'>=</span> <span class='id identifier rubyid_create_port_info'>create_port_info</span><span class='lparen'>(</span><span class='id identifier rubyid_task'>task</span><span class='comma'>,</span> <span class='id identifier rubyid_port_name'>port_name</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_info'>info</span><span class='period'>.</span><span class='id identifier rubyid_add_trigger'>add_trigger</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_period'>period</span><span class='comma'>,</span> <span class='id identifier rubyid_burst'>burst</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_info'>info</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="add_task_info-instance_method">
+  
+    #<strong>add_task_info</strong>(task, info)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+184
+185
+186</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/network_generation/dataflow_dynamics.rb', line 184</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_add_task_info'>add_task_info</span><span class='lparen'>(</span><span class='id identifier rubyid_task'>task</span><span class='comma'>,</span> <span class='id identifier rubyid_info'>info</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_add_port_info'>add_port_info</span><span class='lparen'>(</span><span class='id identifier rubyid_task'>task</span><span class='comma'>,</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id identifier rubyid_info'>info</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="add_task_trigger-instance_method">
+  
+    #<strong>add_task_trigger</strong>(task, name, period, burst)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+180
+181
+182</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/network_generation/dataflow_dynamics.rb', line 180</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_add_task_trigger'>add_task_trigger</span><span class='lparen'>(</span><span class='id identifier rubyid_task'>task</span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_period'>period</span><span class='comma'>,</span> <span class='id identifier rubyid_burst'>burst</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_add_port_trigger'>add_port_trigger</span><span class='lparen'>(</span><span class='id identifier rubyid_task'>task</span><span class='comma'>,</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_period'>period</span><span class='comma'>,</span> <span class='id identifier rubyid_burst'>burst</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="compute_connection_policies-instance_method">
+  
+    #<strong>compute_connection_policies</strong>  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Computes desired connection policies, based on the port dynamics and the
+oroGen&#39;s input port specifications. See the user&#39;s guide for more
+details</p>
+
+<p>It updates DataFlow#concrete_connection_policies</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+497
+498
+499
+500
+501
+502
+503
+504
+505
+506
+507
+508
+509
+510
+511
+512
+513
+514
+515
+516
+517
+518
+519
+520
+521
+522
+523
+524
+525
+526
+527
+528
+529
+530
+531
+532</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/network_generation/dataflow_dynamics.rb', line 497</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_compute_connection_policies'>compute_connection_policies</span>
+    <span class='comment'># We only act on deployed tasks, as we need to know how the
+</span>    <span class='comment'># tasks are triggered (what activity / priority / ...)
+</span>    <span class='id identifier rubyid_deployed_tasks'>deployed_tasks</span> <span class='op'>=</span> <span class='id identifier rubyid_plan'>plan</span><span class='period'>.</span><span class='id identifier rubyid_find_local_tasks'>find_local_tasks</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="../TaskContext.html" title="Syskit::TaskContext (class)">TaskContext</a></span></span><span class='rparen'>)</span><span class='period'>.</span>
+        <span class='id identifier rubyid_find_all'>find_all</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:execution_agent</span><span class='rparen'>)</span>
+
+    <span class='id identifier rubyid_propagate'>propagate</span><span class='lparen'>(</span><span class='id identifier rubyid_deployed_tasks'>deployed_tasks</span><span class='rparen'>)</span>
+
+    <span class='const'><span class='object_link'><a href="" title="Syskit::NetworkGeneration::DataFlowDynamics (class)">DataFlowDynamics</a></span></span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span> <span class='kw'>do</span>
+        <span class='const'><span class='object_link'><a href="" title="Syskit::NetworkGeneration::DataFlowDynamics (class)">DataFlowDynamics</a></span></span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>computing connections</span><span class='tstring_end'>&quot;</span></span>
+        <span class='id identifier rubyid_deployed_tasks'>deployed_tasks</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_t'>t</span><span class='op'>|</span>
+            <span class='const'><span class='object_link'><a href="" title="Syskit::NetworkGeneration::DataFlowDynamics (class)">DataFlowDynamics</a></span></span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>  </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_t'>t</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+        <span class='kw'>end</span>
+
+        <span class='const'><span class='object_link'><a href="" title="Syskit::NetworkGeneration::DataFlowDynamics (class)">DataFlowDynamics</a></span></span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>available information for</span><span class='tstring_end'>&quot;</span></span>
+        <span class='id identifier rubyid_result'>result</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_task'>task</span><span class='comma'>,</span> <span class='id identifier rubyid_ports'>ports</span><span class='op'>|</span>
+            <span class='const'><span class='object_link'><a href="" title="Syskit::NetworkGeneration::DataFlowDynamics (class)">DataFlowDynamics</a></span></span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>  </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_task'>task</span><span class='embexpr_end'>}</span><span class='tstring_content'>: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_ports'>ports</span><span class='period'>.</span><span class='id identifier rubyid_keys'>keys</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>, </span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+        <span class='kw'>end</span>
+        <span class='kw'>break</span>
+    <span class='kw'>end</span>
+
+    <span class='id identifier rubyid_dataflow_graph'>dataflow_graph</span> <span class='op'>=</span> <span class='id identifier rubyid_plan'>plan</span><span class='period'>.</span><span class='id identifier rubyid_task_relation_graph_for'>task_relation_graph_for</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="../../Syskit.html#Flows-constant" title="Syskit::Flows (constant)">Flows</a></span></span><span class='op'>::</span><span class='const'>DataFlow</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_connection_graph'>connection_graph</span> <span class='op'>=</span> <span class='id identifier rubyid_dataflow_graph'>dataflow_graph</span><span class='period'>.</span><span class='id identifier rubyid_compute_concrete_connection_graph'>compute_concrete_connection_graph</span>
+    <span class='id identifier rubyid_policy_graph'>policy_graph</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../Syskit.html#Flows-constant" title="Syskit::Flows (constant)">Flows</a></span></span><span class='op'>::</span><span class='const'>DataFlow</span><span class='op'>::</span><span class='const'>ConcreteConnectionGraph</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+    <span class='id identifier rubyid_deployed_tasks'>deployed_tasks</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_source_task'>source_task</span><span class='op'>|</span>
+        <span class='id identifier rubyid_connection_graph'>connection_graph</span><span class='period'>.</span><span class='id identifier rubyid_each_out_neighbour'>each_out_neighbour</span><span class='lparen'>(</span><span class='id identifier rubyid_source_task'>source_task</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_sink_task'>sink_task</span><span class='op'>|</span>
+            <span class='id identifier rubyid_mappings'>mappings</span> <span class='op'>=</span> <span class='id identifier rubyid_connection_graph'>connection_graph</span><span class='period'>.</span><span class='id identifier rubyid_edge_info'>edge_info</span><span class='lparen'>(</span><span class='id identifier rubyid_source_task'>source_task</span><span class='comma'>,</span> <span class='id identifier rubyid_sink_task'>sink_task</span><span class='rparen'>)</span>
+            <span class='id identifier rubyid_computed_policies'>computed_policies</span> <span class='op'>=</span> <span class='id identifier rubyid_mappings'>mappings</span><span class='period'>.</span><span class='id identifier rubyid_map_value'>map_value</span> <span class='kw'>do</span> <span class='op'>|</span><span class='lparen'>(</span><span class='id identifier rubyid_source_port_name'>source_port_name</span><span class='comma'>,</span> <span class='id identifier rubyid_sink_port_name'>sink_port_name</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='id identifier rubyid_policy'>policy</span><span class='op'>|</span>
+                <span class='id identifier rubyid_policy_for'>policy_for</span><span class='lparen'>(</span><span class='id identifier rubyid_source_task'>source_task</span><span class='comma'>,</span> <span class='id identifier rubyid_source_port_name'>source_port_name</span><span class='comma'>,</span> <span class='id identifier rubyid_sink_port_name'>sink_port_name</span><span class='comma'>,</span> <span class='id identifier rubyid_sink_task'>sink_task</span><span class='comma'>,</span> <span class='id identifier rubyid_policy'>policy</span><span class='rparen'>)</span>
+            <span class='kw'>end</span>
+            <span class='id identifier rubyid_policy_graph'>policy_graph</span><span class='period'>.</span><span class='id identifier rubyid_add_edge'>add_edge</span><span class='lparen'>(</span><span class='id identifier rubyid_source_task'>source_task</span><span class='comma'>,</span> <span class='id identifier rubyid_sink_task'>sink_task</span><span class='comma'>,</span> <span class='id identifier rubyid_computed_policies'>computed_policies</span><span class='rparen'>)</span>
+        <span class='kw'>end</span>
+    <span class='kw'>end</span>
+    <span class='comment'>#dataflow_graph.reset_computed_policies(policy_graph)
+</span>    <span class='id identifier rubyid_result'>result</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="compute_info_for-instance_method">
+  
+    #<strong>compute_info_for</strong>(task, port_name)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Try to compute the information for the given task and port (or, if
+port_name is nil, for the task). Returns true if the required information
+could be computed as requested, and false otherwise.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+439
+440
+441
+442
+443
+444
+445
+446
+447
+448
+449
+450
+451
+452
+453
+454
+455
+456
+457
+458
+459
+460
+461
+462
+463
+464
+465</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/network_generation/dataflow_dynamics.rb', line 439</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_compute_info_for'>compute_info_for</span><span class='lparen'>(</span><span class='id identifier rubyid_task'>task</span><span class='comma'>,</span> <span class='id identifier rubyid_port_name'>port_name</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_triggers'>triggers</span> <span class='op'>=</span> <span class='ivar'>@triggers</span><span class='lbracket'>[</span><span class='lbracket'>[</span><span class='id identifier rubyid_task'>task</span><span class='comma'>,</span> <span class='id identifier rubyid_port_name'>port_name</span><span class='rbracket'>]</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_trigger_task'>trigger_task</span><span class='comma'>,</span> <span class='id identifier rubyid_trigger_port'>trigger_port</span><span class='op'>|</span>
+        <span class='kw'>if</span> <span class='id identifier rubyid_has_final_information_for_port?'>has_final_information_for_port?</span><span class='lparen'>(</span><span class='id identifier rubyid_trigger_task'>trigger_task</span><span class='comma'>,</span> <span class='id identifier rubyid_trigger_port'>trigger_port</span><span class='rparen'>)</span>
+            <span class='id identifier rubyid_port_info'>port_info</span><span class='lparen'>(</span><span class='id identifier rubyid_trigger_task'>trigger_task</span><span class='comma'>,</span> <span class='id identifier rubyid_trigger_port'>trigger_port</span><span class='rparen'>)</span>
+        <span class='kw'>else</span>
+            <span class='const'><span class='object_link'><a href="" title="Syskit::NetworkGeneration::DataFlowDynamics (class)">DataFlowDynamics</a></span></span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span> <span class='kw'>do</span>
+                <span class='const'><span class='object_link'><a href="" title="Syskit::NetworkGeneration::DataFlowDynamics (class)">DataFlowDynamics</a></span></span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>  missing info on </span><span class='tstring_end'>&quot;</span></span>\
+                    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_trigger_task'>trigger_task</span><span class='embexpr_end'>}</span><span class='tstring_content'>.</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_trigger_port'>trigger_port</span><span class='embexpr_end'>}</span><span class='tstring_content'> to compute </span><span class='tstring_end'>&quot;</span></span>\
+                    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_task'>task</span><span class='embexpr_end'>}</span><span class='tstring_content'>.</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_port_name'>port_name</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+                <span class='kw'>break</span>
+            <span class='kw'>end</span>
+            <span class='kw'>return</span> <span class='kw'>false</span>
+        <span class='kw'>end</span>
+    <span class='kw'>end</span>
+
+    <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_period'>period</span> <span class='op'>=</span> <span class='id identifier rubyid_find_period_of'>find_period_of</span><span class='lparen'>(</span><span class='id identifier rubyid_task'>task</span><span class='rparen'>)</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_triggers'>triggers</span> <span class='op'>=</span> <span class='id identifier rubyid_triggers'>triggers</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_trigger_info'>trigger_info</span><span class='op'>|</span>
+            <span class='id identifier rubyid_trigger_info'>trigger_info</span><span class='period'>.</span><span class='id identifier rubyid_sampled_at'>sampled_at</span><span class='lparen'>(</span><span class='id identifier rubyid_period'>period</span><span class='rparen'>)</span>
+        <span class='kw'>end</span>
+    <span class='kw'>end</span>
+
+    <span class='id identifier rubyid_triggers'>triggers</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_trigger_info'>trigger_info</span><span class='op'>|</span>
+        <span class='id identifier rubyid_add_port_info'>add_port_info</span><span class='lparen'>(</span><span class='id identifier rubyid_task'>task</span><span class='comma'>,</span> <span class='id identifier rubyid_port_name'>port_name</span><span class='comma'>,</span> <span class='id identifier rubyid_trigger_info'>trigger_info</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_done_port_info'>done_port_info</span><span class='lparen'>(</span><span class='id identifier rubyid_task'>task</span><span class='comma'>,</span> <span class='id identifier rubyid_port_name'>port_name</span><span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='kw'>true</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="create_port_info-instance_method">
+  
+    #<strong>create_port_info</strong>(task, port_name)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+202
+203
+204
+205
+206
+207
+208
+209</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/network_generation/dataflow_dynamics.rb', line 202</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_create_port_info'>create_port_info</span><span class='lparen'>(</span><span class='id identifier rubyid_task'>task</span><span class='comma'>,</span> <span class='id identifier rubyid_port_name'>port_name</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_port_model'>port_model</span> <span class='op'>=</span> <span class='id identifier rubyid_task'>task</span><span class='period'>.</span><span class='id identifier rubyid_model'>model</span><span class='period'>.</span><span class='id identifier rubyid_find_port'>find_port</span><span class='lparen'>(</span><span class='id identifier rubyid_port_name'>port_name</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_dynamics'>dynamics</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="PortDynamics.html" title="Syskit::NetworkGeneration::PortDynamics (class)">PortDynamics</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="PortDynamics.html#initialize-instance_method" title="Syskit::NetworkGeneration::PortDynamics#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_task'>task</span><span class='period'>.</span><span class='id identifier rubyid_orocos_name'>orocos_name</span><span class='embexpr_end'>}</span><span class='tstring_content'>.</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_port_model'>port_model</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+                            <span class='id identifier rubyid_port_model'>port_model</span><span class='period'>.</span><span class='id identifier rubyid_sample_size'>sample_size</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_dynamics'>dynamics</span><span class='period'>.</span><span class='id identifier rubyid_add_trigger'>add_trigger</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>burst</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_port_model'>port_model</span><span class='period'>.</span><span class='id identifier rubyid_burst_period'>burst_period</span><span class='comma'>,</span> <span class='id identifier rubyid_port_model'>port_model</span><span class='period'>.</span><span class='id identifier rubyid_burst_size'>burst_size</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_set_port_info'>set_port_info</span><span class='lparen'>(</span><span class='id identifier rubyid_task'>task</span><span class='comma'>,</span> <span class='id identifier rubyid_port_name'>port_name</span><span class='comma'>,</span> <span class='id identifier rubyid_dynamics'>dynamics</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_dynamics'>dynamics</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="done_task_info-instance_method">
+  
+    #<strong>done_task_info</strong>(task)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+192
+193
+194
+195
+196
+197
+198
+199
+200</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/network_generation/dataflow_dynamics.rb', line 192</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_done_task_info'>done_task_info</span><span class='lparen'>(</span><span class='id identifier rubyid_task'>task</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_task'>task</span><span class='period'>.</span><span class='id identifier rubyid_orogen_model'>orogen_model</span><span class='period'>.</span><span class='id identifier rubyid_slaves'>slaves</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_slave_task'>slave_task</span><span class='op'>|</span>
+        <span class='kw'>if</span> <span class='id identifier rubyid_slave_task'>slave_task</span> <span class='op'>=</span> <span class='id identifier rubyid_task_from_name'>task_from_name</span><span class='lbracket'>[</span><span class='id identifier rubyid_slave_task'>slave_task</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='rbracket'>]</span>
+            <span class='id identifier rubyid_add_task_info'>add_task_info</span><span class='lparen'>(</span><span class='id identifier rubyid_slave_task'>slave_task</span><span class='comma'>,</span> <span class='id identifier rubyid_task_info'>task_info</span><span class='lparen'>(</span><span class='id identifier rubyid_task'>task</span><span class='rparen'>)</span><span class='rparen'>)</span>
+            <span class='id identifier rubyid_done_task_info'>done_task_info</span><span class='lparen'>(</span><span class='id identifier rubyid_slave_task'>slave_task</span><span class='rparen'>)</span>
+        <span class='kw'>end</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_done_port_info'>done_port_info</span><span class='lparen'>(</span><span class='id identifier rubyid_task'>task</span><span class='comma'>,</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="find_period_of-instance_method">
+  
+    #<strong>find_period_of</strong>(task)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+426
+427
+428
+429
+430
+431
+432
+433
+434</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/network_generation/dataflow_dynamics.rb', line 426</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_find_period_of'>find_period_of</span><span class='lparen'>(</span><span class='id identifier rubyid_task'>task</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_orogen_model'>orogen_model</span> <span class='op'>=</span> <span class='id identifier rubyid_task'>task</span><span class='period'>.</span><span class='id identifier rubyid_orogen_model'>orogen_model</span>
+    <span class='kw'>while</span> <span class='lparen'>(</span><span class='id identifier rubyid_master'>master</span> <span class='op'>=</span> <span class='id identifier rubyid_orogen_model'>orogen_model</span><span class='period'>.</span><span class='id identifier rubyid_master'>master</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_orogen_model'>orogen_model</span> <span class='op'>=</span> <span class='id identifier rubyid_master'>master</span>
+    <span class='kw'>end</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_orogen_model'>orogen_model</span><span class='period'>.</span><span class='id identifier rubyid_activity_type'>activity_type</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Periodic</span><span class='tstring_end'>&quot;</span></span>
+        <span class='id identifier rubyid_orogen_model'>orogen_model</span><span class='period'>.</span><span class='id identifier rubyid_period'>period</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="has_final_information_for_task?-instance_method">
+  
+    #<strong>has_final_information_for_task?</strong>(task)  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+176
+177
+178</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/network_generation/dataflow_dynamics.rb', line 176</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_has_final_information_for_task?'>has_final_information_for_task?</span><span class='lparen'>(</span><span class='id identifier rubyid_task'>task</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_has_final_information_for_port?'>has_final_information_for_port?</span><span class='lparen'>(</span><span class='id identifier rubyid_task'>task</span><span class='comma'>,</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="has_information_for_task?-instance_method">
+  
+    #<strong>has_information_for_task?</strong>(task)  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+172
+173
+174</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/network_generation/dataflow_dynamics.rb', line 172</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_has_information_for_task?'>has_information_for_task?</span><span class='lparen'>(</span><span class='id identifier rubyid_task'>task</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_has_information_for_port?'>has_information_for_port?</span><span class='lparen'>(</span><span class='id identifier rubyid_task'>task</span><span class='comma'>,</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="initial_combus_information-instance_method">
+  
+    #<strong>initial_combus_information</strong>(task)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Computes the initial port dynamics due to the devices that go through a
+communication bus.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+296
+297
+298
+299
+300
+301
+302
+303
+304
+305
+306
+307
+308
+309
+310
+311
+312
+313
+314</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/network_generation/dataflow_dynamics.rb', line 296</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initial_combus_information'>initial_combus_information</span><span class='lparen'>(</span><span class='id identifier rubyid_task'>task</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_handled_ports'>handled_ports</span> <span class='op'>=</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+    <span class='id identifier rubyid_task'>task</span><span class='period'>.</span><span class='id identifier rubyid_each_attached_device'>each_attached_device</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_dev'>dev</span><span class='op'>|</span>
+        <span class='id identifier rubyid_srv'>srv</span> <span class='op'>=</span> <span class='id identifier rubyid_task'>task</span><span class='period'>.</span><span class='id identifier rubyid_find_data_service'>find_data_service</span><span class='lparen'>(</span><span class='id identifier rubyid_dev'>dev</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_srv'>srv</span><span class='period'>.</span><span class='id identifier rubyid_each_input_port'>each_input_port</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_port'>port</span><span class='op'>|</span>
+            <span class='id identifier rubyid_handled_ports'>handled_ports</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_port'>port</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span>
+            <span class='id identifier rubyid_port'>port</span> <span class='op'>=</span> <span class='id identifier rubyid_port'>port</span><span class='period'>.</span><span class='id identifier rubyid_to_component_port'>to_component_port</span>
+            <span class='id identifier rubyid_dynamics'>dynamics</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="PortDynamics.html" title="Syskit::NetworkGeneration::PortDynamics (class)">PortDynamics</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="PortDynamics.html#initialize-instance_method" title="Syskit::NetworkGeneration::PortDynamics#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_task'>task</span><span class='period'>.</span><span class='id identifier rubyid_orocos_name'>orocos_name</span><span class='embexpr_end'>}</span><span class='tstring_content'>.</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_port'>port</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_dev'>dev</span><span class='period'>.</span><span class='id identifier rubyid_sample_size'>sample_size</span><span class='rparen'>)</span>
+            <span class='kw'>if</span> <span class='id identifier rubyid_dev'>dev</span><span class='period'>.</span><span class='id identifier rubyid_period'>period</span>
+                <span class='id identifier rubyid_dynamics'>dynamics</span><span class='period'>.</span><span class='id identifier rubyid_add_trigger'>add_trigger</span><span class='lparen'>(</span><span class='id identifier rubyid_dev'>dev</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_dev'>dev</span><span class='period'>.</span><span class='id identifier rubyid_period'>period</span><span class='comma'>,</span> <span class='int'>1</span><span class='rparen'>)</span>
+                <span class='id identifier rubyid_dynamics'>dynamics</span><span class='period'>.</span><span class='id identifier rubyid_add_trigger'>add_trigger</span><span class='lparen'>(</span><span class='id identifier rubyid_dev'>dev</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_dev'>dev</span><span class='period'>.</span><span class='id identifier rubyid_period'>period</span> <span class='op'>*</span> <span class='id identifier rubyid_dev'>dev</span><span class='period'>.</span><span class='id identifier rubyid_burst'>burst</span><span class='comma'>,</span> <span class='id identifier rubyid_dev'>dev</span><span class='period'>.</span><span class='id identifier rubyid_burst'>burst</span><span class='rparen'>)</span>
+            <span class='kw'>end</span>
+            <span class='id identifier rubyid_add_port_info'>add_port_info</span><span class='lparen'>(</span><span class='id identifier rubyid_task'>task</span><span class='comma'>,</span> <span class='id identifier rubyid_port'>port</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_dynamics'>dynamics</span><span class='rparen'>)</span>
+        <span class='kw'>end</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_handled_ports'>handled_ports</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_port_name'>port_name</span><span class='op'>|</span>
+        <span class='id identifier rubyid_done_port_info'>done_port_info</span><span class='lparen'>(</span><span class='id identifier rubyid_task'>task</span><span class='comma'>,</span> <span class='id identifier rubyid_port_name'>port_name</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="initial_device_information-instance_method">
+  
+    #<strong>initial_device_information</strong>(task)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Adds triggering information from the attached devices to
+<code>task</code>&#39;s ports</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/network_generation/dataflow_dynamics.rb', line 222</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initial_device_information'>initial_device_information</span><span class='lparen'>(</span><span class='id identifier rubyid_task'>task</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_triggering_devices'>triggering_devices</span> <span class='op'>=</span> <span class='id identifier rubyid_task'>task</span><span class='period'>.</span><span class='id identifier rubyid_model'>model</span><span class='period'>.</span><span class='id identifier rubyid_each_master_driver_service'>each_master_driver_service</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_srv'>srv</span><span class='op'>|</span>
+        <span class='lbracket'>[</span><span class='id identifier rubyid_srv'>srv</span><span class='comma'>,</span> <span class='id identifier rubyid_task'>task</span><span class='period'>.</span><span class='id identifier rubyid_find_device_attached_to'>find_device_attached_to</span><span class='lparen'>(</span><span class='id identifier rubyid_srv'>srv</span><span class='rparen'>)</span><span class='rbracket'>]</span>
+    <span class='kw'>end</span>
+    <span class='const'><span class='object_link'><a href="" title="Syskit::NetworkGeneration::DataFlowDynamics (class)">DataFlowDynamics</a></span></span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span> <span class='kw'>do</span>
+        <span class='const'><span class='object_link'><a href="" title="Syskit::NetworkGeneration::DataFlowDynamics (class)">DataFlowDynamics</a></span></span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>initial port dynamics on </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_task'>task</span><span class='embexpr_end'>}</span><span class='tstring_content'> (device)</span><span class='tstring_end'>&quot;</span></span>
+        <span class='const'><span class='object_link'><a href="" title="Syskit::NetworkGeneration::DataFlowDynamics (class)">DataFlowDynamics</a></span></span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>  attached devices: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_triggering_devices'>triggering_devices</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_srv'>srv</span><span class='comma'>,</span> <span class='id identifier rubyid_dev'>dev</span><span class='op'>|</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_dev'>dev</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'> on </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_srv'>srv</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span> <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>, </span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+        <span class='kw'>break</span>
+    <span class='kw'>end</span>
+
+    <span class='id identifier rubyid_activity_type'>activity_type</span> <span class='op'>=</span> <span class='id identifier rubyid_task'>task</span><span class='period'>.</span><span class='id identifier rubyid_orogen_model'>orogen_model</span><span class='period'>.</span><span class='id identifier rubyid_activity_type'>activity_type</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span>
+    <span class='kw'>case</span> <span class='id identifier rubyid_activity_type'>activity_type</span>
+    <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Periodic</span><span class='tstring_end'>&quot;</span></span>
+        <span class='id identifier rubyid_initial_device_information_periodic_triggering'>initial_device_information_periodic_triggering</span><span class='lparen'>(</span>
+            <span class='id identifier rubyid_task'>task</span><span class='comma'>,</span> <span class='id identifier rubyid_triggering_devices'>triggering_devices</span><span class='period'>.</span><span class='id identifier rubyid_to_a'>to_a</span><span class='comma'>,</span> <span class='id identifier rubyid_task'>task</span><span class='period'>.</span><span class='id identifier rubyid_orogen_model'>orogen_model</span><span class='period'>.</span><span class='id identifier rubyid_period'>period</span><span class='rparen'>)</span>
+    <span class='kw'>else</span>
+        <span class='id identifier rubyid_initial_device_information_internal_triggering'>initial_device_information_internal_triggering</span><span class='lparen'>(</span>
+            <span class='id identifier rubyid_task'>task</span><span class='comma'>,</span> <span class='id identifier rubyid_triggering_devices'>triggering_devices</span><span class='period'>.</span><span class='id identifier rubyid_to_a'>to_a</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="initial_device_information_common-instance_method">
+  
+    #<strong>initial_device_information_common</strong>(task, triggering_devices)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Common external loop for adding initial device information in
+#initial_device_information. It is used by
+initial_device_information_periodic_triggering and
+initial_device_information_internal_triggering</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/network_generation/dataflow_dynamics.rb', line 247</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initial_device_information_common'>initial_device_information_common</span><span class='lparen'>(</span><span class='id identifier rubyid_task'>task</span><span class='comma'>,</span> <span class='id identifier rubyid_triggering_devices'>triggering_devices</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_triggering_devices'>triggering_devices</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_service'>service</span><span class='comma'>,</span> <span class='id identifier rubyid_device'>device</span><span class='op'>|</span>
+        <span class='const'><span class='object_link'><a href="" title="Syskit::NetworkGeneration::DataFlowDynamics (class)">DataFlowDynamics</a></span></span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span> <span class='lbrace'>{</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>  </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_device'>device</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'>: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_device'>device</span><span class='period'>.</span><span class='id identifier rubyid_period'>period</span><span class='embexpr_end'>}</span><span class='tstring_content'> </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_device'>device</span><span class='period'>.</span><span class='id identifier rubyid_burst'>burst</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span> <span class='rbrace'>}</span>
+        <span class='id identifier rubyid_device_dynamics'>device_dynamics</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="PortDynamics.html" title="Syskit::NetworkGeneration::PortDynamics (class)">PortDynamics</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="PortDynamics.html#initialize-instance_method" title="Syskit::NetworkGeneration::PortDynamics#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_device'>device</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='int'>1</span><span class='rparen'>)</span>
+        <span class='kw'>if</span> <span class='id identifier rubyid_device'>device</span><span class='period'>.</span><span class='id identifier rubyid_period'>period</span>
+            <span class='id identifier rubyid_device_dynamics'>device_dynamics</span><span class='period'>.</span><span class='id identifier rubyid_add_trigger'>add_trigger</span><span class='lparen'>(</span><span class='id identifier rubyid_device'>device</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_device'>device</span><span class='period'>.</span><span class='id identifier rubyid_period'>period</span><span class='comma'>,</span> <span class='int'>1</span><span class='rparen'>)</span>
+        <span class='kw'>end</span>
+        <span class='id identifier rubyid_device_dynamics'>device_dynamics</span><span class='period'>.</span><span class='id identifier rubyid_add_trigger'>add_trigger</span><span class='lparen'>(</span><span class='id identifier rubyid_device'>device</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>-burst</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='id identifier rubyid_device'>device</span><span class='period'>.</span><span class='id identifier rubyid_burst'>burst</span><span class='rparen'>)</span>
+
+        <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_device_dynamics'>device_dynamics</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
+            <span class='kw'>yield</span><span class='lparen'>(</span><span class='id identifier rubyid_service'>service</span><span class='comma'>,</span> <span class='id identifier rubyid_device'>device</span><span class='comma'>,</span> <span class='id identifier rubyid_device_dynamics'>device_dynamics</span><span class='rparen'>)</span>
+        <span class='kw'>end</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="initial_device_information_internal_triggering-instance_method">
+  
+    #<strong>initial_device_information_internal_triggering</strong>(task, triggering_devices)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Computes the initial port dynamics due to devices when the task gets
+triggered by the devices it is attached to</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/network_generation/dataflow_dynamics.rb', line 264</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initial_device_information_internal_triggering'>initial_device_information_internal_triggering</span><span class='lparen'>(</span><span class='id identifier rubyid_task'>task</span><span class='comma'>,</span> <span class='id identifier rubyid_triggering_devices'>triggering_devices</span><span class='rparen'>)</span>
+    <span class='const'><span class='object_link'><a href="" title="Syskit::NetworkGeneration::DataFlowDynamics (class)">DataFlowDynamics</a></span></span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>  is triggered internally</span><span class='tstring_end'>&quot;</span></span>
+
+    <span class='id identifier rubyid_initial_device_information_common'>initial_device_information_common</span><span class='lparen'>(</span><span class='id identifier rubyid_task'>task</span><span class='comma'>,</span> <span class='id identifier rubyid_triggering_devices'>triggering_devices</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_service'>service</span><span class='comma'>,</span> <span class='id identifier rubyid_device'>device</span><span class='comma'>,</span> <span class='id identifier rubyid_device_dynamics'>device_dynamics</span><span class='op'>|</span>
+        <span class='id identifier rubyid_add_task_info'>add_task_info</span><span class='lparen'>(</span><span class='id identifier rubyid_task'>task</span><span class='comma'>,</span> <span class='id identifier rubyid_device_dynamics'>device_dynamics</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_service'>service</span><span class='period'>.</span><span class='id identifier rubyid_each_output_port'>each_output_port</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_out_port'>out_port</span><span class='op'>|</span>
+            <span class='id identifier rubyid_out_port'>out_port</span> <span class='op'>=</span> <span class='id identifier rubyid_out_port'>out_port</span><span class='period'>.</span><span class='id identifier rubyid_to_component_port'>to_component_port</span>
+            <span class='id identifier rubyid_out_port'>out_port</span><span class='period'>.</span><span class='id identifier rubyid_orogen_model'>orogen_model</span><span class='period'>.</span><span class='id identifier rubyid_triggered_on_update'>triggered_on_update</span> <span class='op'>=</span> <span class='kw'>false</span>
+            <span class='id identifier rubyid_add_port_info'>add_port_info</span><span class='lparen'>(</span><span class='id identifier rubyid_task'>task</span><span class='comma'>,</span> <span class='id identifier rubyid_out_port'>out_port</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_device_dynamics'>device_dynamics</span><span class='rparen'>)</span>
+            <span class='id identifier rubyid_done_port_info'>done_port_info</span><span class='lparen'>(</span><span class='id identifier rubyid_task'>task</span><span class='comma'>,</span> <span class='id identifier rubyid_out_port'>out_port</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
+        <span class='kw'>end</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="initial_device_information_periodic_triggering-instance_method">
+  
+    #<strong>initial_device_information_periodic_triggering</strong>(task, triggering_devices, period)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Computes the initial port dynamics due to devices when the task is
+triggered periodically</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291
+292</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/network_generation/dataflow_dynamics.rb', line 280</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initial_device_information_periodic_triggering'>initial_device_information_periodic_triggering</span><span class='lparen'>(</span><span class='id identifier rubyid_task'>task</span><span class='comma'>,</span> <span class='id identifier rubyid_triggering_devices'>triggering_devices</span><span class='comma'>,</span> <span class='id identifier rubyid_period'>period</span><span class='rparen'>)</span>
+    <span class='const'><span class='object_link'><a href="" title="Syskit::NetworkGeneration::DataFlowDynamics (class)">DataFlowDynamics</a></span></span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span> <span class='lbrace'>{</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>  is triggered with a period of </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_period'>period</span><span class='embexpr_end'>}</span><span class='tstring_content'> seconds</span><span class='tstring_end'>&quot;</span></span> <span class='rbrace'>}</span>
+
+    <span class='id identifier rubyid_initial_device_information_common'>initial_device_information_common</span><span class='lparen'>(</span><span class='id identifier rubyid_task'>task</span><span class='comma'>,</span> <span class='id identifier rubyid_triggering_devices'>triggering_devices</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_service'>service</span><span class='comma'>,</span> <span class='id identifier rubyid_device'>device</span><span class='comma'>,</span> <span class='id identifier rubyid_device_dynamics'>device_dynamics</span><span class='op'>|</span>
+        <span class='id identifier rubyid_service'>service</span><span class='period'>.</span><span class='id identifier rubyid_each_output_port'>each_output_port</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_out_port'>out_port</span><span class='op'>|</span>
+            <span class='id identifier rubyid_out_port'>out_port</span> <span class='op'>=</span> <span class='id identifier rubyid_out_port'>out_port</span><span class='period'>.</span><span class='id identifier rubyid_to_component_port'>to_component_port</span>
+            <span class='id identifier rubyid_out_port'>out_port</span><span class='period'>.</span><span class='id identifier rubyid_orogen_model'>orogen_model</span><span class='period'>.</span><span class='id identifier rubyid_triggered_on_update'>triggered_on_update</span> <span class='op'>=</span> <span class='kw'>false</span>
+            <span class='id identifier rubyid_add_port_trigger'>add_port_trigger</span><span class='lparen'>(</span><span class='id identifier rubyid_task'>task</span><span class='comma'>,</span> <span class='id identifier rubyid_out_port'>out_port</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span>
+                <span class='id identifier rubyid_device'>device</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_period'>period</span><span class='comma'>,</span> <span class='id identifier rubyid_device_dynamics'>device_dynamics</span><span class='period'>.</span><span class='id identifier rubyid_queue_size'>queue_size</span><span class='lparen'>(</span><span class='id identifier rubyid_period'>period</span><span class='rparen'>)</span><span class='rparen'>)</span>
+            <span class='id identifier rubyid_done_port_info'>done_port_info</span><span class='lparen'>(</span><span class='id identifier rubyid_task'>task</span><span class='comma'>,</span> <span class='id identifier rubyid_out_port'>out_port</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
+        <span class='kw'>end</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="initial_information-instance_method">
+  
+    #<strong>initial_information</strong>(task)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Computes the initial port dynamics, i.e. the dynamics that can be computed
+without knowing anything about the dataflow</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+318
+319
+320
+321</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/network_generation/dataflow_dynamics.rb', line 318</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initial_information'>initial_information</span><span class='lparen'>(</span><span class='id identifier rubyid_task'>task</span><span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='kw'>if</span> <span class='id identifier rubyid_task'>task</span><span class='period'>.</span><span class='id identifier rubyid_orogen_model'>orogen_model</span><span class='period'>.</span><span class='id identifier rubyid_master'>master</span>
+    <span class='id identifier rubyid_initial_task_information'>initial_task_information</span><span class='lparen'>(</span><span class='id identifier rubyid_task'>task</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="initial_slaves_information-instance_method">
+  
+    #<strong>initial_slaves_information</strong>(task)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+
+<p>Computes a task&#39;s slaves initial information</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+326
+327
+328
+329
+330
+331
+332
+333
+334</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/network_generation/dataflow_dynamics.rb', line 326</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initial_slaves_information'>initial_slaves_information</span><span class='lparen'>(</span><span class='id identifier rubyid_task'>task</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_task'>task</span><span class='period'>.</span><span class='id identifier rubyid_orogen_model'>orogen_model</span><span class='period'>.</span><span class='id identifier rubyid_slaves'>slaves</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_orogen_slave_task'>orogen_slave_task</span><span class='op'>|</span>
+        <span class='kw'>if</span> <span class='id identifier rubyid_slave_task'>slave_task</span> <span class='op'>=</span> <span class='id identifier rubyid_task_from_name'>task_from_name</span><span class='lbracket'>[</span><span class='id identifier rubyid_orogen_slave_task'>orogen_slave_task</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='rbracket'>]</span>
+            <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_has_information_for_task?'>has_information_for_task?</span><span class='lparen'>(</span><span class='id identifier rubyid_slave_task'>slave_task</span><span class='rparen'>)</span>
+                <span class='id identifier rubyid_initial_task_information'>initial_task_information</span><span class='lparen'>(</span><span class='id identifier rubyid_slave_task'>slave_task</span><span class='rparen'>)</span>
+            <span class='kw'>end</span>
+        <span class='kw'>end</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="initial_task_information-instance_method">
+  
+    #<strong>initial_task_information</strong>(task)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+
+<p>Computes a task&#39;s initial information</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+339
+340
+341
+342
+343
+344
+345
+346
+347
+348
+349
+350
+351
+352
+353
+354
+355
+356
+357
+358
+359
+360
+361
+362
+363
+364
+365
+366
+367
+368
+369
+370
+371
+372</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/network_generation/dataflow_dynamics.rb', line 339</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initial_task_information'>initial_task_information</span><span class='lparen'>(</span><span class='id identifier rubyid_task'>task</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_initial_slaves_information'>initial_slaves_information</span><span class='lparen'>(</span><span class='id identifier rubyid_task'>task</span><span class='rparen'>)</span>
+
+    <span class='id identifier rubyid_set_port_info'>set_port_info</span><span class='lparen'>(</span><span class='id identifier rubyid_task'>task</span><span class='comma'>,</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="PortDynamics.html" title="Syskit::NetworkGeneration::PortDynamics (class)">PortDynamics</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="PortDynamics.html#initialize-instance_method" title="Syskit::NetworkGeneration::PortDynamics#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_task'>task</span><span class='period'>.</span><span class='id identifier rubyid_orocos_name'>orocos_name</span><span class='embexpr_end'>}</span><span class='tstring_content'>.main</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_task'>task</span><span class='period'>.</span><span class='id identifier rubyid_model'>model</span><span class='period'>.</span><span class='id identifier rubyid_each_output_port'>each_output_port</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_port'>port</span><span class='op'>|</span>
+        <span class='id identifier rubyid_create_port_info'>create_port_info</span><span class='lparen'>(</span><span class='id identifier rubyid_task'>task</span><span class='comma'>,</span> <span class='id identifier rubyid_port'>port</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+
+    <span class='id identifier rubyid_add_task_info'>add_task_info</span><span class='lparen'>(</span><span class='id identifier rubyid_task'>task</span><span class='comma'>,</span> <span class='id identifier rubyid_task'>task</span><span class='period'>.</span><span class='id identifier rubyid_requirements'>requirements</span><span class='period'>.</span><span class='id identifier rubyid_dynamics'>dynamics</span><span class='period'>.</span><span class='id identifier rubyid_task'>task</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_task'>task</span><span class='period'>.</span><span class='id identifier rubyid_requirements'>requirements</span><span class='period'>.</span><span class='id identifier rubyid_dynamics'>dynamics</span><span class='period'>.</span><span class='id identifier rubyid_ports'>ports</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_port_name'>port_name</span><span class='comma'>,</span> <span class='id identifier rubyid_dynamics'>dynamics</span><span class='op'>|</span>
+        <span class='id identifier rubyid_add_port_info'>add_port_info</span><span class='lparen'>(</span><span class='id identifier rubyid_task'>task</span><span class='comma'>,</span> <span class='id identifier rubyid_port_name'>port_name</span><span class='comma'>,</span> <span class='id identifier rubyid_dynamics'>dynamics</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_done_port_info'>done_port_info</span><span class='lparen'>(</span><span class='id identifier rubyid_task'>task</span><span class='comma'>,</span> <span class='id identifier rubyid_port_name'>port_name</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+
+    <span class='kw'>if</span> <span class='id identifier rubyid_task'>task</span><span class='period'>.</span><span class='id identifier rubyid_kind_of?'>kind_of?</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="../Device.html" title="Syskit::Device (module)">Device</a></span></span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_initial_device_information'>initial_device_information</span><span class='lparen'>(</span><span class='id identifier rubyid_task'>task</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_task'>task</span><span class='period'>.</span><span class='id identifier rubyid_kind_of?'>kind_of?</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="../ComBus.html" title="Syskit::ComBus (module)">ComBus</a></span></span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_initial_combus_information'>initial_combus_information</span><span class='lparen'>(</span><span class='id identifier rubyid_task'>task</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+
+    <span class='id identifier rubyid_activity_type'>activity_type</span> <span class='op'>=</span> <span class='id identifier rubyid_task'>task</span><span class='period'>.</span><span class='id identifier rubyid_orogen_model'>orogen_model</span><span class='period'>.</span><span class='id identifier rubyid_activity_type'>activity_type</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_activity_type'>activity_type</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Periodic</span><span class='tstring_end'>&quot;</span></span>
+        <span class='const'><span class='object_link'><a href="" title="Syskit::NetworkGeneration::DataFlowDynamics (class)">DataFlowDynamics</a></span></span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span> <span class='lbrace'>{</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>  adding periodic trigger </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_task'>task</span><span class='period'>.</span><span class='id identifier rubyid_orogen_model'>orogen_model</span><span class='period'>.</span><span class='id identifier rubyid_period'>period</span><span class='embexpr_end'>}</span><span class='tstring_content'> 1</span><span class='tstring_end'>&quot;</span></span> <span class='rbrace'>}</span>
+        <span class='id identifier rubyid_add_task_trigger'>add_task_trigger</span><span class='lparen'>(</span><span class='id identifier rubyid_task'>task</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_task'>task</span><span class='period'>.</span><span class='id identifier rubyid_orocos_name'>orocos_name</span><span class='embexpr_end'>}</span><span class='tstring_content'>.main-period</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_task'>task</span><span class='period'>.</span><span class='id identifier rubyid_orogen_model'>orogen_model</span><span class='period'>.</span><span class='id identifier rubyid_period'>period</span><span class='comma'>,</span> <span class='int'>1</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_done_task_info'>done_task_info</span><span class='lparen'>(</span><span class='id identifier rubyid_task'>task</span><span class='rparen'>)</span>
+
+    <span class='kw'>elsif</span> <span class='id identifier rubyid_activity_type'>activity_type</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>SlaveActivity</span><span class='tstring_end'>&quot;</span></span>
+        <span class='comment'># The master&#39;s main trigger is propagated in #done_task_info
+</span>
+    <span class='kw'>elsif</span> <span class='op'>!</span><span class='id identifier rubyid_task'>task</span><span class='period'>.</span><span class='id identifier rubyid_model'>model</span><span class='period'>.</span><span class='id identifier rubyid_each_event_port'>each_event_port</span><span class='period'>.</span><span class='id identifier rubyid_find'>find</span> <span class='lbrace'>{</span> <span class='kw'>true</span> <span class='rbrace'>}</span>
+        <span class='id identifier rubyid_done_task_info'>done_task_info</span><span class='lparen'>(</span><span class='id identifier rubyid_task'>task</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="policy_for-instance_method">
+  
+    #<strong>policy_for</strong>(source_task, source_port_name, sink_port_name, sink_task, policy)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Given the current knowledge about the port dynamics, returns the policy for
+the provided connection</p>
+
+<p><code>policy</code> is either the current connection policy, or a hash with
+only a :fallback_policy value that contains a possible policy if the actual
+one cannot be computed.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+540
+541
+542
+543
+544
+545
+546
+547
+548
+549
+550
+551
+552
+553
+554
+555
+556
+557
+558
+559
+560
+561
+562
+563
+564
+565
+566
+567
+568
+569
+570
+571
+572
+573
+574
+575
+576
+577
+578
+579
+580
+581
+582
+583
+584
+585
+586
+587
+588
+589
+590
+591
+592
+593
+594
+595
+596
+597
+598
+599
+600
+601
+602
+603
+604
+605
+606
+607
+608
+609
+610
+611
+612
+613
+614
+615
+616
+617
+618
+619
+620
+621
+622
+623
+624
+625
+626
+627
+628</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/network_generation/dataflow_dynamics.rb', line 540</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_policy_for'>policy_for</span><span class='lparen'>(</span><span class='id identifier rubyid_source_task'>source_task</span><span class='comma'>,</span> <span class='id identifier rubyid_source_port_name'>source_port_name</span><span class='comma'>,</span> <span class='id identifier rubyid_sink_port_name'>sink_port_name</span><span class='comma'>,</span> <span class='id identifier rubyid_sink_task'>sink_task</span><span class='comma'>,</span> <span class='id identifier rubyid_policy'>policy</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_policy'>policy</span> <span class='op'>=</span> <span class='id identifier rubyid_policy'>policy</span><span class='period'>.</span><span class='id identifier rubyid_dup'>dup</span>
+    <span class='id identifier rubyid_fallback_policy'>fallback_policy</span> <span class='op'>=</span> <span class='id identifier rubyid_policy'>policy</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='symbol'>:fallback_policy</span><span class='rparen'>)</span>
+
+    <span class='comment'># Don&#39;t do anything if the policy has already been set
+</span>    <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_policy'>policy</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
+        <span class='const'><span class='object_link'><a href="" title="Syskit::NetworkGeneration::DataFlowDynamics (class)">DataFlowDynamics</a></span></span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_source_task'>source_task</span><span class='embexpr_end'>}</span><span class='tstring_content'>:</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_source_port_name'>source_port_name</span><span class='embexpr_end'>}</span><span class='tstring_content'> =&gt; </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_sink_task'>sink_task</span><span class='embexpr_end'>}</span><span class='tstring_content'>:</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_sink_port_name'>sink_port_name</span><span class='embexpr_end'>}</span><span class='tstring_content'> already connected with </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_policy'>policy</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+        <span class='kw'>return</span> <span class='id identifier rubyid_policy'>policy</span>
+    <span class='kw'>end</span>
+
+    <span class='id identifier rubyid_source_port'>source_port</span> <span class='op'>=</span> <span class='id identifier rubyid_source_task'>source_task</span><span class='period'>.</span><span class='id identifier rubyid_model'>model</span><span class='period'>.</span><span class='id identifier rubyid_find_output_port'>find_output_port</span><span class='lparen'>(</span><span class='id identifier rubyid_source_port_name'>source_port_name</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_sink_port'>sink_port</span>   <span class='op'>=</span> <span class='id identifier rubyid_sink_task'>sink_task</span><span class='period'>.</span><span class='id identifier rubyid_model'>model</span><span class='period'>.</span><span class='id identifier rubyid_find_input_port'>find_input_port</span><span class='lparen'>(</span><span class='id identifier rubyid_sink_port_name'>sink_port_name</span><span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_source_port'>source_port</span>
+        <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="../InternalError.html" title="Syskit::InternalError (class)">InternalError</a></span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_source_port_name'>source_port_name</span><span class='embexpr_end'>}</span><span class='tstring_content'> is not a port of </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_source_task'>source_task</span><span class='period'>.</span><span class='id identifier rubyid_model'>model</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>elsif</span> <span class='op'>!</span><span class='id identifier rubyid_sink_port'>sink_port</span>
+        <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="../InternalError.html" title="Syskit::InternalError (class)">InternalError</a></span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_sink_port_name'>sink_port_name</span><span class='embexpr_end'>}</span><span class='tstring_content'> is not a port of </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_sink_task'>sink_task</span><span class='period'>.</span><span class='id identifier rubyid_model'>model</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>end</span>
+    <span class='const'><span class='object_link'><a href="" title="Syskit::NetworkGeneration::DataFlowDynamics (class)">DataFlowDynamics</a></span></span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span> <span class='lbrace'>{</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>   </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_source_task'>source_task</span><span class='embexpr_end'>}</span><span class='tstring_content'>:</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_source_port'>source_port</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'> =&gt; </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_sink_task'>sink_task</span><span class='embexpr_end'>}</span><span class='tstring_content'>:</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_sink_port'>sink_port</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span> <span class='rbrace'>}</span>
+
+    <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_sink_port'>sink_port</span><span class='period'>.</span><span class='id identifier rubyid_needs_reliable_connection?'>needs_reliable_connection?</span>
+        <span class='kw'>if</span> <span class='id identifier rubyid_sink_port'>sink_port</span><span class='period'>.</span><span class='id identifier rubyid_required_connection_type'>required_connection_type</span> <span class='op'>==</span> <span class='symbol'>:data</span>
+            <span class='id identifier rubyid_policy'>policy</span> <span class='op'>=</span> <span class='const'>Orocos</span><span class='op'>::</span><span class='const'>Port</span><span class='period'>.</span><span class='id identifier rubyid_prepare_policy'>prepare_policy</span><span class='lparen'>(</span><span class='symbol'>:type</span> <span class='op'>=&gt;</span> <span class='symbol'>:data</span><span class='rparen'>)</span>
+            <span class='const'><span class='object_link'><a href="" title="Syskit::NetworkGeneration::DataFlowDynamics (class)">DataFlowDynamics</a></span></span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span> <span class='lbrace'>{</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>     result: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_policy'>policy</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span> <span class='rbrace'>}</span>
+            <span class='kw'>return</span> <span class='id identifier rubyid_policy'>policy</span>
+        <span class='kw'>elsif</span> <span class='id identifier rubyid_sink_port'>sink_port</span><span class='period'>.</span><span class='id identifier rubyid_required_connection_type'>required_connection_type</span> <span class='op'>==</span> <span class='symbol'>:buffer</span>
+            <span class='id identifier rubyid_policy'>policy</span> <span class='op'>=</span> <span class='const'>Orocos</span><span class='op'>::</span><span class='const'>Port</span><span class='period'>.</span><span class='id identifier rubyid_prepare_policy'>prepare_policy</span><span class='lparen'>(</span><span class='symbol'>:type</span> <span class='op'>=&gt;</span> <span class='symbol'>:buffer</span><span class='comma'>,</span> <span class='symbol'>:size</span> <span class='op'>=&gt;</span> <span class='int'>1</span><span class='rparen'>)</span>
+            <span class='const'><span class='object_link'><a href="" title="Syskit::NetworkGeneration::DataFlowDynamics (class)">DataFlowDynamics</a></span></span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span> <span class='lbrace'>{</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>     result: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_policy'>policy</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span> <span class='rbrace'>}</span>
+            <span class='kw'>return</span> <span class='id identifier rubyid_policy'>policy</span>
+        <span class='kw'>end</span>
+    <span class='kw'>end</span>
+
+    <span class='comment'># Compute the buffer size
+</span>    <span class='id identifier rubyid_input_dynamics'>input_dynamics</span> <span class='op'>=</span>
+        <span class='kw'>if</span> <span class='id identifier rubyid_has_final_information_for_port?'>has_final_information_for_port?</span><span class='lparen'>(</span><span class='id identifier rubyid_source_task'>source_task</span><span class='comma'>,</span> <span class='id identifier rubyid_source_port'>source_port</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
+            <span class='id identifier rubyid_port_info'>port_info</span><span class='lparen'>(</span><span class='id identifier rubyid_source_task'>source_task</span><span class='comma'>,</span> <span class='id identifier rubyid_source_port'>source_port</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
+        <span class='kw'>end</span>
+
+    <span class='id identifier rubyid_sink_task_dynamics'>sink_task_dynamics</span>  <span class='op'>=</span>
+        <span class='kw'>if</span> <span class='id identifier rubyid_has_final_information_for_task?'>has_final_information_for_task?</span><span class='lparen'>(</span><span class='id identifier rubyid_sink_task'>sink_task</span><span class='rparen'>)</span>
+            <span class='id identifier rubyid_task_info'>task_info</span><span class='lparen'>(</span><span class='id identifier rubyid_sink_task'>sink_task</span><span class='rparen'>)</span>
+        <span class='kw'>end</span>
+
+    <span class='id identifier rubyid_reading_latency'>reading_latency</span> <span class='op'>=</span>
+        <span class='kw'>if</span> <span class='id identifier rubyid_sink_port'>sink_port</span><span class='period'>.</span><span class='id identifier rubyid_trigger_port?'>trigger_port?</span>
+            <span class='id identifier rubyid_sink_task'>sink_task</span><span class='period'>.</span><span class='id identifier rubyid_trigger_latency'>trigger_latency</span>
+        <span class='kw'>elsif</span> <span class='id identifier rubyid_sink_task_dynamics'>sink_task_dynamics</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_sink_task_dynamics'>sink_task_dynamics</span><span class='period'>.</span><span class='id identifier rubyid_minimal_period'>minimal_period</span>
+            <span class='id identifier rubyid_sink_task_dynamics'>sink_task_dynamics</span><span class='period'>.</span><span class='id identifier rubyid_minimal_period'>minimal_period</span> <span class='op'>+</span> <span class='id identifier rubyid_sink_task'>sink_task</span><span class='period'>.</span><span class='id identifier rubyid_trigger_latency'>trigger_latency</span>
+        <span class='kw'>end</span>
+
+    <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_input_dynamics'>input_dynamics</span> <span class='op'>||</span> <span class='op'>!</span><span class='id identifier rubyid_reading_latency'>reading_latency</span>
+        <span class='kw'>if</span> <span class='id identifier rubyid_fallback_policy'>fallback_policy</span>
+            <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_input_dynamics'>input_dynamics</span>
+                <span class='const'><span class='object_link'><a href="" title="Syskit::NetworkGeneration::DataFlowDynamics (class)">DataFlowDynamics</a></span></span><span class='period'>.</span><span class='id identifier rubyid_warn'>warn</span> <span class='kw'>do</span>
+                    <span class='const'><span class='object_link'><a href="" title="Syskit::NetworkGeneration::DataFlowDynamics (class)">DataFlowDynamics</a></span></span><span class='period'>.</span><span class='id identifier rubyid_warn'>warn</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Cannot compute the period information for the output port</span><span class='tstring_end'>&quot;</span></span>
+                    <span class='const'><span class='object_link'><a href="" title="Syskit::NetworkGeneration::DataFlowDynamics (class)">DataFlowDynamics</a></span></span><span class='period'>.</span><span class='id identifier rubyid_warn'>warn</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>   </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_source_task'>source_task</span><span class='embexpr_end'>}</span><span class='tstring_content'>:</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_source_port'>source_port</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+                    <span class='const'><span class='object_link'><a href="" title="Syskit::NetworkGeneration::DataFlowDynamics (class)">DataFlowDynamics</a></span></span><span class='period'>.</span><span class='id identifier rubyid_warn'>warn</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>   This is needed to compute the policy to connect to</span><span class='tstring_end'>&quot;</span></span>
+                    <span class='const'><span class='object_link'><a href="" title="Syskit::NetworkGeneration::DataFlowDynamics (class)">DataFlowDynamics</a></span></span><span class='period'>.</span><span class='id identifier rubyid_warn'>warn</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>   </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_sink_task'>sink_task</span><span class='embexpr_end'>}</span><span class='tstring_content'>:</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_sink_port_name'>sink_port_name</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+                    <span class='const'><span class='object_link'><a href="" title="Syskit::NetworkGeneration::DataFlowDynamics (class)">DataFlowDynamics</a></span></span><span class='period'>.</span><span class='id identifier rubyid_warn'>warn</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>   The fallback policy </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_fallback_policy'>fallback_policy</span><span class='embexpr_end'>}</span><span class='tstring_content'> will be used</span><span class='tstring_end'>&quot;</span></span>
+                    <span class='kw'>break</span>
+                <span class='kw'>end</span>
+
+            <span class='kw'>else</span>
+                <span class='const'><span class='object_link'><a href="" title="Syskit::NetworkGeneration::DataFlowDynamics (class)">DataFlowDynamics</a></span></span><span class='period'>.</span><span class='id identifier rubyid_warn'>warn</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_sink_task'>sink_task</span><span class='embexpr_end'>}</span><span class='tstring_content'> has no minimal period</span><span class='tstring_end'>&quot;</span></span>
+                <span class='const'><span class='object_link'><a href="" title="Syskit::NetworkGeneration::DataFlowDynamics (class)">DataFlowDynamics</a></span></span><span class='period'>.</span><span class='id identifier rubyid_warn'>warn</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>This is needed to compute the reading latency on </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_sink_port'>sink_port</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+                <span class='const'><span class='object_link'><a href="" title="Syskit::NetworkGeneration::DataFlowDynamics (class)">DataFlowDynamics</a></span></span><span class='period'>.</span><span class='id identifier rubyid_warn'>warn</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>The fallback policy </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_fallback_policy'>fallback_policy</span><span class='embexpr_end'>}</span><span class='tstring_content'> will be used</span><span class='tstring_end'>&quot;</span></span>
+            <span class='kw'>end</span>
+            <span class='id identifier rubyid_policy'>policy</span> <span class='op'>=</span> <span class='id identifier rubyid_fallback_policy'>fallback_policy</span>
+        <span class='kw'>elsif</span> <span class='op'>!</span><span class='id identifier rubyid_input_dynamics'>input_dynamics</span>
+            <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="../SpecError.html" title="Syskit::SpecError (class)">SpecError</a></span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>the period information for output port </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_source_task'>source_task</span><span class='embexpr_end'>}</span><span class='tstring_content'>:</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_source_port'>source_port</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'> cannot be computed. This is needed to compute the policy to connect to </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_sink_task'>sink_task</span><span class='embexpr_end'>}</span><span class='tstring_content'>:</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_sink_port_name'>sink_port_name</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+        <span class='kw'>else</span>
+            <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="../SpecError.html" title="Syskit::SpecError (class)">SpecError</a></span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_sink_task'>sink_task</span><span class='embexpr_end'>}</span><span class='tstring_content'> has no minimal period, needed to compute reading latency on </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_sink_port'>sink_port</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+        <span class='kw'>end</span>
+    <span class='kw'>else</span>
+        <span class='id identifier rubyid_policy'>policy</span><span class='lbracket'>[</span><span class='symbol'>:type</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='symbol'>:buffer</span>
+        <span class='id identifier rubyid_size'>size</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='float'>1.0</span> <span class='op'>+</span> <span class='const'><span class='object_link'><a href="../../Syskit.html" title="Syskit (module)">Syskit</a></span></span><span class='period'>.</span><span class='id identifier rubyid_conf'><span class='object_link'><a href="../../Syskit.html#conf-class_method" title="Syskit.conf (method)">conf</a></span></span><span class='period'>.</span><span class='id identifier rubyid_buffer_size_margin'>buffer_size_margin</span><span class='rparen'>)</span> <span class='op'>*</span> <span class='id identifier rubyid_input_dynamics'>input_dynamics</span><span class='period'>.</span><span class='id identifier rubyid_queue_size'>queue_size</span><span class='lparen'>(</span><span class='id identifier rubyid_reading_latency'>reading_latency</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_policy'>policy</span><span class='lbracket'>[</span><span class='symbol'>:size</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='const'>Integer</span><span class='lparen'>(</span><span class='id identifier rubyid_size'>size</span><span class='rparen'>)</span> <span class='op'>+</span> <span class='int'>1</span>
+        <span class='const'><span class='object_link'><a href="" title="Syskit::NetworkGeneration::DataFlowDynamics (class)">DataFlowDynamics</a></span></span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span> <span class='kw'>do</span>
+            <span class='const'><span class='object_link'><a href="" title="Syskit::NetworkGeneration::DataFlowDynamics (class)">DataFlowDynamics</a></span></span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>     input_period:</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_input_dynamics'>input_dynamics</span><span class='period'>.</span><span class='id identifier rubyid_minimal_period'>minimal_period</span><span class='embexpr_end'>}</span><span class='tstring_content'> =&gt; reading_latency:</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_reading_latency'>reading_latency</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+            <span class='const'><span class='object_link'><a href="" title="Syskit::NetworkGeneration::DataFlowDynamics (class)">DataFlowDynamics</a></span></span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>     sample_size:</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_input_dynamics'>input_dynamics</span><span class='period'>.</span><span class='id identifier rubyid_sample_size'>sample_size</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+            <span class='id identifier rubyid_input_dynamics'>input_dynamics</span><span class='period'>.</span><span class='id identifier rubyid_triggers'>triggers</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_tr'>tr</span><span class='op'>|</span>
+                <span class='const'><span class='object_link'><a href="" title="Syskit::NetworkGeneration::DataFlowDynamics (class)">DataFlowDynamics</a></span></span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>     trigger(</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_tr'>tr</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'>): period=</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_tr'>tr</span><span class='period'>.</span><span class='id identifier rubyid_period'>period</span><span class='embexpr_end'>}</span><span class='tstring_content'> count=</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_tr'>tr</span><span class='period'>.</span><span class='id identifier rubyid_sample_count'>sample_count</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+            <span class='kw'>end</span>
+            <span class='kw'>break</span>
+        <span class='kw'>end</span>
+        <span class='const'><span class='object_link'><a href="" title="Syskit::NetworkGeneration::DataFlowDynamics (class)">DataFlowDynamics</a></span></span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span> <span class='lbrace'>{</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>     result: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_policy'>policy</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span> <span class='rbrace'>}</span>
+    <span class='kw'>end</span>
+
+    <span class='id identifier rubyid_policy'>policy</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="propagate_task-instance_method">
+  
+    #<strong>propagate_task</strong>(task)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+467
+468
+469
+470
+471
+472
+473
+474
+475
+476
+477
+478
+479
+480
+481
+482
+483
+484
+485
+486
+487
+488
+489
+490</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/network_generation/dataflow_dynamics.rb', line 467</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_propagate_task'>propagate_task</span><span class='lparen'>(</span><span class='id identifier rubyid_task'>task</span><span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_missing_ports'>missing_ports</span><span class='period'>.</span><span class='id identifier rubyid_has_key?'>has_key?</span><span class='lparen'>(</span><span class='id identifier rubyid_task'>task</span><span class='rparen'>)</span>
+        <span class='kw'>return</span> <span class='kw'>true</span>
+    <span class='kw'>end</span>
+
+    <span class='id identifier rubyid_done'>done</span> <span class='op'>=</span> <span class='kw'>true</span>
+    <span class='id identifier rubyid_required'>required</span> <span class='op'>=</span> <span class='id identifier rubyid_missing_ports'>missing_ports</span><span class='lbracket'>[</span><span class='id identifier rubyid_task'>task</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_dup'>dup</span>
+    <span class='const'><span class='object_link'><a href="" title="Syskit::NetworkGeneration::DataFlowDynamics (class)">DataFlowDynamics</a></span></span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span> <span class='kw'>do</span>
+        <span class='const'><span class='object_link'><a href="" title="Syskit::NetworkGeneration::DataFlowDynamics (class)">DataFlowDynamics</a></span></span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>trying to compute dataflow dynamics for </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_task'>task</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+        <span class='const'><span class='object_link'><a href="" title="Syskit::NetworkGeneration::DataFlowDynamics (class)">DataFlowDynamics</a></span></span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>  requires information on: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_required'>required</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:to_s</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>, </span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+        <span class='kw'>break</span>
+    <span class='kw'>end</span>
+
+    <span class='id identifier rubyid_required'>required</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_missing'>missing</span><span class='op'>|</span>
+        <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_compute_info_for'>compute_info_for</span><span class='lparen'>(</span><span class='id identifier rubyid_task'>task</span><span class='comma'>,</span> <span class='id identifier rubyid_missing'>missing</span><span class='rparen'>)</span>
+            <span class='const'><span class='object_link'><a href="" title="Syskit::NetworkGeneration::DataFlowDynamics (class)">DataFlowDynamics</a></span></span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span> <span class='kw'>do</span>
+                <span class='const'><span class='object_link'><a href="" title="Syskit::NetworkGeneration::DataFlowDynamics (class)">DataFlowDynamics</a></span></span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>  cannot compute information on </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_missing'>missing</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+                <span class='kw'>break</span>
+            <span class='kw'>end</span>
+            <span class='id identifier rubyid_done'>done</span> <span class='op'>=</span> <span class='kw'>false</span>
+        <span class='kw'>end</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_done'>done</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="required_information-instance_method">
+  
+    #<strong>required_information</strong>(tasks)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the set of objects for which information is required as an output
+of the algorithm</p>
+
+<p>The returned value is a map:</p>
+
+<pre class="code ruby"><code class="ruby">task =&gt; ports
+</code></pre>
+
+<p>Where <code>ports</code> is the set of port names that are required on
+<code>task</code>. <code>nil</code> can be used to denote the task itself.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+414
+415
+416
+417
+418
+419
+420
+421
+422
+423
+424</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/network_generation/dataflow_dynamics.rb', line 414</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_required_information'>required_information</span><span class='lparen'>(</span><span class='id identifier rubyid_tasks'>tasks</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+    <span class='id identifier rubyid_tasks'>tasks</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_t'>t</span><span class='op'>|</span>
+        <span class='id identifier rubyid_ports'>ports</span> <span class='op'>=</span> <span class='id identifier rubyid_t'>t</span><span class='period'>.</span><span class='id identifier rubyid_model'>model</span><span class='period'>.</span><span class='id identifier rubyid_each_output_port'>each_output_port</span><span class='period'>.</span><span class='id identifier rubyid_to_a'>to_a</span>
+        <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_ports'>ports</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
+            <span class='id identifier rubyid_result'>result</span><span class='lbracket'>[</span><span class='id identifier rubyid_t'>t</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_ports'>ports</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:name</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to_set'>to_set</span>
+            <span class='id identifier rubyid_result'>result</span><span class='lbracket'>[</span><span class='id identifier rubyid_t'>t</span><span class='rbracket'>]</span> <span class='op'>&lt;&lt;</span> <span class='kw'>nil</span>
+        <span class='kw'>end</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_result'>result</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="reset-instance_method">
+  
+    #<strong>reset</strong>(tasks = Array.new)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+163
+164
+165
+166
+167
+168
+169
+170</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/network_generation/dataflow_dynamics.rb', line 163</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_reset'>reset</span><span class='lparen'>(</span><span class='id identifier rubyid_tasks'>tasks</span> <span class='op'>=</span> <span class='const'>Array</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='rparen'>)</span>
+    <span class='kw'>super</span>
+    <span class='ivar'>@triggers</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_h'>h</span><span class='comma'>,</span> <span class='id identifier rubyid_k'>k</span><span class='op'>|</span> <span class='id identifier rubyid_h'>h</span><span class='lbracket'>[</span><span class='id identifier rubyid_k'>k</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='rbrace'>}</span>
+    <span class='ivar'>@task_from_name</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+    <span class='id identifier rubyid_tasks'>tasks</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_t'>t</span><span class='op'>|</span>
+        <span class='id identifier rubyid_task_from_name'>task_from_name</span><span class='lbracket'>[</span><span class='id identifier rubyid_t'>t</span><span class='period'>.</span><span class='id identifier rubyid_orocos_name'>orocos_name</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_t'>t</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="task_info-instance_method">
+  
+    #<strong>task_info</strong>(task)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+188
+189
+190</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/network_generation/dataflow_dynamics.rb', line 188</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_task_info'>task_info</span><span class='lparen'>(</span><span class='id identifier rubyid_task'>task</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_port_info'>port_info</span><span class='lparen'>(</span><span class='id identifier rubyid_task'>task</span><span class='comma'>,</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="triggering_inputs-instance_method">
+  
+    #<strong>triggering_inputs</strong>(task)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Computes the set of input ports in <code>task</code> that are used during
+the information propagation</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+376
+377
+378
+379
+380
+381
+382
+383
+384
+385
+386
+387
+388
+389
+390
+391
+392
+393
+394
+395
+396
+397
+398
+399
+400
+401
+402
+403</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/network_generation/dataflow_dynamics.rb', line 376</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_triggering_inputs'>triggering_inputs</span><span class='lparen'>(</span><span class='id identifier rubyid_task'>task</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_all_triggers'>all_triggers</span> <span class='op'>=</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+    <span class='ivar'>@triggers</span><span class='lbracket'>[</span><span class='lbracket'>[</span><span class='id identifier rubyid_task'>task</span><span class='comma'>,</span> <span class='kw'>nil</span><span class='rbracket'>]</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+    <span class='id identifier rubyid_task'>task</span><span class='period'>.</span><span class='id identifier rubyid_model'>model</span><span class='period'>.</span><span class='id identifier rubyid_each_event_port'>each_event_port</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_port'>port</span><span class='op'>|</span>
+        <span class='kw'>if</span> <span class='id identifier rubyid_task'>task</span><span class='period'>.</span><span class='id identifier rubyid_has_concrete_input_connection?'>has_concrete_input_connection?</span><span class='lparen'>(</span><span class='id identifier rubyid_port'>port</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
+            <span class='id identifier rubyid_all_triggers'>all_triggers</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_port'>port</span>
+            <span class='ivar'>@triggers</span><span class='lbracket'>[</span><span class='lbracket'>[</span><span class='id identifier rubyid_task'>task</span><span class='comma'>,</span> <span class='kw'>nil</span><span class='rbracket'>]</span><span class='rbracket'>]</span> <span class='op'>&lt;&lt;</span> <span class='lbracket'>[</span><span class='id identifier rubyid_task'>task</span><span class='comma'>,</span> <span class='id identifier rubyid_port'>port</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='rbracket'>]</span>
+        <span class='kw'>end</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_task'>task</span><span class='period'>.</span><span class='id identifier rubyid_model'>model</span><span class='period'>.</span><span class='id identifier rubyid_each_output_port'>each_output_port</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_port'>port</span><span class='op'>|</span>
+        <span class='kw'>if</span> <span class='id identifier rubyid_port'>port</span><span class='period'>.</span><span class='id identifier rubyid_triggered_on_update?'>triggered_on_update?</span>
+            <span class='ivar'>@triggers</span><span class='lbracket'>[</span><span class='lbracket'>[</span><span class='id identifier rubyid_task'>task</span><span class='comma'>,</span> <span class='id identifier rubyid_port'>port</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='rbracket'>]</span><span class='rbracket'>]</span> <span class='op'>&lt;&lt;</span> <span class='lbracket'>[</span><span class='id identifier rubyid_task'>task</span><span class='comma'>,</span> <span class='kw'>nil</span><span class='rbracket'>]</span>
+        <span class='kw'>end</span>
+        <span class='id identifier rubyid_port'>port</span><span class='period'>.</span><span class='id identifier rubyid_port_triggers'>port_triggers</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_trigger_port'>trigger_port</span><span class='op'>|</span>
+            <span class='kw'>if</span> <span class='id identifier rubyid_task'>task</span><span class='period'>.</span><span class='id identifier rubyid_has_concrete_input_connection?'>has_concrete_input_connection?</span><span class='lparen'>(</span><span class='id identifier rubyid_trigger_port'>trigger_port</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
+                <span class='ivar'>@triggers</span><span class='lbracket'>[</span><span class='lbracket'>[</span><span class='id identifier rubyid_task'>task</span><span class='comma'>,</span> <span class='id identifier rubyid_port'>port</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='rbracket'>]</span><span class='rbracket'>]</span> <span class='op'>&lt;&lt;</span> <span class='lbracket'>[</span><span class='id identifier rubyid_task'>task</span><span class='comma'>,</span> <span class='id identifier rubyid_trigger_port'>trigger_port</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='rbracket'>]</span>
+                <span class='id identifier rubyid_all_triggers'>all_triggers</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_trigger_port'>trigger_port</span>
+            <span class='kw'>end</span>
+        <span class='kw'>end</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_task'>task</span><span class='period'>.</span><span class='id identifier rubyid_model'>model</span><span class='period'>.</span><span class='id identifier rubyid_each_output_port'>each_output_port</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_port'>port</span><span class='op'>|</span>
+        <span class='kw'>if</span> <span class='op'>!</span><span class='ivar'>@triggers</span><span class='period'>.</span><span class='id identifier rubyid_has_key?'>has_key?</span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='id identifier rubyid_task'>task</span><span class='comma'>,</span> <span class='id identifier rubyid_port'>port</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+            <span class='id identifier rubyid_done_port_info'>done_port_info</span><span class='lparen'>(</span><span class='id identifier rubyid_task'>task</span><span class='comma'>,</span> <span class='id identifier rubyid_port'>port</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
+        <span class='kw'>end</span>
+    <span class='kw'>end</span>
+
+    <span class='id identifier rubyid_all_triggers'>all_triggers</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Wed Apr 10 21:59:04 2019 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.19 (ruby-2.5.1).
+</div>
+
+    </div>
+  </body>
+</html>

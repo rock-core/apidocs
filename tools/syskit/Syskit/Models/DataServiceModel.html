@@ -1,0 +1,2472 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: Syskit::Models::DataServiceModel
+  
+    &mdash; Documentation by YARD 0.9.19
+  
+</title>
+
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "Syskit::Models::DataServiceModel";
+  relpath = '../../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../../_index.html">Index (D)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../Syskit.html" title="Syskit (module)">Syskit</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Models.html" title="Syskit::Models (module)">Models</a></span></span>
+     &raquo; 
+    <span class="title">DataServiceModel</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: Syskit::Models::DataServiceModel
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName">Roby::Models::TaskServiceModel</span>
+      
+        <ul class="fullTree">
+          <li><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></li>
+          
+            <li class="next">Roby::Models::TaskServiceModel</li>
+          
+            <li class="next">Syskit::Models::DataServiceModel</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  <dl>
+      <dt>Includes:</dt>
+      <dd>MetaRuby::DSLs::FindThroughMethodMissing, <span class='object_link'><a href="Base.html" title="Syskit::Models::Base (module)">Base</a></span>, <span class='object_link'><a href="PortAccess.html" title="Syskit::Models::PortAccess (module)">PortAccess</a></span></dd>
+  </dl>
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/syskit/models/data_service.rb</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>Base type for data service models (DataService, Devices, ComBus). Methods
+defined in this class are available on said models (for instance
+Device.new_submodel)</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><div id="subclasses">
+  <h2>Direct Known Subclasses</h2>
+  <p class="children"><span class='object_link'><a href="DeviceModel.html" title="Syskit::Models::DeviceModel (class)">DeviceModel</a></span></p>
+</div>
+<h2>Defined Under Namespace</h2>
+<p class="children">
+  
+    
+  
+    
+      <strong class="classes">Classes:</strong> <span class='object_link'><a href="DataServiceModel/BlockInstanciator.html" title="Syskit::Models::DataServiceModel::BlockInstanciator (class)">BlockInstanciator</a></span>
+    
+  
+</p>
+
+
+
+
+  <h2>Instance Attribute Summary <small><a href="#" class="summary_toggle">collapse</a></small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#orogen_model-instance_method" title="#orogen_model (instance method)">#<strong>orogen_model</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><dl class="rdoc-list label-list"><dt>Orocos::Spec::TaskContext
+<dd>
+<p>the object describing the data service&#39;s interface.</p>
+</dd></dl>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#rw+port_mappings-instance_method" title="#rw port_mappings (instance method)">#<strong>rw port_mappings</strong>(port_mappings)  &#x21d2; Hash&lt;DataServiceModel,Hash&lt;String,String&gt;&gt; </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Port mappings from this service&#39;s parent models to the service itself.</p>
+</div></span>
+  
+</li>
+
+    
+  </ul>
+
+
+
+
+  
+    <h2>
+      Class Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#new_permanent_root-class_method" title="new_permanent_root (class method)">.<strong>new_permanent_root</strong>(parent: nil)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Create a model that is root for a model hierarchy.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#apply_block-instance_method" title="#apply_block (instance method)">#<strong>apply_block</strong>(name = nil, &amp;block)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Applies a setup block on a service model.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#as_plan-instance_method" title="#as_plan (instance method)">#<strong>as_plan</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#bind-instance_method" title="#bind (instance method)">#<strong>bind</strong>(component)  &#x21d2; nil, BoundDataService </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Binds the data service model on the given task.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#clear_model-instance_method" title="#clear_model (instance method)">#<strong>clear_model</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#connected%3F-instance_method" title="#connected? (instance method)">#<strong>connected?</strong>(out_port, in_port)  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Delegated call from Port#connected?.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#create_placeholder_task-instance_method" title="#create_placeholder_task (instance method)">#<strong>create_placeholder_task</strong>  &#x21d2; Component </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Create a task that can be used as a placeholder for #self in the plan.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public deprecated">
+  <span class="summary_signature">
+    
+      <a href="#create_proxy_task-instance_method" title="#create_proxy_task (instance method)">#<strong>create_proxy_task</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  <span class="deprecated note title">deprecated</span>
+  
+
+  
+    <span class="summary_desc"><strong>Deprecated.</strong> <div class='inline'>
+<p>use <span class='object_link'><a href="#create_placeholder_task-instance_method" title="Syskit::Models::DataServiceModel#create_placeholder_task (method)">#create_placeholder_task</a></span> instead</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#each_fullfilled_model-instance_method" title="#each_fullfilled_model (instance method)">#<strong>each_fullfilled_model</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>The set of services that this service provides.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#each_required_model-instance_method" title="#each_required_model (instance method)">#<strong>each_required_model</strong> {|_self| ... } &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#if_already_present-instance_method" title="#if_already_present (instance method)">#<strong>if_already_present</strong>  &#x21d2; InstanceRequirements </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Optional dependency injection.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(project: Roby.app.default_orogen_project)  &#x21d2; DataServiceModel </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>A new instance of DataServiceModel.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#instanciate-instance_method" title="#instanciate (instance method)">#<strong>instanciate</strong>(plan, context = DependencyInjectionContext.new, options = Hash.new, &amp;block)  &#x21d2; TaskContext </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Create a task instance that can be used in a plan to represent this
+service.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#placeholder%3F-instance_method" title="#placeholder? (instance method)">#<strong>placeholder?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Wether this model represents a placeholder for data services.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#placeholder_model-instance_method" title="#placeholder_model (instance method)">#<strong>placeholder_model</strong>  &#x21d2; Component </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>A component model that can be used to represent an instance of this data
+service in a Roby plan.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#port_mappings_for-instance_method" title="#port_mappings_for (instance method)">#<strong>port_mappings_for</strong>(service_type)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the set of port mappings needed between <code>service_type</code>
+and <code>self</code>.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#pretty_print-instance_method" title="#pretty_print (instance method)">#<strong>pretty_print</strong>(pp)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#provides-instance_method" title="#provides (instance method)">#<strong>provides</strong>(service_model, new_port_mappings = Hash.new)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Declares that this data service model provides the given service model.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#provides%3F-instance_method" title="#provides? (instance method)">#<strong>provides?</strong>(srv)  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Tests whether self already provides another service.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public deprecated">
+  <span class="summary_signature">
+    
+      <a href="#proxy_task_model-instance_method" title="#proxy_task_model (instance method)">#<strong>proxy_task_model</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  <span class="deprecated note title">deprecated</span>
+  
+
+  
+    <span class="summary_desc"><strong>Deprecated.</strong> <div class='inline'>
+<p>use <span class='object_link'><a href="#placeholder_model-instance_method" title="Syskit::Models::DataServiceModel#placeholder_model (method)">#placeholder_model</a></span> instead</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public deprecated">
+  <span class="summary_signature">
+    
+      <a href="#resolve-instance_method" title="#resolve (instance method)">#<strong>resolve</strong>(task)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  <span class="deprecated note title">deprecated</span>
+  
+
+  
+    <span class="summary_desc"><strong>Deprecated.</strong> <div class='inline'>
+<p>use <span class='object_link'><a href="#bind-instance_method" title="Syskit::Models::DataServiceModel#bind (method)">#bind</a></span> instead</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#to_component_model-instance_method" title="#to_component_model (instance method)">#<strong>to_component_model</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#to_dot-instance_method" title="#to_dot (instance method)">#<strong>to_dot</strong>(io)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#try_bind-instance_method" title="#try_bind (instance method)">#<strong>try_bind</strong>(component)  &#x21d2; nil, BoundDataService </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Try to bind the data service model on the given task.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public deprecated">
+  <span class="summary_signature">
+    
+      <a href="#try_resolve-instance_method" title="#try_resolve (instance method)">#<strong>try_resolve</strong>(task)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  <span class="deprecated note title">deprecated</span>
+  
+
+  
+    <span class="summary_desc"><strong>Deprecated.</strong> <div class='inline'>
+<p>use <span class='object_link'><a href="#try_bind-instance_method" title="Syskit::Models::DataServiceModel#try_bind (method)">#try_bind</a></span> instead</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="PortAccess.html" title="Syskit::Models::PortAccess (module)">PortAccess</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="PortAccess.html#each_input_port-instance_method" title="Syskit::Models::PortAccess#each_input_port (method)">#each_input_port</a></span>, <span class='object_link'><a href="PortAccess.html#each_output_port-instance_method" title="Syskit::Models::PortAccess#each_output_port (method)">#each_output_port</a></span>, <span class='object_link'><a href="PortAccess.html#each_port-instance_method" title="Syskit::Models::PortAccess#each_port (method)">#each_port</a></span>, <span class='object_link'><a href="PortAccess.html#find_input_port-instance_method" title="Syskit::Models::PortAccess#find_input_port (method)">#find_input_port</a></span>, <span class='object_link'><a href="PortAccess.html#find_output_port-instance_method" title="Syskit::Models::PortAccess#find_output_port (method)">#find_output_port</a></span>, <span class='object_link'><a href="PortAccess.html#find_port-instance_method" title="Syskit::Models::PortAccess#find_port (method)">#find_port</a></span>, <span class='object_link'><a href="PortAccess.html#find_through_method_missing-instance_method" title="Syskit::Models::PortAccess#find_through_method_missing (method)">#find_through_method_missing</a></span>, <span class='object_link'><a href="PortAccess.html#has_dynamic_input_port%3F-instance_method" title="Syskit::Models::PortAccess#has_dynamic_input_port? (method)">#has_dynamic_input_port?</a></span>, <span class='object_link'><a href="PortAccess.html#has_dynamic_output_port%3F-instance_method" title="Syskit::Models::PortAccess#has_dynamic_output_port? (method)">#has_dynamic_output_port?</a></span>, <span class='object_link'><a href="PortAccess.html#has_input_port%3F-instance_method" title="Syskit::Models::PortAccess#has_input_port? (method)">#has_input_port?</a></span>, <span class='object_link'><a href="PortAccess.html#has_output_port%3F-instance_method" title="Syskit::Models::PortAccess#has_output_port? (method)">#has_output_port?</a></span>, <span class='object_link'><a href="PortAccess.html#has_port%3F-instance_method" title="Syskit::Models::PortAccess#has_port? (method)">#has_port?</a></span>, <span class='object_link'><a href="PortAccess.html#has_through_method_missing%3F-instance_method" title="Syskit::Models::PortAccess#has_through_method_missing? (method)">#has_through_method_missing?</a></span>, <span class='object_link'><a href="PortAccess.html#port_by_name-instance_method" title="Syskit::Models::PortAccess#port_by_name (method)">#port_by_name</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="Base.html" title="Syskit::Models::Base (module)">Base</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="Base.html#dependency_injection_names-instance_method" title="Syskit::Models::Base#dependency_injection_names (method)">#dependency_injection_names</a></span>, <span class='object_link'><a href="Base.html#short_name-instance_method" title="Syskit::Models::Base#short_name (method)">#short_name</a></span>, <span class='object_link'><a href="Base.html#to_instance_requirements-instance_method" title="Syskit::Models::Base#to_instance_requirements (method)">#to_instance_requirements</a></span>, <span class='object_link'><a href="Base.html#to_s-instance_method" title="Syskit::Models::Base#to_s (method)">#to_s</a></span></p>
+
+  <div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    #<strong>initialize</strong>(project: Roby.app.default_orogen_project)  &#x21d2; <tt><span class='object_link'><a href="" title="Syskit::Models::DataServiceModel (class)">DataServiceModel</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns a new instance of DataServiceModel</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+27
+28
+29
+30</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/models/data_service.rb', line 27</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='label'>project:</span> <span class='const'>Roby</span><span class='period'>.</span><span class='id identifier rubyid_app'>app</span><span class='period'>.</span><span class='id identifier rubyid_default_orogen_project'>default_orogen_project</span><span class='rparen'>)</span>
+    <span class='ivar'>@orogen_model</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../OroGen.html" title="OroGen (module)">OroGen</a></span></span><span class='op'>::</span><span class='const'>Spec</span><span class='op'>::</span><span class='const'>TaskContext</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_project'>project</span><span class='rparen'>)</span>
+    <span class='kw'>super</span><span class='lparen'>(</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id=""></span>
+      <div class="method_details first">
+  <h3 class="signature first" id="orogen_model-instance_method">
+  
+    #<strong>orogen_model</strong>  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <dl class="rdoc-list label-list"><dt>Orocos::Spec::TaskContext
+<dd>
+<p>the object describing the data</p>
+</dd></dl>
+
+<p>service&#39;s interface</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+239
+240
+241</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/models/data_service.rb', line 239</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_orogen_model'>orogen_model</span>
+  <span class='ivar'>@orogen_model</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="rw port_mappings=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="rw port_mappings-instance_method">
+  
+    #<strong>rw port_mappings</strong>(port_mappings)  &#x21d2; <tt>Hash&lt;<span class='object_link'><a href="" title="Syskit::Models::DataServiceModel (class)">DataServiceModel</a></span>,Hash&lt;String,String&gt;&gt;</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Port mappings from this service&#39;s parent models to the service itself</p>
+
+<p>Whenever a data service provides another one, it is possible to specify
+that some ports of the provided service are mapped onto th ports of the new
+service. This hash keeps track of these port mappings.</p>
+
+<p>The mapping is of the form</p>
+
+<pre class="code ruby"><code class="ruby">provided_service_model =&gt; [provided_service_model_port, port]
+</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Hash&lt;<span class='object_link'><a href="" title="Syskit::Models::DataServiceModel (class)">DataServiceModel</a></span>,Hash&lt;String,String&gt;&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the mappings</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+67</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/models/data_service.rb', line 67</span>
+
+<span class='id identifier rubyid_attribute'>attribute</span><span class='lparen'>(</span><span class='symbol'>:port_mappings</span><span class='rparen'>)</span> <span class='lbrace'>{</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='rbrace'>}</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="new_permanent_root-class_method">
+  
+    .<strong>new_permanent_root</strong>(parent: nil)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Create a model that is root for a model hierarchy</p>
+
+<p>This is used to create e.g. Syskit::DataService</p>
+
+<p>The result of this method must be assigned to a constant. It is marked as
+permanent w.r.t. MetaRuby&#39;s model management.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+17
+18
+19
+20
+21
+22
+23
+24
+25</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/models/data_service.rb', line 17</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_new_permanent_root'>new_permanent_root</span><span class='lparen'>(</span><span class='label'>parent:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_model'>model</span> <span class='op'>=</span> <span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='label'>project:</span> <span class='const'><span class='object_link'><a href="../../OroGen.html" title="OroGen (module)">OroGen</a></span></span><span class='op'>::</span><span class='const'>Spec</span><span class='op'>::</span><span class='const'>Project</span><span class='period'>.</span><span class='id identifier rubyid_blank'>blank</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_model'>model</span><span class='period'>.</span><span class='id identifier rubyid_root'>root</span> <span class='op'>=</span> <span class='kw'>true</span>
+    <span class='id identifier rubyid_model'>model</span><span class='period'>.</span><span class='id identifier rubyid_permanent_model'>permanent_model</span> <span class='op'>=</span> <span class='kw'>true</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_parent'>parent</span>
+        <span class='id identifier rubyid_model'>model</span><span class='period'>.</span><span class='id identifier rubyid_provides'>provides</span> <span class='id identifier rubyid_parent'>parent</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_model'>model</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="apply_block-instance_method">
+  
+    #<strong>apply_block</strong>(name = nil, &amp;block)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Applies a setup block on a service model</p>
+
+<p>If <code>name</code> is given, that string will be reported as the service
+name in the block, instead of the actual service name</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+126
+127
+128
+129
+130
+131
+132
+133
+134</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/models/data_service.rb', line 126</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_apply_block'>apply_block</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+    <span class='const'><span class='object_link'><a href="DataServiceModel/BlockInstanciator.html" title="Syskit::Models::DataServiceModel::BlockInstanciator (class)">BlockInstanciator</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="DataServiceModel/BlockInstanciator.html#initialize-instance_method" title="Syskit::Models::DataServiceModel::BlockInstanciator#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='kw'>self</span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_instance_eval'>instance_eval</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+
+    <span class='comment'># Now initialize the port_mappings hash. We register our own
+</span>    <span class='comment'># ports as identity (from =&gt; from)
+</span>    <span class='id identifier rubyid_self_mappings'>self_mappings</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='id identifier rubyid_port_mappings'>port_mappings</span><span class='lbracket'>[</span><span class='kw'>self</span><span class='rbracket'>]</span> <span class='op'>||=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_each_input_port'>each_input_port</span>  <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_port'>port</span><span class='op'>|</span> <span class='id identifier rubyid_self_mappings'>self_mappings</span><span class='lbracket'>[</span><span class='id identifier rubyid_port'>port</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_port'>port</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span> <span class='rbrace'>}</span>
+    <span class='id identifier rubyid_each_output_port'>each_output_port</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_port'>port</span><span class='op'>|</span> <span class='id identifier rubyid_self_mappings'>self_mappings</span><span class='lbracket'>[</span><span class='id identifier rubyid_port'>port</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_port'>port</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span> <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="as_plan-instance_method">
+  
+    #<strong>as_plan</strong>  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+359
+360
+361</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/models/data_service.rb', line 359</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_as_plan'>as_plan</span>
+    <span class='id identifier rubyid_to_instance_requirements'>to_instance_requirements</span><span class='period'>.</span><span class='id identifier rubyid_as_plan'>as_plan</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="bind-instance_method">
+  
+    #<strong>bind</strong>(component)  &#x21d2; <tt>nil</tt>, <tt><span class='object_link'><a href="BoundDataService.html" title="Syskit::Models::BoundDataService (class)">BoundDataService</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Binds the data service model on the given task</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>component</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../Component.html" title="Syskit::Component (class)">Syskit::Component</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>nil</tt>, <tt><span class='object_link'><a href="BoundDataService.html" title="Syskit::Models::BoundDataService (class)">BoundDataService</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>ArgumentError</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>if the given component has no such data service, or if it has more than one</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+322
+323
+324
+325
+326
+327
+328</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/models/data_service.rb', line 322</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_bind'><span class='object_link'><a href="../Coordination/Models/PortHandling.html#bind-instance_method" title="Syskit::Coordination::Models::PortHandling#bind (method)">bind</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_component'>component</span><span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_bound'>bound</span> <span class='op'>=</span> <span class='id identifier rubyid_try_bind'>try_bind</span><span class='lparen'>(</span><span class='id identifier rubyid_component'>component</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_bound'>bound</span>
+    <span class='kw'>else</span>
+        <span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>cannot bind </span><span class='embexpr_beg'>#{</span><span class='kw'>self</span><span class='embexpr_end'>}</span><span class='tstring_content'> to </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_component'>component</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="clear_model-instance_method">
+  
+    #<strong>clear_model</strong>  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+32
+33
+34
+35
+36</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/models/data_service.rb', line 32</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_clear_model'>clear_model</span>
+    <span class='kw'>super</span><span class='lparen'>(</span><span class='rparen'>)</span>
+    <span class='ivar'>@orogen_model</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../OroGen.html" title="OroGen (module)">OroGen</a></span></span><span class='op'>::</span><span class='const'>Spec</span><span class='op'>::</span><span class='const'>TaskContext</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='ivar'>@orogen_model</span><span class='period'>.</span><span class='id identifier rubyid_project'>project</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_port_mappings'>port_mappings</span><span class='period'>.</span><span class='id identifier rubyid_clear'>clear</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="connected?-instance_method">
+  
+    #<strong>connected?</strong>(out_port, in_port)  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Delegated call from Port#connected?</p>
+
+<p>Always returns false as “plain” data service ports cannot be connected</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+287
+288
+289</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/models/data_service.rb', line 287</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_connected?'>connected?</span><span class='lparen'>(</span><span class='id identifier rubyid_out_port'>out_port</span><span class='comma'>,</span> <span class='id identifier rubyid_in_port'>in_port</span><span class='rparen'>)</span>
+    <span class='kw'>false</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="create_placeholder_task-instance_method">
+  
+    #<strong>create_placeholder_task</strong>  &#x21d2; <tt><span class='object_link'><a href="Component.html" title="Syskit::Models::Component (module)">Component</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Create a task that can be used as a placeholder for #self in the plan</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Component.html" title="Syskit::Models::Component (module)">Component</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><span class='object_link'><a href="Placeholder.html" title="Syskit::Models::Placeholder (module)">Placeholder</a></span></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+258
+259
+260</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/models/data_service.rb', line 258</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_create_placeholder_task'>create_placeholder_task</span>
+    <span class='id identifier rubyid_placeholder_model'>placeholder_model</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="create_proxy_task-instance_method">
+  
+    #<strong>create_proxy_task</strong>  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <div class="note deprecated"><strong>Deprecated.</strong> <div class='inline'>
+<p>use <span class='object_link'><a href="#create_placeholder_task-instance_method" title="Syskit::Models::DataServiceModel#create_placeholder_task (method)">#create_placeholder_task</a></span> instead</p>
+</div></div>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+248
+249
+250
+251</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/models/data_service.rb', line 248</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_create_proxy_task'>create_proxy_task</span>
+    <span class='const'>Roby</span><span class='period'>.</span><span class='id identifier rubyid_warn_deprecated'>warn_deprecated</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>DataService.create_proxy_task is deprecated, use .create_placeholder_task instead</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid_create_placeholder_task'>create_placeholder_task</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="each_fullfilled_model-instance_method">
+  
+    #<strong>each_fullfilled_model</strong>  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>The set of services that this service provides</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+70
+71
+72
+73
+74
+75
+76
+77</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/models/data_service.rb', line 70</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_each_fullfilled_model'>each_fullfilled_model</span>
+    <span class='kw'>return</span> <span class='id identifier rubyid_enum_for'>enum_for</span><span class='lparen'>(</span><span class='symbol'>:each_fullfilled_model</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_block_given?'>block_given?</span>
+    <span class='id identifier rubyid_ancestors'>ancestors</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_m'>m</span><span class='op'>|</span>
+        <span class='kw'>if</span> <span class='id identifier rubyid_m'>m</span><span class='period'>.</span><span class='id identifier rubyid_kind_of?'>kind_of?</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="" title="Syskit::Models::DataServiceModel (class)">DataServiceModel</a></span></span><span class='rparen'>)</span>
+            <span class='kw'>yield</span><span class='lparen'>(</span><span class='id identifier rubyid_m'>m</span><span class='rparen'>)</span>
+        <span class='kw'>end</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="each_required_model-instance_method">
+  
+    #<strong>each_required_model</strong> {|_self| ... } &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Yields:</p>
+<ul class="yield">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>_self</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Yield Parameters:</p>
+<ul class="yieldparam">
+  
+    <li>
+      
+        <span class='name'>_self</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="" title="Syskit::Models::DataServiceModel (class)">Syskit::Models::DataServiceModel</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the object that the method was called on</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+79
+80
+81
+82</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/models/data_service.rb', line 79</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_each_required_model'>each_required_model</span>
+    <span class='kw'>return</span> <span class='id identifier rubyid_enum_for'>enum_for</span><span class='lparen'>(</span><span class='symbol'>:each_required_model</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_block_given?'>block_given?</span>
+    <span class='kw'>yield</span><span class='lparen'>(</span><span class='kw'>self</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="if_already_present-instance_method">
+  
+    #<strong>if_already_present</strong>  &#x21d2; <tt><span class='object_link'><a href="../InstanceRequirements.html" title="Syskit::InstanceRequirements (class)">InstanceRequirements</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Optional dependency injection</p>
+
+<p>Returns an <span class='object_link'><a href="../InstanceRequirements.html" title="Syskit::InstanceRequirements (class)">InstanceRequirements</a></span> that you can use to inject optional
+dependencies that will be fullfilled only if there is already a matching
+task deployed in the plan</p>
+
+<p>This can only be meaningfully used when injected for a composition&#39;s
+optional child</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../InstanceRequirements.html" title="Syskit::InstanceRequirements (class)">InstanceRequirements</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+48
+49
+50</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/models/data_service.rb', line 48</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_if_already_present'>if_already_present</span>
+    <span class='id identifier rubyid_to_instance_requirements'>to_instance_requirements</span><span class='period'>.</span><span class='id identifier rubyid_if_already_present'>if_already_present</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="instanciate-instance_method">
+  
+    #<strong>instanciate</strong>(plan, context = DependencyInjectionContext.new, options = Hash.new, &amp;block)  &#x21d2; <tt><span class='object_link'><a href="TaskContext.html" title="Syskit::Models::TaskContext (module)">TaskContext</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Create a task instance that can be used in a plan to represent this service</p>
+
+<p>The returned task instance is obviously an abstract one</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="TaskContext.html" title="Syskit::Models::TaskContext (module)">TaskContext</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+297
+298
+299</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/models/data_service.rb', line 297</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_instanciate'>instanciate</span><span class='lparen'>(</span><span class='id identifier rubyid_plan'>plan</span><span class='comma'>,</span> <span class='id identifier rubyid_context'>context</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../DependencyInjectionContext.html" title="Syskit::DependencyInjectionContext (class)">DependencyInjectionContext</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../DependencyInjectionContext.html#initialize-instance_method" title="Syskit::DependencyInjectionContext#initialize (method)">new</a></span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_placeholder_model'>placeholder_model</span><span class='period'>.</span><span class='id identifier rubyid_instanciate'>instanciate</span><span class='lparen'>(</span><span class='id identifier rubyid_plan'>plan</span><span class='comma'>,</span> <span class='id identifier rubyid_context'>context</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="placeholder?-instance_method">
+  
+    #<strong>placeholder?</strong>  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Wether this model represents a placeholder for data services</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><span class='object_link'><a href="Placeholder.html" title="Syskit::Models::Placeholder (module)">Placeholder</a></span></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+277
+278
+279</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/models/data_service.rb', line 277</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_placeholder?'>placeholder?</span>
+    <span class='kw'>false</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="placeholder_model-instance_method">
+  
+    #<strong>placeholder_model</strong>  &#x21d2; <tt><span class='object_link'><a href="Component.html" title="Syskit::Models::Component (module)">Component</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>A component model that can be used to represent an instance of this data
+service in a Roby plan</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Component.html" title="Syskit::Models::Component (module)">Component</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><span class='object_link'><a href="Placeholder.html" title="Syskit::Models::Placeholder (module)">Placeholder</a></span></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+267
+268
+269
+270
+271
+272</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/models/data_service.rb', line 267</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_placeholder_model'>placeholder_model</span>
+    <span class='kw'>if</span> <span class='ivar'>@placeholder_model</span>
+        <span class='kw'>return</span> <span class='ivar'>@placeholder_model</span>
+    <span class='kw'>end</span>
+    <span class='ivar'>@placeholder_model</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Placeholder.html" title="Syskit::Models::Placeholder (module)">Placeholder</a></span></span><span class='period'>.</span><span class='id identifier rubyid_for'><span class='object_link'><a href="Placeholder/Creation.html#for-instance_method" title="Syskit::Models::Placeholder::Creation#for (method)">for</a></span></span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='kw'>self</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="port_mappings_for-instance_method">
+  
+    #<strong>port_mappings_for</strong>(service_type)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the set of port mappings needed between <code>service_type</code>
+and <code>self</code></p>
+
+<p>In other words, if one wants to link port A from <code>service_type</code>
+on a task that provides a service of type <code>self</code>, it should
+actually link to</p>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_actual_port_name'>actual_port_name</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='id identifier rubyid_port_mappings_for'>port_mappings_for</span><span class='lparen'>(</span><span class='id identifier rubyid_service_type'>service_type</span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>A</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>A</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>ArgumentError</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>if self does not provide service_type</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+146
+147
+148
+149
+150
+151
+152</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/models/data_service.rb', line 146</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_port_mappings_for'>port_mappings_for</span><span class='lparen'>(</span><span class='id identifier rubyid_service_type'>service_type</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='id identifier rubyid_port_mappings'>port_mappings</span><span class='lbracket'>[</span><span class='id identifier rubyid_service_type'>service_type</span><span class='rbracket'>]</span>
+    <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_result'>result</span>
+        <span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_service_type'>service_type</span><span class='period'>.</span><span class='id identifier rubyid_short_name'>short_name</span><span class='embexpr_end'>}</span><span class='tstring_content'> is not provided by </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_short_name'>short_name</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_result'>result</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="pretty_print-instance_method">
+  
+    #<strong>pretty_print</strong>(pp)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+301
+302
+303</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/models/data_service.rb', line 301</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_pretty_print'>pretty_print</span><span class='lparen'>(</span><span class='id identifier rubyid_pp'>pp</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_pp'>pp</span><span class='period'>.</span><span class='id identifier rubyid_text'>text</span> <span class='id identifier rubyid_short_name'>short_name</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="provides-instance_method">
+  
+    #<strong>provides</strong>(service_model, new_port_mappings = Hash.new)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Declares that this data service model provides the given service model</p>
+
+<p>If no port mappings are given, it will mean that the ports defined by
+<code>service_model</code> should be added to this service&#39;s interface.
+If port mappings are given, they define the mapping between ports in
+<code>service_model</code> and existing ports in <code>self</code></p>
+
+<p>Note that if both service_model and self have a port with the same name,
+this port needs also to be mapped explicitely by providing the
+&#39;name&#39; =&gt; &#39;name&#39; mapping in new_port_mappings</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/models/data_service.rb', line 172</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_provides'>provides</span><span class='lparen'>(</span><span class='id identifier rubyid_service_model'>service_model</span><span class='comma'>,</span> <span class='id identifier rubyid_new_port_mappings'>new_port_mappings</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='rparen'>)</span>
+    <span class='comment'># A device can provide either a device or a data service, but
+</span>    <span class='comment'># not a combus. Idem for data service: only other data services
+</span>    <span class='comment'># can be provided
+</span>    <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_kind_of?'>kind_of?</span><span class='lparen'>(</span><span class='id identifier rubyid_service_model'>service_model</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>a </span><span class='embexpr_beg'>#{</span><span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'> cannot provide a </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_service_model'>service_model</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'>. If this is really what you mean, declare </span><span class='embexpr_beg'>#{</span><span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'> as a </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_service_model'>service_model</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'> first</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>end</span>
+
+    <span class='kw'>if</span> <span class='id identifier rubyid_parent_models'>parent_models</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='id identifier rubyid_service_model'>service_model</span><span class='rparen'>)</span>
+        <span class='kw'>return</span>
+    <span class='kw'>elsif</span> <span class='op'>!</span><span class='id identifier rubyid_service_model'>service_model</span><span class='period'>.</span><span class='id identifier rubyid_kind_of?'>kind_of?</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="" title="Syskit::Models::DataServiceModel (class)">DataServiceModel</a></span></span><span class='rparen'>)</span> <span class='comment'># this is probably just a task service
+</span>        <span class='kw'>return</span> <span class='kw'>super</span><span class='lparen'>(</span><span class='id identifier rubyid_service_model'>service_model</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+
+    <span class='id identifier rubyid_service_model'>service_model</span><span class='period'>.</span><span class='id identifier rubyid_each_port'>each_port</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_p'>p</span><span class='op'>|</span>
+        <span class='kw'>if</span> <span class='id identifier rubyid_find_port'><span class='object_link'><a href="../Coordination/Models/PortHandling.html#find_port-instance_method" title="Syskit::Coordination::Models::PortHandling#find_port (method)">find_port</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_p'>p</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span> <span class='op'>!</span><span class='id identifier rubyid_new_port_mappings'>new_port_mappings</span><span class='lbracket'>[</span><span class='id identifier rubyid_p'>p</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='rbracket'>]</span>
+            <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="../SpecError.html" title="Syskit::SpecError (class)">SpecError</a></span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>port collision: </span><span class='embexpr_beg'>#{</span><span class='kw'>self</span><span class='embexpr_end'>}</span><span class='tstring_content'> and </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_service_model'>service_model</span><span class='embexpr_end'>}</span><span class='tstring_content'> both have a port named </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_p'>p</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'>. If you mean to tell syskit that this is the same port, you must provide the mapping explicitely by adding &#39;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_p'>p</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'>&#39; =&gt; &#39;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_p'>p</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'>&#39; to the provides statement</span><span class='tstring_end'>&quot;</span></span>
+            <span class='id identifier rubyid_new_port_mappings'>new_port_mappings</span><span class='lbracket'>[</span><span class='id identifier rubyid_p'>p</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='rbracket'>]</span> <span class='op'>||=</span> <span class='id identifier rubyid_p'>p</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span>
+        <span class='kw'>end</span>
+    <span class='kw'>end</span>
+
+    <span class='id identifier rubyid_new_port_mappings'>new_port_mappings</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_service_name'>service_name</span><span class='comma'>,</span> <span class='id identifier rubyid_self_name'>self_name</span><span class='op'>|</span>
+        <span class='kw'>if</span> <span class='op'>!</span><span class='lparen'>(</span><span class='id identifier rubyid_source_port'>source_port</span> <span class='op'>=</span> <span class='id identifier rubyid_service_model'>service_model</span><span class='period'>.</span><span class='id identifier rubyid_find_port'>find_port</span><span class='lparen'>(</span><span class='id identifier rubyid_service_name'>service_name</span><span class='rparen'>)</span><span class='rparen'>)</span>
+            <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="../SpecError.html" title="Syskit::SpecError (class)">SpecError</a></span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_service_name'>service_name</span><span class='embexpr_end'>}</span><span class='tstring_content'> is not a port of </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_service_model'>service_model</span><span class='period'>.</span><span class='id identifier rubyid_short_name'>short_name</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+        <span class='kw'>end</span>
+        <span class='kw'>if</span> <span class='op'>!</span><span class='lparen'>(</span><span class='id identifier rubyid_target_port'>target_port</span> <span class='op'>=</span> <span class='id identifier rubyid_find_port'><span class='object_link'><a href="../Coordination/Models/PortHandling.html#find_port-instance_method" title="Syskit::Coordination::Models::PortHandling#find_port (method)">find_port</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_self_name'>self_name</span><span class='rparen'>)</span><span class='rparen'>)</span>
+            <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="../SpecError.html" title="Syskit::SpecError (class)">SpecError</a></span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_self_name'>self_name</span><span class='embexpr_end'>}</span><span class='tstring_content'> is not a port of </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_short_name'>short_name</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+        <span class='kw'>end</span>
+        <span class='kw'>if</span> <span class='id identifier rubyid_target_port'>target_port</span><span class='period'>.</span><span class='id identifier rubyid_type'>type</span> <span class='op'>!=</span> <span class='id identifier rubyid_source_port'>source_port</span><span class='period'>.</span><span class='id identifier rubyid_type'>type</span>
+            <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="../SpecError.html" title="Syskit::SpecError (class)">SpecError</a></span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>invalid port mapping </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_service_name'>service_name</span><span class='embexpr_end'>}</span><span class='tstring_content'> =&gt; </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_self_name'>self_name</span><span class='embexpr_end'>}</span><span class='tstring_content'> in </span><span class='embexpr_beg'>#{</span><span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_short_name'>short_name</span><span class='embexpr_end'>}</span><span class='tstring_content'>.provides(</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_service_model'>service_model</span><span class='period'>.</span><span class='id identifier rubyid_short_name'>short_name</span><span class='embexpr_end'>}</span><span class='tstring_content'>): port </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_source_port'>source_port</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'> on </span><span class='embexpr_beg'>#{</span><span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_short_name'>short_name</span><span class='embexpr_end'>}</span><span class='tstring_content'> is of type </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_source_port'>source_port</span><span class='period'>.</span><span class='id identifier rubyid_type'>type</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'> and </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_target_port'>target_port</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'> on </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_service_model'>service_model</span><span class='period'>.</span><span class='id identifier rubyid_short_name'>short_name</span><span class='embexpr_end'>}</span><span class='tstring_content'> is of type </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_target_port'>target_port</span><span class='period'>.</span><span class='id identifier rubyid_type'>type</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+        <span class='kw'>elsif</span> <span class='id identifier rubyid_source_port'>source_port</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span> <span class='op'>!=</span> <span class='id identifier rubyid_target_port'>target_port</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span>
+            <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="../SpecError.html" title="Syskit::SpecError (class)">SpecError</a></span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>invalid port mapping </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_service_name'>service_name</span><span class='embexpr_end'>}</span><span class='tstring_content'> =&gt; </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_self_name'>self_name</span><span class='embexpr_end'>}</span><span class='tstring_content'> in </span><span class='embexpr_beg'>#{</span><span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_short_name'>short_name</span><span class='embexpr_end'>}</span><span class='tstring_content'>.provides(</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_service_model'>service_model</span><span class='period'>.</span><span class='id identifier rubyid_short_name'>short_name</span><span class='embexpr_end'>}</span><span class='tstring_content'>): port </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_source_port'>source_port</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'> on </span><span class='embexpr_beg'>#{</span><span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_short_name'>short_name</span><span class='embexpr_end'>}</span><span class='tstring_content'> is a </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_target_port'>target_port</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'> and </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_target_port'>target_port</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'> on </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_service_model'>service_model</span><span class='period'>.</span><span class='id identifier rubyid_short_name'>short_name</span><span class='embexpr_end'>}</span><span class='tstring_content'> is of a </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_source_port'>source_port</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+        <span class='kw'>end</span>
+    <span class='kw'>end</span>
+
+    <span class='id identifier rubyid_service_model'>service_model</span><span class='period'>.</span><span class='id identifier rubyid_port_mappings'>port_mappings</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_original_service'>original_service</span><span class='comma'>,</span> <span class='id identifier rubyid_mappings'>mappings</span><span class='op'>|</span>
+        <span class='id identifier rubyid_updated_mappings'>updated_mappings</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+        <span class='id identifier rubyid_mappings'>mappings</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_from'>from</span><span class='comma'>,</span> <span class='id identifier rubyid_to'>to</span><span class='op'>|</span>
+            <span class='id identifier rubyid_updated_mappings'>updated_mappings</span><span class='lbracket'>[</span><span class='id identifier rubyid_from'>from</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_new_port_mappings'>new_port_mappings</span><span class='lbracket'>[</span><span class='id identifier rubyid_to'>to</span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='id identifier rubyid_to'>to</span>
+        <span class='kw'>end</span>
+        <span class='id identifier rubyid_port_mappings'>port_mappings</span><span class='lbracket'>[</span><span class='id identifier rubyid_original_service'>original_service</span><span class='rbracket'>]</span> <span class='op'>=</span>
+            <span class='const'><span class='object_link'><a href="../Models.html" title="Syskit::Models (module)">Models</a></span></span><span class='period'>.</span><span class='id identifier rubyid_merge_port_mappings'><span class='object_link'><a href="../Models.html#merge_port_mappings-class_method" title="Syskit::Models.merge_port_mappings (method)">merge_port_mappings</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_port_mappings'>port_mappings</span><span class='lbracket'>[</span><span class='id identifier rubyid_original_service'>original_service</span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='comma'>,</span> <span class='id identifier rubyid_updated_mappings'>updated_mappings</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+
+    <span class='comment'># Now, add the ports that are going to be created because of the
+</span>    <span class='comment'># addition of the service
+</span>    <span class='id identifier rubyid_service_model'>service_model</span><span class='period'>.</span><span class='id identifier rubyid_each_port'>each_port</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_p'>p</span><span class='op'>|</span>
+        <span class='id identifier rubyid_new_port_mappings'>new_port_mappings</span><span class='lbracket'>[</span><span class='id identifier rubyid_p'>p</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='rbracket'>]</span> <span class='op'>||=</span> <span class='id identifier rubyid_p'>p</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_port_mappings'>port_mappings</span><span class='lbracket'>[</span><span class='id identifier rubyid_service_model'>service_model</span><span class='rbracket'>]</span> <span class='op'>=</span>
+        <span class='const'><span class='object_link'><a href="../Models.html" title="Syskit::Models (module)">Models</a></span></span><span class='period'>.</span><span class='id identifier rubyid_merge_port_mappings'><span class='object_link'><a href="../Models.html#merge_port_mappings-class_method" title="Syskit::Models.merge_port_mappings (method)">merge_port_mappings</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_port_mappings'>port_mappings</span><span class='lbracket'>[</span><span class='id identifier rubyid_service_model'>service_model</span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='comma'>,</span> <span class='id identifier rubyid_new_port_mappings'>new_port_mappings</span><span class='rparen'>)</span>
+
+    <span class='comment'># Merging the interface should never raise at this stage. It
+</span>    <span class='comment'># should have been validated above.
+</span>    <span class='const'><span class='object_link'><a href="../Models.html" title="Syskit::Models (module)">Models</a></span></span><span class='period'>.</span><span class='id identifier rubyid_merge_orogen_task_context_models'><span class='object_link'><a href="../Models.html#merge_orogen_task_context_models-class_method" title="Syskit::Models.merge_orogen_task_context_models (method)">merge_orogen_task_context_models</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_orogen_model'>orogen_model</span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='id identifier rubyid_service_model'>service_model</span><span class='period'>.</span><span class='id identifier rubyid_orogen_model'>orogen_model</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_new_port_mappings'>new_port_mappings</span><span class='rparen'>)</span>
+
+    <span class='comment'># For completeness, add port mappings for ourselves
+</span>    <span class='id identifier rubyid_port_mappings'>port_mappings</span><span class='lbracket'>[</span><span class='kw'>self</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+    <span class='id identifier rubyid_each_port'>each_port</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_p'>p</span><span class='op'>|</span>
+        <span class='id identifier rubyid_port_mappings'>port_mappings</span><span class='lbracket'>[</span><span class='kw'>self</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='id identifier rubyid_p'>p</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_p'>p</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span>
+    <span class='kw'>end</span>
+
+    <span class='kw'>super</span><span class='lparen'>(</span><span class='id identifier rubyid_service_model'>service_model</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="provides?-instance_method">
+  
+    #<strong>provides?</strong>(srv)  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Tests whether self already provides another service</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'></span>
+      
+      
+        <span class='type'>(<tt>Model&lt;<span class='object_link'><a href="../DataService.html" title="Syskit::DataService (module)">DataService</a></span>&gt;</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+157
+158
+159</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/models/data_service.rb', line 157</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_provides?'>provides?</span><span class='lparen'>(</span><span class='id identifier rubyid_srv'>srv</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_parent_models'>parent_models</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='id identifier rubyid_srv'>srv</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="proxy_task_model-instance_method">
+  
+    #<strong>proxy_task_model</strong>  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <div class="note deprecated"><strong>Deprecated.</strong> <div class='inline'>
+<p>use <span class='object_link'><a href="#placeholder_model-instance_method" title="Syskit::Models::DataServiceModel#placeholder_model (method)">#placeholder_model</a></span> instead</p>
+</div></div>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+242
+243
+244
+245</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/models/data_service.rb', line 242</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_proxy_task_model'>proxy_task_model</span>
+    <span class='const'>Roby</span><span class='period'>.</span><span class='id identifier rubyid_warn_deprecated'>warn_deprecated</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>DataService.proxy_task_model is deprecated, use .placeholder_model instead</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid_placeholder_model'>placeholder_model</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="resolve-instance_method">
+  
+    #<strong>resolve</strong>(task)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <div class="note deprecated"><strong>Deprecated.</strong> <div class='inline'>
+<p>use <span class='object_link'><a href="#bind-instance_method" title="Syskit::Models::DataServiceModel#bind (method)">#bind</a></span> instead</p>
+</div></div>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+337
+338
+339
+340</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/models/data_service.rb', line 337</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_resolve'>resolve</span><span class='lparen'>(</span><span class='id identifier rubyid_task'>task</span><span class='rparen'>)</span>
+    <span class='const'>Roby</span><span class='period'>.</span><span class='id identifier rubyid_warn_deprecated'>warn_deprecated</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid___method__'>__method__</span><span class='embexpr_end'>}</span><span class='tstring_content'> is deprecated, use #bind instead</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid_bind'><span class='object_link'><a href="../Coordination/Models/PortHandling.html#bind-instance_method" title="Syskit::Coordination::Models::PortHandling#bind (method)">bind</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_task'>task</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="to_component_model-instance_method">
+  
+    #<strong>to_component_model</strong>  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+281</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/models/data_service.rb', line 281</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_to_component_model'>to_component_model</span><span class='semicolon'>;</span> <span class='kw'>self</span> <span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="to_dot-instance_method">
+  
+    #<strong>to_dot</strong>(io)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+342
+343
+344
+345
+346
+347
+348
+349
+350
+351
+352
+353
+354
+355
+356
+357</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/models/data_service.rb', line 342</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_to_dot'>to_dot</span><span class='lparen'>(</span><span class='id identifier rubyid_io'>io</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_id'>id</span> <span class='op'>=</span> <span class='id identifier rubyid_object_id'>object_id</span><span class='period'>.</span><span class='id identifier rubyid_abs'>abs</span>
+    <span class='id identifier rubyid_inputs'>inputs</span> <span class='op'>=</span> <span class='id identifier rubyid_orogen_model'>orogen_model</span><span class='period'>.</span><span class='id identifier rubyid_all_input_ports'>all_input_ports</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:name</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_outputs'>outputs</span> <span class='op'>=</span> <span class='id identifier rubyid_orogen_model'>orogen_model</span><span class='period'>.</span><span class='id identifier rubyid_all_output_ports'>all_output_ports</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:name</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_label'>label</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Graphviz.html" title="Syskit::Graphviz (class)">Graphviz</a></span></span><span class='period'>.</span><span class='id identifier rubyid_dot_iolabel'><span class='object_link'><a href="../Graphviz.html#dot_iolabel-class_method" title="Syskit::Graphviz.dot_iolabel (method)">dot_iolabel</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_constant_name'>constant_name</span><span class='comma'>,</span> <span class='id identifier rubyid_inputs'>inputs</span><span class='comma'>,</span> <span class='id identifier rubyid_outputs'>outputs</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_io'>io</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>  C</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_id'>id</span><span class='embexpr_end'>}</span><span class='tstring_content'> [label=\&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_label'>label</span><span class='embexpr_end'>}</span><span class='tstring_content'>\&quot;,fontsize=15];</span><span class='tstring_end'>&quot;</span></span>
+
+    <span class='id identifier rubyid_parent_models'>parent_models</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_parent_m'>parent_m</span><span class='op'>|</span>
+        <span class='id identifier rubyid_parent_id'>parent_id</span> <span class='op'>=</span> <span class='id identifier rubyid_parent_m'>parent_m</span><span class='period'>.</span><span class='id identifier rubyid_object_id'>object_id</span><span class='period'>.</span><span class='id identifier rubyid_abs'>abs</span>
+        <span class='lparen'>(</span><span class='id identifier rubyid_parent_m'>parent_m</span><span class='period'>.</span><span class='id identifier rubyid_each_input_port'>each_input_port</span><span class='period'>.</span><span class='id identifier rubyid_to_a'>to_a</span> <span class='op'>+</span> <span class='id identifier rubyid_parent_m'>parent_m</span><span class='period'>.</span><span class='id identifier rubyid_each_output_port'>each_output_port</span><span class='period'>.</span><span class='id identifier rubyid_to_a'>to_a</span><span class='rparen'>)</span><span class='period'>.</span>
+            <span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_parent_p'>parent_p</span><span class='op'>|</span>
+            <span class='id identifier rubyid_io'>io</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>  C</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_parent_id'>parent_id</span><span class='embexpr_end'>}</span><span class='tstring_content'>:</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_parent_p'>parent_p</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'> -&gt; C</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_id'>id</span><span class='embexpr_end'>}</span><span class='tstring_content'>:</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_port_mappings_for'>port_mappings_for</span><span class='lparen'>(</span><span class='id identifier rubyid_parent_m'>parent_m</span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='id identifier rubyid_parent_p'>parent_p</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='rbracket'>]</span><span class='embexpr_end'>}</span><span class='tstring_content'>;</span><span class='tstring_end'>&quot;</span></span>
+        <span class='kw'>end</span>
+
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="try_bind-instance_method">
+  
+    #<strong>try_bind</strong>(component)  &#x21d2; <tt>nil</tt>, <tt><span class='object_link'><a href="BoundDataService.html" title="Syskit::Models::BoundDataService (class)">BoundDataService</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Try to bind the data service model on the given task</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>component</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../Component.html" title="Syskit::Component (class)">Syskit::Component</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>nil</tt>, <tt><span class='object_link'><a href="BoundDataService.html" title="Syskit::Models::BoundDataService (class)">BoundDataService</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+309
+310
+311
+312
+313
+314</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/models/data_service.rb', line 309</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_try_bind'>try_bind</span><span class='lparen'>(</span><span class='id identifier rubyid_component'>component</span><span class='rparen'>)</span>
+    <span class='kw'>begin</span>
+        <span class='id identifier rubyid_component'>component</span><span class='period'>.</span><span class='id identifier rubyid_find_data_service_from_type'>find_data_service_from_type</span><span class='lparen'>(</span><span class='kw'>self</span><span class='rparen'>)</span>
+    <span class='kw'>rescue</span> <span class='const'><span class='object_link'><a href="../AmbiguousServiceSelection.html" title="Syskit::AmbiguousServiceSelection (class)">AmbiguousServiceSelection</a></span></span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="try_resolve-instance_method">
+  
+    #<strong>try_resolve</strong>(task)  &#x21d2; <tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <div class="note deprecated"><strong>Deprecated.</strong> <div class='inline'>
+<p>use <span class='object_link'><a href="#try_bind-instance_method" title="Syskit::Models::DataServiceModel#try_bind (method)">#try_bind</a></span> instead</p>
+</div></div>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+331
+332
+333
+334</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/syskit/models/data_service.rb', line 331</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_try_resolve'>try_resolve</span><span class='lparen'>(</span><span class='id identifier rubyid_task'>task</span><span class='rparen'>)</span>
+    <span class='const'>Roby</span><span class='period'>.</span><span class='id identifier rubyid_warn_deprecated'>warn_deprecated</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid___method__'>__method__</span><span class='embexpr_end'>}</span><span class='tstring_content'> is deprecated, use #try_bind instead</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid_try_bind'>try_bind</span><span class='lparen'>(</span><span class='id identifier rubyid_task'>task</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Wed Apr 10 21:55:25 2019 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.19 (ruby-2.5.1).
+</div>
+
+    </div>
+  </body>
+</html>
