@@ -5,7 +5,7 @@ title: API Documentation
 
 # Master
 A selected set of API documentation based on the master branches is made available through the 
-repository [rock-core/apidocs](https://github.com/apidocs).
+repository [rock-core/apidocs](https://github.com/rock-core/apidocs).
 
  * [base/console_bridge](base/console_bridge)
  * [base/numeric](base/numeric)
