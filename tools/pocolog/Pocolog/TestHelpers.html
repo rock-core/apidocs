@@ -1,0 +1,1246 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Module: Pocolog::TestHelpers
+  
+    &mdash; Documentation by YARD 0.9.12
+  
+</title>
+
+  <link rel="stylesheet" href="../css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "Pocolog::TestHelpers";
+  relpath = '../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../_index.html">Index (T)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../Pocolog.html" title="Pocolog (module)">Pocolog</a></span></span>
+     &raquo; 
+    <span class="title">TestHelpers</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Module: Pocolog::TestHelpers
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/pocolog/test_helpers.rb</dd>
+  </dl>
+  
+</div>
+
+<h2>Defined Under Namespace</h2>
+<p class="children">
+  
+    
+  
+    
+      <strong class="classes">Classes:</strong> <span class='object_link'><a href="TestHelpers/RecordingReporter.html" title="Pocolog::TestHelpers::RecordingReporter (class)">RecordingReporter</a></span>
+    
+  
+</p>
+
+
+
+
+  <h2>Instance Attribute Summary <small><a href="#" class="summary_toggle">collapse</a></small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#int32_t-instance_method" title="#int32_t (instance method)">#<strong>int32_t</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>For convenience, the test helpers create a int32_t type and use it by
+default.</p>
+</div></span>
+  
+</li>
+
+    
+  </ul>
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#assert_report_empty-instance_method" title="#assert_report_empty (instance method)">#<strong>assert_report_empty</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#assert_report_includes-instance_method" title="#assert_report_includes (instance method)">#<strong>assert_report_includes</strong>(kind, message)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#close_logfile-instance_method" title="#close_logfile (instance method)">#<strong>close_logfile</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Close the current logfile (either created or opened).</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#create_logfile-instance_method" title="#create_logfile (instance method)">#<strong>create_logfile</strong>(basename)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Create a new logfile.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#create_logfile_stream-instance_method" title="#create_logfile_stream (instance method)">#<strong>create_logfile_stream</strong>(name, samples_rt = [], samples_lg = [], samples_value = [], type: int32_t, metadata: {})  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Create a stream on the last created logfile.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#flush_logfile-instance_method" title="#flush_logfile (instance method)">#<strong>flush_logfile</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#logfile_path-instance_method" title="#logfile_path (instance method)">#<strong>logfile_path</strong>(*basename)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#logfile_tell-instance_method" title="#logfile_tell (instance method)">#<strong>logfile_tell</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#logfiles_dir-instance_method" title="#logfiles_dir (instance method)">#<strong>logfiles_dir</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#move_logfile_path-instance_method" title="#move_logfile_path (instance method)">#<strong>move_logfile_path</strong>(new_dir, delete_current: true)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#open_logfile-instance_method" title="#open_logfile (instance method)">#<strong>open_logfile</strong>(path, index_dir: nil, close_current: true)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Open an existing logfile.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#open_logfile_stream-instance_method" title="#open_logfile_stream (instance method)">#<strong>open_logfile_stream</strong>(basename, stream_name, close_current: true, index_dir: nil)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#recording_reporter-instance_method" title="#recording_reporter (instance method)">#<strong>recording_reporter</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#setup-instance_method" title="#setup (instance method)">#<strong>setup</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#teardown-instance_method" title="#teardown (instance method)">#<strong>teardown</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#write_logfile_sample-instance_method" title="#write_logfile_sample (instance method)">#<strong>write_logfile_sample</strong>(rt, lg, value)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id=""></span>
+      <div class="method_details first">
+  <h3 class="signature first" id="int32_t-instance_method">
+  
+    #<strong>int32_t</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>For convenience, the test helpers create a int32_t type and use it by
+default</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+10
+11
+12</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/pocolog/test_helpers.rb', line 10</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_int32_t'>int32_t</span>
+  <span class='ivar'>@int32_t</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="assert_report_empty-instance_method">
+  
+    #<strong>assert_report_empty</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+59
+60
+61</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/pocolog/test_helpers.rb', line 59</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_assert_report_empty'>assert_report_empty</span>
+    <span class='id identifier rubyid_assert'>assert</span> <span class='ivar'>@__recording_reporter</span><span class='period'>.</span><span class='id identifier rubyid_messages'>messages</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="assert_report_includes-instance_method">
+  
+    #<strong>assert_report_includes</strong>(kind, message)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/pocolog/test_helpers.rb', line 63</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_assert_report_includes'>assert_report_includes</span><span class='lparen'>(</span><span class='id identifier rubyid_kind'>kind</span><span class='comma'>,</span> <span class='id identifier rubyid_message'>message</span><span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='kw'>if</span> <span class='ivar'>@__recording_reporter</span><span class='period'>.</span><span class='id identifier rubyid_match?'>match?</span><span class='lparen'>(</span><span class='id identifier rubyid_kind'>kind</span><span class='comma'>,</span> <span class='id identifier rubyid_message'>message</span><span class='rparen'>)</span>
+
+    <span class='id identifier rubyid_error_message'>error_message</span> <span class='op'>=</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>reporter did not receive any </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_kind'>kind</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span><span class='embexpr_end'>}</span><span class='tstring_content'> message </span><span class='tstring_end'>&quot;</span></span>\
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>matching </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_message'>message</span><span class='embexpr_end'>}</span><span class='tstring_content'>. Received messages:\n  </span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid_error_message'>error_message</span> <span class='op'>+=</span> <span class='ivar'>@__recording_reporter</span>
+                     <span class='period'>.</span><span class='id identifier rubyid_each_received_message'>each_received_message</span>
+                     <span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_k'>k</span><span class='comma'>,</span> <span class='id identifier rubyid_m'>m</span><span class='op'>|</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_k'>k</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span><span class='embexpr_end'>}</span><span class='tstring_content'>: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_m'>m</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span> <span class='rbrace'>}</span>
+                     <span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\n  </span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+
+    <span class='id identifier rubyid_flunk'>flunk</span><span class='lparen'>(</span><span class='id identifier rubyid_error_message'>error_message</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="close_logfile-instance_method">
+  
+    #<strong>close_logfile</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Close the current logfile (either created or opened)</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+116
+117
+118
+119
+120
+121
+122
+123</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/pocolog/test_helpers.rb', line 116</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_close_logfile'>close_logfile</span>
+    <span class='kw'>return</span> <span class='kw'>unless</span> <span class='ivar'>@__current_logfile</span>
+
+    <span class='ivar'>@__current_logfile</span><span class='period'>.</span><span class='id identifier rubyid_close'>close</span>
+    <span class='id identifier rubyid_logfile'>logfile</span> <span class='op'>=</span> <span class='ivar'>@__current_logfile</span>
+    <span class='ivar'>@__current_logfile</span> <span class='op'>=</span> <span class='kw'>nil</span>
+    <span class='id identifier rubyid_logfile'>logfile</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="create_logfile-instance_method">
+  
+    #<strong>create_logfile</strong>(basename)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Create a new logfile</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>filename</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the path to the log file</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>a</span>
+      
+      
+        <span class='type'>(<tt>Hash&lt;String,Array&lt;Integer&gt;&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>set of streams that should be created. All streams are created with a type
+of /int32_t (32 bit, integer, signed). A sample time is always 100 *
+sample_index + value</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/pocolog/test_helpers.rb', line 94</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_create_logfile'>create_logfile</span><span class='lparen'>(</span><span class='id identifier rubyid_basename'>basename</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_path'>path</span> <span class='op'>=</span> <span class='id identifier rubyid_logfile_path'>logfile_path</span><span class='lparen'>(</span><span class='id identifier rubyid_basename'>basename</span><span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_exist?'>exist?</span><span class='lparen'>(</span><span class='id identifier rubyid_index_path'>index_path</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Logfiles.html" title="Pocolog::Logfiles (class)">Logfiles</a></span></span><span class='period'>.</span><span class='id identifier rubyid_default_index_filename'><span class='object_link'><a href="Logfiles.html#default_index_filename-class_method" title="Pocolog::Logfiles.default_index_filename (method)">default_index_filename</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_path'>path</span><span class='rparen'>)</span><span class='rparen'>)</span>
+        <span class='const'><span class='object_link'><a href="../FileUtils.html" title="FileUtils (module)">FileUtils</a></span></span><span class='period'>.</span><span class='id identifier rubyid_rm'>rm</span><span class='lparen'>(</span><span class='id identifier rubyid_index_path'>index_path</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+    <span class='ivar'>@__current_logfile</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Pocolog.html" title="Pocolog (module)">Pocolog</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Logfiles.html" title="Pocolog::Logfiles (class)">Logfiles</a></span></span><span class='period'>.</span><span class='id identifier rubyid_create'><span class='object_link'><a href="Logfiles.html#create-class_method" title="Pocolog::Logfiles.create (method)">create</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_path'>path</span><span class='rparen'>)</span>
+
+    <span class='kw'>return</span> <span class='id identifier rubyid_path'>path</span> <span class='kw'>unless</span> <span class='id identifier rubyid_block_given?'>block_given?</span>
+
+    <span class='kw'>begin</span>
+        <span class='kw'>yield</span>
+        <span class='id identifier rubyid_path'>path</span>
+    <span class='kw'>ensure</span>
+        <span class='id identifier rubyid_close_logfile'>close_logfile</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="create_logfile_stream-instance_method">
+  
+    #<strong>create_logfile_stream</strong>(name, samples_rt = [], samples_lg = [], samples_value = [], type: int32_t, metadata: {})  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Create a stream on the last created logfile</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/pocolog/test_helpers.rb', line 130</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_create_logfile_stream'>create_logfile_stream</span><span class='lparen'>(</span>
+    <span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_samples_rt'>samples_rt</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_samples_lg'>samples_lg</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_samples_value'>samples_value</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span><span class='comma'>,</span>
+    <span class='label'>type:</span> <span class='id identifier rubyid_int32_t'>int32_t</span><span class='comma'>,</span> <span class='label'>metadata:</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
+<span class='rparen'>)</span>
+    <span class='id identifier rubyid_stream'>stream</span> <span class='op'>=</span> <span class='ivar'>@__current_logfile</span><span class='period'>.</span><span class='id identifier rubyid_create_stream'>create_stream</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_type'>type</span><span class='comma'>,</span> <span class='id identifier rubyid_metadata'>metadata</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_samples_rt'>samples_rt</span><span class='period'>.</span><span class='id identifier rubyid_zip'>zip</span><span class='lparen'>(</span><span class='id identifier rubyid_samples_lg'>samples_lg</span><span class='comma'>,</span> <span class='id identifier rubyid_samples_value'>samples_value</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_rt'>rt</span><span class='comma'>,</span> <span class='id identifier rubyid_lg'>lg</span><span class='comma'>,</span> <span class='id identifier rubyid_v'>v</span><span class='op'>|</span>
+        <span class='id identifier rubyid_stream'>stream</span><span class='period'>.</span><span class='id identifier rubyid_write'>write</span><span class='lparen'>(</span><span class='id identifier rubyid_rt'>rt</span><span class='comma'>,</span> <span class='id identifier rubyid_lg'>lg</span><span class='comma'>,</span> <span class='id identifier rubyid_v'>v</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+    <span class='ivar'>@__current_stream</span> <span class='op'>=</span> <span class='id identifier rubyid_stream'>stream</span>
+    <span class='id identifier rubyid_stream'>stream</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="flush_logfile-instance_method">
+  
+    #<strong>flush_logfile</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+111
+112
+113</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/pocolog/test_helpers.rb', line 111</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_flush_logfile'>flush_logfile</span>
+    <span class='ivar'>@__current_logfile</span><span class='period'>.</span><span class='id identifier rubyid_flush'>flush</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="logfile_path-instance_method">
+  
+    #<strong>logfile_path</strong>(*basename)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+170
+171
+172</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/pocolog/test_helpers.rb', line 170</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_logfile_path'>logfile_path</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_basename'>basename</span><span class='rparen'>)</span>
+    <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_expand_path'>expand_path</span><span class='lparen'>(</span><span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_basename'>basename</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='ivar'>@__logfiles_dir</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="logfile_tell-instance_method">
+  
+    #<strong>logfile_tell</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+125
+126
+127</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/pocolog/test_helpers.rb', line 125</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_logfile_tell'>logfile_tell</span>
+    <span class='ivar'>@__current_logfile</span><span class='period'>.</span><span class='id identifier rubyid_io'>io</span><span class='period'>.</span><span class='id identifier rubyid_tell'>tell</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="logfiles_dir-instance_method">
+  
+    #<strong>logfiles_dir</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+166
+167
+168</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/pocolog/test_helpers.rb', line 166</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_logfiles_dir'>logfiles_dir</span>
+    <span class='ivar'>@__logfiles_dir</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="move_logfile_path-instance_method">
+  
+    #<strong>move_logfile_path</strong>(new_dir, delete_current: true)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+77
+78
+79
+80
+81</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/pocolog/test_helpers.rb', line 77</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_move_logfile_path'>move_logfile_path</span><span class='lparen'>(</span><span class='id identifier rubyid_new_dir'>new_dir</span><span class='comma'>,</span> <span class='label'>delete_current:</span> <span class='kw'>true</span><span class='rparen'>)</span>
+    <span class='const'><span class='object_link'><a href="../FileUtils.html" title="FileUtils (module)">FileUtils</a></span></span><span class='period'>.</span><span class='id identifier rubyid_rm_rf'>rm_rf</span><span class='lparen'>(</span><span class='ivar'>@__logfiles_dir</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_delete_current'>delete_current</span>
+    <span class='const'><span class='object_link'><a href="../FileUtils.html" title="FileUtils (module)">FileUtils</a></span></span><span class='period'>.</span><span class='id identifier rubyid_mkdir_p'>mkdir_p</span><span class='lparen'>(</span><span class='id identifier rubyid_new_dir'>new_dir</span><span class='rparen'>)</span>
+    <span class='ivar'>@__logfiles_dir</span> <span class='op'>=</span> <span class='id identifier rubyid_new_dir'>new_dir</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="open_logfile-instance_method">
+  
+    #<strong>open_logfile</strong>(path, index_dir: nil, close_current: true)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Open an existing logfile</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/pocolog/test_helpers.rb', line 147</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_open_logfile'>open_logfile</span><span class='lparen'>(</span><span class='id identifier rubyid_path'>path</span><span class='comma'>,</span> <span class='label'>index_dir:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>close_current:</span> <span class='kw'>true</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_close_logfile'>close_logfile</span> <span class='kw'>if</span> <span class='ivar'>@__current_logfile</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_close_current'>close_current</span>
+
+    <span class='id identifier rubyid_logfile'>logfile</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Pocolog.html" title="Pocolog (module)">Pocolog</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Logfiles.html" title="Pocolog::Logfiles (class)">Logfiles</a></span></span><span class='period'>.</span><span class='id identifier rubyid_open'><span class='object_link'><a href="Logfiles.html#open-class_method" title="Pocolog::Logfiles.open (method)">open</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_logfile_path'>logfile_path</span><span class='lparen'>(</span><span class='id identifier rubyid_path'>path</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='label'>index_dir:</span> <span class='id identifier rubyid_index_dir'>index_dir</span><span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_block_given?'>block_given?</span>
+        <span class='kw'>begin</span> <span class='kw'>yield</span><span class='lparen'>(</span><span class='id identifier rubyid_logfile'>logfile</span><span class='rparen'>)</span>
+        <span class='kw'>ensure</span> <span class='id identifier rubyid_close_logfile'>close_logfile</span>
+        <span class='kw'>end</span>
+    <span class='kw'>else</span>
+        <span class='id identifier rubyid_logfile'>logfile</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="open_logfile_stream-instance_method">
+  
+    #<strong>open_logfile_stream</strong>(basename, stream_name, close_current: true, index_dir: nil)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+160
+161
+162
+163
+164</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/pocolog/test_helpers.rb', line 160</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_open_logfile_stream'>open_logfile_stream</span><span class='lparen'>(</span><span class='id identifier rubyid_basename'>basename</span><span class='comma'>,</span> <span class='id identifier rubyid_stream_name'>stream_name</span><span class='comma'>,</span>
+                        <span class='label'>close_current:</span> <span class='kw'>true</span><span class='comma'>,</span> <span class='label'>index_dir:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_open_logfile'>open_logfile</span><span class='lparen'>(</span><span class='id identifier rubyid_basename'>basename</span><span class='comma'>,</span> <span class='label'>close_current:</span> <span class='id identifier rubyid_close_current'>close_current</span><span class='comma'>,</span> <span class='label'>index_dir:</span> <span class='id identifier rubyid_index_dir'>index_dir</span><span class='rparen'>)</span>
+        <span class='period'>.</span><span class='id identifier rubyid_stream'>stream</span><span class='lparen'>(</span><span class='id identifier rubyid_stream_name'>stream_name</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="recording_reporter-instance_method">
+  
+    #<strong>recording_reporter</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+55
+56
+57</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/pocolog/test_helpers.rb', line 55</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_recording_reporter'>recording_reporter</span>
+    <span class='ivar'>@__recording_reporter</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="setup-instance_method">
+  
+    #<strong>setup</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+12
+13
+14
+15
+16
+17
+18</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/pocolog/test_helpers.rb', line 12</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_setup'>setup</span>
+    <span class='ivar'>@__logfiles_dir</span> <span class='op'>=</span> <span class='const'>Dir</span><span class='period'>.</span><span class='id identifier rubyid_mktmpdir'>mktmpdir</span>
+    <span class='id identifier rubyid_registry'>registry</span> <span class='op'>=</span> <span class='const'>Typelib</span><span class='op'>::</span><span class='const'>Registry</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+    <span class='ivar'>@int32_t</span> <span class='op'>=</span> <span class='id identifier rubyid_registry'>registry</span><span class='period'>.</span><span class='id identifier rubyid_create_numeric'>create_numeric</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/int32_t</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='int'>4</span><span class='comma'>,</span> <span class='symbol'>:sint</span>
+    <span class='ivar'>@__recording_reporter</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="TestHelpers/RecordingReporter.html" title="Pocolog::TestHelpers::RecordingReporter (class)">RecordingReporter</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="TestHelpers/RecordingReporter.html#initialize-instance_method" title="Pocolog::TestHelpers::RecordingReporter#initialize (method)">new</a></span></span>
+    <span class='kw'>super</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="teardown-instance_method">
+  
+    #<strong>teardown</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+83
+84
+85
+86</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/pocolog/test_helpers.rb', line 83</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_teardown'>teardown</span>
+    <span class='const'><span class='object_link'><a href="../FileUtils.html" title="FileUtils (module)">FileUtils</a></span></span><span class='period'>.</span><span class='id identifier rubyid_rm_rf'>rm_rf</span> <span class='ivar'>@__logfiles_dir</span>
+    <span class='kw'>super</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="write_logfile_sample-instance_method">
+  
+    #<strong>write_logfile_sample</strong>(rt, lg, value)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+142
+143
+144</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/pocolog/test_helpers.rb', line 142</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_write_logfile_sample'>write_logfile_sample</span><span class='lparen'>(</span><span class='id identifier rubyid_rt'>rt</span><span class='comma'>,</span> <span class='id identifier rubyid_lg'>lg</span><span class='comma'>,</span> <span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span>
+    <span class='ivar'>@__current_stream</span><span class='period'>.</span><span class='id identifier rubyid_write'>write</span><span class='lparen'>(</span><span class='id identifier rubyid_rt'>rt</span><span class='comma'>,</span> <span class='id identifier rubyid_lg'>lg</span><span class='comma'>,</span> <span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.12 (ruby-2.5.1).
+</div>
+
+    </div>
+  </body>
+</html>

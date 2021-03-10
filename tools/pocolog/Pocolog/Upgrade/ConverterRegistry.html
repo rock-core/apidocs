@@ -1,0 +1,1258 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: Pocolog::Upgrade::ConverterRegistry
+  
+    &mdash; Documentation by YARD 0.9.12
+  
+</title>
+
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "Pocolog::Upgrade::ConverterRegistry";
+  relpath = '../../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../../_index.html">Index (C)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../Pocolog.html" title="Pocolog (module)">Pocolog</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Upgrade.html" title="Pocolog::Upgrade (module)">Upgrade</a></span></span>
+     &raquo; 
+    <span class="title">ConverterRegistry</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: Pocolog::Upgrade::ConverterRegistry
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">Pocolog::Upgrade::ConverterRegistry</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/pocolog/upgrade/converter_registry.rb</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>Class that holds a set of custom convertion</p>
+
+<p>It allows to somewhat efficiently query which converters are available for
+a given (time, type) pair through #find_all_for</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+
+
+  <h2>Instance Attribute Summary <small><a href="#" class="summary_toggle">collapse</a></small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#converters_by_from_type-instance_method" title="#converters_by_from_type (instance method)">#<strong>converters_by_from_type</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>The converters indexed by their <span class='object_link'><a href="Ops/Custom.html#from_type-instance_method" title="Pocolog::Upgrade::Ops::Custom#from_type (method)">Ops::Custom#from_type</a></span>.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#converters_by_to_type-instance_method" title="#converters_by_to_type (instance method)">#<strong>converters_by_to_type</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>The converters indexed by their <span class='object_link'><a href="Ops/Base.html#to_type-instance_method" title="Pocolog::Upgrade::Ops::Base#to_type (method)">Ops::Base#to_type</a></span>.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#type_by_type_name-instance_method" title="#type_by_type_name (instance method)">#<strong>type_by_type_name</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>The converters source types indexed by name.</p>
+</div></span>
+  
+</li>
+
+    
+  </ul>
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#add-instance_method" title="#add (instance method)">#<strong>add</strong>(time, source_t, to_type, name: nil, &amp;converter)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Add a custom converter to this registry.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#build_converter_graph-instance_method" title="#build_converter_graph (instance method)">#<strong>build_converter_graph</strong>(time)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Builds a directed graph that represents how the converters can be chained.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#compute_source_conversions-instance_method" title="#compute_source_conversions (instance method)">#<strong>compute_source_conversions</strong>(graph, time, type, relax: false)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Find a way to link the given type to the converter graph as a conversion
+source.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#compute_target_conversions-instance_method" title="#compute_target_conversions (instance method)">#<strong>compute_target_conversions</strong>(graph, type, relax: false)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Find a way to link the given type to the converter graph as a conversion
+target.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#each_converter-instance_method" title="#each_converter (instance method)">#<strong>each_converter</strong>(&amp;block)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Enumerate all registered converters.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#find_converter_chain-instance_method" title="#find_converter_chain (instance method)">#<strong>find_converter_chain</strong>(time, from_type, to_type, relax: false)  &#x21d2; Array&lt;Ops::Base&gt;<sup>?</sup> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Finds a suitable converter chain to go from &#39;from_type&#39; to
+&#39;to_type&#39;.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#find_equivalent_type-instance_method" title="#find_equivalent_type (instance method)">#<strong>find_equivalent_type</strong>(type)  &#x21d2; nil, Typelib::Type </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Finds an already registered type that is equal to a given type, to simplify
+type resolution in #find_all_for_type.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>  &#x21d2; ConverterRegistry </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>A new instance of ConverterRegistry.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#register-instance_method" title="#register (instance method)">#<strong>register</strong>(custom_converter)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Add a custom converter to this registry.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    #<strong>initialize</strong>  &#x21d2; <tt><span class='object_link'><a href="" title="Pocolog::Upgrade::ConverterRegistry (class)">ConverterRegistry</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns a new instance of ConverterRegistry</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+17
+18
+19
+20
+21</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/pocolog/upgrade/converter_registry.rb', line 17</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span>
+    <span class='ivar'>@converters_by_from_type</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_h'>h</span><span class='comma'>,</span> <span class='id identifier rubyid_k'>k</span><span class='op'>|</span> <span class='id identifier rubyid_h'>h</span><span class='lbracket'>[</span><span class='id identifier rubyid_k'>k</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='const'>Array</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='rbrace'>}</span>
+    <span class='ivar'>@converters_by_to_type</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_h'>h</span><span class='comma'>,</span> <span class='id identifier rubyid_k'>k</span><span class='op'>|</span> <span class='id identifier rubyid_h'>h</span><span class='lbracket'>[</span><span class='id identifier rubyid_k'>k</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='const'>Array</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='rbrace'>}</span>
+    <span class='ivar'>@type_by_type_name</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_h'>h</span><span class='comma'>,</span> <span class='id identifier rubyid_k'>k</span><span class='op'>|</span> <span class='id identifier rubyid_h'>h</span><span class='lbracket'>[</span><span class='id identifier rubyid_k'>k</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id=""></span>
+      <div class="method_details first">
+  <h3 class="signature first" id="converters_by_from_type-instance_method">
+  
+    #<strong>converters_by_from_type</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>The converters indexed by their <span class='object_link'><a href="Ops/Custom.html#from_type-instance_method" title="Pocolog::Upgrade::Ops::Custom#from_type (method)">Ops::Custom#from_type</a></span></p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+9
+10
+11</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/pocolog/upgrade/converter_registry.rb', line 9</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_converters_by_from_type'>converters_by_from_type</span>
+  <span class='ivar'>@converters_by_from_type</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="converters_by_to_type-instance_method">
+  
+    #<strong>converters_by_to_type</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>The converters indexed by their <span class='object_link'><a href="Ops/Base.html#to_type-instance_method" title="Pocolog::Upgrade::Ops::Base#to_type (method)">Ops::Base#to_type</a></span></p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+12
+13
+14</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/pocolog/upgrade/converter_registry.rb', line 12</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_converters_by_to_type'>converters_by_to_type</span>
+  <span class='ivar'>@converters_by_to_type</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="type_by_type_name-instance_method">
+  
+    #<strong>type_by_type_name</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>The converters source types indexed by name</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+15
+16
+17</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/pocolog/upgrade/converter_registry.rb', line 15</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_type_by_type_name'>type_by_type_name</span>
+  <span class='ivar'>@type_by_type_name</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="add-instance_method">
+  
+    #<strong>add</strong>(time, source_t, to_type, name: nil, &amp;converter)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Add a custom converter to this registry</p>
+
+<p>This is a convenience method to create and add a <span class='object_link'><a href="Ops/Custom.html" title="Pocolog::Upgrade::Ops::Custom (class)">Ops::Custom</a></span> object in
+one go</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+27
+28
+29
+30</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/pocolog/upgrade/converter_registry.rb', line 27</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_add'>add</span><span class='lparen'>(</span><span class='id identifier rubyid_time'>time</span><span class='comma'>,</span> <span class='id identifier rubyid_source_t'>source_t</span><span class='comma'>,</span> <span class='id identifier rubyid_to_type'>to_type</span><span class='comma'>,</span> <span class='label'>name:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_converter'>converter</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_register'>register</span><span class='lparen'>(</span><span class='id identifier rubyid_converter'>converter</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Ops.html" title="Pocolog::Upgrade::Ops (module)">Ops</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Ops/Custom.html" title="Pocolog::Upgrade::Ops::Custom (class)">Custom</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Ops/Custom.html#initialize-instance_method" title="Pocolog::Upgrade::Ops::Custom#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_time'>time</span><span class='comma'>,</span> <span class='id identifier rubyid_source_t'>source_t</span><span class='comma'>,</span> <span class='id identifier rubyid_to_type'>to_type</span><span class='comma'>,</span> <span class='id identifier rubyid_converter'>converter</span><span class='rparen'>)</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_converter'>converter</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="build_converter_graph-instance_method">
+  
+    #<strong>build_converter_graph</strong>(time)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+
+<p>Builds a directed graph that represents how the converters can be chained</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/pocolog/upgrade/converter_registry.rb', line 152</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_build_converter_graph'>build_converter_graph</span><span class='lparen'>(</span><span class='id identifier rubyid_time'>time</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_graph'>graph</span> <span class='op'>=</span> <span class='const'>RGL</span><span class='op'>::</span><span class='const'>DirectedAdjacencyGraph</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+    <span class='id identifier rubyid_each_converter'>each_converter</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_converter'>converter</span><span class='op'>|</span>
+        <span class='kw'>next</span> <span class='kw'>if</span> <span class='id identifier rubyid_converter'>converter</span><span class='period'>.</span><span class='id identifier rubyid_time_to'>time_to</span> <span class='op'>&lt;</span> <span class='id identifier rubyid_time'>time</span>
+        
+        <span class='id identifier rubyid_converters'>converters</span> <span class='op'>=</span> <span class='id identifier rubyid_converters_by_from_type'>converters_by_from_type</span><span class='period'>.</span><span class='id identifier rubyid_fetch'>fetch</span><span class='lparen'>(</span><span class='id identifier rubyid_converter'>converter</span><span class='period'>.</span><span class='id identifier rubyid_to_type'>to_type</span><span class='comma'>,</span> <span class='const'>Array</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='rparen'>)</span>
+        <span class='kw'>if</span> <span class='id identifier rubyid_next_converter'>next_converter</span> <span class='op'>=</span> <span class='id identifier rubyid_converters'>converters</span><span class='period'>.</span><span class='id identifier rubyid_sort_by'>sort_by</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:time_to</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_find'>find</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_c'>c</span><span class='op'>|</span> <span class='id identifier rubyid_converter'>converter</span><span class='period'>.</span><span class='id identifier rubyid_time_to'>time_to</span> <span class='op'>&lt;</span> <span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_time_to'>time_to</span> <span class='rbrace'>}</span>
+            <span class='id identifier rubyid_graph'>graph</span><span class='period'>.</span><span class='id identifier rubyid_add_edge'>add_edge</span><span class='lparen'>(</span><span class='id identifier rubyid_converter'>converter</span><span class='comma'>,</span> <span class='id identifier rubyid_next_converter'>next_converter</span><span class='rparen'>)</span>
+        <span class='kw'>end</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_graph'>graph</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="compute_source_conversions-instance_method">
+  
+    #<strong>compute_source_conversions</strong>(graph, time, type, relax: false)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+
+<p>Find a way to link the given type to the converter graph as a conversion
+source</p>
+
+<p>It checks whether &#39;type&#39; itself is known, and if not tries to find
+the types that have the same name and can into which &#39;type&#39; can be
+converted.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/pocolog/upgrade/converter_registry.rb', line 73</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_compute_source_conversions'>compute_source_conversions</span><span class='lparen'>(</span><span class='id identifier rubyid_graph'>graph</span><span class='comma'>,</span> <span class='id identifier rubyid_time'>time</span><span class='comma'>,</span> <span class='id identifier rubyid_type'>type</span><span class='comma'>,</span> <span class='label'>relax:</span> <span class='kw'>false</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_source_vertex'>source_vertex</span> <span class='op'>=</span> <span class='const'>Object</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_self_type'>self_type</span> <span class='op'>=</span> <span class='id identifier rubyid_find_equivalent_type'>find_equivalent_type</span><span class='lparen'>(</span><span class='id identifier rubyid_type'>type</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_type'>type</span> <span class='op'>=</span> <span class='id identifier rubyid_self_type'>self_type</span>
+        <span class='id identifier rubyid_candidates'>candidates</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='id identifier rubyid_self_type'>self_type</span><span class='rbracket'>]</span>
+    <span class='kw'>else</span>
+        <span class='id identifier rubyid_candidates'>candidates</span> <span class='op'>=</span> <span class='id identifier rubyid_type_by_type_name'>type_by_type_name</span><span class='period'>.</span><span class='id identifier rubyid_fetch'>fetch</span><span class='lparen'>(</span><span class='id identifier rubyid_type'>type</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='const'>Array</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+
+    <span class='id identifier rubyid_failures'>failures</span> <span class='op'>=</span> <span class='const'>Array</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+    <span class='id identifier rubyid_candidates'>candidates</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_candidate_type'>candidate_type</span><span class='op'>|</span>
+        <span class='id identifier rubyid_converters'>converters</span> <span class='op'>=</span> <span class='id identifier rubyid_converters_by_from_type'>converters_by_from_type</span><span class='period'>.</span><span class='id identifier rubyid_fetch'>fetch</span><span class='lparen'>(</span><span class='id identifier rubyid_candidate_type'>candidate_type</span><span class='comma'>,</span> <span class='const'>Array</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='rparen'>)</span>
+        <span class='kw'>if</span> <span class='id identifier rubyid_converter'>converter</span> <span class='op'>=</span> <span class='id identifier rubyid_converters'>converters</span><span class='period'>.</span><span class='id identifier rubyid_sort_by'>sort_by</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:time_to</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_find'>find</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_c'>c</span><span class='op'>|</span> <span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_time_to'>time_to</span> <span class='op'>&gt;</span> <span class='id identifier rubyid_time'>time</span> <span class='rbrace'>}</span>
+            <span class='kw'>if</span> <span class='id identifier rubyid_type'>type</span> <span class='op'>==</span> <span class='id identifier rubyid_converter'>converter</span><span class='period'>.</span><span class='id identifier rubyid_from_type'>from_type</span>
+                <span class='id identifier rubyid_graph'>graph</span><span class='period'>.</span><span class='id identifier rubyid_add_edge'>add_edge</span><span class='lparen'>(</span><span class='id identifier rubyid_source_vertex'>source_vertex</span><span class='comma'>,</span> <span class='id identifier rubyid_converter'>converter</span><span class='rparen'>)</span>
+            <span class='kw'>else</span>
+                <span class='kw'>begin</span>
+                    <span class='id identifier rubyid_cast_op'>cast_op</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Upgrade.html" title="Pocolog::Upgrade (module)">Upgrade</a></span></span><span class='period'>.</span><span class='id identifier rubyid_build_deep_cast'><span class='object_link'><a href="../Upgrade.html#build_deep_cast-class_method" title="Pocolog::Upgrade.build_deep_cast (method)">build_deep_cast</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_time'>time</span><span class='comma'>,</span> <span class='id identifier rubyid_type'>type</span><span class='comma'>,</span> <span class='id identifier rubyid_candidate_type'>candidate_type</span><span class='comma'>,</span> <span class='kw'>self</span><span class='comma'>,</span> <span class='label'>relax:</span> <span class='id identifier rubyid_relax'>relax</span><span class='rparen'>)</span>
+                    <span class='id identifier rubyid_graph'>graph</span><span class='period'>.</span><span class='id identifier rubyid_add_edge'>add_edge</span><span class='lparen'>(</span><span class='id identifier rubyid_source_vertex'>source_vertex</span><span class='comma'>,</span> <span class='id identifier rubyid_cast_op'>cast_op</span><span class='rparen'>)</span>
+                    <span class='id identifier rubyid_graph'>graph</span><span class='period'>.</span><span class='id identifier rubyid_add_edge'>add_edge</span><span class='lparen'>(</span><span class='id identifier rubyid_cast_op'>cast_op</span><span class='comma'>,</span> <span class='id identifier rubyid_converter'>converter</span><span class='rparen'>)</span>
+                <span class='kw'>rescue</span> <span class='const'><span class='object_link'><a href="InvalidCast.html" title="Pocolog::Upgrade::InvalidCast (class)">InvalidCast</a></span></span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_e'>e</span>
+                    <span class='id identifier rubyid_failures'>failures</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_e'>e</span>
+                <span class='kw'>end</span>
+            <span class='kw'>end</span>
+        <span class='kw'>end</span>
+    <span class='kw'>end</span>
+    <span class='kw'>return</span> <span class='id identifier rubyid_source_vertex'>source_vertex</span><span class='comma'>,</span> <span class='id identifier rubyid_type'>type</span><span class='comma'>,</span> <span class='id identifier rubyid_failures'>failures</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="compute_target_conversions-instance_method">
+  
+    #<strong>compute_target_conversions</strong>(graph, type, relax: false)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+
+<p>Find a way to link the given type to the converter graph as a conversion
+target</p>
+
+<p>It checks whether &#39;type&#39; itself is known, and if not tries to find
+the types that have the same name and can be converted to it.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/pocolog/upgrade/converter_registry.rb', line 109</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_compute_target_conversions'>compute_target_conversions</span><span class='lparen'>(</span><span class='id identifier rubyid_graph'>graph</span><span class='comma'>,</span> <span class='id identifier rubyid_type'>type</span><span class='comma'>,</span> <span class='label'>relax:</span> <span class='kw'>false</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_target_vertex'>target_vertex</span> <span class='op'>=</span> <span class='const'>Object</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_self_type'>self_type</span> <span class='op'>=</span> <span class='id identifier rubyid_find_equivalent_type'>find_equivalent_type</span><span class='lparen'>(</span><span class='id identifier rubyid_type'>type</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_type'>type</span> <span class='op'>=</span> <span class='id identifier rubyid_self_type'>self_type</span>
+        <span class='id identifier rubyid_candidates'>candidates</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='id identifier rubyid_self_type'>self_type</span><span class='rbracket'>]</span>
+    <span class='kw'>else</span>
+        <span class='id identifier rubyid_candidates'>candidates</span> <span class='op'>=</span> <span class='id identifier rubyid_type_by_type_name'>type_by_type_name</span><span class='period'>.</span><span class='id identifier rubyid_fetch'>fetch</span><span class='lparen'>(</span><span class='id identifier rubyid_type'>type</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='const'>Array</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+
+    <span class='id identifier rubyid_failures'>failures</span> <span class='op'>=</span> <span class='const'>Array</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+    <span class='id identifier rubyid_candidates'>candidates</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_candidate_type'>candidate_type</span><span class='op'>|</span>
+        <span class='id identifier rubyid_converter'>converter</span> <span class='op'>=</span> <span class='id identifier rubyid_converters_by_to_type'>converters_by_to_type</span><span class='period'>.</span><span class='id identifier rubyid_fetch'>fetch</span><span class='lparen'>(</span><span class='id identifier rubyid_candidate_type'>candidate_type</span><span class='comma'>,</span> <span class='const'>Array</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='rparen'>)</span><span class='period'>.</span>
+            <span class='id identifier rubyid_sort_by'>sort_by</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:time_to</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_last'>last</span>
+
+        <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_converter'>converter</span>
+            <span class='kw'>next</span>
+        <span class='kw'>elsif</span> <span class='id identifier rubyid_candidate_type'>candidate_type</span> <span class='op'>==</span> <span class='id identifier rubyid_type'>type</span>
+            <span class='id identifier rubyid_graph'>graph</span><span class='period'>.</span><span class='id identifier rubyid_add_edge'>add_edge</span><span class='lparen'>(</span><span class='id identifier rubyid_converter'>converter</span><span class='comma'>,</span> <span class='id identifier rubyid_target_vertex'>target_vertex</span><span class='rparen'>)</span>
+        <span class='kw'>else</span>
+            <span class='kw'>begin</span>
+                <span class='id identifier rubyid_deep_cast'>deep_cast</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Upgrade.html" title="Pocolog::Upgrade (module)">Upgrade</a></span></span><span class='period'>.</span><span class='id identifier rubyid_build_deep_cast'><span class='object_link'><a href="../Upgrade.html#build_deep_cast-class_method" title="Pocolog::Upgrade.build_deep_cast (method)">build_deep_cast</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_converter'>converter</span><span class='period'>.</span><span class='id identifier rubyid_time_to'>time_to</span><span class='comma'>,</span> <span class='id identifier rubyid_candidate_type'>candidate_type</span><span class='comma'>,</span> <span class='id identifier rubyid_type'>type</span><span class='comma'>,</span> <span class='kw'>self</span><span class='comma'>,</span> <span class='label'>relax:</span> <span class='id identifier rubyid_relax'>relax</span><span class='rparen'>)</span>
+                <span class='id identifier rubyid_graph'>graph</span><span class='period'>.</span><span class='id identifier rubyid_add_edge'>add_edge</span><span class='lparen'>(</span><span class='id identifier rubyid_converter'>converter</span><span class='comma'>,</span> <span class='id identifier rubyid_deep_cast'>deep_cast</span><span class='rparen'>)</span>
+                <span class='id identifier rubyid_graph'>graph</span><span class='period'>.</span><span class='id identifier rubyid_add_edge'>add_edge</span><span class='lparen'>(</span><span class='id identifier rubyid_deep_cast'>deep_cast</span><span class='comma'>,</span> <span class='id identifier rubyid_target_vertex'>target_vertex</span><span class='rparen'>)</span>
+            <span class='kw'>rescue</span> <span class='const'><span class='object_link'><a href="InvalidCast.html" title="Pocolog::Upgrade::InvalidCast (class)">InvalidCast</a></span></span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_e'>e</span>
+                <span class='id identifier rubyid_failures'>failures</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_e'>e</span>
+            <span class='kw'>end</span>
+        <span class='kw'>end</span>
+    <span class='kw'>end</span>
+    <span class='kw'>return</span> <span class='id identifier rubyid_target_vertex'>target_vertex</span><span class='comma'>,</span> <span class='id identifier rubyid_type'>type</span><span class='comma'>,</span> <span class='id identifier rubyid_failures'>failures</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="each_converter-instance_method">
+  
+    #<strong>each_converter</strong>(&amp;block)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Enumerate all registered converters</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+141
+142
+143
+144
+145
+146</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/pocolog/upgrade/converter_registry.rb', line 141</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_each_converter'>each_converter</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='id identifier rubyid_enum_for'>enum_for</span><span class='lparen'>(</span><span class='id identifier rubyid___method__'>__method__</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_block'>block</span>
+    <span class='id identifier rubyid_converters_by_from_type'>converters_by_from_type</span><span class='period'>.</span><span class='id identifier rubyid_each_value'>each_value</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_converters'>converters</span><span class='op'>|</span>
+        <span class='id identifier rubyid_converters'>converters</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="find_converter_chain-instance_method">
+  
+    #<strong>find_converter_chain</strong>(time, from_type, to_type, relax: false)  &#x21d2; <tt>Array&lt;<span class='object_link'><a href="Ops/Base.html" title="Pocolog::Upgrade::Ops::Base (class)">Ops::Base</a></span>&gt;</tt><sup>?</sup> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Finds a suitable converter chain to go from &#39;from_type&#39; to
+&#39;to_type&#39;</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array&lt;<span class='object_link'><a href="Ops/Base.html" title="Pocolog::Upgrade::Ops::Base (class)">Ops::Base</a></span>&gt;</tt>, <tt>nil</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>either a chain of conversions that need to be applied, or nil if no
+conversions couldbe computed</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/pocolog/upgrade/converter_registry.rb', line 170</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_find_converter_chain'>find_converter_chain</span><span class='lparen'>(</span><span class='id identifier rubyid_time'>time</span><span class='comma'>,</span> <span class='id identifier rubyid_from_type'>from_type</span><span class='comma'>,</span> <span class='id identifier rubyid_to_type'>to_type</span><span class='comma'>,</span> <span class='label'>relax:</span> <span class='kw'>false</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_graph'>graph</span> <span class='op'>=</span> <span class='id identifier rubyid_build_converter_graph'>build_converter_graph</span><span class='lparen'>(</span><span class='id identifier rubyid_time'>time</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_source_v'>source_v</span><span class='comma'>,</span> <span class='id identifier rubyid_from_type'>from_type</span><span class='comma'>,</span> <span class='id identifier rubyid_from_failures'>from_failures</span> <span class='op'>=</span> <span class='id identifier rubyid_compute_source_conversions'>compute_source_conversions</span><span class='lparen'>(</span><span class='id identifier rubyid_graph'>graph</span><span class='comma'>,</span> <span class='id identifier rubyid_time'>time</span><span class='comma'>,</span> <span class='id identifier rubyid_from_type'>from_type</span><span class='comma'>,</span> <span class='label'>relax:</span> <span class='id identifier rubyid_relax'>relax</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_target_v'>target_v</span><span class='comma'>,</span> <span class='id identifier rubyid_to_type'>to_type</span><span class='comma'>,</span> <span class='id identifier rubyid_to_failures'>to_failures</span>     <span class='op'>=</span> <span class='id identifier rubyid_compute_target_conversions'>compute_target_conversions</span><span class='lparen'>(</span><span class='id identifier rubyid_graph'>graph</span><span class='comma'>,</span> <span class='id identifier rubyid_to_type'>to_type</span><span class='comma'>,</span> <span class='label'>relax:</span> <span class='id identifier rubyid_relax'>relax</span><span class='rparen'>)</span>
+
+    <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_graph'>graph</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='id identifier rubyid_source_v'>source_v</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='op'>!</span><span class='id identifier rubyid_graph'>graph</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='id identifier rubyid_target_v'>target_v</span><span class='rparen'>)</span>
+        <span class='kw'>if</span> <span class='id identifier rubyid_from_type'>from_type</span> <span class='op'>==</span> <span class='id identifier rubyid_to_type'>to_type</span>
+            <span class='kw'>return</span> <span class='lbracket'>[</span><span class='const'><span class='object_link'><a href="Ops.html" title="Pocolog::Upgrade::Ops (module)">Ops</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Ops/Identity.html" title="Pocolog::Upgrade::Ops::Identity (class)">Identity</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Ops/Base.html#initialize-instance_method" title="Pocolog::Upgrade::Ops::Base#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_to_type'>to_type</span><span class='rparen'>)</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='const'>Array</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+        <span class='kw'>end</span>
+
+        <span class='kw'>begin</span>
+            <span class='kw'>return</span> <span class='lbracket'>[</span><span class='const'><span class='object_link'><a href="../Upgrade.html" title="Pocolog::Upgrade (module)">Upgrade</a></span></span><span class='period'>.</span><span class='id identifier rubyid_build_deep_cast'><span class='object_link'><a href="../Upgrade.html#build_deep_cast-class_method" title="Pocolog::Upgrade.build_deep_cast (method)">build_deep_cast</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_time'>time</span><span class='comma'>,</span> <span class='id identifier rubyid_from_type'>from_type</span><span class='comma'>,</span> <span class='id identifier rubyid_to_type'>to_type</span><span class='comma'>,</span> <span class='kw'>self</span><span class='comma'>,</span> <span class='label'>relax:</span> <span class='kw'>false</span><span class='rparen'>)</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='const'>Array</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+        <span class='kw'>rescue</span> <span class='const'><span class='object_link'><a href="InvalidCast.html" title="Pocolog::Upgrade::InvalidCast (class)">InvalidCast</a></span></span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_e'>e</span>
+            <span class='kw'>return</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id identifier rubyid_from_failures'>from_failures</span> <span class='op'>+</span> <span class='id identifier rubyid_to_failures'>to_failures</span> <span class='op'>+</span> <span class='lbracket'>[</span><span class='id identifier rubyid_e'>e</span><span class='rbracket'>]</span>
+        <span class='kw'>end</span>
+    <span class='kw'>elsif</span> <span class='id identifier rubyid_chain'>chain</span> <span class='op'>=</span> <span class='id identifier rubyid_graph'>graph</span><span class='period'>.</span><span class='id identifier rubyid_dijkstra_shortest_path'>dijkstra_shortest_path</span><span class='lparen'>(</span><span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='int'>1</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='id identifier rubyid_source_v'>source_v</span><span class='comma'>,</span> <span class='id identifier rubyid_target_v'>target_v</span><span class='rparen'>)</span>
+        <span class='kw'>return</span> <span class='id identifier rubyid_chain'>chain</span><span class='lbracket'>[</span><span class='int'>1</span><span class='op'>..</span><span class='op'>-</span><span class='int'>2</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='const'>Array</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+    <span class='kw'>else</span>
+        <span class='kw'>return</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id identifier rubyid_from_failures'>from_failures</span> <span class='op'>+</span> <span class='id identifier rubyid_to_failures'>to_failures</span>
+    <span class='kw'>end</span>
+
+
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="find_equivalent_type-instance_method">
+  
+    #<strong>find_equivalent_type</strong>(type)  &#x21d2; <tt>nil</tt>, <tt>Typelib::Type</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+
+<p>Finds an already registered type that is equal to a given type, to simplify
+type resolution in #find_all_for_type</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>type</span>
+      
+      
+        <span class='type'>(<tt>Typelib::Type</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>nil</tt>, <tt>Typelib::Type</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+39
+40
+41
+42
+43</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/pocolog/upgrade/converter_registry.rb', line 39</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_find_equivalent_type'>find_equivalent_type</span><span class='lparen'>(</span><span class='id identifier rubyid_type'>type</span><span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_candidates'>candidates</span> <span class='op'>=</span> <span class='id identifier rubyid_type_by_type_name'>type_by_type_name</span><span class='period'>.</span><span class='id identifier rubyid_fetch'>fetch</span><span class='lparen'>(</span><span class='id identifier rubyid_type'>type</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_candidates'>candidates</span><span class='period'>.</span><span class='id identifier rubyid_find'>find</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_t'>t</span><span class='op'>|</span> <span class='id identifier rubyid_t'>t</span> <span class='op'>==</span> <span class='id identifier rubyid_type'>type</span> <span class='rbrace'>}</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="register-instance_method">
+  
+    #<strong>register</strong>(custom_converter)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Add a custom converter to this registry</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/pocolog/upgrade/converter_registry.rb', line 46</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_register'>register</span><span class='lparen'>(</span><span class='id identifier rubyid_custom_converter'>custom_converter</span><span class='rparen'>)</span>
+    <span class='comment'># Check whether there is a known type with the same definition
+</span>    <span class='comment'>#
+</span>    <span class='comment'># This is meant to reduce the type spent resolving types
+</span>    <span class='kw'>if</span> <span class='id identifier rubyid_from_type'>from_type</span> <span class='op'>=</span> <span class='id identifier rubyid_find_equivalent_type'>find_equivalent_type</span><span class='lparen'>(</span><span class='id identifier rubyid_custom_converter'>custom_converter</span><span class='period'>.</span><span class='id identifier rubyid_from_type'>from_type</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_custom_converter'>custom_converter</span><span class='period'>.</span><span class='id identifier rubyid_from_type'>from_type</span> <span class='op'>=</span> <span class='id identifier rubyid_from_type'>from_type</span>
+    <span class='kw'>end</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_to_type'>to_type</span> <span class='op'>=</span> <span class='id identifier rubyid_find_equivalent_type'>find_equivalent_type</span><span class='lparen'>(</span><span class='id identifier rubyid_custom_converter'>custom_converter</span><span class='period'>.</span><span class='id identifier rubyid_to_type'>to_type</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_custom_converter'>custom_converter</span><span class='period'>.</span><span class='id identifier rubyid_to_type'>to_type</span> <span class='op'>=</span> <span class='id identifier rubyid_to_type'>to_type</span>
+    <span class='kw'>end</span>
+
+    <span class='id identifier rubyid_from_type'>from_type</span> <span class='op'>=</span> <span class='id identifier rubyid_custom_converter'>custom_converter</span><span class='period'>.</span><span class='id identifier rubyid_from_type'>from_type</span>
+    <span class='id identifier rubyid_converters_by_from_type'>converters_by_from_type</span><span class='lbracket'>[</span><span class='id identifier rubyid_from_type'>from_type</span><span class='rbracket'>]</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_custom_converter'>custom_converter</span>
+    <span class='id identifier rubyid_type_by_type_name'>type_by_type_name</span><span class='lbracket'>[</span><span class='id identifier rubyid_from_type'>from_type</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='rbracket'>]</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_from_type'>from_type</span>
+    <span class='id identifier rubyid_to_type'>to_type</span>   <span class='op'>=</span> <span class='id identifier rubyid_custom_converter'>custom_converter</span><span class='period'>.</span><span class='id identifier rubyid_to_type'>to_type</span>
+    <span class='id identifier rubyid_converters_by_to_type'>converters_by_to_type</span><span class='lbracket'>[</span><span class='id identifier rubyid_to_type'>to_type</span><span class='rbracket'>]</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_custom_converter'>custom_converter</span>
+    <span class='id identifier rubyid_type_by_type_name'>type_by_type_name</span><span class='lbracket'>[</span><span class='id identifier rubyid_to_type'>to_type</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='rbracket'>]</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_to_type'>to_type</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.12 (ruby-2.5.1).
+</div>
+
+    </div>
+  </body>
+</html>

@@ -16,6 +16,7 @@ repository [rock-core/apidocs](https://github.com/rock-core/apidocs).
  * [roby](https://www.rubydoc.info/github/rock-core/tools-roby)
  * [syskit](tools/syskit)
  * [tools/orocos.rb](tools/orocos.rb)
+ * [tools/pocolog](tools/pocolog)
 
 
 # Rock Debian Packages
